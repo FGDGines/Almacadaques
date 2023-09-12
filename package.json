@@ -1,0 +1,17 @@
+{
+  "name": "almacadaquest",
+  "version": "0.0.1",
+  "description": "...",
+  "main": "index.js",
+  "scripts": {
+    "front": "npm run dev --workspace=front"
+  },
+  "workspaces":[
+    "front", 
+    "back"
+  ]
+  ,
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
