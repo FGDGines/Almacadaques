@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { GlobalContext } from "../../contexts/GlobalConext"
+import { GlobalContext } from "../../contexts/GlobalContext"
 import Home from "../Home/Home"
 
 const HandlerLayout = ()=>{

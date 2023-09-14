@@ -1,7 +1,11 @@
-const Home = ()=>{
-    return <div className="Home">
-        Home    
-    </div>
-}
+import Navbar from "../Navbar/Navbar";
 
-export default Home
+const Home = () => {
+  return (
+    <div className="Home">
+      <Navbar />
+    </div>
+  );
+};
+
+export default Home;

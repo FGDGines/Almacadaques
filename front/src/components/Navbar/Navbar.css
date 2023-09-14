@@ -1,3 +1,20 @@
-.Navbar{
-    /*  */
+.Navbar {
+  display: flex;
+}
+
+a {
+  color: inherit;
+}
+
+.DropMenu > div {
+  display: none;
+}
+
+.DropMenu :hover {
+  color: azure;
+  background-color: aqua;
+}
+
+.DropMenu:hover > div {
+  display: block;
 }
