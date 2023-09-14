@@ -1,12 +1,12 @@
-import DropMenu from "../DropMenu/DropMenu";
+import NavButton from "../DropMenu/NavButton";
 import "./Navbar.css";
 const Navbar = () => {
   return (
     <div className="Navbar">
-      <DropMenu target={1} text="Inicio" />
-      <DropMenu target={2} text="Sobre Mi" />
-      <DropMenu target={3} text="Coaching" />
-      <DropMenu
+      <NavButton target={1} text="Inicio" />
+      <NavButton target={2} text="Sobre Mi" />
+      <NavButton target={3} text="Coaching" />
+      <NavButton
         target={4}
         text="Agenda"
         children={[
@@ -20,8 +20,8 @@ const Navbar = () => {
           },
         ]}
       />
-      <DropMenu target={7} text="Colaborador@s" />
-      <DropMenu
+      <NavButton target={7} text="Colaborador@s" />
+      <NavButton
         target={8}
         text="Blog"
         children={[

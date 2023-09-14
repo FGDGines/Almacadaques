@@ -2,10 +2,10 @@ import { FC, useContext } from "react";
 import { tpDropMenu } from "../../types/typesComponents";
 import { GlobalContext } from "../../contexts/GlobalContext";
 
-const DropMenu: FC<tpDropMenu> = ({ target, text, children = [] }) => {
+const NavButton: FC<tpDropMenu> = ({ target, text, children = [] }) => {
   const { setLayoutID } = useContext(GlobalContext);
   return (
-    <div className="DropMenu">
+    <div className="NavButton">
       <a href="#" onClick={() => setLayoutID(target)}>
         {text}
       </a>
@@ -13,7 +13,7 @@ const DropMenu: FC<tpDropMenu> = ({ target, text, children = [] }) => {
       {children.length !== 0 ? (
         <div>
           {children.map((child, index) => (
-            <DropMenu
+            <NavButton
               key={index}
               target={child.target}
               text={child.text}
@@ -26,4 +26,4 @@ const DropMenu: FC<tpDropMenu> = ({ target, text, children = [] }) => {
   );
 };
 
-export default DropMenu;
+export default NavButton;
