@@ -1,3 +1,72 @@
 .Navbar{
-    /*  */
+    display: flex;
+    /* border: 1px solid black; */
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 25px !important;
+    border-bottom: 1px solid black;
 }
+
+.Navbar > div {
+    /* border: 1px solid black; */
+    flex: 1;
+}
+
+.Navbar > .ctLogo{
+    display: flex;
+    flex: 40%;
+    justify-content: center;
+    align-items: center;
+}
+
+.Navbar > .ctLogo > img.logo{
+    width: 160px;
+    height: 102px;
+}
+
+
+.Navbar  >  .ctTabs {
+    flex: 30%;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Navbar  >  .ctTabs  > .tab {
+    /* border: 1px solid black; */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Navbar > .ctTabs > .tab.tabDrd{
+    border: 2px solid red;
+    
+}
+
+.Navbar > .ctTabs > .tab.tabDrd > .tabDrdMenu{
+    border: 1px solid green;
+    position: absolute;
+    top: 65px;
+    display: flex;
+    flex-direction: column;
+    visibility: hidden;
+}
+
+.Navbar > .ctTabs > .tab.tabDrd:hover > .tabDrdMenu, .Navbar > .ctTabs > .tab.tabDrd > .tabDrdMenu:hover{
+    visibility: visible;
+}
+
+
+
+
+.Navbar .ctContacto { 
+    flex: 30%;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+}
+

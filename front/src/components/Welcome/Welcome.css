@@ -1,0 +1,31 @@
+.Welcome{
+    height: calc(100vh - 103px);
+    background-color: aqua;
+    background: url("./src/assets/background/cdq-2000x700.jpg") no-repeat center/cover ;
+    background-size: 100% 100% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.Welcome .ctConent{
+    width: 70%;    
+}
+
+.Welcome .ctConent .title{
+    background-color: rgba(0, 0, 0, 0.443);
+    padding: 30px;
+    border-radius: 10px ; 
+    color: white;
+    font-size: 64px;
+}
+
+.Welcome .ctConent .ctButtons {
+    display: flex;
+    margin-top: 20px;
+}
+
+
+
+

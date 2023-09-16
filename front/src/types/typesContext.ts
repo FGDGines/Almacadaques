@@ -5,7 +5,6 @@ type GlobalContextType  = {
     setLayoutID: (arg: number)=>void
 }
 
-
 export type {
     GlobalContextType
 }

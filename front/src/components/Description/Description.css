@@ -1,0 +1,26 @@
+ .Description {
+    border: 1px solid black;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+ }
+
+ .Description .ctDefault{
+    border: 1px solid black;
+    width: 100%;
+    margin-bottom: 20px;
+ }
+
+ .Description .ctDefault .ctTitle{
+    font-size: 64px;
+    text-align: center;
+    line-height: 120%;
+ }
+
+ .Description .ctDefault .ctDescription{
+    font-size: 20px;
+    text-align: center;
+ }
+
+
+

@@ -1,0 +1,24 @@
+.BtNice {
+    color: white;
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 0.3s ;
+}
+
+
+
+.BtNice:hover{
+    background-color: #556362;
+}
+
+
+.BtNice:active{
+    background-color: #3e4343;
+}

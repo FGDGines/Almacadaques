@@ -1,10 +1,13 @@
 import './App.css'
+
 import HandlerLayout from './components/HandlerLayout/HandlerLayout'
 
 function App() {
   
   return (
-    <HandlerLayout />
+    <div className='App'>
+      <HandlerLayout />
+    </div>
   )
 }
 
