@@ -1,10 +1,12 @@
 import './Description.css'
+import Carousel from '../Carousel/Carousel';
 const Description = ()=>{
     return <div className='Description'>
         <div className='ctDefault'>
             <div className='ctTitle'>
-                ❝Almacadaqués es un espacio de bienestar<br/>
-                dirigido a todos aquellos que queremos vivir<br/> una vida llena y con sentido.❞
+                <span style={{color: "#75151E"}}> ❝ </span>
+                Almacadaqués es un espacio de bienestar<br/>
+                dirigido a todos aquellos que queremos vivir<br/> una vida llena y con sentido. <span style={{color: "#75151E"}}> ❞ </span>
             </div>
         </div>
         <div className='ctDefault'>
@@ -13,6 +15,8 @@ const Description = ()=>{
                 alma de buena energía, me nutro de naturaleza y mar y me inspiro. Y esta vibra es la que compartimos aquí.
             </div>
         </div>
+        <Carousel />
+
     </div>
 }
 
