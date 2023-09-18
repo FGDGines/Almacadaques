@@ -22,3 +22,37 @@
 .BtNice:active{
     background-color: #3e4343;
 }
+
+
+
+
+.BtNice.white {
+    color: rgb(33, 31, 31);
+    background-color: #f5f2f2;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 30px;
+    cursor: pointer;
+    transition: all 0.3s ;
+}
+
+
+
+.BtNice.white:hover{
+    background-color: #76fd9d;
+    box-shadow: black 1px 1px 10px ;
+}
+
+
+.BtNice.white:active{
+    background-color: #76fd9d;   
+    border: 1px solid white;
+    box-shadow: black 1px 1px 10px ;
+}
+
+

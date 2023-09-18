@@ -1,0 +1,27 @@
+.ComoYDonde{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* border: 1px solid black; */
+}
+
+
+.ComoYDonde .ct1{
+    font-size: 36px;
+    text-align: center;
+    line-height: 120%;
+    margin-bottom: 120px;
+
+}
+
+.ComoYDonde .ct2{
+    font-size: 25px;
+    /* border: 1px solid black; */
+    margin-bottom: 30px;
+}
+
+
+
+
+

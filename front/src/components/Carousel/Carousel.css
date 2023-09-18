@@ -11,12 +11,13 @@
  }
  
  .controls {
-   width: 100%;
-   /* position: absolute; */
+   width: 637px;
    display: flex;
    align-items: center;
    justify-content: space-between;
    margin-top: 10px;
+   /* border: 1px solid black; */
+   margin-top: 30px;
  }
  
  .controls button {
@@ -26,8 +27,8 @@
    color: white;
    cursor: pointer;
    font-size: 2rem;
-   height: 90px;
-   width: 60px;
+   height: 48px;
+   width: 48px;
    transition: all 350ms ease-in;
    
  }
@@ -100,9 +101,9 @@
  }
  
  .ctCarousel {
-  border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column  ;
+  margin-bottom: 100px;
  }
