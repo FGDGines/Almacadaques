@@ -38,7 +38,7 @@ const Carousel  = ()=>{
      <section className="carrousel">
         {carouselData.map((arg, index) =>{
             const {title , src } = arg 
-            return <div className={`${itemActive[index]?'current':''} slide `}>
+            return <div key={index} className={`${itemActive[index]?'current':''} slide `}>
                         <img src={src} className="img-fluid" alt=""/>
                         <div className="textoSlider">
                             {title}
@@ -56,8 +56,8 @@ const Carousel  = ()=>{
             </button>
         <div className="circles">
             {itemActive.map((arg, index)=>{
-                return  <div onClick={()=>activarItem(index)} className={`circle ${arg ==1?'active':''}`}>
-            
+                return  <div key={index} onClick={()=>activarItem(index)} className={`circle ${arg ==1?'active':''}`}>
+
                 </div>
             })}
          

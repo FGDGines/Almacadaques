@@ -1,7 +1,10 @@
 import './Navbar.css'
 import './Navbar.css'
 import logo from '../../assets/logo/logo.png'
+import { useContext } from 'react'
+import { GlobalContext } from '../../contexts/GlobalConext'
 const Navbar = ()=>{
+    const {setLayoutID} = useContext(GlobalContext)
     return <div className='Navbar'>
         <div className='ctLogo'>
             <img className='logo' src={logo} alt="" />
@@ -9,10 +12,10 @@ const Navbar = ()=>{
 
         <div className='ctTabs'>
 
-            <div className='tab'>Inicio 
+            <div className='tab' onClick={()=>setLayoutID(1)}>Inicio 
                 <div className='borderFade'></div>
             </div>
-            <div className='tab'>Sobre mi 
+            <div className='tab' onClick={()=>setLayoutID(2)}>Sobre mi 
                 <div className='borderFade'></div>
             </div>
             <div className='tab'>Coaching 
