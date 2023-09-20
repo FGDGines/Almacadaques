@@ -1,0 +1,68 @@
+.Contactar .ctSections{
+    display: flex;   
+}
+
+.Contactar .ctSections >  div{
+    border: 1px solid black;
+    flex: 1;
+    padding: 160px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+.Contactar .ctSections > div > div.title1{
+    font-size: 40px;
+}
+
+.Contactar .ctSections > div > div.title2{
+    font-size: 20px;
+}
+
+.Contactar .ctSections > div > div.ctTelef  {
+    font-size: 25px;
+    font-weight: 500;
+}
+.Contactar .ctSections > div > div.ctTelef ,.Contactar .ctSections > div > div.ctCorreo{
+    font-weight: 400;
+}
+
+
+.Contactar .ctSections > div.ctRight .TitleForm{
+    font-size: 40px ;
+}
+
+
+
+.Contactar .ctSections > div.ctRight form.Form{
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.Contactar .ctSections > div.ctRight form.Form div.formRow{
+    /* border: 1px solid black; */
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Contactar .ctSections > div.ctRight form.Form div.formRow .Label{
+    font-size: 18px;
+    color: gray;
+    margin-bottom: 2px;
+}
+
+
+.Contactar .ctSections > div.ctRight form.Form div.formRow input{
+    flex: 1;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    padding-left: 25px;
+}

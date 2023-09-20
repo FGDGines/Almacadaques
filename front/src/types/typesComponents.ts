@@ -5,6 +5,11 @@ type tpBtNice = {
     tp: string 
 }>
 
+type tpFranja = {
+    text: string
+}
+
 export type  {
-    tpBtNice
+    tpBtNice,
+    tpFranja
 }

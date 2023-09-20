@@ -33,7 +33,7 @@ const Navbar = ()=>{
         </div>
 
         <div className='ctContacto'>
-            <div className='btContacto'>
+            <div className='btContacto' onClick={()=>setLayoutID(3)}>
                 * Contactar
             </div>
 
