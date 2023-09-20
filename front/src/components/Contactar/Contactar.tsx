@@ -52,18 +52,12 @@ const Contactar = ()=>{
                     </div>
                     <div className='formRow'>
                         <div className='Label'>
-                            Nombre
+                            Comentario
                         </div>
-                        <input type="text" placeholder='Como te Llamas ?'  required />
-                    </div>
-                    <div className='formRow'>
-                        <div className='Label'>
-                            Nombre
-                        </div>
-                        <input type="text" placeholder='Como te Llamas ?'  required />
+                        <textarea name="" id="" rows={6} required placeholder='Que te gustaría decir ?'></textarea>
                     </div>
 
-                    <div className='formRow'>
+                    <div className='formRow rowConact'>
                         <BtNice text='Aceptar' handler={()=>0}  />
                     </div>
                 </form>

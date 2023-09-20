@@ -3,16 +3,11 @@
 }
 
 .Contactar .ctSections >  div{
-    border: 1px solid black;
     flex: 1;
     padding: 160px;
     display: flex;
     flex-direction: column;
 }
-
-
-
-
 
 .Contactar .ctSections > div > div.title1{
     font-size: 40px;
@@ -50,6 +45,16 @@
     margin: 5px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px;
+}
+
+
+.Contactar .ctSections > div.ctRight form.Form div.formRow.rowConact{
+    display: flex;    
+    flex-direction: row;
+    justify-content: flex-end;
+    /* border: 1px solid black; */
+
 }
 
 .Contactar .ctSections > div.ctRight form.Form div.formRow .Label{
@@ -59,10 +64,12 @@
 }
 
 
-.Contactar .ctSections > div.ctRight form.Form div.formRow input{
+.Contactar .ctSections > div.ctRight form.Form div.formRow input, .Contactar .ctSections > div.ctRight form.Form div.formRow textarea{
     flex: 1;
     font-size: 20px;
     padding: 20px;
     border-radius: 5px;
     padding-left: 25px;
 }
+
+
