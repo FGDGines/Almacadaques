@@ -1,4 +1,8 @@
 
+.AboutMe{
+    background-color: white;
+}
+
 .Contenido{
     display: flex;
 }
