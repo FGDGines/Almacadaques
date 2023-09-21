@@ -9,7 +9,18 @@ type tpFranja = {
     text: string
 }
 
+type tpTimeLineData ={
+    id:number
+    text: string
+}
+
+type tpAlternateTimeLine = {
+    data: tpTimeLineData[]
+}
+
 export type  {
     tpBtNice,
-    tpFranja
+    tpFranja,
+    tpAlternateTimeLine,
+    tpTimeLineData
 }

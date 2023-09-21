@@ -3,6 +3,7 @@ import { GlobalContext } from "../../contexts/GlobalConext"
 import Home from "../Home/Home"
 import AboutMe from "../AboutMe/AboutMe"
 import Contactar from "../Contactar/Contactar"
+import Coaching from "../Coaching/Coaching"
 
 const HandlerLayout = ()=>{
     const {layoutID} = useContext(GlobalContext)
@@ -20,6 +21,9 @@ const HandlerLayout = ()=>{
             break ; 
         case 3:
             screen = <Contactar />
+            break ; 
+        case 4:
+            screen = <Coaching />
             break ; 
         default:
             break;

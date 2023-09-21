@@ -18,7 +18,7 @@ const Navbar = ()=>{
             <div className='tab' onClick={()=>setLayoutID(2)}>Sobre mi 
                 <div className='borderFade'></div>
             </div>
-            <div className='tab'>Coaching 
+            <div className='tab' onClick={()=>setLayoutID(4)}>Coaching 
                 <div className='borderFade'></div>
             </div>
 
