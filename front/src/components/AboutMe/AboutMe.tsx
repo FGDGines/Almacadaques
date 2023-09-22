@@ -40,7 +40,7 @@ const AboutMe = () => {
             </div>
             <div className='ctRight'>
                 <img src="./src/assets/background/unnamed (2).jpg" alt="" />
-                <h1>Psicóloga – Mentora – Coach</h1>
+                <h1  className='titleSoy'>Psicóloga – Mentora – Coach</h1>
             </div>
         </div>
         <Footer />

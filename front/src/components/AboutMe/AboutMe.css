@@ -20,6 +20,17 @@
     text-align: justify;
 }
 
+.Contenido > div.ctRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 .Contenido > div.ctRight img{
     width: 80%;
+}
+
+.Contenido > div.ctRight  .titleSoy{
+    white-space: nowrap;
 }
