@@ -17,7 +17,7 @@
 .Contenido > div.ctLeft > .title1 {
     font-size: 36px;
     line-height: 120%;
-    text-align: justify;
+    /* text-align: justify; */
 }
 
 .Contenido > div.ctRight{
