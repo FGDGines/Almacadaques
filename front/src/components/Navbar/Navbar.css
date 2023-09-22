@@ -43,7 +43,7 @@
 }
 
 .Navbar > .ctTabs > .tab.tabDrd{
-    border: 2px solid red;
+    /* border: 2px solid red; */
     position: relative;
 }
 

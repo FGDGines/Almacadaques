@@ -14,9 +14,11 @@
 }
 
 
-.Contenido > div.ctLeft > .title1 {
+.AboutMe .title1 {
     font-size: 36px;
     line-height: 120%;
+    text-align: center;
+    margin-top: 120px;
     /* text-align: justify; */
 }
 
