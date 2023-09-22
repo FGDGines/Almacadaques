@@ -11,7 +11,7 @@ const AboutMe = () => {
             
                 <div className='title1'>
                     <span style={{ color: "#75151E" }}> ❝ </span>
-                        Te ayudo a vivir en plenitud, encontrar tu bienestar <br /> y tu paz interior.
+                        Te ayudo a vivir en plenitud, encontrar tu bienestar  y tu paz interior.
                     <span style={{ color: "#75151E" }}> ❞ </span>
                 </div>
                 <br />
