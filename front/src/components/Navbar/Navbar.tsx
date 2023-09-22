@@ -23,13 +23,13 @@ const Navbar = ()=>{
             </div>
 
             <div className='tab tabDrd'>
-                <span className='title'>Colaboradores</span>
+                <span className='title'>Agenda</span>
                 <div className='tabDrdMenu'>
-                    <div className="tab">Colaborador 1</div>
-                    <div className="tab">Colaborador 2</div>
-                    <div className="tab">Colaborador 3</div>
+                    <div className="tab">Experiencias de Bienestar</div>
+                    <div className="tab">Experiencias a Medida</div>
                 </div>
             </div>
+            
         </div>
 
         <div className='ctContacto'>

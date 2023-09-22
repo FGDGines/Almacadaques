@@ -44,16 +44,18 @@
 
 .Navbar > .ctTabs > .tab.tabDrd{
     border: 2px solid red;
-    
+    position: relative;
 }
 
 .Navbar > .ctTabs > .tab.tabDrd > .tabDrdMenu{
-    border: 1px solid green;
-    position: absolute;
-    top: 65px;
-    display: flex;
+    background-color: aquamarine;
+    border: 1px solid green;    
     flex-direction: column;
     visibility: hidden;
+    position: absolute;
+    top: 35px;
+    padding: 30px;
+    
 }
 
 .Navbar > .ctTabs > .tab.tabDrd:hover > .tabDrdMenu, .Navbar > .ctTabs > .tab.tabDrd > .tabDrdMenu:hover{
