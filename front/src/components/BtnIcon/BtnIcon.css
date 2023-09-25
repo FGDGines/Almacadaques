@@ -1,0 +1,30 @@
+.BtnIcon{
+    display: flex;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s ;
+}
+
+
+.BtnIcon:hover{
+    background-color: rgb(156, 160, 160);
+}
+
+.BtnIcon:active{
+    background-color: rgb(108, 134, 134);
+}
+
+.BtnIcon > .ctIcon , .BtnIcon > .ctText{
+    /* border: 1px solid black; */
+    margin:  0px 5px ;
+    padding:   5px ;
+}
+
+
+.BtnIcon.twhite .ctIcon , .BtnIcon.twhite > .ctText{
+    color: white;
+}

@@ -1,9 +1,17 @@
+import { ReactNode } from "react"
+
 type tpBtNice = {
     text: string , 
     handler: () => void
 } & Partial<{
     tp: string 
 }>
+
+type tpBtnIcon = {
+    text: string,
+    Icon: ReactNode,
+    clase?:string
+}
 
 type tpFranja = {
     text: string
@@ -22,5 +30,6 @@ export type  {
     tpBtNice,
     tpFranja,
     tpAlternateTimeLine,
-    tpTimeLineData
+    tpTimeLineData,
+    tpBtnIcon
 }

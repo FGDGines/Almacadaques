@@ -3,6 +3,8 @@ import './Navbar.css'
 import logo from '../../assets/logo/logo.png'
 import { useContext } from 'react'
 import { GlobalContext } from '../../contexts/GlobalConext'
+import { FaRegComment } from 'react-icons/fa'
+import BtnIcon from '../BtnIcon/BtnIcon';
 const Navbar = ()=>{
     const {setLayoutID} = useContext(GlobalContext)
     return <div className='Navbar'>
@@ -34,7 +36,7 @@ const Navbar = ()=>{
 
         <div className='ctContacto'>
             <div className='btContacto' onClick={()=>setLayoutID(3)}>
-                * Contactar
+                <BtnIcon text='Contactar'  Icon ={<FaRegComment/>} />
             </div>
 
         </div>
