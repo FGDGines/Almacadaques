@@ -1,9 +1,17 @@
 import "./App.css";
 import "./fonts.css";
 import HandlerLayout from "./components/HandlerLayout/HandlerLayout";
+import { GlobalContextProvider } from "./contexts/GlobalContext";
 
 function App() {
-  return <HandlerLayout />;
+  
+  return (
+    <GlobalContextProvider>
+      <div className='App'>
+        <HandlerLayout />
+      </div>
+    </GlobalContextProvider>
+  )
 }
 
 export default App;

@@ -1,0 +1,44 @@
+ .Description {
+     /* border: 1px solid black; */
+     padding: 60px;
+     display: flex;
+     flex-direction: column;
+     padding-top: 100px;
+     background-color: white;
+ }
+
+ .Description .ctDefault {
+     /* border: 1px solid black; */
+     width: 100%;
+     margin-bottom: 20px;
+
+ }
+
+ .Description .ctDefault .ctTitle {
+     font-size: 64px;
+     text-align: center;
+     line-height: 120%;
+ }
+
+ .Description .ctDefault .ctDescription {
+     font-size: 20px;
+     text-align: center;
+     margin-bottom: 100px;
+ }
+
+
+
+ .Description .ctDefault .ctTitle2 {
+     font-size: 36px;
+     text-align: center;
+     line-height: 120%;
+     margin-top: 50px;
+     margin-bottom: 50px;
+ }
+
+.Horizonte{
+    width: 100%;
+    height: 30vh;
+    background-color: transparent;
+    margin-bottom: 130px;
+ }

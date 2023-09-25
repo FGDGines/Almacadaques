@@ -1,0 +1,38 @@
+
+.AboutMe{
+    background-color: white;
+}
+
+.Contenido{
+    display: flex;
+}
+
+.Contenido > div{
+    flex: 1;
+    
+    padding: 180px;
+}
+
+
+.AboutMe .title1 {
+    font-size: 36px;
+    line-height: 120%;
+    text-align: center;
+    margin-top: 120px;
+    /* text-align: justify; */
+}
+
+.Contenido > div.ctRight{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Contenido > div.ctRight img{
+    width: 80%;
+}
+
+.Contenido > div.ctRight  .titleSoy{
+    white-space: nowrap;
+}

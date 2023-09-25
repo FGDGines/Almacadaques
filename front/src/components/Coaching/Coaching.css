@@ -1,0 +1,35 @@
+.Coaching{
+    background-color: white;
+}
+
+
+.Coaching .ctTitle1{
+    /* border: 1px solid black; */
+    text-align: center;
+    font-size: 30px;
+    padding: 0px 150px;
+}
+
+.Coaching .ctMain{
+    /* border: 10px solid black; */
+    display: flex;
+}
+
+
+.Coaching .ctMain > div{
+    flex: 1;
+    /* border: 1px solid black; */
+    padding: 150px;
+}
+
+.Coaching .ctMain > div > img.Picture{
+    width: 80%;
+}
+
+.Coaching .ctMain > div .css-18y2uza-MuiTypography-root-MuiTimelineContent-root{
+    text-align: justify;
+}
+
+
+
+
