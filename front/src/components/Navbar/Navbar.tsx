@@ -7,39 +7,39 @@ const Navbar = () => {
       <NavButton target={1} text="" />
       <NavButton target={1} text="Inicio" />
       <NavButton target={2} text="Sobre Mi" />
-      <NavButton target={3} text="Coaching" />
+      <NavButton target={4} text="Coaching" />
       <DropMenu
         text="Agenda"
         children={[
           {
-            target: 5,
+            target: 1,
             text: "Experiencias de Bienestar",
           },
           {
-            target: 6,
+            target: 1,
             text: "Experiencias de Medida",
           },
         ]}
       />
-      <NavButton target={7} text="Colaborador@s" />
+      <NavButton target={1} text="Colaborador@s" />
       <DropMenu
         text="Blog"
         children={[
           {
-            target: 9,
+            target: 1,
             text: "Blog Post",
           },
           {
-            target: 10,
+            target: 1,
             text: "Testimonios",
           },
           {
-            target: 11,
+            target: 1,
             text: "Podcast",
           },
         ]}
       />
-      <NavButton target={12} text="Contacto" />
+      <NavButton className="btn" target={3} text="Contacto" />
     </div>
   );
 };
