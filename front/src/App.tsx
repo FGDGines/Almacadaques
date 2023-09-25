@@ -1,11 +1,9 @@
-import './App.css'
-import HandlerLayout from './components/HandlerLayout/HandlerLayout'
+import "./App.css";
+import "./fonts.css";
+import HandlerLayout from "./components/HandlerLayout/HandlerLayout";
 
 function App() {
-  
-  return (
-    <HandlerLayout />
-  )
+  return <HandlerLayout />;
 }
 
-export default App
+export default App;

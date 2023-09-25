@@ -1,13 +1,14 @@
-import NavButton from "../DropMenu/NavButton";
+import DropMenu from "../DropMenu/DropMenu";
+import NavButton from "../NavButton/NavButton";
 import "./Navbar.css";
 const Navbar = () => {
   return (
     <div className="Navbar">
+      <NavButton target={1} text="" />
       <NavButton target={1} text="Inicio" />
       <NavButton target={2} text="Sobre Mi" />
       <NavButton target={3} text="Coaching" />
-      <NavButton
-        target={4}
+      <DropMenu
         text="Agenda"
         children={[
           {
@@ -21,8 +22,7 @@ const Navbar = () => {
         ]}
       />
       <NavButton target={7} text="Colaborador@s" />
-      <NavButton
-        target={8}
+      <DropMenu
         text="Blog"
         children={[
           {
@@ -39,6 +39,7 @@ const Navbar = () => {
           },
         ]}
       />
+      <NavButton target={12} text="Contacto" />
     </div>
   );
 };

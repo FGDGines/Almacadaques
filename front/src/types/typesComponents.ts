@@ -1,6 +1,11 @@
-type tpDropMenu = {
+type tpNavButton = {
   target: number;
   text: string;
-} & Partial<{ children: tpDropMenu[] }>;
+};
 
-export type { tpDropMenu };
+type tpDropMenu = {
+  text: string;
+  children: tpNavButton[];
+};
+
+export type { tpNavButton, tpDropMenu };

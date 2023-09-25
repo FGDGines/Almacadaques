@@ -1,20 +1,52 @@
-.Navbar {
-  display: flex;
-}
-
 a {
   color: inherit;
+  text-decoration: none;
+}
+
+.Navbar {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-family: "Roboto Flex", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.Navbar > :last-child{
+  
+}
+
+.Navbar > * {
+  padding: 4px 16px;
+}
+
+.Navbar > :first-child {
+  content: url("../../assets/logo/logo.png");
+  height: 102.4px;
+  margin-right: auto;
+}
+
+.NavButton {
+  cursor: pointer;
+}
+
+.DropMenu {
+  position: relative;
 }
 
 .DropMenu > div {
   display: none;
-}
-
-.DropMenu :hover {
-  color: azure;
+  position: absolute;
   background-color: aqua;
+  padding: 2rem;
+  left: -2rem;
 }
 
-.DropMenu:hover > div {
+.DropMenu::after {
+}
+
+.DropMenu:hover > div,
+.DropMenu:focus-within > div {
   display: block;
 }
