@@ -26,7 +26,7 @@ const Navbar = () => {
         text="Blog"
         children={[
           {
-            target: 1,
+            target: 5,
             text: "Blog Post",
           },
           {

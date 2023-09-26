@@ -1,5 +1,15 @@
 import { ReactNode } from "react";
 
+type tpBlogInfo = {
+  index: number;
+  day: number;
+  month: number;
+  year: number;
+  thumbnail: string;
+  title: string;
+  abstract: string;
+};
+
 type tpNavButton = {
   target: number;
   text: string;
@@ -37,6 +47,7 @@ type tpAlternateTimeLine = {
 };
 
 export type {
+  tpBlogInfo,
   tpNavButton,
   tpDropMenu,
   tpBtNice,
