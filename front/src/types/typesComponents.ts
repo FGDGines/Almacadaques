@@ -1,5 +1,20 @@
 import { ReactNode } from "react";
 
+type tpTestimonyBar = {
+  testimonies: tpTestimony[];
+  quantityPerLayout: number;
+};
+
+type tpTestimony = {
+  id: number;
+  witness: string;
+  image: string;
+  day: number;
+  month: number;
+  year: number;
+  testimony: string;
+};
+
 type tpBlogInfo = {
   index: number;
   day: number;
@@ -47,6 +62,8 @@ type tpAlternateTimeLine = {
 };
 
 export type {
+  tpTestimonyBar,
+  tpTestimony,
   tpBlogInfo,
   tpNavButton,
   tpDropMenu,
