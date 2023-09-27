@@ -13,9 +13,13 @@ const Testimony: FC<tpTestimony> = ({
   return (
     <div key={id} className="Testimony">
       <div className="testimony">{testimony}</div>
-      <img src={image} alt={witness} />
-      <div className="date">
-        {day}.{month}.{year}
+
+      <div className="witness">
+        <img src={image} alt={witness} />
+        <h2>{witness}</h2>
+        <div className="date">
+          {day}.{month}.{year}
+        </div>
       </div>
     </div>
   );
