@@ -4,6 +4,8 @@ import Home from "../Home/Home"
 import AboutMe from "../AboutMe/AboutMe"
 import Contactar from "../Contactar/Contactar"
 import Coaching from "../Coaching/Coaching"
+import Navbar from '../Navbar/Navbar';
+import ExperienciasDeBienestar from "../ExperienciasDeBienestar/ExperienciasDeBienestar"
 
 const HandlerLayout = ()=>{
     const {layoutID} = useContext(GlobalContext)
@@ -11,7 +13,9 @@ const HandlerLayout = ()=>{
     let screen = <div></div>
     switch (layoutID) {
         case 0:
-            screen = <div>Hola</div>
+            screen = <div>
+                <Navbar />
+            </div>
             break;
         case 1:
             screen = <Home />
@@ -25,7 +29,13 @@ const HandlerLayout = ()=>{
         case 4:
             screen = <Coaching />
             break ; 
+        case 5:
+            screen = <ExperienciasDeBienestar />
+            break ; 
         default:
+            screen = <div>
+                <Navbar />
+            </div>
             break;
     }
     return <div>

@@ -1,6 +1,7 @@
 import './Description.css'
 import Carousel from '../Carousel/Carousel';
 import Propuesta from '../Propuesta/Propuesta';
+import { carouselDescription } from '../../data/carousel';
 const Description = () => {
 
     return <>
@@ -18,7 +19,10 @@ const Description = () => {
                     alma de buena energía, me nutro de naturaleza y mar y me inspiro. Y esta vibra es la que compartimos aquí.
                 </div>
             </div>
-            <Carousel />
+
+            <Carousel  items={carouselDescription} />
+
+            
             <div className='ctDefault'>
                 <div className='ctTitle2'>
                     <span style={{ color: "#75151E" }}> ❝ </span>

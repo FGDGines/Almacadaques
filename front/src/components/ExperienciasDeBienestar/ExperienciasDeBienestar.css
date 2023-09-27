@@ -1,0 +1,13 @@
+
+
+.ExperienciasDeBienestar .ctMain{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding-top: 20px;    
+}
+.ExperienciasDeBienestar .ctMain .ctTitle{
+    /* border: 1px solid black; */
+    text-align: center;
+    font-size: 64px;
+}

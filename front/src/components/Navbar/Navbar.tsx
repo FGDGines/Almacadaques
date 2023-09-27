@@ -7,7 +7,7 @@ const Navbar = () => {
       <NavButton target={1} text="" />
       <NavButton target={1} text="Inicio" />
       <NavButton target={2} text="Sobre Mi" />
-      <NavButton target={3} text="Coaching" />
+      <NavButton target={4} text="Coaching" />
       <DropMenu
         text="Agenda"
         children={[
@@ -39,7 +39,7 @@ const Navbar = () => {
           },
         ]}
       />
-      <NavButton target={12} text="Contacto" />
+      <NavButton target={3} text="Contacto" />
     </div>
   );
 };
