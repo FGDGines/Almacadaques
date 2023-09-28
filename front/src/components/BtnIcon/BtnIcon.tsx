@@ -1,8 +1,10 @@
+import { GlobalContext } from '../../contexts/GlobalContext'
 import { tpBtnIcon } from '../../types/typesComponents'
 import './BtnIcon.css'
-import {FC} from 'react'
+import {FC, useContext} from 'react'
 const BtnIcon:FC<tpBtnIcon> = ({text, Icon, clase})=>{
-    return <div className={`BtnIcon   ${clase}`}>
+    const {setLayoutID} = useContext(GlobalContext)
+    return <div className={`BtnIcon   ${clase}`} onClick={()=>setLayoutID(3) }>
         <div className='ctText'>
             {text}
         </div>

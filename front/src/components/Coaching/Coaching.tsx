@@ -4,6 +4,8 @@ import Franja from '../Franja/Franja';
 import Footer from '../Footer/Footer';
 import AlternateTimeline from '../TimeLine/TimeLine';
 import { tlCoaching } from '../../data/tlCoaching';
+import TestimonyBar from "../TestimonyBar/TestimonyBar";
+import { testimonies } from '../../data/testimonies';
 
 const Coaching = ()=>{
     return <div className="Coaching">
@@ -23,6 +25,10 @@ const Coaching = ()=>{
                 <img className='Picture' src="./src/assets/background/unnamed (5).jpg" alt="" />
             </div>
         </div>
+        <TestimonyBar
+        quantityPerLayout={3}
+        testimonies={testimonies}
+      />
         
         <Footer />
     </div>   

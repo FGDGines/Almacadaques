@@ -1,0 +1,39 @@
+.BlogPost {
+  background-color: white;
+}
+
+.BlogInfo {
+  margin-top: 2rem;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+  max-width: 850px;
+}
+
+.BlogInfo > .date {
+  grid-column: 1;
+  margin-inline: auto 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.date > * {
+  display: inline-block;
+  margin-inline: 0.2rem;
+}
+
+.year {
+  margin-right: 2rem;
+}
+
+.BlogInfo > h1 {
+  cursor: pointer;
+}
+
+.BlogInfo > img {
+  width: 100%;
+}
+
+.BlogInfo > * {
+  grid-column: 2;
+}

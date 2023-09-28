@@ -5,6 +5,8 @@ import Franja from '../Franja/Franja';
 import StatisticComponent from '../StatisticComponent/StatisticComponent';
 import CardM1 from '../CardM1/CardM1';
 import { cardsData } from '../../data/cardsExp';
+import TestimonyBar from '../TestimonyBar/TestimonyBar';
+import { testimonies } from '../../data/testimonies';
 
 const ExperienciasDeBienestar = () => {
     return <div className='ExperienciasDeBienestar'>
@@ -29,6 +31,9 @@ const ExperienciasDeBienestar = () => {
                 <span style={{ color: "#75151E" }}> ❞ </span>
             </div>
             <StatisticComponent />
+            <div className='ctTestimonios' style={{backgroundColor: "white"}}>
+                <TestimonyBar  quantityPerLayout={3} testimonies={testimonies} /> 
+            </div>
         </div>
         <Footer />
     </div>
