@@ -17,10 +17,12 @@
 .statIcon {
   font-size: 3rem !important;
   margin-bottom: 0.5rem;
+  color: black !important ;
 }
 
 .statText {
-  font-size: 1.2rem !important; 
+  font-size: 2rem !important; 
+
 }
 
 .custom-stat-box {

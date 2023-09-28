@@ -1,22 +1,22 @@
 export const carouselDescription = [
     {
-      title: 'Un paisaje',
+      title: '¿Te sientes estresad@?',
       src: './src/assets/Fotos_Home/1.jpg'
     },
     {
-      title: 'Bienvenido a tu nueva vida',
+      title: '¿Quieres un cambio de aires?',
       src: './src/assets/Fotos_Home/2.jpg'
     },
     {
-      title: 'Otro texto de bienestar',
+      title: '¿Sientes que estás bloquead@?',
       src: './src/assets/Fotos_Home/3.jpg'
     },
     {
-      title: 'Este proyecto cura el alma',
+      title: '¿Necesitas inspiración?',
       src: './src/assets/Fotos_Home/4.jpg'
     },
     {
-      title: 'Uno texto',
+      title: '¿Quieres ser tu mejor versión?',
       src: './src/assets/Fotos_Home/5.jpg'
     }
   ];

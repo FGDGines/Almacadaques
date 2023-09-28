@@ -49,6 +49,11 @@ type tpAlternateTimeLine = {
     data: tpTimeLineData[]
 }
 
+type tpCardM1 = {
+    title: string,
+    body: string[]
+}
+
 export type {
     tpNavButton,
     tpDropMenu,
@@ -58,5 +63,6 @@ export type {
     tpTimeLineData,
     tpBtnIcon,
     tpCarouelItem, 
-    tpCarouselData
+    tpCarouselData,
+    tpCardM1
 };

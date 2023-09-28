@@ -17,3 +17,18 @@
     padding: 70px 0px ;
     background-color: white;
 }
+
+
+.ExperienciasDeBienestar .ctDescription{
+    background-color: white;
+    text-align: center;
+    font-size: 36px;
+    padding:  70px 0px;
+}
+
+.ExperienciasDeBienestar .ctCards{
+    padding: 0px 200px;
+    background-color: white;    
+    display: grid;
+    grid-template-columns: repeat(3,  1fr );
+}
