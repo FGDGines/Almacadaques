@@ -6,12 +6,17 @@
   "scripts": {
     "front": "npm run dev --workspace=front"
   },
-  "workspaces":[
-    "front", 
+  "workspaces": [
+    "front",
     "back"
-  ]
-  ,
+  ],
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.11",
+    "@mui/material": "^5.14.11"
+  }
 }

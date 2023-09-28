@@ -1,0 +1,29 @@
+/* StatisticComponent.css */
+
+.stats {
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+  padding: 2rem;
+}
+
+.statBox {
+  text-align: center;
+  padding: 2.6rem;
+  margin: 0.5rem;
+  border-top: 4px solid #007BFF;
+}
+
+.statIcon {
+  font-size: 3rem !important;
+  margin-bottom: 0.5rem;
+}
+
+.statText {
+  font-size: 1.2rem !important; 
+}
+
+.custom-stat-box {
+  background-color: rgba(255, 255, 255, 0.5) !important; /* Color de fondo azul con transparencia estilo cristal */
+  padding: 2.5rem; /* Aumenta el padding para hacer las cajas un 25% más grandes */
+}

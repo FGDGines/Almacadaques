@@ -95,8 +95,8 @@
  }
  .carrousel div.slide.current img  {
    opacity:1;
-   width: 637px;
-   height: 410px;
+   width: 637px !important;
+   height: 410px !important;
    transition: all 100ms ease-in; 
  }
  
