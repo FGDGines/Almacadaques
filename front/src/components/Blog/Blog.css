@@ -1,0 +1,31 @@
+.blog {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  background-color: white;
+  padding-block: 7rem;
+}
+
+.blog-content {
+  padding-inline: 7rem;
+}
+
+.blog-content > img {
+  width: 100%;
+}
+
+.BlogPreview {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  margin-block: 0.3rem;
+}
+
+.BlogPreview * {
+  margin: 0.3rem;
+}
+
+.BlogPreview img {
+  margin-block: auto;
+  grid-column: 1;
+  grid-row: span 2;
+  width: 5rem;
+}
