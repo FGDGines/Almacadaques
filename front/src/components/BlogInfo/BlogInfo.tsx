@@ -1,17 +1,19 @@
-import { FC } from "react";
+import { FC, useContext } from "react";
 import { tpBlogInfo } from "../../types/typesComponents";
+import { GlobalContext } from "../../contexts/GlobalContext";
 
 const BlogInfo: FC<tpBlogInfo> = ({
   index,
   day,
   month,
   year,
-  thumbnail,
+  image: thumbnail,
   title,
   abstract,
 }) => {
+  const { setLayoutID } = useContext(GlobalContext);
   const gotoPost = () => {
-    alert(`Going to post of index: ${index}`);
+    setLayoutID(7);
   };
 
   const monthStr: string[] = [

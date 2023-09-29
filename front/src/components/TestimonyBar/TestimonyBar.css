@@ -3,13 +3,12 @@
   overflow-x: hidden;
   margin-inline: auto;
   width: 80vw;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-block: 3rem;
 }
 
 .Testimony {
   flex-basis: 100%;
-  margin-inline: 20px;
+  margin-inline: 1.2rem;
 }
 
 .testimony {
@@ -57,9 +56,6 @@
   flex-direction: row;
   width: max-content;
   transition: all 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.card {
 }
 
 .buttons {

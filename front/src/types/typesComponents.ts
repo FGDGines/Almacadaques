@@ -1,13 +1,13 @@
 import { ReactNode } from "react";
 
 type tpCarouelItem = {
-  title: string,
-  src: string
-}
+  title: string;
+  src: string;
+};
 
 type tpCarouselData = {
-  items: tpCarouelItem[]
-}
+  items: tpCarouelItem[];
+};
 
 type tpTestimonyBar = {
   testimonies: tpTestimony[];
@@ -29,15 +29,16 @@ type tpBlogInfo = {
   day: number;
   month: number;
   year: number;
-  thumbnail: string;
+  image: string;
   title: string;
-  abstract: string;
+  tags?: string[];
+  abstract?: string;
+  blogContent?: React.JSX.Element;
 };
-
 
 type tpNavButton = {
   target: number;
-  text: string;
+  text: string | React.JSX.Element;
 };
 
 type tpDropMenu = {
@@ -45,21 +46,18 @@ type tpDropMenu = {
   children: tpNavButton[];
 };
 
-
 type tpBtNice = {
-  text: string,
-  handler: () => void
+  text: string;
+  handler: () => void;
 } & Partial<{
-  tp: string
-}>
+  tp: string;
+}>;
 
 type tpBtnIcon = {
-  text: string,
-  Icon: ReactNode,
-  clase?: string
-}
-
-
+  text: string;
+  Icon: ReactNode;
+  clase?: string;
+};
 
 type tpFranja = {
   text: string;
@@ -75,9 +73,9 @@ type tpAlternateTimeLine = {
 };
 
 type tpCardM1 = {
-  title: string,
-  body: string[]
-}
+  title: string;
+  body: string[];
+};
 
 export type {
   tpTestimonyBar,
@@ -92,5 +90,5 @@ export type {
   tpBtnIcon,
   tpCarouelItem,
   tpCarouselData,
-  tpCardM1
+  tpCardM1,
 };
