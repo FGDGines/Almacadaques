@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./Searchbar.css";
-import { FaMagnet } from "react-icons/fa";
-
+import { AiOutlineSearch } from "react-icons/ai";
 const Searchbar = () => {
   const [search, setSearch] = useState("");
 
@@ -16,8 +15,8 @@ const Searchbar = () => {
         placeholder="Buscar..."
       ></input>
 
-      <button type="submit" className="">
-        <FaMagnet />
+      <button type="submit" className="icon">
+        <AiOutlineSearch />
       </button>
     </form>
   );

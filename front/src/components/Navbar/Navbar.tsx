@@ -44,7 +44,7 @@ const Navbar = () => {
       </div>
 
       <NavButton
-        className="rounded contact"
+        className="rounded hoverable-primary contact"
         target={3}
         text={
           <>

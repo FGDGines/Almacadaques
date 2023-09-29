@@ -1,0 +1,38 @@
+.AboutMeAbstract {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10rem;
+  padding: 5rem 8rem;
+}
+
+.AboutMeAbstract h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.AboutMeAbstract > .column > * {
+  padding-block: 1rem;
+}
+
+.coach {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  margin-block: 1rem;
+  align-items: center;
+}
+
+.coach > * {
+  margin: 0;
+  padding: 0;
+}
+
+.coach img {
+  grid-column: 1;
+  grid-row: span 2;
+  width: 5rem;
+  height: 5rem;
+  margin-inline: auto;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
+}
