@@ -77,6 +77,18 @@ type tpCardM1 = {
   body: string[];
 };
 
+type tpCalendarEvent ={
+    title: string;
+    start: string;
+    end: string;
+}
+
+type tpAgenda = {
+  events: tpCalendarEvent[]
+}
+
+
+
 export type {
   tpTestimonyBar,
   tpTestimony,
@@ -91,4 +103,6 @@ export type {
   tpCarouelItem,
   tpCarouselData,
   tpCardM1,
+  tpCalendarEvent,
+  tpAgenda
 };

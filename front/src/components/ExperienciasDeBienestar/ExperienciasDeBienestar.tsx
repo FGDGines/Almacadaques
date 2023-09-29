@@ -7,6 +7,8 @@ import CardM1 from '../CardM1/CardM1';
 import { cardsData } from '../../data/cardsExp';
 import TestimonyBar from '../TestimonyBar/TestimonyBar';
 import { testimonies } from '../../data/testimonies';
+import Agenda from '../Agenda/Agenda';
+import { eventos } from '../../data/calendar';
 
 const ExperienciasDeBienestar = () => {
     return <div className='ExperienciasDeBienestar'>
@@ -34,6 +36,7 @@ const ExperienciasDeBienestar = () => {
             <div className='ctTestimonios' style={{backgroundColor: "white"}}>
                 <TestimonyBar  quantityPerLayout={3} testimonies={testimonies} /> 
             </div>
+            <Agenda events={eventos} />
         </div>
         <Footer />
     </div>

@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useRef, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import { tpTestimonyBar } from "../../types/typesComponents";
 import Testimony from "../Testimony/Testimony";
 import "./TestimonyBar.css";
