@@ -38,7 +38,7 @@ type tpBlogInfo = {
 
 type tpNavButton = {
   target: number;
-  text: string;
+  text: string | React.JSX.Element;
 };
 
 type tpDropMenu = {

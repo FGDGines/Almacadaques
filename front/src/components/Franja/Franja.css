@@ -1,14 +1,13 @@
-.ctFranja{
-    background-color: rgb(199, 0, 57);
-    width: 100%;
-    display: flex;
-    justify-content: center;
+.ctFranja {
+  background-color: rgb(199, 0, 57);
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
-
 .Franja {
-    width: 70%;
-    font-size: 48px;
-    padding:  40px  ;
-    /* border: 1px solid white; */
+  width: 78%;
+  font-size: 3.2rem;
+  padding: 3rem;
+  /* border: 1px solid white; */
 }

@@ -1,0 +1,13 @@
+:root {
+  font-size: max(1vmax, 14px);
+}
+
+.logo {
+  content: url("assets/logo/logo.png");
+  width: 13rem;
+  margin-right: auto;
+}
+
+.rounded {
+  border-radius: 100vmax;
+}

@@ -1,5 +1,6 @@
 import "./App.css";
 import "./fonts.css";
+import "./global.css"
 import HandlerLayout from "./components/HandlerLayout/HandlerLayout";
 import { GlobalContextProvider } from "./contexts/GlobalContext";
 
