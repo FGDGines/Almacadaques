@@ -8,7 +8,8 @@ import { cardsData } from '../../data/cardsExp';
 import TestimonyBar from '../TestimonyBar/TestimonyBar';
 import { testimonies } from '../../data/testimonies';
 import Agenda from '../Agenda/Agenda';
-import { eventos } from '../../data/calendar';
+
+import AboutMeAbstract from '../AboutMeAbstract/AboutMeAbstract';
 
 const ExperienciasDeBienestar = () => {
     return <div className='ExperienciasDeBienestar'>
@@ -26,7 +27,7 @@ const ExperienciasDeBienestar = () => {
                     return <CardM1 key={index} title={title} body={body} />
                 })}
             </div>
-
+            <AboutMeAbstract />
             <div className='ctDescription'>
                 <span style={{ color: "#75151E" }}> ❝ </span>
                 Talleres y retiros con colaboradores expertos en distintas disciplinas.
@@ -36,7 +37,7 @@ const ExperienciasDeBienestar = () => {
             <div className='ctTestimonios' style={{backgroundColor: "white"}}>
                 <TestimonyBar  quantityPerLayout={3} testimonies={testimonies} /> 
             </div>
-            <Agenda events={eventos} />
+            <Agenda  />
         </div>
         <Footer />
     </div>

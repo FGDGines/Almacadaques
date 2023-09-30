@@ -3,32 +3,32 @@ import "./AboutMeAbstract.css";
 
 const AboutMeAbstract = () => {
   return (
-    <div className="AboutMeAbstract bg-secondary">
+    <div className="AboutMeAbstract">
       <div className="column">
-        <h1>Working together for your better life!</h1>
+        <h1>Trabajando juntos para una vida mejor.</h1>
         <p>
-          At Lead Planner, I strive to help you achieve ambitious goals and
-          reach new heights just by focusing on what’s important for you.
+          Me esfuerzo por ayudarte a alcanzar metas ambiciosas y
+          llegar a nuevas alturas simplemente centrándonos en lo que es importante para ti.
         </p>
       </div>
 
       <div className="column">
         <p>
-          An experienced business coach can easily help you get more from your
-          business by setting clear goals and planning your actions on the way
-          to success.
+          Un experimentado coach de bienestar puede ayudarte fácilmente 
+          a obtener más de tu vida al establecer metas claras y planificar tus 
+          acciones en el camino hacia el éxito.
         </p>
 
         <p>
-          As a professional and highly experienced business coach, I will be
-          glad to guide you towards new goals for both you and your team. By
-          ensuring the geometric growth of your business, you can push your
-          company to the limit in order to get what you want.
+          Como coach de bienestar profesional y 
+          altamente experimentada, estaré encantada de guiarte hacia nuevos objetivos tanto para ti 
+          como para tu equipo. Al asegurar el crecimiento geométrico de tu bienestar, puedes llevar 
+          tu vida al límite para conseguir lo que deseas
         </p>
 
         <div className="coach">
           <img src="./src/assets/background/unnamed (2).jpg" alt="" />
-          <h3>Juana Maria</h3>
+          <h3>Elizabet Coll-Vinent Puig</h3>
           <p>Coach de vida y bienestar</p>
         </div>
         <NavButton

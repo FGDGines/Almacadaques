@@ -7,7 +7,7 @@ import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
 import { FC } from 'react';
 import { tpAlternateTimeLine } from '../../types/typesComponents';
-
+import './TimeLine.css'
 const AlternateTimeline: FC<tpAlternateTimeLine> = ({data}) => {
   return (
     <Timeline position="alternate">

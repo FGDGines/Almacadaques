@@ -3,6 +3,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 10rem;
   padding: 5rem 8rem;
+  background-color: rgb(198, 187, 187);
+  padding-top:  60px ;
 }
 
 .AboutMeAbstract h1 {
