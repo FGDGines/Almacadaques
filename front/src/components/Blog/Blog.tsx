@@ -63,7 +63,7 @@ const Blog = () => {
       <div className="blog">
         <div className="blog-content">
           <img src={blog.image} alt={blog.title} />
-          <h1>{blog.title}</h1>
+          <h2>{blog.title}</h2>
           <p className="date">
             {blog.day}/{blog.month}/{blog.year}
           </p>
@@ -78,7 +78,7 @@ const Blog = () => {
         <div className="sideBar">
           <Searchbar />
           <div className="popular-posts">
-            <h2>Popular Posts</h2>
+            <h3>Popular Posts</h3>
             <BlogPreview
               index={0}
               day={17}
@@ -108,7 +108,7 @@ const Blog = () => {
             />
           </div>
           <div className="tags">
-            <h2>Tags</h2>
+            <h3>Tags</h3>
             {blog.tags?.map((tag, index) => {
               return <p key={index}>{tag}</p>;
             })}

@@ -1,5 +1,36 @@
 :root {
+  --accent-color: #c70039;
+  --secondary-color: #adb5bd;
+  --primary-color: #222222;
   font-size: max(1vmax, 14px);
+  font-family: "Roboto Flex", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: var(--primary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 1.7rem;
 }
 
 .logo {
@@ -9,5 +40,36 @@
 }
 
 .rounded {
+  display: flex;
+  align-items: center;
+
+  font-weight: 500;
+  width: max-content;
+  padding: 0.75em 3em;
+
   border-radius: 100vmax;
+  transition: all 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.bg-accent {
+  background-color: var(--accent-color);
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+.hoverable-primary {
+  border: 1px solid var(--primary-color);
+}
+
+.hoverable-primary:hover {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
 }
