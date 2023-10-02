@@ -32,3 +32,8 @@
     display: grid;
     grid-template-columns: repeat(3,  1fr );
 }
+
+.ExperienciasDeBienestar .ctAgenda{
+    background-color: rgb(198, 187, 187);
+    padding: 170px;
+}

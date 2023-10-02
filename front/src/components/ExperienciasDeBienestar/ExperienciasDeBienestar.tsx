@@ -37,7 +37,9 @@ const ExperienciasDeBienestar = () => {
             <div className='ctTestimonios' style={{backgroundColor: "white"}}>
                 <TestimonyBar  quantityPerLayout={3} testimonies={testimonies} /> 
             </div>
-            <Agenda  />
+            <div className='ctAgenda'>
+                <Agenda  />
+            </div>
         </div>
         <Footer />
     </div>

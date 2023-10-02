@@ -34,9 +34,11 @@ h3 {
 }
 
 .logo {
-  content: url("assets/logo/logo.png");
+  content: url("assets/logo/logo-png.png");
   width: 13rem;
   margin-right: auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .rounded {
