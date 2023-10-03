@@ -1,10 +1,11 @@
 .Footer {
-    border: 1px  solid white;
+    
     background-color: #222222;
     display: flex;
     flex-direction: column;
     color: white ; 
-    padding: 3vw;
+    padding: 5vw 9vw 11vw 9vw;
+    font-size: .9vw;
 }
 
 .Footer .ct1{ 
@@ -19,17 +20,17 @@
 .col1 .socialRed{
     display: flex;
     align-items: center;
-    width: 18vw;
+    width: 16vw;
     justify-content: space-between;
 }
 
 .socialRed img{
     margin-top: 2vw;
-    width: 1.8vw;
+    width: 1.4vw;
 }
 .col1 .ref{
     margin-top: 7vw;
-    width: 20vw;
+    width: 18vw;
 }
 .ct1 .col2 span{
     margin-bottom: .6vw;
@@ -43,7 +44,7 @@
     text-decoration: none;
     color: white;
     border: 1px solid white;
-    padding: 1vw 2vw;
+    padding: .7vw 2vw;
     border-radius: 10vw;
     display: flex;
     align-items: center;
@@ -51,7 +52,7 @@
 }
 
 .btCont a img{
-    width: 1.5vw;
+    width: 1.2vw;
     margin-left: .5vw;
 }
 
@@ -63,7 +64,7 @@
 
 
 .inf1 .tel{
-    font-size: 2vw;
+    font-size: 1.8vw;
 }
 
 
@@ -78,7 +79,13 @@
 
 .Footer .ct1 > .col3{
     flex: 3;
-}   
+    font-size: 1.5vw;
+}
+
+.col3 .span2{
+    margin-top: 1.5vw;
+    font-size: .8vw;
+}
     
 
 

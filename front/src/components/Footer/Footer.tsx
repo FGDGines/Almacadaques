@@ -50,8 +50,9 @@ const Footer = ()=>{
                     
                 </div>
                 <div className='col3' >
-                    <span >¡Mantente en contacto! Obtenga las últimas actualizaciones y ofertas.</span>
+                    <span className='span1'>¡Mantente en contacto! Obtenga las últimas actualizaciones y ofertas.</span>
                     <NewSletter />
+                    <span className='span2'>By clicking the button you agree to the Privacy Policy and Terms and Conditions</span>
                 </div>
             </div>
 
