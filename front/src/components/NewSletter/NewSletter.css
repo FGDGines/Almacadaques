@@ -39,3 +39,35 @@
     color: black;
     font-size: 1vw;
 }
+
+@media (max-width: 450px){
+    
+    
+    
+    
+    .NewSletter .ctForm input{
+        height: 5vh;
+        width: 32vw;
+        
+    }
+    
+    .NewSletter .ctForm input, .NewSletter .ctForm button{
+        font-size: 4.5vw;
+        border-radius: 8vw;
+        color: white;
+        border: 1.5px solid white;
+        padding: 3vw 2vw 3vw 2vw;
+        margin: 1px;
+        margin-top: 5vw;
+    }
+    
+    .NewSletter .ctForm button{
+        
+
+        margin-right: 2vw;
+        background-color: white;
+        color: black;
+        font-size: 4vw;
+    }
+    
+}
