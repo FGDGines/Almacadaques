@@ -1,33 +1,87 @@
 .Footer {
-    border: 1px  solid black;
+    border: 1px  solid white;
     background-color: #222222;
     display: flex;
     flex-direction: column;
     color: white ; 
-    padding: 50px;
+    padding: 3vw;
 }
 
 .Footer .ct1{ 
     /* border: 1px solid white; */
     display: flex ;
 }
+.ct1 .inf1{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vw;
+}
+.col1 .socialRed{
+    display: flex;
+    align-items: center;
+    width: 18vw;
+    justify-content: space-between;
+}
+
+.socialRed img{
+    margin-top: 2vw;
+    width: 1.8vw;
+}
+.col1 .ref{
+    margin-top: 7vw;
+    width: 20vw;
+}
+.ct1 .col2 span{
+    margin-bottom: .6vw;
+}
+
+.col2 .btCont{
+    display: flex;
+    align-items: center;
+}
+.col2 .btCont a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 1vw 2vw;
+    border-radius: 10vw;
+    display: flex;
+    align-items: center;
+    
+}
+
+.btCont a img{
+    width: 1.5vw;
+    margin-left: .5vw;
+}
+
+.col2 .inf1 a{
+    text-decoration: none;
+    color: white;
+    margin-top: 6vw;
+}
+
+
+.inf1 .tel{
+    font-size: 2vw;
+}
+
+
 
 .Footer .ct1 > div{
     display: flex;
     flex-direction: column;
-    flex: 2;
-    justify-content: center;
+    flex: 3;
 }
+
+
 
 .Footer .ct1 > .col3{
     flex: 3;
 }   
     
 
-.Footer .ct2{
-    margin-top: 60px;
-        text-align: center;
-}
+
 
 
 
