@@ -6,7 +6,7 @@
 .Propuesta .title{
     
     text-align: center;
-    font-size: 32px;
+    font-size: 3.2vw;
 }
 
 .Propuesta .Espacios{
@@ -16,3 +16,9 @@
     align-items: center;
     flex-direction: column;
 }
+
+@media (max-width: 450px){
+    .Propuesta .title{
+        font-size: 6vw;
+    }
+ }

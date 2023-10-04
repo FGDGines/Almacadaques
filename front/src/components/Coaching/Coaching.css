@@ -4,30 +4,50 @@
 
 
 .Coaching .ctTitle1{
-    /* border: 1px solid black; */
     text-align: center;
-    font-size: 30px;
-    padding: 0px 150px;
+    font-size: 2vw;
 }
 
 .Coaching .ctMain{
-    /* border: 10px solid black; */
     display: flex;
 }
 
 
 .Coaching .ctMain > div{
     flex: 1;
-    /* border: 1px solid black; */
-    padding: 150px;
+    padding: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .Coaching .ctMain > div > img.Picture{
-    width: 80%;
+    width: 75%;
 }
 
 .Coaching .ctMain > div .css-18y2uza-MuiTypography-root-MuiTimelineContent-root{
     text-align: justify;
+}
+
+@media (max-width: 780px){
+    
+    .Coaching .ctMain{
+        display: flex;
+        flex-direction: column;
+    }
+    .Coaching .ctMain > div > img.Picture{
+        width: 50%;
+    }
+
+}
+
+@media (max-width: 450px){
+    .Coaching .ctTitle1{
+        font-size: 5vw;
+    }
+    .Coaching .ctMain > div > img.Picture{
+        width: 90%;
+    }
 }
 
 

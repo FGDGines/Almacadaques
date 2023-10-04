@@ -7,7 +7,7 @@ import { tlCoaching } from '../../data/tlCoaching';
 import TestimonyBar from "../TestimonyBar/TestimonyBar";
 import { testimonies } from '../../data/testimonies';
 
-const Coaching = ()=>{
+const Coaching = () => {
     return <div className="Coaching">
         <Navbar />
         <Franja text="Coaching" />
@@ -15,23 +15,23 @@ const Coaching = ()=>{
         <br />
         <div className='ctTitle1'>
             ¿Sientes que existe una brecha entre la vida que llevas y la que quieres llevar?<br />
-             ¿Quieres convertirte en tu mejor versión?
+            ¿Quieres convertirte en tu mejor versión?
         </div>
         <div className='ctMain'>
             <div className='timeLineContainer'>
-                <AlternateTimeline data={tlCoaching} />         
+                <AlternateTimeline data={tlCoaching} />
             </div>
             <div className='ctPhoto'>
                 <img className='Picture' src="./src/assets/background/unnamed (5).jpg" alt="" />
             </div>
         </div>
         <TestimonyBar
-        quantityPerLayout={3}
-        testimonies={testimonies}
-      />
-        
+            quantityPerLayout={3}
+            testimonies={testimonies}
+        />
+
         <Footer />
-    </div>   
+    </div>
 }
 
 export default Coaching
