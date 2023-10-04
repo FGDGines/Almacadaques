@@ -1,109 +1,107 @@
-.carrousel {
-    box-shadow: 15px 9px 30px 6px      rgba(0,0,0,0.61);
-   width: 100%;
-   height: 100%;
-   display: flex;
-   width: 637px !important ;
-   height: 410px !important;
-   justify-content: center;
-   
-   
- }
- 
- .controls {
-   width: 637px;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   margin-top: 10px;
-   /* border: 1px solid black; */
-   margin-top: 30px;
- }
- 
- .controls button {
-   border: none;
-   border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.5);
-   color: white;
-   cursor: pointer;
-   font-size: 2rem;
-   height: 48px;
-   width: 48px;
-   transition: all 350ms ease-in;
-   
- }
- 
- .controls button:hover {
-   background-color: rgba(0, 0, 0, 0.7);
-   transform: scale(1.1);
- }
- 
- .circles {
-   bottom: 5px;
-   display: flex;
-   justify-content: space-between;
-   width: 20%;
-   z-index: 2;
-   padding: 15px;
-   border-radius: 12px;
-   background-color: rgba(0, 0, 0, 0.7);
- }
- 
- .circle {
-   background-color: rgba(255, 255, 255, 0.6);
-   height: 10px;
-   width: 10px;
-   border-radius: 100%;
-   transition: all 200ms ease-in;
-   cursor: pointer; 
- }
- 
- .circle.active {
-   background-color: rgba(255, 255, 255, 0.9);
-   transform: scale(1.5);
- }
- 
- 
- .carrousel div.slide .textoSlider{
-   background-color: rgba(0, 0, 0, 0.7);
-   color: white  ;
-   position: relative;
-   width: 80%;
-   margin-left: 10%;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-   display: none;
-   bottom: 70px;
-   padding: 15px;
-   border-radius: 12px;
- 
- }
- 
- .carrousel div.slide img  {
-   max-width: 100%;
-   max-height: 100%;
-   width: 0%;
-   height: 0%;
-   opacity: 0;
-   /* transition: all 100ms ease-in;  */
- }
- 
- .carrousel div.slide.current .textoSlider{
-   display: flex;
- 
- }
- .carrousel div.slide.current img  {
-   opacity:1;
-   width: 637px !important;
-   height: 410px !important;
-   transition: all 100ms ease-in; 
- }
- 
- .ctCarousel {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column  ;
-  margin-bottom: 100px;
- }
+.Carousel{
+    display: grid;   
+    grid-template-columns: 1fr 1fr  ;    
+}
+
+
+.Carousel > .ctTextController , .Carousel > .ctPicture{
+    /* border: 1px solid black; */
+    position: relative;
+}
+
+.Carousel > .ctTextController > .btnCarousel{
+    border: 2px solid rgb(164, 161, 161);;
+    width: fit-content;
+    padding: 15px;
+    position: absolute;
+    margin: 15px;
+    border-radius: 9999px;
+    width: 64px;
+    height: 64px;
+    font-size: 30px;
+    cursor: pointer; 
+    transition: all 0.6s ;
+
+}
+
+.Carousel > .ctTextController > .btnCarousel  * {
+    stroke: rgb(164, 161, 161);
+    transition: all 0.6s ;
+}
+
+.Carousel > .ctTextController > .btnCarousel:hover  * {
+    stroke: white;
+}
+
+.Carousel > .ctTextController > .btnCarousel:hover{
+    border: 1px solid white;
+}
+
+
+.Carousel > .ctTextController > .btnCarousel:nth-child(2){
+    right: 0;
+}
+
+.Carousel > .ctPicture {
+    position: relative;
+    overflow: hidden;
+    height: 30rem;
+}
+
+.Carousel > .ctPicture > * {
+    position: absolute;
+    height:  30rem;
+    width: 50rem  ;
+    object-fit: cover;
+    object-position: center;
+    
+}
+
+.Carousel .slide-out {
+    /*
+    cubic-bezier(0.165, 0.84, 0.44, 1)
+    cubic-bezier(0.44, 0, 0.84, 0.165)
+    */
+    animation: slide-out 320ms ease-in;
+}
+
+.Carousel .slide-in {
+    animation: slide-in 280ms ease-out;
+}
+
+
+
+@keyframes slide-out {
+    0%{
+    }
+    100%{
+        transform: translateX(-50rem);
+    }
+}
+
+@keyframes slide-in {
+    
+    0%{
+        transform: translateX(-50rem);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+.Carousel .ctTextController {
+    background-color:  #FF5A5A ; 
+    color: white;
+}
+
+.Carousel .ctTextController > h2{
+    /* border: 1px solid black; */
+    margin-top: auto;
+    margin-bottom: auto ;
+    height: 100% ;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,53 @@
+/* styles.css */
+
+/* Estilos para el contenedor del formulario */
+.FormAgenda {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Estilos para el título */
+  .FormAgenda h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para los campos de entrada y etiquetas */
+  .FormAgenda label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .FormAgenda input[type="text"],
+  .FormAgenda input[type="email"],
+  .FormAgenda input[type="tel"],
+  .FormAgenda select,
+  .FormAgenda input[type="datetime-local"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Estilo para el botón de guardar */
+  .FormAgenda button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .FormAgenda button:hover {
+    background-color: #0056b3;
+  }
+  

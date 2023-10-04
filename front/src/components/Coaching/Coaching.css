@@ -21,6 +21,11 @@
     justify-content: center;
 }
 
+.Coaching .ctMain > div.timeLineContainer{
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
 .Coaching .ctMain > div > img.Picture{
     width: 75%;
 }

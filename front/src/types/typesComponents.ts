@@ -3,7 +3,15 @@ import { ReactNode } from "react";
 type tpCarouelItem = {
   title: string;
   src: string;
+  id:number 
 };
+
+type tpFormAgenda = {
+    actividades: string[],
+    currentAct?: number, 
+    fechaInicio: '',
+    fechaFin: '',
+}
 
 type tpCarouselData = {
   items: tpCarouelItem[];
@@ -104,5 +112,6 @@ export type {
   tpCarouselData,
   tpCardM1,
   tpCalendarEvent,
-  tpAgenda
+  tpAgenda,
+  tpFormAgenda
 };
