@@ -34,6 +34,20 @@
 }
 
 .ExperienciasDeBienestar .ctAgenda{
-    background-color: rgb(198, 187, 187);
+    background-color: rgb(255, 255, 255);
     padding: 170px;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.ExperienciasDeBienestar .ctAgenda > *  {
+    width: 100%;
+    height: 100% ;
+    margin: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }

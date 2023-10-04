@@ -2,17 +2,20 @@ import { useState } from 'react';
 import { Calendar, momentLocalizer } from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import moment from 'moment';
+import './Agenda.css'
+
 
 // Configuración de localización utilizando moment.js
+moment.locale('es')
 const localizer = momentLocalizer(moment);
 
 const Agenda = () => {
   // Eventos de ejemplo (puedes reemplazarlos con tus propios datos)
   const [events, setEvents] = useState([
     {
-      title: 'Reunión importante',
+      title: 'Reunión importante para retiro en la playa',
       start: moment().toDate(),
-      end: moment().add(2, 'hours').toDate(),
+      end: moment().add(5, 'hours').toDate(),
     },
     {
       title: 'Otro evento',

@@ -5,11 +5,8 @@ import Franja from '../Franja/Franja';
 import StatisticComponent from '../StatisticComponent/StatisticComponent';
 import CardM1 from '../CardM1/CardM1';
 import { cardsData } from '../../data/cardsExp';
-import TestimonyBar from '../TestimonyBar/TestimonyBar';
-import { testimonies } from '../../data/testimonies';
 import Agenda from '../Agenda/Agenda';
-
-import AboutMeAbstract from '../AboutMeAbstract/AboutMeAbstract';
+import FormAgenda from '../FormAgenda/FormAenda';
 
 const ExperienciasDeBienestar = () => {
     return <div className='ExperienciasDeBienestar'>
@@ -27,19 +24,20 @@ const ExperienciasDeBienestar = () => {
                     return <CardM1 key={index} title={title} body={body} />
                 })}
             </div>
-            <AboutMeAbstract />
+            {/* <AboutMeAbstract /> */}
             <div className='ctDescription'>
                 <span style={{ color: "#75151E" }}> ❝ </span>
                 Talleres y retiros con colaboradores expertos en distintas disciplinas.
                 <span style={{ color: "#75151E" }}> ❞ </span>
             </div>
+
             <StatisticComponent />
-            <div className='ctTestimonios' style={{backgroundColor: "white"}}>
-                <TestimonyBar  quantityPerLayout={3} testimonies={testimonies} /> 
-            </div>
+
             <div className='ctAgenda'>
                 <Agenda  />
+                <FormAgenda />
             </div>
+
         </div>
         <Footer />
     </div>
