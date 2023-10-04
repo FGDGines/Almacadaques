@@ -40,6 +40,21 @@
     font-size: 1vw;
 }
 
+
+@media (max-width: 780px){
+    .NewSletter .ctForm input, .NewSletter .ctForm button{
+        font-size: 2vw;
+    }
+    .NewSletter .ctForm button{
+        
+
+        margin-right: 2vw;
+        
+    }
+
+}
+
+
 @media (max-width: 450px){
     
     
