@@ -1,33 +1,211 @@
 .Footer {
-    border: 1px  solid black;
+    
     background-color: #222222;
     display: flex;
     flex-direction: column;
     color: white ; 
-    padding: 50px;
+    padding: 5vw 9vw 11vw 9vw;
+    font-size: .9vw;
 }
+
+
 
 .Footer .ct1{ 
     /* border: 1px solid white; */
     display: flex ;
 }
 
+.ct1 .inf1{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vw;
+}
+.col1 .socialRed{
+    display: flex;
+    align-items: center;
+    width: 16vw;
+    justify-content: space-between;
+}
+
+.socialRed img{
+    margin-top: 2vw;
+    width: 1.4vw;
+}
+.col1 .ref{
+    margin-top: 7vw;
+    width: 18vw;
+}
+.ct1 .col2 span{
+    margin-bottom: .6vw;
+}
+
+.col2 .btCont .contact{
+    display: flex;
+    align-items: center;
+    border: 1px solid white;
+    padding: 0 2.5vw;
+}
+
+.btCont .contact p{
+    margin-right: .5vw;
+    font-size: 1vw;
+}
+.col2 .btCont a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: .7vw 2vw;
+    border-radius: 10vw;
+    display: flex;
+    align-items: center;
+    
+}
+
+.btCont a img{
+    width: 1.2vw;
+    margin-left: .5vw;
+}
+
+.col2 .inf1 a{
+    text-decoration: none;
+    color: white;
+    margin-top: 6vw;
+}
+
+
+.inf1 .tel{
+    font-size: 1.8vw;
+}
+
+
 .Footer .ct1 > div{
     display: flex;
     flex-direction: column;
-    flex: 2;
-    justify-content: center;
+    flex: 3;
 }
+
+
 
 .Footer .ct1 > .col3{
     flex: 3;
-}   
+    font-size: 1.5vw;
+}
+
+.col3 .span2{
+    margin-top: 1.5vw;
+    font-size: .8vw;
+}
+
+.ct2{
+    margin-top: 3vw;
+    display: flex;
+    flex: 2;
+}
+.ct2 .col1{
+    width: 18vw;
+    font-size: 1.1vw;
+    margin-right: 5vw;
+}
+
+
+.ct2 .col2 a{
+    text-decoration: none;
+    font-size: 1vw;
+    color: white;
+}
     
 
-.Footer .ct2{
-    margin-top: 60px;
-        text-align: center;
+
+@media (max-width: 780px){
+    
+
 }
+
+@media (max-width: 450px){
+    .Footer {
+        padding: 10vw 5vw;
+        font-size: 4.5vw;
+    }
+    
+    .Footer .ct1{ 
+        flex-direction: column;
+    }
+    .ct1 .inf1{
+        margin-bottom: 10vw;
+    }
+    .col1 .socialRed{
+        width: 50vw;
+    }
+    
+    .socialRed img{
+        margin-top: 10vw;
+        width: 5vw;
+    }
+    
+
+    .ct1 .col2{
+        margin-top: 14vw;
+    }
+    
+    
+    .col2 .btCont .contact{
+
+        padding: 0 10vw;
+        font-size: 6vw;
+        margin-bottom: 10vw;
+    }
+
+
+    .ct2{
+        margin-top: 3vw;
+        display: flex;
+        flex-direction: column;
+        flex: 2;
+    }
+
+    /* contenedor 2 */
+    .ct2 .col1{
+        width: 100vw;
+        font-size: 3.5vw;
+        margin-bottom: 8vw;
+    }
+    
+    
+    .ct2 .col2 a{
+        font-size: 4vw;
+    }
+    
+    .btCont .contact p{
+        font-size: 5vw;
+        margin-right: 4vw;
+    }
+
+    .inf1 .tel{
+        font-size: 7vw;
+    }
+    
+    
+    
+    .Footer .ct1 > div{
+        flex: 1;
+    }
+    
+    
+    
+    .Footer .ct1 > .col3{
+        flex: 1;
+        font-size: 6vw;
+    }
+    
+    .col3 .span2{
+        margin-top: 6vw;
+        margin-bottom: 7vw;
+        font-size: 5vw;
+        margin-bottom: 18vw;
+    }
+
+}
+
 
 
 

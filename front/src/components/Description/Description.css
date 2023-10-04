@@ -1,5 +1,5 @@
  .Description {
-     /* border: 1px solid black; */
+     /* border: 5px solid black; */
      padding: 60px;
      display: flex;
      flex-direction: column;
@@ -21,7 +21,7 @@
  }
 
  .Description .ctDefault .ctTitle {
-     font-size: 60px;
+     font-size: 3vw;
      text-align: center;
      line-height: 120%;
      padding-bottom: 70px;
@@ -36,7 +36,7 @@
 
 
  .Description .ctDefault .ctTitle2 {
-     font-size: 36px;
+     font-size: 3.4vw;
      text-align: center;
      line-height: 120%;
      margin-top: 50px;
@@ -48,4 +48,10 @@
     height: 30vh;
     background-color: transparent;
     margin-bottom: 130px;
+ }
+
+ @media (max-width: 450px){
+    .Description .ctDefault .ctTitle2 {
+        font-size: 5vw;
+    }
  }

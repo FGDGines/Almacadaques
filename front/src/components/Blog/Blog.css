@@ -29,3 +29,12 @@
   grid-row: span 2;
   width: 5rem;
 }
+
+@media (max-width: 780px){
+ 
+}
+
+@media (max-width: 450px){
+
+
+}

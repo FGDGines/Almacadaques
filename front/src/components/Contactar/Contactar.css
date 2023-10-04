@@ -1,79 +1,188 @@
 .Contactar {
-    background-color: white;
+  background-color: white;
 }
-.Contactar .ctSections{
-    display: flex;   
-}
-
-.Contactar .ctSections >  div{
-    flex: 1;
-    padding: 160px;
-    display: flex;
-    flex-direction: column;
+.Contactar .ctSections {
+  display: flex;
+  padding: 0 3vw;
+  margin-top: 4vw;
 }
 
-.Contactar .ctSections > div > div.title1{
-    font-size: 40px;
+.Contactar .ctSections > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-right: 2vw;
+  padding: 4vw;
 }
 
-.Contactar .ctSections > div > div.title2{
-    font-size: 20px;
+.Contactar .ctSections > div > div.title1 {
+  font-size: 1.9vw;
+  line-height: 6vh;
+  font-weight: 600;
+  margin-bottom: 2vw;
 }
 
-.Contactar .ctSections > div > div.ctTelef  {
-    font-size: 25px;
-    font-weight: 500;
-}
-.Contactar .ctSections > div > div.ctTelef ,.Contactar .ctSections > div > div.ctCorreo{
-    font-weight: 400;
+.Contactar .ctSections > div > div.title2 {
+  font-size: 1.2vw;
+  line-height: 4vh;
+  margin-bottom: 1vw;
 }
 
-
-.Contactar .ctSections > div.ctRight .TitleForm{
-    font-size: 40px ;
+.Contactar .ctSections > div > div.ctTelef {
+  font-size: 2vw;
+  font-weight: 200;
+}
+.Contactar .ctSections > div > div.ctTelef,
+.Contactar .ctSections > div > div.ctCorreo {
+  font-weight: 400;
 }
 
-
-
-.Contactar .ctSections > div.ctRight form.Form{
-    /* border: 1px solid black; */
-    display: flex;
-    flex-direction: column;
+.Contactar .ctSections > div.ctRight .TitleForm {
+  font-size: 2.5vw;
+  margin-bottom: 2.5vw;
 }
 
-
-
-.Contactar .ctSections > div.ctRight form.Form div.formRow{
-    /* border: 1px solid black; */
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
+.ctDireccion {
+  font-size: 1.3vw;
+  font-weight: 300;
+  line-height: 2vw;
 }
 
-
-.Contactar .ctSections > div.ctRight form.Form div.formRow.rowConact{
-    display: flex;    
-    flex-direction: row;
-    justify-content: flex-end;
-    /* border: 1px solid black; */
-
+.Contactar .ctSections > div.ctRight form.Form {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
 }
 
-.Contactar .ctSections > div.ctRight form.Form div.formRow .Label{
-    font-size: 18px;
-    color: gray;
-    margin-bottom: 2px;
+.Contactar .ctSections > div.ctRight form.Form div.formRow {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  width: 40vw;
 }
 
+.Contactar .ctSections > div.ctRight form.Form div.formRow.rowConact {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* border: 1px solid black; */
+}
 
-.Contactar .ctSections > div.ctRight form.Form div.formRow input, .Contactar .ctSections > div.ctRight form.Form div.formRow textarea{
-    flex: 1;
-    font-size: 20px;
-    padding: 20px;
+.Contactar .ctSections > div.ctRight form.Form div.formRow .Label {
+  font-size: 1.2vw;
+  color: gray;
+  margin-bottom: 2px;
+}
+
+.Contactar .ctSections > div.ctRight form.Form div.formRow input,
+.Contactar .ctSections > div.ctRight form.Form div.formRow textarea {
+  flex: 1;
+  font-size: 1.2vw;
+  padding: 0.5vw;
+  border-radius: 5px;
+  padding-left: 25px;
+  border: 1px solid gray;
+}
+
+@media (max-width: 780px) {
+  .Contactar .ctSections {
+    padding: 0vw;
+  }
+  .Contactar .ctSections > div {
+    margin-right: 0vw;
+    padding: 2vw;
+  }
+  .Contactar .ctSections > div > div.title1 {
+    font-size: 2.5vw;
+    line-height: 5vh;
+    margin-bottom: 1vw;
+  }
+  .Contactar .ctSections > div > div.title2 {
+    font-size: 2vw;
+  }
+
+  .Contactar .ctSections > div > div.ctTelef {
+    font-size: 2.5vw;
+  }
+
+  .Contactar .ctSections > div.ctRight .TitleForm {
+    font-size: 3.5vw;
+    margin-bottom: 0.5vw;
+  }
+
+  .ctDireccion {
+    font-size: 1.5vw;
+    line-height: 2vw;
+  }
+
+  .Contactar .ctSections > div.ctRight form.Form div.formRow .Label {
+    font-size: 1.6vw;
+  }
+
+  .Contactar .ctSections > div.ctRight form.Form div.formRow input,
+  .Contactar .ctSections > div.ctRight form.Form div.formRow textarea {
+    font-size: 1.8vw;
     border-radius: 5px;
-    padding-left: 25px;
-    border: 1px solid black ;
+    padding-left: 8px;
+  }
 }
 
+@media (max-width: 450px) {
+    
+      .Contactar .ctSections {
 
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        flex-direction: column;
+        padding: 0vw;
+        margin-top: 0vw;
+        
+      }
+      
+      .Contactar .ctSections > div {
+        margin-right: 0vw;
+        padding: 3vw;
+      }
+      
+      .Contactar .ctSections > div > div.title1 {
+        margin-top: 4vw;
+        font-size: 5vw;
+      }
+      
+      .Contactar .ctSections > div > div.title2 {
+        font-size: 4vw;
+      }
+      
+      .Contactar .ctSections > div > div.ctTelef {
+        font-size: 5vw;
+      }
+            
+      .Contactar .ctSections > div.ctRight .TitleForm {
+        font-size: 9vw;
+        margin-bottom: 2vw;
+      }
+      
+      .ctDireccion {
+        font-size: 3vw;
+        font-weight: 300;
+        line-height: 4vw;
+      }
+      
+      
+      .Contactar .ctSections > div.ctRight form.Form div.formRow {
+        margin-bottom: 20px;
+        width: 95vw;
+      }
+      
+      .Contactar .ctSections > div.ctRight form.Form div.formRow .Label {
+        font-size: 4vw;
+
+      }
+      
+      .Contactar .ctSections > div.ctRight form.Form div.formRow input,
+      .Contactar .ctSections > div.ctRight form.Form div.formRow textarea {
+        font-size: 5vw;
+        padding-left: 9px;
+      }
+}
