@@ -3,6 +3,7 @@ import { ReactNode } from "react";
 type tpCarouelItem = {
   title: string;
   src: string;
+  id:number 
 };
 
 type tpCarouselData = {

@@ -1,68 +1,64 @@
 import './Carousel.css'
-import { FC, useEffect, useState } from 'react'
-import { tpCarouselData } from '../../types/typesComponents'
+import { FC, useRef, useState } from 'react'
+import { tpCarouelItem, tpCarouselData } from '../../types/typesComponents'
+import {GrLinkPrevious as FcPrevious, GrLinkNext as FcNext} from 'react-icons/gr'
+
 
 const Carousel: FC<tpCarouselData> = ({ items }) => {
-    const [itemActive, setItemActive] = useState<number[]>([])
+    const [sheets, setSheets] = useState(items);
+    setSheets
+    const ctPicture = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        activarItem(0)
-    }, [])
+    const changeSheet = (forward: boolean) => {
+        const children = ctPicture.current?.children;
+        if (!children) return
+        
+        for (let i = 0; i < children?.length; i++) {
+            children[i].classList.remove('slide-out')
+            children[i].classList.remove('slide-in')
+        }
 
-    const activarItem = (target: number) => {
-        const array = items.map((arg, index) => {
-            return (index == target) ? 1 : 0
-        })
-        setItemActive(array)
+        if (forward) {
+            children[children.length - 1].classList.toggle("slide-out");
+            setTimeout(() => {
+                const dave: tpCarouelItem[] = []
+                const buff = dave.concat(sheets)
+                buff.unshift(buff[buff.length - 1])
+                buff.pop()
+                setSheets(buff)
+
+                
+
+            }, 300)
+        }
+        else{
+            children[0].classList.toggle("slide-in")
+            setTimeout(()=>{
+                const buff = sheets.slice(1,sheets.length)
+                buff.push(sheets[0])
+                setSheets(buff)
+            }, 300)
+        }
     }
 
-    const activarSiguiente = () => {
-        itemActive.forEach((arg, index) => {
-            if (arg == 1) {
-                if (index == itemActive.length - 1) activarItem(0)
-                else activarItem(index + 1)
+    return <div className='Carousel'>
+        <div className='ctPicture' ref={ctPicture}>
+            {
+                sheets.map((sheet) => {
+                    return <img src={sheet.src} alt="" key={sheet.title} />
+                })
             }
-        });
-    }
-
-    const activarAnterior = () => {
-        itemActive.forEach((arg, index) => {
-            if (arg == 1) {
-                if (index == 0) activarItem(itemActive.length - 1)
-                else activarItem(index - 1)
-            }
-        })
-    }
-
-    return <div className='ctCarousel'>
-        <section className="carrousel">
-            {items.map((arg, index) => {
-                const { title, src } = arg
-                return <div key={index} className={`${itemActive[index] ? 'current' : ''} slide `}>
-                    <img src={src} className="img-fluid" alt="" />
-                    <div className="textoSlider">
-                        {title}
-                    </div>
-                </div>
-            })}
-
-        </section>
-
-        <div className="controls d-flex align-items-center" >
-            <button className="prev" onClick={activarAnterior}>
-                <span >
-                    {"<"}
-                </span>
+        </div>
+        <div className='ctTextController'>
+            <button className='btnCarousel btLeft' onClick={() => changeSheet(false)}>
+                <FcPrevious/>
             </button>
-            <div className="circles">
-                {itemActive.map((arg, index) => {
-                    return <div key={index} onClick={() => activarItem(index)} className={`circle ${arg == 1 ? 'active' : ''}`}>
-
-                    </div>
-                })}
-
-            </div>
-            <button onClick={activarSiguiente} className="next"><span> {">"} </span></button>
+            <button className='btnCarousel btLeft' onClick={() => changeSheet(true)}>
+                <FcNext/>
+            </button>
+            <h2>
+                {sheets[0].title}
+            </h2 >
         </div>
     </div>
 }

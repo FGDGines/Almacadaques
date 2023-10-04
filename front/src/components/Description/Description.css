@@ -14,6 +14,12 @@
 
  }
 
+ .Description .ctCarousel{
+    margin: 60px;
+    padding: 60px;
+    /* border: 10px solid black; */
+ }
+
  .Description .ctDefault .ctTitle {
      font-size: 60px;
      text-align: center;
