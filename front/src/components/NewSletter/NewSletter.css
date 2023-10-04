@@ -44,6 +44,7 @@
 @media (max-width: 780px){
     .NewSletter .ctForm input, .NewSletter .ctForm button{
         font-size: 2vw;
+        padding: 1vw;
     }
     .NewSletter .ctForm button{
         

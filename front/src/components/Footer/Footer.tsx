@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="Footer">
             <div className="ct1">
                 <div className="ct_inf1_in2">
-                    
+
                     <div className='col1'>
 
                         <div className="inf1">
@@ -21,11 +21,9 @@ const Footer = () => {
 
 
                         <span className='socialRed' >
-                            <a href="#"> <img src="../../../src/assets/images/youtube.png" alt="Youtube" /> </a>
-                            <a href="#"> <img src="../../../src/assets/images/instagram.png" alt="Instagram" /> </a>
-                            <a href="#"> <img src="../../../src/assets/images/facebook.png" alt="Facebook" /> </a>
-                            <a href="#"> <img src="../../../src/assets/images/twiter.png" alt="Twiter" /> </a>
-                            <a href="#"> <img src="../../../src/assets/images/linkedin.png" alt="Linkedin" /> </a>
+                           
+                            <a href="https://www.instagram.com/almacadaques/" target="_blank"> <img src="../../../src/assets/images/instagram.png" alt="Instagram" /> </a>
+                            <a href="https://www.linkedin.com/in/elisabet-coll-vinent-b9765530" target="_blank"> <img src="../../../src/assets/images/linkedin.png" alt="Linkedin" /> </a>
                         </span>
 
 
