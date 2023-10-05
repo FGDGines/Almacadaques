@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 
 
 import './FormAgenda.css'
-const FormAgenda: React.FC = () => {
+import { tpFormAgenda } from '../../types/typesComponents';
 
+const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
+  
   const [formData, setFormData] = useState({
     nombre: '',
     correo: '',
     telefono: '',
     actividad: '',
-    fechaInicio: '',
-    fechaFin: '',
   });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -75,34 +75,13 @@ const FormAgenda: React.FC = () => {
             onChange={handleChange}
           >
             <option value="">Selecciona una actividad</option>
-            <option value="Reunión">Reunión</option>
-            <option value="Presentación">Presentación</option>
-            <option value="Taller">Taller</option>
-            {/* Agrega más opciones según sea necesario */}
+            {actividades.map((item )=>{
+              const { id, title } =  item 
+              return <option key={id} value={`${id}`}>{title}</option>
+            })}
           </select>
         </div>
-        <div>
-          <label htmlFor="fechaInicio">Fecha de Inicio:</label>
-          <input
-            type="datetime-local"
-            id="fechaInicio"
-            name="fechaInicio"
-            required
-            value={formData.fechaInicio}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <label htmlFor="fechaFin">Fecha de Fin:</label>
-          <input
-            type="datetime-local"
-            id="fechaFin"
-            name="fechaFin"
-            required
-            value={formData.fechaFin}
-            onChange={handleChange}
-          />
-        </div>
+
         <div>
           <button type="submit">Guardar</button>
         </div>

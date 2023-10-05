@@ -1,5 +1,7 @@
 import { ReactNode } from "react";
 
+// Definición del tipo de evento
+
 type tpCarouelItem = {
   title: string;
   src: string;
@@ -7,10 +9,8 @@ type tpCarouelItem = {
 };
 
 type tpFormAgenda = {
-    actividades: string[],
+    actividades: tpCalendarDates[],
     currentAct?: number, 
-    fechaInicio: '',
-    fechaFin: '',
 }
 
 type tpCarouselData = {
@@ -86,13 +86,18 @@ type tpCardM1 = {
 };
 
 type tpCalendarEvent ={
-    title: string;
-    start: string;
-    end: string;
+    id: number
+    title: string
+    start: string  | Date
+    end:   string  | Date
 }
 
+type tpCalendarDates = tpCalendarEvent //Alias para compativilidad
+
+
+
 type tpAgenda = {
-  events: tpCalendarEvent[]
+  hSelect: (arg: tpCalendarDates)=> void
 }
 
 
@@ -113,5 +118,6 @@ export type {
   tpCardM1,
   tpCalendarEvent,
   tpAgenda,
-  tpFormAgenda
+  tpFormAgenda,
+  tpCalendarDates
 };
