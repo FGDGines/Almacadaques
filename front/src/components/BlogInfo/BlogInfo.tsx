@@ -2,6 +2,7 @@ import { FC, useContext } from "react";
 import { tpBlogInfo } from "../../types/typesComponents";
 import { GlobalContext } from "../../contexts/GlobalContext";
 
+
 const BlogInfo: FC<tpBlogInfo> = ({
   index,
   day,

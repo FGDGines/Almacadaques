@@ -1,11 +1,12 @@
 .Carousel{
     display: grid;   
     grid-template-columns: 1fr 1fr  ;    
+
+    border: 1px solid black;
 }
 
 
 .Carousel > .ctTextController , .Carousel > .ctPicture{
-    /* border: 1px solid black; */
     position: relative;
 }
 
@@ -100,8 +101,53 @@
     margin-top: auto;
     margin-bottom: auto ;
     height: 100% ;
-    
+    text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+
+@media (max-width: 780px) {
+    .Carousel .ctTextController > h2{
+        
+        margin-top: auto;
+        margin-bottom: auto ;
+        height: 100% ;
+        font-size: 3.5vw;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Carousel > .ctTextController > .btnCarousel{
+        
+        width: 51px;
+        height: 51px;
+        font-size: 17px;
+    
+    }
+    
+}
+
+@media (max-width: 450px) {
+    .Carousel .ctTextController > h2{
+        
+        margin-top: auto;
+        margin-bottom: auto ;
+        height: 100% ;
+        font-size: 3.5vw;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .Carousel > .ctTextController > .btnCarousel{
+        
+        width: 51px;
+        height: 51px;
+        font-size: 17px;
+    
+    }
 }

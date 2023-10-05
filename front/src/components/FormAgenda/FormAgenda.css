@@ -29,7 +29,7 @@
   .FormAgenda input[type="tel"],
   .FormAgenda select,
   .FormAgenda input[type="datetime-local"] {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -51,3 +51,8 @@
     background-color: #0056b3;
   }
   
+  @media (max-width: 780px){
+    .FormAgenda {
+      max-width: 91%;
+    }
+  }
