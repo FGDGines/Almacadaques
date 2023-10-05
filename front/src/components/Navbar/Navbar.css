@@ -18,6 +18,8 @@
 .Navbar > .navigation {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .Navbar > .navigation > * {
@@ -34,8 +36,8 @@
   transition: width 600ms 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.Navbar > .navigation > *:hover::after,
-.Navbar > .navigation > *:focus-within::after {
+.Navbar > .navigation > .NavButton:hover::after,
+.Navbar > .navigation > .NavButton:focus-within::after {
   width: 1.2rem;
 }
 

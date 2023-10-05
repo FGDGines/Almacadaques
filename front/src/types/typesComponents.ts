@@ -3,121 +3,131 @@ import { ReactNode } from "react";
 // Definición del tipo de evento
 
 type tpCarouelItem = {
-  title: string;
-  src: string;
-  id:number 
+    title: string;
+    src: string;
+    id: number
 };
 
 type tpFormAgenda = {
     actividades: tpCalendarDates[],
-    currentAct?: number, 
+    currentAct?: number,
 }
 
 type tpCarouselData = {
-  items: tpCarouelItem[];
+    items: tpCarouelItem[];
 };
 
 type tpTestimonyBar = {
-  testimonies: tpTestimony[];
-  quantityPerLayout: number;
+    testimonies: tpTestimony[];
+    quantityPerLayout: number;
 };
 
 type tpTestimony = {
-  id: number;
-  witness: string;
-  image: string;
-  day: number;
-  month: number;
-  year: number;
-  testimony: string;
+    id: number;
+    witness: string;
+    image: string;
+    day: number;
+    month: number;
+    year: number;
+    testimony: string;
 };
 
 type tpBlogInfo = {
-  index: number;
-  day: number;
-  month: number;
-  year: number;
-  image: string;
-  title: string;
-  tags?: string[];
-  abstract?: string;
-  blogContent?: React.JSX.Element;
+    index: number;
+    day: number;
+    month: number;
+    year: number;
+    image: string;
+    title: string;
+    tags?: string[];
+    abstract?: string;
+    blogContent?: React.JSX.Element;
 };
 
 type tpNavButton = {
-  target: number;
-  text: string | React.JSX.Element;
+    target: number;
+    text: string | React.JSX.Element;
 };
 
 type tpDropMenu = {
-  text: string;
-  children: tpNavButton[];
+    text: string;
+    children: tpNavButton[];
 };
 
 type tpBtNice = {
-  text: string;
-  handler: () => void;
+    text: string;
+    handler: () => void;
 } & Partial<{
-  tp: string;
+    tp: string;
 }>;
 
 type tpBtnIcon = {
-  text: string;
-  Icon: ReactNode;
-  clase?: string;
+    text: string;
+    Icon: ReactNode;
+    clase?: string;
 };
 
 type tpFranja = {
-  text: string;
+    text: string;
 };
 
 type tpTimeLineData = {
-  id: number;
-  text: string;
+    id: number;
+    text: string;
 };
 
 type tpAlternateTimeLine = {
-  data: tpTimeLineData[];
+    data: tpTimeLineData[];
 };
 
 type tpCardM1 = {
-  title: string;
-  body: string[];
+    title: string;
+    body: string[];
 };
 
-type tpCalendarEvent ={
+type tpCalendarEvent = {
     id: number
     title: string
-    start: string  | Date
-    end:   string  | Date
+    start: string | Date
+    end: string | Date
 }
 
 type tpCalendarDates = tpCalendarEvent //Alias para compativilidad
 
-
-
 type tpAgenda = {
-  hSelect: (arg: tpCalendarDates)=> void
+    hSelect: (arg: tpCalendarDates) => void
+}
+
+type tpItemSelect = {
+    id: number
+    title: string
+    url: string
+}
+type tpDtmSelect = {
+    active: number
+    items: tpItemSelect[],
 }
 
 
 
 export type {
-  tpTestimonyBar,
-  tpTestimony,
-  tpBlogInfo,
-  tpNavButton,
-  tpDropMenu,
-  tpBtNice,
-  tpFranja,
-  tpAlternateTimeLine,
-  tpTimeLineData,
-  tpBtnIcon,
-  tpCarouelItem,
-  tpCarouselData,
-  tpCardM1,
-  tpCalendarEvent,
-  tpAgenda,
-  tpFormAgenda,
-  tpCalendarDates
+    tpTestimonyBar,
+    tpTestimony,
+    tpBlogInfo,
+    tpNavButton,
+    tpDropMenu,
+    tpBtNice,
+    tpFranja,
+    tpAlternateTimeLine,
+    tpTimeLineData,
+    tpBtnIcon,
+    tpCarouelItem,
+    tpCarouselData,
+    tpCardM1,
+    tpCalendarEvent,
+    tpAgenda,
+    tpFormAgenda,
+    tpCalendarDates,
+    tpDtmSelect,
+    tpItemSelect
 };
