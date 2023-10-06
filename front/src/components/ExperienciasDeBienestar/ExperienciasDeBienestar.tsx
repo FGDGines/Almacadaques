@@ -9,11 +9,26 @@ import Agenda from '../Agenda/Agenda';
 import FormAgenda from '../FormAgenda/FormAgenda';
 import { tpCalendarDates } from '../../types/typesComponents';
 import { eventos } from '../../data/calendar';
+import DialogMUI1 from '../DialogMUI1/DialogMUI1';
+
+import { useState } from 'react';
 
 const ExperienciasDeBienestar = () => {
-    
-    const SeleccionarEvento = (evento: tpCalendarDates)=>{
-        console.log(evento)
+    const [evento , setEvento] = useState<tpCalendarDates>({id:0 , start: '' , end:'' , title:''})
+
+    const [open, setOpen] = useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    const SeleccionarEvento = (evento: tpCalendarDates) => {
+        setEvento(evento)
+        handleClickOpen()
     }
 
     return <div className='ExperienciasDeBienestar'>
@@ -41,9 +56,11 @@ const ExperienciasDeBienestar = () => {
             <StatisticComponent />
 
             <div className='ctAgenda'>
-                <Agenda hSelect={SeleccionarEvento}  />
-                <FormAgenda actividades={eventos}  />
+                <Agenda hSelect={SeleccionarEvento} />
+                <FormAgenda actividades={eventos} />
             </div>
+
+            <DialogMUI1 open={open} handlerClose={handleClose} handleClickOpen={handleClickOpen}  evento={evento}/>
 
         </div>
         <Footer />

@@ -90,6 +90,7 @@ type tpCalendarEvent = {
     title: string
     start: string | Date
     end: string | Date
+    description?: string
 }
 
 type tpCalendarDates = tpCalendarEvent //Alias para compativilidad
@@ -109,6 +110,12 @@ type tpDtmSelect = {
 }
 
 
+type tpDialogMUI1 = {
+    open: boolean
+    handleClickOpen:  () => void
+    handlerClose: () => void
+    evento: tpCalendarDates
+}
 
 export type {
     tpTestimonyBar,
@@ -129,5 +136,6 @@ export type {
     tpFormAgenda,
     tpCalendarDates,
     tpDtmSelect,
-    tpItemSelect
+    tpItemSelect,
+    tpDialogMUI1
 };

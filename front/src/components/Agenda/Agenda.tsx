@@ -13,9 +13,11 @@ const localizer = momentLocalizer(moment);
 const Agenda: FC<tpAgenda> = ({hSelect}) => {
   // Eventos de ejemplo (puedes reemplazarlos con tus propios datos)
 
-  // Convierte los eventos a un formato compatible con react-big-calendar
+  
   const eventsWithDates: tpCalendarDates[] = eventos.map(event => ({
+    id: event.id, 
     title: event.title,
+    description: event.description , 
     start: new Date(event.start),
     end: new Date(event.end),
   }));
