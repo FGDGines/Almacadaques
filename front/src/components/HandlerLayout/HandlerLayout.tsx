@@ -6,6 +6,7 @@ import Contactar from "../Contactar/Contactar";
 import Coaching from "../Coaching/Coaching";
 import BlogPost from "../BlogPost/BlogPost";
 import ExperienciasDeBienestar from "../ExperienciasDeBienestar/ExperienciasDeBienestar";
+import { ExperienciasDeMedida } from "../ExperienciasDeMedida/ExperienciasDeMedida";
 import Blog from "../Blog/Blog";
 
 const HandlerLayout = () => {
@@ -36,6 +37,9 @@ const HandlerLayout = () => {
       break;
     case 7:
       screen = <Blog />;
+      break;
+    case 8:
+      screen = <ExperienciasDeMedida />;
       break;
 
     default:
