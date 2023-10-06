@@ -18,7 +18,7 @@ const Navbar = () => {
               text: "Experiencias de Bienestar",
             },
             {
-              target: 1,
+              target: 8,
               text: "Experiencias de Medida",
             },
           ]}
