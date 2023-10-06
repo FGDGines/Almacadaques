@@ -6,13 +6,14 @@ import DtmSelect from '../DtmSelect/DtmSelect';
 import { idiomas } from "../../data/idiomas";
 import { useContext } from "react";
 import { GlobalContext  } from "../../contexts/GlobalContext";
+import { textos } from "../../data/textos";
 const Navbar = () => {
-  const {languajeActive } =useContext(GlobalContext)
+  const {languajeActive, languageFlag } =useContext(GlobalContext)
   return (
     <div className="Navbar">
       <NavButton className="logo" target={1} text="" />
       <div className="navigation">
-        <NavButton target={1} text="Inicio" />
+        <NavButton target={1} text={`${textos[languageFlag].inicio}`} />
         <NavButton target={2} text="Sobre Mi" />
         <NavButton target={4} text="Coaching" />
         <DropMenu

@@ -1,34 +1,51 @@
 import { FC, createContext, useState } from "react";
-import { GlobalContextType } from "../types/typesContext";
+import { GlobalContextType, enLanguageFlag } from "../types/typesContext";
 
 
 
 
 export const GlobalContext = createContext<GlobalContextType>({
     layoutID: 2,
-    setLayoutID(){},
+    setLayoutID() { },
     languajeActive: 1,
-    setLanguajeActive(){},
-    languageFlag: "ES", 
-    setLanguageFlag(){}
+    setLanguajeActive() { },
+    languageFlag: enLanguageFlag.ES,
+    setLanguageFlag() { }
 })
 
-export const GlobalContextProvider: FC<{children: React.ReactNode}> = ({children})=>{
-    const [layoutID , setLayoutID] = useState<number>(1)     
-    const [languajeActive , setLanguajeActive] = useState<number>(1)
-    const [languageFlag , setLanguageFlag] = useState<string>("ES")
+export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ children }) => {
+    const [layoutID, setLayoutID] = useState<number>(1)
+    const [languajeActive, setLanguajeActive] = useState<number>(1)
+    const [languageFlag, setLanguageFlag] = useState<enLanguageFlag>(enLanguageFlag.ES)
 
-    return <GlobalContext.Provider 
+    const CambiarIdioma = (arg: number) => {
+        setLanguajeActive(arg)
+        switch (arg) {
+            case 1:
+                setLanguageFlag(enLanguageFlag.ES)
+                break
+            case 2:
+                setLanguageFlag(enLanguageFlag.EN)
+                break
+            case 3:
+                setLanguageFlag(enLanguageFlag.CAT)
+                break
+            default:
+                setLanguageFlag(enLanguageFlag.ES)
+        }
+    }
+
+    return <GlobalContext.Provider
         value={
             {
                 layoutID,
                 setLayoutID,
                 languajeActive,
-                setLanguajeActive,
-                languageFlag, 
+                setLanguajeActive: CambiarIdioma,
+                languageFlag,
                 setLanguageFlag
             }
         }>
-            {children}
-        </GlobalContext.Provider>        
+        {children}
+    </GlobalContext.Provider>
 }
