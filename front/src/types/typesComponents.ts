@@ -93,6 +93,8 @@ type tpCalendarEvent = {
     description?: string
 }
 
+
+
 type tpCalendarDates = tpCalendarEvent //Alias para compativilidad
 
 type tpAgenda = {
