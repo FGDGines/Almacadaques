@@ -25,6 +25,9 @@
     flex-direction: column;
     justify-content: flex-start;
 }
+p{
+    font-size: 1.7rem;
+}
 
 .Coaching .ctMain > div > img.Picture{
     width: 75%;
@@ -32,6 +35,13 @@
 
 .Coaching .ctMain > div .css-18y2uza-MuiTypography-root-MuiTimelineContent-root{
     text-align: justify;
+}
+
+@media (max-width: 1024px){
+
+    p{
+        font-size: 1.3rem;
+    }
 }
 
 @media (max-width: 780px){
@@ -43,6 +53,10 @@
     .Coaching .ctMain > div > img.Picture{
         width: 50%;
     }
+    p{
+        font-size: 1rem;
+    }
+    
 
 }
 
@@ -52,6 +66,9 @@
     }
     .Coaching .ctMain > div > img.Picture{
         width: 90%;
+    }
+    p{
+        font-size: .8rem;
     }
 }
 

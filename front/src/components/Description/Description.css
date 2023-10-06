@@ -50,8 +50,37 @@
     margin-bottom: 130px;
  }
 
+
+ @media (max-width: 780px){
+    .Description .ctDefault .ctTitle2 {
+        font-size: 3vw;
+    }
+    .Description .ctCarousel{
+        margin: 20px;
+        padding: 0px;
+    }
+ }
+
  @media (max-width: 450px){
+    .Description {
+        padding: 10px;
+
+    }
+    .Description .ctDefault .ctTitle {
+        font-size: 5vw;
+        margin-top: 30px;
+        padding-bottom: 23px;
+    }
     .Description .ctDefault .ctTitle2 {
         font-size: 5vw;
+    }
+    .Carousel .ctTextController > h2 {
+
+        font-size: 6.5vw;
+
+    }
+    .Description .ctCarousel{
+        margin: 0px;
+        padding: 0px;
     }
  }

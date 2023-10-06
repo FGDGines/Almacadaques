@@ -22,6 +22,20 @@
     margin-bottom: 30px;
 }
 
+@media (max-width: 780px) {
+    .ComoYDonde .ct1{
+        font-size: 27px;
+        margin-bottom: 60px;
+    }
+}
+
+@media (max-width: 450px) {
+    .ComoYDonde .ct1{
+        font-size: 19px;
+        margin-bottom: 60px;    
+    }
+}
+
 
 
 
