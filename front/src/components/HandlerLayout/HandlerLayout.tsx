@@ -7,6 +7,7 @@ import Coaching from "../Coaching/Coaching";
 import BlogPost from "../BlogPost/BlogPost";
 import ExperienciasDeBienestar from "../ExperienciasDeBienestar/ExperienciasDeBienestar";
 import { ExperienciasDeMedida } from "../ExperienciasDeMedida/ExperienciasDeMedida";
+import { Colaboradores } from "../Colaboradores/Colaboradores";
 import Blog from "../Blog/Blog";
 
 const HandlerLayout = () => {
@@ -41,6 +42,9 @@ const HandlerLayout = () => {
     case 8:
       screen = <ExperienciasDeMedida />;
       break;
+    case 9:
+      screen = <Colaboradores />;
+       break;
 
     default:
       break;

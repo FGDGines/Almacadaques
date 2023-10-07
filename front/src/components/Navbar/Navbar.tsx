@@ -23,7 +23,7 @@ const Navbar = () => {
             },
           ]}
         />
-        <NavButton target={1} text="Colaborador@s" />
+        <NavButton target={9} text="Colaborador@s" />
         <DropMenu
           text="Blog"
           children={[
