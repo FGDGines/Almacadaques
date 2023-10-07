@@ -8,11 +8,10 @@
     align-items: center;
 }
 .ct{
-    width: 70vw;
+    width: 90vw;
     display: flex;
     align-items: center;
     flex-direction: column;
-    border: 1px solid black;
 }
 .ctPhrase{
     text-align: center;
@@ -23,20 +22,72 @@
 
 
 .ctphoto{
-    width: 30vw;
-    /* height: 20vw; */
+    width: 80vw;
+    display: flex;
+    align-items: center;
     margin-bottom: 4vw;
 }    
-img{
+.imgEquip{
+    margin-right: 6vw;
     width: 100%;
     height: 100%;
 }
 
 .ctFor{
-    border: 1px solid red;
     width: 50vw;
 }
 
 
+@media (max-width: 1024px){
+     
+    .imgEquip{
+        margin-right: 2vw;
+        width: 50%;
+    }
+}
 
+@media (max-width: 780px){
+    .ctPhrase{
+        font-size: 3vw;
+    }
+    .ctphoto{
+        width: 80vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 4vw;
+    }    
+    .imgEquip{
+        margin-right: 0vw;
+        width: 70%;
+        margin-bottom: 5vw;
+    }
+    
+    .ctFor{
+        width: 50vw;
+    }
+}
 
+@media (max-width: 450px){
+    .ctPhrase{
+        font-size: 5vw;
+        margin-bottom: 7vw;
+    }
+    .ctphoto{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 4vw;
+    }    
+    .imgEquip{
+        margin-right: 0vw;
+        width: 90%;
+        margin-bottom: 5vw;
+    }
+    
+    .ctFor{
+        width: 95vw;
+    }
+
+}
