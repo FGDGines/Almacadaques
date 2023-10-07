@@ -12,7 +12,7 @@
     font-size: 36px;
     text-align: center;
     line-height: 120%;
-    margin-bottom: 120px;
+    margin-bottom: 0px;
 
 }
 
@@ -21,6 +21,17 @@
     /* border: 1px solid black; */
     margin-bottom: 30px;
 }
+
+
+.ComoYDonde .nlink{
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.ComoYDonde .nlink:hover{
+    text-decoration: underline;
+}
+
 
 @media (max-width: 780px) {
     .ComoYDonde .ct1{

@@ -1,13 +1,19 @@
+:root{
+    --bRadius: 15px
+}
+
 .Carousel{
     display: grid;   
     grid-template-columns: 1fr 1fr  ;    
 
-    border: 1px solid black;
+    /* border: 10px solid black; */
+    border-radius: var(--bRadius);
 }
 
 
 .Carousel > .ctTextController , .Carousel > .ctPicture{
     position: relative;
+    
 }
 
 .Carousel > .ctTextController > .btnCarousel{
@@ -47,6 +53,7 @@
     position: relative;
     overflow: hidden;
     height: 30rem;
+    border-radius: var(--bRadius) 0px 0px  var(--bRadius);
 }
 
 .Carousel > .ctPicture > * {
@@ -94,6 +101,7 @@
 .Carousel .ctTextController {
     background-color:  #FF5A5A ; 
     color: white;
+    border-radius: 0px var(--bRadius)   var(--bRadius) 0px;  
 }
 
 .Carousel .ctTextController > h2{

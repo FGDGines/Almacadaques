@@ -6,9 +6,31 @@ import StatisticComponent from '../StatisticComponent/StatisticComponent';
 import CardM1 from '../CardM1/CardM1';
 import { cardsData } from '../../data/cardsExp';
 import Agenda from '../Agenda/Agenda';
-import FormAgenda from '../FormAgenda/FormAenda';
+import FormAgenda from '../FormAgenda/FormAgenda';
+import { tpCalendarDates } from '../../types/typesComponents';
+import { eventos } from '../../data/calendar';
+import DialogMUI1 from '../DialogMUI1/DialogMUI1';
+
+import { useState } from 'react';
 
 const ExperienciasDeBienestar = () => {
+    const [evento , setEvento] = useState<tpCalendarDates>({id:0 , start: '' , end:'' , title:''})
+
+    const [open, setOpen] = useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
+    const SeleccionarEvento = (evento: tpCalendarDates) => {
+        setEvento(evento)
+        handleClickOpen()
+    }
+
     return <div className='ExperienciasDeBienestar'>
         <Navbar />
         <Franja text='Experiencias de Bienestar' />
@@ -34,9 +56,11 @@ const ExperienciasDeBienestar = () => {
             <StatisticComponent />
 
             <div className='ctAgenda'>
-                <Agenda  />
-                <FormAgenda />
+                <Agenda hSelect={SeleccionarEvento} />
+                <FormAgenda actividades={eventos} />
             </div>
+
+            <DialogMUI1 open={open} handlerClose={handleClose} handleClickOpen={handleClickOpen}  evento={evento}/>
 
         </div>
         <Footer />

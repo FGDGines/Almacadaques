@@ -2,7 +2,12 @@ import DropMenu from "../DropMenu/DropMenu";
 import NavButton from "../NavButton/NavButton";
 import { FaRegComment } from "react-icons/fa";
 import "./Navbar.css";
+import DtmSelect from '../DtmSelect/DtmSelect';
+import { idiomas } from "../../data/idiomas";
+import { useContext } from "react";
+import { GlobalContext  } from "../../contexts/GlobalContext";
 const Navbar = () => {
+  const {languajeActive } =useContext(GlobalContext)
   return (
     <div className="Navbar">
       <NavButton className="logo" target={1} text="" />
@@ -41,6 +46,7 @@ const Navbar = () => {
             },
           ]}
         />
+        <DtmSelect items={idiomas} active={languajeActive} />
       </div>
 
       <NavButton

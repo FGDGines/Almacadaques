@@ -2,6 +2,8 @@ import './ExperienciasDeMedida.css';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import Franja from '../Franja/Franja';
+import FormDefault from '../FormDefault/FormDefault';
+
 
 
 function ExperienciasDeMedida() {
@@ -18,6 +20,10 @@ function ExperienciasDeMedida() {
                     </div>
                     <div className="ctphoto">
                         <img src="../../../src/assets/images/no-foto.png" alt="Equipo de trabajo" />
+                        <div className='ctFor'>
+                            <h3>Trabajemos Juntos</h3>
+                            <FormDefault />
+                        </div>
                     </div>
                     
                     
