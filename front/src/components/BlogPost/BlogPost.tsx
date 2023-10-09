@@ -3,8 +3,6 @@ import Footer from "../Footer/Footer";
 import Franja from "../Franja/Franja";
 import Navbar from "../Navbar/Navbar";
 import "./BlogPost.css";
-import TestimonyBar from "../TestimonyBar/TestimonyBar";
-import { testimonies } from "../../data/testimonies";
 
 const BlogPost = () => {
   return (
@@ -41,7 +39,6 @@ const BlogPost = () => {
         title="The ultimate guide to time management"
         abstract="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec venenatis elit, sed vehicula sapien. Praesent facilisis varius imperdiet. Ut et ligula quis mi viverra sodales. Vivamus lectus magna, faucibus vel ipsum. Proin iaculis, diam et placerat lacinia, odio nisl congue tellus, sed placerat nunc neque id urna. Phasellus nec massa purus."
       />
-      <TestimonyBar testimonies={testimonies} quantityPerLayout={3} />
       <Footer />
     </div>
   );

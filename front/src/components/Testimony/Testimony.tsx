@@ -12,7 +12,14 @@ const Testimony: FC<tpTestimony> = ({
 }) => {
   return (
     <div key={id} className="Testimony">
-      <div className="testimony">{testimony}</div>
+      <div className="testimony">
+        <p className="text">
+          {testimony}
+        </p>
+        <div className="TestimonyLink">
+          ver más
+        </div>
+      </div>
 
       <div className="witness">
         <img src={image} alt={witness} />

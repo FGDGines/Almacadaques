@@ -2,7 +2,7 @@
   --accent-color: #c70039;
   --secondary-color: #adb5bd;
   --primary-color: #222222;
-  font-size: max(1vmax, 14px);
+  font-size: clamp(14px, 1vmax ,  30px);
   font-family: "Roboto Flex", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
   color: var(--primary-color);

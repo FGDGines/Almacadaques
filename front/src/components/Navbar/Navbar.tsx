@@ -39,10 +39,6 @@ const Navbar = () => {
             },
             {
               target: 1,
-              text: "Testimonios",
-            },
-            {
-              target: 1,
               text: "Podcast",
             },
           ]}

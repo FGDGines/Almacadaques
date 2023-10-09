@@ -20,6 +20,12 @@
   margin-bottom: 3rem;
 }
 
+.testimony .text{
+  height: 10ch;
+  overflow: hidden;
+  font-size: 1.2rem;
+}
+
 .testimony::after {
   content: "";
   position: absolute;
