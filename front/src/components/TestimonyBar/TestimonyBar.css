@@ -26,6 +26,25 @@
   font-size: 1.2rem;
 }
 
+.testimony .TestimonyLink {
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.testimony .TestimonyLink > div{
+  /* border: 1px solid black; */
+  text-align: end;
+  cursor: pointer;
+  width: fit-content;
+  color: rgb(234, 97, 97);
+}
+
+.testimony .TestimonyLink > div:hover{
+  text-decoration: underline;
+  color: rgb(240, 76, 76);
+}
+
 .testimony::after {
   content: "";
   position: absolute;

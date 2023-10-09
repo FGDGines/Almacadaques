@@ -17,13 +17,15 @@ const Testimony: FC<tpTestimony> = ({
           {testimony}
         </p>
         <div className="TestimonyLink">
-          ver más
+          <div>
+            Ver más
+          </div>
         </div>
       </div>
 
       <div className="witness">
         <img src={image} alt={witness} />
-        <h2>{witness}</h2>
+        <h4>{witness}</h4>
         <div className="date">
           {day}.{month}.{year}
         </div>

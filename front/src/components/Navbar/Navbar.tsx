@@ -14,7 +14,7 @@ const Navbar = () => {
       <NavButton className="logo" target={1} text="" />
       <div className="navigation">
         <NavButton target={1} text={`${textos[languageFlag].inicio}`} />
-        <NavButton target={2} text="Sobre Mi" />
+        <NavButton target={2} text={`${textos[languageFlag].sobreMi}`} />
         <NavButton target={4} text="Coaching" />
         <DropMenu
           text="Agenda"

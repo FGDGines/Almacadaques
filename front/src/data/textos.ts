@@ -6,14 +6,19 @@ type TextosType<T extends string> = {
     };
 };
 
-export const textos: TextosType<"inicio"> = {
+export const textos: TextosType<
+"inicio" | "sobreMi"
+> = {
     [enLanguageFlag.ES]: {
-        inicio: "Inicio"
+        inicio: "Inicio", 
+        sobreMi:"Sobre Mi"
     },
     [enLanguageFlag.EN]: {
-        inicio: "Home"
+        inicio: "Home", 
+        sobreMi:"About Me"
     },
     [enLanguageFlag.CAT]:{
-        inicio: "Casa"
+        inicio: "Casa", 
+        sobreMi:"Esto en Cat"
     }
 };

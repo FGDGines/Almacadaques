@@ -1,7 +1,7 @@
 import './Carousel.css'
 import { FC, useRef, useState } from 'react'
 import { tpCarouelItem, tpCarouselData } from '../../types/typesComponents'
-import {GrLinkPrevious as FcPrevious, GrLinkNext as FcNext} from 'react-icons/gr'
+import { GrLinkPrevious as FcPrevious, GrLinkNext as FcNext } from 'react-icons/gr'
 
 
 const Carousel: FC<tpCarouselData> = ({ items }) => {
@@ -12,7 +12,7 @@ const Carousel: FC<tpCarouselData> = ({ items }) => {
     const changeSheet = (forward: boolean) => {
         const children = ctPicture.current?.children;
         if (!children) return
-        
+
         for (let i = 0; i < children?.length; i++) {
             children[i].classList.remove('slide-out')
             children[i].classList.remove('slide-in')
@@ -27,14 +27,14 @@ const Carousel: FC<tpCarouselData> = ({ items }) => {
                 buff.pop()
                 setSheets(buff)
 
-                
+
 
             }, 300)
         }
-        else{
+        else {
             children[0].classList.toggle("slide-in")
-            setTimeout(()=>{
-                const buff = sheets.slice(1,sheets.length)
+            setTimeout(() => {
+                const buff = sheets.slice(1, sheets.length)
                 buff.push(sheets[0])
                 setSheets(buff)
             }, 300)
@@ -45,19 +45,24 @@ const Carousel: FC<tpCarouselData> = ({ items }) => {
         <div className='ctPicture' ref={ctPicture}>
             {
                 sheets.map((sheet) => {
-                    return <img src={sheet.src} alt="" key={sheet.title} />
+                    return <div key={sheet.title}>
+                        <div className='Autor'>
+                            {sheet.autor}
+                        </div>
+                        <img src={sheet.src} alt=""  />
+                    </div>
                 })
             }
         </div>
         <div className='ctTextController'>
             <button className='btnCarousel btLeft' onClick={() => changeSheet(false)}>
-                <FcPrevious/>
+                <FcPrevious />
             </button>
             <button className='btnCarousel btLeft' onClick={() => changeSheet(true)}>
-                <FcNext/>
+                <FcNext />
             </button>
             <h2>
-                {sheets[0].title}
+                {sheets[sheets.length-1].title}
             </h2 >
         </div>
     </div>

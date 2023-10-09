@@ -5,7 +5,8 @@ import { ReactNode } from "react";
 type tpCarouelItem = {
     title: string;
     src: string;
-    id: number
+    id: number,
+    autor: string
 };
 
 type tpFormAgenda = {
