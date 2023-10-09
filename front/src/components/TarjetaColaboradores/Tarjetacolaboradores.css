@@ -1,92 +1,147 @@
-.flip-card {
-  background-color: transparent;
-  width: 245px;
-  height: 270px;
-  perspective: 1000px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.card {
+  width: 12rem;
+  cursor: pointer;
 }
 
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
+.content {
   text-align: center;
-  transition: transform 0.6s;
+  position: relative;
+  transition: all 2.25s;
+  background-color: rgb(127, 204, 240);
+  padding: 5em;
   transform-style: preserve-3d;
+  width: 5vw;
+  height: 9vw;
+  border-radius: 2vw;
 }
 
-.flip-card-front, .flip-card-back {
+.card:hover .content {
+  transform: rotateY(0.5turn);
+}
+
+.front,
+.back {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  padding: 5px;
-  border-radius: 2em;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: 2em;
+  transform-style: preserve-3d;
   backface-visibility: hidden;
 }
 
-.flip-card-front {
-  background-color: #240d29;
-  border: 4px solid #c143da;
+.user-picture {
+  overflow: hidden;
+  object-fit: cover;
+  width: 8rem;
+  height: 8rem;
+  border: 4px solid white;
+  border-radius: 999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
 }
 
-.profile-image {
-  background-color: transparent;
-  border: none;
-  margin-top: 15px;
-  border-radius: 5em;
-  width: 120px;
-  height: 120px;
-  margin-left: 50px;
+.user-picture svg {
+  width: 3.5rem;
+  fill: currentColor;
 }
 
-.pfp {
-  border-radius: 35em;
-  fill: #c143da;
-}
-
-.name {
-  margin-top: 15px;
+.name-client {
+  margin: 0;
+  margin-top: 40px;
+  font-weight: 600;
   font-size: 27px;
-  color: #c143da;
-  font-weight: bold;
 }
 
-.flip-card-back {
-  background-color: #240d29;
-  border: 4px solid #c143da;
-  transform: rotateY(180deg);
-  padding: 11px;
+.name-client span {
+  display: block;
+  font-weight: 200;
+  font-size: 20px;
+}
+
+.social-media:before {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin: 20px 0;
+  background: white;
+
+}
+
+.social-media a {
+  position: relative;
+  margin-right: 15px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.social-media a:last-child {
+  margin-right: 0;
+}
+
+.social-media a svg {
+  width: 1.1rem;
+  fill: currentColor;
+}
+
+/*-- Tooltip Social Media --*/
+.tooltip-social {
+  
+  background: white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  padding: 0.5rem 0.4rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -90%);
+  transition: all 0.2s ease;
+  z-index: 1;
+}
+
+.tooltip-social:after {
+  content: " ";
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  border: solid;
+  border-width: 10px 10px 0 10px;
+  border-color: transparent;
+  transform: translate(-50%, 100%);
+}
+
+.social-media a .tooltip-social:after {
+  border-top-color: white;
+}
+
+.social-media a:hover .tooltip-social {
+  opacity: 1;
+  transform: translate(-50%, -130%);
+}
+
+.title {
+  transform: translateZ(5rem);
+  font-size: 2rem;
+}
+
+.subtitle {
+  transform: translateZ(2rem);
+}
+
+.back {
+  transform: rotateY(0.5turn);
+  background-color: #009bff;
+  border-radius: 2vw;
 }
 
 .description {
-  margin-top: 10px;
-  font-size: 14px;
-  letter-spacing: 1px;
-  color: black
-}
-
-.socialbar {
-  background-color: transparent;
-  border-radius: 3em;
-  width: 90%;
-  padding: 14px;
-  margin-top: 11px;
-  margin-left: 10px;
-  word-spacing: 24px;
-  color: white;
-}
-
-.socialbar svg {
-  transition: 0.4s;
-  width: 20px;
-  height: 20px;
-  color: #c143da
-}
-
-.socialbar svg:hover {
-  color: white;
-}
-
-.flip-card:hover .flip-card-inner {
-  transform: rotateY(180deg);
+  transform: translateZ(3rem);
 }
