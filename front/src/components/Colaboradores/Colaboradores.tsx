@@ -6,9 +6,10 @@ import Franja from '../Franja/Franja';
 function Colaboradores() {
     return (
         <>
+            <Navbar />
+            <Franja text='Colaborad@res' />
             <div className="colaboradores">
-                <Navbar />
-                <Franja text='Colaborad@res' />
+
                 <div className="ctColab">
                     <div className="card-client">
                         <div className="user-picture">
@@ -48,8 +49,9 @@ function Colaboradores() {
                         </div>
                     </div>
                 </div>
-                <Footer />
+
             </div>
+            <Footer />
         </>
     )
 }
