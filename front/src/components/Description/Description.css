@@ -15,8 +15,8 @@
  }
 
  .Description .ctCarousel{
-    margin: 60px;
-    padding: 60px;
+    margin:  1vw;
+    padding: 1vw;
     /* border: 10px solid black; */
  }
 
@@ -56,7 +56,7 @@
         font-size: 3vw;
     }
     .Description .ctCarousel{
-        margin: 20px;
+        margin: 1vw;
         padding: 0px;
     }
  }
@@ -64,7 +64,6 @@
  @media (max-width: 450px){
     .Description {
         padding: 10px;
-
     }
     .Description .ctDefault .ctTitle {
         font-size: 5vw;
