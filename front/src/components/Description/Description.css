@@ -11,6 +11,8 @@
      /* border: 1px solid black; */
      width: 100%;
      margin-bottom: 20px;
+     display: flex;
+     justify-content: center;
 
  }
 
@@ -21,10 +23,10 @@
  }
 
  .Description .ctDefault .ctTitle {
-     font-size: 3vw;
+     font-size: 2.1vw;
+     width: 75vw;
      text-align: center;
      line-height: 120%;
-     padding-bottom: 70px;
  }
 
  .Description .ctDefault .ctDescription {
@@ -36,7 +38,8 @@
 
 
  .Description .ctDefault .ctTitle2 {
-     font-size: 3.4vw;
+     font-size: 2.1vw;
+     width: 75vw;
      text-align: center;
      line-height: 120%;
      margin-top: 50px;

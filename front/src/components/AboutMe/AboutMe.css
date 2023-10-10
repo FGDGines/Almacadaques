@@ -5,6 +5,7 @@
 
 .Contenido{
     display: flex;
+    flex-direction: column;
 }
 
 .Contenido > div{
@@ -14,11 +15,11 @@
 
 
 .AboutMe .title1 {
-    font-size: 3.6vw;
+    font-size: 2.5vw;
     padding: 0 2vw;
     line-height: 120%;
     text-align: center;
-    margin-top: 120px;
+    margin-top: 80px;
 }
 
 .Contenido .ctLeft{
@@ -31,7 +32,7 @@
 }
 
 .Contenido .ctLeft p{
-    font-size: 2vw;
+    font-size: 1.2vw;
 }
 .Contenido > div.ctRight{
     display: flex;
@@ -41,13 +42,100 @@
 }
 
 .Contenido > div.ctRight img{
-    width: 85%;
+    width: 30%;
 }
 
 .Contenido > div.ctRight  .titleSoy{
     white-space: nowrap;
 }
 
+.containerSobremi_1{
+    display: flex;
+    justify-content: center;
+}
+
+.containerSobremi_2{
+    display: flex;
+    justify-content: center;
+}
+
+.photo_1{
+    display: flex;
+    margin-right: 10px;
+}
+
+.photo_2{
+    display: flex;
+    justify-content: end;
+    margin-left: 80px;
+}
+.infoSobremi_1{
+    width: 50vw;
+    background-color: #cf1348;
+    padding: 2vw;
+    color: white;
+    font-size: 1.3vw;
+}
+.infoSobremi_2{
+    width: 50vw;
+    background-color: #cf1348;
+    padding: 2vw;
+    color: white;
+    font-size: 1.4vw;
+}
+
+.containerSobremi_1 .photo_1 img{
+    width: 90%;
+}
+.containerSobremi_2 .photo_2 img{
+    width: 100%;
+}
+
+@media (max-width: 780px){
+
+
+    .containerSobremi_1{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .containerSobremi_2{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .photo_1{
+        display: flex;
+        margin-right: 5px;
+    }
+    
+    .photo_2{
+        display: flex;
+        justify-content: end;
+        margin-left: 5px;
+    }
+    .infoSobremi_1{
+        width: 70vw;
+        background-color: #cf1348;
+        padding: 2vw;
+        color: white;
+        font-size: 1.6vw;
+    }
+    .infoSobremi_2{
+        width: 70vw;
+        background-color: #cf1348;
+        padding: 2vw;
+        color: white;
+        font-size: 1.6vw;
+    }
+    
+    .containerSobremi_1 .photo_1 img{
+        width: 90%;
+    }
+    .containerSobremi_2 .photo_2 img{
+        width: 90%;
+    }
+}
 
 @media (max-width: 450px){
     
@@ -55,10 +143,59 @@
         font-size: 5vw;
         margin-top: 40px;
     }
-    .Contenido{
-        flex-direction: column-reverse;
-    }
+
     .Contenido .ctLeft p{
         font-size: 4.5vw;
     }
+    .Contenido > div.ctRight img{
+        width: 90%;
+    }
+
+
+
+.containerSobremi_1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+}
+
+.containerSobremi_2{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo_1{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.photo_2{
+    display: flex;
+    justify-content: end;
+    margin-bottom: 10px;
+}
+.infoSobremi_1{
+    width: 90vw;
+    background-color: #cf1348;
+    padding: 2vw;
+    color: white;
+    font-size: 3.3vw;
+}
+.infoSobremi_2{
+    width: 90vw;
+    background-color: #cf1348;
+    padding: 2vw;
+    color: white;
+    font-size: 3.3vw;
+}
+
+.containerSobremi_1 .photo_1 img{
+    width: 100%;
+}
+.containerSobremi_2 .photo_2 img{
+    width: 100%;
+}
 }

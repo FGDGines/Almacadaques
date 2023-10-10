@@ -26,11 +26,12 @@
     justify-content: flex-start;
 }
 p{
-    font-size: 1.7rem;
+    font-size: 1.5rem;
+    margin-bottom: -4px;
 }
 
 .Coaching .ctMain > div > img.Picture{
-    width: 75%;
+    width: 100%;
 }
 
 .Coaching .ctMain > div .css-18y2uza-MuiTypography-root-MuiTimelineContent-root{

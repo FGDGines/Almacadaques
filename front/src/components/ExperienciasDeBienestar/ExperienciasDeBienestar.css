@@ -13,7 +13,7 @@
 .ExperienciasDeBienestar .ctMain .ctTitle {
     /* border: 1px solid black; */
     text-align: center;
-    font-size: 6.3vw;
+    font-size: 3vw;
     padding: 70px 0px ;
     background-color: white;
 }
@@ -22,7 +22,7 @@
 .ExperienciasDeBienestar .ctDescription{
     background-color: white;
     text-align: center;
-    font-size: 36px;
+    font-size: 26px;
     padding:  70px 0px;
 }
 
@@ -55,7 +55,7 @@
 
 @media (max-width: 1024px){
     .ExperienciasDeBienestar .ctMain .ctTitle {
-        font-size: 6.3vw;
+        font-size: 3vw;
         padding: 70px 0px ;
     }
 
