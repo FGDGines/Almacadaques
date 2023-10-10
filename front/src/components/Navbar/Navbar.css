@@ -1,5 +1,9 @@
+:root{
+    --colorNavbar: rgb(0, 0, 0) ;
+}
+
 .Navbar a {
-  color: inherit;
+  color: var(--colorNavbar);
   text-decoration: none;
 }
 
@@ -15,45 +19,50 @@
   padding-inline: 9.5rem 1rem;
 }
 
-.Navbar > .navigation {
+.Navbar>.navigation {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
-.Navbar > .navigation > * {
+.Navbar>.navigation>* {
   margin-inline: 1rem;
 }
 
-.Navbar > .navigation > *::after {
+.Navbar>.navigation>*::after {
   content: "";
   display: block;
   width: 0px;
   height: 0.2rem;
-  background-color: #bec0b7;
+  background-color: #323131;
   border-radius: 0.3rem;
   transition: width 600ms 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.Navbar > .navigation > .NavButton:hover::after,
-.Navbar > .navigation > .NavButton:focus-within::after {
+.Navbar>.navigation  .NavButton {
+  color: var(--colorNavbar);
+}
+
+.Navbar>.navigation>.NavButton:hover::after,
+.Navbar>.navigation>.NavButton:focus-within::after {
   width: 1.2rem;
 }
 
-.Navbar > .contact {
-  margin-inline: 3rem;
+.Navbar> p.contact {
+  margin-inline: 1rem;
 }
 
-.Navbar > .contact::after {
+.Navbar>.contact::after {
   display: none;
 }
 
-.Navbar > .contact > p {
+.Navbar>.contact > p {
   margin: 0;
+  font-size: 1.1rem;
 }
 
-.Navbar > .contact > .comment-icon {
+.Navbar>.contact>.comment-icon {
   font-size: 1rem;
   padding-left: 0.4rem;
 }

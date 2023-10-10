@@ -52,18 +52,36 @@
 .Carousel > .ctPicture {
     position: relative;
     overflow: hidden;
-    height: 30rem;
+    height: 30vw;
     border-radius: var(--bRadius) 0px 0px  var(--bRadius);
 }
 
-.Carousel > .ctPicture > * {
+.Carousel > .ctPicture > div > * {
     position: absolute;
-    height:  30rem;
-    width: 50rem  ;
+    height:  100%;
+    width: 100%  ;
     object-fit: cover;
     object-position: center;
     
 }
+
+.Carousel > .ctPicture > div > .Autor{
+    background-color: rgba(0, 0, 0, 0.189);
+    z-index: 0;
+    width: min-content;
+    height: min-content;
+    color: white;
+    padding: 0.3rem;
+    border-radius: 15px;
+    right: 10px;
+    bottom: 10px;
+}
+
+.Carousel > .ctPicture > div:last-child > .Autor{
+    z-index: 3;
+}
+
+
 
 .Carousel .slide-out {
     /*
