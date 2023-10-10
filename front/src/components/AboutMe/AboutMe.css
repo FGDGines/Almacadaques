@@ -22,32 +22,6 @@
     margin-top: 80px;
 }
 
-.Contenido .ctLeft{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    
-
-}
-
-.Contenido .ctLeft p{
-    font-size: 1.2vw;
-}
-.Contenido > div.ctRight{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.Contenido > div.ctRight img{
-    width: 30%;
-}
-
-.Contenido > div.ctRight  .titleSoy{
-    white-space: nowrap;
-}
 
 .containerSobremi_1{
     display: flex;
@@ -60,14 +34,15 @@
 }
 
 .photo_1{
+    width: 22vw;
     display: flex;
-    margin-right: 10px;
+    margin-left: 60px;
 }
 
 .photo_2{
     display: flex;
     justify-content: end;
-    margin-left: 80px;
+    margin-right: 80px;
 }
 .infoSobremi_1{
     width: 50vw;
@@ -106,13 +81,14 @@
     
     .photo_1{
         display: flex;
-        margin-right: 5px;
+        margin-left: 10px;
+        width: 30vw;
     }
     
     .photo_2{
         display: flex;
         justify-content: end;
-        margin-left: 5px;
+        margin-right: 5px;
     }
     .infoSobremi_1{
         width: 70vw;
@@ -169,7 +145,10 @@
 
 .photo_1{
     display: flex;
-    margin-bottom: 10px;
+    width: 94vw;
+    margin: 5px 0 ;
+    flex-direction: column;
+    
 }
 
 .photo_2{
@@ -194,6 +173,7 @@
 
 .containerSobremi_1 .photo_1 img{
     width: 100%;
+    height: 100%;
 }
 .containerSobremi_2 .photo_2 img{
     width: 100%;
