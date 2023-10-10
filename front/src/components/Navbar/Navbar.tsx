@@ -14,36 +14,32 @@ const Navbar = () => {
       <NavButton className="logo" target={1} text="" />
       <div className="navigation">
         <NavButton target={1} text={`${textos[languageFlag].inicio}`} />
-        <NavButton target={2} text="Sobre Mi" />
+        <NavButton target={2} text={`${textos[languageFlag].sobreMi}`} />
         <NavButton target={4} text="Coaching" />
         <DropMenu
-          text="Agenda"
+          text={`${textos[languageFlag].agenda}`}
           children={[
             {
               target: 6,
-              text: "Experiencias de Bienestar",
+              text: `${textos[languageFlag].expBienesytar}`,
             },
             {
               target: 8,
-              text: "Experiencias de Medida",
+              text: `${textos[languageFlag].expDeMedida}`,
             },
           ]}
         />
-        <NavButton target={9} text="Colaborador@s" />
+        <NavButton target={9} text={`${textos[languageFlag].colabrador}`} />
         <DropMenu
-          text="Blog"
+          text={`${textos[languageFlag].blog}`}
           children={[
             {
               target: 5,
-              text: "Blog Post",
+              text: `${textos[languageFlag].blogPost}`,  
             },
             {
               target: 1,
-              text: "Testimonios",
-            },
-            {
-              target: 1,
-              text: "Podcast",
+              text: `${textos[languageFlag].testimonios}`,
             },
           ]}
         />
@@ -55,7 +51,7 @@ const Navbar = () => {
         target={3}
         text={
           <>
-            <p>Contactar</p> <FaRegComment className="comment-icon" />
+            <p>{textos[languageFlag].contactar}</p> <FaRegComment className="comment-icon" />
           </>
         }
       />

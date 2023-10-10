@@ -1,7 +1,7 @@
 .ExperienciasdeMedida{
     background-color: white;
 }
-.ctMain{
+.ExperienciasdeMedida .ctMain{
     background-color: white;
     display: flex;
     flex-direction: column;
