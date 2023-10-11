@@ -5,7 +5,7 @@
   color: #cf1348;
   display: flex;
   flex-direction: column;
-  padding-top: 2vw;
+  padding-top: 5vw;
   font-family: 'Pacifico';
 }
 .container1{
@@ -17,7 +17,7 @@
 }
 
 .titleFooter{
-  font-size: 2vw;
+  font-size: 1.5vw;
   margin-bottom: .5vw;
 }
 .subtitlefooter{
@@ -31,7 +31,7 @@
 .enlaceFooter{
   text-decoration: none;
   color: #cf1348;
-  font-size: 1.6vw;
+  font-size: 1.3vw;
   word-spacing: 5px;
 }
 
@@ -76,13 +76,14 @@
   background-color: #cf1348;
 }
 .correo{
-  font-size: 1.4vw;
+  margin-bottom: .2vw;
+  font-size: 1.3vw;
   word-spacing: 5px;
 }
 
 .whatsapp{
-  width: 2vw;
-  height: 2vw;
+  width: 1.7vw;
+  height: 1.7vw;
 }
 
 .input-group {
@@ -133,23 +134,23 @@
   margin-top: 2.5vw;
   background-color: #cf1348;
   border-radius: .3vw;
-  padding: .5vw 1.5vw;
+  padding: .5vw 2.3vw;
   cursor: pointer;
-  font-size: 1.6vw;
+  font-size: 1.5vw;
  }
 
 
  .container2{
   display: flex;
   justify-content: center;
-  margin-top: -.6vw;
+  margin-top: 1.5vw;
  }
  .infofooter{
-  background-color: #cf1348f3;
+  background-color: #cf1348;
   display: flex;
   justify-content: flex-end;
   border-radius: .5vw;
-  height: 9vw;
+  height: 7vw;
   width: 100vw;
  }
  .redes{
@@ -170,8 +171,8 @@
   align-items: center;
  }
  .img{
-  width: 3vw;
+  width: 2.2vw;
  }
  .img1{
-  width: 4.1vw;
+  width: 3.1vw;
  }
