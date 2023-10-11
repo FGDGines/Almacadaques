@@ -1,6 +1,17 @@
 .colaboradores{
   background-color: white;
+  padding: 2vw;
   display: flex;
-  justify-content: center;
-  padding: 6vw;
+  flex-wrap: wrap;
+}
+@media (max-width: 780px) {
+  .colaboradores{
+    padding: 6vw;
+  }
+}
+
+@media (max-width: 450px) {
+  .colaboradores{
+    padding: 6vw;
+  }
 }
