@@ -81,29 +81,27 @@
     }
     
     .photo_1{
-        display: flex;
         margin-left: 10px;
         width: 30vw;
     }
     
     .photo_2{
-        display: flex;
-        justify-content: end;
-        margin-right: 5px;
+        width: 30vw;
+        margin-right: 10px;
     }
     .infoSobremi_1{
-        width: 70vw;
+        width: 40vw;
         background-color: #cf1348;
         padding: 2vw;
         color: white;
-        font-size: 1.6vw;
+        font-size: 1.5vw;
     }
     .infoSobremi_2{
-        width: 70vw;
+        width: 40vw;
         background-color: #cf1348;
         padding: 2vw;
         color: white;
-        font-size: 1.6vw;
+        font-size: 1.5vw;
     }
     
     .containerSobremi_1 .photo_1 img{
@@ -154,8 +152,8 @@
 
 .photo_2{
     display: flex;
-    justify-content: end;
-    margin-bottom: 10px;
+    width: 94vw;
+    margin: 5px 0 ;
 }
 .infoSobremi_1{
     width: 90vw;
