@@ -26,9 +26,6 @@ const Carousel: FC<tpCarouselData> = ({ items }) => {
                 buff.unshift(buff[buff.length - 1])
                 buff.pop()
                 setSheets(buff)
-
-
-
             }, 300)
         }
         else {
