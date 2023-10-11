@@ -1,52 +1,39 @@
-export const carouselDescription = [
-    {
-      id:1,
-      title: '¿Te sientes estresad@?',
-      src: './src/assets/Fotos_Home/1.jpg',
-      autor: '@Fabian'
-    },
-    {
-      id:2,
-      title: '¿Quieres un cambio de aires?',
-      src: './src/assets/Fotos_Home/2.jpg',
-      autor: '@Fernando'
-    },
-    {
-      id:3,
-      title: '¿Sientes que estás bloquead@?',
-      src: './src/assets/Fotos_Home/3.jpg',
-      autor: '@Lorenzo'
-    },
-    {
-      id:4,
-      title: '¿Necesitas inspiración?',
-      src: './src/assets/Fotos_Home/4.jpg',
-      autor: '@Ramiro'
-    },
-    {
-      id:5,
-      title: '¿Quieres ser tu mejor versión?',
-      src: './src/assets/Fotos_Home/5.jpg',
-      autor: '@Antonio'
-    }
-  ];
-  
+import { tpCarouelItem } from "../types/typesComponents";
 
-  export const carouselExperiencias = [
+export const carouselDescription: tpCarouelItem[] = [
     {
-      title: 'Retiro en la Playa',
-      src: './src/assets/FotosRetiros/1.jpg'
+        id: 1,
+        title: '¿Te sientes estresad@?',
+        src: './src/assets/Fotos_Home/1.jpg',
+        autor: '@Fabian',
+        link_autor: "https://www.google.com/search?q=fotos+de+Bienestar&oq=fotos+de+Bienestar&aqs=chrome..69i57j0i512l9.5406j0j7&sourceid=chrome&ie=UTF-8"
     },
     {
-      title: 'Bienvenido a tu nueva vida',
-      src: './src/assets/FotosRetiros/2.jpg'
+        id: 2,
+        title: '¿Quieres un cambio de aires?',
+        src: './src/assets/Fotos_Home/2.jpg',
+        autor: '@Fernando',
+        link_autor: "https://www.google.com/search?q=fotos+de+Bienestar&oq=fotos+de+Bienestar&aqs=chrome..69i57j0i512l9.5406j0j7&sourceid=chrome&ie=UTF-8"
     },
     {
-      title: 'Otro texto de bienestar',
-      src: './src/assets/FotosRetiros/3.jpg'
+        id: 3,
+        title: '¿Sientes que estás bloquead@?',
+        src: './src/assets/Fotos_Home/3.jpg',
+        autor: '@Lorenzo',
+        link_autor: "https://www.google.com/search?q=fotos+de+Bienestar&oq=fotos+de+Bienestar&aqs=chrome..69i57j0i512l9.5406j0j7&sourceid=chrome&ie=UTF-8"
     },
     {
-      title: 'Este proyecto cura el alma',
-      src: './src/assets/FotosRetiros/4.jpg'
+        id: 4,
+        title: '¿Necesitas inspiración?',
+        src: './src/assets/Fotos_Home/4.jpg',
+        autor: '@Ramiro',
+        link_autor: "https://www.google.com/search?q=fotos+de+Bienestar&oq=fotos+de+Bienestar&aqs=chrome..69i57j0i512l9.5406j0j7&sourceid=chrome&ie=UTF-8"
+    },
+    {
+        id: 5,
+        title: '¿Quieres ser tu mejor versión?',
+        src: './src/assets/Fotos_Home/5.jpg',
+        autor: '@Antonio',
+        link_autor: "https://www.google.com/search?q=fotos+de+Bienestar&oq=fotos+de+Bienestar&aqs=chrome..69i57j0i512l9.5406j0j7&sourceid=chrome&ie=UTF-8"
     }
-  ];
+];

@@ -46,9 +46,9 @@ const Carousel: FC<tpCarouselData> = ({ items }) => {
             {
                 sheets.map((sheet) => {
                     return <div key={sheet.title}>
-                        <div className='Autor'>
+                        <a href={sheet.link_autor} target='_blank' className='Autor'>
                             {sheet.autor}
-                        </div>
+                        </a>
                         <img src={sheet.src} alt=""  />
                     </div>
                 })

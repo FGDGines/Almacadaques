@@ -1,5 +1,6 @@
 :root{
-    --colorNavbar: rgb(0, 0, 0) ;
+    /* --colorNavbar: rgb(0, 0, 0) ; */
+    --colorNavbar: #000000 ;
 }
 
 .Navbar a {
@@ -35,7 +36,7 @@
   display: block;
   width: 0px;
   height: 0.2rem;
-  background-color: #323131;
+  background-color: var(--colorNavbar);
   border-radius: 0.3rem;
   transition: width 600ms 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
