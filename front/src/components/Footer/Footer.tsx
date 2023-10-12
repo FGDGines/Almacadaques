@@ -18,7 +18,7 @@ const Footer = () => {
                 <div className="containerCenter">
                     <h3 className='titleFooter'>Info Contacto </h3>
                     <div className="span4"></div>
-                    <p className='subtitlefooter'><img src="../../../src/assets/images/whatsapp.png" alt="Telefono" className='whatsapp '/><a href='https://wa.me/+34660305421?text=Hola Almacadaques' target='_blank' className='enlaceFooter'> +34 660 30 54 21</a> </p>
+                    <p className='subtitlefooter'><img src="../../../src/assets/images/mensaje-de-telefono.png" alt="Telefono" className='whatsapp '/><a href='https://wa.me/+34660305421?text=Hola Almacadaques' target='_blank' className='enlaceFooter'> +34 660 30 54 21</a> </p>
                     <div className="span5"></div>
                     <p className='subtitlefooter' ><a href='#' target='_blank' className='enlaceFooter'> hola@almacadaques</a> </p>
                     <div className="span6"></div>

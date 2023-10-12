@@ -6,7 +6,8 @@ type tpCarouelItem = {
     title: string;
     src: string;
     id: number,
-    autor: string
+    autor: string,
+    link_autor: string 
 };
 
 type tpFormAgenda = {

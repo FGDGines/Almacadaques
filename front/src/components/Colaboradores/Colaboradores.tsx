@@ -10,7 +10,9 @@ function Colaboradores() {
             <Navbar />
             <Franja text='Colaborad@res' />
             <div className="colaboradores">
-                <Tarjetacolaboradores /> 
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((index) => (
+                    <Tarjetacolaboradores key={index} />
+                ))}
             </div>
             <Footer />
         </>

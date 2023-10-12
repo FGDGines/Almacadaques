@@ -15,7 +15,19 @@ const Navbar = () => {
       <div className="navigation">
         <NavButton target={1} text={`${textos[languageFlag].inicio}`} />
         <NavButton target={2} text={`${textos[languageFlag].sobreMi}`} />
-        <NavButton target={4} text="Coaching" />
+        <DropMenu
+          text={`Coaching`}
+          children={[
+            {
+              target: 4,
+              text: `Coaching para el Bienestar`,
+            },
+            {
+              target: 10,
+              text: `coaching & mentoring internacional`,
+            },
+          ]}
+        />
         <DropMenu
           text={`${textos[languageFlag].agenda}`}
           children={[
