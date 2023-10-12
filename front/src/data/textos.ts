@@ -9,59 +9,63 @@ type TextosType<T extends string> = {
 export const textos: TextosType<
     "inicio" |
     "sobreMi" |
-    "blog" |
     "coaching" |
     "agenda" |
-    "expBienesytar" |
+    "expBienestar" |
     "expDeMedida" |
     "colabrador" |
-    "blogPost" |
     "testimonios" |
+    "blog" |
+    "blogPost" |
+    "podcast"  |
     "contactar" |
     "title1"
 > = {
     [enLanguageFlag.ES]: {
         inicio: "Inicio",
         sobreMi: "Sobre Mi",
-        blog: "blog",
-        coaching: "Coaching ES",
+        coaching: "Coaching",
         agenda: "Agenda es ",
-        expBienesytar: "Experiencias de Bienestar",
-        expDeMedida: "Expeiencias de Medida ES",
-        colabrador: "Colaborador ES",
-        blogPost: "Blog Post ES",
-        testimonios: "Testominio ES",
-        contactar: "Contactar ES",
+        expBienestar: "Experiencias de Bienestar",
+        expDeMedida: "Expeiencias de Medida",
+        colabrador: "Colaborador",
+        testimonios: "Testominio",
+        blog: "blog",
+        blogPost: "Blog Post",
+        podcast: "Podcast",
+        contactar: "Contactar",
         // Fin del Navbar
-        title1: "Title 1 ES"
+        title1: "Title 1"
     },
     [enLanguageFlag.EN]: {
         inicio: "Home",
         sobreMi: "About Me",
-        blog: "Blog EN ",
-        coaching: "Coaching EN",
-        agenda: "Agenda En",
-        expBienesytar: "Experiencias de Bienestar EN",
-        expDeMedida: "Expeiencias de Medida EN",
-        colabrador: "Colaborador EN",
-        blogPost: "Blog Post EN",
+        coaching: "Coaching",
+        agenda: "Agenda",
+        expBienestar: "Well-being Experiences",
+        expDeMedida: "Customizd well-being experiences",
+        colabrador: "Collaborators",
         testimonios: "Testominio EN",
-        contactar: "Contactar EN",
+        blog: "Blog",
+        blogPost: "Blog Post",
+        podcast: "Podcast",
+        contactar: "Contact",
         // Fin del Navbar
         title1: "Title 1 EN"
     },
     [enLanguageFlag.CAT]: {
-        inicio: "Casa",
-        sobreMi: "Esto en Cat",
-        blog: " BLog Cat",
-        coaching: "Coaching CAT",
-        agenda: "Agenda Cat",
-        expBienesytar: "Experiencias de Bienestar CAT",
-        expDeMedida: "Expeiencias de Medida CAT",
-        colabrador: "Colaborador CAT",
-        blogPost: "Blog Post CAT",
-        testimonios: "Testominio CAT",
-        contactar: "Contactar CAT",
+        inicio: "Inici",
+        sobreMi: "Sobre mi",
+        coaching: "Coaching",
+        agenda: "Agenda",
+        expBienestar: "Experiències de benestar",
+        expDeMedida: "Experiències a mida",
+        colabrador: "COLABORAD@RS",
+        testimonios: "Testomini",
+        blog: "Blog",
+        blogPost: "Blog Post",
+        podcast: "Podcast",
+        contactar: "Contacte",
         // Fin del Navbar
         title1: "Title 1 CAT"
     }

@@ -11,7 +11,7 @@ const Navbar = () => {
   const {languajeActive, languageFlag } =useContext(GlobalContext)
   return (
     <div className="Navbar">
-      <NavButton className="logo" target={1} text="" />
+      <NavButton className="logo" target={1} text="" /> 
       <div className="navigation">
         <NavButton target={1} text={`${textos[languageFlag].inicio}`} />
         <NavButton target={2} text={`${textos[languageFlag].sobreMi}`} />
@@ -21,7 +21,7 @@ const Navbar = () => {
           children={[
             {
               target: 6,
-              text: `${textos[languageFlag].expBienesytar}`,
+              text: `${textos[languageFlag].expBienestar}`,
             },
             {
               target: 8,
@@ -35,11 +35,11 @@ const Navbar = () => {
           children={[
             {
               target: 5,
-              text: `${textos[languageFlag].blogPost}`,  
+              text: `${textos[languageFlag].blogPost}`,
             },
             {
               target: 1,
-              text: `${textos[languageFlag].testimonios}`,
+              text: `${textos[languageFlag].podcast}`,
             },
           ]}
         />
@@ -51,7 +51,7 @@ const Navbar = () => {
         target={3}
         text={
           <>
-            <p>{textos[languageFlag].contactar}</p> <FaRegComment className="comment-icon" />
+            <p>{`${textos[languageFlag].contactar}`}</p> <FaRegComment className="comment-icon" />
           </>
         }
       />
