@@ -1,6 +1,6 @@
 .card {
   cursor: pointer;
-  margin-right: 5vw;
+  margin: 2vw;
   margin-bottom: 5vw;
   width: 80vw;
   flex: 1;
@@ -11,7 +11,7 @@
   text-align: center;
   position: relative;
   transition: all 2.25s;
-  background-color: #009bff;
+  background-color: rgb(127, 204, 240);
   padding: 7vw;
   transform-style: preserve-3d;
   width: 5vw;
@@ -135,7 +135,7 @@
 
 .back {
   transform: rotateY(0.5turn);
-  background-color: #009bff;
+  background-color: rgb(127, 204, 240);
   border-radius: 2vw;
 }
 

@@ -1,4 +1,84 @@
 .CoachingInternacional{
     background-color: white;
 }
+.containerInnformacion1{
+    display: flex;
+    padding: 3vw 7vw;
+}
+.contseccionn1  {
+    font-size: 2vw;
+}
 
+.containerimg2{
+    width: 40vw;
+    margin-right: 4vw;
+}
+.containerInnformacion2 .parrafo,
+.contseccionn1 .parrafo{
+    font-size: 1.3vw;
+    text-align: justify;
+}
+.imgBienertar{
+    width: 100vw;
+    margin-right: 4vw;
+}
+.imgBienertar{
+    width: 100%;
+    height: 100%;
+    border-radius: .4vw;
+}
+.containerInnformacion2{
+    padding: 3vw 7vw;
+    font-size: 1.7vw;
+}
+.textFormulario{
+    font-size: 1.3vw;
+}
+
+@media (max-width: 780px){
+    .contseccionn1  {
+        font-size: 3.2vw;
+    }
+    .containerInnformacion1{
+        flex-direction: column-reverse;
+        padding: 5vw;
+    }
+    .containerimg2{
+        width: 85vw;
+    }
+    .contseccionn1 .parrafo,
+    .containerInnformacion2 .parrafo{
+        font-size: 2.4vw;
+    }
+
+    .containerInnformacion2{
+        font-size: 2.5vw;
+    }
+    .textFormulario{
+        font-size: 2.5vw;
+    }
+
+}
+@media (max-width: 450px){
+    .contseccionn1  {
+        font-size: 4vw;
+    }
+    .containerInnformacion1{
+        flex-direction: column-reverse;
+        padding: 5vw;
+    }
+    .containerimg2{
+        width: 85vw;
+    }
+    .contseccionn1 .parrafo,
+    .containerInnformacion2 .parrafo{
+        font-size: 4vw;
+    }
+
+    .containerInnformacion2{
+        font-size: 5vw;
+    }
+    .textFormulario{
+        font-size: 5vw;
+    }
+}

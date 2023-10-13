@@ -10,6 +10,10 @@ import { Colaboradores } from "../Colaboradores/Colaboradores";
 import Blog from "../Blog/Blog";
 import CoachingBienestar from "../CoachingBienestar/CoachingBienestar";
 import CoachingInternacional from "../CoachingInternacional/CoachingInternacional";
+import { PoliticayPrivacidad } from "../PoliticayPriacidad/PoliticayPrivacidad";
+import { PoliticaCookies } from "../PoliticadeCookies/PoliticaCookies";
+import { AvisoLegal } from "../AvisoLegal/AvisoLegal";
+
 
 const HandlerLayout = () => {
   const { layoutID } = useContext(GlobalContext);
@@ -49,6 +53,17 @@ const HandlerLayout = () => {
     case 10:
       screen = <CoachingInternacional />;
       break;
+    case 11:
+        screen = <PoliticayPrivacidad />;
+        break;
+    case 12:
+        screen = <PoliticaCookies />;
+        break;
+    case 13:
+          screen = <AvisoLegal />;
+          break;
+  
+  
 
     default:
       break;

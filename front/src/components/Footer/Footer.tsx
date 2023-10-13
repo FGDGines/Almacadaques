@@ -5,6 +5,7 @@ import { GlobalContext } from '../../contexts/GlobalContext';
 
 const Footer = () => {
     const {languageFlag} = useContext(GlobalContext)
+    const {setLayoutID} = useContext(GlobalContext);
     return (
         <div className="Footer">
             <div className="container1">
@@ -12,13 +13,12 @@ const Footer = () => {
                     <h3 className='titleFooter'>{textos[languageFlag].textfooteraviso}</h3>
                     <div className="span1"></div>
                     <p className='subtitlefooter'>
-                        <a href='#' className='enlaceFooter'>{textos[languageFlag].textfooterpolitica}</a> </p>
+                        <a href='#' className='enlaceFooter' onClick={()=>setLayoutID(11)}>{textos[languageFlag].textfooterpolitica}</a> </p>
                     <div className="span2"></div>
-                    <p className='subtitlefooter'>
-                        <a href='#' className='enlaceFooter'>{textos[languageFlag].textfootercoockies}</a></p>
+                    <p className='subtitlefooter'><a href='#' className='enlaceFooter'> Politica de coockies</a>  </p>
                     <div className="span3"></div>
                     <p className='subtitlefooter'>
-                        <a href='#' className='enlaceFooter'>{textos[languageFlag].textfooteraviso2}</a></p>
+                        <a href='#' className='enlaceFooter' onClick={()=>setLayoutID(13)}>{textos[languageFlag].textfooteraviso2}</a></p>
                 </div>
                 <div className="containerCenter">
                     <h3 className='titleFooter'>{textos[languageFlag].textfooterInfo}</h3>
