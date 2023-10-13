@@ -7,6 +7,7 @@ type TextosType<T extends string> = {
 };
 
 export const textos: TextosType<
+    //nav
     "inicio" |
     "sobreMi" |
     "coaching" |
@@ -19,9 +20,24 @@ export const textos: TextosType<
     "blogPost" |
     "podcast" |
     "contactar" |
+    //footer
+    "textfooteraviso" |
+    "textfooterpolitica" |
+    "textfootercoockies" |
+    "textfooteraviso2" |
+    "textfooterInfo" |
+    "textfooteremail" |
+    "textfooteremail2" |
+    "textfooterregistro" |
+    //home
     "textDesthome1"|
+    "textDesthome2" |
+    "textDesthome3" |
+    "textDesthome4" |
+    "textDesthome5" |
+    "textDesthome6" |
     "textsobremi1" |
-    "titleparrafo"|
+    "titleparrafo" |
     "parrafosobremi1" |
     "parrafosobremi2" |
     "parrafosobremi3" |
@@ -41,6 +57,7 @@ export const textos: TextosType<
     "parrafosobremi16" |
     "parrafosobremi17" |
     "parrafosobremi18" 
+     
     
 
 > = {
@@ -58,8 +75,22 @@ export const textos: TextosType<
         podcast: "Podcast",
         contactar: "Contactar",
         // Fin del Navbar
+        //footer 
+        textfooteraviso: "AVISO LEGAL",
+        textfooterpolitica: "Politica de Privacidad",
+        textfootercoockies: "Politica de coockies",
+        textfooteraviso2:"Aviso legal",
+        textfooterInfo: "Info Contacto",
+        textfooteremail: "Direccion de correo electrónico",
+        textfooteremail2: "Tu direccion de correo aqui",
+        textfooterregistro: "Registro",
         // home
         textDesthome1: "El proyecto nace en Cadaqués, un pueblecito precioso del donde me lleno el alma de buena energía, me nutro de naturaleza y mar y me inspiro. Y esta vibra es la que compartimos aquí. ",
+        textDesthome2: "Te proponemos parar para reconectar contigo, soltar lo que ya no necesitas y vibrar con la energía positiva para atraer lo que quieres.",
+        textDesthome3: "En definitiva, se trata de avanzar en tu proceso de transformación y bienestar para ser tu mejor versión.",
+        textDesthome4: "¿ Como y Donde ?",
+        textDesthome5: "1. Sesiones individuales de coaching (Cadaqués/ Barcelona/ On line)",
+        textDesthome6: "2. Experiencias de bienestar (lugares con encanto).",
         // seccion about me
         titleparrafo: "Algunas cosas sobre mi",
         textsobremi1: "Te ayudo a vivir en plenitud, encontrar tu bienestar  y tu paz interior.",
@@ -73,7 +104,7 @@ export const textos: TextosType<
         parrafosobremi8: "Me encanta aprender cada día y siempre tengo retos.",
         parrafosobremi9: "Me gusta cuidarme y es muy importante mi bienestar. Cuando yo estoy bien mi entorno también.",
         parrafosobremi10: "Mis hobbies favoritos son: leer, escribir, arte, nadar en el mar, cantar, bailar, viajar, descubrir otras culturas, senderismo.",
-        titleparrafo3:"Bibliografía personal :",
+        titleparrafo3: "Bibliografía personal :",
         parrafosobremi11:"Licenciada en Psicología (Universidad Oberta de Catalunya).",
         parrafosobremi12:"Máster en Coaching Teleológico (Universidad de Barcelona).",
         parrafosobremi13:"Posgrado en Liderazgo y Desarrollo personal (Instituto Borja Vilaseca).",
@@ -97,8 +128,22 @@ export const textos: TextosType<
         podcast: "Podcast",
         contactar: "Contact",
         // Fin del Navbar
+        //footer 
+        textfooteraviso: "AVISO LEGAL",
+        textfooterpolitica: "Privacy Policy",
+        textfootercoockies: "Cookie policy",
+        textfooteraviso2:"Legal warning",
+        textfooterInfo: "Contact Info",
+        textfooteremail: "Email address",
+        textfooteremail2: "Your email address here",
+        textfooterregistro: "register",
         // home
-        textDesthome1: "",
+        textDesthome1: "The project was born in Cadaqués, a beautiful little town in Alt Empordà where I fill my soul with good energy, I am nourished by nature and the sea and I am inspired. And this vibe is what we share here.",
+        textDesthome2: "We suggest you stop to reconnect with yourself, let go what you no longer need and vibrate with positive energy to attract what you want.",
+        textDesthome3: "",
+        textDesthome4: "",
+        textDesthome5: "",
+        textDesthome6: "",
         // seccion about me
         textsobremi1: "I help you to find your well-being and to live a full life",
         titleparrafo: "Some things about me",
@@ -112,7 +157,7 @@ export const textos: TextosType<
         parrafosobremi8: "I love learning every day and I always have challenges.",
         parrafosobremi9: "I like to take care of myself and my well-being is very important. When I am well, so is my environment.",
         parrafosobremi10: "My favorite hobbies are: reading, writing, art, swimming in the sea, singing, dancing, traveling, discovering other cultures, hiking.",
-        titleparrafo3:"Personal bibliography",
+        titleparrafo3: "Personal bibliography",
         parrafosobremi11:"Graduate in Psychology (Open University of Catalonia).",
         parrafosobremi12:"Master in Teleological Coaching (University of Barcelona).",
         parrafosobremi13:"Postgraduate in Leadership and Personal Development (Borja Vilaseca Institute).",
@@ -136,8 +181,22 @@ export const textos: TextosType<
         podcast: "Podcast",
         contactar: "Contacte",
         // Fin del Navbar
+        //footer 
+        textfooteraviso: "AVÍS LEGAL",
+        textfooterpolitica: "Política de privacitat",
+        textfootercoockies: "Política de galetes",
+        textfooteraviso2:"Avís legal",
+        textfooterInfo: "Info Contacto",
+        textfooteremail: "Adreça de correu electrònic",
+        textfooteremail2: "La teva adreça de correu aquí",
+        textfooterregistro: "Registre",
         // home
-        textDesthome1: "",
+        textDesthome1: "El projecte neix a Cadaqués, un poblet preciós de l'Alt Empordà on m'omplo l'ànima de bona energia, em nodreixo de natura i mar i m'inspiro. I aquesta vibra és la que compartim aquí.",
+        textDesthome2: "Et proposem parar per reconnectar amb tu, deixar anar el que ja no necessites i vibrar amb l'energia positiva per atraure el que vols.",
+        textDesthome3: "En definitiva, es tracta d'avançar en el teu procés de transformació i benestar per ser la teva millor versió.",
+        textDesthome4: "Com i on?",
+        textDesthome5: "1.Sessions individuals de coaching (Cadaqués/ Barcelona/ On line)Saber més",
+        textDesthome6: "2.Experiències de benestar (llocs amb  encant). Saber més",
         // seccion about me
         textsobremi1: "T'ajudo a viure en plenitud, trobar el teu benestar i la teva pau interior.",
         titleparrafo: "Algunas cosas sobre mi catalan",
@@ -151,7 +210,7 @@ export const textos: TextosType<
         parrafosobremi8: "M'encanta aprendre cada dia i sempre tinc reptes.",
         parrafosobremi9: "M'agrada cuidar-me i és molt important el meu benestar. Quan jo estic bé el meu entorn també.",
         parrafosobremi10: "ls meus hobbies preferits són: llegir, escriure, art, nedar al mar, cantar, ballar, viatjar, descobrir altres cultures, senderisme.",
-        titleparrafo3:"Bibliografia personal",
+        titleparrafo3: "Bibliografia personal",
         parrafosobremi11:"Llicenciada en Psicologia (Universitat Oberta de Catalunya).",
         parrafosobremi12:"Màster en Coaching Teleològic (Universitat de Barcelona).",
         parrafosobremi13:"Postgrau en Lideratge i Desenvolupament personal (Institut Borja Vilaseca).",

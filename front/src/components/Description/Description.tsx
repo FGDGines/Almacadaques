@@ -21,8 +21,9 @@ const Description = () => {
             <div className='ctDefault'>
                 <div className='ctTitle2'>  
                     <span style={{ color: "#75151E" }}> ❝ </span>
-                        Te proponemos <b>parar</b> para <b>reconectar</b> contigo, <b>soltar</b> lo que ya no necesitas <br /> 
-                        y vibrar con la <b>energía positiva</b> para <b> atraer</b> lo que quieres.
+                    {textos[languageFlag].textDesthome2}
+                        {/* Te proponemos <b>parar</b> para <b>reconectar</b> contigo, <b>soltar</b> lo que ya no necesitas <br /> 
+                        y vibrar con la <b>energía positiva</b> para <b> atraer</b> lo que quieres. */}
                     <span style={{ color: "#75151E" }}> ❞ </span>
                 </div>
             </div>
