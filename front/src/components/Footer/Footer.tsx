@@ -15,7 +15,7 @@ const Footer = () => {
                     <p className='subtitlefooter'>
                         <a href='#' className='enlaceFooter' onClick={()=>setLayoutID(11)}>{textos[languageFlag].textfooterpolitica}</a> </p>
                     <div className="span2"></div>
-                    <p className='subtitlefooter'><a href='#' className='enlaceFooter'> Politica de coockies</a>  </p>
+                    <p className='subtitlefooter'><a href='#' className='enlaceFooter' onClick={()=>setLayoutID(12)}>  {textos[languageFlag].textfootercoockies}</a>  </p>
                     <div className="span3"></div>
                     <p className='subtitlefooter'>
                         <a href='#' className='enlaceFooter' onClick={()=>setLayoutID(13)}>{textos[languageFlag].textfooteraviso2}</a></p>
