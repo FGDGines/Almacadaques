@@ -1,7 +1,10 @@
 import './Footer.css'
+import { useContext } from 'react';
+import { GlobalContext } from '../../contexts/GlobalContext';
 
 
 const Footer = () => {
+    const {setLayoutID} = useContext(GlobalContext);
     return (
         <div className="Footer">
             <div className="container1">
@@ -9,11 +12,11 @@ const Footer = () => {
                     <h3 className='titleFooter'>AVISO LEGAL</h3>
                     <div className="span1"></div>
 
-                    <p className='subtitlefooter'><a href='#' className='enlaceFooter'> Politica de Privacidad</a> </p>
+                    <p className='subtitlefooter'><a href='#' className='enlaceFooter' onClick={()=>setLayoutID(11)}> Politica de Privacidad</a> </p>
                     <div className="span2"></div>
-                    <p className='subtitlefooter'><a href='#' className='enlaceFooter'> Politica de coockies</a>  </p>
+                    <p className='subtitlefooter'><a href='#' className='enlaceFooter' onClick={()=>setLayoutID(12)}> Politica de coockies</a>  </p>
                     <div className="span3"></div>
-                    <p className='subtitlefooter'><a href='#' className='enlaceFooter'> Aviso legal </a> </p>
+                    <p className='subtitlefooter'><a href='#' className='enlaceFooter' onClick={()=>setLayoutID(13)}> Aviso legal </a> </p>
                 </div>
                 <div className="containerCenter">
                     <h3 className='titleFooter'>Info Contacto </h3>
