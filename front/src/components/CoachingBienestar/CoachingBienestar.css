@@ -1,4 +1,40 @@
 .CoachingBienestar{
     background-color: white;
+    
 }
+.containerInnformacion1{
+    display: flex;
+    padding: 3vw 7vw;
+}
+.contseccionn1  {
+    
+    font-size: 2vw;
+}
+.contseccionn1 p{
+    font-size: 1.1vw;
+}
+.contseccionn1 a{
+    text-decoration: none;
+    color: blue;
+    font-size: 1.4vw;
+}
+.containerimg1{
+    width: 200vw;
+    margin-right: 4vw;
+}
+.imgBienertar{
+    width: 100%;
+    height: 100%;
 
+    border-radius: .4vw;
+}
+.containerInnformacion2 {
+    padding: 3vw 7vw;
+    
+}
+.containerInnformacion2{
+    font-size: 1.7vw;
+}
+.textFormulario{
+    font-size: 1.3vw;
+}
