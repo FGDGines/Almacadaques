@@ -140,10 +140,10 @@ export const textos: TextosType<
         // home
         textDesthome1: "The project was born in Cadaqués, a beautiful little town in Alt Empordà where I fill my soul with good energy, I am nourished by nature and the sea and I am inspired. And this vibe is what we share here.",
         textDesthome2: "We suggest you stop to reconnect with yourself, let go what you no longer need and vibrate with positive energy to attract what you want.",
-        textDesthome3: "",
-        textDesthome4: "",
-        textDesthome5: "",
-        textDesthome6: "",
+        textDesthome3: "In short, it is about advancing your transformation and well-being process to become the best of yourself.",
+        textDesthome4: "How and where?",
+        textDesthome5: "1.Individual coaching sessions (Cadaqués/ Barcelona/ On line)",
+        textDesthome6: "2.Well-being experiences (in charming places).",
         // seccion about me
         textsobremi1: "I help you to find your well-being and to live a full life",
         titleparrafo: "Some things about me",
