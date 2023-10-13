@@ -1,16 +1,18 @@
 import './Description.css'
 import Carousel from '../Carousel/Carousel';
 import Propuesta from '../Propuesta/Propuesta';
+import { textos } from '../../data/textos';
+import { useContext } from 'react';
+import { GlobalContext } from '../../contexts/GlobalContext';
 import { carouselDescription } from '../../data/carousel';
 const Description = () => {
-
+    const {languageFlag} = useContext(GlobalContext)
     return <>
         <div className='Description'>
             <div className='ctDefault'>
                 <div className='ctTitle'>
                     <span style={{ color: "#75151E" }}> ❝ </span>
-                    El proyecto nace en Cadaqués, un pueblecito precioso del donde me 
-                    lleno el alma de buena energía, me nutro de naturaleza y mar y me inspiro. Y esta vibra es la que compartimos aquí. <span style={{ color: "#75151E" }}> ❞ </span>
+                    {textos[languageFlag].textDesthome1}<span style={{ color: "#75151E" }}> ❞ </span>
                 </div>
             </div>
             <div className='ctCarousel'>
