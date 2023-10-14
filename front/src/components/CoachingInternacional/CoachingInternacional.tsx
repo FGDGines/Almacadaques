@@ -2,6 +2,7 @@ import './CoachingInternacional.css'
 import Navbar from '../Navbar/Navbar';
 import Franja from '../Franja/Franja';
 import Footer from '../Footer/Footer';
+import FormDefault from '../FormDefault/FormDefault';
 
 const CoachingInternacional = () => {
     return <div className="CoachingInternacional">
@@ -29,6 +30,13 @@ const CoachingInternacional = () => {
                 <p className='parrafo'>Como mentora internacional te comparto mis propias experiencias y con mucha empatía y sensibilidad te acompaño a alcanzar los objetivos que quieres lograr, logrando así mayor bienestar.</p>
                 <p className='parrafo'>Contácta sin compromiso para definir juntos como te puedo ayudar a conseguir los resultados que buscas.</p>
                 <p className='parrafo'>Pide más información sin compromiso</p>
+            </div>
+            <div className='ct3 containerInnformacion2'>
+                <p className='textFormulario'>Pide más información sin compromiso</p>
+                <div className='ctForm'>
+                    <FormDefault />
+                    <img className='imgEquip'  src="../../../src/assets/images/no-foto.png" alt="Equipo de trabajo" />
+                </div>
             </div>
         </div>
         <Footer />
