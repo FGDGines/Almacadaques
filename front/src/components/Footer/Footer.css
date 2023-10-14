@@ -210,49 +210,148 @@ input:valid ~ label {
   }
   .input {
     width: 25vw;
-}
-.user-label {
+  }
+  .user-label {
     font-size: 1.7vw;
-}
-.containerLeft{
+  }
+  .containerLeft {
     width: 68vw;
-}
-.buttonFooter{
+  }
+  .buttonFooter {
     font-size: 3vw;
-}
+  }
+  .redes {
+    width: 90vw;
+  }
+
+  .socialRed {
+    width: 60vw;
+  }
+  .whats {
+    width: 18vw;
+  }
+  .img {
+    width: 4vw;
+  }
+
+  .img1 {
+    width: 4vw;
+  }
+  .span1 {
+    width: 13vw;
+  }
+
+  .span2 {
+    width: 15vw;
+  }
+
+  .span3 {
+    width: 14vw;
+  }
+
+  .span4 {
+    width: 15vw;
+  }
+
+  .span5 {
+    width: 20vw;
+  }
+
+  .span6 {
+    width: 19vw;
+  }
+
+  .span7 {
+    width: 10vw;
+  }
 }
 
 @media (max-width: 450px) {
-    .container1 {
-        flex-direction: column;
-        align-items: center;
-      }
-      .contTablet {
-        flex-direction: column;
-      }
-      .titleFooter {
-        font-size: 3.5vw;
-      }
-      .enlaceFooter {
-        font-size: 2.5vw;
-      }
-      .correo {
-        font-size: 2.3vw;
-      }
-      .whatsapp {
-        width: 2.5vw;
-        height: 2.5vw;
-      }
-      .input {
-        width: 25vw;
-    }
-    .user-label {
-        font-size: 1.7vw;
-    }
-    .containerLeft{
-        width: 68vw;
-    }
-    .buttonFooter{
-        font-size: 3vw;
-    }
+  .container1 {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+  }
+  .contTablet {
+    flex-direction: column;
+    width: 90vw;
+  }
+  .titleFooter {
+    font-size: 7vw;
+  }
+
+  .infofooter {
+    margin-top: 7vw;
+    height: 15vw;
+  }
+  .enlaceFooter {
+    font-size: 6vw;
+  }
+  .correo {
+    font-size: 5vw;
+    margin-bottom: 3vw;
+  }
+  .whatsapp {
+    width: 5vw;
+    height: 5vw;
+  }
+  .input {
+    width: 80vw;
+  }
+  .user-label {
+    font-size: 5vw;
+  }
+  .containerLeft {
+    width: 90vw;
+  }
+  .buttonFooter {
+    font-size: 7vw;
+  }
+  .redes {
+    width: 90vw;
+  }
+
+  .span1 {
+    width: 30vw;
+  }
+
+  .span2 {
+    width: 37vw;
+  }
+
+  .span3 {
+    width: 38vw;
+  }
+
+  .span4 {
+    width: 30vw;
+  }
+
+  .span5 {
+    width: 45vw;
+  }
+
+  .span6 {
+    width: 47vw;
+  }
+
+  .span7 {
+    width: 20vw;
+  }
+
+  .socialRed {
+    width: 60vw;
+  }
+  .whats {
+    width: 18vw;
+  }
+  .img {
+    width: 8vw;
+  }
+
+  .img1 {
+    width: 8vw;
+  }
+
+  
 }
