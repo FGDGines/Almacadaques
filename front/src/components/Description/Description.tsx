@@ -6,7 +6,9 @@ import { useContext } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
 import { carouselDescription } from '../../data/carousel';
 const Description = () => {
+
     const {languageFlag} = useContext(GlobalContext)
+    
     return <>
         <div className='Description'>
             <div className='ctDefault'>

@@ -35,7 +35,11 @@ export const textos: TextosType<
     "textDesthome3" |
     "textDesthome4" |
     "textDesthome5" |
+    "textDesthome50" |
+    "textDesthome51" |
     "textDesthome6" |
+    "textDesthome60" |
+    "textDesthome61" |
     "textsobremi1" |
     "titleparrafo" |
     "parrafosobremi1" |
@@ -89,8 +93,12 @@ export const textos: TextosType<
         textDesthome2: "Te proponemos parar para reconectar contigo, soltar lo que ya no necesitas y vibrar con la energía positiva para atraer lo que quieres.",
         textDesthome3: "En definitiva, se trata de avanzar en tu proceso de transformación y bienestar para ser tu mejor versión.",
         textDesthome4: "¿ Como y Donde ?",
-        textDesthome5: "1. Sesiones individuales de coaching (Cadaqués/ Barcelona/ On line)",
-        textDesthome6: "2. Experiencias de bienestar (lugares con encanto).",
+        textDesthome5: "1. Sesiones individuales de ",
+        textDesthome50: "coaching",
+        textDesthome51: "(Cadaqués/ Barcelona/ On line)",
+        textDesthome6: "2. Experiencias de ",
+        textDesthome60: "bienestar",
+        textDesthome61: "(lugares con encanto).",
         // seccion about me
         titleparrafo: "Algunas cosas sobre mi",
         textsobremi1: "Te ayudo a vivir en plenitud, encontrar tu bienestar  y tu paz interior.",
@@ -143,7 +151,11 @@ export const textos: TextosType<
         textDesthome3: "",
         textDesthome4: "",
         textDesthome5: "",
+        textDesthome50: "",
+        textDesthome51: "",
         textDesthome6: "",
+        textDesthome60: "",
+        textDesthome61: "",
         // seccion about me
         textsobremi1: "I help you to find your well-being and to live a full life",
         titleparrafo: "Some things about me",
@@ -195,8 +207,12 @@ export const textos: TextosType<
         textDesthome2: "Et proposem parar per reconnectar amb tu, deixar anar el que ja no necessites i vibrar amb l'energia positiva per atraure el que vols.",
         textDesthome3: "En definitiva, es tracta d'avançar en el teu procés de transformació i benestar per ser la teva millor versió.",
         textDesthome4: "Com i on?",
-        textDesthome5: "1.Sessions individuals de coaching (Cadaqués/ Barcelona/ On line)Saber més",
-        textDesthome6: "2.Experiències de benestar (llocs amb  encant). Saber més",
+        textDesthome5: "1.Sessions individuals de",
+        textDesthome50: "coaching",
+        textDesthome51: "(Cadaqués/ Barcelona/ On line)",
+        textDesthome6: "2.Experiències de ",
+        textDesthome60: "benestar",
+        textDesthome61: "(llocs amb  encant).",
         // seccion about me
         textsobremi1: "T'ajudo a viure en plenitud, trobar el teu benestar i la teva pau interior.",
         titleparrafo: "Algunas cosas sobre mi catalan",
