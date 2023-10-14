@@ -11,6 +11,8 @@ type GlobalContextType = {
     setLanguajeActive: (arg: number) => void
     languageFlag: enLanguageFlag
     setLanguageFlag: (arg: enLanguageFlag) => void
+    upOrDown: boolean
+    setUpOrDown: (arg: boolean)=>void
 }
 
 export type {
