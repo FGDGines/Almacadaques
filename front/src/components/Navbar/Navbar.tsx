@@ -9,8 +9,9 @@ import { GlobalContext  } from "../../contexts/GlobalContext";
 import { textos } from "../../data/textos";
 const Navbar = () => {
   const {languajeActive, languageFlag } =useContext(GlobalContext)
+  const {upOrDown} = useContext(GlobalContext)
   return (
-    <div className="Navbar">
+    <div className={`Navbar ${upOrDown?'up':'down'}`}>
       <NavButton className="logo" target={1} text="" /> 
       <div className="navigation">
         <NavButton target={1} text={`${textos[languageFlag].inicio}`} />

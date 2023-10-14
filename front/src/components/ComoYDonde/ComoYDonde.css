@@ -26,6 +26,8 @@
 .ComoYDonde .nlink{
     cursor: pointer;
     margin-bottom: 15px;
+    margin-inline: 5px;
+    color: #cf1348;
 }
 
 .ComoYDonde .nlink:hover{

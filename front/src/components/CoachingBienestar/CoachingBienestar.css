@@ -11,8 +11,7 @@
 }
 .contseccionn1 .parrafo{
     font-size: 1vw;
-    text-align: justify;
-    
+    text-align: justify; 
 }
 .contseccionn1 a{
     text-decoration: none;
@@ -38,6 +37,34 @@
 }
 .textFormulario{
     font-size: 1.3vw;
+}
+
+.contseccionn1 .nlink{
+    color: #cf1348;
+    cursor: pointer;
+}
+
+.contseccionn1 .nlink:hover{
+    text-decoration: underline;
+}
+
+.ct3.containerInnformacion2 .textFormulario{
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+
+.ct3.containerInnformacion2 .ctForm{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.ct3.containerInnformacion2 .ctForm img{
+    margin: 20px;
+}
+
+.ct3.containerInnformacion2 .ctForm > *{
+    /*  */
 }
 
 @media (max-width: 780px){
