@@ -2,8 +2,12 @@ import './CoachingBienestar.css'
 import Navbar from '../Navbar/Navbar';
 import Franja from '../Franja/Franja';
 import Footer from '../Footer/Footer';
+import { useContext } from 'react';
+import { GlobalContext } from '../../contexts/GlobalContext';
+import FormDefault from '../FormDefault/FormDefault';
 
 const CoachingBienestar = () => {
+    const { setLayoutID } = useContext(GlobalContext)
     return <div className="CoachingBienestar">
         <Navbar />
         <Franja text="Coaching para el Bienestar " />
@@ -28,7 +32,7 @@ const CoachingBienestar = () => {
                     <p className='parrafo'>
                         Como coach acompaño a la persona a través de un viaje de exploración interior. Empezamos desde donde empieza su conflicto o malestar hasta la resolución del mismo logrando así tu bienestar.
                     </p>
-                    <p > <a href="" className='parrafo'> <b> Blog de Testimonio </b></a> </p>
+                    <p onClick={() => setLayoutID(5)} > <span className='nlink'> <b> Blog de Testimonio </b></span> </p>
                 </div>
 
             </div>
@@ -37,10 +41,14 @@ const CoachingBienestar = () => {
                 <span style={{ color: "#75151E" }}> ❝ </span>
                 Cuando uno toma la determinación de liderar su vida, posiblemente después de alguna crisis o desajuste, el acompañamiento de un coach lo puede ayudar a acelerar y lograr mejores resultados
                 <span style={{ color: "#75151E" }}> ❞ </span>
-                <p className='textFormulario'>Pide más información sin compromiso</p>
             </div>
-
-
+            <div className='ct3 containerInnformacion2'>
+                <p className='textFormulario'>Pide más información sin compromiso</p>
+                <div className='ctForm'>
+                    <FormDefault />
+                    <img className='imgEquip'  src="../../../src/assets/images/no-foto.png" alt="Equipo de trabajo" />
+                </div>
+            </div>
         </div>
         <Footer />
     </div>

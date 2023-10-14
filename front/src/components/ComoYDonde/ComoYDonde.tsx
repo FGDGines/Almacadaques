@@ -5,7 +5,7 @@ import { textos } from '../../data/textos'
 
 
 const ComoYDonde = () => {
-    const {setLayoutID, languageFlag } = useContext(GlobalContext)
+    const { setLayoutID, languageFlag } = useContext(GlobalContext)
     return <div className="ComoYDonde">
         <div className="ct1" >
             <span style={{ color: "#75151E" }}> ❝ </span>
@@ -13,13 +13,21 @@ const ComoYDonde = () => {
             <span style={{ color: "#75151E" }}> ❞ </span>
         </div>
         <div className="ct2" style={{ color: "#75151E" }}  >
-        {textos[languageFlag].textDesthome4}
+            {textos[languageFlag].textDesthome4}
         </div>
-        <div className='nlink' style={{ color: "#75151E" }} onClick={()=>setLayoutID(4)} >
-        {textos[languageFlag].textDesthome5}   
+        <div  >
+            {textos[languageFlag].textDesthome5}
+            <span className='nlink' onClick={() => setLayoutID(4)}>
+            {textos[languageFlag].textDesthome50}
+            </span>
+            {textos[languageFlag].textDesthome51}
         </div>
-        <div style={{ color: "#75151E" }}  className='nlink' onClick={()=>setLayoutID(6)} >
-        {textos[languageFlag].textDesthome6}
+        <div >
+            {textos[languageFlag].textDesthome6}
+            <span className='nlink' onClick={() => setLayoutID(6)} >
+            {textos[languageFlag].textDesthome60}
+            </span>
+            {textos[languageFlag].textDesthome61}
         </div>
     </div>
 }
