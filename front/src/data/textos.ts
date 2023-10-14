@@ -36,6 +36,7 @@ export const textos: TextosType<
     "textDesthome4" |
     "textDesthome5" |
     "textDesthome6" |
+    //about me
     "textsobremi1" |
     "titleparrafo" |
     "parrafosobremi1" |
@@ -56,8 +57,14 @@ export const textos: TextosType<
     "parrafosobremi15" |
     "parrafosobremi16" |
     "parrafosobremi17" |
-    "parrafosobremi18" 
-     
+    "parrafosobremi18" |
+    //Coaching
+    "textcoaching1" |
+    "textcoaching2" |
+    "textcoaching3" |
+    "textcoaching4" |
+    "textcoaching5" 
+    
     
 
 > = {
@@ -113,6 +120,14 @@ export const textos: TextosType<
         parrafosobremi16:"Doing Business Globally (ESADE).",
         parrafosobremi17:"Postgrado en Licitaciones Internacionales (Universidad La Salle).",
         parrafosobremi18:"Formación continuada en el ámbito de empresa y crecimiento personal.",
+        //Coaching
+        textcoaching1: "¿Sientes que existe una brecha entre la vida que llevas y la que quieres llevar?<br/> ¿Quieres convertirte en tu mejor versión?",
+        textcoaching2: "Definiremos un objetivo claro de cambio y con las sesiones personalizadas darás un empujón y romperás los bloqueos actuales que no te permiten avanzar.",
+        textcoaching3: "Te escucharé sin juzgar, te haré preguntas y te daré feedback, y con ello aclararás y ordenarás tus ideas e incrementarás tu autoconocimiento y liderazgo para descubrir nuevos enfoques y lograr aquello que quieres conseguir.",
+        textcoaching4: "Como coach acompaño a la persona a través de un viaje de exploración interior. Empezamos desde donde empieza su conflicto o malestar hasta la resolución del mismo logrando así tu bienestar.",
+        textcoaching5: "Cuando uno toma la determinación de liderar su vida, posiblemente después  de alguna crisis o desajuste, el acompañamiento de un coach lo puede ayudar a acelerar y lograr mejores resultados.",
+
+
     },
     [enLanguageFlag.EN]: {
         inicio: "Home",
@@ -166,6 +181,15 @@ export const textos: TextosType<
         parrafosobremi16:"Doing Business Globally (ESADE)",
         parrafosobremi17:"Postgraduate in International Tenders (La Salle University)",
         parrafosobremi18:"Continuing training in the field of business and personal growth.",
+        //Coaching
+        textcoaching1: "",
+        textcoaching2: "",
+        textcoaching3: "",
+        textcoaching4: "",
+        textcoaching5: "",
+    
+    
+    
     },
     [enLanguageFlag.CAT]: {
         inicio: "Inici",
@@ -219,6 +243,14 @@ export const textos: TextosType<
         parrafosobremi16:"Doing Business Globally (ESADE).",
         parrafosobremi17:"Postgrau en Licitacions Internacionals (Universitat La Salle).",
         parrafosobremi18:"Formació continuada a l'àmbit d'empresa i creixement personal.",
+        //Coaching
+        textcoaching1: "",
+        textcoaching2: "",
+        textcoaching3: "",
+        textcoaching4: "",
+        textcoaching5: "",
+
+
 
     }
 
