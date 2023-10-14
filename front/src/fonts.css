@@ -1,11 +1,11 @@
 /** @group Fonts */
 /** @section Font Awesome Icons 4.7.0 */
 @font-face {
-	font-family: 'Pacifico';
-	src: url('../assets/fonts/Pacifico-Regular.ttf') format('truetype');
+	font-family: 'Great vibes';
+	src: url('../src/assets/fonts/GreatVibes-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
-  }
+}
   
 @font-face {
 	font-family: 'FontAwesome';

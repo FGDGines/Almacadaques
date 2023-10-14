@@ -1,6 +1,7 @@
 :root{
     --bRadius: 15px
 }
+@import "../../fonts.css";
 
 .Carousel{
     display: grid;   
@@ -75,6 +76,9 @@
     border-radius: 15px;
     right: 10px;
     bottom: 10px;
+    font-family: 'Great vibes', cursive;
+    font-size: 2vw;
+
 }
 
 .Carousel > .ctPicture > div:last-child > .Autor{
