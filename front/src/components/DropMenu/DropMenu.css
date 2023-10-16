@@ -59,3 +59,20 @@
     transform: translateY(0px);
   }
 }
+
+@media (max-width: 780px) {
+  .DropMenu > .content-list {
+    
+    top: 3rem;
+    left: 0rem;
+    z-index: 10000;
+  }
+}
+@media (max-width: 450px) {
+  .DropMenu > .content-list {
+    
+    top: 2rem;
+    left: 0rem;
+    z-index: 10000;
+  }
+}
