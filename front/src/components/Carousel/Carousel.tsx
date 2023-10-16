@@ -4,6 +4,7 @@ import { tpCarouelItem, tpCarouselData } from '../../types/typesComponents'
 import { GrLinkPrevious as FcPrevious, GrLinkNext as FcNext } from 'react-icons/gr'
 
 
+
 const Carousel: FC<tpCarouselData> = ({ items }) => {
     const [sheets, setSheets] = useState(items);
     setSheets
