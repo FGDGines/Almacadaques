@@ -76,7 +76,7 @@ export const textos: TextosType<
         inicio: "Inicio",
         sobreMi: "Sobre Mi",
         coaching: "Coaching",
-        agenda: "Agenda es ",
+        agenda: "Agenda",
         expBienestar: "Experiencias de Bienestar",
         expDeMedida: "Expeiencias de Medida",
         colabrador: "Colaborador",
@@ -194,11 +194,11 @@ export const textos: TextosType<
         parrafosobremi17:"Postgraduate in International Tenders (La Salle University)",
         parrafosobremi18:"Continuing training in the field of business and personal growth.",
         //Coaching
-        textcoaching1: "",
-        textcoaching2: "",
-        textcoaching3: "",
-        textcoaching4: "",
-        textcoaching5: "",
+        textcoaching1: "Do you feel like there is a gap between the life you lead and the life you want to lead? Do you want to become the best of yourself?",
+        textcoaching2: "We will define a clear objective for change and with personalized sessions I will help to push and break the current blocks that do not allow you to move forward.",
+        textcoaching3: "I will listen to you without judging, ask you questions and give you feedback, so that you will clarify and organize your ideas as well as increase your self-knowledge and leadership capacities.",
+        textcoaching4: "I help he person through a journey of inner exploration. We will start from where your conflict or discomfort begins and go through to achieve your goals.",
+        textcoaching5: "When you make the determination to lead your life, possibly after some crisis or imbalance, the support of a coach can help you accelerate and achieve better results",
     
     
     
@@ -260,11 +260,11 @@ export const textos: TextosType<
         parrafosobremi17:"Postgrau en Licitacions Internacionals (Universitat La Salle).",
         parrafosobremi18:"Formació continuada a l'àmbit d'empresa i creixement personal.",
         //Coaching
-        textcoaching1: "",
-        textcoaching2: "",
-        textcoaching3: "",
-        textcoaching4: "",
-        textcoaching5: "",
+        textcoaching1: "Sents que hi ha una escletxa entre la vida que portes i la que vols portar? Vols convertir-te en la teva millor versió?",
+        textcoaching2: "Definirem un objectiu clar de canvi i amb les sessions personalitzades donaràs una empenta i trencaràs els bloquejos actuals que no et permeten avançar.",
+        textcoaching3: "T'escoltaré sense jutjar, et faré preguntes i et donaré feedback, i amb això aclariràs i ordenaràs les teves idees i incrementaràs el teu autoconeixement i lideratge per descobrir nous enfocaments i aconseguir allò que vols.",
+        textcoaching4: "Com a coach acompanyo la persona mitjançant un viatge d'exploració interior. Comencem des d'on comença el seu conflicte o malestar fins a la seva resolució aconseguint així el teu benestar.",
+        textcoaching5: "Quan una persona pren la determinació de liderar la seva vida, possiblement després d'alguna crisi o desajust, l'acompanyament d'un coach el pot ajudar a accelerar el canvi i aconseguir millors resultats",
 
 
 
