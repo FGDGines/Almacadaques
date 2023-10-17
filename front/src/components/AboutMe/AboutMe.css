@@ -47,9 +47,9 @@
 }
 .infoSobremi_1{
     width: 45vw;
-    background-color: #cf1348;
+    background-color: white;
     padding: 3vw ;
-    color: white;
+    color: black;
     font-size: 1.1vw;
 }
 .infoSobremi_2{
@@ -73,9 +73,9 @@
 
     .infoSobremi_1{
         width: 45vw;
-        background-color: #cf1348;
+        background-color: white;
         padding: 2vw;
-        color: white;
+        color: black;
         font-size: 1.6vw;
     }
     .infoSobremi_2{

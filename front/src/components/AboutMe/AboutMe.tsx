@@ -19,7 +19,7 @@ const AboutMe = () => {
             <div className="containerSobremi_1">
                 
                 <div className="infoSobremi_1">
-                    <p>{textos[languageFlag].titleparrafo}</p>
+                    
                     <ul>
                         <li>{textos[languageFlag].parrafosobremi1}</li>
                         <li>{textos[languageFlag].parrafosobremi2}</li>
@@ -38,6 +38,7 @@ const AboutMe = () => {
                     <img src="../../../src/assets/background/2.foto.jpg" alt="Foto sobre mi" />
                 </div>
                 <div className="infoSobremi_2">
+                    <p>{textos[languageFlag].titleparrafo}</p>
                     <ul>
                         <li>{textos[languageFlag].parrafosobremi5}</li>
                         <li>{textos[languageFlag].parrafosobremi6}</li>
