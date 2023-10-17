@@ -20,8 +20,8 @@ function AvisoLegal() {
         <>
             <Navbar />
             <div className="containerAvisos">
-                <h1>AVISO LEGAL Y CONDICIONES
-                    GENERALES DE USO</h1>
+                <h2>AVISO LEGAL Y CONDICIONES
+                    GENERALES DE USO</h2>
                 <p> <a href="" className="enlace">https://almacadaques.com/</a> </p>
 
                 <div className="titleaviso">
