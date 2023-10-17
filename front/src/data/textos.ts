@@ -69,7 +69,13 @@ export const textos: TextosType<
     "textcoachingtitle2" |
     "textcoaching3" |
     "textcoaching4" |
-    "textcoaching5" 
+    "textcoaching5" |
+    "textcoachingpide" |
+    //formulario coaching para el bienestar
+    "textnombre" |
+    "textemail" |
+    "textcomentario" |
+    "textaceptar"
     
     
 
@@ -138,7 +144,12 @@ export const textos: TextosType<
         textcoaching3: "Te escucharé sin juzgar, te haré preguntas y te daré feedback, y con ello aclararás y ordenarás tus ideas e incrementarás tu autoconocimiento y liderazgo para descubrir nuevos enfoques y lograr aquello que quieres conseguir.",
         textcoaching4: "Como coach acompaño a la persona a través de un viaje de exploración interior. Empezamos desde donde empieza su conflicto o malestar hasta la resolución del mismo logrando así tu bienestar.",
         textcoaching5: "Cuando uno toma la determinación de liderar su vida, posiblemente después  de alguna crisis o desajuste, el acompañamiento de un coach lo puede ayudar a acelerar y lograr mejores resultados.",
-
+        textcoachingpide:"Pide más información sin compromiso",
+        //formulario coaching para el bienestar
+        textnombre:"Nombre",
+        textemail:"Correo electrónico",
+        textcomentario:"Comentario",
+        textaceptar:"Enviar",
 
     },
     [enLanguageFlag.EN]: {
@@ -205,8 +216,12 @@ export const textos: TextosType<
         textcoaching3: "I will listen to you without judging, ask you questions and give you feedback, so that you will clarify and organize your ideas as well as increase your self-knowledge and leadership capacities.",
         textcoaching4: "I help he person through a journey of inner exploration. We will start from where your conflict or discomfort begins and go through to achieve your goals.",
         textcoaching5: "When you make the determination to lead your life, possibly after some crisis or imbalance, the support of a coach can help you accelerate and achieve better results",
-    
-    
+        textcoachingpide:"Request more information without obligation",
+        //formulario coaching para el bienestar
+        textnombre:"Name",
+        textemail:"email",
+        textcomentario:"comment",
+        textaceptar:"Send",
     
     },
     [enLanguageFlag.CAT]: {
@@ -273,7 +288,12 @@ export const textos: TextosType<
         textcoaching3: "T'escoltaré sense jutjar, et faré preguntes i et donaré feedback, i amb això aclariràs i ordenaràs les teves idees i incrementaràs el teu autoconeixement i lideratge per descobrir nous enfocaments i aconseguir allò que vols.",
         textcoaching4: "Com a coach acompanyo la persona mitjançant un viatge d'exploració interior. Comencem des d'on comença el seu conflicte o malestar fins a la seva resolució aconseguint així el teu benestar.",
         textcoaching5: "Quan una persona pren la determinació de liderar la seva vida, possiblement després d'alguna crisi o desajust, l'acompanyament d'un coach el pot ajudar a accelerar el canvi i aconseguir millors resultats",
-
+        textcoachingpide:"Demana més informació sense compromís",
+        //formulario coaching para el bienestar
+        textnombre: "Nom",
+        textemail: "correu electrònic",
+        textcomentario: "Comentari",
+        textaceptar: "Enviar",
 
 
     }
