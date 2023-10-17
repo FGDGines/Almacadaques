@@ -61,6 +61,7 @@
 
 .ct3.containerInnformacion2 .ctForm img{
     margin: 20px;
+    width: 35vw;
 }
 
 
@@ -85,8 +86,10 @@
     .textFormulario{
         font-size: 2.5vw;
     }
-    .ct3.containerInnformacion2 .ctForm{
-        flex-direction: column;
+    
+    .ct3.containerInnformacion2 .ctForm img{
+        margin: 20px;
+        width: 45vw;
     }
 }
 
@@ -113,5 +116,10 @@
     }
     .ct3.containerInnformacion2 .ctForm{
         flex-direction: column;
+        
+    }
+    .ct3.containerInnformacion2 .ctForm img{
+        margin: 20px;
+        width: 80vw;
     }
 }
