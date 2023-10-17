@@ -1,8 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import multer from 'multer';
-import DB from '../db/conexion';
-
+// import DB from '../db/conexion';
 
 class Server {
     __app: any;
@@ -12,49 +11,44 @@ class Server {
         this.__PORT = port;
         this.__app = express();
         this.middlewares();
-        this.UpDB()
+        this.UpDB();
         this.routes();
         this.run(this.__PORT);
     }
 
     middlewares() {
-        // Aquí van las configuraciones de middleware
+        // Configuraciones de middleware
         // Peticiones de origen cruzado
         this.__app.use(cors());
-
-        // Lectura y parseo del body
-        this.__app.use(express.json());
-        this.__app.use(express.urlencoded({ extended: true }));
     }
 
     async UpDB() {
-        // Aquí se conecta la base de datos
+        // Conexión a la base de datos
         try {
-            DB
-            // DB.authenticate()
-            // console.log('DB Online')
-
+            // Aquí debes conectar a la base de datos, por ejemplo:
+            // await DB.authenticate();
+            // console.log('DB Online');
         } catch (err) {
-            console.log('Nada de subir DB')
-            console.log(err)
+            console.log('No se pudo conectar a la base de datos');
+            console.log(err);
         }
-
     }
 
     routes() {
-        // Aquí se conectan las rutas básicas
+        // Conexión de rutas básicas
         const storage = multer.memoryStorage();
         const upload = multer({ storage });
 
-        this.__app.use('/api', upload.single('fieldName'), require('../routes/api'));
+        // Utiliza upload.any() para manejar cualquier campo de archivo en la solicitud
+        this.__app.use('/api', upload.any(), require('../routes/api'));
     }
 
     run(__PORT: number) {
-        // Aquí se arranca el servidor
+        // Arranca el servidor
         this.__app.listen(__PORT, () => {
             console.log('Server run on port ' + __PORT);
         });
     }
 }
 
-module.exports = Server;
+module.exports =  Server;
