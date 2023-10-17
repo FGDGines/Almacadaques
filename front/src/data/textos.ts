@@ -73,8 +73,11 @@ export const textos: TextosType<
     "textcoachingpide" |
     //formulario coaching para el bienestar
     "textnombre" |
+    "textplaceholdescribe" |
     "textemail" |
+    "textplaceholemail" |
     "textcomentario" |
+    "textplaceholcoment" |
     "textaceptar"
     
     
@@ -147,8 +150,11 @@ export const textos: TextosType<
         textcoachingpide:"Pide más información sin compromiso",
         //formulario coaching para el bienestar
         textnombre:"Nombre",
+        textplaceholdescribe: "Escribe tu nombre aquí",
         textemail:"Correo electrónico",
+        textplaceholemail: "Dejame saber como contactarte",
         textcomentario:"Comentario",
+        textplaceholcoment: "Que te gustaría decir",
         textaceptar:"Enviar",
 
     },
@@ -219,8 +225,11 @@ export const textos: TextosType<
         textcoachingpide:"Request more information without obligation",
         //formulario coaching para el bienestar
         textnombre:"Name",
+        textplaceholdescribe: "Enter your name here",
         textemail:"email",
+        textplaceholemail: "Let me know how to contact you",
         textcomentario:"comment",
+        textplaceholcoment: "What would you like to say?",
         textaceptar:"Send",
     
     },
@@ -291,8 +300,11 @@ export const textos: TextosType<
         textcoachingpide:"Demana més informació sense compromís",
         //formulario coaching para el bienestar
         textnombre: "Nom",
+        textplaceholdescribe: "Escriu el teu nom aquí",
         textemail: "correu electrònic",
+        textplaceholemail: "Deixa'm saber com contactar-te",
         textcomentario: "Comentari",
+        textplaceholcoment: "que t'agradaria dir",
         textaceptar: "Enviar",
 
 
