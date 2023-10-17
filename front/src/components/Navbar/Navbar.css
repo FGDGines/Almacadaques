@@ -175,8 +175,8 @@
   .navButton{
     display: none;
     position: fixed;
-    width: 100vw;
-    left: 0;
+    width: 85vw;
+    right: 0;
     background-color: white;
     margin-top: 3vw;
     padding-bottom: 5vw;
