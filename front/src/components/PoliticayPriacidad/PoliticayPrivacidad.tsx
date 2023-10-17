@@ -9,7 +9,7 @@ type PoliticasAbiertasType = {
 
 function PoliticayPrivacidad() {
   const [politicasAbiertas, setPoliticasAbiertas] = useState<PoliticasAbiertasType>({});
-  
+
   const handleButtonClick = (id: string) => {
     setPoliticasAbiertas((prevPoliticas) => ({
       ...prevPoliticas,
@@ -27,7 +27,7 @@ function PoliticayPrivacidad() {
           <div className={`buttonPlitica ${politicasAbiertas['1'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('1')} >
             <div className="imgPolitica">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`}/>
+              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`} />
             </div>
             <h4>I. POLÍTICA DE PRIVACIDAD Y PROTECCIÓN DE DATOS</h4>
           </div>
@@ -40,9 +40,41 @@ function PoliticayPrivacidad() {
               necesarias, según el nivel de seguridad adecuado al riesgo de los
               datos recogidos
             </p>
+          </span>
+        </div>
 
-            <h4>Leyes que incorpora esta política de privacidad</h4>
+        <div className="titlePrivacidad">
+          <div className={`buttonPlitica ${politicasAbiertas['2'] ? 'rotate' : ''}`}
+            onClick={() => handleButtonClick('2')} >
+            <div className="imgPolitica">
+              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`} />
+            </div>
+            <h4>II. IDENTIDAD DEL RESPONSABLE DEL TRATAMIENTO DE LOS DATOS PERSONALES</h4>
+          </div>
+          <span className={politicasAbiertas['2'] ? 'displayBlock' : 'hide'}>
             <p>
+              El responsable del tratamiento de los datos personales recogidos en
+              Coaching y experiencias de bienestar es: Elisabet Coll-Vinent Puig,
+              con NIF: 46132263J (en adelante, Responsable del tratamiento). Sus
+              datos de contacto son los siguientes:
+            </p>
+            <p>Dirección: Paseo San Gervasio, 59, 08022 Barcelona</p>
+            <p>Teléfono de contacto: +34 660 30 54 21</p>
+            <p>Email de contacto: hola@almacadaques.com</p>
+          </span>
+        </div>
+
+        <div className="titlePrivacidad">
+          <div className={`buttonPlitica ${politicasAbiertas['3'] ? 'rotate' : ''}`}
+            onClick={() => handleButtonClick('3')} >
+            <div className="imgPolitica">
+              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`} />
+            </div>
+            <h4>III. LEYES QUE INCORPORA ESTA POLÍTICA DE PRIVACIDAD</h4>
+          </div>
+          <span className={politicasAbiertas['3'] ? 'displayBlock' : 'hide'}>
+
+          <p>
               Esta política de privacidad está adaptada a la normativa española y
               europea vigente en materia de protección de datos personales en
               internet. En concreto, la misma respeta las siguientes normas:
@@ -69,21 +101,20 @@ function PoliticayPrivacidad() {
                 Información y de Comercio Electrónico (LSSI-CE).
               </li>
             </ul>
-            <h4>
-              Identidad del responsable del tratamiento de los datos personales
-            </h4>
-            <p>
-              El responsable del tratamiento de los datos personales recogidos en
-              Coaching y experiencias de bienestar es: Elisabet Coll-Vinent Puig,
-              con NIF: 46132263J (en adelante, Responsable del tratamiento). Sus
-              datos de contacto son los siguientes:
-            </p>
-            <p>Dirección: Paseo San Gervasio, 59, 08022 Barcelona</p>
-            <p>Teléfono de contacto: +34 660 30 54 21</p>
-            <p>Email de contacto: hola@almacadaques.com</p>
+          </span>
+        </div>
 
-            <h4>Registro de Datos de Carácter Personal</h4>
-            <p>
+        <div className="titlePrivacidad">
+          <div className={`buttonPlitica ${politicasAbiertas['4'] ? 'rotate' : ''}`}
+            onClick={() => handleButtonClick('4')} >
+            <div className="imgPolitica">
+              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`} />
+            </div>
+            <h4>IV. REGISTRO DE DATOS DE CARÁCTER PERSONAL</h4>
+          </div>
+          <span className={politicasAbiertas['4'] ? 'displayBlock' : 'hide'}>
+
+          <p>
               En cumplimiento de lo establecido en el RGPD y la LOPD-GDD, le
               informamos que los datos personales recabados por Coaching y
               experiencias de bienestar, mediante los formularios extendidos en
@@ -99,8 +130,19 @@ function PoliticayPrivacidad() {
               las actividades de tratamiento llevadas a cabo y las demás
               circunstancias establecidas en el RGPD.
             </p>
-            <h4>Principios aplicables al tratamiento de los datos personales</h4>
-            <p>
+          </span>
+        </div>
+
+        <div className="titlePrivacidad">
+          <div className={`buttonPlitica ${politicasAbiertas['5'] ? 'rotate' : ''}`}
+            onClick={() => handleButtonClick('5')} >
+            <div className="imgPolitica">
+              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`} />
+            </div>
+            <h4>V. PRINCIPIOS APLICABLES AL TRATAMIENTO DE LOS DATOS PERSONALES</h4>
+          </div>
+          <span className={politicasAbiertas['5'] ? 'displayBlock' : 'hide'}>
+          <p>
               El tratamiento de los datos personales del Usuario se someterá a los
               siguientes principios recogidos en el artículo 5 del RGPD y en el
               artículo 4 y siguientes de la Ley Orgánica 3/2018, de 5 de
@@ -144,8 +186,19 @@ function PoliticayPrivacidad() {
                 anteriores se cumplen.
               </li>
             </ul>
-            <h4>Categorías de datos personales</h4>
-            <p>
+          </span>
+        </div>
+
+        <div className="titlePrivacidad">
+          <div className={`buttonPlitica ${politicasAbiertas['6'] ? 'rotate' : ''}`}
+            onClick={() => handleButtonClick('6')} >
+            <div className="imgPolitica">
+              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`} />
+            </div>
+            <h4>VI. CATEGORÍAS DE DATOS PERSONALES</h4>
+          </div>
+          <span className={politicasAbiertas['6'] ? 'displayBlock' : 'hide'}>
+          <p>
               Las categorías de datos que se tratan en Coaching y experiencias de
               bienestar son únicamente datos identificativos. En ningún caso, se
               tratan categorías especiales de datos personales en el sentido del
@@ -173,9 +226,19 @@ function PoliticayPrivacidad() {
               ellos sea obligatoria debido a que los mismos sean imprescindibles
               para el correcto desarrollo de la operación realizada.
             </p>
+          </span>
+        </div>
 
-            <h4>Fines del tratamiento a que se destinan los datos personales</h4>
-            <p>
+        <div className="titlePrivacidad">
+          <div className={`buttonPlitica ${politicasAbiertas['7'] ? 'rotate' : ''}`}
+            onClick={() => handleButtonClick('7')} >
+            <div className="imgPolitica">
+              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`} />
+            </div>
+            <h4>VII. FINES DEL TRATAMIENTO A QUE SE DESTINAN LOS DATOS PERSONALES</h4>
+          </div>
+          <span className={politicasAbiertas['7'] ? 'displayBlock' : 'hide'}>
+          <p>
               Los datos personales son recabados y gestionados por Coaching y
               experiencias de bienestar con la finalidad de poder facilitar,
               agilizar y cumplir los compromisos establecidos entre el Sitio Web y
@@ -199,10 +262,19 @@ function PoliticayPrivacidad() {
               se destinarán los datos personales; es decir, del uso o usos que se
               dará a la información recopilada.
             </p>
+          </span>
+        </div>
 
-            <h4>Períodos de retención de los datos personales</h4>
-
-            <p>
+        <div className="titlePrivacidad">
+          <div className={`buttonPlitica ${politicasAbiertas['8'] ? 'rotate' : ''}`}
+            onClick={() => handleButtonClick('8')} >
+            <div className="imgPolitica">
+              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`} />
+            </div>
+            <h4>VIII. PERÍODOS DE RETENCÓN DE LOS DATOS PERSONALES</h4>
+          </div>
+          <span className={politicasAbiertas['8'] ? 'displayBlock' : 'hide'}>
+          <p>
               Los datos personales solo serán retenidos durante el tiempo mínimo
               necesario para los fines de su tratamiento y, en todo caso,
               únicamente durante el siguiente plazo: 36, o hasta que el Usuario
@@ -225,8 +297,19 @@ function PoliticayPrivacidad() {
               las categorías de destinatarios de los datos personales.
             </p>
 
-            <h4>Datos personales de menores de edad</h4>
-            <p>
+          </span>
+        </div>
+
+        <div className="titlePrivacidad">
+          <div className={`buttonPlitica ${politicasAbiertas['9'] ? 'rotate' : ''}`}
+            onClick={() => handleButtonClick('9')} >
+            <div className="imgPolitica">
+              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`} />
+            </div>
+            <h4>IX. DATOS PERSONALES DE MENORES DE EDAD</h4>
+          </div>
+          <span className={politicasAbiertas['9'] ? 'displayBlock' : 'hide'}>
+          <p>
               Respetando lo establecido en los artículos 8 del RGPD y 7 de la Ley
               Orgánica 3/2018, de 5 de diciembre, de Protección de Datos
               Personales y garantía de los derechos digitales, solo los mayores de
@@ -276,9 +359,19 @@ function PoliticayPrivacidad() {
               confidencialidad sea respetada por sus empleados, asociados, y toda
               persona a la cual le haga accesible la información.
             </p>
+          </span>
+        </div>
 
-            <h4>Derechos derivados del tratamiento de los datos personales</h4>
-            <p>
+        <div className="titlePrivacidad">
+          <div className={`buttonPlitica ${politicasAbiertas['10'] ? 'rotate' : ''}`}
+            onClick={() => handleButtonClick('10')} >
+            <div className="imgPolitica">
+              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`} />
+            </div>
+            <h4>X. DERECHOS DERIVADOS DEL TRATAMIENTO DE LOS DATOS PERSONALES</h4>
+          </div>
+          <span className={politicasAbiertas['10'] ? 'displayBlock' : 'hide'}>
+          <p>
               El Usuario tiene sobre Coaching y experiencias de bienestar y podrá,
               por tanto, ejercer frente al Responsable del tratamiento los
               siguientes derechos reconocidos en el RGPD y la Ley Orgánica 3/2018,
@@ -384,9 +477,19 @@ function PoliticayPrivacidad() {
             </p>
             <p>Dirección postal: Paseo San Gervasio, 59, 08022 Barcelona</p>
             <p>Correo electrónico: hola@almacadaques.com</p>
+          </span>
+        </div>
 
-            <h4>Enlaces a sitios web de terceros</h4>
-            <p>
+        <div className="titlePrivacidad">
+          <div className={`buttonPlitica ${politicasAbiertas['11'] ? 'rotate' : ''}`}
+            onClick={() => handleButtonClick('11')} >
+            <div className="imgPolitica">
+              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`} />
+            </div>
+            <h4>XI. ENLACES A SITIOS WEB DE TERCEROS</h4>
+          </div>
+          <span className={politicasAbiertas['11'] ? 'displayBlock' : 'hide'}>
+          <p>
               El Sitio Web puede incluir hipervínculos o enlaces que permiten
               acceder a páginas web de terceros distintos de Coaching y
               experiencias de bienestar, y que por tanto no son operados por
@@ -411,16 +514,16 @@ function PoliticayPrivacidad() {
         </div>
 
         <div className="titlePrivacidad">
-          <div className={`buttonPlitica ${politicasAbiertas['2'] ? 'rotate' : ''}`}
-            onClick={() => handleButtonClick('2')}>
+          <div className={`buttonPlitica ${politicasAbiertas['12'] ? 'rotate' : ''}`}
+            onClick={() => handleButtonClick('12')}>
             <div className="imgPolitica">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['2'] ? 'rotated' : ''}`}/>
+              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['2'] ? 'rotated' : ''}`} />
             </div>
 
-            <h4>II. ACEPTACIÓN Y CAMBIOS EN ESTA POLÍTICA DE PRIVACIDAD</h4>
+            <h4>XII. ACEPTACIÓN Y CAMBIOS EN ESTA POLÍTICA DE PRIVACIDAD</h4>
           </div>
 
-          <span className={politicasAbiertas['2'] ? 'displayBlock' : 'hide'}>
+          <span className={politicasAbiertas['12'] ? 'displayBlock' : 'hide'}>
             <p>
               Es necesario que el Usuario haya leído y esté conforme con las
               condiciones sobre la protección de datos de carácter personal
