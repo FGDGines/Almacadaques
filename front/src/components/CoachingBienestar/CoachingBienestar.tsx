@@ -2,12 +2,13 @@ import './CoachingBienestar.css'
 import Navbar from '../Navbar/Navbar';
 import Franja from '../Franja/Franja';
 import Footer from '../Footer/Footer';
+import { textos } from '../../data/textos';
 import { useContext } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
 import FormDefault from '../FormDefault/FormDefault';
 
 const CoachingBienestar = () => {
-    const { setLayoutID } = useContext(GlobalContext)
+    const { setLayoutID, languageFlag } = useContext(GlobalContext)
     return <div className="CoachingBienestar">
         <Navbar />
         <Franja text="Coaching para el Bienestar " />
@@ -19,11 +20,13 @@ const CoachingBienestar = () => {
                 </div>
                 <div className="contseccionn1">
                     <span style={{ color: "#75151E" }}> ❝ </span>
-                    ¿Sientes que existe una brecha entre la vida que llevas y la que quieres llevar? ¿Quieres convertirte en tu mejor versión?
+                    {textos[languageFlag].textcoaching1}
                     <span style={{ color: "#75151E" }}> ❞ </span>
-                    <p className='parrafo'>Un proceso de coaching, respetuoso, amable y profesional, te ayudará a alcanzar tu objetivo. ¿Te acompaño?</p>
-                    <h3>¿Como te puedo ayudar?</h3>
-                    <p className='parrafo'>Definiremos un objetivo claro de cambio y con las sesiones personalizadas darás un empujón y romperás los bloqueos actuales que no te permiten avanzar.
+                    <p className='parrafo'>{textos[languageFlag].textcoachingParrafo1}</p>
+                    <h3>{textos[languageFlag].textcoachingtitle2}</h3>
+                    <p className='parrafo'>{textos[languageFlag].textcoaching2}
+                        
+                        
                         Te escucharé sin juzgar, te haré preguntas y te daré feedback, y con ello aclararás y ordenarás tus ideas e incrementarás tu autoconocimiento y liderazgo para descubrir nuevos enfoques y lograr aquello que quieres conseguir.
                         Como coach acompaño a la persona a través de un viaje de exploración interior. Empezamos desde donde empieza su conflicto o malestar hasta la resolución del mismo logrando así tu bienestar.</p>
                     <p className='parrafo'>

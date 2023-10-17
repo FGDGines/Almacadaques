@@ -64,7 +64,9 @@ export const textos: TextosType<
     "parrafosobremi18" |
     //Coaching
     "textcoaching1" |
+    "textcoachingParrafo1" |
     "textcoaching2" |
+    "textcoachingtitle2" |
     "textcoaching3" |
     "textcoaching4" |
     "textcoaching5" 
@@ -129,7 +131,9 @@ export const textos: TextosType<
         parrafosobremi17:"Postgrado en Licitaciones Internacionales (Universidad La Salle).",
         parrafosobremi18:"Formación continuada en el ámbito de empresa y crecimiento personal.",
         //Coaching
-        textcoaching1: "¿Sientes que existe una brecha entre la vida que llevas y la que quieres llevar?<br/> ¿Quieres convertirte en tu mejor versión?",
+        textcoaching1: "¿Sientes que existe una brecha entre la vida que llevas y la que quieres llevar?¿Quieres convertirte en tu mejor versión?",
+        textcoachingParrafo1:"Un proceso de coaching, respetuoso, amable y profesional, te ayudará a alcanzar tu objetivo. ¿Te acompaño?",
+        textcoachingtitle2:"¿Como te puedo ayudar?",
         textcoaching2: "Definiremos un objetivo claro de cambio y con las sesiones personalizadas darás un empujón y romperás los bloqueos actuales que no te permiten avanzar.",
         textcoaching3: "Te escucharé sin juzgar, te haré preguntas y te daré feedback, y con ello aclararás y ordenarás tus ideas e incrementarás tu autoconocimiento y liderazgo para descubrir nuevos enfoques y lograr aquello que quieres conseguir.",
         textcoaching4: "Como coach acompaño a la persona a través de un viaje de exploración interior. Empezamos desde donde empieza su conflicto o malestar hasta la resolución del mismo logrando así tu bienestar.",
@@ -195,6 +199,8 @@ export const textos: TextosType<
         parrafosobremi18:"Continuing training in the field of business and personal growth.",
         //Coaching
         textcoaching1: "Do you feel like there is a gap between the life you lead and the life you want to lead? Do you want to become the best of yourself?",
+        textcoachingParrafo1:"A respectful, kind and professional coaching process will help you achieve your goal. Shall I accompany you?",
+        textcoachingtitle2:"How can I help you?",
         textcoaching2: "We will define a clear objective for change and with personalized sessions I will help to push and break the current blocks that do not allow you to move forward.",
         textcoaching3: "I will listen to you without judging, ask you questions and give you feedback, so that you will clarify and organize your ideas as well as increase your self-knowledge and leadership capacities.",
         textcoaching4: "I help he person through a journey of inner exploration. We will start from where your conflict or discomfort begins and go through to achieve your goals.",
@@ -261,6 +267,8 @@ export const textos: TextosType<
         parrafosobremi18:"Formació continuada a l'àmbit d'empresa i creixement personal.",
         //Coaching
         textcoaching1: "Sents que hi ha una escletxa entre la vida que portes i la que vols portar? Vols convertir-te en la teva millor versió?",
+        textcoachingParrafo1:"Un procés de coaching, respectuós, amable i professional, us ajudarà a assolir el vostre objectiu. T'hi acompanyo?",
+        textcoachingtitle2:"Com et puc ajudar?",
         textcoaching2: "Definirem un objectiu clar de canvi i amb les sessions personalitzades donaràs una empenta i trencaràs els bloquejos actuals que no et permeten avançar.",
         textcoaching3: "T'escoltaré sense jutjar, et faré preguntes i et donaré feedback, i amb això aclariràs i ordenaràs les teves idees i incrementaràs el teu autoconeixement i lideratge per descobrir nous enfocaments i aconseguir allò que vols.",
         textcoaching4: "Com a coach acompanyo la persona mitjançant un viatge d'exploració interior. Comencem des d'on comença el seu conflicte o malestar fins a la seva resolució aconseguint així el teu benestar.",
