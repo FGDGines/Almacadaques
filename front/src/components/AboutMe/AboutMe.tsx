@@ -29,13 +29,13 @@ const AboutMe = () => {
                     
                 </div>
                 <div className="photo_1">
-                    <img src="/src/assets/background/unnamed (2).jpg" alt="Foto sobre mi" />                
+                    <img src="../../../src/assets/background/1.foto.jpg" alt="Foto sobre mi" />                
                 </div>
             </div>
 
             <div className="containerSobremi_2">
             <div className="photo_2">
-                    <img src="../../../src/assets/images/no-foto.png" alt="Foto sobre mi" />
+                    <img src="../../../src/assets/background/2.foto.jpg" alt="Foto sobre mi" />
                 </div>
                 <div className="infoSobremi_2">
                     <ul>
@@ -66,7 +66,7 @@ const AboutMe = () => {
                     </ul>
                 </div>
                 <div className="photo_1">
-                    <img src="../../../src/assets/images/no-foto.png" alt="Bibliografía" />
+                    <img src="../../../src/assets/background/3.foto.jpg" alt="Bibliografía" />
                 </div>
             </div>
         </div>

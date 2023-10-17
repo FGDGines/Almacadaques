@@ -34,26 +34,26 @@
 }
 
 .photo_1{
-    width: 22vw;
+    width: 25vw;
     display: flex;
     margin-left: 20px;
 }
 
 .photo_2{
-    width: 22vw;
+    width: 25vw;
     display: flex;
     justify-content: end;
     margin-right: 20px;
 }
 .infoSobremi_1{
-    width: 35vw;
+    width: 45vw;
     background-color: #cf1348;
     padding: 3vw ;
     color: white;
     font-size: 1.1vw;
 }
 .infoSobremi_2{
-    width: 35vw;
+    width: 45vw;
     background-color: #cf1348;
     padding: 3vw;
     color: white;
