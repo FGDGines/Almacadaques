@@ -4,7 +4,7 @@ import { GlobalContext } from "../../contexts/GlobalContext";
 
 
 const BlogInfo: FC<tpBlogInfo> = ({
-  index,
+  // index,
   day,
   month,
   year,

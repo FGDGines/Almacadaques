@@ -8,13 +8,14 @@ import { cardsData } from '../../data/cardsExp';
 import Agenda from '../Agenda/Agenda';
 import FormAgenda from '../FormAgenda/FormAgenda';
 import { tpCalendarDates } from '../../types/typesComponents';
-import { eventos } from '../../data/calendar';
+import { eventos, pastEvent } from '../../data/calendar';
 import DialogMUI1 from '../DialogMUI1/DialogMUI1';
 
 import { useState } from 'react';
+import RetiroAnterior from '../RetirosAnteriores/RetiroAnterior';
 
 const ExperienciasDeBienestar = () => {
-    const [evento , setEvento] = useState<tpCalendarDates>({id:0 , start: '' , end:'' , title:''})
+    const [evento, setEvento] = useState<tpCalendarDates>({ id: 0, start: '', end: '', title: '' })
 
     const [open, setOpen] = useState(false);
 
@@ -58,9 +59,18 @@ const ExperienciasDeBienestar = () => {
             <div className='ctAgenda'>
                 <Agenda hSelect={SeleccionarEvento} />
                 <FormAgenda actividades={eventos} />
+                <div className="retirosPasados">
+                    <div className='RTitle'>Retiros anteriores</div>
+                    <div className='ctPreviews'>
+                        {pastEvent.map((item )=>{
+                            const {id, end , start, title, colaborator_link, colaborator_name , description, src} = item 
+                            return  <RetiroAnterior key={id} end={end} start={start}  id={id} title={title} colaborator_link={colaborator_link}  colaborator_name={colaborator_name} description={description}  hselect={SeleccionarEvento} src={src}/>
+                        })}
+                    </div>
+                </div>
             </div>
 
-            <DialogMUI1 open={open} handlerClose={handleClose} handleClickOpen={handleClickOpen}  evento={evento}/>
+            <DialogMUI1 open={open} handlerClose={handleClose} handleClickOpen={handleClickOpen} evento={evento} />
 
         </div>
         <Footer />
