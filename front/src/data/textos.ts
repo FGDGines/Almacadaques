@@ -93,7 +93,7 @@ export const textos: TextosType<
         colabrador: "Colaborador",
         testimonios: "Testominio",
         blog: "blog",
-        blogPost: "Blog Post",
+        blogPost: "Tips de Bienestar",
         podcast: "Podcast",
         contactar: "Contactar",
         // Fin del Navbar
@@ -168,7 +168,7 @@ export const textos: TextosType<
         colabrador: "Collaborators",
         testimonios: "Testominio EN",
         blog: "Blog",
-        blogPost: "Blog Post",
+        blogPost: "Tips de Bienestar",
         podcast: "Podcast",
         contactar: "Contact",
         // Fin del Navbar
@@ -243,7 +243,7 @@ export const textos: TextosType<
         colabrador: "COLABORAD@RS",
         testimonios: "Testomini",
         blog: "Blog",
-        blogPost: "Blog Post",
+        blogPost: "Tips de Bienestar",
         podcast: "Podcast",
         contactar: "Contacte",
         // Fin del Navbar

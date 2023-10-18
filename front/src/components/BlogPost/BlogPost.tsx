@@ -8,7 +8,7 @@ const BlogPost = () => {
   return (
     <div className="BlogPost">
       <Navbar />
-      <Franja text="Blog" />
+      <Franja text="Tips de Bienestar" />
       <BlogInfo
         index={0}
         day={17}
