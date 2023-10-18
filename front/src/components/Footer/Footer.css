@@ -178,6 +178,10 @@ input:valid ~ label {
 .whats {
   width: 27vw;
   display: flex;
+  position: fixed;
+  z-index: 999999999999999999999999;
+  bottom: 1.5vw;
+  right: 5vw;
   justify-content: flex-end;
   align-items: center;
 }

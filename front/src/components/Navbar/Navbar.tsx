@@ -81,7 +81,7 @@ const Navbar = () => {
           
 
         </div>
-        <div className="ctLeft" onMouseDown={(e) => { e.stopPropagation(); setShowNavButton(!showNavButton); console.log("Botón clickeado"); }}>
+        <div className="ctLeft" onMouseDown={(e) => { e.stopPropagation(); setShowNavButton(!showNavButton);  }}>
           <label className="buttons__burger" htmlFor="burger" >
             <input type="checkbox" id="burger" />
               <span></span>
