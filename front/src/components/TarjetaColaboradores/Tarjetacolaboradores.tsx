@@ -22,7 +22,7 @@ function Tarjetacolaboradores({ colaboradores }: TarjetaColaboradoresProps) {
             <p>{colaborador.descripcion}</p>
           </div>
           <div className="contact">
-            <a href={colaborador.contacto}>Contact</a>
+            <a href={colaborador.contacto} target='_blank'>Contactame</a>
           </div>
         </div>
       ))}

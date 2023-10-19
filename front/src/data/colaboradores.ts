@@ -8,31 +8,31 @@ export interface Colaborador {
 export const ListaColaboradores: Colaborador[] = [
 {
     nombre: 'Mercedes Cazas',
-    cargo: 'System Engineer',
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, eligendi!',
+    cargo: 'Instructora de Movimiento Creativo',
+    descripcion: 'Creadora de Happy Dance, una propuesta de danza lúdica creada para disfrutar y ganar consciencia física y energética',
     imagen: '../../src/assets/imagen_colaboradores/colaborador1.jpeg',
-    contacto: '#',
+    contacto: 'https://www.instagram.com/happy_dance_paz/',
 },
 {
     nombre: 'Paz Jiménez',
-    cargo: 'System Engineer',
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, eligendi!',
+    cargo: 'Instructora de Movimiento Creativo',
+    descripcion: 'Creadora de Happy Dance, una propuesta de danza lúdica creada para disfrutar y ganar consciencia física y energética',
     imagen: '../../src/assets/imagen_colaboradores/colaboradores2.jpeg',
-    contacto: '#',
+    contacto: 'https://www.instagram.com/happy_dance_paz/',
 },
 {
     nombre: 'Monti Serra',
-    cargo: 'System Engineer',
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, eligendi!',
+    cargo: 'Instructora de Movimiento Creativo',
+    descripcion: 'Creadora de Happy Dance, una propuesta de danza lúdica creada para disfrutar y ganar consciencia física y energética',
     imagen: '../../src/assets/imagen_colaboradores/colaborador3.jpeg',
-    contacto: '#',
+    contacto: 'https://www.instagram.com/happy_dance_paz/',
 },
 {
     nombre: 'Maribel Salvador',
-    cargo: 'System Engineer',
-    descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, eligendi!',
+    cargo: 'Instructora de Movimiento Creativo',
+    descripcion: 'Creadora de Happy Dance, una propuesta de danza lúdica creada para disfrutar y ganar consciencia física y energética',
     imagen: '../../src/assets/imagen_colaboradores/colaboradores4.jpeg',
-    contacto: '#',
+    contacto: 'https://www.instagram.com/happy_dance_paz/',
 }
   
 ]
