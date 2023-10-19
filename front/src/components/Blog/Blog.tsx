@@ -1,6 +1,5 @@
 import Franja from "../Franja/Franja";
 import { tpBlogInfo } from "../../types/typesComponents";
-import Searchbar from "../Searchbar/Searchbar";
 import BlogPreview from "../BlogPreview/BlogPreview";
 import Navbar from "../Navbar/Navbar";
 import "./Blog.css";
@@ -59,7 +58,7 @@ const Blog = () => {
   return (
     <div className="Blog">
       <Navbar />
-      <Franja text="Blog" />
+      <Franja text="Tips de Bienestar" />
       <div className="blog">
         <div className="blog-content">
           <img src={blog.image} alt={blog.title} />
@@ -76,7 +75,6 @@ const Blog = () => {
           </div>
         </div>
         <div className="sideBar">
-          <Searchbar />
           <div className="popular-posts">
             <h3>Popular Posts</h3>
             <BlogPreview
