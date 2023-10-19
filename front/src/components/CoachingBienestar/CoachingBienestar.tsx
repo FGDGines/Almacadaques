@@ -8,7 +8,7 @@ import { GlobalContext } from '../../contexts/GlobalContext';
 import FormDefault from '../FormDefault/FormDefault';
 
 const CoachingBienestar = () => {
-    const { setLayoutID, languageFlag } = useContext(GlobalContext)
+    const {  languageFlag } = useContext(GlobalContext);
     return <div className="CoachingBienestar">
         <Navbar />
         <Franja text="Coaching para el Bienestar " />

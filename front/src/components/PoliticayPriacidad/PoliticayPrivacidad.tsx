@@ -47,7 +47,7 @@ function PoliticayPrivacidad() {
           <div className={`buttonPlitica ${politicasAbiertas['2'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('2')} >
             <div className="imgPolitica">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`} />
+              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['2'] ? 'rotated' : ''}`} />
             </div>
             <h4>II. IDENTIDAD DEL RESPONSABLE DEL TRATAMIENTO DE LOS DATOS PERSONALES</h4>
           </div>
@@ -68,7 +68,7 @@ function PoliticayPrivacidad() {
           <div className={`buttonPlitica ${politicasAbiertas['3'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('3')} >
             <div className="imgPolitica">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`} />
+              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['3'] ? 'rotated' : ''}`} />
             </div>
             <h4>III. LEYES QUE INCORPORA ESTA POLÍTICA DE PRIVACIDAD</h4>
           </div>
@@ -108,7 +108,7 @@ function PoliticayPrivacidad() {
           <div className={`buttonPlitica ${politicasAbiertas['4'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('4')} >
             <div className="imgPolitica">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`} />
+              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['4'] ? 'rotated' : ''}`} />
             </div>
             <h4>IV. REGISTRO DE DATOS DE CARÁCTER PERSONAL</h4>
           </div>
@@ -137,7 +137,7 @@ function PoliticayPrivacidad() {
           <div className={`buttonPlitica ${politicasAbiertas['5'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('5')} >
             <div className="imgPolitica">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`} />
+              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['5'] ? 'rotated' : ''}`} />
             </div>
             <h4>V. PRINCIPIOS APLICABLES AL TRATAMIENTO DE LOS DATOS PERSONALES</h4>
           </div>
@@ -193,7 +193,7 @@ function PoliticayPrivacidad() {
           <div className={`buttonPlitica ${politicasAbiertas['6'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('6')} >
             <div className="imgPolitica">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`} />
+              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['6'] ? 'rotated' : ''}`} />
             </div>
             <h4>VI. CATEGORÍAS DE DATOS PERSONALES</h4>
           </div>
@@ -233,7 +233,7 @@ function PoliticayPrivacidad() {
           <div className={`buttonPlitica ${politicasAbiertas['7'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('7')} >
             <div className="imgPolitica">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`} />
+              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['7'] ? 'rotated' : ''}`} />
             </div>
             <h4>VII. FINES DEL TRATAMIENTO A QUE SE DESTINAN LOS DATOS PERSONALES</h4>
           </div>
@@ -269,7 +269,7 @@ function PoliticayPrivacidad() {
           <div className={`buttonPlitica ${politicasAbiertas['8'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('8')} >
             <div className="imgPolitica">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`} />
+              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['8'] ? 'rotated' : ''}`} />
             </div>
             <h4>VIII. PERÍODOS DE RETENCÓN DE LOS DATOS PERSONALES</h4>
           </div>
@@ -304,7 +304,7 @@ function PoliticayPrivacidad() {
           <div className={`buttonPlitica ${politicasAbiertas['9'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('9')} >
             <div className="imgPolitica">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`} />
+              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['9'] ? 'rotated' : ''}`} />
             </div>
             <h4>IX. DATOS PERSONALES DE MENORES DE EDAD</h4>
           </div>
@@ -366,7 +366,7 @@ function PoliticayPrivacidad() {
           <div className={`buttonPlitica ${politicasAbiertas['10'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('10')} >
             <div className="imgPolitica">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`} />
+              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['10'] ? 'rotated' : ''}`} />
             </div>
             <h4>X. DERECHOS DERIVADOS DEL TRATAMIENTO DE LOS DATOS PERSONALES</h4>
           </div>
@@ -484,7 +484,7 @@ function PoliticayPrivacidad() {
           <div className={`buttonPlitica ${politicasAbiertas['11'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('11')} >
             <div className="imgPolitica">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`} />
+              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['11'] ? 'rotated' : ''}`} />
             </div>
             <h4>XI. ENLACES A SITIOS WEB DE TERCEROS</h4>
           </div>
@@ -517,7 +517,7 @@ function PoliticayPrivacidad() {
           <div className={`buttonPlitica ${politicasAbiertas['12'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('12')}>
             <div className="imgPolitica">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['2'] ? 'rotated' : ''}`} />
+              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['12'] ? 'rotated' : ''}`} />
             </div>
 
             <h4>XII. ACEPTACIÓN Y CAMBIOS EN ESTA POLÍTICA DE PRIVACIDAD</h4>

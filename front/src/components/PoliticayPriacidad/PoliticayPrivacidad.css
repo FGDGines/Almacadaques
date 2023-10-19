@@ -16,6 +16,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+
 }
 .imgPolitica{
     width: 2vw;
@@ -28,6 +29,7 @@
 }
 .imagen.rotated {
     transform: rotate(90deg);
+    transition: transform .3s ease;
   }
 
   
@@ -40,5 +42,31 @@
 }
 .displayBlock {
     display: block;
-    padding: 0 2.5vw;
+    padding: 0 2.5vw; 
   }
+
+  @keyframes expandHeight {
+    0% {
+      max-height: 0;
+      opacity: 0;
+    }
+    100% {
+      max-height: 120vh; /* O la altura que desees */
+      opacity: 1;
+    }
+  }
+  
+  .titlePrivacidad .hide {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    animation: expandHeight 3s ease;
+  }
+  
+  .titlePrivacidad .displayBlock {
+    max-height: 120vh; /* O la altura que desees */
+    opacity: 1;
+    overflow: hidden;
+    animation: expandHeight 3s ease;
+  }
+  

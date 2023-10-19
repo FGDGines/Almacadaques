@@ -62,9 +62,11 @@
 
 .containerSobremi_1 .photo_1 img{
     width: 100%;
+    border-radius: .4vw;
 }
 .containerSobremi_2 .photo_2 img{
     width: 100%;
+    border-radius: .4vw;
 }
 
 @media (max-width: 780px){
