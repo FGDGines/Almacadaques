@@ -34,13 +34,13 @@
 }
 
 .photo_1{
-    width: 25vw;
+    width: 28vw;
     display: flex;
     margin-left: 20px;
 }
 
 .photo_2{
-    width: 25vw;
+    width: 28vw;
     display: flex;
     justify-content: end;
     margin-right: 20px;
