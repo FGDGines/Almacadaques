@@ -3,7 +3,18 @@
 }
   
 .BlogInfo > img {
+    margin-top: 3vw;
     width: 50%;
 }
-
+.date > * {
+    font-size: 3vw;
+}
+.BlogInfo > h1 {
+    font-size: 3vw;
+    margin: 1vw 0vw;
+}
+.BlogInfo > * {
+    margin: 0;
+    font-size: 1.5vw;
+  }
   
