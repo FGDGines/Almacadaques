@@ -36,9 +36,9 @@ type tpTestimony = {
 
 type tpBlogInfo = {
     index: number;
-    day: number;
-    month: number;
-    year: number;
+    day?: number;
+    month?: number;
+    year?: number;
     image: string;
     title: string;
     tags?: string[];

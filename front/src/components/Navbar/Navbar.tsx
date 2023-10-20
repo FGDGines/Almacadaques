@@ -58,6 +58,10 @@ const Navbar = () => {
                 target: 1,
                 text: `${textos[languageFlag].podcast}`,
               },
+              {
+                target: 14,
+                text: `${textos[languageFlag].blogRetiro}`,
+              }
             ]}
           />
           <DtmSelect items={idiomas} active={languajeActive} />
@@ -78,8 +82,6 @@ const Navbar = () => {
       <div className="narbarMovil">
         <div className="ctRight">
           <NavButton className="logo" target={1} text="" />
-          
-
         </div>
         <div className="ctLeft" onMouseDown={(e) => { e.stopPropagation(); setShowNavButton(!showNavButton);  }}>
           <label className="buttons__burger" htmlFor="burger" >

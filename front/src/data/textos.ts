@@ -18,6 +18,7 @@ export const textos: TextosType<
     "testimonios" |
     "blog" |
     "blogPost" |
+    "blogRetiro" |
     "podcast" |
     "contactar" |
     //footer
@@ -94,6 +95,7 @@ export const textos: TextosType<
         testimonios: "Testominio",
         blog: "blog",
         blogPost: "Tips de Bienestar",
+        blogRetiro: "Blog Retiros",
         podcast: "Podcast",
         contactar: "Contactar",
         // Fin del Navbar
@@ -169,6 +171,7 @@ export const textos: TextosType<
         testimonios: "Testominio EN",
         blog: "Blog",
         blogPost: "Tips de Bienestar",
+        blogRetiro: "Blog Retiros",
         podcast: "Podcast",
         contactar: "Contact",
         // Fin del Navbar
@@ -244,6 +247,7 @@ export const textos: TextosType<
         testimonios: "Testomini",
         blog: "Blog",
         blogPost: "Tips de Bienestar",
+        blogRetiro: "Blog Retiros",
         podcast: "Podcast",
         contactar: "Contacte",
         // Fin del Navbar

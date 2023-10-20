@@ -4,13 +4,13 @@ import { GlobalContext } from "../../contexts/GlobalContext";
 
 
 const BlogInfo: FC<tpBlogInfo> = ({
-  // index,
-  day,
-  month,
-  year,
+
   image: thumbnail,
   title,
   abstract,
+  day,
+  month,
+  year,
 }) => {
   const { setLayoutID } = useContext(GlobalContext);
   const gotoPost = () => {
@@ -35,11 +35,13 @@ const BlogInfo: FC<tpBlogInfo> = ({
 
   return (
     <div className="BlogInfo">
-      <div className="date">
-        <div className="year">{year}</div>
-        <div className="month">{monthStr[month]}</div>
-        <div className="day">{day}</div>
-      </div>
+      {day !== undefined && month !== undefined && year !== undefined && (
+        <div className="date">
+          <div className="year">{year}</div>
+          <div className="month">{monthStr[month]}</div>
+          <div className="day">{day}</div>
+        </div>
+      )}
 
       <img src={thumbnail} alt={title} />
       <h1 onClick={gotoPost}>{title}</h1>
@@ -49,3 +51,4 @@ const BlogInfo: FC<tpBlogInfo> = ({
 };
 
 export default BlogInfo;
+
