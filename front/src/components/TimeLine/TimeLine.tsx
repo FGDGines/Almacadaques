@@ -13,12 +13,12 @@ const AlternateTimeline: FC<tpAlternateTimeLine> = ({data}) => {
     <Timeline position="alternate">
       {data.map((item )=>{
         const {id , text} = item 
-        return  <TimelineItem key={id}>
-                  <TimelineSeparator>
+        return  <TimelineItem key={id} >
+                  <TimelineSeparator >
                     <TimelineDot />
                     <TimelineConnector />
-                  </TimelineSeparator>
-                  <TimelineContent>{text}</TimelineContent>
+                  </TimelineSeparator >
+                  <TimelineContent >{text}</TimelineContent>
               </TimelineItem>
       })}
     </Timeline>

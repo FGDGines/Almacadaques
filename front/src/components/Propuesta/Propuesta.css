@@ -17,6 +17,7 @@
     flex-direction: column;
 }
 
+
 @media (max-width: 450px){
     .Propuesta .title{
         font-size: 6vw;
