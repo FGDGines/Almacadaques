@@ -15,14 +15,14 @@ const ComoYDonde = () => {
         <div className="ct2" style={{ color: "#75151E" }}  >
             {textos[languageFlag].textDesthome4}
         </div>
-        <div  >
+        <div  className='ctList'>
             {textos[languageFlag].textDesthome5}
             <span className='nlink' onClick={() => setLayoutID(4)}>
             {textos[languageFlag].textDesthome50}
             </span>
             {textos[languageFlag].textDesthome51}
         </div>
-        <div >
+        <div className='ctList'>
             {textos[languageFlag].textDesthome6}
             <span className='nlink' onClick={() => setLayoutID(6)} >
             {textos[languageFlag].textDesthome60}

@@ -21,7 +21,9 @@
     /* border: 1px solid black; */
     margin-bottom: 30px;
 }
-
+.ctList{
+    font-size: 1.4vw;
+}
 
 .ComoYDonde .nlink{
     cursor: pointer;

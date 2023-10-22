@@ -18,6 +18,11 @@
     font-size: 1.3vw;
     text-align: justify;
 }
+.containerInnformacion2  .info{
+    color: #cf1348;
+    font-size: 1.3vw;
+    font-weight: 800;
+}
 .imgBienertar{
     width: 100vw;
     margin-right: 4vw;

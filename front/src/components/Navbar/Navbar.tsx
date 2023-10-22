@@ -11,8 +11,6 @@ const Navbar = () => {
   const { languajeActive, languageFlag, upOrDown } = useContext(GlobalContext)
   const [showNavButton, setShowNavButton] = useState(false);
 
-  console.log("upOrDown:", upOrDown);
-
   return (
     <>
       <div className={`Navbar ${upOrDown ? 'up' : 'down'}`}>

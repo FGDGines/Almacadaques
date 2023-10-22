@@ -16,7 +16,7 @@ const StatisticComponent = () => {
               <Paper className="statBox custom-stat-box">
                 <MdOutlineMood className="statIcon" />
                 <Typography variant="subtitle1" className="statText">
-                  Felicidad
+                  Happy Dance
                 </Typography>
               </Paper>
             </Tilt>
@@ -26,7 +26,7 @@ const StatisticComponent = () => {
               <Paper className="statBox custom-stat-box">
                 <BsFillHeartPulseFill className="statIcon" />
                 <Typography variant="subtitle1" className="statText">
-                  Motivación
+                  Yoga & Meditation
                 </Typography>
               </Paper>
             </Tilt>
@@ -36,7 +36,7 @@ const StatisticComponent = () => {
               <Paper className="statBox custom-stat-box">
                 <MdOutlineEmojiPeople className="statIcon" />
                 <Typography variant="subtitle1" className="statText">
-                  Yoga
+                  Energy & Breathing
                 </Typography>
               </Paper>
             </Tilt>
@@ -46,7 +46,7 @@ const StatisticComponent = () => {
               <Paper className="statBox custom-stat-box">
                 <GiMeditation className="statIcon" />
                 <Typography variant="subtitle1" className="statText">
-                  Meditación
+                  Art & Emotions
                 </Typography>
               </Paper>
             </Tilt>
