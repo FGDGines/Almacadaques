@@ -15,6 +15,7 @@ const FormDefault: FC<tpFormDefault> = ({hSubmit}) => {
         if(event.target instanceof HTMLFormElement){
             const bag  = new FormData(event.target)
             hSubmit(bag)
+            event.target.reset()
         }
     }
 

@@ -37,7 +37,7 @@ const CoachingInternacional = () => {
             <div className='ct3 containerInnformacion2'>
             <p className='parrafo info'>Pide más información sin compromiso</p>
                 <div className='ctForm'>
-                    <FormDefault />
+                    <FormDefault  />
                     <img className='imgEquip'  src=".../../../src/assets/background/contactanos.jpg" alt="Equipo de trabajo" />
                 </div>
             </div>
