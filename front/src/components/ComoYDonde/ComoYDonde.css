@@ -9,6 +9,7 @@
 
 
 .ComoYDonde .ct1{
+    
     font-size: 36px;
     text-align: center;
     line-height: 120%;
@@ -17,11 +18,15 @@
 }
 
 .ComoYDonde .ct2{
+    
     font-size: 25px;
     /* border: 1px solid black; */
     margin-bottom: 30px;
 }
-
+.ctList{
+    
+    font-size: 1.4vw;
+}
 
 .ComoYDonde .nlink{
     cursor: pointer;

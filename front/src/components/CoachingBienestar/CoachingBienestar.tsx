@@ -8,7 +8,7 @@ import { GlobalContext } from '../../contexts/GlobalContext';
 import FormDefault from '../FormDefault/FormDefault';
 
 const CoachingBienestar = () => {
-    const { setLayoutID, languageFlag } = useContext(GlobalContext)
+    const {  languageFlag } = useContext(GlobalContext);
     return <div className="CoachingBienestar">
         <Navbar />
         <Franja text="Coaching para el Bienestar " />
@@ -16,7 +16,7 @@ const CoachingBienestar = () => {
 
             <div className="containerInnformacion1">
                 <div className="containerimg1">
-                    <img src="../../../src/assets/background/unnamed (2).jpg" alt="Elisabet" className='imgBienertar' />
+                    <img src="../../../src/assets/background/coachingBienestar.jpg" alt="Elisabet" className='imgBienertar' />
                 </div>
                 <div className="contseccionn1">
                     <span style={{ color: "#75151E" }}> ❝ </span>
@@ -43,7 +43,7 @@ const CoachingBienestar = () => {
                     </p>
                 <div className='ctForm'>
                     <FormDefault />
-                    <img className='imgEquip'  src="../../../src/assets/images/no-foto.png" alt="Equipo de trabajo" />
+                    <img className='imgEquip'  src="../../../src/assets/background/contactanos.jpg" alt="Equipo de trabajo" />
                 </div>
             </div>
         </div>

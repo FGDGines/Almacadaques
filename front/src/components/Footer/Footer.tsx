@@ -4,27 +4,28 @@ import { useContext } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
 
 const Footer = () => {
-    const {languageFlag} = useContext(GlobalContext)
-    const {setLayoutID} = useContext(GlobalContext);
+    const { languageFlag } = useContext(GlobalContext)
+    const { setLayoutID } = useContext(GlobalContext);
     return (
         <div className="Footer">
             <div className="container1">
-                <div className="containerRight">
+                <div className="contTablet">
+                    <div className="containerRight">
                     <h3 className='titleFooter'>{textos[languageFlag].textfooteraviso}</h3>
                     <div className="span1"></div>
                     <p className='subtitlefooter'>
-                        <a href='#' className='enlaceFooter' onClick={()=>setLayoutID(11)}>{textos[languageFlag].textfooterpolitica}</a> </p>
+                        <a href='#' className='enlaceFooter' onClick={() => setLayoutID(11)}>{textos[languageFlag].textfooterpolitica}</a> </p>
                     <div className="span2"></div>
-                    <p className='subtitlefooter'><a href='#' className='enlaceFooter' onClick={()=>setLayoutID(12)}>  {textos[languageFlag].textfootercoockies}</a>  </p>
+                    <p className='subtitlefooter'><a href='#' className='enlaceFooter' onClick={() => setLayoutID(12)}>  {textos[languageFlag].textfootercoockies}</a>  </p>
                     <div className="span3"></div>
                     <p className='subtitlefooter'>
-                        <a href='#' className='enlaceFooter' onClick={()=>setLayoutID(13)}>{textos[languageFlag].textfooteraviso2}</a></p>
+                        <a href='#' className='enlaceFooter' onClick={() => setLayoutID(13)}>{textos[languageFlag].textfooteraviso2}</a></p>
                 </div>
                 <div className="containerCenter">
                     <h3 className='titleFooter'>{textos[languageFlag].textfooterInfo}</h3>
                     <div className="span4"></div>
                     <p className='subtitlefooter'>
-                        <img src="../../../src/assets/images/mensaje-de-telefono.png" alt="Telefono" className='whatsapp '/>
+                        <img src="../../../src/assets/images/mensaje-de-telefono.png" alt="Telefono" className='whatsapp ' />
                         <a href='https://wa.me/+34660305421?text=Hola Almacadaques' target='_blank' className='enlaceFooter'>
                             +34 660 30 54 21</a> </p>
                     <div className="span5"></div>
@@ -34,6 +35,9 @@ const Footer = () => {
                     <p className='subtitlefooter'>
                         <a href='mailto:hola@almacadaques.com' target='_blank' className='enlaceFooter'> Almacadaques.com </a> </p>
                 </div>
+
+                </div>
+                
                 <div className="containerLeft">
                     <h3 className='titleFooter'>Newlester </h3>
                     <div className="span7"></div>
@@ -57,7 +61,7 @@ const Footer = () => {
                             <a href="https://www.instagram.com/almacadaques" target='_blank'><img className="img " src="../../../src/assets/images/instagram.png" alt="Instagram" /></a>
                         </div>
                         <div className="whats">
-                            <a href="https://wa.me/+34660305421?text=Hola Almacadaques" target='_blank'><img className="img1 " src="../../../src/assets/images/whatsapp.png" alt="whatsapp"  /></a>
+                            <a href="https://wa.me/+34660305421?text=Hola Almacadaques" target='_blank'><img className="img1 " src="../../../src/assets/images/whatsapp.png" alt="whatsapp" /></a>
                         </div>
                     </div>
                 </div>

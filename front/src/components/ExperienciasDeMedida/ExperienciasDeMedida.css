@@ -10,7 +10,7 @@
 .ct{
     width: 90vw;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
 }
 .ctPhrase{
@@ -22,7 +22,7 @@
 
 
 .ctphoto{
-    width: 80vw;
+    width: 40vw;
     display: flex;
     align-items: center;
     margin-bottom: 4vw;
@@ -31,6 +31,7 @@
     margin-right: 6vw;
     width: 100%;
     height: 100%;
+    border-radius: .4vw;
 }
 
 .ctFor{
@@ -38,13 +39,6 @@
 }
 
 
-@media (max-width: 1024px){
-     
-    .imgEquip{
-        margin-right: 2vw;
-        width: 50%;
-    }
-}
 
 @media (max-width: 780px){
     .ctPhrase{

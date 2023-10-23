@@ -13,6 +13,7 @@ import CoachingInternacional from "../CoachingInternacional/CoachingInternaciona
 import { PoliticayPrivacidad } from "../PoliticayPriacidad/PoliticayPrivacidad";
 import { PoliticaCookies } from "../PoliticadeCookies/PoliticaCookies";
 import { AvisoLegal } from "../AvisoLegal/AvisoLegal";
+import { BlogRetiro } from "../BlogRetiro/BlogRetiro";
 
 
 const HandlerLayout = () => {
@@ -61,6 +62,9 @@ const HandlerLayout = () => {
         break;
     case 13:
           screen = <AvisoLegal />;
+          break;
+    case 14:
+          screen = <BlogRetiro />;
           break;
   
   

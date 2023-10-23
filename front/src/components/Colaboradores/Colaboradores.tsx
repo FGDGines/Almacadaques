@@ -3,6 +3,7 @@ import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import Franja from '../Franja/Franja';
 import { Tarjetacolaboradores } from '../TarjetaColaboradores/Tarjetacolaboradores';
+import { ListaColaboradores } from '../../data/colaboradores';
 
 function Colaboradores() {
     return (
@@ -10,9 +11,7 @@ function Colaboradores() {
             <Navbar />
             <Franja text='Colaborad@res' />
             <div className="colaboradores">
-                {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((index) => (
-                    <Tarjetacolaboradores key={index} />
-                ))}
+                    <Tarjetacolaboradores colaboradores={ListaColaboradores} />
             </div>
             <Footer />
         </>

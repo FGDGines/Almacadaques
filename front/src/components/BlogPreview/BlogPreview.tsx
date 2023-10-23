@@ -3,7 +3,7 @@ import { tpBlogInfo } from "../../types/typesComponents";
 
 const BlogPreview: FC<tpBlogInfo> = ({ day, month, year, image, title }) => {
   return (
-    <div className="BlogPreview">
+    <div className="BlogPreview"  >
       <img src={image} alt="" />
       <h5>{title}</h5>
       <h5>

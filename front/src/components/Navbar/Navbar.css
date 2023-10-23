@@ -1,87 +1,236 @@
 :root {
-    /* --colorNavbar: rgb(0, 0, 0) ; */
-    --colorNavbar: #000000;
+  /* --colorNavbar: rgb(0, 0, 0) ; */
+  --colorNavbar: #000000;
 }
 
 .Navbar a {
-    color: var(--colorNavbar);
-    text-decoration: none;
+  color: var(--colorNavbar);
+  text-decoration: none;
 }
 
 .Navbar {
-    background-color: white;
-    /* border: 1px solid black; */
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    font-family: "Roboto Flex", -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, "Helvetica Neue", Arial, sans-serif;
-    font-size: 1rem;
-    font-weight: 300;
-    padding-inline: 9.5rem 1rem;
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    z-index: 10;
-    transition: all 0.8s ease-in-out;
-    box-shadow: black 0px 1px 10px;
-    height: 98px;
+  background-color: white;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-family: "Roboto Flex", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  padding-inline: 9.5rem 1rem;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  z-index: 10;
+  transition: all 0.8s ease-in-out;
+  box-shadow: black 0px 1px 10px;
+  height: 98px;
 }
 
 .Navbar.up {
-    top: 0px;
+  top: 0px;
 }
 
 .Navbar.down {
-    top: -150px;
+  top: -150px;
 }
 
-
-
-.Navbar>.navigation {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+.Navbar > .navigation {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
-.Navbar>.navigation>* {
-    margin-inline: 1rem;
+.Navbar > .navigation > * {
+  margin-inline: 1rem;
 }
 
-.Navbar>.navigation>*::after {
-    content: "";
-    display: block;
-    width: 0px;
-    height: 0.2rem;
-    background-color: var(--colorNavbar);
-    border-radius: 0.3rem;
-    transition: width 600ms 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
+.Navbar > .navigation > *::after {
+  content: "";
+  display: block;
+  width: 0px;
+  height: 0.2rem;
+  background-color: var(--colorNavbar);
+  border-radius: 0.3rem;
+  transition: width 600ms 100ms cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.Navbar>.navigation .NavButton {
-    color: var(--colorNavbar);
+.Navbar > .navigation .NavButton {
+  color: var(--colorNavbar);
 }
 
-.Navbar>.navigation>.NavButton:hover::after,
-.Navbar>.navigation>.NavButton:focus-within::after {
-    width: 1.2rem;
+.Navbar > .navigation > .NavButton:hover::after,
+.Navbar > .navigation > .NavButton:focus-within::after {
+  width: 1.2rem;
 }
 
-.Navbar>p.contact {
-    margin-inline: 1rem;
+.Navbar > p.contact {
+  margin-inline: 1rem;
 }
 
-.Navbar>.contact::after {
+.Navbar > .contact::after {
+  display: none;
+}
+
+.Navbar > .contact > p {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.Navbar > .contact > .comment-icon {
+  font-size: 1rem;
+  padding-left: 0.4rem;
+}
+.narbarMovil {
+  display: none;
+}
+
+@media (max-width: 780px) {
+  .Navbar {
     display: none;
+  }
+  .navButton.up {
+    top: 50px;
+    display: block;
+  }
+  
+  .navButton.down {
+    top: -240px;
+    display: none;
+  }
+  
+  .narbarMovil {
+    
+    display: flex;
+    background-color: white;
+    position: absolute;
+    width: 92vw;
+    z-index: 999999999999999999;
+    margin-top: -76px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4vw;
+  }
+
+  .buttons__burger {
+    --size: 5vw;
+    --clr: #000;
+    width: var(--size);
+    height: calc(.8 * var(--size));
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .buttons__burger #burger {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+  }
+
+  .buttons__burger span {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    width: 90%;
+    border-radius: 0.5rem;
+    border: 3px solid var(--clr);
+    background-color: var(--clr);
+    transition: 0.15s ease-in-out;
+  }
+
+  .buttons__burger span:nth-of-type(1) {
+    top: 0;
+    right: 0;
+    transform-origin: right center;
+  }
+
+  .buttons__burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .buttons__burger span:nth-of-type(3) {
+    top: 100%;
+    right: 0;
+    transform-origin: right center;
+    transform: translateY(-100%);
+  }
+
+  .buttons__burger #burger:checked ~ span:nth-of-type(1) {
+    transform: translateY(-30%) rotate(40deg);
+    width: 50%;
+    top: 50%;
+  }
+
+  .buttons__burger #burger:checked ~ span:nth-of-type(3) {
+    transform: translateY(-70%) rotate(-40deg);
+    width: 50%;
+    top: 50%;
+  }
+  .navButton{
+    display: none;
+    position: fixed;
+    width: 85vw;
+    height: 86vh;
+    right: 0;
+    background-color: white;
+    margin-top: 3.1vw;
+    padding-bottom: 5vw;
+    box-shadow: 0 6px 7px 10px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  
+  .navButton > .navigation > * {
+    margin-inline: 3rem;
+    margin-bottom: 1.5vw;
+    margin-top: 3vw;
+    font-size: 2.5vw;
+  }
+  .navButton a {
+    color: var(--colorNavbar);
+    text-decoration: none;
+  }
+  .rounded{
+    margin-left: 4vw;
+  }
+  
+  
+  
 }
 
-.Navbar>.contact>p {
-    margin: 0;
-    font-size: 1.1rem;
-}
+@media (max-width: 450px) {
 
-.Navbar>.contact>.comment-icon {
-    font-size: 1rem;
-    padding-left: 0.4rem;
+
+  .buttons__burger {
+    --size: 12vw;
+    width: var(--size);
+    height: calc(.8 * var(--size));
+
+  }
+
+  .buttons__burger span {
+    width: 85%;
+    height: 0vh;
+  }
+
+  
+  .navButton{
+    margin-top: 6vw;
+  }
+  
+  .navButton > .navigation > * {
+    margin-bottom: 2.5vw;
+
+    margin-top: 6vw;
+    font-size: 5vw;
+  }
+  
+  .rounded{
+    margin-left: 10vw;
+  }
+  
 }

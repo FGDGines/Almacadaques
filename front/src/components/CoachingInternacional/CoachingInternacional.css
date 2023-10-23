@@ -18,6 +18,36 @@
     font-size: 1.3vw;
     text-align: justify;
 }
+.containerImg1{
+    margin-top: 6vw;
+    width: 85vw;
+    display: flex;
+    justify-content: center;
+}
+.imgInternacional{
+    width: 100%;
+    height: 100%;
+}
+.testimonio{
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+}
+.titletestimonio{
+    margin-bottom: 2vw;
+    text-align: center;
+    font-size: 2.5vw;
+}
+.infotestimonios{
+    display: flex;
+}
+.containerInnformacion2  .info{
+    color: #cf1348;
+    font-size: 1.3vw;
+    font-weight: 800;
+}
 .imgBienertar{
     width: 100vw;
     margin-right: 4vw;
@@ -54,8 +84,14 @@
     .containerInnformacion2{
         font-size: 2.5vw;
     }
+    .titletestimonio{
+        font-size: 5vw;
+    }
     .textFormulario{
         font-size: 2.5vw;
+    }
+    .infotestimonios{
+        flex-direction: column;
     }
 
 }
@@ -80,5 +116,11 @@
     }
     .textFormulario{
         font-size: 5vw;
+    }
+    .infotestimonios{
+        flex-direction: column;
+    }
+    .titletestimonio{
+        font-size: 7vw;
     }
 }

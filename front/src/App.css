@@ -16,8 +16,8 @@ html, body{
     width: 100vw;
     height: 100vh;
     overflow-y: scroll;
-    background: url("./assets/background/istockphoto-518832390-612x612.jpeg")no-repeat center/cover;
-    padding-top: 98px;
+    background: url("../src//assets/background/fondoInicio.jpg")no-repeat center/cover;
+    padding-top: 76px;
     transition: all 0.8s;
 }
 

@@ -34,37 +34,39 @@
 }
 
 .photo_1{
-    width: 22vw;
+    width: 28vw;
     display: flex;
     margin-left: 20px;
 }
 
 .photo_2{
-    width: 22vw;
+    width: 28vw;
     display: flex;
     justify-content: end;
     margin-right: 20px;
 }
 .infoSobremi_1{
-    width: 35vw;
-    background-color: #cf1348;
+    width: 45vw;
+    background-color: white;
     padding: 3vw ;
-    color: white;
-    font-size: 1.1vw;
+    color: black;
+    font-size: 1.2vw;
 }
 .infoSobremi_2{
-    width: 35vw;
+    width: 45vw;
     background-color: #cf1348;
     padding: 3vw;
     color: white;
-    font-size: 1.1vw;
+    font-size: 1.2vw;
 }
 
 .containerSobremi_1 .photo_1 img{
     width: 100%;
+    border-radius: .4vw;
 }
 .containerSobremi_2 .photo_2 img{
     width: 100%;
+    border-radius: .4vw;
 }
 
 @media (max-width: 780px){
@@ -73,9 +75,9 @@
 
     .infoSobremi_1{
         width: 45vw;
-        background-color: #cf1348;
+        background-color: white;
         padding: 2vw;
-        color: white;
+        color: black;
         font-size: 1.6vw;
     }
     .infoSobremi_2{
@@ -133,9 +135,9 @@
 }
 .infoSobremi_1{
     width: 90vw;
-    background-color: #cf1348;
+    background-color: white;
     padding: 2vw;
-    color: white;
+    color: black;
     font-size: 3.3vw;
 }
 .infoSobremi_2{

@@ -36,15 +36,18 @@ type tpTestimony = {
 
 type tpBlogInfo = {
     index: number;
-    day: number;
-    month: number;
-    year: number;
+    day?: number;
+    month?: number;
+    year?: number;
     image: string;
     title: string;
     tags?: string[];
     abstract?: string;
     blogContent?: React.JSX.Element;
+    hselect?: ()=>void
 };
+
+
 
 type tpNavButton = {
     target: number;
@@ -93,8 +96,15 @@ type tpCalendarEvent = {
     start: string | Date
     end: string | Date
     description?: string
+    colaborator_name?:string
+    colaborator_link?:string
+    src?:string 
 }
 
+
+type tpRetiroAnterior =  {
+    hselect: (arg: tpCalendarDates )=>void
+} & tpCalendarEvent
 
 
 type tpCalendarDates = tpCalendarEvent //Alias para compativilidad
@@ -118,7 +128,7 @@ type tpDialogMUI1 = {
     open: boolean
     handleClickOpen:  () => void
     handlerClose: () => void
-    evento: tpCalendarDates
+    evento: tpCalendarDates | ReactNode
 }
 
 export type {
@@ -141,5 +151,6 @@ export type {
     tpCalendarDates,
     tpDtmSelect,
     tpItemSelect,
-    tpDialogMUI1
+    tpDialogMUI1,
+    tpRetiroAnterior
 };

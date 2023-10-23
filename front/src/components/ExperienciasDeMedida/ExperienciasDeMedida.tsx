@@ -19,11 +19,12 @@ function ExperienciasDeMedida() {
                         <span style={{ color: "#75151E" }}> ❞ </span>
                     </div>
                     <div className="ctphoto">
-                        <img className='imgEquip'  src="../../../src/assets/images/no-foto.png" alt="Equipo de trabajo" />
+                        <img className='imgEquip'  src="../../../src/assets/background/contactanos.jpg" alt="Equipo de trabajo" />
                         <div className='ctFor'>
                             <h3>Trabajemos Juntos</h3>
                             <FormDefault />
                         </div>
+                        
                     </div>
                     
                     

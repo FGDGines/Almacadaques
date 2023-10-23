@@ -18,6 +18,7 @@ export const textos: TextosType<
     "testimonios" |
     "blog" |
     "blogPost" |
+    "blogRetiro" |
     "podcast" |
     "contactar" |
     //footer
@@ -62,7 +63,7 @@ export const textos: TextosType<
     "parrafosobremi16" |
     "parrafosobremi17" |
     "parrafosobremi18" |
-    //Coaching
+    //Coaching para el Bienestar
     "textcoaching1" |
     "textcoachingParrafo1" |
     "textcoaching2" |
@@ -79,6 +80,13 @@ export const textos: TextosType<
     "textcomentario" |
     "textplaceholcoment" |
     "textaceptar"
+    //cocaching & mentoring internacional
+    //Agenda Experiencias de bienestar
+    //Agenda experiencias a medida
+    //colaborador
+    //blo( Tips de bienestar)
+    //podcast
+    //blog retiros
     
     
 
@@ -93,7 +101,8 @@ export const textos: TextosType<
         colabrador: "Colaborador",
         testimonios: "Testominio",
         blog: "blog",
-        blogPost: "Blog Post",
+        blogPost: "Tips de Bienestar",
+        blogRetiro: "Blog Retiros",
         podcast: "Podcast",
         contactar: "Contactar",
         // Fin del Navbar
@@ -125,9 +134,9 @@ export const textos: TextosType<
         parrafosobremi3: "Las crisis me han llevado a indagar dentro de mi para conocerme. Y todos los baches han sido oportunidades para conocerme mejor y crecer, minimizando el sufrimiento y encontrando más paz y armonía.",
         parrafosobremi4: "Con lo aprendido, lo que ofrezco es facilitarte herramientas para ayudarte a reencontrar tu bienestar y tu paz interior, trabajando las emociones, los sentimientos, los valores y como gestionar los cambios de manera amable para llegar a los objetivos que quieres en tu vida.",
         parrafosobremi5: "Soy una apasionada del crecimiento personal y de trabajar el despertar de la consciencia de las personas y la sociedad.",
-        parrafosobremi6: "Disfruto de la música y a menudo escucho música en directo.",
+        parrafosobremi6: "Disfruto de la música y a menudo escucho música en directo.",
         parrafosobremi7: "La belleza y la armonía son importantes y rodeo mi vida de ellas.",
-        parrafosobremi8: "Me encanta aprender cada día y siempre tengo retos.",
+        parrafosobremi8: "Me encanta aprender cada día y siempre tengo retos.",
         parrafosobremi9: "Me gusta cuidarme y es muy importante mi bienestar. Cuando yo estoy bien mi entorno también.",
         parrafosobremi10: "Mis hobbies favoritos son: leer, escribir, arte, nadar en el mar, cantar, bailar, viajar, descubrir otras culturas, senderismo.",
         titleparrafo3: "Bibliografía personal :",
@@ -139,7 +148,7 @@ export const textos: TextosType<
         parrafosobremi16:"Doing Business Globally (ESADE).",
         parrafosobremi17:"Postgrado en Licitaciones Internacionales (Universidad La Salle).",
         parrafosobremi18:"Formación continuada en el ámbito de empresa y crecimiento personal.",
-        //Coaching
+        //Coaching para el Bienestar
         textcoaching1: "¿Sientes que existe una brecha entre la vida que llevas y la que quieres llevar?¿Quieres convertirte en tu mejor versión?",
         textcoachingParrafo1:"Un proceso de coaching, respetuoso, amable y profesional, te ayudará a alcanzar tu objetivo. ¿Te acompaño?",
         textcoachingtitle2:"¿Como te puedo ayudar?",
@@ -156,7 +165,13 @@ export const textos: TextosType<
         textcomentario:"Comentario",
         textplaceholcoment: "Que te gustaría decir",
         textaceptar:"Enviar",
-
+        //cocaching & mentoring internacional
+        //Agenda Experiencias de bienestar
+        //Agenda experiencias a medida
+        //colaborador
+        //blo( Tips de bienestar)
+        //podcast
+        //blog retiros
     },
     [enLanguageFlag.EN]: {
         inicio: "Home",
@@ -168,7 +183,8 @@ export const textos: TextosType<
         colabrador: "Collaborators",
         testimonios: "Testominio EN",
         blog: "Blog",
-        blogPost: "Blog Post",
+        blogPost: "Tips de Bienestar",
+        blogRetiro: "Blog Retiros",
         podcast: "Podcast",
         contactar: "Contact",
         // Fin del Navbar
@@ -214,7 +230,7 @@ export const textos: TextosType<
         parrafosobremi16:"Doing Business Globally (ESADE)",
         parrafosobremi17:"Postgraduate in International Tenders (La Salle University)",
         parrafosobremi18:"Continuing training in the field of business and personal growth.",
-        //Coaching
+        //Coaching para el Bienestar
         textcoaching1: "Do you feel like there is a gap between the life you lead and the life you want to lead? Do you want to become the best of yourself?",
         textcoachingParrafo1:"A respectful, kind and professional coaching process will help you achieve your goal. Shall I accompany you?",
         textcoachingtitle2:"How can I help you?",
@@ -231,6 +247,13 @@ export const textos: TextosType<
         textcomentario:"comment",
         textplaceholcoment: "What would you like to say?",
         textaceptar:"Send",
+        //cocaching & mentoring internacional
+        //Agenda Experiencias de bienestar
+        //Agenda experiencias a medida
+        //colaborador
+        //blo( Tips de bienestar)
+        //podcast
+        //blog retiros
     
     },
     [enLanguageFlag.CAT]: {
@@ -243,7 +266,8 @@ export const textos: TextosType<
         colabrador: "COLABORAD@RS",
         testimonios: "Testomini",
         blog: "Blog",
-        blogPost: "Blog Post",
+        blogPost: "Tips de Bienestar",
+        blogRetiro: "Blog Retiros",
         podcast: "Podcast",
         contactar: "Contacte",
         // Fin del Navbar
@@ -289,7 +313,7 @@ export const textos: TextosType<
         parrafosobremi16:"Doing Business Globally (ESADE).",
         parrafosobremi17:"Postgrau en Licitacions Internacionals (Universitat La Salle).",
         parrafosobremi18:"Formació continuada a l'àmbit d'empresa i creixement personal.",
-        //Coaching
+        //Coaching para el Bienestar
         textcoaching1: "Sents que hi ha una escletxa entre la vida que portes i la que vols portar? Vols convertir-te en la teva millor versió?",
         textcoachingParrafo1:"Un procés de coaching, respectuós, amable i professional, us ajudarà a assolir el vostre objectiu. T'hi acompanyo?",
         textcoachingtitle2:"Com et puc ajudar?",
@@ -306,6 +330,13 @@ export const textos: TextosType<
         textcomentario: "Comentari",
         textplaceholcoment: "que t'agradaria dir",
         textaceptar: "Enviar",
+        //cocaching & mentoring internacional
+        //Agenda Experiencias de bienestar
+        //Agenda experiencias a medida
+        //colaborador
+        //blo( Tips de bienestar)
+        //podcast
+        //blog retiros
 
 
     }

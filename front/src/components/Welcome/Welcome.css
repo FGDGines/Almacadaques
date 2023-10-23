@@ -1,7 +1,7 @@
 .Welcome{
     height: calc(100vh - 103px);
     background-color: rgb(255, 255, 255);
-    background: url("./src/assets/background/cdq-2000x700.jpg") no-repeat center/cover ;
+    background: url("../../../src/assets/background/inicio.jpg") no-repeat center/cover ;
     background-size: 100% 100% ;
     display: flex;
     justify-content: center;

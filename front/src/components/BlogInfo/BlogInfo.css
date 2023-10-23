@@ -1,0 +1,39 @@
+.BlogInfo{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    background-color: gray;
+}
+.ctBlogInf{
+    padding: 1vw;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+.imgInfBlog{
+    width: 30vw;
+}
+.dayTitle{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.month{
+    font-size: 1.3vw;
+}
+.day{
+    font-size: 1.3vw;
+    margin-right: 1vw;
+}
+.titleInfo{
+    font-size: 1.3vw;
+}
+.textInfo{
+    font-size: 1.2vw;
+}
+.btnInfo{
+    width: 10vw;
+}
