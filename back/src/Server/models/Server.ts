@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import multer from 'multer';
-// import DB from '../db/conexion';
+import DB from '../db/conexion';
 
 class Server {
     __app: any;
@@ -26,8 +26,8 @@ class Server {
         // Conexión a la base de datos
         try {
             // Aquí debes conectar a la base de datos, por ejemplo:
-            // await DB.authenticate();
-            // console.log('DB Online');
+            await DB.authenticate();
+            console.log('DB Online');
         } catch (err) {
             console.log('No se pudo conectar a la base de datos');
             console.log(err);
