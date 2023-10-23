@@ -26,6 +26,11 @@
     display: flex;
     justify-content: center;
 }
+.parrafoSpan{
+    font-size: 1.7vw;
+    margin: 0;
+    display: contents;
+}
 .imgInternacional{
     width: 100%;
     height: 100%;

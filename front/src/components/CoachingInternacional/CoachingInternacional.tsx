@@ -37,7 +37,7 @@ const CoachingInternacional = () => {
 <br />
 <br />
                 <span style={{ color: "#75151E" }} > ❝ </span>
-                Cuando uno toma la determinación de liderar su vida, posiblemente después de alguna crisis o desajuste, el acompañamiento de un coach lo puede ayudar a acelerar y lograr mejores resultados
+                <h3 className='parrafoSpan'>Cuando uno toma la determinación de liderar su vida, posiblemente después de alguna crisis o desajuste, el acompañamiento de un coach lo puede ayudar a acelerar y lograr mejores resultados</h3>
                 <span style={{ color: "#75151E" }}> ❞ </span>. Herminia Gomá.
 
                 <div className="containerImg1">
