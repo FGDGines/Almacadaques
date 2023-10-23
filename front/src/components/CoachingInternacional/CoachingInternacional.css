@@ -17,7 +17,9 @@
 .contseccionn1 .parrafo{
     font-size: 1.3vw;
     text-align: justify;
+    margin-bottom: 1vw;
 }
+
 .containerImg1{
     margin-top: 6vw;
     width: 85vw;
