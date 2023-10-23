@@ -38,7 +38,7 @@ export const carouselDescription: tpCarouelItem[] = [
     },
     {
         id: 1,
-        title: '¿Quieres ser tu mejor versión?',
+        title: '¿Te sientes estresad@?',
         src: '../../src/assets/carrousell/primera.jpg',
         autor: '@ejemplo',
         link_autor: "https://www.google.com/search?q=fotos+de+Bienestar&oq=fotos+de+Bienestar&aqs=chrome..69i57j0i512l9.5406j0j7&sourceid=chrome&ie=UTF-8"
