@@ -1,8 +1,8 @@
 .BlogInfo{
     display: flex;
     flex-wrap: wrap;
-    width: 100vw;
-    background-color: gray;
+    width: 30vw;
+    margin: 1vw;
 }
 .ctBlogInf{
     padding: 1vw;
@@ -20,8 +20,11 @@
     margin: 0;
     padding: 0;
 }
-
+.date{
+    display: flex;
+}
 .month{
+    margin-right: .2vw;
     font-size: 1.3vw;
 }
 .day{
