@@ -1,15 +1,23 @@
 .BlogPost {
-  background-color: white;
+  background-color: rgb(216, 215, 215);
 }
 
+.infoBlogPost{
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+/* 
 .BlogInfo {
   margin-top: 2rem;
   margin: 2rem 20px;
   margin-inline: auto;
   display: grid;
-  /* grid-template-columns: 2fr 4fr; */
+  grid-template-columns: 4fr 8fr; 
   max-width: 80vw;
 }
+
 
 .BlogInfo > .date {
   grid-column: 1;
@@ -37,4 +45,4 @@
 
 .BlogInfo > * {
   grid-column: 2;
-}
+} */
