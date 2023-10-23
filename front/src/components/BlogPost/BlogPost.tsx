@@ -9,6 +9,10 @@ const BlogPost = () => {
     <div className="BlogPost">
       <Navbar />
       <Franja text="Tips de Bienestar" />
+      
+      <div className="infoBlogPost">
+
+      
       <BlogInfo
         index={0}
         day={17}
@@ -39,6 +43,7 @@ const BlogPost = () => {
         title="The ultimate guide to time management"
         abstract="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec venenatis elit, sed vehicula sapien. Praesent facilisis varius imperdiet. Ut et ligula quis mi viverra sodales. Vivamus lectus magna, faucibus vel ipsum. Proin iaculis, diam et placerat lacinia, odio nisl congue tellus, sed placerat nunc neque id urna. Phasellus nec massa purus."
       />
+      </div>
       <Footer />
     </div>
   );
