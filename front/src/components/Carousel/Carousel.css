@@ -18,7 +18,7 @@
 }
 
 .Carousel > .ctTextController > .btnCarousel{
-    border: 2px solid rgb(164, 161, 161);;
+    border: 2px solid rgb(164, 161, 161);
     width: fit-content;
     padding: 15px;
     position: absolute;
@@ -33,12 +33,12 @@
 }
 
 .Carousel > .ctTextController > .btnCarousel  * {
-    stroke: rgb(164, 161, 161);
+    stroke: black;
     transition: all 0.6s ;
 }
 
 .Carousel > .ctTextController > .btnCarousel:hover  * {
-    stroke: white;
+    stroke: rgb(164, 161, 161);
 }
 
 .Carousel > .ctTextController > .btnCarousel:hover{
@@ -122,13 +122,15 @@
 
 
 .Carousel .ctTextController {
-    background-color:  #Cf1348 ; 
-    color: white;
+    background-color:  white ; 
+    color:  #Cf1348;
     border-radius: 0px var(--bRadius)   var(--bRadius) 0px;  
+    /* border: 1px solid #Cf1348; */
 }
 
 .Carousel .ctTextController > h2{
-    /* border: 1px solid black; */
+    box-shadow: 6px 3px 10px rgba(128, 128, 128, 0.5);
+    border-radius: 0 20px 20px 0;
     margin-top: auto;
     margin-bottom: auto ;
     height: 100% ;
