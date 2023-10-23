@@ -130,6 +130,19 @@ type tpDialogMUI1 = {
     handlerClose: () => void
     evento: tpCalendarDates | ReactNode
 }
+type tpDtmResponse = {
+    msg: string
+    status: number
+    bag?:[] | unknown
+}
+
+type tpObjectStringToStrig={
+    [key: string]:string
+}
+
+type tpFormDefault = {
+    hSubmit:(bag: FormData )=>void 
+}
 
 export type {
     tpTestimonyBar,
@@ -152,5 +165,8 @@ export type {
     tpDtmSelect,
     tpItemSelect,
     tpDialogMUI1,
-    tpRetiroAnterior
+    tpRetiroAnterior,
+    tpDtmResponse,
+    tpFormDefault,
+    tpObjectStringToStrig
 };
