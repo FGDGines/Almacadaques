@@ -33,7 +33,7 @@
 }
 
 .Carousel > .ctTextController > .btnCarousel  * {
-    stroke: black;
+    stroke: #Cf1348;
     transition: all 0.6s ;
 }
 
