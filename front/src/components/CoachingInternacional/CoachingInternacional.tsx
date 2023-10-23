@@ -3,45 +3,43 @@ import Navbar from '../Navbar/Navbar';
 import Franja from '../Franja/Franja';
 import Footer from '../Footer/Footer';
 import FormDefault from '../FormDefault/FormDefault';
+import { textos } from '../../data/textos';
+import { useContext } from 'react';
+import { GlobalContext } from '../../contexts/GlobalContext';
 import { testimonies } from '../../data/testimonies';
 import Testimony from '../Testimony/Testimony';
 
 const CoachingInternacional = () => {
+    const { languageFlag } = useContext(GlobalContext)
     return <div className="CoachingInternacional">
         <Navbar />
-        <Franja text="Coaching & mentoring internacional" />
+        <Franja text={textos[languageFlag].textcoachingtitleInternacional} />
         <div className="containerInternacional">
             <div className="containerInnformacion1">
                 <div className="containerimg2">
                     <img src="../../../src/assets/background/unnamed (2).jpg" alt="Elisabet" className='imgBienertar' />
                 </div>
                 <div className="contseccionn1">
-                    <h3>PREGUNTAS DESTACADAS:</h3>
-                    <p className='parrafo'>¿quieres incrementar tu facturación de ventas en internacional?</p>
-                    <p className='parrafo'>¿quieres mejorar el rendimiento de tu equipo internacional? </p>
-                    <p className='parrafo'>¿eres un export manager y te planteas un cambio profesional?</p>
-                    <p className='parrafo'>¿eres un expat y estás experimentando un vaivén en tu adaptación?</p>
-                    <p className='parrafo'>Ya seas export manager o CEO de la empresa el proceso de crecimiento internacional puede ser más que retador y conllevar algún desajuste. <br /> Un proceso de coaching y mentoring te ayudará a gestionar los cambios de manera amable para llegar a los objetivos que te plantees. <b>¿Te acompaño?</b> </p>
+                    {/* <h3>PREGUNTAS DESTACADAS:</h3> */}
+                    <p className='parrafo'>{textos[languageFlag].textcoachinginterna1}</p>
+                    <p className='parrafo'>{textos[languageFlag].textcoachinginterna2}</p>
+                    <p className='parrafo'>{textos[languageFlag].textcoachinginterna3}</p>
+                    <p className='parrafo'>{textos[languageFlag].textcoachinginterna4}</p>
+                    <p className='parrafo'>{textos[languageFlag].textcoachinginterna5}</p>
                 </div>
-
                 
-
             </div>
-            
-
             <div className="containerInnformacion2">
-            <h3>¿Como te puedo ayudar?</h3>
-                <p className='parrafo'>Como coach te escucho sin juzgar, te hago preguntas y te doy feedback, y con ello aclararás y ordenarás tus ideas e incrementarás tu autoconocimiento y liderazgo para descubrir nuevos enfoques y lograr aquello que quieres conseguir.</p>
-                <p className='parrafo'>Como mentora internacional te comparto mis propias experiencias y con mucha empatía y sensibilidad te acompaño a alcanzar los objetivos que quieres lograr, logrando así mayor bienestar.</p>
-                <p className='parrafo'>Contácta sin compromiso para definir juntos como te puedo ayudar a conseguir los resultados que buscas.</p>
-
-
+            <h3>{textos[languageFlag].textcoachinginternatitle2}</h3>
+                <p className='parrafo'>{textos[languageFlag].textcoachinginterna6}</p>
+                <p className='parrafo'>{textos[languageFlag].textcoachinginterna7}</p>
+                <p className='parrafo'>{textos[languageFlag].textcoachinginterna8}</p>
                 <div className="containerImg1">
                     <img src="../../../src/assets/images/img_coaching_internacional.jpg" className='imgInternacional' alt="Imagen de coaching" />
                 </div>
 
                 <div className="testimonio">
-                    <h3 className='titletestimonio'>Testimonios</h3>
+                    <h3 className='titletestimonio'>{textos[languageFlag].textcoachinginternaTestimonio}</h3>
                     <div className="infotestimonios">
                     {testimonies.map((testimony) => (
                         <Testimony
@@ -62,7 +60,7 @@ const CoachingInternacional = () => {
 
             </div>
             <div className='ct3 containerInnformacion2'>
-                <p className='parrafo info'>Pide más información sin compromiso</p>
+                <p className='parrafo info'>{textos[languageFlag].textcoachinginterPideinfo}</p>
                 <div className='ctForm'>
                     <FormDefault />
                     <img className='imgEquip' src=".../../../src/assets/background/contactanos.jpg" alt="Equipo de trabajo" />
