@@ -21,6 +21,50 @@ const Mensaje = DB.define('mensaje', {
 }, {
     paranoid: true 
 })
+
+
+const User = DB.define('user', {
+    correo:{
+        type: DataTypes.STRING
+    },
+    password:{
+        type: DataTypes.STRING
+    },
+    id_data_user:{
+        type: DataTypes.NUMBER
+    }, 
+    deletedAt: {
+        type: DataTypes.DATE,
+        allowNull: true
+    }
+}, {
+    paranoid: true 
+})
+
+const DataUser = DB.define('data_user', {
+    nombre: {
+        type: DataTypes.STRING
+    },
+    src:{
+        type: DataTypes.STRING
+    }, 
+    id_rol: {
+        type: DataTypes.NUMBER
+    }
+})
+
+const Rol = DB.define('role', {
+    label:{
+        type: DataTypes.STRING
+    }
+})
+
+User.belongsTo(DataUser,{foreignKey: 'id_data_user'})
+DataUser.belongsTo(Rol,{foreignKey: 'id_rol'})
+
 export {
-    Mensaje
+    DataUser, 
+    Mensaje,
+    Rol, 
+    User
 }
