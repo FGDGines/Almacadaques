@@ -49,7 +49,7 @@ const BlogInfo: FC<tpBlogInfo> = ({
           <h1 onClick={gotoPost} className="titleInfo">{title}</h1>
         </div>
         <p className="textInfo">{abstract}</p>
-        <button className="btnInfo">READ MORE</button>
+        <a href="#" className="btnInfo">READ MORE</a>
       </div>
 
 
