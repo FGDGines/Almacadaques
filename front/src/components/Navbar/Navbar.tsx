@@ -133,6 +133,10 @@ const Navbar = () => {
                 target: 1,
                 text: `${textos[languageFlag].podcast}`,
               },
+              {
+                target: 14,
+                text: `${textos[languageFlag].blogRetiro}`,
+              }
             ]}
           />
           <DtmSelect items={idiomas} active={languajeActive} />
