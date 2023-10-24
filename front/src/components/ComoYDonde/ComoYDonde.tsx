@@ -12,7 +12,7 @@ const ComoYDonde = () => {
             {textos[languageFlag].textDesthome3}
             <span style={{ color: "#75151E" }}> ❞ </span>
         </div>
-        <div className="ct2" style={{ color: "#75151E" }}  >
+        <div className="ct2" style={{ color: "#cf1348" }}  >
             {textos[languageFlag].textDesthome4}
         </div>
         <div  className='ctList'>

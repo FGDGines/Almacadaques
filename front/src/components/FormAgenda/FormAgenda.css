@@ -2,14 +2,13 @@
 
 /* Estilos para el contenedor del formulario */
 .FormAgenda {
-    max-width: 400px;
-    margin: 0 auto;
+    width: 23vw;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    min-height: 460px;
+    min-height: 390px;
   }
   
   /* Estilos para el título */
@@ -54,6 +53,7 @@
   
   @media (max-width: 780px){
     .FormAgenda {
-      max-width: 91%;
+      width: 80%;
+      margin: 0 auto;
     }
   }

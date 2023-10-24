@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { tpTestimony } from "../../types/typesComponents";
+import "../TestimonyBar/TestimonyBar.css"
 
 const Testimony: FC<tpTestimony> = ({
   id,

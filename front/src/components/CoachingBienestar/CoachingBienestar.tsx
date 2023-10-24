@@ -19,7 +19,7 @@ const CoachingBienestar = () => {
                     <img src="../../../src/assets/background/coachingBienestar.jpg" alt="Elisabet" className='imgBienertar' />
                 </div>
                 <div className="contseccionn1">
-                    <span style={{ color: "#75151E" }}> ❝ </span>
+                    <span style={{ color: "#75151E" }} className='SpanTitle'> ❝ </span>
                     {textos[languageFlag].textcoaching1}
                     <span style={{ color: "#75151E" }}> ❞ </span>
                     <p className='parrafo'>{textos[languageFlag].textcoachingParrafo1}</p>

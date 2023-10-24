@@ -57,17 +57,22 @@ const ExperienciasDeBienestar = () => {
             <StatisticComponent />
 
             <div className='ctAgenda'>
-                <Agenda hSelect={SeleccionarEvento} />
-                <FormAgenda actividades={eventos} />
-                <div className="retirosPasados">
-                    <div className='RTitle'>Retiros anteriores</div>
-                    <div className='ctPreviews'>
-                        {pastEvent.map((item )=>{
-                            const {id, end , start, title, colaborator_link, colaborator_name , description, src} = item 
-                            return  <RetiroAnterior key={id} end={end} start={start}  id={id} title={title} colaborator_link={colaborator_link}  colaborator_name={colaborator_name} description={description}  hselect={SeleccionarEvento} src={src}/>
-                        })}
+                <div className="ctAgendaCalendar">
+                    <Agenda hSelect={SeleccionarEvento} />
+                </div>
+                <div className="ctFormRetiros">
+                    <FormAgenda actividades={eventos} />
+                    <div className="retirosPasados">
+                        <div className='RTitle'>Retiros anteriores</div>
+                        <div className='ctPreviews'>
+                            {pastEvent.map((item) => {
+                                const { id, end, start, title, colaborator_link, colaborator_name, description, src } = item
+                                return <RetiroAnterior key={id} end={end} start={start} id={id} title={title} colaborator_link={colaborator_link} colaborator_name={colaborator_name} description={description} hselect={SeleccionarEvento} src={src} />
+                            })}
+                        </div>
                     </div>
                 </div>
+
             </div>
 
             <DialogMUI1 open={open} handlerClose={handleClose} handleClickOpen={handleClickOpen} evento={evento} />

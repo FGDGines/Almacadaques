@@ -1,6 +1,7 @@
 import { FC, useContext } from "react";
 import { tpBlogInfo } from "../../types/typesComponents";
 import { GlobalContext } from "../../contexts/GlobalContext";
+import './BlogInfo.css'
 
 
 const BlogInfo: FC<tpBlogInfo> = ({
@@ -35,17 +36,23 @@ const BlogInfo: FC<tpBlogInfo> = ({
 
   return (
     <div className="BlogInfo">
-      {day !== undefined && month !== undefined && year !== undefined && (
-        <div className="date">
-          <div className="year">{year}</div>
-          <div className="month">{monthStr[month]}</div>
-          <div className="day">{day}</div>
-        </div>
-      )}
 
-      <img src={thumbnail} alt={title} />
-      <h1 onClick={gotoPost}>{title}</h1>
-      <p>{abstract}</p>
+      <div className="ctBlogInf">
+        <img src={thumbnail} alt={title} className="imgInfBlog" />
+        <div className="dayTitle">
+          {day !== undefined && month !== undefined && year !== undefined && (
+            <div className="date">
+              <div className="month">{monthStr[month]}</div>
+              <div className="day">{day}</div>
+            </div>
+          )}
+          <h1 onClick={gotoPost} className="titleInfo">{title}</h1>
+        </div>
+        <p className="textInfo">{abstract}</p>
+        <button className="btnInfo">READ MORE</button>
+      </div>
+
+
     </div>
   );
 };
