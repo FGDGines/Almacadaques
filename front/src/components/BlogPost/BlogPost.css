@@ -3,46 +3,19 @@
 }
 
 .infoBlogPost{
-  width: 100vw;
+  width: 98vw;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  justify-content: center;
-}
-/* 
-.BlogInfo {
-  margin-top: 2rem;
-  margin: 2rem 20px;
-  margin-inline: auto;
-  display: grid;
-  grid-template-columns: 4fr 8fr; 
-  max-width: 80vw;
 }
 
-
-.BlogInfo > .date {
-  grid-column: 1;
-  margin-inline: auto 1rem;
-  font-size: 1.5rem;
-  font-weight: 500;
+@media (max-width: 780px){
+  .infoBlogPost{
+    justify-content: space-evenly;
+  }
 }
-
-.date > * {
-  display: inline-block;
-  margin-inline: 0.2rem;
+@media (max-width: 450px){
+  .infoBlogPost{
+    justify-content: space-between;
+  }
 }
-
-.year {
-  margin-right: 2rem;
-}
-
-.BlogInfo > h1 {
-  cursor: pointer;
-}
-
-.BlogInfo > img {
-  width: 100%;
-}
-
-.BlogInfo > * {
-  grid-column: 2;
-} */

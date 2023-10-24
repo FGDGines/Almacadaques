@@ -23,11 +23,13 @@
 .date{
     display: flex;
 }
-.month{
+.date .month{
     margin-right: .2vw;
     font-size: 1.3vw;
+    color: gray;
 }
-.day{
+.date .day{
+    color: gray;
     font-size: 1.3vw;
     margin-right: 1vw;
 }
@@ -37,6 +39,71 @@
 .textInfo{
     font-size: 1.2vw;
 }
+
 .btnInfo{
     width: 10vw;
+    text-decoration: none;
+    padding: .5vw .1vw;
+    font-size: 1.1vw;
+    background-color: #E5B856;
+    text-align: center;
+    color: #010101;
+    border-radius: 3px;
+}
+@media (max-width: 780px){
+    .BlogInfo{
+        width: 45vw;
+    }
+    .ctBlogInf{
+        width: 44vw;
+    }
+    .imgInfBlog{
+        width: 44vw;
+    }
+
+    .date .month{
+        font-size: 2vw;
+    }
+    .date .day{
+        font-size: 2vw;
+    }
+    .titleInfo{
+        font-size: 1.8vw;
+    }
+    .textInfo{
+        font-size: 2vw;
+    }
+    
+    .btnInfo{
+        width: 20vw;
+        font-size: 1.8vw;
+    }
+}
+@media (max-width: 450px) {
+    
+    .ctBlogInf{
+        width: 80vw;
+        padding: 3vw;
+    }
+    .imgInfBlog{
+        width: 80vw;
+    }
+
+    .date .month{
+        font-size: 4vw;
+    }
+    .date .day{
+        font-size: 4vw;
+    }
+    .titleInfo{
+        font-size: 3.5vw;
+    }
+    .textInfo{
+        font-size: 3.5vw;
+    }
+    
+    .btnInfo{
+        width: auto;
+        font-size: 4vw;
+    }
 }
