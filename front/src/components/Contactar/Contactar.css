@@ -153,7 +153,8 @@
     }
 
     .Contactar .ctSections>div.ctRight .TitleForm {
-        font-size: 9vw;
+        font-size: 7vw;
+        text-align: center;
         margin-bottom: 2vw;
     }
 

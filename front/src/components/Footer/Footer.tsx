@@ -11,33 +11,33 @@ const Footer = () => {
             <div className="container1">
                 <div className="contTablet">
                     <div className="containerRight">
-                    <h3 className='titleFooter'>{textos[languageFlag].textfooteraviso}</h3>
-                    <div className="span1"></div>
-                    <p className='subtitlefooter'>
-                        <a href='#' className='enlaceFooter' onClick={() => setLayoutID(11)}>{textos[languageFlag].textfooterpolitica}</a> </p>
-                    <div className="span2"></div>
-                    <p className='subtitlefooter'><a href='#' className='enlaceFooter' onClick={() => setLayoutID(12)}>  {textos[languageFlag].textfootercoockies}</a>  </p>
-                    <div className="span3"></div>
-                    <p className='subtitlefooter'>
-                        <a href='#' className='enlaceFooter' onClick={() => setLayoutID(13)}>{textos[languageFlag].textfooteraviso2}</a></p>
-                </div>
-                <div className="containerCenter">
-                    <h3 className='titleFooter'>{textos[languageFlag].textfooterInfo}</h3>
-                    <div className="span4"></div>
-                    <p className='subtitlefooter'>
-                        <img src="../../../src/assets/images/mensaje-de-telefono.png" alt="Telefono" className='whatsapp ' />
-                        <a href='https://wa.me/+34660305421?text=Hola Almacadaques' target='_blank' className='enlaceFooter'>
-                            +34 660 30 54 21</a> </p>
-                    <div className="span5"></div>
-                    <p className='subtitlefooter' >
-                        <a href='#' target='_blank' className='enlaceFooter'> hola@almacadaques.com</a> </p>
-                    <div className="span6"></div>
-                    <p className='subtitlefooter'>
-                        <a href='mailto:hola@almacadaques.com' target='_blank' className='enlaceFooter'> Almacadaques.com </a> </p>
-                </div>
+                        <h3 className='titleFooter'>{textos[languageFlag].textfooteraviso}</h3>
+                        <div className="span1"></div>
+                        <p className='subtitlefooter'>
+                            <a href='#' className='enlaceFooter' onClick={() => setLayoutID(11)}>{textos[languageFlag].textfooterpolitica}</a> </p>
+                        <div className="span2"></div>
+                        <p className='subtitlefooter'><a href='#' className='enlaceFooter' onClick={() => setLayoutID(12)}>  {textos[languageFlag].textfootercoockies}</a>  </p>
+                        <div className="span3"></div>
+                        <p className='subtitlefooter'>
+                            <a href='#' className='enlaceFooter' onClick={() => setLayoutID(13)}>{textos[languageFlag].textfooteraviso2}</a></p>
+                    </div>
+                    <div className="containerCenter">
+                        <h3 className='titleFooter'>{textos[languageFlag].textfooterInfo}</h3>
+                        <div className="span4"></div>
+                        <p className='subtitlefooter'>
+                            <img src="../../../src/assets/images/mensaje-de-telefono.png" alt="Telefono" className='whatsapp ' />
+                            <a href='https://wa.me/+34660305421?text=Hola Almacadaques' target='_blank' className='enlaceFooter'>
+                                +34 660 30 54 21</a> </p>
+                        <div className="span5"></div>
+                        <p className='subtitlefooter' >
+                            <a href='#' target='_blank' className='enlaceFooter'> hola@almacadaques.com</a> </p>
+                        <div className="span6"></div>
+                        <p className='subtitlefooter'>
+                            <a href='mailto:hola@almacadaques.com' target='_blank' className='enlaceFooter'> Almacadaques.com </a> </p>
+                    </div>
 
                 </div>
-                
+
                 <div className="containerLeft">
                     <h3 className='titleFooter'>Newlester </h3>
                     <div className="span7"></div>

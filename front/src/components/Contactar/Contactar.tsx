@@ -10,7 +10,7 @@ const Contactar = ()=>{
         <Navbar />
         <Franja text='Contactar' />
         <div className='ctSections'>
-            <div className='ctLeft'>
+            <div className='ctLeftContaT'>
                 <div className='title1'>
                     Estoy aquí para responder cualquier pregunta que puedas tener.
                 </div>

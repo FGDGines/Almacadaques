@@ -139,6 +139,7 @@ input:valid ~ label {
 }
 
 .buttonFooter {
+  border: none;
   margin-top: 2.5vw;
   background-color: #cf1348;
   border-radius: 0.3vw;
@@ -280,8 +281,14 @@ input:valid ~ label {
     flex-direction: column;
     width: 90vw;
   }
+  .containerRight{
+    margin-bottom: 5vw;
+  }
+  .containerCenter{
+    margin-bottom: 7vw;
+  }
   .titleFooter {
-    font-size: 7vw;
+    font-size: 5vw;
   }
 
   .infofooter {
@@ -289,7 +296,7 @@ input:valid ~ label {
     height: 15vw;
   }
   .enlaceFooter {
-    font-size: 6vw;
+    font-size: 4vw;
   }
   .correo {
     font-size: 5vw;
@@ -303,44 +310,44 @@ input:valid ~ label {
     width: 80vw;
   }
   .user-label {
-    font-size: 5vw;
+    font-size: 4vw;
   }
   .containerLeft {
     width: 90vw;
   }
   .buttonFooter {
-    font-size: 7vw;
+    font-size: 5vw;
   }
   .redes {
     width: 90vw;
   }
 
   .span1 {
-    width: 30vw;
+    width: 23vw;
   }
 
   .span2 {
-    width: 37vw;
-  }
-
-  .span3 {
-    width: 38vw;
-  }
-
-  .span4 {
     width: 30vw;
   }
 
+  .span3 {
+    width: 29vw;
+  }
+
+  .span4 {
+    width: 21vw;
+  }
+
   .span5 {
-    width: 45vw;
+    width: 35vw;
   }
 
   .span6 {
-    width: 47vw;
+    width: 37vw;
   }
 
   .span7 {
-    width: 20vw;
+    width: 15vw;
   }
 
   .socialRed {
