@@ -3,8 +3,15 @@ import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import Franja from '../Franja/Franja';
 import FormDefault from '../FormDefault/FormDefault';
-const Contactar = ()=>{
+import { fetchDefault } from '../../helpers/Server';
+import { formDataToObject } from '../../helpers/Forms';
 
+const Contactar = ()=>{
+    
+    const enviarFormulario = (bag: FormData) =>{
+        bag.set('fragment'  , 'Contactar')
+        fetchDefault('/mail/create', {body: JSON.stringify(formDataToObject(bag))})        
+    }
 
     return <div className="Contactar">
         <Navbar />
@@ -37,7 +44,7 @@ const Contactar = ()=>{
                     Ponerse en contacto                    
                 </div>
 
-                <FormDefault />
+                <FormDefault hSubmit={enviarFormulario} />
             </div>
         </div>
         <Footer />

@@ -1,7 +1,8 @@
 import express from 'express';
 import cors from 'cors';
-import multer from 'multer';
+// import multer from 'multer';
 import DB from '../db/conexion';
+const fileUpload = require("express-fileupload")
 
 class Server {
     __app: any;
@@ -20,6 +21,13 @@ class Server {
         // Configuraciones de middleware
         // Peticiones de origen cruzado
         this.__app.use(cors());
+        this.__app.use(express.json())
+        this.__app.use(express.urlencoded({extended: true}))
+        // File Upload
+        this.__app.use(fileUpload({
+            useTempFiles:  false ,
+            tempFileDir: "/temp/"
+        }))
     }
 
     async UpDB() {
@@ -36,11 +44,11 @@ class Server {
 
     routes() {
         // Conexión de rutas básicas
-        const storage = multer.memoryStorage();
-        const upload = multer({ storage });
+        // const storage = multer.memoryStorage();
+        // const upload = multer({ storage });
 
         // Utiliza upload.any() para manejar cualquier campo de archivo en la solicitud
-        this.__app.use('/api', upload.any(), require('../routes/api'));
+        this.__app.use('/api', require('../routes/api'));
     }
 
     run(__PORT: number) {

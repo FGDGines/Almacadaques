@@ -34,7 +34,7 @@ const Agenda: FC<tpAgenda> = ({hSelect}) => {
         events={eventsWithDates}
         startAccessor="start"
         endAccessor="end"
-        views={['month', 'week', 'day']}
+        views={['month']}
         defaultView="month"
         onSelectEvent={handleSelectEvent}
       />
