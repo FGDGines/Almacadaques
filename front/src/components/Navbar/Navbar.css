@@ -91,6 +91,9 @@
   .Navbar {
     display: none;
   }
+  .ctLeft{
+    transform: scaleX(-1);
+  }
   .navButton.up {
     top: 50px;
     display: block;

@@ -78,10 +78,7 @@ const Navbar = () => {
       </div>
 
       <div className="narbarMovil">
-        <div className="ctRight">
-          <NavButton className="logo" target={1} text="" />
-        </div>
-        <div className="ctLeft" onMouseDown={(e) => { e.stopPropagation(); setShowNavButton(!showNavButton);  }}>
+      <div className="ctLeft" onMouseDown={(e) => { e.stopPropagation(); setShowNavButton(!showNavButton);  }}>
           <label className="buttons__burger" htmlFor="burger" >
             <input type="checkbox" id="burger" />
               <span></span>
@@ -90,6 +87,10 @@ const Navbar = () => {
           </label>
           
         </div>
+        <div className="ctRight">
+          <NavButton className="logo" target={1} text="" />
+        </div>
+        
         {showNavButton && (
         <div className={`navButton ${upOrDown ? 'up' : 'down'}`}>
         <div className="navigation">
