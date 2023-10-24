@@ -79,8 +79,22 @@ export const textos: TextosType<
     "textplaceholemail" |
     "textcomentario" |
     "textplaceholcoment" |
-    "textaceptar"
+    "textaceptar" |
     //cocaching & mentoring internacional
+    "textcoachingtitleInternacional" |
+    "textcoachinginterna1" |
+    "textcoachinginterna2" |
+    "textcoachinginterna3" |
+    "textcoachinginterna4" |
+    "textcoachinginterna5" |
+    "textcoachinginternatitle2" |
+    "textcoachinginterna6" |
+    "textcoachinginterna7" |
+    "textcoachinginterna8" |
+    "textcoachinginternaTestimonio" |
+    "textcoachinginterPideinfo" 
+
+
     //Agenda Experiencias de bienestar
     //Agenda experiencias a medida
     //colaborador
@@ -89,7 +103,6 @@ export const textos: TextosType<
     //blog retiros
     
     
-
 > = {
     [enLanguageFlag.ES]: {
         inicio: "Inicio",
@@ -166,6 +179,18 @@ export const textos: TextosType<
         textplaceholcoment: "Que te gustaría decir",
         textaceptar:"Enviar",
         //cocaching & mentoring internacional
+        textcoachingtitleInternacional: "Coaching & mentoring internacional",
+        textcoachinginterna1:"¿quieres incrementar tu facturación de ventas en internacional?",
+        textcoachinginterna2:"¿quieres mejorar el rendimiento de tu equipo internacional?",
+        textcoachinginterna3:"¿eres un export manager y te planteas un cambio profesional?",
+        textcoachinginterna4:"¿eres un expat y estás experimentando un vaivén en tu adaptación?",
+        textcoachinginterna5:"Ya seas export manager o CEO de la empresa el proceso de crecimiento internacional puede ser más que retador y conllevar algún desajuste. Un proceso de coaching y mentoring te ayudará a gestionar los cambios de manera amable para llegar a los objetivos que te plantees.¿Te acompaño? ",
+        textcoachinginternatitle2:"¿Como te puedo ayudar?",  
+        textcoachinginterna6: "Como coach te escucho sin juzgar, te hago preguntas y te doy feedback, y con ello aclararás y ordenarás tus ideas e incrementarás tu autoconocimiento y liderazgo para descubrir nuevos enfoques y lograr aquello que quieres conseguir.",      
+        textcoachinginterna7: "Como mentora internacional te comparto mis propias experiencias y con mucha empatía y sensibilidad te acompaño a alcanzar los objetivos que quieres lograr, logrando así mayor bienestar.",
+        textcoachinginterna8: "Contácta sin compromiso para definir juntos como te puedo ayudar a conseguir los resultados que buscas.",
+        textcoachinginternaTestimonio: "Testimonios",
+        textcoachinginterPideinfo: "Pide más información sin compromiso",
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
         //colaborador
@@ -248,6 +273,20 @@ export const textos: TextosType<
         textplaceholcoment: "What would you like to say?",
         textaceptar:"Send",
         //cocaching & mentoring internacional
+        textcoachingtitleInternacional: "international coaching & mentoring ",
+        textcoachinginterna1:"Do you want to increase your international sales turnover?",
+        textcoachinginterna2:"Do you want to improve the performance of your international team?",
+        textcoachinginterna3:"Are you an export manager and are you considering a professional change",
+        textcoachinginterna4:"Are you an expat and are you experiencing a swing in your adaptation?",
+        textcoachinginterna5:"Whether you are an export manager or the CEO of the company, the process of international growth can be more than challenging and sometimes you might feel imbalanced. ",
+        textcoachinginternatitle2: "How can I help you",
+        textcoachinginterna6: "As a coach, I listen to you without judging, ask questions and give feedback, so you will clarify and organize your ideas and increase your self-knowledge and leadership to discover new approaches and achieve your goals.",      
+        textcoachinginterna7: "As an international mentor I share my own experiences with you and with a lot of empathy and sensitivity I help you achieve your goals as well as feeling greater well-being.",
+        textcoachinginterna8: "I encourage you to contact me to define together  how I can help you achieve your goals.",
+        textcoachinginternaTestimonio: "Testimonials",
+        textcoachinginterPideinfo: "Request more information without obligation",
+
+
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
         //colaborador
@@ -331,14 +370,24 @@ export const textos: TextosType<
         textplaceholcoment: "que t'agradaria dir",
         textaceptar: "Enviar",
         //cocaching & mentoring internacional
+        textcoachingtitleInternacional: "Coaching & mentoring internacional",
+        textcoachinginterna1:"¿vols incrementar la facturació de vendes en internacional?",
+        textcoachinginterna2:"¿vols millorar el rendiment del teu equip internacional?",
+        textcoachinginterna3:"¿ets un export manager i et planteges un canvi professional?",
+        textcoachinginterna4:"¿ets un expat i sents algún neguit en la teva adaptació?",
+        textcoachinginterna5:"Ja siguis export manager o CEO de l'empresa, el procés de creixement internacional pot ser més que desafiador i comportar algun desajust. ",
+        textcoachinginternatitle2: "Com et puc ajudar?",
+        textcoachinginterna6: "Com que coach t'escolto sense jutjar, et faig preguntes i et dono feedback, i amb això aclariràs i ordenaràs les teves idees i incrementaràs el teu autoconeixement i lideratge per descobrir nous enfocaments i aconseguir allò que vols aconseguir.",      
+        textcoachinginterna7: "Com a mentora internacional et comparteixo les meves pròpies experiències i amb molta empatia i sensibilitat t'acompanyo a assolir els objectius que vols assolir, aconseguint així més benestar.",
+        textcoachinginterna8: "Contacta sense compromís per definir junts com et puc ajudar a aconseguir els resultats que cerques",
+        textcoachinginternaTestimonio: "Testimonis",
+        textcoachinginterPideinfo: "Demana més informació sense compromís",
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
         //colaborador
         //blo( Tips de bienestar)
         //podcast
         //blog retiros
-
-
     }
 
 };

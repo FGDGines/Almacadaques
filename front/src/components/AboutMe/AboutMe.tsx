@@ -6,13 +6,12 @@ import { textos } from '../../data/textos';
 import { GlobalContext } from '../../contexts/GlobalContext';
 import { useContext} from 'react';
 const AboutMe = () => {
-    const {languageFlag} = useContext(GlobalContext)
+    const { languageFlag } = useContext(GlobalContext)
     return <div className="AboutMe">
         <Navbar />
         <Franja text='Sobre Mi' />
-        <div className='title1'>
-            <span style={{ color: "#75151E" }}> ❝ </span>
-            {textos[languageFlag].textsobremi1}
+        <div className='title1'><span style={{ color: "#75151E" }}> ❝ </span>
+                {textos[languageFlag].textsobremi1}
             <span style={{ color: "#75151E" }}> ❞ </span>
         </div>
         <div className='Contenido'>
