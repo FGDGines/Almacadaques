@@ -10,12 +10,12 @@
 }
 
 .containerimg2{
-    width: 40vw;
+    width: 90vw;
     margin-right: 4vw;
 }
 .containerInnformacion2 .parrafo,
 .contseccionn1 .parrafo{
-    font-size: 1.3vw;
+    font-size: 1.5vw;
     text-align: justify;
     margin-bottom: 1vw;
 }
@@ -34,6 +34,7 @@
 .imgInternacional{
     width: 100%;
     height: 100%;
+    border-radius: 0.5vw;
 }
 .testimonio{
     display: flex;
