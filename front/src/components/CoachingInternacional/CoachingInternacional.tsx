@@ -27,33 +27,17 @@ const CoachingInternacional = () => {
                     <p className='parrafo'>{textos[languageFlag].textcoachinginterna4}</p>
                     <p className='parrafo'>{textos[languageFlag].textcoachinginterna5}</p>
                 </div>
-<<<<<<< HEAD
+
                 
-            </div>
-            <div className="containerInnformacion2">
-            <h3>{textos[languageFlag].textcoachinginternatitle2}</h3>
-                <p className='parrafo'>{textos[languageFlag].textcoachinginterna6}</p>
-                <p className='parrafo'>{textos[languageFlag].textcoachinginterna7}</p>
-                <p className='parrafo'>{textos[languageFlag].textcoachinginterna8}</p>
-=======
-
-
 
             </div>
-
+            
 
             <div className="containerInnformacion2">
-                <h3>¿Como te puedo ayudar?</h3>
+            <h3>¿Como te puedo ayudar?</h3>
                 <p className='parrafo'>Como coach te escucho sin juzgar, te hago preguntas y te doy feedback, y con ello aclararás y ordenarás tus ideas e incrementarás tu autoconocimiento y liderazgo para descubrir nuevos enfoques y lograr aquello que quieres conseguir.</p>
                 <p className='parrafo'>Como mentora internacional te comparto mis propias experiencias y con mucha empatía y sensibilidad te acompaño a alcanzar los objetivos que quieres lograr, logrando así mayor bienestar.</p>
                 <p className='parrafo'>Contácta sin compromiso para definir juntos como te puedo ayudar a conseguir los resultados que buscas.</p>
-<br />
-<br />
-                <span style={{ color: "#75151E" }} > ❝ </span>
-                <h3 className='parrafoSpan'>Cuando uno toma la determinación de liderar su vida, posiblemente después de alguna crisis o desajuste, el acompañamiento de un coach lo puede ayudar a acelerar y lograr mejores resultados</h3>
-                <span style={{ color: "#75151E" }}> ❞ </span>. Herminia Gomá.
-
->>>>>>> 60cb7edc98a45030fb8b6d0e7037a2e2f2b9aa14
                 <div className="containerImg1">
                     <img src="../../../src/assets/images/img_coaching_internacional.jpg" className='imgInternacional' alt="Imagen de coaching" />
                 </div>
