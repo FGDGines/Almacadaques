@@ -32,6 +32,7 @@ const ExperienciasDeBienestar = () => {
         handleClickOpen()
     }
 
+    
     return <div className='ExperienciasDeBienestar'>
         <Navbar />
         <Franja text='Experiencias de Bienestar' />
@@ -43,8 +44,10 @@ const ExperienciasDeBienestar = () => {
             </div>
             <div className='ctCards'>
                 {cardsData.map((item, index) => {
-                    const { title, body } = item
+                    const { title, body } = item;
+                    
                     return <CardM1 key={index} title={title} body={body} />
+                    
                 })}
             </div>
             {/* <AboutMeAbstract /> */}
