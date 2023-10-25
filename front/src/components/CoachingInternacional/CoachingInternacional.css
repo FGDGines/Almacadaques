@@ -1,3 +1,5 @@
+@import "../../fonts.css";
+
 .CoachingInternacional{
     background-color: white;
 }
@@ -30,6 +32,12 @@
     font-size: 1.7vw;
     margin: 0;
     display: contents;
+}
+.autorParrafo{
+    display: contents;
+    font-size: 1.7vw;
+    font-family: 'Great vibes', cursive;
+    cursor: pointer;
 }
 .imgInternacional{
     width: 100%;
@@ -88,7 +96,12 @@
     .containerInnformacion2 .parrafo{
         font-size: 2.4vw;
     }
-
+    .parrafoSpan{
+        font-size: 2.2vw;
+    }
+    .autorParrafo{
+        font-size: 2.2vw;
+    }
     .containerInnformacion2{
         font-size: 2.5vw;
     }
@@ -131,5 +144,11 @@
     }
     .titletestimonio{
         font-size: 7vw;
+    }
+    .parrafoSpan{
+        font-size: 5vw;
+    }
+    .autorParrafo{
+        font-size: 5vw;
     }
 }

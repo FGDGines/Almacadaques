@@ -8,9 +8,10 @@ function BlogRetiro() {
     return (
         <>
 
-            <div className="BlogRetiros">
+            
                 <Navbar />
                 <Franja text="Blog Retiros" />
+            <div className="BlogRetiros">
                 <BlogInfo
                     index={0}
                     tags={["Salud", "Fitness", "Nutrición", "Mente"]}
@@ -32,8 +33,9 @@ function BlogRetiro() {
                     title="Playa"
                     abstract="Reúnete en la playa con expertos del coaching, para alinear tus chakras y que el bienestar fluya con las mejores compañias"
                 />
-                <Footer />
+                
             </div>
+            <Footer />
         </>
     )
 }
