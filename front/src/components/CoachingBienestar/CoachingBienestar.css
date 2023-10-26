@@ -1,3 +1,4 @@
+@import "../../fonts.css";
 .CoachingBienestar{
     background-color: white;
     
@@ -34,6 +35,7 @@
 }
 .textFormulario{
     font-size: 1.3vw;
+    color: #cf1348;
 }
 
 .contseccionn1 .nlink{
@@ -48,6 +50,12 @@
 .ct3.containerInnformacion2 .textFormulario{
     font-size: 1.5rem;
     font-weight: 800;
+}
+.autorParrafo{
+    display: contents;
+    font-size: 1.7vw;
+    font-family: 'Great vibes', cursive;
+    cursor: pointer;
 }
 
 .ct3.containerInnformacion2 .ctForm{

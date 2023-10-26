@@ -1,4 +1,4 @@
-@import "../../fonts.css";
+
 
 .CoachingInternacional{
     background-color: white;
@@ -33,12 +33,7 @@
     margin: 0;
     display: contents;
 }
-.autorParrafo{
-    display: contents;
-    font-size: 1.7vw;
-    font-family: 'Great vibes', cursive;
-    cursor: pointer;
-}
+
 .imgInternacional{
     width: 100%;
     height: 100%;
