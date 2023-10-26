@@ -53,7 +53,7 @@ const Navbar = () => {
                 text: `${textos[languageFlag].blogPost}`,
               },
               {
-                target: 1,
+                target: 15,
                 text: `${textos[languageFlag].podcast}`,
               },
               {
