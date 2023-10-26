@@ -10,7 +10,7 @@
 }
 
 .card:hover {
-  box-shadow: 0 5px 15px rgba(3, 89, 92, 0.5);
+  box-shadow: 0 5px 15px #2c7dcf;
   transform: translateY(-15px);
 }
 
@@ -25,7 +25,7 @@
   width: 21vw;
   height: 21vw;
   border-radius: 50%;
-  background: #0b6f72;
+  background: #7da0c3;
   bottom: 0;
 }
 
@@ -56,13 +56,13 @@
 }
 
 .card .description h3 {
-  color: #05383a;
+  color: #2a67a4;
   margin: 0;
   font-size: 1.6vw;
 }
 
 .card .description h4 {
-  color: #1c5a5c;
+  color: #2a67a4;
   margin: 0;
   font-size: 1vw;
 }
@@ -83,14 +83,14 @@
 .card .contact a {
   text-decoration: none;
   color: #fff;
-  background: #157579;
+  background: #2a67a4;
   padding: 0.8vw 2.5vw;
   border-radius: 0.3vw;
   transition: 0.3s;
 }
 
 .card .contact a:hover {
-  background: #0b6164;
+  background: #cf1348;
 }
 
 @media (max-width: 780px) {
