@@ -2,3 +2,9 @@
     background-color: gray;
 }
   
+.contBlogInfo{
+    display: flex;
+    margin-right: 2vw;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}

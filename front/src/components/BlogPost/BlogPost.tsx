@@ -1,49 +1,55 @@
-import BlogInfo from "../BlogInfo/BlogInfo";
-import Footer from "../Footer/Footer";
-import Franja from "../Franja/Franja";
 import Navbar from "../Navbar/Navbar";
-import "./BlogPost.css";
+import Franja from "../Franja/Franja";
+import Footer from "../Footer/Footer";
+import './BlogPost.css';
+import blogData from '../../../src/data/blogPost';
 
 const BlogPost = () => {
+  const monthNames = [
+    "NULL",
+    "Ene",
+    "Feb",
+    "Mar",
+    "Abr",
+    "May",
+    "Jun",
+    "Jul",
+    "Ago",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dic",
+  ];
+
   return (
     <div className="BlogPost">
       <Navbar />
       <Franja text="Tips de Bienestar" />
-      
-      <div className="infoBlogPost">
 
-      
-      <BlogInfo
-        index={0}
-        day={17}
-        month={5}
-        year={2023}
-        tags={["Salud", "Fitness", "Nutrición", "Mente"]}
-        image="./src/assets/images/blog-line-1-620x464.jpg"
-        title="The ultimate guide to time management"
-        abstract="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec venenatis elit, sed vehicula sapien. Praesent facilisis varius imperdiet. Ut et ligula quis mi viverra sodales. Vivamus lectus magna, faucibus vel ipsum. Proin iaculis, diam et placerat lacinia, odio nisl congue tellus, sed placerat nunc neque id urna. Phasellus nec massa purus."
-      />
-      <BlogInfo
-        index={0}
-        day={17}
-        month={5}
-        year={2023}
-        tags={["Salud", "Fitness", "Nutrición", "Mente"]}
-        image="./src/assets/images/blog-line-1-771x515.jpg"
-        title="The ultimate guide to time management"
-        abstract="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec venenatis elit, sed vehicula sapien. Praesent facilisis varius imperdiet. Ut et ligula quis mi viverra sodales. Vivamus lectus magna, faucibus vel ipsum. Proin iaculis, diam et placerat lacinia, odio nisl congue tellus, sed placerat nunc neque id urna. Phasellus nec massa purus."
-      />
-      <BlogInfo
-        index={0}
-        day={17}
-        month={5}
-        year={2023}
-        tags={["Salud", "Fitness", "Nutrición", "Mente"]}
-        image="./src/assets/images/blog-line-2-770x433.jpg"
-        title="The ultimate guide to time management"
-        abstract="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec venenatis elit, sed vehicula sapien. Praesent facilisis varius imperdiet. Ut et ligula quis mi viverra sodales. Vivamus lectus magna, faucibus vel ipsum. Proin iaculis, diam et placerat lacinia, odio nisl congue tellus, sed placerat nunc neque id urna. Phasellus nec massa purus."
-      />
-      </div>
+        <div className="infoBlogPost">
+          {blogData.map((data) => (
+            <div className="blog-item" key={data.index}>
+              <img src={data.image} alt={data.title} className="imgInfBlog" />
+              <div className="dayTitle">
+                {data.day && data.month && (
+                  <div className="date">
+                    <div className="month">{monthNames[data.month]}</div>
+                    <div className="day">{data.day}</div>
+                  </div>
+                )}
+                <h1 className="titleInfo">{data.title}</h1>
+              </div>
+
+              <p className="authorInfo">En CREACION DE CONTENIDO por {data.author}.</p>
+              <p className="textInfo">{data.abstract}</p>
+              <a href="#" className="btnInfo">
+                {data.btnInfo}
+              </a>
+            </div>
+          ))}
+        </div>
+
+
       <Footer />
     </div>
   );
