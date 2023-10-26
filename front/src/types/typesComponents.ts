@@ -143,6 +143,14 @@ type tpObjectStringToStrig={
 type tpFormDefault = {
     hSubmit:(bag: FormData )=>void 
 }
+type AudioPlayerProps = {
+    url?: string;
+    title?: string;
+    author?: string;
+    thumbnail?: string;
+    reseña?: string;
+    hideControls?: boolean
+  };
 
 export type {
     tpTestimonyBar,
@@ -168,5 +176,6 @@ export type {
     tpRetiroAnterior,
     tpDtmResponse,
     tpFormDefault,
-    tpObjectStringToStrig
+    tpObjectStringToStrig, 
+    AudioPlayerProps
 };
