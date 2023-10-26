@@ -41,8 +41,10 @@ type tpBlogInfo = {
     year?: number;
     image: string;
     title: string;
+    author?: string;
     tags?: string[];
     abstract?: string;
+    btnInfo?: string;
     blogContent?: React.JSX.Element;
     hselect?: ()=>void
 };

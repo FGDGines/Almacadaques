@@ -1,20 +1,10 @@
 .BlogRetiros{
-    background-color: white;
+    background-color: gray;
 }
   
-.BlogInfo > img {
-    margin-top: 3vw;
-    width: 40%;
+.contBlogInfo{
+    display: flex;
+    margin-right: 2vw;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
-.date > * {
-    font-size: 3vw;
-}
-.BlogInfo > h1 {
-    font-size: 2vw;
-    margin: 1vw 0vw;
-}
-.BlogInfo > * {
-    margin: 0;
-    font-size: 1.3vw;
-  }
-  
