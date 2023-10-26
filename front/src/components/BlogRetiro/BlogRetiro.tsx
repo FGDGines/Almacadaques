@@ -1,11 +1,35 @@
-
 import Footer from "../Footer/Footer";
 import Franja from "../Franja/Franja";
 import Navbar from "../Navbar/Navbar";
 import "./BlogRetiro.css";
-import retiroInfo from "../../data/blogRetiro"; // Importa el array retiroInfo
+import retiroInfo from "../../data/blogRetiro";
+import { DetailBlogRetiro } from "../DetailBlogRetiro/DetailBlogRetiro";
+import { useState } from "react";
+
+interface Retiro {
+  index: number;
+  day: number;
+  month: number;
+  year: number;
+  image: string;
+  title: string;
+  author: string;
+  description?: string;
+}
 
 function BlogRetiro() {
+  const [showDersail, setShowDersail] = useState(false);
+  const [selectedRetiro, setSelectedRetiro] = useState<Retiro | null>(null);
+
+  const handleTitleClick = (retiro: Retiro) => {
+    setSelectedRetiro(retiro);
+    setShowDersail(true);
+  };
+  const handleCloseDetail = () => {
+    setSelectedRetiro(null);
+    setShowDersail(false);
+  };
+
   const monthNames = [
     "NULL",
     "Ene",
@@ -26,6 +50,9 @@ function BlogRetiro() {
     <>
       <div className="BlogRetiros">
         <Navbar />
+        <div className="informacionderetiro"  style={{ display: showDersail ? 'block' : 'none' }} >
+        {showDersail && <DetailBlogRetiro retiro={selectedRetiro} onClose={handleCloseDetail} />}
+      </div>
         <Franja text="Blog Retiros" />
         <div className="blog_Retiro">
           {retiroInfo.map((retiro) => (
@@ -35,7 +62,7 @@ function BlogRetiro() {
               </div>
               <div className="infoRetiro">
                 <div className="titleRetiro">
-                  <h4>{retiro.title}</h4>
+                  <h4 onClick={() => handleTitleClick(retiro)}>{retiro.title}</h4>
                 </div>
                 <div className="time_aut">
                   <div className="time">
@@ -50,9 +77,15 @@ function BlogRetiro() {
               </div>
             </div>
           ))}
+          
         </div>
         <Footer />
+        
       </div>
+      
+
+      
+      
     </>
   );
 }

@@ -1,76 +1,154 @@
-.BlogRetiros{
-    background-color: rgb(241, 241, 241);
+.BlogRetiros {
+  background-color: white;
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  align-items: center;
 }
-.blog_Retiro{
-    width: 93.5vw;
-    padding: 3vw;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.blog_Retiro {
+  position: relative;
+  z-index: 1;
+
+  width: 93.5vw;
+  padding: 3vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-.infoCtRetiro{
-    width: 20vw;
-    background-color: white;
-    margin-bottom: 2vw;
+.infoCtRetiro {
+  width: 20vw;
+  background-color: white;
+  margin-bottom: 2vw;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.384);
 }
-.imgRetiro{
-    width: 20vw;
+.imgRetiro {
+  width: 20vw;
 }
-.imgRetiro img{
+.imgRetiro img {
+  width: 100%;
+  height: 100%;
+}
+.infoRetiro {
+  width: 20vw;
+  margin: 0;
+  padding: 0;
+}
+.titleRetiro {
+  width: 20vw;
+  cursor: pointer;
+}
+.titleRetiro h4 {
+  font-size: 1.3vw;
+  margin: 0;
+  padding: 0;
+}
+.time_aut {
+  display: flex;
+  width: 19vw;
+  align-items: center;
+  justify-content: space-around;
+}
+.time p {
+  font-size: 1.2vw;
+}
+.authorRetiro h4 {
+  font-size: 1.2vw;
+}
+.informacionderetiro {
+  width: 98vw;
+  height: 100vh;
+  padding: 1vw;
+  position: absolute;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(3px);
+  padding-top: 2vw;
+}
+@media (max-width: 780px) {
+  .blog_Retiro {
+    align-items: center;
+  }
+  .infoCtRetiro {
+    width: 40vw;
+    margin-bottom: 5vw;
+  }
+  .imgRetiro {
+    width: 40vw;
+  }
+  .imgRetiro img {
     width: 100%;
     height: 100%;
-}
-.infoRetiro{
-    width: 20vw;
+  }
+  .infoRetiro {
+    width: 40vw;
     margin: 0;
     padding: 0;
-}
-.titleRetiro{
-    width: 17vw;
-}
-.titleRetiro h4{
+  }
+  .titleRetiro {
+    width: 40vw;
+  }
+  .titleRetiro h4 {
+    font-size: 2vw;
     margin: 0;
     padding: 0;
-}
-.time_aut{
+  }
+  .time_aut {
     display: flex;
-    width: 19vw;
+    width: 40vw;
     align-items: center;
     justify-content: space-around;
+  }
+  .time p {
+    font-size: 2vw;
+  }
+  .authorRetiro h4 {
+    font-size: 2vw;
+  }
+  .titleRetiro h4 {
+    font-size: 3vw;
+    margin: 0;
+    padding: 0;
+  }
 }
 @media (max-width: 450px) {
-    .blog_Retiro{
-        flex-direction: column;
-        align-items: center;
-    }
-    .infoCtRetiro{
-        width: 90vw;
-        margin-bottom: 5vw;
-    }
-    .imgRetiro{
-        width: 90vw;
-    }
-    .imgRetiro img{
-        width: 100%;
-        height: 100%;
-    }
-    .infoRetiro{
-        width: 90vw;
-        margin: 0;
-        padding: 0;
-    }
-    .titleRetiro{
-        width: 87vw;
-    }
-    .titleRetiro h4{
-        font-size: 5vw;
-        margin: 0;
-        padding: 0;
-    }
-    .time_aut{
-        display: flex;
-        width: 89vw;
-        align-items: center;
-        justify-content: space-around;
-    }
+  .blog_Retiro {
+    flex-direction: column;
+    align-items: center;
+  }
+  .infoCtRetiro {
+    width: 90vw;
+    margin-bottom: 5vw;
+  }
+  .imgRetiro {
+    width: 90vw;
+  }
+  .imgRetiro img {
+    width: 100%;
+    height: 100%;
+  }
+  .infoRetiro {
+    width: 90vw;
+    margin: 0;
+    padding: 0;
+  }
+  .titleRetiro {
+    width: 87vw;
+  }
+  .titleRetiro h4 {
+    font-size: 5vw;
+    margin: 0;
+    padding: 0;
+  }
+  .time_aut {
+    display: flex;
+    width: 89vw;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .time p {
+    font-size: 4vw;
+  }
+  .authorRetiro h4 {
+    font-size: 4vw;
+  }
 }

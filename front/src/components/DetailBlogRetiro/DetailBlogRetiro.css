@@ -1,0 +1,59 @@
+@import "../../fonts.css";
+.previRetiro{
+    background-color: white;
+    width: 70vw;
+    margin-left: 15vw; 
+    max-height: 75vh;
+    overflow: auto;
+    padding-bottom: 2w;
+
+}
+.ctPreviRetiro{
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+    display: flex;
+    align-items: center;
+
+}
+.closePreviRetiro{
+    cursor: pointer;
+    width: 60vw;
+    display: flex;
+    justify-content: flex-end;
+}
+.imgPreviRetiro{
+    width: 40vw;
+}
+.imgPreviRetiro img{
+    width: 100%;
+    height: 100%;
+}
+.titlePreviRetiro{
+    text-align: center;
+    font-size: 2.5vw;
+    width: 60vw;
+    margin-bottom: 1vw;
+}
+.titlePreviRetiro h4{
+    margin: 0;
+}
+.dataPreviRetiro{
+    width:60vw;
+    font-size: 2vw;
+    display: flex;
+}
+.dataPreviRetiro h4{
+    margin: 0;
+    margin-right: 2vw;
+}
+.dataPreviRetiro .firma{
+    
+    font-family: 'Great vibes', cursive;
+}
+.descripPreviRetiro{
+    width:60vw;
+}
+.descripPreviRetiro p{
+    font-size: 1.5vw;
+}
