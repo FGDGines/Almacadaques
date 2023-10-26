@@ -68,7 +68,7 @@
 @media (max-width: 450px) {
     .previRetiro{
         width: 90vw;
-        margin-top: 10vw;
+        margin-top: 5vw;
         margin-left: 3vw;
     }
     .imgPreviRetiro{
@@ -103,6 +103,6 @@
         width:70vw;
     }
     .descripPreviRetiro p{
-        font-size: 5vw;
+        font-size: 4vw;
     }
 }
