@@ -1,10 +1,76 @@
 .BlogRetiros{
-    background-color: gray;
+    background-color: rgb(241, 241, 241);
 }
-  
-.contBlogInfo{
+.blog_Retiro{
+    width: 93.5vw;
+    padding: 3vw;
     display: flex;
-    margin-right: 2vw;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+.infoCtRetiro{
+    width: 20vw;
+    background-color: white;
+    margin-bottom: 2vw;
+}
+.imgRetiro{
+    width: 20vw;
+}
+.imgRetiro img{
+    width: 100%;
+    height: 100%;
+}
+.infoRetiro{
+    width: 20vw;
+    margin: 0;
+    padding: 0;
+}
+.titleRetiro{
+    width: 17vw;
+}
+.titleRetiro h4{
+    margin: 0;
+    padding: 0;
+}
+.time_aut{
+    display: flex;
+    width: 19vw;
+    align-items: center;
+    justify-content: space-around;
+}
+@media (max-width: 450px) {
+    .blog_Retiro{
+        flex-direction: column;
+        align-items: center;
+    }
+    .infoCtRetiro{
+        width: 90vw;
+        margin-bottom: 5vw;
+    }
+    .imgRetiro{
+        width: 90vw;
+    }
+    .imgRetiro img{
+        width: 100%;
+        height: 100%;
+    }
+    .infoRetiro{
+        width: 90vw;
+        margin: 0;
+        padding: 0;
+    }
+    .titleRetiro{
+        width: 87vw;
+    }
+    .titleRetiro h4{
+        font-size: 5vw;
+        margin: 0;
+        padding: 0;
+    }
+    .time_aut{
+        display: flex;
+        width: 89vw;
+        align-items: center;
+        justify-content: space-around;
+    }
 }

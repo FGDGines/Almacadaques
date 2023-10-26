@@ -1,0 +1,68 @@
+const retiroInfo = [
+    {
+      index: 0,
+      day: 17,
+      month: 5,
+      year: 2023,
+      image: "./src/assets/images/blog-line-1-620x464.jpg",
+      title: "The ultimate guide to time management",
+      author: "Alejandro Pérez",
+    },
+    {
+      index: 1,
+      day: 24,
+      month: 7,
+      year: 2023,
+      image: "./src/assets/images/blog-line-1-620x464.jpg",
+      title: "The ultimate guide to time management",
+      author: "Laura Martínez",
+    },
+    {
+      index: 2,
+      day: 25,
+      month: 7,
+      year: 2023,
+      image: "./src/assets/images/blog-line-1-620x464.jpg",
+      title: "The ultimate guide to time management",
+      author: "Carlos Rodríguez",
+    },
+    {
+      index: 3,
+      day: 26,
+      month: 7,
+      year: 2023,
+      image: "./src/assets/images/blog-line-1-620x464.jpg",
+      title: "The ultimate guide to time management",
+      author: "Andres Brito",
+    },
+    {
+      index: 4,
+      day: 15,
+      month: 8,
+      year: 2023,
+      image: "./src/assets/images/blog-line-1-620x464.jpg",
+      title: "Effective Communication Strategies",
+      author: "Ana Sánchez",
+    },
+    {
+      index: 5,
+      day: 21,
+      month: 9,
+      year: 2023,
+      image: "./src/assets/images/blog-line-1-620x464.jpg",
+      title: "Achieving Work-Life Balance",
+      author: "Luis Ramirez",
+    },
+    {
+      index: 6,
+      day: 8,
+      month: 10,
+      year: 2023,
+      image: "./src/assets/images/blog-line-1-620x464.jpg",
+      title: "Mastering Time Management",
+      author: "Maria Fernández",
+    },
+  ];
+  
+  export default retiroInfo;
+  
