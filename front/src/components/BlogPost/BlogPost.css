@@ -73,13 +73,14 @@
       width: 45vw;
   }
   .blog-item{
-    width: 40vw;
+    width: 43vw;
+    padding: 2vw;
   }
   .ctBlogInf{
       width: 44vw;
   }
   .imgInfBlog{
-      width: 40vw;
+      width: 43vw;
   }
 
   .date .month{
