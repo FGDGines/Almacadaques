@@ -1,0 +1,68 @@
+.Podcast {
+  background-color: white;
+}
+.ctPricipalPod {
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between;
+  width: 90vw;
+  min-height: 70vh;
+  padding: 20px;
+  background-color: white;
+}
+.ctPodcast {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  height: 90vh;
+  overflow-y: scroll;
+  width: 50%;
+  border-radius: 10px;
+}
+.ctPodcast div audio:first-of-type {
+  display: none;
+}
+@media (max-width: 800px) {
+  .ctPricipalPod {
+    flex-direction: column;
+    .ctPodcast {
+      max-height: none;
+      width: 100%;
+    }
+  }
+}
+
+.ctMiniaturas{
+  width: 100%;
+  height: 90vh;
+}
+.ctFormVistos {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  min-height: 70vh;
+  background-color: white;
+  margin: 0 auto;
+}
+@media (max-width: 800px) {
+  .ctFormVistos {
+    width: 100%;
+  }
+}
+.ctMasrecientes {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-height: 800px;
+  overflow-y: scroll;
+  width: 100%;
+  border-radius: 10px;
+  height: 25vh;
+}
+.ctMasvistos {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-height: 800px;
+  overflow-y: scroll;
+  width: 100%;
+  border-radius: 10px;
+  height: 25vh;
+}

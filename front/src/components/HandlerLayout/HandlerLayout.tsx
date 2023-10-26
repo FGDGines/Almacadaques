@@ -14,6 +14,7 @@ import { PoliticayPrivacidad } from "../PoliticayPriacidad/PoliticayPrivacidad";
 import { PoliticaCookies } from "../PoliticadeCookies/PoliticaCookies";
 import { AvisoLegal } from "../AvisoLegal/AvisoLegal";
 import { BlogRetiro } from "../BlogRetiro/BlogRetiro";
+import Podcast from "../Podcast/Podcast";
 
 
 const HandlerLayout = () => {
@@ -66,6 +67,9 @@ const HandlerLayout = () => {
     case 14:
           screen = <BlogRetiro />;
           break;
+    case 15:
+      screen = <Podcast />
+      break ; 
   
   
 

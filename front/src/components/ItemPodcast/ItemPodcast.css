@@ -1,0 +1,192 @@
+
+.ctReproductor{
+  width: 80%;
+  margin: 20px auto;
+}
+.custom-container {
+    background-color: #CF1348; 
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    padding: 1rem;
+    display: flex;
+    margin: 0 auto;
+  }
+  @media (max-width: 800px) {
+    .custom-container {
+  
+    }
+  }
+  
+  
+  .custom-image {
+    max-width: 150px; 
+    max-height: 150px;
+    border-radius: 0.375rem; 
+    background-color: #f0f0f0; 
+  }
+  
+ 
+  .ctTitulo{
+    color:  white;
+    font-size: 3vh;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  
+  .ctReseña{
+    color:  white;
+    font-size: 1.1vw;
+    font-weight: 400;
+    text-align: justify;
+
+  }
+  .ctAutor {
+    color: #ffffff; 
+    text-transform: capitalize; 
+  }
+  .ctImageAuthor {
+     margin-right: 1.5vw;
+  }
+  
+  /* Contenedor principal */
+.contenedorPrincipal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  margin-bottom: 20px;
+
+}
+
+
+@media (max-width: 800px) {
+  .contenedorPrincipal {
+  }
+}
+
+
+/* Contenedor de la barra de progreso */
+.barraDeProgreso {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Ancho total */
+}
+
+/* Duración: tiempo transcurrido */
+.duracionTranscurrida {
+  margin-right: 10px;
+  
+}
+
+/* Barra de progreso horizontal */
+.barraHorizontal {
+  width: 100%; /* Ancho total */
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  height: 10px;
+  position: relative;
+}
+
+.barraHorizontal input {
+  width: 100%;
+  height: 100%;
+  background-color: #CF1348; /* Color de la barra de progreso */
+  border-radius: 5px;
+  transition: width 0.3s ease;
+}
+
+/* Duración: tiempo restante */
+.duracionRestante {
+  margin-left: 10px;
+}
+
+/* Contenedor de los controles */
+.controles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Botón de bucle */
+.botonDeBucle {
+  margin: 0 10px;
+  background-color: #CF1348;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.botonDeBucle:hover {
+  background-color: #a3103a; /* Cambiar color al pasar el ratón */
+}
+
+/* Botón de reproducción/pausa */
+.botonReproducirPausar {
+  background-color: #e02b5e;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.botonReproducirPausar:hover {
+  background-color: #a3103a; /* Cambiar color al pasar el ratón */
+}
+.button_slide {
+  color: #FFF;
+  border: 2px solid rgb(216, 2, 134);
+  display: inline-block;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0#a3103a;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+}
+
+.slide_down:hover {
+  box-shadow: inset 0 100px 0 0 #a3103a;
+}
+
+/* Contenedor de control de volumen */
+.contenedorDeVolumen {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+
+/* Botón de silencio */
+.botonDeSilencio {
+  background-color: #CF1348;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 5px;
+}
+
+.botonDeSilencio:hover {
+  background-color: #a3103a; /* Cambiar color al pasar el ratón */
+}
+
+/* Control de volumen */
+.controlDeVolumen {
+  width: 100px;
+}
+
+

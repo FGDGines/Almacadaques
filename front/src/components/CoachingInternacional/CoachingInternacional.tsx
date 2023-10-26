@@ -32,14 +32,6 @@ const CoachingInternacional = () => {
 
 
             <div className="containerInnformacion2">
-                <span style={{ color: "#75151E" }}> ❝ </span>
-                <p className='parrafoSpan'>Cuando uno toma la determinación de liderar su vida, posiblemente después de alguna crisis o desajuste, el acompañamiento de un coach lo puede ayudar a acelerar y lograr mejores resultados</p>
-                <span style={{ color: "#75151E" }}> ❞<p className='autorParrafo'>. Herminia Gomá.</p> </span>
-
-                <div className="containerImg1">
-                    <img src="../../../src/assets/images/img_coaching_internacional.jpg" className='imgInternacional' alt="Imagen de coaching" />
-                </div>
-                
 
 
                 <div className="testimonio">
