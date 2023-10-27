@@ -4,6 +4,8 @@ import { security_post } from "../../middlewares/Security";
 import { Create } from "../controllers/testimony/Create";
 import { check } from "express-validator";
 import { Delete } from "../controllers/testimony/Delete";
+import { Update } from "../controllers/testimony/Update";
+import { Read } from "../controllers/testimony/Read";
 
 const app = Router()
 
@@ -14,8 +16,15 @@ app.post('/create' , [security_post  ,
     check('testimony_cat','El testomonio en catalan es obligatorio').not().isEmpty()
     , validarCampos] , Create)
 
+app.post('/update', [security_post ,
+    check('id', 'El testimonio a editar es obligatorio').not().isEmpty()
+     , validarCampos] , Update)
+
 app.post('/delete', [security_post , 
     check('id','El testimonio a eliminar es obligatorio').isNumeric()
      , validarCampos] , Delete)
 
+app.post('/read',[
+    // check('lang', "El idioma es obligatorio").not().isEmpty(), 
+    validarCampos] ,Read)
 module.exports = app
