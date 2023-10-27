@@ -3,9 +3,10 @@
     background-color: white;
     width: 70vw;
     margin-left: 15vw; 
-    max-height: 75vh;
+    max-height: 90vh;
     overflow: auto;
     padding-bottom: 2w;
+    border: 1px solid red;
 
 }
 .ctPreviRetiro{
@@ -22,13 +23,18 @@
     display: flex;
     justify-content: flex-end;
 }
-.imgPreviRetiro{
-    width: 40vw;
+
+.wrapperRetiro .carouselRetiro{
+    white-space: nowrap;
 }
-.imgPreviRetiro img{
-    width: 100%;
-    height: 100%;
+.carouselRetiro img{
+    width: 17vw;
+    object-fit: cover;
+    margin-right: 1.5vw;
 }
+
+
+
 .titlePreviRetiro{
     text-align: center;
     font-size: 2.5vw;

@@ -1,4 +1,5 @@
 import './DetailBlogRetiro.css';
+
 interface Retiro {
     index: number;
     day: number;
@@ -30,7 +31,7 @@ const monthNames = [
   ];
   function DetailBlogRetiro({ retiro, onClose }: DetailBlogRetiroProps) {
     if (!retiro) {
-      return null; // O maneja el caso cuando retiro es nulo.
+      return null;
     }
 
     return (
@@ -39,9 +40,14 @@ const monthNames = [
                 <div className="closePreviRetiro" onClick={onClose}>
                     <img src="../../../src/assets/images/cerrar.png" alt="Cerrar" />
                 </div>
-                <div className="imgPreviRetiro">
-                    <img src={retiro.image} alt="Imagen retiro" />
-                </div>
+                
+                    <div className="wrapperRetiro">
+                        <div className="carouselRetiro">
+                            <img src={retiro.image} alt="Retiro" />
+                            <img src={retiro.image} alt="Retiro" />
+                            <img src={retiro.image} alt="Retiro" />
+                        </div>
+                    </div>
                 <div className="titlePreviRetiro">
                     <h4>{retiro.title}</h4>
                 </div>
