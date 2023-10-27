@@ -12,8 +12,6 @@ import { podcastData } from "../../data/listPodcast";
 
 const Podcast = () => {
 
-
-
     const enviarFormulario = (bag: FormData) => {
         bag.set('fragment', 'Contactar')
         fetchDefault('/mail/create', { body: JSON.stringify(formDataToObject(bag)) })
@@ -29,7 +27,7 @@ const Podcast = () => {
             <div className="ctFormVistos">
 
                 <div className="ctMiniaturas">
-                <h2>Mas recientes</h2>
+                     <h2 className='ctTitulos'>Mas recientes</h2>
                     <div className="ctMasrecientes">
                         {podcastData.map((podcast, index) => (
                             <AudioPlayer
@@ -37,11 +35,13 @@ const Podcast = () => {
                                 url={podcast.url}
                                 title={podcast.title}
                                 thumbnail={podcast.thumbnail}
+                                fecha={podcast.fecha}
                                 hideControls={true} 
+                                author={podcast.author}
                             />
                         ))}
                     </div>  
-                    <h2>Mas vistos </h2>
+                    <h2 className='ctTitulos'>Mas vistos</h2>
                     <div className="ctMasvistos">
                     
                         {podcastData.map((podcast, index) => (
@@ -51,6 +51,8 @@ const Podcast = () => {
                                 title={podcast.title}
                                 thumbnail={podcast.thumbnail}
                                 hideControls={true} 
+                                fecha={podcast.fecha}
+                                author={podcast.author}
                             />
                         ))}
 
@@ -75,6 +77,7 @@ const Podcast = () => {
                         author={podcast.author}
                         thumbnail={podcast.thumbnail}
                         reseña={podcast.reseña}
+                        fecha={podcast.fecha}
                         
                     />
                 ))}
