@@ -25,7 +25,8 @@ const CoachingInternacional = () => {
                     <p className='parrafo'>{textos[languageFlag].textcoachinginterna2}</p>
                     <p className='parrafo'>{textos[languageFlag].textcoachinginterna3}</p>
                     <p className='parrafo'>{textos[languageFlag].textcoachinginterna4}</p>
-                    <p className='parrafo'>{textos[languageFlag].textcoachinginterna5}</p>
+                    <p className='parrafo'>{textos[languageFlag].textcoachinginterna5} <span className='TeAcompaño'>¿Te acompaño?</span></p>
+
                 </div>
 
             </div>
@@ -42,7 +43,7 @@ const CoachingInternacional = () => {
                                 key={testimony.id}
                                 id={testimony.id}
                                 witness={testimony.witness}
-                                image={testimony.image}
+                                // image={testimony.image}
                                 day={testimony.day}
                                 month={testimony.month}
                                 year={testimony.year}
