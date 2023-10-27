@@ -59,12 +59,44 @@ const Rol = DB.define('role', {
     }
 })
 
+const Testimonio = DB.define('testimonio', {
+    witness: {
+        type: DataTypes.STRING
+    },
+    id_data: {
+        type: DataTypes.STRING
+    },
+    deletedAt:{
+        type: DataTypes.DATE, 
+        allowNull: true
+    }
+}, {
+    paranoid: true
+})
+
+
+const DataTestimonio = DB.define("data_testimonys", {
+    es:{
+        type: DataTypes.STRING
+    },
+    en:{
+        type: DataTypes.STRING
+    },
+    cat:{
+        type: DataTypes.STRING
+    }
+})
+
 User.belongsTo(DataUser,{foreignKey: 'id_data_user'})
 DataUser.belongsTo(Rol,{foreignKey: 'id_rol'})
+Testimonio.belongsTo(DataTestimonio , {foreignKey: 'id_data'})
+
 
 export {
     DataUser, 
     Mensaje,
     Rol, 
-    User
+    User,
+    Testimonio,
+    DataTestimonio
 }
