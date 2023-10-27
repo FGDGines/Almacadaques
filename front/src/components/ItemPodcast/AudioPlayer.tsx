@@ -7,7 +7,7 @@ import './ItemPodcast.css'
 
 
 
-export const AudioPlayer = ({ url, title, author, thumbnail, reseña, hideControls }: AudioPlayerProps) => {
+export const AudioPlayer = ({ url, title, author, thumbnail, reseña, hideControls, fecha }: AudioPlayerProps) => {
   const playerRef = useRef<ReactPlayer | null>(null);
   const [playing, setPlaying] = useState<boolean>(false);
   const [muted, setMuted] = useState<boolean>(false);
@@ -62,7 +62,7 @@ export const AudioPlayer = ({ url, title, author, thumbnail, reseña, hideContro
       />
 
       <div className="ctReproductor">
-        <AudioDetails title={title} author={author} thumbnail={thumbnail} reseña={reseña} />
+        <AudioDetails title={title} author={author} thumbnail={thumbnail} reseña={reseña} fecha={fecha}/>
         {!hideControls && (
           <PlayerControls
             playerRef={playerRef}

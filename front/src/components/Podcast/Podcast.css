@@ -1,6 +1,13 @@
 .Podcast {
   background-color: white;
 }
+
+.ctTitulos {
+  font-size: 1.5rem;
+  color: #a3103a;
+  font-weight: 600; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 .ctPricipalPod {
   margin: 20px auto;
   display: flex;
@@ -31,7 +38,7 @@
   }
 }
 
-.ctMiniaturas{
+.ctMiniaturas {
   width: 100%;
   height: 90vh;
 }
@@ -55,7 +62,7 @@
   overflow-y: scroll;
   width: 100%;
   border-radius: 10px;
-  height: 25vh;
+  height: 30vh;
 }
 .ctMasvistos {
   background-color: #fff;
@@ -64,5 +71,6 @@
   overflow-y: scroll;
   width: 100%;
   border-radius: 10px;
-  height: 25vh;
+  height: 30vh;
 }
+

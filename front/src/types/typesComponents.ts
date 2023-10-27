@@ -27,7 +27,7 @@ type tpTestimonyBar = {
 type tpTestimony = {
     id: number;
     witness: string;
-    image: string;
+    image?: string;
     day: number;
     month: number;
     year: number;
@@ -146,6 +146,7 @@ type tpFormDefault = {
     hSubmit:(bag: FormData )=>void 
 }
 type AudioPlayerProps = {
+    fecha?:string;
     url?: string;
     title?: string;
     author?: string;

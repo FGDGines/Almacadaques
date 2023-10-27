@@ -79,6 +79,8 @@ export const PlayerControls = ({
 
   return (
       <div className="contenedorPrincipal">
+
+        <div className="containerWhite">
         <div className="barraDeProgreso">
           {/* Duración: tiempo transcurrido */}
           <div className="duracionTranscurrida">
@@ -153,6 +155,8 @@ export const PlayerControls = ({
             />
           </div>
         </div>
+        </div>
+       
       </div>
   );
 };

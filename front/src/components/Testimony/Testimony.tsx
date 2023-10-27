@@ -25,7 +25,7 @@ const Testimony: FC<tpTestimony> = ({
       </div>
 
       <div className="witness">
-        <img src={image} alt={witness} />
+        {/* <img src={image} alt={witness} /> */}
         <h4>{witness}</h4>
         <div className="date">
           {day}.{month}.{year}
