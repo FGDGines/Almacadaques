@@ -23,7 +23,7 @@ export const ListaColaboradores: Colaborador[] = [
 {
     nombre: 'Maribel Salvador',
     cargo: 'CEO maribelsalvador.com',
-    descripcion: 'Creadora de Happy Dance, una propuesta de danza lúdica creada para disfrutar y ganar consciencia física y energética',
+    descripcion: 'Acompanya empreses i organitzacions perquè els seus professionals i equips millorin, gràcies a la comunicació emocional aplicada al lideratge i al treball en equip. ',
     imagen: '../../src/assets/imagen_colaboradores/colaboradores4.jpeg',
     contacto: 'https://www.linkedin.com/in/maribel-salvador-alcaraz-formacion/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
 },
