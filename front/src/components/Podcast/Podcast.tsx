@@ -35,7 +35,9 @@ const Podcast = () => {
                                 url={podcast.url}
                                 title={podcast.title}
                                 thumbnail={podcast.thumbnail}
+                                fecha={podcast.fecha}
                                 hideControls={true} 
+                                author={podcast.author}
                             />
                         ))}
                     </div>  
@@ -49,6 +51,8 @@ const Podcast = () => {
                                 title={podcast.title}
                                 thumbnail={podcast.thumbnail}
                                 hideControls={true} 
+                                fecha={podcast.fecha}
+                                author={podcast.author}
                             />
                         ))}
 
@@ -73,6 +77,7 @@ const Podcast = () => {
                         author={podcast.author}
                         thumbnail={podcast.thumbnail}
                         reseña={podcast.reseña}
+                        fecha={podcast.fecha}
                         
                     />
                 ))}

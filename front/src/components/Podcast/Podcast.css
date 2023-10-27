@@ -5,7 +5,8 @@
 .ctTitulos {
   font-size: 1.5rem;
   color: #a3103a;
-  font-weight: 600;
+  font-weight: 600; 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .ctPricipalPod {
   margin: 20px auto;
