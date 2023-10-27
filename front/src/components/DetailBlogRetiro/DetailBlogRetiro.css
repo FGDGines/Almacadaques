@@ -6,7 +6,7 @@
   max-height: 90vh;
   overflow: auto;
   padding-bottom: 2w;
-  border: 1px solid red;
+  border: 1px solid rgb(206, 206, 206);
 }
 .ctPreviRetiro {
   display: flex;
