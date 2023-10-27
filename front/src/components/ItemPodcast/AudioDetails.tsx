@@ -9,7 +9,6 @@ export const AudioDetails = ({ title, author, thumbnail, reseña }: Props) => {
   return (
     <div className="custom-container">
 
-
       <div className="ctImageAuthor">
         <img
           src={thumbnail}

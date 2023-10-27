@@ -12,8 +12,6 @@ import { podcastData } from "../../data/listPodcast";
 
 const Podcast = () => {
 
-
-
     const enviarFormulario = (bag: FormData) => {
         bag.set('fragment', 'Contactar')
         fetchDefault('/mail/create', { body: JSON.stringify(formDataToObject(bag)) })
@@ -29,7 +27,7 @@ const Podcast = () => {
             <div className="ctFormVistos">
 
                 <div className="ctMiniaturas">
-                <h2>Mas recientes</h2>
+                     <h2 className='ctTitulos'>Mas recientes</h2>
                     <div className="ctMasrecientes">
                         {podcastData.map((podcast, index) => (
                             <AudioPlayer
@@ -41,7 +39,7 @@ const Podcast = () => {
                             />
                         ))}
                     </div>  
-                    <h2>Mas vistos </h2>
+                    <h2 className='ctTitulos'>Mas vistos</h2>
                     <div className="ctMasvistos">
                     
                         {podcastData.map((podcast, index) => (
