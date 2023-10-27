@@ -27,7 +27,7 @@ type tpTestimonyBar = {
 type tpTestimony = {
     id: number;
     witness: string;
-    image: string;
+    image?: string;
     day: number;
     month: number;
     year: number;
