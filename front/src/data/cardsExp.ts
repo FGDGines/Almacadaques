@@ -10,7 +10,7 @@ export const cardsData: tpCardM1[] = [
         body: ['• Creencias limitantes' , '• Quejas' , '• Negatividad' , '• Todo aquello que ya no te sirve']
     },
     {
-        title:'Sumar a tu Vida',
+        title:'Atraer a tu Vida',
         body: ['• Abundancia' , '• Paz interna' , '• Amor y autoestima' , '• Alegría y empoderamiento' ]
     
     }
