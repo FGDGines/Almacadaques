@@ -1,5 +1,5 @@
 .BlogRetiros {
-  background-color: rgb(167, 167, 167);
+  background-color: rgb(240, 240, 240);
   display: flex;
   width: 100vw;
   flex-direction: column;
@@ -16,6 +16,7 @@
 }
 .infoCtRetiro {
   width: 20vw;
+  border-radius: .4vw;
   background-color: white;
   margin-bottom: 2vw;
 }
@@ -27,30 +28,30 @@
   height: 100%;
 }
 .infoRetiro {
-  width: 20vw;
+  width: 18vw;
   margin: 0;
-  padding: 0;
+  padding: 1vw;
 }
 .titleRetiro {
   width: 20vw;
   cursor: pointer;
 }
 .titleRetiro h4 {
-  font-size: 1.3vw;
+  font-size: 1.2vw;
   margin: 0;
   padding: 0;
 }
 .time_aut {
   display: flex;
-  width: 19vw;
+  width: 17vw;
   align-items: center;
   justify-content: space-around;
 }
 .time p {
-  font-size: 1.2vw;
+  font-size: 1.1vw;
 }
 .authorRetiro h4 {
-  font-size: 1.2vw;
+  font-size: 1.1vw;
 }
 .informacionderetiro {
   width: 98vw;
@@ -79,15 +80,15 @@
     height: 100%;
   }
   .infoRetiro {
-    width: 40vw;
+    width: 38vw;
     margin: 0;
-    padding: 0;
+    padding: 1vw;
   }
   .titleRetiro {
     width: 40vw;
   }
   .titleRetiro h4 {
-    font-size: 2vw;
+    font-size: 1.5vw;
     margin: 0;
     padding: 0;
   }
