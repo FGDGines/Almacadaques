@@ -25,6 +25,6 @@ app.post('/delete', [security_post ,
      , validarCampos] , Delete)
 
 app.post('/read',[
-    // check('lang', "El idioma es obligatorio").not().isEmpty(), 
+    check('lang', "El idioma es obligatorio").not().isEmpty(), 
     validarCampos] ,Read)
 module.exports = app

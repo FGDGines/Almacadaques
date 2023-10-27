@@ -1,13 +1,19 @@
 import { Request, Response } from "express";
-import { Testimonio } from "../../../db/models";
+import { Testimonio , DataTestimonio} from "../../../db/models";
 
 export const Read = async ( req: Request ,res: Response)=>{
     const {body} = req
-    const {} = body
+    const {lang} = body
+
+    if(lang != "es" && lang != 'en' && lang != 'cat')return res.status(200).json({status: 400, msg: 'Debe proporcionar un idioma válido '})
 
     try{
         const tTestimonios = await Testimonio.findAll({
-            include:[{all:true}], 
+            attributes:['witness'] , 
+            include:[{
+                model: DataTestimonio, 
+                attributes:[lang]            
+            }], 
             paranoid: true
         })
 
