@@ -1,114 +1,155 @@
 @import "../../fonts.css";
-.previRetiro{
-    background-color: white;
-    width: 70vw;
-    margin-left: 15vw; 
-    max-height: 90vh;
-    overflow: auto;
-    padding-bottom: 2w;
-    border: 1px solid red;
-
+.previRetiro {
+  background-color: white;
+  width: 70vw;
+  margin-left: 15vw;
+  max-height: 90vh;
+  overflow: auto;
+  padding-bottom: 2w;
+  border: 1px solid red;
 }
-.ctPreviRetiro{
-    display: flex;
-    flex-direction: column;
-    padding: 2vw;
-    display: flex;
-    align-items: center;
-
+.ctPreviRetiro {
+  display: flex;
+  flex-direction: column;
+  padding: 2vw;
+  display: flex;
+  align-items: center;
 }
-.closePreviRetiro{
+.closePreviRetiro {
+  cursor: pointer;
+  width: 60vw;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.wrapperRetiro {
+  display: flex;
+  max-width: 50vw;
+  position: relative;
+}
+.wrapperRetiro .FlechaIMG {
+    top: 50%;
+    height: 3vw;
+    width: 3vw;
     cursor: pointer;
-    width: 60vw;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.wrapperRetiro .carouselRetiro{
-    white-space: nowrap;
-}
-.carouselRetiro img{
-    width: 17vw;
-    object-fit: cover;
-    margin-right: 1.5vw;
-}
-
-
-
-.titlePreviRetiro{
+    font-size: 1.15rem;
+    position: absolute;
     text-align: center;
-    font-size: 2.5vw;
-    width: 60vw;
-    margin-bottom: 1vw;
+    line-height: 44px;
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
 }
-.titlePreviRetiro h4{
-    margin: 0;
+.wrapper .FlechaIMG:active{
+    transform: translateY(-50%) scale(0.9);
+  }
+.wrapperRetiro .FlechaIMG:first-child {
+  left: -3vw;
 }
-.dataPreviRetiro{
-    width:60vw;
-    font-size: 2vw;
-    display: flex;
+.wrapperRetiro .FlechaIMG:last-child {
+  left: 51vw;
 }
-.dataPreviRetiro h4{
-    margin: 0;
-    margin-right: 2vw;
+.wrapperRetiro .carouselRetiro {
+    font-size: 0px;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
 }
-.dataPreviRetiro .firma{
-    
-    font-family: 'Great vibes', cursive;
+.carouselRetiro.dragging{
+    cursor: grab;
+    scroll-behavior: auto;
+  }
+.carouselRetiro img {
+  height: 300px;
+  object-fit: cover;
+  user-select: none;
+  margin-left: 14px;
+  width: calc(100% / 3);
 }
-.descripPreviRetiro{
-    width:60vw;
+.carouselRetiro img:first-child {
+  margin-left: 0;
 }
-.descripPreviRetiro p{
-    font-size: 1.5vw;
+
+.titlePreviRetiro {
+  text-align: center;
+  font-size: 2.5vw;
+  width: 60vw;
+  margin-bottom: 1vw;
+}
+.titlePreviRetiro h4 {
+  margin: 0;
+}
+.dataPreviRetiro {
+  width: 60vw;
+  font-size: 2vw;
+  display: flex;
+}
+.dataPreviRetiro h4 {
+  margin: 0;
+  margin-right: 2vw;
+}
+.dataPreviRetiro .firma {
+  font-family: "Great vibes", cursive;
+}
+.descripPreviRetiro {
+  width: 60vw;
+}
+.descripPreviRetiro p {
+  font-size: 1.5vw;
 }
 @media (max-width: 780px) {
-    .closePreviRetiro img{
-        width: 3vw;
-    }
-    .descripPreviRetiro p{
-        font-size: 2vw;
-    }
+  .carouselRetiro img {
+    width: 25vw;
+  }
+  .closePreviRetiro img {
+    width: 3vw;
+  }
+  .descripPreviRetiro p {
+    font-size: 2vw;
+  }
 }
 @media (max-width: 450px) {
-    .previRetiro{
-        width: 90vw;
-        margin-top: 5vw;
-        margin-left: 3vw;
-    }
-    .imgPreviRetiro{
-        width: 70vw;
-    }
-    .closePreviRetiro{
-        width: 80vw;
-    }
-    .closePreviRetiro img{
-        width: 5vw;
-        margin-bottom: 4vw;
-    }
-    .descripPreviRetiro p{
-        font-size: 5vw;
-    }
+  .previRetiro {
+    width: 90vw;
+    margin-top: 5vw;
+    margin-left: 3vw;
+  }
+  .wrapperRetiro {
+    height: 30vh;
+  }
+  .carouselRetiro img {
+    width: 50vw;
+  }
 
-    .titlePreviRetiro{
-        font-size: 5vw;
-        text-align: start;
-        width: 70vw;
-        margin-bottom: 4vw;
-    }
-    
-    .dataPreviRetiro{
-        width:70vw;
-        font-size: 4vw;
-    }
-    .dataPreviRetiro h4{
-        margin-right: 4vw;
-    }
-    .descripPreviRetiro{
-        width:70vw;
-    }
-    .descripPreviRetiro p{
-        font-size: 4vw;
-    }
+  .closePreviRetiro {
+    width: 80vw;
+  }
+  .closePreviRetiro img {
+    width: 5vw;
+    margin-bottom: 4vw;
+  }
+  .descripPreviRetiro p {
+    font-size: 5vw;
+  }
+
+  .titlePreviRetiro {
+    font-size: 5vw;
+    text-align: start;
+    width: 70vw;
+    margin-bottom: 4vw;
+  }
+
+  .dataPreviRetiro {
+    width: 70vw;
+    font-size: 4vw;
+  }
+  .dataPreviRetiro h4 {
+    margin-right: 4vw;
+  }
+  .descripPreviRetiro {
+    width: 70vw;
+  }
+  .descripPreviRetiro p {
+    font-size: 4vw;
+  }
 }
