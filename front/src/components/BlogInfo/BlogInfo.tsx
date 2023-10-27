@@ -1,7 +1,7 @@
 import { FC, useContext } from "react";
 import { tpBlogInfo } from "../../types/typesComponents";
 import { GlobalContext } from "../../contexts/GlobalContext";
-import './BlogInfo.css'
+import './BlogInfo.css';
 
 
 const BlogInfo: FC<tpBlogInfo> = ({
@@ -12,6 +12,8 @@ const BlogInfo: FC<tpBlogInfo> = ({
   day,
   month,
   year,
+  author,
+  btnInfo,
 }) => {
   const { setLayoutID } = useContext(GlobalContext);
   const gotoPost = () => {
@@ -40,16 +42,15 @@ const BlogInfo: FC<tpBlogInfo> = ({
       <div className="ctBlogInf">
         <img src={thumbnail} alt={title} className="imgInfBlog" />
         <div className="dayTitle">
-          {day !== undefined && month !== undefined && year !== undefined && (
-            <div className="date">
-              <div className="month">{monthStr[month]}</div>
-              <div className="day">{day}</div>
-            </div>
-          )}
+          {year && <div className="year">{year}</div>}
+          {month && <div className="month">{monthStr[month]}</div>}
+          {day && <div className="day">{day}</div>}
+          <p className="authorInfo">{author}</p>
           <h1 onClick={gotoPost} className="titleInfo">{title}</h1>
         </div>
+
         <p className="textInfo">{abstract}</p>
-        <a href="#" className="btnInfo">READ MORE</a>
+        <a href="#" className="btnInfo">{btnInfo}</a>
       </div>
 
 

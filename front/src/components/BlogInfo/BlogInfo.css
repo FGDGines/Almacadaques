@@ -25,12 +25,17 @@
 }
 .date .month{
     margin-right: .2vw;
-    font-size: 1.3vw;
+    font-size: 2vw;
     color: gray;
 }
 .date .day{
     color: gray;
-    font-size: 1.3vw;
+    font-size: 2vw;
+    margin-right: 1vw;
+}
+.data .year{
+    color: gray;
+    font-size: 2vw;
     margin-right: 1vw;
 }
 .titleInfo{
@@ -40,16 +45,7 @@
     font-size: 1.2vw;
 }
 
-.btnInfo{
-    width: 10vw;
-    text-decoration: none;
-    padding: .5vw .1vw;
-    font-size: 1.1vw;
-    background-color: #E5B856;
-    text-align: center;
-    color: #010101;
-    border-radius: 3px;
-}
+
 @media (max-width: 780px){
     .BlogInfo{
         width: 45vw;

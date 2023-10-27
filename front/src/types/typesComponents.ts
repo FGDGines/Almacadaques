@@ -41,8 +41,10 @@ type tpBlogInfo = {
     year?: number;
     image: string;
     title: string;
+    author?: string;
     tags?: string[];
     abstract?: string;
+    btnInfo?: string;
     blogContent?: React.JSX.Element;
     hselect?: ()=>void
 };
@@ -143,6 +145,15 @@ type tpObjectStringToStrig={
 type tpFormDefault = {
     hSubmit:(bag: FormData )=>void 
 }
+type AudioPlayerProps = {
+    fecha?:string;
+    url?: string;
+    title?: string;
+    author?: string;
+    thumbnail?: string;
+    reseña?: string;
+    hideControls?: boolean
+  };
 
 export type {
     tpTestimonyBar,
@@ -168,5 +179,6 @@ export type {
     tpRetiroAnterior,
     tpDtmResponse,
     tpFormDefault,
-    tpObjectStringToStrig
+    tpObjectStringToStrig, 
+    AudioPlayerProps
 };

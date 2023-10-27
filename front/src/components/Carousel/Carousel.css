@@ -1,7 +1,8 @@
+@import "../../fonts.css";
 :root{
     --bRadius: 15px
 }
-@import "../../fonts.css";
+
 
 .Carousel{
     display: grid;   
