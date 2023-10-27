@@ -28,7 +28,8 @@ const AboutMe = () => {
                     
                 </div>
                 <div className="photo_1">
-                    <img src="../../../src/assets/background/1.foto.jpg" alt="Foto sobre mi" />                
+                    <img src="../../../src/assets/background/1.foto.jpg" alt="Foto sobre mi" />  
+                    <p>Psicóloga – Mentora – Coach</p>              
                 </div>
             </div>
 
