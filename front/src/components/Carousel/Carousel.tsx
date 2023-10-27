@@ -1,4 +1,4 @@
-import './Carousel.css'
+import './Carousel.css';
 import { FC, useRef, useState } from 'react'
 import { tpCarouelItem, tpCarouselData } from '../../types/typesComponents'
 import { GrLinkPrevious as FcPrevious, GrLinkNext as FcNext } from 'react-icons/gr'

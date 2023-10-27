@@ -1,0 +1,108 @@
+@import "../../fonts.css";
+.previRetiro{
+    background-color: white;
+    width: 70vw;
+    margin-left: 15vw; 
+    max-height: 75vh;
+    overflow: auto;
+    padding-bottom: 2w;
+
+}
+.ctPreviRetiro{
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+    display: flex;
+    align-items: center;
+
+}
+.closePreviRetiro{
+    cursor: pointer;
+    width: 60vw;
+    display: flex;
+    justify-content: flex-end;
+}
+.imgPreviRetiro{
+    width: 40vw;
+}
+.imgPreviRetiro img{
+    width: 100%;
+    height: 100%;
+}
+.titlePreviRetiro{
+    text-align: center;
+    font-size: 2.5vw;
+    width: 60vw;
+    margin-bottom: 1vw;
+}
+.titlePreviRetiro h4{
+    margin: 0;
+}
+.dataPreviRetiro{
+    width:60vw;
+    font-size: 2vw;
+    display: flex;
+}
+.dataPreviRetiro h4{
+    margin: 0;
+    margin-right: 2vw;
+}
+.dataPreviRetiro .firma{
+    
+    font-family: 'Great vibes', cursive;
+}
+.descripPreviRetiro{
+    width:60vw;
+}
+.descripPreviRetiro p{
+    font-size: 1.5vw;
+}
+@media (max-width: 780px) {
+    .closePreviRetiro img{
+        width: 3vw;
+    }
+    .descripPreviRetiro p{
+        font-size: 2vw;
+    }
+}
+@media (max-width: 450px) {
+    .previRetiro{
+        width: 90vw;
+        margin-top: 5vw;
+        margin-left: 3vw;
+    }
+    .imgPreviRetiro{
+        width: 70vw;
+    }
+    .closePreviRetiro{
+        width: 80vw;
+    }
+    .closePreviRetiro img{
+        width: 5vw;
+        margin-bottom: 4vw;
+    }
+    .descripPreviRetiro p{
+        font-size: 5vw;
+    }
+
+    .titlePreviRetiro{
+        font-size: 5vw;
+        text-align: start;
+        width: 70vw;
+        margin-bottom: 4vw;
+    }
+    
+    .dataPreviRetiro{
+        width:70vw;
+        font-size: 4vw;
+    }
+    .dataPreviRetiro h4{
+        margin-right: 4vw;
+    }
+    .descripPreviRetiro{
+        width:70vw;
+    }
+    .descripPreviRetiro p{
+        font-size: 4vw;
+    }
+}

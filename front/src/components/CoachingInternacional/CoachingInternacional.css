@@ -1,3 +1,5 @@
+
+
 .CoachingInternacional{
     background-color: white;
 }
@@ -10,12 +12,12 @@
 }
 
 .containerimg2{
-    width: 40vw;
+    width: 90vw;
     margin-right: 4vw;
 }
 .containerInnformacion2 .parrafo,
 .contseccionn1 .parrafo{
-    font-size: 1.3vw;
+    font-size: 1.5vw;
     text-align: justify;
     margin-bottom: 1vw;
 }
@@ -31,9 +33,11 @@
     margin: 0;
     display: contents;
 }
+
 .imgInternacional{
     width: 100%;
     height: 100%;
+    border-radius: 0.5vw;
 }
 .testimonio{
     display: flex;
@@ -87,7 +91,12 @@
     .containerInnformacion2 .parrafo{
         font-size: 2.4vw;
     }
-
+    .parrafoSpan{
+        font-size: 2.2vw;
+    }
+    .autorParrafo{
+        font-size: 2.2vw;
+    }
     .containerInnformacion2{
         font-size: 2.5vw;
     }
@@ -120,6 +129,7 @@
 
     .containerInnformacion2{
         font-size: 5vw;
+        padding: 3vw;
     }
     .textFormulario{
         font-size: 5vw;
@@ -129,5 +139,11 @@
     }
     .titletestimonio{
         font-size: 7vw;
+    }
+    .parrafoSpan{
+        font-size: 5vw;
+    }
+    .autorParrafo{
+        font-size: 5vw;
     }
 }

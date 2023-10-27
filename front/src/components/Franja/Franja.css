@@ -4,11 +4,13 @@
   display: flex;
   justify-content: center;
   color: white;
+
 }
 
 .Franja {
   width: 78%;
-  font-size: 3.2rem;
+  font-size: 2.2rem;  
   padding: 3rem;
+  font-weight: 600;
   /* border: 1px solid white; */
 }
