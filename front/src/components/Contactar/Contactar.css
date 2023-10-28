@@ -30,7 +30,7 @@
 }
 
 .Contactar .ctSections>div>div.title1 {
-    font-size: 1.9vw;
+    font-size: 1.5vw;
     line-height: 6vh;
     font-weight: 600;
     margin-bottom: 2vw;
@@ -43,7 +43,7 @@
 }
 
 .Contactar .ctSections>div>div.ctTelef {
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-weight: 200;
 }
 
@@ -53,8 +53,8 @@
 }
 
 .Contactar .ctSections>div.ctRight .TitleForm {
-    font-size: 2.5vw;
-    margin-bottom: 2.5vw;
+    font-size: 2vw;
+    margin-bottom: 2vw;
 }
 
 .ctDireccion {
