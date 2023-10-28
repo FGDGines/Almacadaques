@@ -1,3 +1,16 @@
+.imgContacto{
+    margin-top: 5vw;
+    margin-bottom: -5vw;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgContacto .elizabet{
+    width: 30%;
+    height: 30%;
+}
+
 .Contactar {
     background-color: white;
 }
@@ -119,6 +132,7 @@
         font-size: 1.5vw;
         line-height: 2vw;
     }
+    
 }
 
 @media (max-width: 450px) {
