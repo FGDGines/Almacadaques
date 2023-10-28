@@ -65,7 +65,7 @@ const ExperienciasDeBienestar = () => {
                 </div>
                 <div className="ctFormRetiros">
                     <FormAgenda actividades={eventos} />
-                    <div className="retirosPasados">
+                    {/* <div className="retirosPasados">
                         <div className='RTitle'>Retiros anteriores</div>
                         <div className='ctPreviews'>
                             {pastEvent.map((item) => {
@@ -73,7 +73,7 @@ const ExperienciasDeBienestar = () => {
                                 return <RetiroAnterior key={id} end={end} start={start} id={id} title={title} colaborator_link={colaborator_link} colaborator_name={colaborator_name} description={description} hselect={SeleccionarEvento} src={src} />
                             })}
                         </div>
-                    </div>
+                    </div> */}
                 </div>
 
             </div>

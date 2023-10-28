@@ -58,8 +58,8 @@
 }
 
 .witness {
-  display: grid;
-  grid-template-columns: 2fr 6fr;
+  display: flex;
+  justify-content: space-between;
   align-items: start;
 }
 
