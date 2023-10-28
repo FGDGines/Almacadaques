@@ -60,7 +60,9 @@ const CoachingInternacional = () => {
                 <p className='parrafo'>Como coach te escucho sin juzgar, te hago preguntas y te doy feedback, y con ello aclararás y ordenarás tus ideas e incrementarás tu autoconocimiento y liderazgo para descubrir nuevos enfoques y lograr aquello que quieres conseguir.</p>
                 <p className='parrafo'>Como mentora internacional te comparto mis propias experiencias y con mucha empatía y sensibilidad te acompaño a alcanzar los objetivos que quieres lograr, logrando así mayor bienestar.</p>
                 <p className='parrafo'>Contácta  para definir juntos como te puedo ayudar a conseguir los resultados que buscas.</p>
+                <img src="../../../src/assets/images/imgCoachingInternacional.jpg" alt="Fondo" className='imgCoachingInternacional' />
                 <p className='parrafo info'>{textos[languageFlag].textcoachinginterPideinfo}</p>
+                
                 <div className='ctForm'>
                     <FormDefault />
                     <img className='imgEquip' src=".../../../src/assets/background/contactanos.jpg" alt="Equipo de trabajo" />
