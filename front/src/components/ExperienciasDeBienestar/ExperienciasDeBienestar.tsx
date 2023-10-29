@@ -32,7 +32,6 @@ const ExperienciasDeBienestar = () => {
         handleClickOpen()
     }
 
-    
     return <div className='ExperienciasDeBienestar'>
         <Navbar />
         <Franja text='Experiencias de Bienestar' />
@@ -44,10 +43,8 @@ const ExperienciasDeBienestar = () => {
             </div>
             <div className='ctCards'>
                 {cardsData.map((item, index) => {
-                    const { title, body } = item;
-                    
+                    const { title, body } = item
                     return <CardM1 key={index} title={title} body={body} />
-                    
                 })}
             </div>
             {/* <AboutMeAbstract /> */}
@@ -60,25 +57,29 @@ const ExperienciasDeBienestar = () => {
             <StatisticComponent />
 
             <div className='ctAgenda'>
-                <div className="ctAgendaCalendar">
-                    <Agenda hSelect={SeleccionarEvento} />
-                </div>
-                <div className="ctFormRetiros">
-                    <FormAgenda actividades={eventos} />
-                    {/* <div className="retirosPasados">
-                        <div className='RTitle'>Retiros anteriores</div>
-                        <div className='ctPreviews'>
-                            {pastEvent.map((item) => {
-                                const { id, end, start, title, colaborator_link, colaborator_name, description, src } = item
-                                return <RetiroAnterior key={id} end={end} start={start} id={id} title={title} colaborator_link={colaborator_link} colaborator_name={colaborator_name} description={description} hselect={SeleccionarEvento} src={src} />
-                            })}
-                        </div>
-                    </div> */}
+
+
+                <div className="ctContentAgenda">
+                    <div className="ctCalendario">
+                        <Agenda hSelect={SeleccionarEvento} />
+                    </div>
+
+                    <div className="ctFormulario">
+                        <FormAgenda actividades={eventos} />
+                    </div>
                 </div>
 
             </div>
+            <div className="ctContentBoton">
+                     
+                     <div className="botonRetiros diagonal">
+                        Retiros Anteriores 
+                     </div>
+                 </div>
 
             <DialogMUI1 open={open} handlerClose={handleClose} handleClickOpen={handleClickOpen} evento={evento} />
+           
+
 
         </div>
         <Footer />
