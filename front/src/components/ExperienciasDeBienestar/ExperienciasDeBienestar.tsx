@@ -1,4 +1,5 @@
 import './ExperienciasDeBienestar.css'
+import { useContext } from 'react';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import Franja from '../Franja/Franja';
@@ -10,11 +11,13 @@ import FormAgenda from '../FormAgenda/FormAgenda';
 import { tpCalendarDates } from '../../types/typesComponents';
 import { eventos, pastEvent } from '../../data/calendar';
 import DialogMUI1 from '../DialogMUI1/DialogMUI1';
-
+import { GlobalContext } from '../../contexts/GlobalContext';
 import { useState } from 'react';
-import RetiroAnterior from '../RetirosAnteriores/RetiroAnterior';
+
+
 
 const ExperienciasDeBienestar = () => {
+    const { setLayoutID } = useContext(GlobalContext);
     const [evento, setEvento] = useState<tpCalendarDates>({ id: 0, start: '', end: '', title: '' })
 
     const [open, setOpen] = useState(false);
@@ -72,7 +75,7 @@ const ExperienciasDeBienestar = () => {
             </div>
             <div className="ctContentBoton">
                      
-                     <div className="botonRetiros diagonal">
+                     <div className="botonRetiros diagonal" onClick={() => setLayoutID(14)}>
                         Retiros Anteriores 
                      </div>
                  </div>
