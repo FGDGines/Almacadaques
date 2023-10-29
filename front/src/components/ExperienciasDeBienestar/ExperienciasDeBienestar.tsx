@@ -10,6 +10,7 @@ import FormAgenda from '../FormAgenda/FormAgenda';
 import { tpCalendarDates } from '../../types/typesComponents';
 import { eventos, pastEvent } from '../../data/calendar';
 import DialogMUI1 from '../DialogMUI1/DialogMUI1';
+import { statisticInfo } from '../../data/StatisticComponent';
 
 import { useState } from 'react';
 import RetiroAnterior from '../RetirosAnteriores/RetiroAnterior';
@@ -31,6 +32,7 @@ const ExperienciasDeBienestar = () => {
         setEvento(evento)
         handleClickOpen()
     }
+    const bienestarTitles = statisticInfo.bienestar;
 
     
     return <div className='ExperienciasDeBienestar'>
@@ -57,7 +59,7 @@ const ExperienciasDeBienestar = () => {
                 <span style={{ color: "#75151E" }}> ❞ </span>
             </div>
 
-            <StatisticComponent />
+            <StatisticComponent titles={bienestarTitles} />
 
             <div className='ctAgenda'>
                 <div className="ctAgendaCalendar">

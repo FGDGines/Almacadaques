@@ -1,5 +1,5 @@
 .ExperienciasdeMedida{
-    background-color: white;
+    background: url("./src/assets/background/rf.jpg") no-repeat center/cover;
 }
 .ExperienciasdeMedida .ctMain{
     background-color: white;
@@ -9,13 +9,20 @@
 }
 .ct{
     width: 90vw;
-    display: flex;
+    background-color: white;    display: flex;
     align-items: flex-start;
     flex-direction: column;
 }
+.ctStatitis{
+    margin-left: -5vw;
+    width: 100vw;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+    background: url("./src/assets/background/rf.jpg") no-repeat center/cover;
+}
 .ctPhrase{
     text-align: center;
-    font-size: 2vw;
+    font-size: 1.5vw;
     margin-bottom: 2vw;
     margin-top: 3vw;
 }

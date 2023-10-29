@@ -53,6 +53,11 @@
     display: flex;
     justify-content: center;
 }
+.imgCoachingInternacional{
+    width: 86vw;
+    height: 30vh;
+    margin: 3vw 0vw;
+}
 .titletestimonio{
     margin-bottom: 2vw;
     text-align: center;
