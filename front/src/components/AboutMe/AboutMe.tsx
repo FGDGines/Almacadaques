@@ -18,7 +18,7 @@ const AboutMe = () => {
             <div className="containerSobremi_1">
                 
                 <div className="infoSobremi_1">
-                    
+                     
                     <ul>
                         <li>{textos[languageFlag].parrafosobremi1}</li>
                         <li>{textos[languageFlag].parrafosobremi2}</li>

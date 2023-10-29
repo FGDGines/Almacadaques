@@ -2,20 +2,19 @@
 
 /* Estilos para el contenedor del formulario */
 .FormAgenda {
-    width: 23vw;
-    padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    min-height: 390px;
+    padding: 20px;
   }
   
   /* Estilos para el título */
   .FormAgenda h1 {
-    text-align: center;
+    text-align: center; 
     font-size: 24px;
-    margin-bottom: 20px;
+    margin: 0px;
+    color: #cf1348;
   }
   
   /* Estilos para los campos de entrada y etiquetas */
@@ -37,18 +36,28 @@
   }
   
   /* Estilo para el botón de guardar */
-  .FormAgenda button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    font-size: 16px;
+  
+  .boton{
+    color: #FFF;
+    border: 2px solid #CF1348;
+    border-radius: 0px;
+    padding: 15px 20px;
+    display: inline-block;
+    font-family: "Lucida Console", Monaco, monospace;
+    font-size: 15px;
+    letter-spacing: 1px;
     cursor: pointer;
+    box-shadow: inset 0 0 0 0 #CF1348;
+    -webkit-transition: ease-out 0.4s;
+    -moz-transition: ease-out 0.4s;
+    transition: ease-out 0.4s;
+    color: #CF1348;
   }
   
-  .FormAgenda button:hover {
-    background-color: #0056b3;
+
+  .boton:hover {
+    box-shadow: inset 400px 50px 0 0 #CF1348;
+    color: #f9f9f9;
   }
   
   @media (max-width: 780px){
