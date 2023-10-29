@@ -3,10 +3,13 @@ import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import Franja from '../Franja/Franja';
 import FormDefault from '../FormDefault/FormDefault';
+import StatisticComponent from '../StatisticComponent/StatisticComponent';
+import { statisticInfo } from '../../data/StatisticComponent';
 
 
 
 function ExperienciasDeMedida() {
+    const medidaTitles = statisticInfo.medida;
     return (
         <div className="ExperienciasdeMedida">
             <Navbar />
@@ -18,16 +21,19 @@ function ExperienciasDeMedida() {
                         ¿Eres una empresa consciente de que invierte en el bienestar de sus trabajadores? Contáctanos para organizarte la experiencia a medida que mejor se adapte a tu perfil!
                         <span style={{ color: "#75151E" }}> ❞ </span>
                     </div>
+                    <div className="ctStatitis">
+                        <StatisticComponent titles={medidaTitles} />
+                    </div>
                     <div className="ctphoto">
-                        <img className='imgEquip'  src="../../../src/assets/background/contactanos.jpg" alt="Equipo de trabajo" />
+                        <img className='imgEquip' src="../../../src/assets/background/contactanos.jpg" alt="Equipo de trabajo" />
                         <div className='ctFor'>
                             <h3>Trabajemos Juntos</h3>
                             <FormDefault />
                         </div>
-                        
+
                     </div>
-                    
-                    
+
+
                 </div>
 
             </div>

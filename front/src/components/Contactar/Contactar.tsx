@@ -16,7 +16,11 @@ const Contactar = ()=>{
     return <div className="Contactar">
         <Navbar />
         <Franja text='Contactar' />
+        <div className="imgContacto">
+                <img src="../../../src/assets/background/contactanos.jpg" alt="elizabet" className='elizabet' />
+            </div>
         <div className='ctSections'>
+            
             <div className='ctLeftContaT'>
                 <div className='title1'>
                     Estoy aquí para responder cualquier pregunta que puedas tener.
