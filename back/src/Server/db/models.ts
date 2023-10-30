@@ -88,7 +88,21 @@ const DataTestimonio = DB.define("data_testimonys", {
 })
 
 
-const Carousel = DB.define("carousels")
+const Carousel = DB.define("carousels" , {
+    src:{
+        type: DataTypes.STRING
+    },
+    autor: {
+        type: DataTypes.STRING
+    }, 
+    link_autor: {
+        type: DataTypes.STRING
+    },
+    data_carousel:{
+        type: DataTypes.NUMBER
+    }
+})
+
 
 User.belongsTo(DataUser,{foreignKey: 'id_data_user'})
 DataUser.belongsTo(Rol,{foreignKey: 'id_rol'})
@@ -101,5 +115,6 @@ export {
     Rol, 
     User,
     Testimonio,
-    DataTestimonio
+    DataTestimonio,
+    Carousel
 }
