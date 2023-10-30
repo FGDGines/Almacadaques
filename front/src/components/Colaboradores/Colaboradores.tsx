@@ -10,6 +10,7 @@ function Colaboradores() {
         <>
             <Navbar />
             <Franja text='Colaborad@res' />
+            <h2 className='TitleColab'>Miembros del Equipo</h2>
             <div className="colaboradores">
                     <Tarjetacolaboradores colaboradores={ListaColaboradores} />
             </div>

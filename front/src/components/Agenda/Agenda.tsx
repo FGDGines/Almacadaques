@@ -28,7 +28,7 @@ const Agenda: FC<tpAgenda> = ({hSelect}) => {
   };
 
   return (
-    <div style={{ height: 500 }}>
+    <div style={{ height: '100%' }}>
       <Calendar
         localizer={localizer}
         events={eventsWithDates}
