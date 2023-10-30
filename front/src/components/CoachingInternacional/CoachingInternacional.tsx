@@ -6,8 +6,8 @@ import FormDefault from '../FormDefault/FormDefault';
 import { textos } from '../../data/textos';
 import { useContext } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
+import TestimonyBar from '../TestimonyBar/TestimonyBar';
 import { testimonies } from '../../data/testimonies';
-import Testimony from '../Testimony/Testimony';
 
 const CoachingInternacional = () => {
     const { languageFlag } = useContext(GlobalContext)
@@ -38,18 +38,7 @@ const CoachingInternacional = () => {
                 <div className="testimonio">
                     <h3 className='titletestimonio'>{textos[languageFlag].textcoachinginternaTestimonio}</h3>
                     <div className="infotestimonios">
-                        {testimonies.map((testimony) => (
-                            <Testimony
-                                key={testimony.id}
-                                id={testimony.id}
-                                witness={testimony.witness}
-                                // image={testimony.image}
-                                day={testimony.day}
-                                month={testimony.month}
-                                year={testimony.year}
-                                testimony={testimony.testimony}
-                            />
-                        ))}
+                    <TestimonyBar testimonies={testimonies} quantityPerLayout={3} />
                     </div>
                 </div>
 
