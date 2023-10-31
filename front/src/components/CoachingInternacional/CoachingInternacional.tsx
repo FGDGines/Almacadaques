@@ -65,7 +65,7 @@ const CoachingInternacional = () => {
                 <p className='parrafo info'>{textos[languageFlag].textcoachinginterPideinfo}</p>
                 
                 <div className='ctForm'>
-                    <FormDefault hSubmit={tuFuncionDeEnvio}/>
+                    <FormDefault />
                     <img className='imgEquip' src=".../../../src/assets/background/contactanos.jpg" alt="Equipo de trabajo" />
                 </div>
             </div>

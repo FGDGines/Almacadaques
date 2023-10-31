@@ -1,5 +1,8 @@
 
+*{
 
+    font-family: sans-serif;
+}
 .CoachingInternacional{
     background-color: white;
 }
@@ -8,7 +11,7 @@
     padding: 3vw 7vw;
 }
 .contseccionn1  {
-    font-size: 2vw;
+    font-size: 1.6vw;
 }
 .TeAcompaño{
  font-weight: 600;
@@ -21,7 +24,7 @@
 }
 .containerInnformacion2 .parrafo,
 .contseccionn1 .parrafo{
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     text-align: justify;
     margin-bottom: 1vw;
 }
@@ -33,7 +36,7 @@
     justify-content: center;
 }
 .parrafoSpan{
-    font-size: 1.7vw;
+    font-size: 1.6vw;
     margin: 0;
     display: contents;
 }

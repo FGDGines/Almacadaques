@@ -3,6 +3,11 @@
   --colorNavbar: #000000;
 }
 
+*{
+
+  font-family: sans-serif;
+}
+
 .Navbar a {
   color: var(--colorNavbar);
   text-decoration: none;
