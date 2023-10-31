@@ -19,42 +19,42 @@ const Mensaje = DB.define('mensaje', {
         allowNull: true
     }
 }, {
-    paranoid: true 
+    paranoid: true
 })
 
 
 const User = DB.define('user', {
-    correo:{
+    correo: {
         type: DataTypes.STRING
     },
-    password:{
+    password: {
         type: DataTypes.STRING
     },
-    id_data_user:{
+    id_data_user: {
         type: DataTypes.NUMBER
-    }, 
+    },
     deletedAt: {
         type: DataTypes.DATE,
         allowNull: true
     }
 }, {
-    paranoid: true 
+    paranoid: true
 })
 
 const DataUser = DB.define('data_user', {
     nombre: {
         type: DataTypes.STRING
     },
-    src:{
+    src: {
         type: DataTypes.STRING
-    }, 
+    },
     id_rol: {
         type: DataTypes.NUMBER
     }
 })
 
 const Rol = DB.define('role', {
-    label:{
+    label: {
         type: DataTypes.STRING
     }
 })
@@ -66,8 +66,8 @@ const Testimonio = DB.define('testimonio', {
     id_data: {
         type: DataTypes.STRING
     },
-    deletedAt:{
-        type: DataTypes.DATE, 
+    deletedAt: {
+        type: DataTypes.DATE,
         allowNull: true
     }
 }, {
@@ -76,45 +76,58 @@ const Testimonio = DB.define('testimonio', {
 
 
 const DataTestimonio = DB.define("data_testimonys", {
-    es:{
+    es: {
         type: DataTypes.STRING
     },
-    en:{
+    en: {
         type: DataTypes.STRING
     },
-    cat:{
+    cat: {
         type: DataTypes.STRING
     }
 })
 
 
-const Carousel = DB.define("carousels" , {
-    src:{
+const Carousel = DB.define("carousels", {
+    src: {
         type: DataTypes.STRING
     },
     autor: {
         type: DataTypes.STRING
-    }, 
+    },
     link_autor: {
         type: DataTypes.STRING
     },
-    data_carousel:{
+    id_data_carousel: {
         type: DataTypes.NUMBER
     }
 })
 
 
-User.belongsTo(DataUser,{foreignKey: 'id_data_user'})
-DataUser.belongsTo(Rol,{foreignKey: 'id_rol'})
-Testimonio.belongsTo(DataTestimonio , {foreignKey: 'id_data'})
+const DataCarousel = DB.define('data_carousels', {
+    es: {
+        type: DataTypes.STRING
+    },
+    en: {
+        type: DataTypes.STRING
+    },
+    cat: {
+        type: DataTypes.STRING
+    }
+})
 
+User.belongsTo(DataUser, { foreignKey: 'id_data_user' })
+DataUser.belongsTo(Rol, { foreignKey: 'id_rol' })
+Testimonio.belongsTo(DataTestimonio, { foreignKey: 'id_data' })
+Carousel.belongsTo(DataCarousel , {foreignKey: 'id_data_carousel'})
 
 export {
-    DataUser, 
+    DataUser,
     Mensaje,
-    Rol, 
+    Rol,
     User,
     Testimonio,
     DataTestimonio,
-    Carousel
+    Carousel,
+    DataCarousel
 }
