@@ -81,6 +81,8 @@
 }
 .titlePreviRetiro h4 {
   margin: 0;
+  margin-top: 2vw;
+  font-weight: 700;
 }
 .dataPreviRetiro {
   width: 60vw;
@@ -88,6 +90,7 @@
   display: flex;
 }
 .dataPreviRetiro h4 {
+  
   margin: 0;
   margin-right: 2vw;
 }
