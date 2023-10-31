@@ -1,5 +1,9 @@
 @import url(../../../src/fonts.css);
 
+*{
+  font-family: sans-serif;
+}
+
 .Footer {
   background-color: white;
   color: #cf1348;
