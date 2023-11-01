@@ -5,8 +5,11 @@ import Footer from '../Footer/Footer';
 import FormDefault from '../FormDefault/FormDefault';
 import { formDataToObject } from '../../helpers/Forms';
 import { fetchDefault } from '../../helpers/Server';
-import { AudioPlayer } from "../ItemPodcast/AudioPlayer";
 import { podcastData } from "../../data/listPodcast";
+import { AudioP } from '../ItemPodcast/ItemPodcast'
+import React, { useState } from 'react';
+import { AudioPlayerProps } from '../../types/typesComponents';
+
 
 
 
@@ -16,71 +19,103 @@ const Podcast = () => {
         bag.set('fragment', 'Contactar')
         fetchDefault('/mail/create', { body: JSON.stringify(formDataToObject(bag)) })
     }
+    const [currentPodcast, setCurrentPodcast] = useState<AudioPlayerProps | null>(podcastData[0] || null); // Establecer el primer podcast como inicial
 
-
+    const handlePlayPodcast = (podcast: AudioPlayerProps) => {
+        setCurrentPodcast(podcast);
+    };
 
     return <div className="Podcast">
         <Navbar />
         <Franja text='Podcast' />
 
-        <div className="ctPricipalPod">
-            <div className="ctFormVistos">
+        <div className="ctPricipalP">
 
-                <div className="ctMiniaturas">
-                     <h2 className='ctTitulos'>Mas recientes</h2>
-                    <div className="ctMasrecientes">
-                        {podcastData.map((podcast, index) => (
-                            <AudioPlayer
-                                key={index}
-                                url={podcast.url}
-                                title={podcast.title}
-                                thumbnail={podcast.thumbnail}
-                                fecha={podcast.fecha}
-                                hideControls={true} 
-                                author={podcast.author}
-                            />
-                        ))}
-                    </div>  
-                    <h2 className='ctTitulos'>Mas vistos</h2>
-                    <div className="ctMasvistos">
-                    
-                        {podcastData.map((podcast, index) => (
-                            <AudioPlayer
-                                key={index}
-                                url={podcast.url}
-                                title={podcast.title}
-                                thumbnail={podcast.thumbnail}
-                                hideControls={true} 
-                                fecha={podcast.fecha}
-                                author={podcast.author}
-                            />
-                        ))}
-
-                    </div>
-
-
+            <div className="ctBuscador">
+                <div className="search">
+                    <label className="search-icon">
+                        <i className="fas fa-search"></i>
+                    </label>
+                    <input type="search" name="buscador" id="" placeholder='Buscar' />
                 </div>
+            </div>
 
-                <div className="formPodcast">
-                    <FormDefault hSubmit={enviarFormulario} />
+            <div className="ctCategorias">
+
+                <div className="ctTituloCategoria">
+                    <h3>Categorias</h3>
                 </div>
-
+                <div className="ctBotones">
+                    <div className="botonCategoria">e-commerce</div>
+                    <div className="botonCategoria">e-commerce</div>
+                    <div className="botonCategoria">e-commerce</div>
+                    <div className="botonCategoria">e-commerce</div>
+                    <div className="botonCategoria">e-commerce</div>
+                </div>
 
             </div>
 
             <div className="ctPodcast">
-                {podcastData.map((podcast, index) => (
-                    <AudioPlayer
-                        key={index}
-                        url={podcast.url}
-                        title={podcast.title}
-                        author={podcast.author}
-                        thumbnail={podcast.thumbnail}
-                        reseña={podcast.reseña}
-                        fecha={podcast.fecha}
-                        
+                {currentPodcast && (
+                    <AudioP
+                        url={currentPodcast.url}
+                        titulo={currentPodcast.titulo}
+                        imagen={currentPodcast.imagen}
+                        mostrarDatos={true}
+                        enPodcast={false}
                     />
-                ))}
+                )}
+            </div>
+            <div className="ctMasrecientes">
+
+                <div className="titulosPodcast">
+                    <h2>
+                        Mas reciente
+                    </h2>
+                </div>
+
+                <div className="listaPodcast">
+                    {podcastData.map((podcast, index) => (
+                        <div className='containerPod' key={index} onClick={() => handlePlayPodcast(podcast)}>
+                            <AudioP
+                                url={podcast.url}
+                                titulo={podcast.titulo}
+                                imagen={podcast.imagen}
+                                mostrarDatos={true}
+                                fecha={podcast.fecha}
+                                autor={podcast.autor}
+                                mostrarControles={false}
+                            />
+                        </div>
+                    ))}
+
+                </div>
+
+
+            </div>
+            <div className="ctMasvistos">
+                <div className="titulosPodcast">
+                    <h2>
+                        Mas vistos
+                    </h2>
+                </div>
+
+                <div className="listaPodcast">
+                    {podcastData.map((podcast, index) => (
+                        <div className='containerPod' key={index} onClick={() => handlePlayPodcast(podcast)}>
+                            <AudioP
+                                url={podcast.url}
+                                titulo={podcast.titulo}
+                                imagen={podcast.imagen}
+                                mostrarDatos={true}
+                                fecha={podcast.fecha}
+                                autor={podcast.autor}
+                                mostrarControles={false}
+                            />
+                        </div>
+                    ))}
+                </div>
+
             </div>
 
         </div>

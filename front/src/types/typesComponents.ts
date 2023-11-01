@@ -148,11 +148,12 @@ type tpFormDefault = {
 type AudioPlayerProps = {
     fecha?:string;
     url?: string;
-    title?: string;
-    author?: string;
-    thumbnail?: string;
-    reseña?: string;
-    hideControls?: boolean
+    titulo?: string;
+    autor?: string;
+    imagen?: string;
+    mostrarDatos?: boolean
+    mostrarControles?: boolean
+    enPodcast?:boolean
   };
 
 export type {
