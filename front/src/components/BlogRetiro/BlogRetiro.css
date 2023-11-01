@@ -38,6 +38,7 @@
 }
 .titleRetiro h4 {
   font-size: 1.2vw;
+  font-weight: 700;
   margin: 0;
   padding: 0;
 }
@@ -48,7 +49,7 @@
   justify-content: space-around;
 }
 .time p {
-  font-size: 1.1vw;
+  font-size: 1.3vw;
 }
 .authorRetiro h4 {
   font-size: 1.1vw;
@@ -82,7 +83,7 @@
   .infoRetiro {
     width: 38vw;
     margin: 0;
-    padding: 1vw;
+    padding: .5vw;
   }
   .titleRetiro {
     width: 40vw;
@@ -132,7 +133,7 @@
   .infoRetiro {
     width: 90vw;
     margin: 0;
-    padding: 0;
+    padding: 3vw;
   }
   .titleRetiro {
     width: 87vw;

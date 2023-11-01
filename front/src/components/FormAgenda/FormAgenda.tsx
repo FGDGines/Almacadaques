@@ -84,7 +84,7 @@ const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
         </div>
 
         <div>
-          <button className='boton' type="submit">Guardar</button>
+          <button className='boton' type="submit">Enviar</button>
         </div>
       </form>
     </div>

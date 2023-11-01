@@ -1,3 +1,7 @@
+*{
+
+  font-family: sans-serif;
+}
 .ExperienciasDeBienestar {
   background: url("./src/assets/background/rf.jpg") no-repeat center/cover;
   max-height: 100vh;
@@ -12,7 +16,7 @@
 .ExperienciasDeBienestar .ctMain .ctTitle {
   /* border: 1px solid black; */
   text-align: center;
-  font-size: 3vw;
+  font-size: 2.3vw;
   padding: 70px 0px;
   background-color: white;
 }
@@ -20,7 +24,7 @@
 .ExperienciasDeBienestar .ctDescription {
   background-color: white;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.7rem;
   padding: 70px 0px;
 }
 

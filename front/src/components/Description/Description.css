@@ -17,13 +17,16 @@
  }
 
  .Description .ctCarousel{
-    margin:  1vw;
+    margin: 0vw;
     padding: 1vw;
+    display: flex;
+    justify-content: center;
+    width: 89vw;
     /* border: 10px solid black; */
  }
 
  .Description .ctDefault .ctTitle {
-     font-size: 2.1vw;
+     font-size: 1.6vw;
      width: 75vw;
      text-align: center;
      line-height: 120%;
@@ -38,7 +41,7 @@
 
 
  .Description .ctDefault .ctTitle2 {
-     font-size: 2.1vw;
+     font-size: 1.6vw;
      width: 75vw;
      text-align: center;
      line-height: 120%;
@@ -48,7 +51,7 @@
 
 .Horizonte{
     width: 100%;
-    height: 30vh;
+    height: 10vh;
     background-color: transparent;
     margin-bottom: 130px;
  }
