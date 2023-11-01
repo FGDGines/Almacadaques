@@ -1,9 +1,7 @@
 *{
     font-family: sans-serif;
 }
-.ExperienciasdeMedida{
-    background: url("./src/assets/background/rf.jpg") no-repeat center/cover;
-}
+
 .ExperienciasdeMedida .ctMain{
     background-color: white;
     display: flex;

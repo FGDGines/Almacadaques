@@ -25,11 +25,11 @@
     position: absolute;
     margin: 15px;
     border-radius: 9999px;
-    width: 64px;
-    height: 64px;
-    font-size: 30px;
-    cursor: pointer; 
-    transition: all 0.6s ;
+    width: 53px;
+    height: 53px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.6s;
 
 }
 
