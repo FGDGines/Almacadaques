@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import { Carousel, DataCarousel } from "../../../db/models";
 import { UploadFile } from "../../../helpers/FileHandler";
 import path from 'path';
-import { Formatos } from "../../../config/config";
+import { Formatos, RelativePath } from "../../../config/config";
 
 
 
@@ -15,7 +15,7 @@ export const Create = async (req: Request, res: Response) => {
         // @ts-ignore
         if (req.files.src) {
             // @ts-ignore
-            const url = await UploadFile( req.files.src.data, path.join(__dirname, '../../../public/carousel'), fileExtension, Formatos.image)
+            const url = await UploadFile( req.files.src.data, path.join(__dirname,  RelativePath.carousel), fileExtension, Formatos.image)
 
             const tDataCarousel = new DataCarousel({ es: frase_es, en: frase_en, cat: frase_cat })
             await tDataCarousel.save()

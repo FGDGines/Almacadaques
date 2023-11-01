@@ -100,7 +100,13 @@ const Carousel = DB.define("carousels", {
     },
     id_data_carousel: {
         type: DataTypes.NUMBER
+    }, 
+    deletedAt:{
+        type: DataTypes.DATE,
+        allowNull: true
     }
+},{
+    paranoid: false
 })
 
 
@@ -113,7 +119,13 @@ const DataCarousel = DB.define('data_carousels', {
     },
     cat: {
         type: DataTypes.STRING
+    },
+    deletedAt:{
+        type: DataTypes.DATE, 
+        allowNull: true 
     }
+}, {
+    paranoid: false
 })
 
 User.belongsTo(DataUser, { foreignKey: 'id_data_user' })

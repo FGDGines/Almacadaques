@@ -3,6 +3,9 @@ import { Create } from "../controllers/carousel/Create";
 import { validarCampos } from "../../middlewares/ValidarCampos";
 import { security_post } from "../../middlewares/Security";
 import { check } from "express-validator";
+import { Read } from "../controllers/carousel/Read";
+import { Delete } from "../controllers/carousel/Delete";
+
 const app = Router()
 
 app.post('/create', [security_post,
@@ -13,5 +16,13 @@ app.post('/create', [security_post,
     check('autor', 'El nombre del autor es obligatorio').not().isEmpty(), 
     check('link_autor', 'El link del autor es obligatorio').not().isEmpty()
      , validarCampos], Create)
+
+app.post('/read', [
+    check('lang', 'El idioma es obligatorio').not().isEmpty(),
+    validarCampos], Read)
+
+app.post('/delete' , [security_post ,
+    check('id', 'El carousel item a eliminar es olbigatorio').isNumeric()
+     , validarCampos], Delete)
 
 module.exports = app
