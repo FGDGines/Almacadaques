@@ -1,4 +1,8 @@
 @import "../../fonts.css";
+*{
+
+    font-family: sans-serif;
+}
 .CoachingBienestar{
     background-color: white;
     
@@ -8,19 +12,19 @@
     padding: 3vw 7vw;
 }
 .contseccionn1  {
-    font-size: 2vw;
+    font-size: 1.6vw;
 }
 .contseccionn1 .parrafo{
-    font-size: 1vw;
+    font-size: 1.2vw;
     text-align: justify; 
 }
 .contseccionn1 a{
     text-decoration: none;
     color: blue;
-    font-size: 1.4vw;
+    font-size: 1.3vw;
 }
 .containerimg1{
-    width: 70vw;
+    width: 60vw;
     margin-right: 4vw;
 }
 .imgBienertar{
@@ -30,7 +34,7 @@
 }
 
 .containerInnformacion2{
-    font-size: 1.7vw;
+    font-size: 1.3vw;
     padding: 3vw 7vw;
 }
 .textFormulario{
@@ -48,12 +52,12 @@
 }
 
 .ct3.containerInnformacion2 .textFormulario{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 800;
 }
 .autorParrafo{
     display: contents;
-    font-size: 1.7vw;
+    font-size: 1.3vw;
     font-family: 'Great vibes', cursive;
     cursor: pointer;
 }

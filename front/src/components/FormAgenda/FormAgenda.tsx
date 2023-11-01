@@ -40,7 +40,7 @@ const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
             name="nombre"
             required
             value={formData.nombre}
-            onChange={handleChange}
+            onChange={handleChange} 
           />
         </div>
         <div>
@@ -52,6 +52,7 @@ const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
             required
             value={formData.correo}
             onChange={handleChange}
+            placeholder='@almacadaqués.com'
           />
         </div>
         <div>
@@ -83,7 +84,7 @@ const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
         </div>
 
         <div>
-          <button type="submit">Guardar</button>
+          <button className='boton' type="submit">Enviar</button>
         </div>
       </form>
     </div>

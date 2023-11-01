@@ -2,7 +2,7 @@
   background-color: white;
   overflow-x: hidden;
   margin-inline: auto;
-  width: 80vw;
+  width: 90vw;
   margin-block: 3rem;
 }
 
@@ -58,8 +58,8 @@
 }
 
 .witness {
-  display: grid;
-  grid-template-columns: 2fr 6fr;
+  display: flex;
+  justify-content: space-between;
   align-items: start;
 }
 

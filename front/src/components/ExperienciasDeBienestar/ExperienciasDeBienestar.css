@@ -1,3 +1,7 @@
+*{
+
+  font-family: sans-serif;
+}
 .ExperienciasDeBienestar {
   background: url("./src/assets/background/rf.jpg") no-repeat center/cover;
   max-height: 100vh;
@@ -12,7 +16,7 @@
 .ExperienciasDeBienestar .ctMain .ctTitle {
   /* border: 1px solid black; */
   text-align: center;
-  font-size: 3vw;
+  font-size: 2.3vw;
   padding: 70px 0px;
   background-color: white;
 }
@@ -20,7 +24,7 @@
 .ExperienciasDeBienestar .ctDescription {
   background-color: white;
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 1.7rem;
   padding: 70px 0px;
 }
 
@@ -32,64 +36,65 @@
 }
 
 .ExperienciasDeBienestar .ctAgenda {
+  height: 120vh;
   background-color: rgb(255, 255, 255);
   padding-top: 50px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
 }
 
-.ExperienciasDeBienestar .ctAgenda > * {
+@media (min-width: 900px) {
+  .ExperienciasDeBienestar .ctAgenda {
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+}
+.ctContentAgenda {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (min-width: 900px) {
+  .ctContentAgenda {
+    flex-direction: initial;
+    justify-content: space-between;
+  }
+}
+
+.ctCalendario {
   width: 100%;
-  height: 100%;
-  margin: 10px;
+  height: 50%;
+  margin: 20px auto;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #f9f9f9;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-
-.ExperienciasDeBienestar .ctAgendaCalendar {
-  width: 80vw;
+.ctFormulario {
+  width: 90%;
+  height: 50%;
   margin: 0 auto;
 }
-.ExperienciasDeBienestar .ctFormRetiros {
-  display: flex;
-  border: none;
-  background-color: transparent;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0);
-  width: 80vw;
-  margin: 50px auto;
-  display: flex;
-  justify-content: space-between;
-  min-height: 460px;
-}
-.ExperienciasDeBienestar .ctAgenda  .ctFormRetiros> .retirosPasados {
-  width: 50vw;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-@media (max-width: 780px) {
-    .ExperienciasDeBienestar .ctFormRetiros {
-        display: flex;
-        flex-direction: column-reverse;
-      }
-      .ExperienciasDeBienestar .ctAgenda  .ctFormRetiros> .retirosPasados {
-        width: 100%;
-        margin-bottom: 30px;
-      }
-   
+@media (min-width: 900px) {
+  .ctCalendario {
+    width: 70%;
+    height: 100%;
+    margin: 0px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
-
-.ExperienciasDeBienestar .ctAgenda > .ctFormRetiros> .retirosPasados > .ctPreviews {
-  overflow-y: auto;
-  max-height: 425px;
-  margin: 0 auto;
-}
-
-.ExperienciasDeBienestar .ctAgenda > .ctFormRetiros>  .retirosPasados .RTitle {
-  text-wrap: nowrap;
-  padding: 15px;
-  text-align: center;
-  font-size: 1.6rem;
+  .ctFormulario {
+    width: 25%;
+    height: 100%;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -101,19 +106,11 @@
   .ExperienciasDeBienestar .ctCards {
     padding: 0px 100px;
   }
-
-  .ExperienciasDeBienestar .ctAgenda {
-    padding: 20px;
-  }
 }
 
 @media (max-width: 780px) {
   .ExperienciasDeBienestar .ctCards {
     padding: 0px 20px;
-  }
-  .ExperienciasDeBienestar .ctAgenda {
-    padding: 32px;
-    flex-direction: column;
   }
 }
 
@@ -126,13 +123,35 @@
     padding: 0px 20px;
     grid-template-columns: repeat(1, 1fr);
   }
-  .ExperienciasDeBienestar .ctAgenda {
-    flex-direction: column;
-    padding: 10px;
-  }
-  .ExperienciasDeBienestar .ctAgenda > * {
-    width: 100%;
-    height: 80%;
-    margin: 10px 0;
-  }
+}
+
+.ctContentBoton {
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botonRetiros {
+  color: #fff;
+  border: 2px solid #cf1348;
+  border-radius: 0px;
+  padding: 18px 36px;
+  display: inline-block;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #cf1348;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+  color: #cf1348;
+}
+
+.diagonal:hover {
+  box-shadow: inset 400px 50px 0 0 #cf1348;
+  color: #f9f9f9;
 }

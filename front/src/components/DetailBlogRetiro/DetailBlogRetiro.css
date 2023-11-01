@@ -1,108 +1,186 @@
 @import "../../fonts.css";
-.previRetiro{
-    background-color: white;
-    width: 70vw;
-    margin-left: 15vw; 
-    max-height: 75vh;
-    overflow: auto;
-    padding-bottom: 2w;
-
+@import '@splidejs/splide/css';
+*{
+  font-family: sans-serif;
 }
-.ctPreviRetiro{
-    display: flex;
-    flex-direction: column;
-    padding: 2vw;
-    display: flex;
-    align-items: center;
-
+.splide{
+  margin-top: 2vw;
 }
-.closePreviRetiro{
+.splide__pagination{
+  display: none;
+}
+
+
+.splide__list {
+  
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 59vw;
+  margin: 0!important;
+  padding: 0!important;
+  justify-content: flex-start;
+}
+
+
+.splide__slide img {
+    vertical-align: bottom;
+    width: 19vw;
+}
+.previRetiro {
+  background-color: white;
+  width: 70vw;
+  margin-left: 15vw;
+  max-height: 90vh;
+  overflow: auto;
+  padding-bottom: 2w;
+  border: 1px solid rgb(206, 206, 206);
+}
+.ctPreviRetiro {
+  display: flex;
+  flex-direction: column;
+  padding: 2vw;
+  display: flex;
+  align-items: center;
+}
+.closePreviRetiro {
+  cursor: pointer;
+  width: 60vw;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.wrapperRetiro {
+  display: flex;
+  max-width: 50vw;
+  position: relative;
+}
+.wrapperRetiro .FlechaIMG {
+    height: 3vw;
+    width: 3vw;
+}
+.wrapper .FlechaIMG:active{
+    transform: translateY(-50%) scale(0.9);
+  }
+.wrapperRetiro .FlechaIMG:first-child {
+  left: -3vw;
+}
+.wrapperRetiro .FlechaIMG:last-child {
+  left: 51vw;
+}
+.wrapperRetiro .carouselRetiro {
+    font-size: 0px;
     cursor: pointer;
-    width: 60vw;
-    display: flex;
-    justify-content: flex-end;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
 }
-.imgPreviRetiro{
-    width: 40vw;
+.carouselRetiro.dragging{
+    cursor: grab;
+    scroll-behavior: auto;
+  }
+.carouselRetiro img {
+  height: 300px;
+  object-fit: cover;
+  user-select: none;
+  margin-left: 14px;
+  width: calc(100% / 3);
 }
-.imgPreviRetiro img{
-    width: 100%;
-    height: 100%;
+.carouselRetiro img:first-child {
+  margin-left: 0;
 }
-.titlePreviRetiro{
-    text-align: center;
-    font-size: 2.5vw;
-    width: 60vw;
-    margin-bottom: 1vw;
+
+.titlePreviRetiro {
+  text-align: center;
+  font-size: 1.6vw;
+  width: 60vw;
+  margin-bottom: 1vw;
 }
-.titlePreviRetiro h4{
-    margin: 0;
+.titlePreviRetiro h4 {
+  margin: 0;
+  margin-top: 2vw;
+  font-weight: 700;
 }
-.dataPreviRetiro{
-    width:60vw;
-    font-size: 2vw;
-    display: flex;
+.dataPreviRetiro {
+  width: 60vw;
+  font-size: 1.6vw;
+  display: flex;
 }
-.dataPreviRetiro h4{
-    margin: 0;
-    margin-right: 2vw;
+.dataPreviRetiro h4 {
+  
+  margin: 0;
+  margin-right: 2vw;
 }
-.dataPreviRetiro .firma{
-    
-    font-family: 'Great vibes', cursive;
+.dataPreviRetiro .firma {
+  font-family: "Great vibes", cursive;
 }
-.descripPreviRetiro{
-    width:60vw;
+.descripPreviRetiro {
+  width: 60vw;
 }
-.descripPreviRetiro p{
-    font-size: 1.5vw;
+.descripPreviRetiro p {
+  font-size: 1.3vw;
 }
 @media (max-width: 780px) {
-    .closePreviRetiro img{
-        width: 3vw;
-    }
-    .descripPreviRetiro p{
-        font-size: 2vw;
-    }
+  .splide__slide img {
+    vertical-align: bottom;
+    width: 28vw;
+  }
+  .carouselRetiro img {
+    width: 25vw;
+  }
+  .closePreviRetiro img {
+    width: 3vw;
+  }
+  .descripPreviRetiro p {
+    font-size: 2vw;
+  }
 }
 @media (max-width: 450px) {
-    .previRetiro{
-        width: 90vw;
-        margin-top: 5vw;
-        margin-left: 3vw;
-    }
-    .imgPreviRetiro{
-        width: 70vw;
-    }
-    .closePreviRetiro{
-        width: 80vw;
-    }
-    .closePreviRetiro img{
-        width: 5vw;
-        margin-bottom: 4vw;
-    }
-    .descripPreviRetiro p{
-        font-size: 5vw;
-    }
+  .splide__slide img {
+    vertical-align: bottom;
+    width: 59vw;
+  }
+  .previRetiro {
+    width: 90vw;
+    margin-top: 5vw;
+    margin-left: 3vw;
+  }
+  .wrapperRetiro {
+    height: 30vh;
+  }
+  .carouselRetiro img {
+    width: 50vw;
+  }
 
-    .titlePreviRetiro{
-        font-size: 5vw;
-        text-align: start;
-        width: 70vw;
-        margin-bottom: 4vw;
-    }
-    
-    .dataPreviRetiro{
-        width:70vw;
-        font-size: 4vw;
-    }
-    .dataPreviRetiro h4{
-        margin-right: 4vw;
-    }
-    .descripPreviRetiro{
-        width:70vw;
-    }
-    .descripPreviRetiro p{
-        font-size: 4vw;
-    }
+  .closePreviRetiro {
+    width: 80vw;
+  }
+  .closePreviRetiro img {
+    width: 5vw;
+    margin-bottom: 4vw;
+  }
+  .descripPreviRetiro p {
+    font-size: 5vw;
+  }
+
+  .titlePreviRetiro {
+    font-size: 5vw;
+    text-align: start;
+    width: 70vw;
+    margin-bottom: 4vw;
+  }
+
+  .dataPreviRetiro {
+    width: 70vw;
+    font-size: 4vw;
+  }
+  .dataPreviRetiro h4 {
+    margin-right: 4vw;
+  }
+  .descripPreviRetiro {
+    width: 70vw;
+  }
+  .descripPreviRetiro p {
+    font-size: 4vw;
+  }
 }

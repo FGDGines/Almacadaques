@@ -1,3 +1,16 @@
+.imgContacto{
+    margin-top: 5vw;
+    margin-bottom: -5vw;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.imgContacto .elizabet{
+    width: 30%;
+    height: 30%;
+}
+
 .Contactar {
     background-color: white;
 }
@@ -17,7 +30,7 @@
 }
 
 .Contactar .ctSections>div>div.title1 {
-    font-size: 1.9vw;
+    font-size: 1.5vw;
     line-height: 6vh;
     font-weight: 600;
     margin-bottom: 2vw;
@@ -30,7 +43,7 @@
 }
 
 .Contactar .ctSections>div>div.ctTelef {
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-weight: 200;
 }
 
@@ -40,8 +53,8 @@
 }
 
 .Contactar .ctSections>div.ctRight .TitleForm {
-    font-size: 2.5vw;
-    margin-bottom: 2.5vw;
+    font-size: 2vw;
+    margin-bottom: 2vw;
 }
 
 .ctDireccion {
@@ -119,6 +132,7 @@
         font-size: 1.5vw;
         line-height: 2vw;
     }
+    
 }
 
 @media (max-width: 450px) {

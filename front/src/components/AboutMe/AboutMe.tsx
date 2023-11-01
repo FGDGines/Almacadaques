@@ -18,7 +18,7 @@ const AboutMe = () => {
             <div className="containerSobremi_1">
                 
                 <div className="infoSobremi_1">
-                    
+                     
                     <ul>
                         <li>{textos[languageFlag].parrafosobremi1}</li>
                         <li>{textos[languageFlag].parrafosobremi2}</li>
@@ -28,7 +28,8 @@ const AboutMe = () => {
                     
                 </div>
                 <div className="photo_1">
-                    <img src="../../../src/assets/background/1.foto.jpg" alt="Foto sobre mi" />                
+                    <img src="../../../src/assets/background/1.foto.jpg" alt="Foto sobre mi" />  
+                    <p>Psicóloga – Mentora – Coach</p>              
                 </div>
             </div>
 

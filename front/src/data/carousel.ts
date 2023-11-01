@@ -25,14 +25,14 @@ export const carouselDescription: tpCarouelItem[] = [
     {
         id: 3,
         title: '¿Sientes que estás bloquead@?',
-        src: '../../src/assets/carrousell/tercera.jpg',
+        src: '../../src/assets/carrousell/tercera.jpeg',
         autor: '@ejemplo',
         link_autor: "https://www.google.com/search?q=fotos+de+Bienestar&oq=fotos+de+Bienestar&aqs=chrome..69i57j0i512l9.5406j0j7&sourceid=chrome&ie=UTF-8"
     },
     {
         id: 2,
         title: '¿Quieres un cambio de aires?',
-        src: '../../src/assets/carrousell/segunda.jpg',
+        src: '../../src/assets/carrousell/segunda.jpeg',
         autor: '@ejemplo',
         link_autor: "https://www.google.com/search?q=fotos+de+Bienestar&oq=fotos+de+Bienestar&aqs=chrome..69i57j0i512l9.5406j0j7&sourceid=chrome&ie=UTF-8"
     },
