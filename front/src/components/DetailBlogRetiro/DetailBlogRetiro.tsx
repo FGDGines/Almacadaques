@@ -1,4 +1,5 @@
-import React, { useState, useRef } from 'react';
+import { useEffect} from "react";
+import Splide from '@splidejs/splide';
 import './DetailBlogRetiro.css';
 
 interface Retiro {
@@ -18,7 +19,6 @@ interface DetailBlogRetiroProps {
 }
 
 const monthNames = [
-    
     "Ene",
     "Feb",
     "Mar",
@@ -34,41 +34,42 @@ const monthNames = [
 ];
 
 function DetailBlogRetiro({ retiro, onClose }: DetailBlogRetiroProps) {
-    const [isDragging, setIsDragging] = useState(false);
-    const [startX, setStartX] = useState(0);
-    const [scrollLeft, setScrollLeft] = useState(0);
-    const carouselRef = useRef<HTMLDivElement | null>(null);
-
-    if (!retiro) {
-        return null;
-    }
-
-    const handleMouseDown = (e: React.MouseEvent) => {
-        e.preventDefault();
-        setIsDragging(true);
-        setStartX(e.nativeEvent.pageX);
-        setScrollLeft(carouselRef.current!.scrollLeft);
-    };
+    useEffect(() => {
+        if (retiro) {
+          const handleResize = () => {
+            const width = window.innerWidth;
+            let perPage;
     
-    const handleMouseMove = (e: React.MouseEvent) => {
-        if (!isDragging) return;
-        e.preventDefault();
-        const x = e.nativeEvent.pageX;
-        const walk = (x - startX) * 1.5;
-        carouselRef.current!.scrollLeft = scrollLeft - walk;
-    };
+            if (width <= 450) {
+              perPage = 1;
+            } else if (width <= 780) {
+              perPage = 2;
+            } else {
+              perPage = 3;
+            }
     
-    const handleMouseUp = () => {
-        setIsDragging(false);
-    };
+            const splide = new Splide('.splide', {
+              perPage: perPage,
+              rewind: true,
+            });
+    
+            splide.mount();
+          };
+    
+          handleResize();
+          window.addEventListener('resize', handleResize);
+    
+          return () => {
+            window.removeEventListener('resize', handleResize);
+          };
+        }
+      }, [retiro]);
 
-    const prevSet = () => {
-        carouselRef.current!.scrollLeft -= 1.5 * (carouselRef.current!.offsetWidth / 3);
-    };
 
-    const nextSet = () => {
-        carouselRef.current!.scrollLeft += 1.5 * (carouselRef.current!.offsetWidth / 3);
-    };
+  if (!retiro) {
+    return null;
+  }
+
 
     return (
         <div className="previRetiro">
@@ -77,37 +78,27 @@ function DetailBlogRetiro({ retiro, onClose }: DetailBlogRetiroProps) {
                     <img src="../../../src/assets/images/cerrar.png" alt="Cerrar" />
                 </div>
 
-                <div className="wrapperRetiro">
-                    <img
-                        id='left'
-                        src="../../../src/assets/images/Arrowleft.png"
-                        alt="Flecha a la izquierda"
-                        className='FlechaIMG'
-                        onMouseDown={handleMouseDown}
-                        onMouseMove={handleMouseMove}
-                        onMouseUp={handleMouseUp}
-                        onClick={prevSet}
-                    />
-                    <div className="carouselRetiro" ref={carouselRef} onMouseMove={handleMouseMove}>
-                        {Array.isArray(retiro.image) ? (
-                            retiro.image.map((image, index) => (
-                                <img key={index} src={image} alt={`Retiro ${index + 1}`} draggable={false} />
-                            ))
-                        ) : (
-                            <img src={retiro.image} alt="Retiro" />
-                        )}
+                <section className="splide" aria-label="Ejemplo HTML básico de Splide">
+                <ul className="splide__pagination"></ul>
+                    <div className="splide__track">
+                        <ul className="splide__list">
+                            {Array.isArray(retiro.image)
+                                ? retiro.image.map((img, index) => (
+                                    <li className="splide__slide" key={index}>
+                                        <img src={img} alt={`Imagen ${index + 1}`} />
+                                    </li>
+                                ))
+                                : (
+                                    <li className="splide__slide">
+                                        <img src={retiro.image} alt="Imagen" />
+                                    </li>
+                                )}
+                        </ul>
                     </div>
-                    <img
-                        id="right"
-                        src="../../../src/assets/images/ArrowRight.png"
-                        alt="Flecha a la derecha"
-                        className='FlechaIMG'
-                        onMouseDown={handleMouseDown}
-                        onMouseMove={handleMouseMove}
-                        onMouseUp={handleMouseUp}
-                        onClick={nextSet}
-                    />
-                </div>
+                    
+                </section>
+
+
                 <div className="titlePreviRetiro">
                     <h4>{retiro.title}</h4>
                 </div>

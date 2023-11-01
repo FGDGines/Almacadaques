@@ -9,6 +9,8 @@ const retiroInfo = [
         "../../src/assets/carouselBlog/img1.jpg",
         "./src/assets/images/blog-line-1-620x464.jpg",
         "./src/assets/images/blog-line-1-620x464.jpg",
+
+        "./src/assets/images/blog-line-1-620x464.jpg",
       ],
       title: "The ultimate guide to time management",
       author: "Andres Brito",

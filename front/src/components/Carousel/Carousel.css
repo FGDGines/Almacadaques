@@ -7,7 +7,7 @@
 .Carousel{
     display: grid;   
     grid-template-columns: 1fr 1fr  ;    
-
+    width: 70vw;
     /* border: 10px solid black; */
     border-radius: var(--bRadius);
 }
@@ -25,11 +25,11 @@
     position: absolute;
     margin: 15px;
     border-radius: 9999px;
-    width: 64px;
-    height: 64px;
-    font-size: 30px;
-    cursor: pointer; 
-    transition: all 0.6s ;
+    width: 53px;
+    height: 53px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.6s;
 
 }
 
@@ -78,7 +78,7 @@
     right: 10px;
     bottom: 10px;
     font-family: 'Great vibes', cursive;
-    font-size: 2vw;
+    font-size: 1vw;
 
 }
 
