@@ -17,8 +17,11 @@
  }
 
  .Description .ctCarousel{
-    margin:  1vw;
+    margin: 0vw;
     padding: 1vw;
+    display: flex;
+    justify-content: center;
+    width: 89vw;
     /* border: 10px solid black; */
  }
 
