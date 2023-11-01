@@ -1,6 +1,31 @@
 @import "../../fonts.css";
+@import '@splidejs/splide/css';
 *{
   font-family: sans-serif;
+}
+.splide{
+  margin-top: 2vw;
+}
+.splide__pagination{
+  display: none;
+}
+
+
+.splide__list {
+  
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 59vw;
+  margin: 0!important;
+  padding: 0!important;
+  justify-content: flex-start;
+}
+
+
+.splide__slide img {
+    vertical-align: bottom;
+    width: 19vw;
 }
 .previRetiro {
   background-color: white;
@@ -31,16 +56,8 @@
   position: relative;
 }
 .wrapperRetiro .FlechaIMG {
-    top: 50%;
     height: 3vw;
     width: 3vw;
-    cursor: pointer;
-    font-size: 1.15rem;
-    position: absolute;
-    text-align: center;
-    line-height: 44px;
-    transform: translateY(-50%);
-    transition: transform 0.1s linear;
 }
 .wrapper .FlechaIMG:active{
     transform: translateY(-50%) scale(0.9);
@@ -104,6 +121,10 @@
   font-size: 1.3vw;
 }
 @media (max-width: 780px) {
+  .splide__slide img {
+    vertical-align: bottom;
+    width: 28vw;
+  }
   .carouselRetiro img {
     width: 25vw;
   }
@@ -115,6 +136,10 @@
   }
 }
 @media (max-width: 450px) {
+  .splide__slide img {
+    vertical-align: bottom;
+    width: 59vw;
+  }
   .previRetiro {
     width: 90vw;
     margin-top: 5vw;
