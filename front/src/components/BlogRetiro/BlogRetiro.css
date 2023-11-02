@@ -49,10 +49,11 @@
   justify-content: space-around;
 }
 .time p {
-  font-size: 1.3vw;
+  font-size: 1vw;
 }
 .authorRetiro h4 {
   font-size: 1.1vw;
+  font-weight: 700;
 }
 .informacionderetiro {
   width: 98vw;
