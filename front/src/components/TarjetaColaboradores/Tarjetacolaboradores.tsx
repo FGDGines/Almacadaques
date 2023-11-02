@@ -1,11 +1,15 @@
 import './Tarjetacolaboradores.css';
 import { Colaborador } from '../../data/colaboradores';
+import { textos } from '../../data/textos';
+import { useContext } from 'react';
+import { GlobalContext } from '../../contexts/GlobalContext';
 
 interface TarjetaColaboradoresProps {
     colaboradores: Colaborador[];
 }
 
 function Tarjetacolaboradores({ colaboradores }: TarjetaColaboradoresProps) {
+  const { languageFlag } = useContext(GlobalContext)
   return (
     <>
       {colaboradores.map((colaborador, index) => (
@@ -22,7 +26,10 @@ function Tarjetacolaboradores({ colaboradores }: TarjetaColaboradoresProps) {
             <p>{colaborador.descripcion}</p>
           </div>
           <div className="contact">
-            <a href={colaborador.contacto} target='_blank'>Contactame</a>
+            <a href={colaborador.contacto} target='_blank'>
+              {textos[languageFlag].textcolaborcontact}
+              
+              </a>
           </div>
         </div>
       ))}
