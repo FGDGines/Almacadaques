@@ -8,7 +8,7 @@ import { useState } from "react";
 
 interface Retiro {
   index: number;
-  day: number;
+  day: number[];
   month: number;
   year: number;
   image: string[] | string;
@@ -32,7 +32,7 @@ function BlogRetiro() {
   };
 
   const monthNames = [
-    
+
     "Ene",
     "Feb",
     "Mar",
@@ -69,8 +69,16 @@ function BlogRetiro() {
                 <div className="time_aut">
                   <div className="time">
                     <p>
-                      {monthNames[retiro.month]} {retiro.day}, {retiro.year}
+                      {retiro.day.map((day, idx) => (
+                        <span key={idx}>
+                          {monthNames[retiro.month]} {day}
+                          {idx < retiro.day.length - 1 && " / "} {/* Muestra la barra "/" si no es la última fecha */}
+                        </span>
+                      ))}
+                      {retiro.day.length > 1 && ` / ${retiro.year}`} {/* Muestra el año solo si hay más de una fecha */}
                     </p>
+
+
                   </div>
                   <div className="authorRetiro">
                     <h4>{retiro.author}</h4>

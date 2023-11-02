@@ -2,7 +2,7 @@ const retiroInfo = [
     
     {
       index: 1,
-      day: 26,
+      day: [22, 24],
       month: 8,
       year: 2023,
       image: [
@@ -18,7 +18,7 @@ const retiroInfo = [
     },
     {
       index: 2,
-      day: 24,
+      day: [1, 3],
       month: 8,
       year: 2023,
       image: [
@@ -32,7 +32,7 @@ const retiroInfo = [
     },
     {
       index: 3,
-      day: 29,
+      day: [27, 29],
       month: 9,
       year: 2023,
       image: [

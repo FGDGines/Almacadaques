@@ -1,21 +1,39 @@
-.ctReproductor {
-  width: 80%;
-  margin: 20px auto;
-}
-.custom-container {
+.fondoPodcast {
   width: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-color: #cf1248;
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+  border-radius: 1rem;
   margin: 0 auto;
-  height: 230px;
+  height: 100%;
   overflow: hidden;
   background-image: var(--bg-image);
   position: relative;
+}
+.socialIcons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+
+}
+
+.socialIcons a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #cf1348;
+  border-radius: 60%;
+  padding: 6px;
+  height: 15px;
+  margin-left: 5px;
+}
+
+.socialIcons a:hover {
+  box-shadow: inset 400px 50px 0 0 #cf1348;
+  color: #f9f9f9;
 }
 
 .ctOverlay {
@@ -24,188 +42,114 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #2321227a;
+  background-color: #6865667a;
 }
 
-.ctDescripcion {
-  width: 90%;
-  height: auto;
-  margin: 0 auto;
-}
-.containerInicial {
-  width: 100%;
-  height: 20%;
-}
-.containerResena {
-  width: 100%;
-  height: 30%;
-}
-.infoAdicional {
-  display: flex;
-
-  width: 100%;
-  height: 30%;
-}
-.ctTitulo {
-  font-size: 1.8rem;
-  color: white;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 600;
-  height: auto;
-}
-@media (min-width: 800px) {
-  .ctTitulo {
-    font-size: 1.3rem;
-  }
-}
-
-.ctFecha {
-  font-size: 1.5rem;
-  color: #f2f2f2;
-  font-weight: 600;
-  height: auto;
-}
-.ctReseña {
-  font-size: 1.2rem;
-  color: rgb(255, 255, 255);
-  text-align: justify;
-  height: auto;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-.guion{
-  color: #a3103a;
-  font-size: 30px;
-}
-.autor {
-  width: 30%;
-  color:#e5dbdb;
-  font-weight: 600;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-style: italic;
-}
-
-.ctRedes {
-  width: 70%;
-  align-items: center;
-  height: 45px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.ctlinks a {
-  text-decoration: none;
-  font-size: 15px;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-  background: #c70039;
-  color: #f1f1f1;
-  border-radius: 50%;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  transition: all 0.2s ease-in;
-  margin-right: 4px;
-}
-
-.ctlinks a:hover {
-  transform: scale(1.1);
-  box-shadow: inset 0 100px 0 0 #a3103a;
-}
-
-/* Contenedor principal */
-.contenedorPrincipal {
+.audioControls {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #f2f2f2;
-  padding: 20px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+  justify-content: flex-end;
+  width: 90%;
   margin: 0 auto;
-  margin-bottom: 20px;
-  border-radius: 0 0 10px 10px;
+  height: 90%;
 }
 
-
-@media (max-width: 800px) {
-  .contenedorPrincipal {
-  }
+.audioControls .descripcion .titulo {
+  color: white;
+  font-weight: 600;
+  font-family: sans-serif;
+  font-size: 1.5rem;
 }
-
-/* Contenedor de la barra de progreso */
-.barraDeProgreso {
+.audioControls .descripcion .autor {
+  color: #919191;
+  font-weight: 400;
+  font-family: sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+}
+.audioControls .descripcion .fecha {
+  color: #ffffff;
+  font-weight: 400;
+  font-family: sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+.audioControls .progreso {
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  width: 100%; /* Ancho total */
+}
+.audioControls .progreso span {
+  color: white;
+  font-family: sans-serif;
+  font-size: 1rem;
+}
+.audioControls .progreso input {
+  width: 80%;
+  border: none;
 }
 
-/* Duración: tiempo transcurrido */
-.duracionTranscurrida {
-  margin-right: 10px;
+.rango {
+  -webkit-appearance: none;
+  outline: none;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.219);
+  border-radius: 1rem;
 }
 
-/* Barra de progreso horizontal */
-.barraHorizontal {
-  width: 100%; /* Ancho total */
-  background-color: #e0e0e0;
-  border-radius: 5px;
-  height: 10px;
+.rango::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 10px; /* Ancho del control deslizante (0 para ocultar el control deslizante) */
+  height: 10px; /* Altura del control deslizante (0 para ocultar el control deslizante) */
+  border: none; /* Quita el borde del control deslizante */
+  background-color: rgba(0, 0, 0, 0.214);
+  box-shadow: -610px 0 0 610px #ffffff88;
+  cursor: pointer;
+}
+.audioControls .ctBoton {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 60%;
+  margin: 0 auto;
   position: relative;
 }
-
-.barraHorizontal input {
-  width: 100%;
-  height: 100%;
-  background-color: #cf1348; /* Color de la barra de progreso */
-  border-radius: 5px;
-  transition: width 0.3s ease;
-}
-
-/* Duración: tiempo restante */
-.duracionRestante {
-  margin-left: 10px;
-}
-
-/* Contenedor de los controles */
-.controles {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-/* Botón de bucle */
-
-.button_slide {
-  background-color: #c70039;
-  color: #ffffff;
+.audioControls .ctBoton .button {
+  margin-top: 10px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  padding: 20px;
-  display: inline-block;
-  font-family: "Lucida Console", Monaco, monospace;
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 1px;
-  cursor: pointer;
-  box-shadow: inset 0 0 0 0#a3103a;
-  -webkit-transition: ease-out 0.4s;
-  -moz-transition: ease-out 0.4s;
-  transition: ease-out 0.4s;
-}
-
-.slide_down:hover {
-  box-shadow: inset 0 100px 0 0 #a3103a;
-}
-
-/* Contenedor de control de volumen */
-.contenedorDeVolumen {
+  border: none;
+  color: rgba(185, 9, 9, 0.563);
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin-left: 10px;
+  cursor: pointer;
 }
 
-/* Control de volumen */
-.controlDeVolumen {
-  width: 100px;
+/* Estilos para el contenedor de la barra de volumen */
+.volumeBar {
+  position: absolute;
+  top: 0;
+  right: 40px; /* Ajusta la distancia del botón de volumen */
+  width: 100px; /* Ajusta el ancho según tu diseño */
+  z-index: 100; /* Ajusta el índice z para asegurarte de que esté por encima de otros elementos */
+  /* Otros estilos que puedan ser necesarios */
+}
+
+.botonSecundario {
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+  border-radius: 50%;
+  border: none;
+  color: rgba(185, 9, 9, 0.563);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }

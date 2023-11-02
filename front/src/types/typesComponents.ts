@@ -36,7 +36,7 @@ type tpTestimony = {
 
 type tpBlogInfo = {
     index: number;
-    day?: number;
+    day?: number[];
     month?: number;
     year?: number;
     image: string;
@@ -148,11 +148,12 @@ type tpFormDefault = {
 type AudioPlayerProps = {
     fecha?:string;
     url?: string;
-    title?: string;
-    author?: string;
-    thumbnail?: string;
-    reseña?: string;
-    hideControls?: boolean
+    titulo?: string;
+    autor?: string;
+    imagen?: string;
+    mostrarDatos?: boolean
+    mostrarControles?: boolean
+    enPodcast?:boolean
   };
 
 export type {
