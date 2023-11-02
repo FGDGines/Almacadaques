@@ -196,10 +196,8 @@
 }
 @media (min-width: 764px) {
   .titulosPodcast h2 {
-    
     font-size: 2rem;
   }
-
 }
 @media (min-width: 1024px) {
   .titulosPodcast h2 {
@@ -211,6 +209,7 @@
     margin: 40px auto;
     width: 90%;
     height: 280px;
+    margin-bottom: 20px;
   }
 }
 
@@ -237,7 +236,9 @@
   border-radius: 10px;
   height: 40vh;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
 }
 @media (min-width: 764px) {
   .ctMasvistos {
