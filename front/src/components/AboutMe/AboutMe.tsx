@@ -36,6 +36,7 @@ const AboutMe = () => {
             <div className="containerSobremi_2">
             <div className="photo_2">
                     <img src="../../../src/assets/background/2.foto.jpg" alt="Foto sobre mi" />
+                    <p>Psicóloga – Mentora – Coach</p> 
                 </div>
                 <div className="infoSobremi_2">
                     <p>{textos[languageFlag].titleparrafo}</p>
@@ -68,6 +69,7 @@ const AboutMe = () => {
                 </div>
                 <div className="photo_1">
                     <img src="../../../src/assets/background/3.foto.jpg" alt="Bibliografía" />
+                    <p>Psicóloga – Mentora – Coach</p> 
                 </div>
             </div>
         </div>

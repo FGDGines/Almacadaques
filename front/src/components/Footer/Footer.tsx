@@ -44,13 +44,17 @@ const Footer = () => {
                     <form action="#">
                         <p className='correo'>{textos[languageFlag].textfooteremail}</p>
                         <div className="input-group">
-                            <input required type="email" name="email" autoComplete="on" className="input" />
+                            <input required type="email" name="email" autoComplete="on" className="input1" />
                             <label className="user-label">{textos[languageFlag].textfooteremail2}</label>
                         </div>
                     </form>
                     <button className='buttonFooter' type='button'>{textos[languageFlag].textfooterregistro}</button>
                 </div>
+
+                
             </div>
+            <h4 className='textFooteer'>© 2023 Almacadaquest reservado todos los derechos 
+Diseño: FGD Desarrollo Web</h4>
             <div className="container2">
                 <div className="infofooter">
                     <div className="redes">

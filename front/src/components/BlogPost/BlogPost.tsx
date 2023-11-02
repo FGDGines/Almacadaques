@@ -13,10 +13,10 @@ const BlogPost = () => {
       <Franja text="Tips de Bienestar" />
 
       <div className="flipbook">
-      <input type="checkbox" id="checkbox-cover" />
-      <input type="checkbox" id="checkbox-page1" />
-      <input type="checkbox" id="checkbox-page2" />
-      <input type="checkbox" id="checkbox-page3" />
+      <input type="checkbox" id="checkbox-cover" className="input"/>
+      <input type="checkbox" id="checkbox-page1" className="input"/>
+      <input type="checkbox" id="checkbox-page2" className="input"/>
+      <input type="checkbox" id="checkbox-page3" className="input"/>
       <div className="book">
         <div className="cover">
           <label htmlFor="checkbox-cover"></label>
