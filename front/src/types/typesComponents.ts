@@ -154,7 +154,7 @@ type AudioPlayerProps = {
     mostrarDatos?: boolean
     mostrarControles?: boolean
     enPodcast?:boolean
-  };
+};
 
 export type {
     tpTestimonyBar,
