@@ -8,7 +8,7 @@ import { useState } from "react";
 
 interface Retiro {
   index: number;
-  day: number;
+  day: number[];
   month: number;
   year: number;
   image: string[] | string;
@@ -32,7 +32,7 @@ function BlogRetiro() {
   };
 
   const monthNames = [
-    
+
     "Ene",
     "Feb",
     "Mar",
@@ -69,8 +69,13 @@ function BlogRetiro() {
                 <div className="time_aut">
                   <div className="time">
                     <p>
-                      {monthNames[retiro.month]} {retiro.day}, {retiro.year}
+                      {retiro.day.length === 1
+                        ? `el ${retiro.day[0]} de ${monthNames[retiro.month]}, ${retiro.year}`
+                        : `del ${retiro.day[0]} al ${retiro.day[retiro.day.length - 1]} de ${monthNames[retiro.month]}, ${retiro.year}`}
                     </p>
+
+
+
                   </div>
                   <div className="authorRetiro">
                     <h4>{retiro.author}</h4>

@@ -1,5 +1,6 @@
 .Podcast {
   background-color: white;
+  
 }
 
 .ctTitulos {
@@ -15,6 +16,7 @@
   width: 80vw;
   min-height: 70vh;
   padding: 20px;
+  padding-bottom: 17vw;
 }
 .ctBuscador {
   max-height: 800px;

@@ -44,13 +44,16 @@ const Footer = () => {
                     <form action="#">
                         <p className='correo'>{textos[languageFlag].textfooteremail}</p>
                         <div className="input-group">
-                            <input required type="email" name="email" autoComplete="on" className="input" />
+                            <input required type="email" name="email" autoComplete="on" className="input1" />
                             <label className="user-label">{textos[languageFlag].textfooteremail2}</label>
                         </div>
                     </form>
                     <button className='buttonFooter' type='button'>{textos[languageFlag].textfooterregistro}</button>
                 </div>
+
+                
             </div>
+            
             <div className="container2">
                 <div className="infofooter">
                     <div className="redes">
@@ -63,8 +66,13 @@ const Footer = () => {
                         <div className="whats">
                             <a href="https://wa.me/+34660305421?text=Hola Almacadaques" target='_blank'><img className="img1 " src="../../../src/assets/images/whatsapp.png" alt="whatsapp" /></a>
                         </div>
+                        
                     </div>
+                    
+                    <h4 className='textFooteer'>© 2023 Almacadaquest reservado todos los derechos Diseño: FGD Desarrollo Web</h4>
+                    
                 </div>
+                
 
             </div>
         </div>
