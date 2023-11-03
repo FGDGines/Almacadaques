@@ -69,14 +69,11 @@ function BlogRetiro() {
                 <div className="time_aut">
                   <div className="time">
                     <p>
-                      {retiro.day.map((day, idx) => (
-                        <span key={idx}>
-                          {monthNames[retiro.month]} {day}
-                          {idx < retiro.day.length - 1 && " / "} {/* Muestra la barra "/" si no es la última fecha */}
-                        </span>
-                      ))}
-                      {retiro.day.length > 1 && ` / ${retiro.year}`} {/* Muestra el año solo si hay más de una fecha */}
+                      {retiro.day.length === 1
+                        ? `el ${retiro.day[0]} de ${monthNames[retiro.month]}, ${retiro.year}`
+                        : `del ${retiro.day[0]} al ${retiro.day[retiro.day.length - 1]} de ${monthNames[retiro.month]}, ${retiro.year}`}
                     </p>
+
 
 
                   </div>
