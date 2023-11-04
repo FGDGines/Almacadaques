@@ -42,7 +42,7 @@
   padding: 20px 0px 20px 40px;
   border-radius: 12px;
   font-family: sans-serif;
-  color: #bebebe;
+  color: #787474;
   border: 0.8px solid #bebebe;
 }
 .search-icon {
@@ -54,6 +54,31 @@
   cursor: pointer;
   font-family: sans-serif;
   font-size: 1.5rem;
+}
+
+.ctResultadosBusqueda{
+  width: 98%;
+  margin: 15px auto;
+  background-color: #eeeeee;
+  padding: 10px;
+  border-radius: 1rem;
+  overflow-y: scroll;
+  height: 300px;
+}
+.ctResultadosBusqueda .mensaje{
+  color: #787474;
+  font-size: 1.5rem;
+}
+
+.ctResultadosBusqueda .containerPod{
+  width: 98%;
+  margin: 0 auto;
+  height: 150px;
+  margin-bottom: 10px;
+}
+.ctResultadosBusqueda .containerPod:last-of-type {
+  margin-right: auto;
+  margin-bottom: 0px;
 }
 @media (min-width: 764px) {
   .search-icon {
@@ -155,11 +180,12 @@
   max-height: 800px;
   width: 98%;
   border-radius: 10px;
-  height: 40vh;
+  height: 50vh;
   margin: 0 auto;
   margin-top: 40px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 @media (min-width: 764px) {
@@ -193,8 +219,44 @@
   width: 90%;
   margin: 0 auto;
   display: flex;
-  height: 220px;
+  height: 80%;
   overflow-x: scroll;
+
+}
+.arrow-left{
+  background-color: #bebebef1;
+  padding: 10px;
+  z-index: 4;
+  top: 50%;
+  left: 2%;
+  position: absolute;
+  border-radius: 50%;
+  color: #cd6a6c;
+  cursor: pointer;
+  display: none;
+}
+
+.arrow-right{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fffffff1;
+  width: 50px;
+  height: 50px;
+  z-index: 4;
+  top: 55%;
+  left: 92%;
+  position: absolute;
+  border-radius: 50%;
+  color: #cd6a6c;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 600;
+  box-shadow: -8px 10px 68px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: -8px 10px 68px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -8px 10px 68px 0px rgba(0,0,0,0.75);
+
 }
 @media (min-width: 764px) {
   .titulosPodcast h2 {
@@ -210,7 +272,6 @@
   .listaPodcast {
     margin: 40px auto;
     width: 90%;
-    height: 280px;
     margin-bottom: 20px;
   }
 }
@@ -231,16 +292,18 @@
 .containerPod:last-of-type {
   margin-right: 0px;
 }
+
 .ctMasvistos {
   background-color: #eeeeee;
   max-height: 800px;
   width: 98%;
   border-radius: 10px;
-  height: 40vh;
+  height: 50vh;
   margin: 0 auto;
   margin-top: 40px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 @media (min-width: 764px) {
   .ctMasvistos {
