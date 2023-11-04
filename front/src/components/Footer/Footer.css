@@ -153,6 +153,7 @@ input:valid ~ label {
 .textFooteer{
   text-align: center;
   font-size: 1vw;
+  color: white;
 }
 
 .container2 {
@@ -168,11 +169,13 @@ input:valid ~ label {
   border-radius: 0.5vw;
   height: 7vw;
   width: 100vw;
+  flex-direction: column;
+  align-items: center;
 }
 
 .redes {
   display: flex;
-  width: 65vw;
+  width: 35vw;
 }
 
 .socialRed {

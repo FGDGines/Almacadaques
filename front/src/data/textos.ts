@@ -128,7 +128,7 @@ export const textos: TextosType<
         contactar: "Contactar",
         // Fin del Navbar
         //footer 
-        textfooteraviso: "AVISO LEGAL",
+        textfooteraviso: "Cláusulas Legales",
         textfooterpolitica: "Politica de Privacidad",
         textfootercoockies: "Politica de coockies",
         textfooteraviso2:"Aviso legal",

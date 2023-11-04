@@ -1,9 +1,9 @@
 import './Retiros.css'
 
-function Retiros() {
+function RetirosAdmin() {
   return (
     <div>Retiros</div>
   )
 }
 
-export  {Retiros}
+export  {RetirosAdmin}

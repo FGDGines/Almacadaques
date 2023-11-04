@@ -53,8 +53,7 @@ const Footer = () => {
 
                 
             </div>
-            <h4 className='textFooteer'>© 2023 Almacadaquest reservado todos los derechos 
-Diseño: FGD Desarrollo Web</h4>
+            
             <div className="container2">
                 <div className="infofooter">
                     <div className="redes">
@@ -67,8 +66,13 @@ Diseño: FGD Desarrollo Web</h4>
                         <div className="whats">
                             <a href="https://wa.me/+34660305421?text=Hola Almacadaques" target='_blank'><img className="img1 " src="../../../src/assets/images/whatsapp.png" alt="whatsapp" /></a>
                         </div>
+                        
                     </div>
+                    
+                    <h4 className='textFooteer'>© 2023 Almacadaquest reservado todos los derechos Diseño: FGD Desarrollo Web</h4>
+                    
                 </div>
+                
 
             </div>
         </div>
