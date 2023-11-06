@@ -9,6 +9,6 @@ export const statisticInfo = {
       "Corporate Wellbeing",
       "Mindfulness",
       "Smiling at Work",
-      "Coaching & mentoring",
+      "Coaching & Mentoring",
     ],
   };

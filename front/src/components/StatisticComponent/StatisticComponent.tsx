@@ -3,6 +3,7 @@ import { Container, Grid, Paper, Typography } from '@mui/material';
 import { MdOutlineEmojiPeople, MdOutlineMood } from 'react-icons/md';
 import { GiMeditation } from 'react-icons/gi';
 import { BsFillHeartPulseFill } from 'react-icons/bs';
+import { IconosData } from "../../data/icons";
 
 import './StatisticComponent.css'; // Importa el archivo CSS
 import { Tilt } from 'react-tilt';
@@ -18,7 +19,11 @@ const StatisticComponent = ({ titles }: { titles: string[] }) => {
             <Grid item xs={12} sm={6} md={3} key={index}>
               <Tilt>
                 <Paper className="statBox custom-stat-box">
-                  {React.createElement(icons[index], { className: "statIcon" })}
+                  {IconosData.map((iconos, index) => (
+                    <i >
+                      <img src={iconos.src} key={index} alt="" />
+                    </i>
+                  ))}
                   <Typography variant="subtitle1" className="statText">
                     {title}
                   </Typography>
