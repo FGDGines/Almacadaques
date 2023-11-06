@@ -4,42 +4,42 @@ import Footer from '../Footer/Footer';
 import Franja from '../Franja/Franja';
 import { textos } from '../../data/textos';
 import { GlobalContext } from '../../contexts/GlobalContext';
-import { useContext} from 'react';
+import { useContext } from 'react';
 const AboutMe = () => {
     const { languageFlag } = useContext(GlobalContext)
     return <div className="AboutMe">
         <Navbar />
         <Franja text='Sobre Mi' />
         <div className='title1'><span style={{ color: "#75151E" }}> ❝ </span>
-                {textos[languageFlag].textsobremi1}
+            {textos[languageFlag].textsobremi1}
             <span style={{ color: "#75151E" }}> ❞ </span>
         </div>
         <div className='Contenido'>
             <div className="containerSobremi_1">
-                
+
                 <div className="infoSobremi_1">
-                     
+
                     <ul>
                         <li>{textos[languageFlag].parrafosobremi1}</li>
                         <li>{textos[languageFlag].parrafosobremi2}</li>
                         <li>{textos[languageFlag].parrafosobremi3}</li>
                         <li>{textos[languageFlag].parrafosobremi4}</li>
                     </ul>
-                    
+
                 </div>
                 <div className="photo_1">
-                    <img src="../../../src/assets/background/1.foto.jpg" alt="Foto sobre mi" />  
-                    <p>Psicóloga – Mentora – Coach</p>              
+                    <img src="../../../src/assets/background/1.foto.jpg" alt="Foto sobre mi" />
+                    <p>Psicóloga – Mentora – Coach</p>
                 </div>
             </div>
 
             <div className="containerSobremi_2">
-            <div className="photo_2">
+                <div className="photo_2">
                     <img src="../../../src/assets/background/2.foto.jpg" alt="Foto sobre mi" />
-                    <p>Psicóloga – Mentora – Coach</p> 
+                    <p>Psicóloga – Mentora – Coach</p>
                 </div>
                 <div className="infoSobremi_2">
-                    <p>{textos[languageFlag].titleparrafo}</p>
+                    <p>{textos[languageFlag].titleparrafo}</p>  
                     <ul>
                         <li>{textos[languageFlag].parrafosobremi5}</li>
                         <li>{textos[languageFlag].parrafosobremi6}</li>
@@ -49,11 +49,11 @@ const AboutMe = () => {
                         <li>{textos[languageFlag].parrafosobremi10}</li>
                     </ul>
                 </div>
-                
+
             </div>
 
             <div className="containerSobremi_1">
-                
+
                 <div className="infoSobremi_1">
                     <p>{textos[languageFlag].titleparrafo3}</p>
                     <ul>
@@ -69,7 +69,7 @@ const AboutMe = () => {
                 </div>
                 <div className="photo_1">
                     <img src="../../../src/assets/background/3.foto.jpg" alt="Bibliografía" />
-                    <p>Psicóloga – Mentora – Coach</p> 
+                    <p>Psicóloga – Mentora – Coach</p>
                 </div>
             </div>
         </div>
