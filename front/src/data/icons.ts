@@ -1,18 +1,14 @@
-import { iconsProps } from "../types/typesComponents";
-export const IconosData:iconsProps[] =  [
-      {
-       src: "../src/assets/iconos/bailando.png", 
-      },
-      {
-       src: "../src/assets/iconos/meditacion.png", 
-      },
-      {
-       src: "../src/assets/iconos/tungsteno.png", 
-      },
-      {
-       src: "../src/assets/iconos/arte.png", 
-      }
-    ]
-  
-
-  
+    export const iconos = {
+      bienestar: [
+        "../src/assets/iconos/bailando.png", 
+        "../src/assets/iconos/meditacion.png", 
+        "../src/assets/iconos/tungsteno.png", 
+        "../src/assets/iconos/arte.png", 
+      ],
+      medida: [
+        "../src/assets/iconos/balanza.png", 
+        "../src/assets/iconos/meditacion.png", 
+        "../src/assets/iconos/sonrisa.png", 
+        "../src/assets/iconos/entrenamiento.png", 
+      ],
+    };

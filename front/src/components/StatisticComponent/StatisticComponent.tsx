@@ -3,29 +3,27 @@ import { Container, Grid, Paper, Typography } from '@mui/material';
 import { MdOutlineEmojiPeople, MdOutlineMood } from 'react-icons/md';
 import { GiMeditation } from 'react-icons/gi';
 import { BsFillHeartPulseFill } from 'react-icons/bs';
-import { IconosData } from "../../data/icons";
+import { iconos } from "../../data/icons";
 
 import './StatisticComponent.css'; // Importa el archivo CSS
 import { Tilt } from 'react-tilt';
 
-const StatisticComponent = ({ titles }: { titles: string[] }) => {
-  const icons = [MdOutlineMood, BsFillHeartPulseFill, MdOutlineEmojiPeople, GiMeditation];
+const StatisticComponent = ({ titles, type }: { titles: string[], type: 'bienestar' | 'medida' }) => {
+  const icons = type === 'bienestar' ? iconos.bienestar : iconos.medida;
 
   return (
     <section className="stats">
       <Container>
         <Grid container spacing={3}>
-          {titles.map((title, index) => (
+          {icons.map((icon, index) => (
             <Grid item xs={12} sm={6} md={3} key={index}>
               <Tilt>
                 <Paper className="statBox custom-stat-box">
-                  {IconosData.map((iconos, index) => (
-                    <i >
-                      <img src={iconos.src} key={index} alt="" />
-                    </i>
-                  ))}
+                  <i>
+                    <img src={icon} alt="Iconos" />
+                  </i>
                   <Typography variant="subtitle1" className="statText">
-                    {title}
+                    {titles[index]}
                   </Typography>
                 </Paper>
               </Tilt>
@@ -36,5 +34,6 @@ const StatisticComponent = ({ titles }: { titles: string[] }) => {
     </section>
   );
 };
+
 
 export default StatisticComponent;
