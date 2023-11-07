@@ -32,9 +32,7 @@
 	transition-duration: 1s;
 	perspective: 1500;
 }
-input {
-	display: none;
-}
+
 .cover, .back-cover {
 	background-color: #4173a5;
 	width: 100%;

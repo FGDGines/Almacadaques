@@ -9,11 +9,10 @@ import { statisticInfo } from '../../data/StatisticComponent';
 
 
 function ExperienciasDeMedida() {
-    const medidaTitles = statisticInfo.medida;
     return (
         <div className="ExperienciasdeMedida">
             <Navbar />
-            <Franja text='Experiencias de Medida' />
+            <Franja text='Experiencias de Medida' /> 
             <div className="ctMain">
                 <div className="ct">
                     <div className="ctPhrase">
@@ -22,7 +21,7 @@ function ExperienciasDeMedida() {
                         <span style={{ color: "#75151E" }}> ❞ </span>
                     </div>
                     <div className="ctStatitis">
-                        <StatisticComponent titles={medidaTitles} />
+                    <StatisticComponent titles={statisticInfo.medida} type="medida" />
                     </div>
                     <div className="ctphoto">
                         <img className='imgEquip' src="../../../src/assets/background/contactanos.jpg" alt="Equipo de trabajo" />

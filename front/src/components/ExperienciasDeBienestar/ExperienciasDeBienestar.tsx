@@ -36,7 +36,7 @@ const ExperienciasDeBienestar = () => {
         setEvento(evento)
         handleClickOpen()
     }
-    const bienestarTitles = statisticInfo.bienestar;
+
 
     return <div className='ExperienciasDeBienestar'>
         <Navbar />
@@ -60,10 +60,11 @@ const ExperienciasDeBienestar = () => {
                 <span style={{ color: "#75151E" }}> ❞ </span>
             </div>
 
-            <StatisticComponent titles={bienestarTitles} />
+            <StatisticComponent titles={statisticInfo.bienestar} type="bienestar" />
+   
 
             <div className='ctAgenda'>
-
+ 
 
                 <div className="ctContentAgenda">
                     <div className="ctCalendario">

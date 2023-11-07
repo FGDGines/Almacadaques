@@ -138,11 +138,10 @@ const Podcast = () => {
                     <h3>Categorias</h3>
                 </div>
                 <div className="ctBotones">
-                    <div className="botonCategoria">e-commerce</div>
-                    <div className="botonCategoria">e-commerce</div>
-                    <div className="botonCategoria">e-commerce</div>
-                    <div className="botonCategoria">e-commerce</div>
-                    <div className="botonCategoria">e-commerce</div>
+                    <div className="botonCategoria">Experiencias Almacadaqués</div>
+                    <div className="botonCategoria">Meditaciones</div>
+                    <div className="botonCategoria">Almas Inspiradoras</div>
+                    <div className="botonCategoria">Libros con Alma</div>
                 </div>
 
             </div>
