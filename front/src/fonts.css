@@ -14,6 +14,12 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'PT-Script-Monsoon';
+	src: url('../src/assets/fonts/PT-Script-Monsoon-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
 
 .fa {
 	display: inline-block;

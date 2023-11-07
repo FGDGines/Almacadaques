@@ -156,6 +156,10 @@ type AudioPlayerProps = {
     enPodcast?:boolean
   };
 
+type iconsProps = {
+    src?:string
+}
+
 export type {
     tpTestimonyBar,
     tpTestimony,
@@ -181,5 +185,6 @@ export type {
     tpDtmResponse,
     tpFormDefault,
     tpObjectStringToStrig, 
-    AudioPlayerProps
+    AudioPlayerProps,
+    iconsProps
 };

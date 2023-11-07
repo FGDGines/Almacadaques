@@ -28,7 +28,12 @@
     "react": "^18.2.0",
     "react-big-calendar": "^1.8.4",
     "react-icons": "^4.11.0",
+    "react-pageflip": "^2.0.3",
     "react-player": "^2.13.0",
     "react-router-dom": "^6.16.0"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.25",
+    "@types/page-flip": "^2.0.2"
   }
 }
