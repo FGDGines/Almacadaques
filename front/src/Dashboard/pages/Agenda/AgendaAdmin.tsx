@@ -1,9 +1,9 @@
 import './Agenda.css'
 
-function Agenda() {
+function AgendaAdmin() {
   return (
     <div>Agenda</div>
   )
 }
 
-export  {Agenda}
+export  {AgendaAdmin}

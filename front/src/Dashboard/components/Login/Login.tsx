@@ -1,4 +1,4 @@
-
+import './Login.css'
 
 function Login() {
   console.log("Este es el login")
