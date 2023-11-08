@@ -16,7 +16,7 @@ import { PoliticaCookies } from '../PoliticadeCookies/PoliticaCookies';
 import { AvisoLegal } from '../AvisoLegal/AvisoLegal';
 import { BlogRetiro } from '../BlogRetiro/BlogRetiro';
 import Podcast from '../Podcast/Podcast';
-import { Login } from '../../../src/Dashboard/components/Login/Login';
+import  Login  from '../../../src/components/Login/Login';
 
 const HandlerLayout = () => {
   const { layoutID } = useContext(GlobalContext);
@@ -39,8 +39,9 @@ const HandlerLayout = () => {
 
   let screen = <div></div>;
   if (window.location.pathname === '/Login') {
-    // Si la ruta actual es /Login, muestra el componente Login
     screen = <Login />;
+    console.log(<Login />)
+    
   } else {
   switch (layoutID) {
     case 0:
@@ -91,7 +92,7 @@ const HandlerLayout = () => {
     case 15:
       screen = <Podcast />;
       break;
-    case 17:
+    case 16:
       screen = <Login />;
       break;
 

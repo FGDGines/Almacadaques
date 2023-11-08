@@ -6,7 +6,6 @@ import { BlogAdmin } from "../../pages/Blog/BlogAdmin";
 import { ColaboradoresAdmin } from "../../pages/Colaboradores/ColaboradoresAdmin";
 import { RetirosAdmin } from "../../pages/Retiros/RetirosAdmin";
 import { SobreMIAdmin } from "../../pages/SobreMI/SobreMIAdmin";
-import { Login } from "../Login/Login";
 import { routes } from "./Routes";
 
 const HandlerLayout = () => {
@@ -47,9 +46,7 @@ const HandlerLayout = () => {
     case routes.retiros:
       screen = <RetirosAdmin />;
       break;
-    case routes.login:
-      screen = <Login />;
-      break;
+   
     default:
       break;
 
