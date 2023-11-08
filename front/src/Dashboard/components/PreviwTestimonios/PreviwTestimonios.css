@@ -1,0 +1,60 @@
+.testimonioMain{
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-radius: 1.93781rem;
+background: #FCF1F4;
+padding: .6vw 1.19vw;
+}
+
+.imgUsertestimonio{
+    width: 4vw;
+    height: 4vw;
+}
+.FraseTestimonio{
+    color: #000;
+
+font-family: Montserrat;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+.iconEditar{
+    display: flex;
+    gap: 1vw;
+}
+.editar{
+    cursor: pointer;
+    display: flex;
+height: 2.0625rem;
+padding: 0.2rem .2rem;
+justify-content: center;
+align-items: center;
+gap: 0.2rem;
+}
+.eliminar{
+    cursor: pointer;
+    display: flex;
+height: 2.0625rem;
+padding: 0.2rem .2rem;
+justify-content: center;
+align-items: center;
+gap: 0.1rem;
+}
+.Textedit{
+    color:  #CF1348;
+    font-family: Montserrat;
+    font-size: 1.057rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.TextElim{
+    color: #CF1348;
+    font-family: Montserrat;
+    font-size: 1.057rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
