@@ -28,8 +28,8 @@
   gap: 1rem;
 }
 .botonesCarrusel img {
-    width: 2vw;
-  }
+  width: 2vw;
+}
 .botonesCarrusel .left {
   background-color: #fcf1f4;
   width: 2.5vw;
@@ -49,36 +49,77 @@
   border-radius: 50%;
 }
 
-.itemsCarrusel{
-    width: 95%;
-    margin: 0 auto;
-    height: 70%;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-
+.itemsCarrusel {
+  width: 95%;
+  margin: 0 auto;
+  height: 70%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
 }
- .items{
-    display: inline-block;
-    width: 18vw!important;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 1rem;
-    margin: 0 auto;
-    height: 100%;
-    overflow: hidden;
-    background-image: var(--bg-image);
-    position: relative;
-    margin-right: 2vw;
-
+.items {
+  display: inline-block;
+  width: 15vw;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  margin: 0 auto;
+  height: 100%;
+  overflow: hidden;
+  background-image: url(../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/fondo-items.svg);
+  position: relative;
+  margin-right: 2vw;
 }
 
-.ctOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #cf1348a2 !important;
-  }
+.ctOver {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #7770724c !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ctOver .iconosItems {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 5vw;
+}
+
+.ctOver .iconosItems i {
+  cursor: pointer;
+}
+
+.ctOver .contenidoItems {
+  width: 90%;
+  height: 10vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ctOver .contenidoItems .ItemsDescripcion{
+  width: 100%;
+  height: 50%;
+  color: white;
+  font-style: normal;
+  line-height: normal;
+}
+.ctOver .contenidoItems .firma{
+  width: 100%;
+  display: flex;
+  height: 50%;
+  align-items: flex-start;
+  color: white;
+  font-style: normal;
+  line-height: normal;
+  margin: 0;
+}
