@@ -1,11 +1,16 @@
 import './Login.css'
 
 const Login = ()=> {
-  console.log("Este es el login")
   return (
     <div className="login">
 
-      <h1>Hola, Hola</h1>
+      
+      <div className="containerLeftLogin">
+
+      </div>
+      <div className="containerRightLogin">
+        
+      </div>
     </div>
     )
 }
