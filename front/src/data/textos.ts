@@ -92,12 +92,11 @@ export const textos: TextosType<
     "textcoachinginterna7" |
     "textcoachinginterna8" |
     "textcoachinginternaTestimonio" |
-    "textcoachinginterPideinfo" 
-
-
+    "textcoachinginterPideinfo" | 
     //Agenda Experiencias de bienestar
     //Agenda experiencias a medida
-    //colaborador
+    //colaborador@s
+    "textocolaborador"
     //blo( Tips de bienestar)
     //podcast
     //blog retiros
@@ -194,6 +193,7 @@ export const textos: TextosType<
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
         //colaborador
+        textocolaborador: "Colaborador@s de Almacadaques",
         //blo( Tips de bienestar)
         //podcast
         //blog retiros
@@ -290,6 +290,7 @@ export const textos: TextosType<
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
         //colaborador
+        textocolaborador: "Collaborat@rs",
         //blo( Tips de bienestar)
         //podcast
         //blog retiros
@@ -385,6 +386,7 @@ export const textos: TextosType<
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
         //colaborador
+        textocolaborador: "Col·laborad@rs",
         //blo( Tips de bienestar)
         //podcast
         //blog retiros
