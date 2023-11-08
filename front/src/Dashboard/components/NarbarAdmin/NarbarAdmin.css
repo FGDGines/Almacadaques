@@ -26,11 +26,14 @@
 }
 .iconadmin p {
   color: #fff;
-  font-size: .8vw;
+  font-size: 0.8vw;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
 .incioAdmin {
   cursor: pointer;
+}
+.ImgIconHeaderAdmin {
+  width: 1.5vw;
 }
