@@ -1,0 +1,9 @@
+.EnlaceBton{
+    border-radius: 1.94856rem;
+    padding: .97vw 1.95vw;
+    background-color: #CF1348;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    gap: 1vw;
+}
