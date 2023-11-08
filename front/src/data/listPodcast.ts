@@ -9,7 +9,6 @@ export const podcastData: AudioPlayerProps[] = [
     fecha: 'October 17, 2023',
     categoria: 'experiencias almacadaques'
   },
-  // ... otros podcasts con sus respectivas categorías
   {
     url: "https://storage.googleapis.com/media-session/elephants-dream/the-wires.mp3",
     titulo: "Ciencia Ficción",

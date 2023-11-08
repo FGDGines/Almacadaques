@@ -20,7 +20,7 @@ const HandlerLayout = () => {
 
     window.addEventListener("popstate", handleRouteChange);
 
-    return () => {
+    return () => { 
       window.removeEventListener("popstate", handleRouteChange);
     };
   }, []);
@@ -51,6 +51,7 @@ const HandlerLayout = () => {
     default:
       break;
 
+      
       
   }
   console.log(currentPath);
