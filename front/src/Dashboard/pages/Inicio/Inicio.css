@@ -2,5 +2,7 @@
     background-color: white;
     width: 100vw;
     height: 100vh;
-    margin-top: -4.5vw;
+    display: flex;
+    position: absolute;
+    top: 0;
 }

@@ -4,7 +4,7 @@ import { GlobalContext } from '../../../contexts/GlobalContext';
 
 function NarbarAdmin() {
     const { setLayoutID } = useContext(GlobalContext);
-    return (
+    return (    
         <div className='narbarAdmin'>
             <div className="buttonSessionesAdmin">
                 <div className="incioAdmin" onClick={() => setLayoutID(17)}>
@@ -44,8 +44,10 @@ function NarbarAdmin() {
                     </div>
                 </div>
             </div>
+            <img src="../../../../src/assets/Dashboard-almacadaques/IconNarbar/iconos (6).svg" alt="" className='ImgIconHeaderAdmin' />
+          
         </div>
     )
 }
 
-export { NarbarAdmin }
+export { NarbarAdmin }   

@@ -1,6 +1,36 @@
-.narbarAdmin{
-    background-color: #CF1348;
+.narbarAdmin {
+  background-color: #cf1348;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 7vw;
+  border-radius: 0 2.5vw 2.5vw 0;
 }
-.incioAdmin{
-    cursor: pointer;
+
+.narbarAdmin .buttonSessionesAdmin {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  gap: 1.3vw;
+  width: 80%;
+}
+
+.narbarAdmin .buttonSessionesAdmin .iconadmin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.iconadmin p {
+  color: #fff;
+  font-size: .8vw;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.incioAdmin {
+  cursor: pointer;
 }
