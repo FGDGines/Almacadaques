@@ -1,11 +1,11 @@
 .barSession {
-  width: 95%;
+  width: 80%;
   height: 15%;
   margin: 20px auto;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 0;
 }
-
 .barSession .containerTitulos {
   display: flex;
   flex-direction: column;
@@ -38,6 +38,10 @@
   align-items: center;
 }
 
+.containerUser .user img{
+     width: 3.5vw;
+  }
+  
 .containerUser .nombrePerfil h3 {
   font-size: 1.35094rem;
   font-style: normal;
