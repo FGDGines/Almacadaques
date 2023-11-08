@@ -16,17 +16,17 @@ import { PoliticaCookies } from '../PoliticadeCookies/PoliticaCookies';
 import { AvisoLegal } from '../AvisoLegal/AvisoLegal';
 import { BlogRetiro } from '../BlogRetiro/BlogRetiro';
 import Podcast from '../Podcast/Podcast';
-import  Login  from '../../../src/components/Login/Login';
+import Login from '../../../src/components/Login/Login';
 
 const HandlerLayout = () => {
-  const { layoutID } = useContext(GlobalContext);
+  const { layoutID , setLayoutID} = useContext(GlobalContext);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       // Verifica si se presiona Ctrl (o Command en Mac) y la tecla 'I'
       if ((event.ctrlKey || event.metaKey) && event.key === 'i') {
         // Navega al componente Login
-        window.location.href = '/Login';
+        setLayoutID(16)
       }
     };
 
@@ -38,11 +38,6 @@ const HandlerLayout = () => {
   }, []);
 
   let screen = <div></div>;
-  if (window.location.pathname === '/Login') {
-    screen = <Login />;
-    console.log(<Login />)
-    
-  } else {
   switch (layoutID) {
     case 0:
       screen = <div>Hola</div>;
@@ -100,12 +95,8 @@ const HandlerLayout = () => {
       break;
   }
 
-  return (
-    <div>
-      {screen}
-    </div>
-  );
-  }
-};
+  return screen
+}
+
 
 export default HandlerLayout;
