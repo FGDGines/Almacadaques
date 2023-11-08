@@ -10,3 +10,13 @@
 .contenidoPrincipal{
     width: 93vw;
 }
+
+.contenidoBienestar {
+    width: 96%;
+    margin: 2vw auto;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 10px; 
+    
+  }
