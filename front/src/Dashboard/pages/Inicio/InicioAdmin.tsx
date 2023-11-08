@@ -1,9 +1,9 @@
 import './Inicio.css'
 
-function Inicio() {
+function InicioAdmin() {
   return (
     <div>Inicio</div>
   )
 }
 
-export {Inicio}
+export {InicioAdmin}

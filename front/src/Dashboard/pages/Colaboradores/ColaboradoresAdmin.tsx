@@ -1,9 +1,9 @@
 import './Colaboradores.css'
 
-function Colaboradores() {
+function ColaboradoresAdmin() {
   return (
     <div>Colaboradores</div>
   )
 }
 
-export { Colaboradores }
+export { ColaboradoresAdmin }

@@ -1,9 +1,9 @@
 import './Blog.css'
 
-function Blog() {
+function BlogAdmin() {
   return (
     <div>Blog</div>
   )
 }
 
-export  {Blog}
+export  {BlogAdmin}

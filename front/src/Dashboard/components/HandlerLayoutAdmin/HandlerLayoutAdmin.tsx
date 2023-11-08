@@ -1,46 +1,60 @@
-
-import { useContext } from "react";
+// Deprecated
+import { useContext, useEffect, useState } from "react";
 import { GlobalContext } from "../../../../src/contexts/GlobalContext";
-import { Inicio } from "../../pages/Inicio/InicioAdmin"; 
-import { Agenda } from "../../pages/Agenda/AgendaAdmin";
-import { Blog } from "../../pages/Blog/BlogAdmin";
-import { Colaboradores } from "../../pages/Colaboradores/ColaboradoresAdmin";
+import { InicioAdmin } from "../../pages/Inicio/InicioAdmin"; 
+import { AgendaAdmin } from "../../pages/Agenda/AgendaAdmin";
+import { BlogAdmin } from "../../pages/Blog/BlogAdmin";
+import { ColaboradoresAdmin } from "../../pages/Colaboradores/ColaboradoresAdmin";
 import { RetirosAdmin } from "../../pages/Retiros/RetirosAdmin";
 import { SobreMIAdmin } from "../../pages/SobreMI/SobreMIAdmin";
-import { Login } from "../Login/Login";
+import { routes } from "./Routes";
 
 const HandlerLayout = () => {
-  const { layoutID } = useContext(GlobalContext);
+  useContext(GlobalContext);
+  const [currentPath, setCurrentPath] = useState(window.location.pathname);
+
+  useEffect(() => {
+    const handleRouteChange = () => {
+      setCurrentPath(window.location.pathname);
+    };
+
+    window.addEventListener("popstate", handleRouteChange);
+
+    return () => {
+      window.removeEventListener("popstate", handleRouteChange);
+    };
+  }, []);
 
   let screen = <div></div>;
-  switch (layoutID) {
-    case 16:
-      screen = <div>Hola</div>;
+
+  switch (currentPath) {
+    
+    case routes.inicio:
+      screen = <InicioAdmin />;
       break;
-    case 17:
-      screen = <Inicio />;
-      break;
-    case 18:
+    case routes.sobreMi:
       screen = <SobreMIAdmin />;
       break;
-    case 19:
-      screen = <Agenda />; 
+    case routes.agenda:
+      screen = <AgendaAdmin />;
       break;
-    case 20:
-      screen = <Colaboradores />; 
+    case routes.colaboradores:
+      screen = <ColaboradoresAdmin />;
       break;
-    case 21:
-      screen = <Blog />; 
+    case routes.blog:
+      screen = <BlogAdmin />;
       break;
-    case 22:
-      screen = <RetirosAdmin />; 
+    case routes.retiros:
+      screen = <RetirosAdmin />;
       break;
-    case 23:
-        screen = <Login />; 
-        break;
+   
     default:
       break;
+
+      
   }
+  console.log(currentPath);
+
   return <div>{screen}</div>;
 };
 
