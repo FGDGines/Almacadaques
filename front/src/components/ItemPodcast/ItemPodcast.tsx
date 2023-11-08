@@ -123,7 +123,7 @@ export const AudioP: React.FC<AudioPlayerProps> = ({
     <div className='fondoPodcast' >
       <img src={imagen} alt="podcast" />
       <div className='ctOverlay'>
-      {enPodcast && (  // Condición para mostrar los iconos solo si está en la vista de podcast
+      {enPodcast && ( 
         <div className='socialIcons'>
           <a href="URL_FACEBOOK" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faFacebook} style={{ color: '#ffffff' }} />
