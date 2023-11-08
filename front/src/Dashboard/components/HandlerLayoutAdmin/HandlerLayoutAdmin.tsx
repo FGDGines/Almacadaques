@@ -1,3 +1,4 @@
+// Deprecated
 import { useContext, useEffect, useState } from "react";
 import { GlobalContext } from "../../../../src/contexts/GlobalContext";
 import { InicioAdmin } from "../../pages/Inicio/InicioAdmin"; 

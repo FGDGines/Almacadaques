@@ -17,9 +17,15 @@ import { AvisoLegal } from '../AvisoLegal/AvisoLegal';
 import { BlogRetiro } from '../BlogRetiro/BlogRetiro';
 import Podcast from '../Podcast/Podcast';
 import Login from '../../../src/components/Login/Login';
+import { AgendaAdmin } from '../../Dashboard/pages/Agenda/AgendaAdmin';
+import { BlogAdmin } from '../../Dashboard/pages/Blog/BlogAdmin';
+import { ColaboradoresAdmin } from '../../Dashboard/pages/Colaboradores/ColaboradoresAdmin';
+import { InicioAdmin } from '../../Dashboard/pages/Inicio/InicioAdmin';
+import { RetirosAdmin } from '../../Dashboard/pages/Retiros/RetirosAdmin';
+import { SobreMIAdmin } from '../../Dashboard/pages/SobreMI/SobreMIAdmin';
 
 const HandlerLayout = () => {
-  const { layoutID , setLayoutID} = useContext(GlobalContext);
+  const { layoutID, setLayoutID } = useContext(GlobalContext);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -90,6 +96,25 @@ const HandlerLayout = () => {
     case 16:
       screen = <Login />;
       break;
+    case 17:
+      screen = <InicioAdmin />;
+      break;
+    case 18:
+      screen = <SobreMIAdmin />;
+      break;
+    case 19:
+      screen = <AgendaAdmin />;
+      break;
+    case 20:
+      screen = <ColaboradoresAdmin />;
+      break;
+    case 21:
+      screen = <BlogAdmin />;
+      break;
+    case 22:
+      screen = <RetirosAdmin />;
+      break;
+
 
     default:
       break;
