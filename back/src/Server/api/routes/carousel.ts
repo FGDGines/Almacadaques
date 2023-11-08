@@ -5,6 +5,7 @@ import { security_post } from "../../middlewares/Security";
 import { check } from "express-validator";
 import { Read } from "../controllers/carousel/Read";
 import { Delete } from "../controllers/carousel/Delete";
+import { Update } from "../controllers/carousel/Update";
 
 const app = Router()
 
@@ -24,5 +25,10 @@ app.post('/read', [
 app.post('/delete' , [security_post ,
     check('id', 'El carousel item a eliminar es olbigatorio').isNumeric()
      , validarCampos], Delete)
+
+
+app.post('/update' , [security_post ,
+    check('id', 'El id del carosuel a eliminar es obligatorio').isNumeric()
+     , validarCampos] , Update)
 
 module.exports = app
