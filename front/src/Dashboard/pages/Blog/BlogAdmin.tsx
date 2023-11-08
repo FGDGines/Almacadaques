@@ -1,8 +1,12 @@
 import './Blog.css'
+import { NarbarAdmin } from '../../components/NarbarAdmin/NarbarAdmin';
 
 function BlogAdmin() {
   return (
-    <div>Blog</div>
+    <div className="blogAdmin">
+      <NarbarAdmin />
+      <p>Blog</p>
+    </div>
   )
 }
 

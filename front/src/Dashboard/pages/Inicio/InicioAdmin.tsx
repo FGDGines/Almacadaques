@@ -1,8 +1,14 @@
 import './Inicio.css'
+import { NarbarAdmin } from '../../components/NarbarAdmin/NarbarAdmin'
 
 function InicioAdmin() {
   return (
-    <div>Inicio</div>
+    <div className="inicioAdmin">
+      <NarbarAdmin />
+      inicioooo
+    </div>
+    
+    
   )
 }
 
