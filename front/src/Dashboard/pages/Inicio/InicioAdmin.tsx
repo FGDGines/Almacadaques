@@ -14,9 +14,9 @@ function InicioAdmin() {
         <ItemCarrusel />
 
         <div className="contenidoBienestar">
-                  
-            <EspaciosBienestar></EspaciosBienestar>
-              <RedesBienestar></RedesBienestar>
+
+          <EspaciosBienestar></EspaciosBienestar>
+          <RedesBienestar></RedesBienestar>
 
 
         </div>
