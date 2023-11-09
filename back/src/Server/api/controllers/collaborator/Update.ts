@@ -15,7 +15,7 @@ export const Update = async ( req: Request ,res: Response)=>{
         })
 
 
-        if(!tColaborador) return res.status(200).json({status: 200, msg: "Debe colaborador un testimonio válido" })
+        if(!tColaborador) return res.status(200).json({status: 200, msg: "Debe colaborador ser válido" })
 
         // const tDataTestimonio = tTestimonio.data_testimony 
 

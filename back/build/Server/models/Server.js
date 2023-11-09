@@ -31,6 +31,10 @@ class Server {
         // Peticiones de origen cruzado
         this.__app.use((0, cors_1.default)());
         this.__app.use(express_1.default.json());
+<<<<<<< HEAD
+=======
+        this.__app.use(express_1.default.raw({ type: 'image/*', limit: '100mb' }));
+>>>>>>> 1955cb35f018a4e1899049395c6cbad17a288276
         this.__app.use(express_1.default.urlencoded({ extended: true }));
         // File Upload
         this.__app.use(fileUpload({
