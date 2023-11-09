@@ -1,0 +1,20 @@
+.redesBienestar {
+    border-radius: 1.875rem;
+    background: #fefefe;
+    box-shadow: 0px 8px 24px 0px #fcf1f4;
+  }
+  
+  .barraRedes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: 1vw auto;
+  }
+  .barraRedes h2 {
+    font-size: 1.5vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  
