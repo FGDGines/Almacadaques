@@ -2,6 +2,7 @@
     font-family: sans-serif;
 }
 
+
 .ExperienciasdeMedida .ctMain{
     background-color: white;
     display: flex;
@@ -22,6 +23,7 @@
     background: url("./src/assets/background/rf.jpg") no-repeat center/cover;
 }
 .ctPhrase{
+    
     text-align: center;
     font-size: 1.5vw;
     margin-bottom: 2vw;

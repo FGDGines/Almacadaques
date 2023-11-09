@@ -1,9 +1,10 @@
 import "./SobreMI.css"
 
-function SobreMI() {
+function SobreMIAdmin() {
   return (
     <div>SobreMI</div>
+  
   )
 }
 
-export { SobreMI}
+export { SobreMIAdmin}

@@ -146,15 +146,26 @@ type tpFormDefault = {
     hSubmit:(bag: FormData )=>void 
 }
 type AudioPlayerProps = {
-    fecha?:string;
+    fecha?: string;
     url?: string;
     titulo?: string;
     autor?: string;
     imagen?: string;
+<<<<<<< HEAD
     mostrarDatos?: boolean
     mostrarControles?: boolean
     enPodcast?:boolean
 };
+=======
+    mostrarDatos?: boolean;
+    mostrarControles?: boolean;
+    enPodcast?: boolean;
+    categoria?: string; 
+};
+type iconsProps = {
+    src?:string
+}
+>>>>>>> 2d90af9bb00b27b2fdbb89b7719bcf1d02336b1d
 
 export type {
     tpTestimonyBar,
@@ -181,5 +192,6 @@ export type {
     tpDtmResponse,
     tpFormDefault,
     tpObjectStringToStrig, 
-    AudioPlayerProps
+    AudioPlayerProps,
+    iconsProps
 };
