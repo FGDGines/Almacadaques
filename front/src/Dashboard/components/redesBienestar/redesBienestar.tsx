@@ -14,9 +14,9 @@ export const RedesBienestar = () => {
 
             <div className="containerBiernestarRedes">
 
-            <div className="itemsBienestar">
-                        <img src="../../../../src/assets/Dashboard-almacadaques/inicio/checks.svg" alt="" className="iconoBienestar" />
-                        <p className="fraseBienestar">"La salud mental es tan esencial como la física; cuidemos ambas”</p>
+            <div className="itemsRedes">
+                        <img src="../../../../src/assets/Dashboard-almacadaques/inicio/facebook.svg" alt="" className="iconoRedes" />
+                        <p className="fraseRedes"><a href="">sasha234@gmail.com</a></p>
                         <div className="iconosAcciones">
                             <div className="accionEditar">
                                 <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" />
@@ -24,9 +24,9 @@ export const RedesBienestar = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="itemsBienestar">
-                        <img src="../../../../src/assets/Dashboard-almacadaques/inicio/checks.svg" alt="" className="iconoBienestar" />
-                        <p className="fraseBienestar">"La salud mental es tan esencial como la física; cuidemos ambas”</p>
+                    <div className="itemsRedes">
+                        <img src="../../../../src/assets/Dashboard-almacadaques/inicio/instagram.svg" alt="" className="iconoRedes" />
+                       <p className="fraseRedes"><a href="">sasha234@gmail.com</a></p>
                         <div className="iconosAcciones">
                             <div className="accionEditar">
                                 <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" />
@@ -34,9 +34,9 @@ export const RedesBienestar = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="itemsBienestar">
-                        <img src="../../../../src/assets/Dashboard-almacadaques/inicio/checks.svg" alt="" className="iconoBienestar" />
-                        <p className="fraseBienestar">"La salud mental es tan esencial como la física; cuidemos ambas”</p>
+                    <div className="itemsRedes">
+                        <img src="../../../../src/assets/Dashboard-almacadaques/inicio/whatsapp.svg" alt="" className="iconoRedes" />
+                       <p className="fraseRedes"><a href="">sasha234@gmail.com</a></p>
                         <div className="iconosAcciones">
                             <div className="accionEditar">
                                 <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" />
