@@ -1,0 +1,52 @@
+.ContainerRetiro {
+  background-color: white;
+  width: 19vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.titleContainerRetiro {
+  width: 17vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.titleRetiro {
+  color: white;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.ImgFondoRetiro {
+  margin-top: -3.5vw;
+  width: 19vw;
+  background-color: #646363;
+}
+.infoRetiroAdmin {
+  width: 18vw;
+  display: flex;
+  justify-content: center;
+}
+.infoRetiro {
+  width: 18vw;
+}
+.parraforetiroAdmin {
+  color: #777;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.fechaRetiroAdmin{
+    color: #777;
+font-family: Montserrat;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}

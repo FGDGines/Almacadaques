@@ -6,3 +6,13 @@
   width: 100vw;
   height: 100vh;
 }
+.conatinerRetiro{
+  width: 90%;
+}
+.infocontainerRetiro{
+  margin-top: 2vw;
+  width: 90%;
+  padding-left: 3vw;
+  gap: 2vw;
+  display: flex;
+}
