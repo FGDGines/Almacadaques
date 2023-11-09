@@ -44,7 +44,7 @@ function NarbarAdmin() {
                     </div>
                 </div>
             </div>
-            <img src="../../../../src/assets/Dashboard-almacadaques/IconNarbar/iconos (6).svg" alt="" className='ImgIconHeaderAdmin' />
+            <img src="../../../../src/assets/Dashboard-almacadaques/IconNarbar/iconos (6).svg" alt="" className='ImgIconHeaderAdmin' onClick={() => setLayoutID(1)}/>
           
         </div>
     )

@@ -24,6 +24,7 @@ import { InicioAdmin } from '../../Dashboard/pages/Inicio/InicioAdmin';
 import { RetirosAdmin } from '../../Dashboard/pages/Retiros/RetirosAdmin';
 import { SobreMIAdmin } from '../../Dashboard/pages/SobreMI/SobreMIAdmin';
 import { NuevosEventos } from '../../Dashboard/components/NuevosEventos/NuevosEventos';
+import { FormularioRedes } from '../../Dashboard/components/Formularios/FormularioRedes/FormularioRedes';
 
 const HandlerLayout = () => {
   const { layoutID, setLayoutID } = useContext(GlobalContext);
@@ -116,10 +117,14 @@ const HandlerLayout = () => {
       screen = <RetirosAdmin />;
       break;
     case 23:
-        screen = <NuevosEventos />;
-        break;      
+      screen = <NuevosEventos />;
+      break;
+    //Formularios
+    case 24:
+      screen = <FormularioRedes />;
+      break;
 
-
+      
     default:
       break;
   }
