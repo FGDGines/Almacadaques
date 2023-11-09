@@ -14,9 +14,8 @@
 .contenidoBienestar {
     width: 96%;
     margin: 2vw auto;
-    height: 100%;
     display: grid;
-    grid-template-columns: 60% 40%;
-    gap: 10px; 
-    
+    grid-template-columns: 53% 45%;
+    gap: 2%; 
+    height: 69.5vw;
   }
