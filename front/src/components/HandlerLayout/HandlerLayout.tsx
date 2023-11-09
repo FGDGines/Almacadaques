@@ -23,6 +23,7 @@ import { ColaboradoresAdmin } from '../../Dashboard/pages/Colaboradores/Colabora
 import { InicioAdmin } from '../../Dashboard/pages/Inicio/InicioAdmin';
 import { RetirosAdmin } from '../../Dashboard/pages/Retiros/RetirosAdmin';
 import { SobreMIAdmin } from '../../Dashboard/pages/SobreMI/SobreMIAdmin';
+import { NuevosEventos } from '../../Dashboard/components/NuevosEventos/NuevosEventos';
 
 const HandlerLayout = () => {
   const { layoutID, setLayoutID } = useContext(GlobalContext);
@@ -114,6 +115,9 @@ const HandlerLayout = () => {
     case 22:
       screen = <RetirosAdmin />;
       break;
+    case 23:
+        screen = <NuevosEventos />;
+        break;      
 
 
     default:
