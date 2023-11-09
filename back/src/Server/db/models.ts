@@ -87,6 +87,24 @@ const DataTestimonio = DB.define("data_testimonys", {
     }
 })
 
+const Colaborador = DB.define("colaborador", {
+    nombre: {
+        type: DataTypes.STRING
+    },
+    cargo: {
+        type: DataTypes.STRING
+    },
+    descripcion: {
+        type: DataTypes.TEXT
+    },
+    imagen: {
+        type: DataTypes.STRING
+    },
+    contacto: {
+        type: DataTypes.STRING
+    }
+})
+
 User.belongsTo(DataUser,{foreignKey: 'id_data_user'})
 DataUser.belongsTo(Rol,{foreignKey: 'id_rol'})
 Testimonio.belongsTo(DataTestimonio , {foreignKey: 'id_data'})
@@ -98,5 +116,6 @@ export {
     Rol, 
     User,
     Testimonio,
-    DataTestimonio
+    DataTestimonio,
+    Colaborador
 }
