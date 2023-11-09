@@ -9,11 +9,11 @@ export const podcastData: AudioPlayerProps[] = [
     categoria: 'meditaciones'
   },
   {
-    url: "https://www.youtube.com/embed/lCsH0T2QCj0?si=TfWhiNwBvubM1qjR",
-    titulo: "Meditación scanner corporal",
+    url: "https://www.youtube.com/embed/uT5fJSzpGd8?si=u3O5KRoAeMhGSEm8",
+    titulo: "Libros del alma",
     autor: "Rodrigo Lopez",
     fecha: 'October 17, 2023',
-    categoria: 'meditaciones'
+    categoria: 'libros con alma'
   },
   {
     url: "https://www.youtube.com/embed/lCsH0T2QCj0?si=TfWhiNwBvubM1qjR",
@@ -23,20 +23,13 @@ export const podcastData: AudioPlayerProps[] = [
     categoria: 'meditaciones'
   },
   {
-    url: "https://www.youtube.com/embed/Xrwb96cApIg?si=rSVjUMdEfwhUj6Ua",
-    titulo: "Casa",
-    autor: "Rodrigo Lopez",
-    fecha: 'Noviembre 08, 2023',
-    categoria: 'meditaciones'
-  },
-
-  {
-    url: "https://www.youtube.com/embed/s4jQ0_pD748?si=3lpFfCmQF_7Eug8R",
+    url: "https://www.youtube.com/embed/lCsH0T2QCj0?si=TfWhiNwBvubM1qjR",
     titulo: "Meditación scanner corporal",
     autor: "Rodrigo Lopez",
     fecha: 'October 17, 2023',
     categoria: 'meditaciones'
   },
+  
 ]
 
 
