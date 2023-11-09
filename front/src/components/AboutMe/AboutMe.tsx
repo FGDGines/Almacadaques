@@ -38,7 +38,7 @@ const AboutMe = () => {
                     <img src="../../../src/assets/background/2.foto.jpg" alt="Foto sobre mi" />
                     <p> Elisabet Coll-Vinent (Psicóloga – Mentora – Coach)</p>
                 </div>
-                <div className="infoSobremi_2">
+                <div className="infoSobremi_2User">
                     <p>{textos[languageFlag].titleparrafo}</p>  
                     <ul>
                         <li>{textos[languageFlag].parrafosobremi5}</li>

@@ -1,5 +1,16 @@
 .BlogPost {
   background-color: rgb(255, 255, 255);
+  
+}
+.BookItem{
+  padding: .5vw 2vw;
+  display: flex;
+  border: 1px solid red;
+  gap: 25vw;
+}
+.ItemBookUser{
+  border: 1px solid red ;
+  width: 40vw;
 }
 .demoPage {
   background-color: rgb(255, 255, 255);
@@ -64,7 +75,7 @@
 }
 
 .imgLibro {
-  width: 20vw;
+  width: 21vw;
 }
 .imgLibro img {
   width: 100%;
@@ -183,6 +194,12 @@
   z-index: 3;
 }
 
+.titlePortal h3{
+  font-size: 1.2vw;
+}
+.titlePortal h4{
+  margin: 0;
+}
 @media (max-width: 780px) {
   .BlogInfo {
     width: 45vw;

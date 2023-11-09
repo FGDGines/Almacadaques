@@ -32,11 +32,11 @@
   margin: 0;
   padding: 1vw;
 }
-.titleRetiro {
+.titleRetiroUser {
   width: 20vw;
   cursor: pointer;
 }
-.titleRetiro h4 {
+.titleRetiroUser h4 {
   font-size: 1.2vw;
   font-weight: 700;
   margin: 0;
