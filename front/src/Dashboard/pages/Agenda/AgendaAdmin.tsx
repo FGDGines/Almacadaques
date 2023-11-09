@@ -1,9 +1,14 @@
 import './Agenda.css'
+import { NarbarAdmin } from '../../components/NarbarAdmin/NarbarAdmin'
 
-function Agenda() {
+function AgendaAdmin() {
   return (
-    <div>Agenda</div>
+    <div className="agendaAdmin">
+
+      <NarbarAdmin />
+      <p>Agenda</p>
+    </div>
   )
 }
 
-export  {Agenda}
+export { AgendaAdmin }

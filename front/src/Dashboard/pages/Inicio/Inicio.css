@@ -1,0 +1,12 @@
+.inicioAdmin{
+    background-color: #fcf1f4;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    top: 0;
+}
+
+.contenidoPrincipal{
+    width: 93vw;
+}

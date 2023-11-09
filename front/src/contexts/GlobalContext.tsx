@@ -20,7 +20,7 @@ export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ child
 
     const setUpOrDown = (arg: boolean) => {
         setUpOrDownState(arg);
-    }
+    } 
 
     const CambiarIdioma = (arg: number) => {
         setLanguajeActive(arg);

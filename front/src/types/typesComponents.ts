@@ -146,16 +146,16 @@ type tpFormDefault = {
     hSubmit:(bag: FormData )=>void 
 }
 type AudioPlayerProps = {
-    fecha?:string;
+    fecha?: string;
     url?: string;
     titulo?: string;
     autor?: string;
     imagen?: string;
-    mostrarDatos?: boolean
-    mostrarControles?: boolean
-    enPodcast?:boolean
-  };
-
+    mostrarDatos?: boolean;
+    mostrarControles?: boolean;
+    enPodcast?: boolean;
+    categoria?: string; 
+};
 type iconsProps = {
     src?:string
 }
