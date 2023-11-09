@@ -1,0 +1,107 @@
+.ContainerColaboradores {
+  width: 22rem;
+  border-radius: 1.25rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.IconoEditarColaboradores {
+    
+  width: 20vw;
+  display: flex;
+  justify-content: right;
+  gap: 0.7vw;
+  align-items: center;
+}
+.imgUsuarioColaboradores {
+   
+  width: 9vw;
+}
+.IconEditarColaboradores {
+    cursor: pointer;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.TitleBtnEditarColaborador {
+  color: var(--primario-principal, #cf1348);
+  cursor: pointer;
+  font-family: Montserrat;
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+.NombreCargo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.NombreColaboradorAdmin {
+  color: var(--neutral-gray, #38272d);
+  font-family: Montserrat;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 1.5vw 0 0 0;
+}
+.CargocolaboradorAdmin {
+  margin: 0;
+  color: #777;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.TitleCargoColaborador {
+  color: #777;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.DescripcionColaboradores {
+  width: 19vw;
+  color: #777;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: .9vw 0 0 0;
+}
+.ParrafoDescripcion{
+    width: 19vw;
+    color: #777;
+font-family: Montserrat;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+margin: .4vw 0 0 0;
+}
+.EnlaceContactoColaborador{
+    text-decoration: none;
+}
+.EnlaceContactoColaborador{
+    cursor: pointer;
+    color: #979797;
+font-family: Montserrat;
+font-size: 1rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.TitleContactoColaborador{
+    width: 19vw;
+  color: #777;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: .9vw 0 0 0;
+}
