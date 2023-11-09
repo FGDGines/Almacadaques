@@ -10,14 +10,9 @@ export const RedesBienestar = () => {
             <div className="barraRedes">
 
                 <h2>Redes</h2>
-
                 <BtnMasAgregar></BtnMasAgregar>
             </div>
-
         </div>
-
-
-
     );
 
 };

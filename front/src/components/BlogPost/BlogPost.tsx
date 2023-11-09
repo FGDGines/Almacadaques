@@ -56,7 +56,7 @@ const BlogPost = () => {
           <div className="port">
             <div className="titlePortal2">
               <img src="../../../src/assets/background/fondo-libro.jpg" alt="" />
-              <div className="ctOverlay">
+              <div className="ctOverlayBook">
                 <h1>Almacadaqués</h1>
                 <p>Elisabet Coll-Vinent</p>
               </div>
@@ -68,7 +68,7 @@ const BlogPost = () => {
 
             <div className="titlePortal2">
               <img src="../../../src/assets/background/fondo-libro.jpg" alt="" />
-              <div className="ctOverlay">
+              <div className="ctOverlayBook">
 
               </div>
             </div>
@@ -136,7 +136,7 @@ const BlogPost = () => {
 
             <div className="titlePortal2">
               <img src="../../../src/assets/background/fondo-libro.jpg" alt="" />
-              <div className="ctOverlay">
+              <div className="ctOverlayBook">
 
               </div>
             </div>
@@ -147,7 +147,7 @@ const BlogPost = () => {
 
             <div className="titlePortal2">
               <img src="../../../src/assets/background/fondo-libro.jpg" alt="" />
-              <div className="ctOverlay">
+              <div className="ctOverlayBook">
 
               </div>
             </div>

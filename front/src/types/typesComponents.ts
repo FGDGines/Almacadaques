@@ -150,9 +150,6 @@ type AudioPlayerProps = {
     url?: string;
     titulo?: string;
     autor?: string;
-    imagen?: string;
-    mostrarDatos?: boolean;
-    mostrarControles?: boolean;
     enPodcast?: boolean;
     categoria?: string; 
 };

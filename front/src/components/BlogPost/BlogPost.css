@@ -29,17 +29,17 @@
   margin: 0 auto;
 }
 .titlePortal2 {
-	width: 100%;
-	height: 100%;
-	position: relative;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-	margin: 0 auto;
-	overflow: hidden;
-	background-image: url('../../../src/assets/background/fondo-libro.jpg');
-  }
-.ctOverlay {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  overflow: hidden;
+  background-image: url("../../../src/assets/background/fondo-libro.jpg");
+}
+.ctOverlayBook {
   position: absolute;
   top: 0;
   left: 0;
@@ -50,18 +50,17 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-   
 }
 
-.ctOverlay h1{
-    text-align: center;
-	font-family: 'PT-Script-Monsoon';
-	color: white;
+.ctOverlay h1 {
+  text-align: center;
+  font-family: "PT-Script-Monsoon";
+  color: white;
 }
-.ctOverlay p{
-    text-align: center;
-	font-family: 'PT-Script-Monsoon';
-	color: white;
+.ctOverlay p {
+  text-align: center;
+  font-family: "PT-Script-Monsoon";
+  color: white;
 }
 
 .imgLibro {
