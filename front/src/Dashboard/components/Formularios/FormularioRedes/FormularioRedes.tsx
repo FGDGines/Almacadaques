@@ -69,32 +69,37 @@ export const FormularioRedes = () => {
             <NarbarAdmin></NarbarAdmin>
 
             <div className="contenidoFormRedes">
-                <h2>Formulario de Redes</h2>
+                <div className="tituloFormRedes">
+                    <h2>Formulario de Redes</h2>
 
-                <form onSubmit={handleSubmit}>
-                    <label>URL:</label>
-                    <input
-                        type="text"
-                        name="url"
-                        value={formData.url}
-                        onChange={handleInputChange}
-                    />
+                </div>
 
-                    <label>Cuenta:</label>
-                    <input
-                        type="text"
-                        name="cuenta"
-                        value={formData.cuenta}
-                        onChange={handleInputChange}
-                    />
 
-                    <label>Subir archivo:</label>
-                    <input
-                        type="file"
-                        onChange={handleFileChange}
-                    />
+                <form className='formRedes' onSubmit={handleSubmit}>
+                    <div className="subirArchivos">
+                        <label  htmlFor="File" className='labelArchivo'>Subir archivo:</label>
+                        <input id='File' className='cargarArchivo'
+                            type="file"
+                            onChange={handleFileChange}
+                        />
+                    </div>
+                    <div className="restInputs">
+                        <label className='labelsRedes'>URL:</label>
+                        <input className='inputsFormRedes'
+                            type="text"
+                            name="url"
+                            value={formData.url}
+                            onChange={handleInputChange}
+                        />
 
-                    <button type="submit">Guardar Redes</button>
+                        <label className='labelsRedes'>Cuenta:</label>
+                        <input className='inputsFormRedes'
+                            type="text"
+                            name="cuenta"
+                            value={formData.cuenta}
+                            onChange={handleInputChange}
+                        />
+                        <button type="submit">Guardar Redes</button>
 
                     </div>
 
