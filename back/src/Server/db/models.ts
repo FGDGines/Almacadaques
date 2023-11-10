@@ -87,6 +87,33 @@ const DataTestimonio = DB.define("data_testimonys", {
     }
 })
 
+const BlogRetiro = DB.define("blog_retiro", {
+    indice: {
+        type: DataTypes.INTEGER
+    },
+    day: {
+        type: DataTypes.JSON
+    },
+    month: {
+        type: DataTypes.INTEGER
+    },
+    year: {
+        type: DataTypes.INTEGER
+    },
+    image: {
+        type: DataTypes.JSON
+    },
+    id_title_lang: {
+        type: DataTypes.INTEGER
+    },
+    author: {
+        type: DataTypes.STRING
+    },
+    id_description_lang: {
+        type: DataTypes.INTEGER
+    }
+}) 
+
 
 const Carousel = DB.define("carousels", {
     src: {
@@ -135,6 +162,30 @@ const Espacio = DB.define("espacio", {
         type: DataTypes.STRING
     },
     cat: {
+        type: DataTypes.STRING
+    }
+}) 
+
+const TitleLang = DB.define("title_lang", {
+    es: {
+        type: DataTypes.STRING
+    },
+    en: {
+        type: DataTypes.STRING
+    },
+    cat: {
+        type: DataTypes.STRING
+    }
+}) 
+
+const DescriptionLang = DB.define("description_lang", {
+    es: {
+        type: DataTypes.TEXT
+    },
+    en: {
+        type: DataTypes.TEXT
+    },
+    cat: {
         type: DataTypes.TEXT
     }
 }) 
@@ -161,6 +212,8 @@ User.belongsTo(DataUser, { foreignKey: 'id_data_user' })
 DataUser.belongsTo(Rol, { foreignKey: 'id_rol' })
 Testimonio.belongsTo(DataTestimonio, { foreignKey: 'id_data' })
 Carousel.belongsTo(DataCarousel , {foreignKey: 'id_data_carousel'})
+BlogRetiro.belongsTo(TitleLang, {foreignKey: "id_title_lang"})
+BlogRetiro.belongsTo(DescriptionLang, {foreignKey: "id_description_lang"})
 
 export {
     DataUser,
@@ -169,6 +222,9 @@ export {
     User,
     Testimonio,
     DataTestimonio, 
+    BlogRetiro,
+    TitleLang,
+    DescriptionLang,
     Colaborador,
     Carousel,
     Espacio,

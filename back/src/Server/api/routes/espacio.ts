@@ -24,7 +24,7 @@ app.post('/delete' , [security_post,
     , validarCampos], Delete)
     
 app.post('/update', [security_post,
-    check('id', 'El espacio a editar es obligatorio').not().isEmpty()
+    check('id', 'El espacio a editar es obligatorio').isNumeric()
     , validarCampos] , Update)
     
 module.exports = app
