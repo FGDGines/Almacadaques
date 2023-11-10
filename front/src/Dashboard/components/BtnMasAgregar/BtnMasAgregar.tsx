@@ -2,7 +2,7 @@ import './btnMasAgregar.css'
 
 
 import React, { useContext } from 'react';
-import { GlobalContext } from '../../../contexts/GlobalContext'; 
+import { GlobalContext } from '../../../contexts/GlobalContext';
 
 interface BtnMasAgregarProps {
   direccion: number; // Añadiendo la propiedad dirección como number

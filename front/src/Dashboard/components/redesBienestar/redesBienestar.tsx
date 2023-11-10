@@ -1,51 +1,37 @@
-
-import './redesBienestar.css'
-import { BtnMasAgregar } from "../BtnMasAgregar/BtnMasAgregar";
+import React from 'react';
+import './redesBienestar.css';
+import { BtnMasAgregar } from '../BtnMasAgregar/BtnMasAgregar';
+import { redes } from '../../../data/redes'; // Asegúrate de ajustar la ruta según la ubicación real del archivo
 
 export const RedesBienestar = () => {
-    return (
+  return (
+    <div className="redesBienestar">
+      <div className="barraRedes">
+        <h2>Redes</h2>
+        <BtnMasAgregar direccion={24}></BtnMasAgregar>
+      </div>
 
-
-        <div className="redesBienestar">
-            <div className="barraRedes">
-                <h2>Redes</h2>
-                <BtnMasAgregar></BtnMasAgregar>
+      <div className="containerBiernestarRedes">
+        {redes.map((red, index) => (
+          <div className="itemsRedes" key={index}>
+            <img src={red.icon} alt="" className="iconoRedes" />
+            <p className="fraseRedes">
+              <a href={red.url} target="_blank" rel="noopener noreferrer">
+                {red.cuenta}
+              </a>
+            </p>
+            <div className="iconosAcciones">
+              <div className="accionEditar">
+                <img
+                  src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
+                  alt=""
+                />
+                <p className="TextAcciones">Editar</p>
+              </div>
             </div>
-
-            <div className="containerBiernestarRedes">
-
-            <div className="itemsRedes">
-                        <img src="../../../../src/assets/Dashboard-almacadaques/inicio/facebook.svg" alt="" className="iconoRedes" />
-                        <p className="fraseRedes"><a href="">sasha234@gmail.com</a></p>
-                        <div className="iconosAcciones">
-                            <div className="accionEditar">
-                                <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" />
-                                <p className="TextAcciones">Editar</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="itemsRedes">
-                        <img src="../../../../src/assets/Dashboard-almacadaques/inicio/instagram.svg" alt="" className="iconoRedes" />
-                       <p className="fraseRedes"><a href="">sasha234@gmail.com</a></p>
-                        <div className="iconosAcciones">
-                            <div className="accionEditar">
-                                <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" />
-                                <p className="TextAcciones">Editar</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="itemsRedes">
-                        <img src="../../../../src/assets/Dashboard-almacadaques/inicio/whatsapp.svg" alt="" className="iconoRedes" />
-                       <p className="fraseRedes"><a href="">sasha234@gmail.com</a></p>
-                        <div className="iconosAcciones">
-                            <div className="accionEditar">
-                                <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" />
-                                <p className="TextAcciones">Editar</p>
-                            </div>
-                        </div>
-                    </div>
-            </div>
-        </div>
-    );
-
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
