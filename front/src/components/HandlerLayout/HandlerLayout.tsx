@@ -25,6 +25,8 @@ import { RetirosAdmin } from '../../Dashboard/pages/Retiros/RetirosAdmin';
 import { SobreMIAdmin } from '../../Dashboard/pages/SobreMI/SobreMIAdmin';
 import { NuevosEventos } from '../../Dashboard/components/NuevosEventos/NuevosEventos';
 import { FormularioRedes } from '../../Dashboard/components/Formularios/FormularioRedes/FormularioRedes';
+import { BlogBienestar } from '../../Dashboard/components/BlogBienestar/BlogBienestar';
+import { BlogPodcast } from '../../Dashboard/components/BlogPodcast/BlogPodcast'; 
 
 const HandlerLayout = () => {
   const { layoutID, setLayoutID } = useContext(GlobalContext);
@@ -119,6 +121,12 @@ const HandlerLayout = () => {
     case 23:
       screen = <NuevosEventos />;
       break;
+    case 25:
+        screen = <BlogBienestar />;
+        break;
+    case 26:
+          screen = <BlogPodcast />;
+          break;
     //Formularios
     case 24:
       screen = <FormularioRedes />;

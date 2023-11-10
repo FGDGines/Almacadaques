@@ -1,10 +1,35 @@
 import './NarbarAdmin.css'
-import { useContext } from 'react';
-import { GlobalContext } from '../../../contexts/GlobalContext'; 
+import { useContext, useState } from 'react';
+import { GlobalContext } from '../../../contexts/GlobalContext';
 
 function NarbarAdmin() {
     const { setLayoutID } = useContext(GlobalContext);
-    return (    
+
+    const [showSubMenu, setShowSubMenu] = useState(false);
+
+    const handleMouseEnter = () => {
+        setShowSubMenu(true);
+    };
+
+    const handleMouseLeave = () => {
+        setShowSubMenu(false);
+    };
+
+    const handleSubMenuClick = () => {
+        // Alternar el estado del submenú al hacer clic en el ícono del blog
+        setShowSubMenu((prev) => !prev);
+    };
+
+    const handleSubMenuLinkClick = (layoutId: number) => {
+        // Navegar a la sección correspondiente y cerrar el submenú
+        setLayoutID(layoutId);
+        setShowSubMenu(false);
+    };
+
+
+
+
+    return (
         <div className='narbarAdmin'>
             <div className="buttonSessionesAdmin">
                 <div className="incioAdmin" onClick={() => setLayoutID(17)}>
@@ -31,11 +56,30 @@ function NarbarAdmin() {
                         <p className='NombreButtonAdmin'>Colaboradores</p>
                     </div>
                 </div>
-                <div className="incioAdmin" onClick={() => setLayoutID(21)}>
-                    <div className="iconadmin">
-                        <img src="../../../../src/assets/Dashboard-almacadaques/IconNarbar/iconos (4).svg" alt="" className='ImgIconHeaderAdmin' />
-                        <p className='NombreButtonAdmin'>Blog</p>
+                <div
+                    className={`incioAdmin ${showSubMenu ? 'subMenu' : ''}`}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                >
+                    <div className="iconadmin" onClick={handleSubMenuClick}>
+                        <img
+                            src="../../../../src/assets/Dashboard-almacadaques/IconNarbar/iconos (4).svg"
+                            alt=""
+                            className="ImgIconHeaderAdmin"
+                        />
+                        <p className="NombreButtonAdmin">Blog</p>
                     </div>
+                    {showSubMenu && (
+                        <div className="subMenuRetiro">
+                            {/* Contenido del submenú */}
+                            <a href="#" className="DireccionSubmenu" onClick={() => handleSubMenuLinkClick(25)}>
+                                Blog Bienestar
+                            </a>
+                            <a href="#" className="DireccionSubmenu" onClick={() => handleSubMenuLinkClick(26)}>
+                                Blog Podcast
+                            </a>
+                        </div>
+                    )}
                 </div>
                 <div className="incioAdmin" onClick={() => setLayoutID(22)}>
                     <div className="iconadmin">
@@ -44,8 +88,8 @@ function NarbarAdmin() {
                     </div>
                 </div>
             </div>
-            <img src="../../../../src/assets/Dashboard-almacadaques/IconNarbar/iconos (6).svg" alt="" className='ImgIconHeaderAdmin' onClick={() => setLayoutID(1)}/>
-          
+            <img src="../../../../src/assets/Dashboard-almacadaques/IconNarbar/iconos (6).svg" alt="" className='ImgIconHeaderAdmin' onClick={() => setLayoutID(1)} />
+
         </div>
     )
 }
