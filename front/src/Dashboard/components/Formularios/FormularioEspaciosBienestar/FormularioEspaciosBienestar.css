@@ -1,4 +1,4 @@
-.formularioRedes {
+.formularioEspaciosBienestar {
   background-color: #fcf1f4;
   width: 100vw;
   height: 100vh;
@@ -6,7 +6,7 @@
   position: absolute;
   top: 0;
 }
-.contenidoFormRedes {
+.contenidoFormEspaciosBienestar {
   width: 100vw;
   height: 100vh;
 }
@@ -28,7 +28,7 @@
     position: absolute;
     z-index: 1;
 }
-.formRedes {
+.formEspaciosBienestar {
   width: 60%;
   margin: 0 auto;
   height: 27vw;
@@ -36,7 +36,7 @@
   grid-template-columns: 45% 45%; /* Dos columnas de 45% de ancho cada una */
   gap: 8%; /* Espacio del 10% entre las columnas */
 }
-.inputsFormRedes {
+.inputsFormEspaciosBienestar {
   display: flex;
   height: 4.29069rem;
   align-items: center;
@@ -53,7 +53,7 @@
   justify-content: center;
 }
 
-.labelsRedes {
+.labelsEspaciosBienestar {
   color:  #828282 !important;
   font-feature-settings: "clig" off, "liga" off !important;
   font-size: 1.03569rem !important;

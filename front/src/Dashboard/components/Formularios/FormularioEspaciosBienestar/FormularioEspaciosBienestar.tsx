@@ -1,5 +1,5 @@
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
-import '../FormularioRedes/FormularioRedes.css';
+import '../FormularioEspaciosBienestar/FormularioEspaciosBienestar.css';
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { redes as datosRedes } from '../../../../data/redes';
 
@@ -9,7 +9,7 @@ interface FormData {
     archivo: File | null;
 }
 
-export const FormularioRedes = () => {
+export const FormularioEspaciosBienestar = () => {
     const [formData, setFormData] = useState<FormData>({
         url: '',
         cuenta: '',
@@ -40,7 +40,7 @@ export const FormularioRedes = () => {
 
         try {
             // Enviar datos al backend usando fetch
-            const response = await fetch('http://tu-backend.com/api/redes', {
+            const response = await fetch('http://tu-backend.com/api/EspaciosBienestar', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -65,36 +65,42 @@ export const FormularioRedes = () => {
     };
 
     return (
-        <div className='formularioRedes'>
+        <div className='formularioEspaciosBienestar'>
             <NarbarAdmin></NarbarAdmin>
 
-            <div className="contenidoFormRedes">
-                <h2>Formulario de Redes</h2>
+            <div className="contenidoFormEspaciosBienestar">
 
-                <form onSubmit={handleSubmit}>
-                    <label>URL:</label>
-                    <input
-                        type="text"
-                        name="url"
-                        value={formData.url}
-                        onChange={handleInputChange}
-                    />
+                <div className="tituloFormEspaciosBienestar">
+                    <h2>Formulario de Espacios de Bienestar</h2>
 
-                    <label>Cuenta:</label>
-                    <input
-                        type="text"
-                        name="cuenta"
-                        value={formData.cuenta}
-                        onChange={handleInputChange}
-                    />
+                </div>
 
-                    <label>Subir archivo:</label>
-                    <input
-                        type="file"
-                        onChange={handleFileChange}
-                    />
 
-                    <button type="submit">Guardar Redes</button>
+                <form className='formEspaciosBienestar' onSubmit={handleSubmit}>
+                    <div className="subirArchivos">
+                        <label  htmlFor="File" className='labelArchivo'>Subir archivo:</label>
+                        <input id='File' className='cargarArchivo'
+                            type="file"
+                            onChange={handleFileChange}
+                        />
+                    </div>
+                    <div className="restInputs">
+                        <label className='labelsEspaciosBienestar'>URL:</label>
+                        <input className='inputsFormEspaciosBienestar'
+                            type="text"
+                            name="url"
+                            value={formData.url}
+                            onChange={handleInputChange}
+                        />
+
+                        <label className='labelsEspaciosBienestar'>Cuenta:</label>
+                        <input className='inputsFormEspaciosBienestar'
+                            type="text"
+                            name="cuenta"
+                            value={formData.cuenta}
+                            onChange={handleInputChange}
+                        />
+                        <button type="submit">Guardar EspaciosBienestar</button>
 
                     </div>
 

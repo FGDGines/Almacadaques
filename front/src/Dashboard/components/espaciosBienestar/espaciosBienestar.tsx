@@ -7,9 +7,8 @@ export const EspaciosBienestar = () => {
         <div className="espaciosBienestar">
             <div className="barraBienestar">
                 <h2>Espacios de Bienestar</h2>
-                <BtnMasAgregar direccion={24} />
+                <BtnMasAgregar direccion={27} />
             </div>
-
             <div className="containerBienestarItems">
 
                 <div className="bienestarTitulos">
