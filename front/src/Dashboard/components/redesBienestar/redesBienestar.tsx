@@ -14,7 +14,7 @@ export const RedesBienestar = () => {
       <div className="containerBiernestarRedes">
         {redes.map((red, index) => (
           <div className="itemsRedes" key={index}>
-            <img src={red.icon} alt="" className="iconoRedes" />
+            <img src={red.archivo} alt="" className="iconoRedes" />
             <p className="fraseRedes">
               <a href={red.url} target="_blank" rel="noopener noreferrer">
                 {red.cuenta}
