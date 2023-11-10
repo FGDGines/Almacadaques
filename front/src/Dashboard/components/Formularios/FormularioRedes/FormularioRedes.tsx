@@ -1,73 +1,102 @@
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
-import { SubirArchivos } from '../../subirArchivos/subirArchivos';
-import React, { useState } from 'react';
+import '../FormularioRedes/FormularioRedes.css';
+import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { redes as datosRedes } from '../../../../data/redes';
 
-interface RedesFormProps {
-  onGuardarRedes: (redes: any[]) => void;
+interface FormData {
+    url: string;
+    cuenta: string;
+    archivo: File | null;
 }
 
-export const FormularioRedes: React.FC<RedesFormProps> = ({ onGuardarRedes }) => {
-  const [archivos, setArchivos] = useState<FileList | null>(null);
-  const [url, setUrl] = useState('');
-  const [cuenta, setCuenta] = useState('');
+export const FormularioRedes = () => {
+    const [formData, setFormData] = useState<FormData>({
+        url: '',
+        cuenta: '',
+        archivo: null,
+    });
 
-  const handleArchivosSubidos = (archivos: FileList | null, identificador: string) => {
-    setArchivos(archivos);
-  };
-
-  const agregarNuevaRed = () => {
-    if (!archivos) {
-      console.error('Debe seleccionar un archivo.');
-      return;
-    }
-
-    const nuevaRed = {
-      icon: URL.createObjectURL(archivos[0]),
-      url,
-      cuenta,
+    const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = event.target;
+        setFormData({
+            ...formData,
+            [name]: value,
+        });
     };
 
-    // Actualizamos el array de datosRedes
-    datosRedes.push(nuevaRed);
+    const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
+        const selectedFile = event.target.files?.[0] as File;
 
-    // Llamamos a la función proporcionada por el componente padre con el nuevo array de redes
-    if (typeof onGuardarRedes === 'function') {
-      onGuardarRedes([...datosRedes]); // Evitar modificar el array original directamente
-    } else {
-      console.error('onGuardarRedes no es una función');
-    }
+        if (selectedFile) {
+            setFormData({
+                ...formData,
+                archivo: selectedFile,
+            });
+        }
+    };
 
-    // Limpiamos los campos después de guardar
-    setArchivos(null);
-    setUrl('');
-    setCuenta('');
-  };
+    const handleSubmit = async (event: FormEvent) => {
+        event.preventDefault();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    agregarNuevaRed();
-  };
+        try {
+            // Enviar datos al backend usando fetch
+            const response = await fetch('http://tu-backend.com/api/redes', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
 
-  return (
-    <div className='formularioRedes'>
-      <NarbarAdmin />
+            if (response.ok) {
+                console.log('Datos del formulario enviados exitosamente');
+                // Limpiar el formulario después de enviar los datos
+                setFormData({
+                    url: '',
+                    cuenta: '',
+                    archivo: null,
+                });
+            } else {
+                console.error('Error al enviar los datos del formulario');
+            }
+        } catch (error) {
+            console.error('Error al enviar los datos del formulario:', error);
+        }
+    };
 
-      <div className="contenidoFormRedes">
-        <h2>Formulario de Redes</h2>
-        <form onSubmit={handleSubmit}>
-          <SubirArchivos onArchivosSubidos={handleArchivosSubidos} identificador="redes" />
+    return (
+        <div className='formularioRedes'>
+            <NarbarAdmin></NarbarAdmin>
 
-          <label>URL:</label>
-          <input type="text" value={url} onChange={(e) => setUrl(e.target.value)} />
+            <div className="contenidoFormRedes">
+                <h2>Formulario de Redes</h2>
 
-          <label>Cuenta:</label>
-          <input type="text" value={cuenta} onChange={(e) => setCuenta(e.target.value)} />
+                <form onSubmit={handleSubmit}>
+                    <label>URL:</label>
+                    <input
+                        type="text"
+                        name="url"
+                        value={formData.url}
+                        onChange={handleInputChange}
+                    />
 
-          <button type="submit">Guardar Redes</button>
-        </form>
-      </div>
-    </div>
-  );
+                    <label>Cuenta:</label>
+                    <input
+                        type="text"
+                        name="cuenta"
+                        value={formData.cuenta}
+                        onChange={handleInputChange}
+                    />
+
+                    <label>Subir archivo:</label>
+                    <input
+                        type="file"
+                        onChange={handleFileChange}
+                    />
+
+                    <button type="submit">Guardar Redes</button>
+                </form>
+            </div>
+        </div>
+    );
 };
- 
