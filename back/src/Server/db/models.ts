@@ -127,6 +127,18 @@ const Colaborador = DB.define("colaborador", {
     }
 }) 
 
+const Espacio = DB.define("espacio", {
+    es: {
+        type: DataTypes.STRING
+    },
+    en: {
+        type: DataTypes.STRING
+    },
+    cat: {
+        type: DataTypes.TEXT
+    }
+}) 
+
 const DataCarousel = DB.define('data_carousels', {
     es: {
         type: DataTypes.STRING
@@ -159,5 +171,6 @@ export {
     DataTestimonio, 
     Colaborador,
     Carousel,
+    Espacio,
     DataCarousel 
 }

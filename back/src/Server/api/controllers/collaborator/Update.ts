@@ -14,7 +14,7 @@ export const Update = async ( req: Request ,res: Response)=>{
             include: [{all:true}]
         })
 
-        if(!tColaborador) return res.status(400).json({status: 400, msg: "El colaborador debe ser válido" })
+        if(!tColaborador) return res.status(200).json({status: 400, msg: "El colaborador debe ser válido" })
 
         if(nombre){
             const past = tColaborador.nombre
