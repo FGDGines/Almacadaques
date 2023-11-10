@@ -14,10 +14,7 @@ export const Update = async ( req: Request ,res: Response)=>{
             include: [{all:true}]
         })
 
-
-        if(!tColaborador) return res.status(200).json({status: 200, msg: "Debe colaborador ser válido" })
-
-        // const tDataTestimonio = tTestimonio.data_testimony 
+        if(!tColaborador) return res.status(400).json({status: 400, msg: "El colaborador debe ser válido" })
 
         if(nombre){
             const past = tColaborador.nombre
@@ -49,32 +46,9 @@ export const Update = async ( req: Request ,res: Response)=>{
             updates.push({path: 'contacto', past , now:contacto})
         }
 
-
-        // if(testimony_es){
-        //     const past = tDataTestimonio.es
-        //     await tDataTestimonio.update({es: testimony_es})
-
-        //     updates.push({path: 'testimony_es' , past , now: testimony_es})
-        // }
-
-        // if(testimony_cat){
-        //     const past = tDataTestimonio.cat
-        //     await tDataTestimonio.update({cat: testimony_cat})
-
-        //     updates.push({path: 'testimony_cat' , past , now: testimony_cat})
-        // }
-
-        // if(testimony_en){
-        //     const past = tDataTestimonio.en
-        //     await tDataTestimonio.update({en: testimony_en})
-
-        //     updates.push({path: 'testimony_en' , past , now: testimony_en})
-        // }
-
-
-        if(updates.length)return res.status(200).json({status: 200, msg: 'Testimonio editado', bag:{updates}})
+        if(updates.length)return res.status(200).json({status: 200, msg: 'Colaborador editado', bag:{updates}})
         return res.status(200).json({status: 200, msg: 'No se han realizado ediciones'})
     }catch(err){
-        return res.status(200).json({status: 500, err , msg: "No podemos editar testimonios en este momento"})
+        return res.status(200).json({status: 500, err , msg: "No podemos editar colaborador en este momento"})
     }
 }

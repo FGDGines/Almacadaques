@@ -2,13 +2,11 @@ import { Request, Response } from "express";
 import { Colaborador } from "../../../db/models";
 
 export const Read = async ( req: Request ,res: Response)=>{
-    const {body} = req
-    const {id} = body
+    const {} = req
     try{
-        const tColaborador = await Colaborador.findByPk(id); 
-        if (!tColaborador) res.status(200).json({status: 200, msg: "Debe colaborador ser válido" , bag: tColaborador})
-        return res.status(200).json({status: 200, msg: "Mensajes Obtenidos con éxito" , bag: tColaborador})
+        const tColaborador = await Colaborador.findAll(); 
+        return res.status(200).json({status: 200, msg: "Colaboradores obtenidos con éxito" , bag: tColaborador})
     }catch(err){
-        return res.status(200).json({status: 500, err , msg: "No podemos leer Mensajes en este momento"})
+        return res.status(200).json({status: 500, err , msg: "No podemos leer colaborador en este momento"})
     }
 }

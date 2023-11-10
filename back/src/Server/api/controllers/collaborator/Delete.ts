@@ -8,12 +8,12 @@ export const Delete = async ( req: Request ,res: Response)=>{
     try{
         const tColaborador = await Colaborador.findByPk(id); 
 
-        if(!tColaborador) return res.status(200).json({status: 400 , msg: "Debe proporcionar un colaborador válido "})
+        if(!tColaborador) return res.status(200).json({status: 400 , msg: "Debe proporcionar un colaborador válido"})
 
         await tColaborador.destroy()
-        return res.status(200).json({status: 200, msg: "Colaborador Eliminado"})
+        return res.status(200).json({status: 200, msg: "Colaborador eliminado"})
 
     }catch(err){
-        return res.status(200).json({status: 500, err , msg: "No podemos Eliminar Colaborador en este momento"})
+        return res.status(200).json({status: 500, err , msg: "No podemos eliminar colaborador en este momento"})
     }
 }
