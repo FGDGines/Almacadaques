@@ -1,12 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import './ItemCarrusel.css';
 import itemsData from '../../../data/itemCarrousel';
 import { NuevoCarrusel } from './NuevoCarrusel/NuevoCarrusel';
+import { GlobalContext } from '../../../contexts/GlobalContext';
+import { Loader } from '../LoaderOverlay/LoaderOverlay';
 
 interface ContentItem {
   src: string;
   alt: string;
 }
+interface BtnMasAgregarProps {
+  direccion: number; // Añadiendo la propiedad dirección como number
+}
+
 
 interface TextContent {
   text: string;
@@ -24,7 +30,7 @@ interface Item {
 }
 
 
-export const ItemCarrusel = () => {
+export const ItemCarrusel: React.FC<BtnMasAgregarProps> = ({ direccion }) => {
   const [data, setData] = useState<Item[]>(itemsData);
 
   const handleDeleteItemCarrusel = (index: number) => {
@@ -42,8 +48,40 @@ export const ItemCarrusel = () => {
     setData(updatedData);
   };
 
+  const { setLayoutID } = useContext(GlobalContext);
+  const [showLoader, setShowLoader] = useState(false);
+
+  const handleClick = () => {
+    if (direccion !== undefined) {
+      setShowLoader(true);
+
+      // Simula un redireccionamiento
+      setTimeout(() => {
+        setLayoutID(direccion);
+      }, 1000); // Simulando una espera de 3 segundos
+    }
+  };
+
+  // Oculta el loader después de 3 segundos
+  useEffect(() => {
+    let timeout: NodeJS.Timeout;
+    if (showLoader) {
+      timeout = setTimeout(() => {
+        setShowLoader(false);
+      }, 1000);
+    }
+
+    return () => {
+      clearTimeout(timeout);
+    };
+  }, [showLoader]);
+
   return (
     <div className='ItemCarrusel'>
+
+      {showLoader && (
+        <Loader></Loader>
+      )}
       <div className="barraCarrusel">
         <div className="tituloCarrusel"><p>Item de Carrousel</p></div>
         <div className="botonesCarrusel">
@@ -53,8 +91,8 @@ export const ItemCarrusel = () => {
       </div>
 
       <div className="itemsCarrusel">
-        {data.length === 0 && <NuevoCarrusel />} {/* Agrega esta línea para mostrar NuevoCarrusel cuando no hay datos */}
-        
+        {data.length === 0 && <NuevoCarrusel />}
+
         {data.map((item, index) => (
           <div key={index} className="items">
             {item.content.map((contentItem, contentIndex) => (
@@ -66,7 +104,7 @@ export const ItemCarrusel = () => {
                       <i onClick={() => handleDeleteItemCarrusel(item.index)}>
                         <img src="../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/Borrar.svg" alt="Borrar" />
                       </i>
-                      <i onClick={() => handleUpdate(item.index, 'Nuevo Texto')}>
+                      <i onClick={handleClick}>
                         <img src="../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/Editar.svg" alt="Editar" />
                       </i>
                     </div>
@@ -78,7 +116,7 @@ export const ItemCarrusel = () => {
                       <i onClick={() => handleDeleteItemCarrusel(item.index)}>
                         <img src="../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/Borrar.svg" alt="Borrar" />
                       </i>
-                      <i onClick={() => handleUpdate(item.index, 'Nuevo Texto')}>
+                      <i onClick={handleClick}>
                         <img src="../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/Editar.svg" alt="Editar" />
                       </i>
                     </div>

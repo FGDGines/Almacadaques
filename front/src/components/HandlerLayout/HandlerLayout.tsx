@@ -29,6 +29,7 @@ import { FormularioTestimonios } from '../../Dashboard/components/Formularios/Fo
 import { BlogBienestar } from '../../Dashboard/components/BlogBienestar/BlogBienestar';
 import { BlogPodcast } from '../../Dashboard/components/BlogPodcast/BlogPodcast';
 import { FormularioEspaciosBienestar } from '../../Dashboard/components/Formularios/FormularioEspaciosBienestar/FormularioEspaciosBienestar';
+import { FormularioCarrousel } from '../../Dashboard/components/Formularios/FormularioCarrousel/FormularioCarrousel';
 
 const HandlerLayout = () => {
   const { layoutID, setLayoutID } = useContext(GlobalContext);
@@ -141,6 +142,12 @@ const HandlerLayout = () => {
     case 28:
       screen = <FormularioTestimonios />;
       break;
+
+    case 29:
+      screen = <FormularioCarrousel />;
+      break;
+
+
 
 
 
