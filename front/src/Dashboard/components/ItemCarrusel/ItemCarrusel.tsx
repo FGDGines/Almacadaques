@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './ItemCarrusel.css';
 import itemsData from '../../../data/itemCarrousel';
+import { NuevoCarrusel } from './NuevoCarrusel/NuevoCarrusel';
 
 interface ContentItem {
   src: string;
@@ -21,6 +22,7 @@ interface Item {
     alt?: never;
   })[];
 }
+
 
 export const ItemCarrusel = () => {
   const [data, setData] = useState<Item[]>(itemsData);
@@ -51,6 +53,8 @@ export const ItemCarrusel = () => {
       </div>
 
       <div className="itemsCarrusel">
+        {data.length === 0 && <NuevoCarrusel />} {/* Agrega esta línea para mostrar NuevoCarrusel cuando no hay datos */}
+        
         {data.map((item, index) => (
           <div key={index} className="items">
             {item.content.map((contentItem, contentIndex) => (
