@@ -4,6 +4,8 @@ import { Colaborador } from "../../../db/models";
 export const Read = async ( req: Request ,res: Response)=>{
     const {} = req
     try{
+        // @ts-ignore
+        console.log(req.files.src.data)
         const tColaborador = await Colaborador.findAll(); 
         return res.status(200).json({status: 200, msg: "Colaboradores obtenidos con éxito" , bag: tColaborador})
     }catch(err){

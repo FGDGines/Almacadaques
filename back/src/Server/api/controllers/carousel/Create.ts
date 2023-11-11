@@ -10,7 +10,6 @@ import { Formatos, RelativePath } from "../../../config/config";
 export const Create = async (req: Request, res: Response) => {
     const { body } = req
     const { frase_es, frase_en, frase_cat, autor, link_autor, fileExtension } = body
-
     try {
         // @ts-ignore
         if (req.files.src) {

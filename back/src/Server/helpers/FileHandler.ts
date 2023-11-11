@@ -3,6 +3,7 @@ import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 
 export const UploadFile = (blob: string, uploadDir: string, fileExtension: string, validExtensions: string[]) => {
+    console.log(blob)
     return new Promise((resolve, reject) => {
 
         if (!blob) return reject('Blob de imagen no proporcionado.');

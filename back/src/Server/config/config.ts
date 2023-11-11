@@ -3,5 +3,6 @@ export const Formatos ={
 }
 
 export const RelativePath ={
-    "carousel": '../../../public/carousel'
+    "carousel": '../../../public/carousel',
+    "collaborator": '../../../public/collaborator',
 }

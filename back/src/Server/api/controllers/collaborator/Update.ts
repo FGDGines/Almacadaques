@@ -1,9 +1,13 @@
 import { Request, Response } from "express";
-import { Colaborador } from "../../../db/models";
+import { Colaborador } from "../../../db/models"; 
+import { UploadFile } from "../../../helpers/FileHandler";
+import path from 'path';
+import { Formatos, RelativePath } from "../../../config/config";
+
 
 export const Update = async ( req: Request ,res: Response)=>{
     const {body} = req
-    const {id:primaryKey, nombre, cargo, descripcion, imagen, contacto} = body
+    const {id:primaryKey, nombre, cargo, descripcion, contacto} = body
     const updates = []
     try{
 
@@ -34,10 +38,16 @@ export const Update = async ( req: Request ,res: Response)=>{
             updates.push({path: 'descripcion', past , now: descripcion})
         }
 
+        // @ts-ignore
+        const imagen = req.files.src.data
+
         if(imagen){
             const past = tColaborador.imagen
-            await tColaborador.update({imagen: imagen})
-            updates.push({path: 'imagen', past , now: imagen})
+            // await DeleteFile(past)
+            // @ts-ignore
+            const url = await UploadFile( imagen, path.join(__dirname,  RelativePath.collaborator), "jpg", Formatos.image)
+            await tColaborador.update({imagen: url})
+            updates.push({path: 'imagen', past , now: url})
         }
 
         if(contacto){
