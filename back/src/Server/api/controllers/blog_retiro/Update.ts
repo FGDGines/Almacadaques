@@ -1,9 +1,12 @@
 import { Request, Response } from "express";
 import { BlogRetiro, DescriptionLang, TitleLang } from "../../../db/models";
+import { UploadFile } from "../../../helpers/FileHandler";
+import path from 'path';
+import { Formatos, RelativePath } from "../../../config/config";
 
 export const Update = async (req: Request, res: Response) => {
     const { body } = req
-    const { id, title_es, title_en, title_cat, description_es, description_en, description_cat, index, day, month, year, image, author} = body
+    const { id, title_es, title_en, title_cat, description_es, description_en, description_cat, index, day, month, year, image_number, author} = body
     
     const updates = []
     try {
@@ -81,10 +84,20 @@ export const Update = async (req: Request, res: Response) => {
             await tBlogRetiro.update({year: year})
             updates.push({path: 'year', past , now: year})
         }
+
+        // @ts-ignore
+        const image = req.files.src.data 
         if(image){
             const past = tBlogRetiro.image
-            await tBlogRetiro.update({image: image})
-            updates.push({path: 'image', past , now: image})
+            const json = JSON.parse(past)
+            if (json.length <= image_number) {
+                return res.status(200).json({ status: 400, msg: "Número de la imagen no válido" })
+            }
+            // await DeleteFile(past)
+            const url = await UploadFile( image, path.join(__dirname,  RelativePath.collaborator), "jpg", Formatos.image)
+            json[image_number] = url
+            await tBlogRetiro.update({image: json})
+            updates.push({path: 'image', past , now: json})
         }
         if(author){
             const past = tBlogRetiro.author

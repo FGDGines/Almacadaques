@@ -6,10 +6,11 @@ import { Create } from "../controllers/blog_retiro/Create";
 import { Read } from "../controllers/blog_retiro/Read";
 import { Delete } from "../controllers/blog_retiro/Delete";
 import { Update } from "../controllers/blog_retiro/Update";
+import { AddFile } from "../controllers/blog_retiro/AddFile";
 
 const app = Router()
 
-app.post('/create', [security_post,
+app.post('/create', [
     check('title_es','El titulo en español es obligatorio').not().isEmpty(), 
     check('title_en','El titulo en ingles es obligatorio').not().isEmpty(), 
     check('title_cat','El titulo en catalan es obligatorio').not().isEmpty(), 
@@ -20,20 +21,24 @@ app.post('/create', [security_post,
     check('day', 'El dia es obligatorio').not().isEmpty(),
     check('month', 'El mes es obligatorio').not().isEmpty(),
     check('year', 'El  año es obligatorio').not().isEmpty(),
-    check('image', 'La imagem es obligatorio').not().isEmpty(),
     check('author', 'El autor es obligatorio').not().isEmpty()
-     , validarCampos], Create)
+    , validarCampos], Create)
 
 app.post('/read', [
     ], Read)
 
 app.post('/delete' , [security_post,
     check('id', 'El blog retiro a eliminar es olbigatorio').isNumeric()
-     , validarCampos], Delete)
+    , validarCampos], Delete)
 
 
-app.post('/update' , [security_post,
+app.post('/update' , [
     check('id', 'El blog retiro a actualizar es obligatorio').isNumeric()
-     , validarCampos] , Update)
+    , validarCampos] , Update)
+
+app.post('/add_file' , [security_post,
+    check('id', 'El blog retiro a eliminar es olbigatorio').isNumeric()
+    , validarCampos], AddFile)
+
 
 module.exports = app
