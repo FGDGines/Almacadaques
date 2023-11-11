@@ -9,11 +9,11 @@ function SobreMIAdmin() {
     <div className="sobreMIA">
       <NarbarAdmin />
       <div className="containerMainTesti">
-        <BarSession tituloVista='Sobre mi' segundoTitulo='Testimonios' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
+        <BarSession direccion={17} tituloVista='Sobre mi' segundoTitulo='Testimonios' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
         <div className="timeBton">
           <div className="time">
             <p className="fechadetestimonio">Ultima actualización 24 jun 2023</p>
-            <BtnMasAgregar />
+            <BtnMasAgregar direccion={28} />
           </div>
           <VisualTestMain/>
           

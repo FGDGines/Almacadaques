@@ -1,6 +1,6 @@
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
-import '../FormularioRedes/FormularioRedes.css';
 import { BarSession } from '../../barSession/barSession';
+import '../FormularioEspaciosBienestar/FormularioEspaciosBienestar.css';
 import React, { useState, ChangeEvent, FormEvent } from 'react';
 
 
@@ -10,7 +10,7 @@ interface FormData {
     archivo: File | null;
 }
 
-export const FormularioRedes = () => {
+export const FormularioEspaciosBienestar = () => {
     const [formData, setFormData] = useState<FormData>({
         url: '',
         cuenta: '',
@@ -41,7 +41,7 @@ export const FormularioRedes = () => {
 
         try {
             // Enviar datos al backend usando fetch
-            const response = await fetch('http://tu-backend.com/api/redes', {
+            const response = await fetch('http://tu-backend.com/api/EspaciosBienestar', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -66,16 +66,17 @@ export const FormularioRedes = () => {
     };
 
     return (
-        <div className='formularioRedes'>
+        <div className='formularioEspaciosBienestar'>
             <NarbarAdmin></NarbarAdmin>
+          
+            <div className="contenidoFormEspaciosBienestar">
 
-            <div className="contenidoFormRedes">
-                <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Redes'></BarSession>
+            <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Espacios de Bienestar'></BarSession>
 
 
-                <form className='formRedes' onSubmit={handleSubmit}>
+                <form className='formEspaciosBienestar' onSubmit={handleSubmit}>
                     <div className="subirArchivos">
-                        <label htmlFor="File" className='labelArchivo'>
+                    <label htmlFor="File" className='labelArchivo'>
                             <img src="../../../../src/assets/Dashboard-almacadaques/inicio/nube.svg" alt="" />
                             <span className='arrastra'>Arrastra y suelta o <span>sube</span> </span>
                             <span className='formatos'>Supported formates: JPEG, PNG, GIF, MP4, PDF, PSD, AI, Word, PPT</span>
@@ -86,30 +87,25 @@ export const FormularioRedes = () => {
                         />
                     </div>
                     <div className="restInputs">
-                        <label className='labelsRedes'>URL:</label>
-                        <input className='inputsFormRedes'
+                        <label className='labelsEspaciosBienestar'>URL:</label>
+                        <input className='inputsFormEspaciosBienestar'
                             type="text"
                             name="url"
                             value={formData.url}
                             onChange={handleInputChange}
                         />
 
-                        <label className='labelsRedes'>Cuenta:</label>
-                        <input className='inputsFormRedes'
+                        <label className='labelsEspaciosBienestar'>Cuenta:</label>
+                        <input className='inputsFormEspaciosBienestar'
                             type="text"
                             name="cuenta"
                             value={formData.cuenta}
                             onChange={handleInputChange}
                         />
-                        <button type="submit">Guardar Redes</button>
+                        <button type="submit">Guardar EspaciosBienestar</button>
 
                     </div>
                 </form>
-
-
-                <div className="botonesFormRedes">
-
-                </div>
             </div>
         </div>
     );
