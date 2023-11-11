@@ -76,7 +76,11 @@ export const FormularioEspaciosBienestar = () => {
 
                 <form className='formEspaciosBienestar' onSubmit={handleSubmit}>
                     <div className="subirArchivos">
-                        <label  htmlFor="File" className='labelArchivo'>Subir archivo:</label>
+                    <label htmlFor="File" className='labelArchivo'>
+                            <img src="../../../../src/assets/Dashboard-almacadaques/inicio/nube.svg" alt="" />
+                            <span className='arrastra'>Arrastra y suelta o <span>sube</span> </span>
+                            <span className='formatos'>Supported formates: JPEG, PNG, GIF, MP4, PDF, PSD, AI, Word, PPT</span>
+                        </label>
                         <input id='File' className='cargarArchivo'
                             type="file"
                             onChange={handleFileChange}

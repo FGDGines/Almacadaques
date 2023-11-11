@@ -25,6 +25,7 @@ import { RetirosAdmin } from '../../Dashboard/pages/Retiros/RetirosAdmin';
 import { SobreMIAdmin } from '../../Dashboard/pages/SobreMI/SobreMIAdmin';
 import { NuevosEventos } from '../../Dashboard/components/NuevosEventos/NuevosEventos';
 import { FormularioRedes } from '../../Dashboard/components/Formularios/FormularioRedes/FormularioRedes';
+import { FormularioTestimonios } from '../../Dashboard/components/Formularios/FormularioTestimonios/FormularioTestimonios';
 import { BlogBienestar } from '../../Dashboard/components/BlogBienestar/BlogBienestar';
 import { BlogPodcast } from '../../Dashboard/components/BlogPodcast/BlogPodcast';
 import { FormularioEspaciosBienestar } from '../../Dashboard/components/Formularios/FormularioEspaciosBienestar/FormularioEspaciosBienestar';
@@ -136,6 +137,11 @@ const HandlerLayout = () => {
     case 27:
       screen = <FormularioEspaciosBienestar />;
       break;
+
+    case 28:
+      screen = <FormularioTestimonios />;
+      break;
+
 
 
     default:
