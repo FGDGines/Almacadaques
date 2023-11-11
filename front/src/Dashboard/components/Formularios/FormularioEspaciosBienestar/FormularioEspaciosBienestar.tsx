@@ -1,7 +1,8 @@
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
+import { BarSession } from '../../barSession/barSession';
 import '../FormularioEspaciosBienestar/FormularioEspaciosBienestar.css';
 import React, { useState, ChangeEvent, FormEvent } from 'react';
-import { redes as datosRedes } from '../../../../data/redes';
+
 
 interface FormData {
     url: string;
@@ -67,13 +68,10 @@ export const FormularioEspaciosBienestar = () => {
     return (
         <div className='formularioEspaciosBienestar'>
             <NarbarAdmin></NarbarAdmin>
-
+          
             <div className="contenidoFormEspaciosBienestar">
 
-                <div className="tituloFormEspaciosBienestar">
-                    <h2>Formulario de Espacios de Bienestar</h2>
-
-                </div>
+            <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Espacios de Bienestar'></BarSession>
 
 
                 <form className='formEspaciosBienestar' onSubmit={handleSubmit}>
@@ -103,10 +101,6 @@ export const FormularioEspaciosBienestar = () => {
                         <button type="submit">Guardar EspaciosBienestar</button>
 
                     </div>
-
-
-
-
                 </form>
             </div>
         </div>

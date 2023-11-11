@@ -31,6 +31,7 @@
 .formRedes {
   width: 60%;
   margin: 0 auto;
+  margin-top: 5%;
   height: 27vw;
   display: grid;
   grid-template-columns: 45% 45%; /* Dos columnas de 45% de ancho cada una */
