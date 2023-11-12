@@ -135,6 +135,28 @@ const Carousel = DB.define("carousels", {
 },{
     paranoid: false
 })
+
+
+const Podcast = DB.define("podcast", {
+    url: {
+        type: DataTypes.STRING
+    },
+    titulo: {
+        type: DataTypes.STRING
+    },
+    autor: {
+        type: DataTypes.TEXT
+    },
+    imagen: {
+        type: DataTypes.STRING
+    },
+    fecha: {
+        type: DataTypes.STRING
+    },
+    categoria: {
+        type: DataTypes.STRING
+    }
+}) 
  
 const Colaborador = DB.define("colaborador", {
     nombre: {
@@ -225,6 +247,7 @@ export {
     BlogRetiro,
     TitleLang,
     DescriptionLang,
+    Podcast,
     Colaborador,
     Carousel,
     Espacio,

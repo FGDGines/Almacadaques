@@ -4,8 +4,6 @@ import { BlogRetiro } from "../../../db/models";
 export const Read = async (req: Request, res: Response) => {
     const { body } = req
     const {} = body
-
-
     try {
         const tBlogRetiros = await BlogRetiro.findAll()
 

@@ -10,6 +10,7 @@ app.use('/collaborator', require('../api/routes/collaborator'))
 app.use('/carousel', require('../api/routes/carousel')) 
 app.use('/espacio', require('../api/routes/espacio')) 
 app.use('/blog_retiro', require('../api/routes/blog_retiro')) 
+app.use('/podcast', require('../api/routes/podcast')) 
 
 
 
