@@ -7,4 +7,5 @@ export const RelativePath ={
     "collaborator": '../../../public/collaborator',
     "blog_retiro": '../../../public/blog_retiro',
     "podcast": '../../../public/podcast',
+    "text_libro": '../../../public/text_libro',
 }

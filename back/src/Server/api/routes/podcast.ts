@@ -9,7 +9,7 @@ import { Update } from '../controllers/podcast/Update'
 
 const app = Router()
  
-app.post('/register' , [security_post,
+app.post('/register' , [
     check('url', 'La url es obligatoria').not().isEmpty(), 
     check('titulo', 'El titulo es obligatorio').not().isEmpty(), 
     check('autor', 'El autor es obligatorio').not().isEmpty(), 
@@ -20,11 +20,11 @@ app.post('/register' , [security_post,
 app.post('/read', [ 
     ], Read)
 
-app.post('/delete' , [
+app.post('/delete' , [security_post,
     check("id", 'El podcast a eliminar es obligatorio').isNumeric()
     , validarCampos], Delete)
     
-app.post('/update', [ 
+app.post('/update', [security_post,
     check('id', 'El podcast a editar es obligatorio').not().isEmpty()
     , validarCampos] , Update)
     

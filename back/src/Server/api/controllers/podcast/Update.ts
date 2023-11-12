@@ -45,7 +45,6 @@ export const Update = async ( req: Request ,res: Response)=>{
             if(imagen){
                 const past = tPodcast.imagen
                 // await DeleteFile(past)
-                // @ts-ignore
                 const url = await UploadFile( imagen, path.join(__dirname,  RelativePath.podcast), "jpg", Formatos.image)
                 await tPodcast.update({imagen: url})
                 updates.push({path: 'imagen', past , now: url})

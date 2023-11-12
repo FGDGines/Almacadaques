@@ -115,6 +115,22 @@ const BlogRetiro = DB.define("blog_retiro", {
 }) 
 
 
+const TextLibro = DB.define("text_libro", {
+    title: {
+        type: DataTypes.STRING
+    },
+    subtitle: {
+        type: DataTypes.STRING
+    },
+    content: {
+        type: DataTypes.JSON
+    },
+    imagen_src: {
+        type: DataTypes.STRING
+    }
+}) 
+
+
 const Carousel = DB.define("carousels", {
     src: {
         type: DataTypes.STRING
@@ -249,6 +265,7 @@ export {
     DescriptionLang,
     Podcast,
     Colaborador,
+    TextLibro,
     Carousel,
     Espacio,
     DataCarousel 
