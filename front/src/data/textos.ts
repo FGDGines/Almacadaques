@@ -147,6 +147,7 @@ export const textos: TextosType<
         textDesthome6: "2. Experiencias de ",
         textDesthome60: "bienestar",
         textDesthome61: "(lugares con encanto).",
+        
         // seccion about me
         titleparrafo: "Algunas cosas sobre mi",
         textsobremi1: "Te ayudo a vivir en plenitud, encontrar tu bienestar  y tu paz interior.",

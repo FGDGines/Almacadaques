@@ -17,6 +17,19 @@ function AgendaAdmin() {
         <div className="itemAgendaAdmin">
           <EventosPrevo />
           <EventosPrevo />
+          <EventosPrevo />
+          <EventosPrevo />
+          <EventosPrevo />
+          <EventosPrevo />
+          <EventosPrevo />
+          <EventosPrevo />
+          <EventosPrevo />
+          <EventosPrevo />
+          <EventosPrevo />
+          <EventosPrevo />
+
+
+
         </div>
 
           <div className="BtonAgregarEventosmain" onClick={() => setLayoutID(23)}>

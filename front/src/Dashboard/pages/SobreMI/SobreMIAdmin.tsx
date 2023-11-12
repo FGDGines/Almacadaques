@@ -15,7 +15,10 @@ function SobreMIAdmin() {
             <p className="fechadetestimonio">Ultima actualización 24 jun 2023</p>
             <BtnMasAgregar direccion={28} />
           </div>
+          
           <VisualTestMain/>
+          
+          
           
         </div>
 

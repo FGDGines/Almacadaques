@@ -14,7 +14,6 @@ function ColaboradoresAdmin() {
         <BarSession tituloVista='Colaborador@s' segundoTitulo='Colaborador@s' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
         <div className="itenColaboradores">
           <ContainerColaboradores/>
-          <ContainerColaboradores/>
         </div>
         <div className="BtnAgregarMasColaborador">
         <BtnMas/>

@@ -13,6 +13,16 @@ function RetirosAdmin() {
         <div className="infocontainerRetiro">
           <ContainerRetiro/>
           <ContainerRetiro/>
+          <ContainerRetiro/>
+          <ContainerRetiro/>
+          <ContainerRetiro/>
+          <ContainerRetiro/>
+          <ContainerRetiro/>
+          <ContainerRetiro/>
+          <ContainerRetiro/>
+          <ContainerRetiro/>
+          <ContainerRetiro/>
+          <ContainerRetiro/>
         </div>
         
       </div>

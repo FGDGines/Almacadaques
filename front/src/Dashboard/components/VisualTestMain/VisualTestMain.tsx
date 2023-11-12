@@ -11,7 +11,6 @@ function VisualTestMain() {
         </div>
         <div className="containerdeTestimoniosAdmin">
             <PreviwTestimonios/>
-            <PreviwTestimonios/>
         </div>
         
     </div>

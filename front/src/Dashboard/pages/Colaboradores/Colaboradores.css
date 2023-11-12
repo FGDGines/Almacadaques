@@ -19,7 +19,23 @@
     gap: 2.25vw;
     display: flex;
     padding-top: 3vw;
+    max-width: 93%;
+    overflow-x: auto;
 }
+.itenColaboradores::-webkit-scrollbar {
+    width: 0px; /* Ancho del scrollbar */
+  }
+  
+  .itenColaboradores::-webkit-scrollbar-thumb {
+    background-color: #88888800; /* Color del pulgar */
+    opacity: 0.1;
+  }
+  
+  .itenColaboradores::-webkit-scrollbar-track {
+    background-color: #f1f1f100; /* Color de la pista del scrollbar */
+  }
+
+
 .BtnAgregarMasColaborador{
     position: absolute;
     right: 0;

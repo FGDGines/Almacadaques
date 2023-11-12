@@ -1,25 +1,27 @@
 .ContainerColaboradores {
-  width: 22rem;
+  width: 20rem;
   border-radius: 1.25rem;
   background: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
+  word-wrap: break-word;
+  padding: 1vw;
 }
 .IconoEditarColaboradores {
-    
-  width: 20vw;
+  width: 18vw;
   display: flex;
   justify-content: right;
   gap: 0.7vw;
   align-items: center;
 }
 .imgUsuarioColaboradores {
-   
-  width: 9vw;
+  border-radius: 5vw;
+  width: 8vw;
+  height: 8vw;
 }
 .IconEditarColaboradores {
-    cursor: pointer;
+  cursor: pointer;
   width: 1.3rem;
   height: 1.3rem;
 }
@@ -33,6 +35,7 @@
   line-height: normal;
 }
 .NombreCargo {
+  width: 19vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,7 +43,7 @@
 .NombreColaboradorAdmin {
   color: var(--neutral-gray, #38272d);
   font-family: Montserrat;
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -71,37 +74,41 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  margin: .9vw 0 0 0;
+  margin: 0.9vw 0 0 0;
 }
-.ParrafoDescripcion{
-    width: 19vw;
-    color: #777;
-font-family: Montserrat;
-font-size: 1rem;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-margin: .4vw 0 0 0;
+.ParrafoDescripcion {
+  width: 19vw;
+  color: #777;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0.4vw 0 0 0;
 }
-.EnlaceContactoColaborador{
-    text-decoration: none;
+.EnlaceContactoColaborador {
+  text-decoration: none;
+  width: 19vw;
 }
-.EnlaceContactoColaborador{
-    cursor: pointer;
-    color: #979797;
-font-family: Montserrat;
-font-size: 1rem;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
+.EnlaceContactoColaborador {
+
+  word-wrap: break-word;
+  width: 19vw;
+  cursor: pointer;
+  color: #979797;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
 }
-.TitleContactoColaborador{
-    width: 19vw;
+.TitleContactoColaborador {
+  width: 19vw;
   color: #777;
   font-family: Montserrat;
   font-size: 1rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  margin: .9vw 0 0 0;
+  margin: 0.9vw 0 0 0;
 }
