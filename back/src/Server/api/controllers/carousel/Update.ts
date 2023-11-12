@@ -47,12 +47,12 @@ export const Update = async (req: Request, res: Response) => {
             await tDataCarousel.update({es: frase_es})
             updates.push({path: 'es' , past, now:frase_es})
         }
-        if(frase_es || frase_cat || frase_cat){
+        if(frase_en){
             const past = tDataCarousel.en
             await tDataCarousel.update({en: frase_en})
             updates.push({path: 'en' , past, now:frase_en})
         }
-        if(frase_es || frase_cat || frase_cat){
+        if(frase_cat){
             const past = tDataCarousel.cat
             await tDataCarousel.update({cat: frase_cat})
             updates.push({path: 'cat' , past, now:frase_cat})
