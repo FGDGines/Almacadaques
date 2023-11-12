@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { BlogRetiro, DescriptionLang, TitleLang } from "../../../db/models";
-import { UploadFile } from "../../../helpers/FileHandler";
+import { DeleteFile, UploadFile } from "../../../helpers/FileHandler";
 import path from 'path';
 import { Formatos, RelativePath } from "../../../config/config";
 
@@ -93,7 +93,10 @@ export const Update = async (req: Request, res: Response) => {
             if (json.length <= image_number) {
                 return res.status(200).json({ status: 400, msg: "Número de la imagen no válido" })
             }
-            // await DeleteFile(past)
+            if (past) {
+                const uploadDir = path.join(__dirname,  RelativePath.text_libro)
+                await DeleteFile(path.join(uploadDir, past))        
+            }
             const url = await UploadFile( image, path.join(__dirname,  RelativePath.blog_retiro), "jpg", Formatos.image)
             json[image_number] = url
             await tBlogRetiro.update({image: json})
@@ -105,7 +108,6 @@ export const Update = async (req: Request, res: Response) => {
             updates.push({path: 'author', past , now: author})
         }
 
-        console.log(tTitleLang, tDescriptionLang)
         return res.status(200).json({status: 200, msg: "Updated" , tBlogRetiro})
 
     } catch (err) {

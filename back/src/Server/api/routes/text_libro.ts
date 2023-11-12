@@ -9,10 +9,10 @@ import { Update } from '../controllers/text_libro/Update'
 
 const app = Router()
  
-app.post('/register' , [security_post,
+app.post('/register' , [
     check('title', 'El titulo es obligatorio').not().isEmpty(), 
     check('subtitle', 'El subtitulo es obligatorio').not().isEmpty(), 
-    check('content', 'La descripcion es obligatoria').not().isEmpty()
+    check('content', 'El contenido es obligatorio').not().isEmpty()
     , validarCampos] , Register)
 
 app.post('/read', [ 

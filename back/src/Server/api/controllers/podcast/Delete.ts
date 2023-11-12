@@ -8,12 +8,12 @@ export const Delete = async ( req: Request ,res: Response)=>{
     try{
         const tPodcast = await Podcast.findByPk(id); 
 
-        if(!tPodcast) return res.status(200).json({status: 400 , msg: "Debe proporcionar un colaborador válido"})
+        if(!tPodcast) return res.status(200).json({status: 400 , msg: "Debe proporcionar un podcast válido"})
 
         await tPodcast.destroy()
-        return res.status(200).json({status: 200, msg: "Colaborador eliminado"})
+        return res.status(200).json({status: 200, msg: "Podcast eliminado"})
 
     }catch(err){
-        return res.status(200).json({status: 500, err , msg: "No podemos eliminar colaborador en este momento"})
+        return res.status(200).json({status: 500, err , msg: "No podemos eliminar podcast en este momento"})
     }
 }

@@ -9,6 +9,6 @@ export const Read = async (req: Request, res: Response) => {
 
         return res.status(200).json({ status: 200, msg: "Blog retiro obtenidos con éxito",bag: tBlogRetiros })
     } catch (err) {
-        return res.status(200).json({ status: 500, err, msg: "No podemos leer blog retiro del carousel en este momento" })
+        return res.status(200).json({ status: 500, err, msg: "No podemos leer blog retiro en este momento" })
     }
 }

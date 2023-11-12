@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { TextLibro } from "../../../db/models"; 
-import { UploadFile } from "../../../helpers/FileHandler";
+import { DeleteFile, UploadFile } from "../../../helpers/FileHandler";
 import path from 'path';
 import { Formatos, RelativePath } from "../../../config/config";
 
@@ -44,16 +44,19 @@ export const Update = async ( req: Request ,res: Response)=>{
             const imagen = req.files.src.data
             if(imagen){
                 const past = tTextLibro.imagen_src
-                // await DeleteFile(past)
-                const url = await UploadFile( imagen, path.join(__dirname,  RelativePath.podcast), "jpg", Formatos.image)
+                if (past) {
+                    const uploadDir = path.join(__dirname,  RelativePath.text_libro)
+                    await DeleteFile(path.join(uploadDir, past))        
+                }
+                const url = await UploadFile( imagen, path.join(__dirname,  RelativePath.text_libro), "jpg", Formatos.image)
                 await tTextLibro.update({imagen_src: url})
                 updates.push({path: 'imagen', past , now: url})
             }
         } catch (error) {}
 
-        if(updates.length)return res.status(200).json({status: 200, msg: 'Podcast editado', bag:{updates}})
+        if(updates.length)return res.status(200).json({status: 200, msg: 'Text libro editado', bag:{updates}})
         return res.status(200).json({status: 200, msg: 'No se han realizado ediciones'})
     }catch(err){
-        return res.status(200).json({status: 500, err , msg: "No podemos editar podcast en este momento"})
+        return res.status(200).json({status: 500, err , msg: "No podemos editar text libro en este momento"})
     }
 }

@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { Podcast } from "../../../db/models"; 
-import { UploadFile } from "../../../helpers/FileHandler";
+import { DeleteFile, UploadFile } from "../../../helpers/FileHandler";
 import path from 'path';
 import { Formatos, RelativePath } from "../../../config/config";
 
@@ -44,7 +44,10 @@ export const Update = async ( req: Request ,res: Response)=>{
             const imagen = req.files.src.data
             if(imagen){
                 const past = tPodcast.imagen
-                // await DeleteFile(past)
+                if (past) {
+                    const uploadDir = path.join(__dirname,  RelativePath.podcast)
+                    await DeleteFile(path.join(uploadDir, past))        
+                }
                 const url = await UploadFile( imagen, path.join(__dirname,  RelativePath.podcast), "jpg", Formatos.image)
                 await tPodcast.update({imagen: url})
                 updates.push({path: 'imagen', past , now: url})

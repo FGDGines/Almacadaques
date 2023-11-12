@@ -17,10 +17,10 @@ export const Register = async (req: Request, res: Response) => {
                 imagen_src: url
             })
             await tTextLibro.save();
-            return res.status(200).json({ status: 200, msg: "Podcast registrado", bag: tTextLibro})
+            return res.status(200).json({ status: 200, msg: "Text libro registrado", bag: tTextLibro})
         }
         return res.status(200).json({ status: 400, msg: "Debe pasar una imagen"})
     } catch (err) {
-        return res.status(200).json({ status: 500, err, msg: "No se puede crear podcast" })
+        return res.status(200).json({ status: 500, err, msg: "No se puede crear text libro" })
     }
 }

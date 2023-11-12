@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
 import { Colaborador } from "../../../db/models"; 
-import { UploadFile } from "../../../helpers/FileHandler";
+import { DeleteFile, UploadFile } from "../../../helpers/FileHandler";
 import path from 'path';
 import { Formatos, RelativePath } from "../../../config/config";
 
@@ -43,8 +43,10 @@ export const Update = async ( req: Request ,res: Response)=>{
 
         if(imagen){
             const past = tColaborador.imagen
-            // await DeleteFile(past)
-            // @ts-ignore
+            if (past) {
+                const uploadDir = path.join(__dirname,  RelativePath.collaborator)
+                await DeleteFile(path.join(uploadDir, past))        
+            }
             const url = await UploadFile( imagen, path.join(__dirname,  RelativePath.collaborator), "jpg", Formatos.image)
             await tColaborador.update({imagen: url})
             updates.push({path: 'imagen', past , now: url})
