@@ -1,9 +1,13 @@
 import './Colaboradores.css'
+import { NarbarAdmin } from '../../components/NarbarAdmin/NarbarAdmin'
 
-function Colaboradores() {
+function ColaboradoresAdmin() {
   return (
-    <div>Colaboradores</div>
+    <div className="colaboradoresAdmin">
+      <NarbarAdmin/>
+      <p>Colaboradores</p>
+    </div>
   )
 }
 
-export { Colaboradores }
+export { ColaboradoresAdmin }

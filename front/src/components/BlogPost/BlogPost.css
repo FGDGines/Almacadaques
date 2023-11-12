@@ -1,199 +1,250 @@
 .BlogPost {
-  background-color: rgb(216, 215, 215);
+  background-color: rgb(255, 255, 255);
 }
-.demoPage{
-  background-color: antiquewhite;
+.demoPage {
+  background-color: rgb(255, 255, 255);
   border: 1px solid rgb(95, 95, 95);
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, .4);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
 }
-.port{
-	padding: 1vw;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+.port {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.imgLibro{
-	width: 20vw;
+.marco {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.imgLibro img{
-	width: 100%;
-	height: 100%;
+.titlePortal {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
 }
-.flipbook{
+.titlePortal2 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  overflow: hidden;
+  background-image: url("../../../src/assets/background/fondo-libro.jpg");
+}
+.ctOverlayBook {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #cf134867 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ctOverlay h1 {
+  text-align: center;
+  font-family: "PT-Script-Monsoon";
+  color: white;
+}
+.ctOverlay p {
+  text-align: center;
+  font-family: "PT-Script-Monsoon";
+  color: white;
+}
+
+.imgLibro {
+  width: 20vw;
+}
+.imgLibro img {
+  width: 100%;
+  height: 100%;
+}
+.flipbook {
   display: flex;
   justify-content: center;
   padding: 3vw;
 }
 .book {
-	width: 350px;
-	height: 450px;
-	position: relative;
-	transition-duration: 1s;
-	perspective: 1500;
+  width: 350px;
+  height: 450px;
+  position: relative;
+  transition-duration: 1s;
+  perspective: 1500;
 }
 
-.cover, .back-cover {
-	background-color: #4173a5;
-	width: 100%;
-	height: 100%;
-	border-radius: 0 15px 15px 0;
-	box-shadow: 0 0 5px rgb(41, 41, 41);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transform-origin: center left;
+.cover,
+.back-cover {
+  background-color: #4173a5;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 15px 15px 0;
+  box-shadow: 0 0 5px rgb(41, 41, 41);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-origin: center left;
 }
 .cover {
-	position: absolute;
-	z-index: 4;
-	transition: transform 1s;
+  position: absolute;
+  z-index: 4;
+  transition: transform 1s;
 }
 .cover label {
-	width: 100%;
-	height: 100%;
-	cursor: pointer;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 .back-cover {
-	position: relative;
-	z-index: -1;
+  position: relative;
+  z-index: -1;
 }
 .page {
-	position: absolute;
-	background-color: white;
-	width: 330px;
-	height: 430px;
-	border-radius: 0 15px 15px 0;
-	margin-top: 10px;
-	transform-origin: left;
-	transform-style: preserve-3d;
-	transform: rotateY(0deg);
-	transition-duration: 1.5s;
+  position: absolute;
+  background-color: white;
+  width: 330px;
+  height: 430px;
+  border-radius: 0 15px 15px 0;
+  margin-top: 10px;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition-duration: 1.5s;
 }
 .page img {
-	width: 100%;
-	height: 100%;
-	border-radius: 15px 0 0 15px;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px 0 0 15px;
 }
 .front-page {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	backface-visibility: hidden;
-	box-sizing: border-box;
-	padding: 1rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  box-sizing: border-box;
+  padding: 1rem;
 }
 .back-page {
-	transform: rotateY(180deg);
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	backface-visibility: hidden;
-	z-index: 99;
+  transform: rotateY(180deg);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  z-index: 99;
 }
-.next, .prev {
-	position: absolute;
-	bottom: 1em;
-	cursor: pointer;
+.next,
+.prev {
+  position: absolute;
+  bottom: 1em;
+  cursor: pointer;
 }
 .next {
-	right: 1em;
+  right: 1em;
 }
 .prev {
-	left: 1em;
+  left: 1em;
 }
 #page1 {
-	z-index: 3;
+  z-index: 3;
 }
 #page2 {
-	z-index: 2;
+  z-index: 2;
 }
 #page3 {
-	z-index: 1;
+  z-index: 1;
 }
 #checkbox-cover:checked ~ .book {
-	transform: translateX(200px);
+  transform: translateX(200px);
 }
 #checkbox-cover:checked ~ .book .cover {
-	transition: transform 1.5s, z-index 0.5s 0.5s;
-	transform: rotateY(-180deg);
-	z-index: 1;
+  transition: transform 1.5s, z-index 0.5s 0.5s;
+  transform: rotateY(-180deg);
+  z-index: 1;
 }
 #checkbox-cover:checked ~ .book .page {
-	box-shadow: 0 0 3px rgb(99, 98, 98);
+  box-shadow: 0 0 3px rgb(99, 98, 98);
 }
 #checkbox-page1:checked ~ .book #page1 {
-	transform: rotateY(-180deg);
-	z-index: 2;
+  transform: rotateY(-180deg);
+  z-index: 2;
 }
 #checkbox-page2:checked ~ .book #page2 {
-	transform: rotateY(-180deg);
-	z-index: 3;
+  transform: rotateY(-180deg);
+  z-index: 3;
 }
 
-@media (max-width: 780px){
-  .BlogInfo{
-      width: 45vw;
+@media (max-width: 780px) {
+  .BlogInfo {
+    width: 45vw;
   }
-  .blog-item{
+  .blog-item {
     width: 43vw;
     padding: 2vw;
   }
-  .ctBlogInf{
-      width: 44vw;
+  .ctBlogInf {
+    width: 44vw;
   }
-  .imgInfBlog{
-      width: 43vw;
+  .imgInfBlog {
+    width: 43vw;
   }
 
-  .date .month{
-      font-size: 2vw;
+  .date .month {
+    font-size: 2vw;
   }
-  .date .day{
-      font-size: 2vw;
+  .date .day {
+    font-size: 2vw;
   }
-  .titleInfo{
-      font-size: 1.8vw;
+  .titleInfo {
+    font-size: 1.8vw;
   }
-  .textInfo{
-      font-size: 2vw;
+  .textInfo {
+    font-size: 2vw;
   }
-  
-  .btnInfo{
-      width: 20vw;
-      font-size: 1.8vw;
+
+  .btnInfo {
+    width: 20vw;
+    font-size: 1.8vw;
   }
 }
 @media (max-width: 450px) {
-  
-  .ctBlogInf{
-      width: 80vw;
-      padding: 3vw;
-  }
-  .blog-item{
+  .ctBlogInf {
     width: 80vw;
     padding: 3vw;
-    margin:3vw;
   }
-  .imgInfBlog{
-      width: 80vw;
+  .blog-item {
+    width: 80vw;
+    padding: 3vw;
+    margin: 3vw;
+  }
+  .imgInfBlog {
+    width: 80vw;
   }
 
-  .date .month{
-      font-size: 4vw;
+  .date .month {
+    font-size: 4vw;
   }
-  .date .day{
-      font-size: 4vw;
+  .date .day {
+    font-size: 4vw;
   }
-  .titleInfo{
-      font-size: 3.5vw;
+  .titleInfo {
+    font-size: 3.5vw;
   }
-  .textInfo{
-      font-size: 3.5vw;
+  .textInfo {
+    font-size: 3.5vw;
   }
-  
-  .btnInfo{
-      width: auto;
-      font-size: 4vw;
+
+  .btnInfo {
+    width: auto;
+    font-size: 4vw;
   }
 }

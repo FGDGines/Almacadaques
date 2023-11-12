@@ -1,0 +1,17 @@
+.agendaAdmin{
+    top: 0;
+  display: flex;
+  position: absolute;
+  background-color: #fcf1f4;
+  width: 100vw;
+  height: 100vh;
+}
+.containerMainAgenda{
+    width: 100%;
+}
+.itemAgendaAdmin{
+  width: 85vw;
+  padding: 0 2vw;
+  display: flex;
+  gap: 2vw;
+}

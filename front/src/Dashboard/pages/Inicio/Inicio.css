@@ -1,0 +1,22 @@
+.inicioAdmin{
+    background-color: #fcf1f4;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    position: absolute;
+    top: 0;
+}
+
+.contenidoPrincipal{
+    width: 93vw;
+}
+
+.contenidoBienestar {
+    width: 96%;
+    margin: 2vw auto;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 10px; 
+    
+  }

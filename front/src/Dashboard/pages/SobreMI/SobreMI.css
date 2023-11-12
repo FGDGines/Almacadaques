@@ -1,0 +1,40 @@
+.sobreMIA {
+  top: 0;
+  display: flex;
+  position: absolute;
+  background-color: #fcf1f4;
+  width: 100vw;
+  height: 100vh;
+}
+.containerMainTesti {
+  width: 100%;
+}
+.ItemTestimonioadmin {
+  width: 100%;
+}
+.timeBton {
+  border-radius: 1.59713rem;
+  background: #fefefe;
+  box-shadow: 0px 10.22142px 30.66425px 0px #fefefe;
+  width: 90%;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3vw;
+}
+.time {
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fechadetestimonio{
+  color:#38272D;
+font-family: Montserrat;
+font-size: 1.25rem;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}

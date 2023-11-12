@@ -92,15 +92,32 @@ export const textos: TextosType<
     "textcoachinginterna7" |
     "textcoachinginterna8" |
     "textcoachinginternaTestimonio" |
+<<<<<<< HEAD
     "textcoachinginterPideinfo" | 
     //Agenda Experiencias de bienestar
     //Agenda experiencias a medida
     //colaborador@s
     "textocolaborador"
+=======
+    "textcoachinginternatitle9" |
+    "textcoachinginterna9" |
+    "textcoachinginterna10" |
+    "textcoachinginterna11" |
+    "textcoachinginterPideinfo" |
+
+
+    //Agenda Experiencias de bienestar
+    //Agenda experiencias a medida
+    //colaborador
+    "textoeducadora" |
+    "textcolamiembrequi" |
+    "textcolaborcontact"
+>>>>>>> 6d6416dc2b888df8d3d33a0c30994eedc4286369
     //blo( Tips de bienestar)
     //podcast
     //blog retiros
     
+
     
 > = {
     [enLanguageFlag.ES]: {
@@ -189,11 +206,21 @@ export const textos: TextosType<
         textcoachinginterna7: "Como mentora internacional te comparto mis propias experiencias y con mucha empatía y sensibilidad te acompaño a alcanzar los objetivos que quieres lograr, logrando así mayor bienestar.",
         textcoachinginterna8: "Contácta sin compromiso para definir juntos como te puedo ayudar a conseguir los resultados que buscas.",
         textcoachinginternaTestimonio: "Testimonios",
+        textcoachinginternatitle9: "¿Como te puedo ayudar?",
+        textcoachinginterna10: "Como mentora internacional te comparto mis propias experiencias y con mucha empatía y sensibilidad te acompaño a alcanzar los objetivos que quieres lograr, logrando así mayor bienestar.",
+        textcoachinginterna9: "Como coach te escucho sin juzgar, te hago preguntas y te doy feedback, y con ello aclararás y ordenarás tus ideas e incrementarás tu autoconocimiento y liderazgo para descubrir nuevos enfoques y lograr aquello que quieres conseguir.",
+        textcoachinginterna11: "Contácta  para definir juntos como te puedo ayudar a conseguir los resultados que buscas.",
         textcoachinginterPideinfo: "Pide más información sin compromiso",
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
         //colaborador
+<<<<<<< HEAD
         textocolaborador: "Colaborador@s de Almacadaques",
+=======
+        textoeducadora: "Educadora de Masaje Infantil",
+        textcolamiembrequi: "Miembros del Equipo",
+        textcolaborcontact: "Contactame",
+>>>>>>> 6d6416dc2b888df8d3d33a0c30994eedc4286369
         //blo( Tips de bienestar)
         //podcast
         //blog retiros
@@ -284,13 +311,23 @@ export const textos: TextosType<
         textcoachinginterna7: "As an international mentor I share my own experiences with you and with a lot of empathy and sensitivity I help you achieve your goals as well as feeling greater well-being.",
         textcoachinginterna8: "I encourage you to contact me to define together  how I can help you achieve your goals.",
         textcoachinginternaTestimonio: "Testimonials",
+        textcoachinginternatitle9: "¿How can I help you?",
+        textcoachinginterna9: "As a coach, I listen to you without judging, ask you questions and give you feedback, and with this you will clarify and organize your ideas and increase your self-knowledge and leadership to discover new approaches and achieve what you want to achieve.",
+        textcoachinginterna10: "As an international mentor I share my own experiences with you and with a lot of empathy and sensitivity I help you achieve the objectives you want to achieve, thus achieving greater well-being.",
+        textcoachinginterna11: "Contact us to define together how I can help you achieve the results you are looking for.",
         textcoachinginterPideinfo: "Request more information without obligation",
 
 
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
         //colaborador
+<<<<<<< HEAD
         textocolaborador: "Collaborat@rs",
+=======
+        textoeducadora: "Infant Massage Educator",
+        textcolamiembrequi: "Team members",
+        textcolaborcontact: "Contact me",
+>>>>>>> 6d6416dc2b888df8d3d33a0c30994eedc4286369
         //blo( Tips de bienestar)
         //podcast
         //blog retiros
@@ -382,11 +419,21 @@ export const textos: TextosType<
         textcoachinginterna7: "Com a mentora internacional et comparteixo les meves pròpies experiències i amb molta empatia i sensibilitat t'acompanyo a assolir els objectius que vols assolir, aconseguint així més benestar.",
         textcoachinginterna8: "Contacta sense compromís per definir junts com et puc ajudar a aconseguir els resultats que cerques",
         textcoachinginternaTestimonio: "Testimonis",
+        textcoachinginternatitle9: "Com et puc ajudar",
+        textcoachinginterna9: "Com que coach t'escolto sense jutjar, et faig preguntes i et dono feedback, i amb això aclariràs i ordenaràs les teves idees i incrementaràs el teu autoconeixement i lideratge per descobrir nous enfocaments i aconseguir allò que vols aconseguir.",
+        textcoachinginterna10: "Com a mentora internacional et comparteixo les meves pròpies experiències i amb molta empatia i sensibilitat t'acompanyo a assolir els objectius que vols assolir, aconseguint així més benestar.",
+        textcoachinginterna11: "Contacta per definir junts com et puc ajudar a aconseguir els resultats que cerques.",
         textcoachinginterPideinfo: "Demana més informació sense compromís",
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
         //colaborador
+<<<<<<< HEAD
         textocolaborador: "Col·laborad@rs",
+=======
+        textoeducadora: "Educadora de Massatge Infantil",
+        textcolamiembrequi: "Membres de l'equip",
+        textcolaborcontact: "Contacta'm",
+>>>>>>> 6d6416dc2b888df8d3d33a0c30994eedc4286369
         //blo( Tips de bienestar)
         //podcast
         //blog retiros

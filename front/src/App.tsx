@@ -3,7 +3,7 @@ import "./fonts.css";
 import "./global.css"
 import HandlerLayout from "./components/HandlerLayout/HandlerLayout";
 import { GlobalContext } from "./contexts/GlobalContext";
-import './Dashboard/components/HandlerLayoutAdmin/HandlerLayoutAdmin'
+import './Dashboard/components/NarbarAdmin/NarbarAdmin'
 import { SyntheticEvent, useContext, useState } from "react";
 
 function App() {
