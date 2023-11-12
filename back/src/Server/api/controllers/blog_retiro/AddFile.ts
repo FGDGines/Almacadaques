@@ -28,7 +28,7 @@ export const AddFile = async (req: Request, res: Response) => {
                 return res.status(200).json({ status: 400, msg: "Cantidad de imagenes maxima pasada" })
             }
             // await DeleteFile(past)
-            const url = await UploadFile( image, path.join(__dirname,  RelativePath.collaborator), "jpg", Formatos.image)
+            const url = await UploadFile( image, path.join(__dirname,  RelativePath.blog_retiro), "jpg", Formatos.image)
             const img = [
                 ...json,
                 url

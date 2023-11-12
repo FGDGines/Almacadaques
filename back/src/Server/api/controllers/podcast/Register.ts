@@ -12,7 +12,7 @@ export const Register = async (req: Request, res: Response) => {
         // @ts-ignore
         if (req.files.src.data) {
             // @ts-ignore
-            const url = await UploadFile( req.files.src.data, path.join(__dirname,  RelativePath.collaborator), "jpg", Formatos.image)
+            const url = await UploadFile( req.files.src.data, path.join(__dirname,  RelativePath.podcast), "jpg", Formatos.image)
              
             const tPodcast = new Podcast({
                 ...body,

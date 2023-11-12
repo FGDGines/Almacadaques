@@ -94,7 +94,7 @@ export const Update = async (req: Request, res: Response) => {
                 return res.status(200).json({ status: 400, msg: "Número de la imagen no válido" })
             }
             // await DeleteFile(past)
-            const url = await UploadFile( image, path.join(__dirname,  RelativePath.collaborator), "jpg", Formatos.image)
+            const url = await UploadFile( image, path.join(__dirname,  RelativePath.blog_retiro), "jpg", Formatos.image)
             json[image_number] = url
             await tBlogRetiro.update({image: json})
             updates.push({path: 'image', past , now: json})

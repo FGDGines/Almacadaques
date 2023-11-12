@@ -16,7 +16,7 @@ export const Create = async (req: Request, res: Response) => {
         const image = req.files.src.data 
         console.log(image)
         if (image) {
-            const url = await UploadFile( image, path.join(__dirname,  RelativePath.collaborator), "jpg", Formatos.image)
+            const url = await UploadFile( image, path.join(__dirname,  RelativePath.blog_retiro), "jpg", Formatos.image)
         
             const tTitleLang = new TitleLang({ es: title_es, en: title_en, cat: title_cat })
             await tTitleLang.save()
