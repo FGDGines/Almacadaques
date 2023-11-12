@@ -6,3 +6,12 @@
   width: 100vw;
   height: 100vh;
 }
+
+.containerBlogBienestar{
+  width: 90vw;
+}
+.editordeLibro{
+  width: 80vw;
+  margin-top: 2vw;
+  padding-left: 3vw;
+}
