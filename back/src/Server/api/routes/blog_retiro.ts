@@ -10,7 +10,7 @@ import { AddFile } from "../controllers/blog_retiro/AddFile";
 
 const app = Router()
 
-app.post('/create', [
+app.post('/create', [security_post,
     check('title_es','El titulo en español es obligatorio').not().isEmpty(), 
     check('title_en','El titulo en ingles es obligatorio').not().isEmpty(), 
     check('title_cat','El titulo en catalan es obligatorio').not().isEmpty(), 

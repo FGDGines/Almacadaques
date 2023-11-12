@@ -17,8 +17,7 @@ export const Update = async (req: Request, res: Response) => {
             attributes: ["id", "indice", "day", "month", "year", "image", "author"],
             include: [
                 {
-                    model: TitleLang,
-                    attributes:['id']
+                    model: TitleLang
                 },
                 {
                     model: DescriptionLang,
@@ -108,7 +107,7 @@ export const Update = async (req: Request, res: Response) => {
             updates.push({path: 'author', past , now: author})
         }
 
-        return res.status(200).json({status: 200, msg: "Updated" , tBlogRetiro})
+        return res.status(200).json({status: 200, msg: "Updated" , bag: {updates}})
 
     } catch (err) {
         return res.status(200).json({ status: 500, err, msg: "No podemos editar colaborador en este momento" })

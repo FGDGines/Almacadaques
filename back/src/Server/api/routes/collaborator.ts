@@ -9,7 +9,7 @@ import { security_post } from '../../middlewares/Security'
 
 const app = Router()
  
-app.post('/register' , [
+app.post('/register' , [security_post,
     check('nombre', 'El nombre es obligatorio').not().isEmpty(), 
     check('cargo', 'El cargo es obligatorio').not().isEmpty(), 
     check('descripcion', 'La descripcion es obligatoria').not().isEmpty(), 

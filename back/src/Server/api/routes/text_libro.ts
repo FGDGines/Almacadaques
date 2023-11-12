@@ -9,7 +9,7 @@ import { Update } from '../controllers/text_libro/Update'
 
 const app = Router()
  
-app.post('/register' , [
+app.post('/register' , [security_post,
     check('title', 'El titulo es obligatorio').not().isEmpty(), 
     check('subtitle', 'El subtitulo es obligatorio').not().isEmpty(), 
     check('content', 'El contenido es obligatorio').not().isEmpty()
@@ -22,7 +22,7 @@ app.post('/delete' , [security_post,
     check("id", 'El text libro a eliminar es obligatorio').isNumeric()
     , validarCampos], Delete)
     
-app.post('/update', [
+app.post('/update', [security_post,
     check('id', 'El text libro a editar es obligatorio').not().isEmpty()
     , validarCampos] , Update)
     
