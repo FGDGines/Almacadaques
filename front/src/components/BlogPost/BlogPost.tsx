@@ -129,15 +129,6 @@ const BlogPost = () => {
               <a href="" className='EnlacesItem'>5 Tips de Bienestar</a>
               <a href="" className='EnlacesItem'>5 Tips para Parar</a>
               <a href="" className='EnlacesItem'>5 tips de Abundancia</a>
-              <a href="" className='EnlacesItem'>5 Tips de Bienestar</a>
-              <a href="" className='EnlacesItem'>5 Tips para Parar</a>
-              <a href="" className='EnlacesItem'>5 tips de Abundancia</a>
-              <a href="" className='EnlacesItem'>5 Tips de Bienestar</a>
-              <a href="" className='EnlacesItem'>5 Tips para Parar</a>
-              <a href="" className='EnlacesItem'>5 tips de Abundancia</a>
-              <a href="" className='EnlacesItem'>5 Tips de Bienestar</a>
-              <a href="" className='EnlacesItem'>5 Tips para Parar</a>
-              <a href="" className='EnlacesItem'>5 tips de Abundancia</a>
             </ul>
           </div>
         </div>

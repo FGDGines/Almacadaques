@@ -1,0 +1,87 @@
+.podcast {
+  width: 20rem;
+  border-radius: 1.25rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  word-wrap: break-word;
+  padding: 1vw;
+}
+.IconoEditarPodcast {
+  width: 18vw;
+  display: flex;
+  justify-content: right;
+  gap: 0.7vw;
+  align-items: center;
+  width: 18vw;
+  display: flex;
+  justify-content: right;
+  gap: 0.7vw;
+  align-items: center;
+}
+.IconEditarPodcast {
+  cursor: pointer;
+  width: 1.3rem;
+  height: 1.3rem;
+}
+.imgUsuarioPodcast {
+  width: 8vw;
+  height: 8vw;
+}
+.TituloPodcastAdmin {
+  color: var(--neutral-gray, #38272d);
+  font-family: Montserrat;
+  font-size: 1.2rem;
+  text-align: center;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 1.5vw 0 0 0;
+  padding-bottom: .5vw;
+}
+.AutorPodcastAdmin {
+  color: #777;
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  width: 19vw;
+  margin: 0;
+  padding-bottom: .2vw;
+}
+.TitleAutor{
+    color: #777;
+font-family: Montserrat;
+font-size: 1.2rem;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+.EnlaceYoutubePodcast{
+    text-decoration: none;
+    width: 19vw;
+  line-height: normal;
+}
+.TitleYoutubePodcast{
+    width: 19vw;
+    color: #777;
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0.9vw 0 0 0;
+}
+.enlaceAdminpodc{
+    word-wrap: break-word;
+    width: 19vw;
+    cursor: pointer;
+    color: #979797;
+    font-family: Montserrat;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}

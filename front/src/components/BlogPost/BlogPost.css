@@ -68,7 +68,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 20.5vw;
+  width: 23vw;
   height: 25vw;
 }
 .titlePortal h3 {
@@ -148,7 +148,7 @@
 }
 
 .imgLibro {
-  width: 17vw;
+  width: 20vw;
 }
 .imgLibro img {
   width: 100%;
