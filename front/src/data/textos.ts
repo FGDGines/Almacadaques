@@ -92,13 +92,6 @@ export const textos: TextosType<
     "textcoachinginterna7" |
     "textcoachinginterna8" |
     "textcoachinginternaTestimonio" |
-<<<<<<< HEAD
-    "textcoachinginterPideinfo" | 
-    //Agenda Experiencias de bienestar
-    //Agenda experiencias a medida
-    //colaborador@s
-    "textocolaborador"
-=======
     "textcoachinginternatitle9" |
     "textcoachinginterna9" |
     "textcoachinginterna10" |
@@ -112,7 +105,6 @@ export const textos: TextosType<
     "textoeducadora" |
     "textcolamiembrequi" |
     "textcolaborcontact"
->>>>>>> 6d6416dc2b888df8d3d33a0c30994eedc4286369
     //blo( Tips de bienestar)
     //podcast
     //blog retiros
@@ -214,13 +206,9 @@ export const textos: TextosType<
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
         //colaborador
-<<<<<<< HEAD
-        textocolaborador: "Colaborador@s de Almacadaques",
-=======
         textoeducadora: "Educadora de Masaje Infantil",
         textcolamiembrequi: "Miembros del Equipo",
         textcolaborcontact: "Contactame",
->>>>>>> 6d6416dc2b888df8d3d33a0c30994eedc4286369
         //blo( Tips de bienestar)
         //podcast
         //blog retiros
@@ -321,13 +309,9 @@ export const textos: TextosType<
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
         //colaborador
-<<<<<<< HEAD
-        textocolaborador: "Collaborat@rs",
-=======
         textoeducadora: "Infant Massage Educator",
         textcolamiembrequi: "Team members",
         textcolaborcontact: "Contact me",
->>>>>>> 6d6416dc2b888df8d3d33a0c30994eedc4286369
         //blo( Tips de bienestar)
         //podcast
         //blog retiros
@@ -427,13 +411,9 @@ export const textos: TextosType<
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
         //colaborador
-<<<<<<< HEAD
-        textocolaborador: "Col·laborad@rs",
-=======
         textoeducadora: "Educadora de Massatge Infantil",
         textcolamiembrequi: "Membres de l'equip",
         textcolaborcontact: "Contacta'm",
->>>>>>> 6d6416dc2b888df8d3d33a0c30994eedc4286369
         //blo( Tips de bienestar)
         //podcast
         //blog retiros
