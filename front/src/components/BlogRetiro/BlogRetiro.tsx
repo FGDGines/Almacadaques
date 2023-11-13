@@ -63,7 +63,7 @@ function BlogRetiro() {
               </div>
 
               <div className="infoRetiro">
-                <div className="titleRetiro">
+                <div className="titleRetiroUser">
                   <h4 onClick={() => handleTitleClick(retiro)}>{retiro.title}</h4>
                 </div>
                 <div className="time_aut">

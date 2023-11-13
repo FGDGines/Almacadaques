@@ -74,37 +74,36 @@
   color: black;
   font-size: 1.2vw;
 }
-.infoSobremi_2 {
+.infoSobremi_2User {
   width: 94%;
   background-color: #cf1348;
   padding: 3vw;
   color: white;
   font-size: 3vw;
-  height: 45vh;
 }
-.infoSobremi_2 p {
+.infoSobremi_2User p {
   margin-top: 0;
 }
 @media (min-width: 464px) {
   .infoSobremi_2 {
     width: 45vw;
     font-size: 2.1vw;
-    height: 35vh;
+    height: 30vh;
   }
 }
 
 @media (min-width: 764px) {
-  .infoSobremi_2 {
+  .infoSobremi_2User {
     width: 45vw;
     font-size: 1.4vw;
-    height: 24vh;
+    height: 24vw;
   }
 }
 @media (min-width: 1024px) {
-  .infoSobremi_2 {
+  .infoSobremi_2User {
     width: 45vw;
     font-size: 1.3vw;
-    height: 30.5vh;
+    height: 19vw;
   }
 }
 

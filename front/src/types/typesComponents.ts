@@ -7,7 +7,7 @@ type tpCarouelItem = {
     src: string;
     id: number,
     autor: string,
-    link_autor: string 
+    link_autor: string
 };
 
 type tpFormAgenda = {
@@ -46,7 +46,7 @@ type tpBlogInfo = {
     abstract?: string;
     btnInfo?: string;
     blogContent?: React.JSX.Element;
-    hselect?: ()=>void
+    hselect?: () => void
 };
 
 
@@ -98,14 +98,14 @@ type tpCalendarEvent = {
     start: string | Date
     end: string | Date
     description?: string
-    colaborator_name?:string
-    colaborator_link?:string
-    src?:string 
+    colaborator_name?: string
+    colaborator_link?: string
+    src?: string
 }
 
 
-type tpRetiroAnterior =  {
-    hselect: (arg: tpCalendarDates )=>void
+type tpRetiroAnterior = {
+    hselect: (arg: tpCalendarDates) => void
 } & tpCalendarEvent
 
 
@@ -128,22 +128,22 @@ type tpDtmSelect = {
 
 type tpDialogMUI1 = {
     open: boolean
-    handleClickOpen:  () => void
+    handleClickOpen: () => void
     handlerClose: () => void
     evento: tpCalendarDates | ReactNode
 }
 type tpDtmResponse = {
     msg: string
     status: number
-    bag?:[] | unknown
+    bag?: [] | unknown
 }
 
-type tpObjectStringToStrig={
-    [key: string]:string
+type tpObjectStringToStrig = {
+    [key: string]: string
 }
 
 type tpFormDefault = {
-    hSubmit:(bag: FormData )=>void 
+    hSubmit: (bag: FormData) => void
 }
 type AudioPlayerProps = {
     fecha?: string;
@@ -163,12 +163,19 @@ type AudioPlayerProps = {
 =======
 >>>>>>> 6d6416dc2b888df8d3d33a0c30994eedc4286369
     enPodcast?: boolean;
-    categoria?: string; 
+    categoria?: string;
 };
 type iconsProps = {
-    src?:string
+    src?: string
 }
 >>>>>>> 2d90af9bb00b27b2fdbb89b7719bcf1d02336b1d
+
+interface Red {
+    archivo: string;
+    url: string;
+    cuenta: string;
+}
+type RedesProps = Red[];
 
 export type {
     tpTestimonyBar,
@@ -194,7 +201,8 @@ export type {
     tpRetiroAnterior,
     tpDtmResponse,
     tpFormDefault,
-    tpObjectStringToStrig, 
+    tpObjectStringToStrig,
     AudioPlayerProps,
-    iconsProps
+    iconsProps,
+    RedesProps
 };

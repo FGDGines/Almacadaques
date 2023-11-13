@@ -1,20 +1,80 @@
 .redesBienestar {
-    border-radius: 1.875rem;
-    background: #fefefe;
-    box-shadow: 0px 8px 24px 0px #fcf1f4;
-  }
-  
-  .barraRedes {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 95%;
-    margin: 1vw auto;
-  }
-  .barraRedes h2 {
-    font-size: 1.5vw;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
-  }
-  
+  border-radius: 1.875rem;
+  background: #fefefe;
+  box-shadow: 0px 8px 24px 0px #fcf1f4;
+}
+
+.barraRedes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  margin: 1vw auto;
+}
+.barraRedes h2 {
+  font-size: 1.5vw;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.itemsRedes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1.93781rem;
+  background: #fcf1f4;
+  padding: 0.6vw 1.19vw;
+  height: 3.5vw;
+  margin-bottom: 1vw;
+}
+.containerBiernestarRedes {
+
+  width: 95%;
+  height: 15vw;
+  margin: 0 auto;  
+  overflow-y: scroll;
+}
+
+.iconoRedes {
+  width: 3vw;
+  height: 3vw;
+  margin-right: 1vw;
+}
+.fraseRedes {
+  color: #000;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  align-items: center;
+}
+.iconosAcciones {
+  display: flex;
+}
+.accionEditar {
+  cursor: pointer;
+  display: flex;
+  height: 2.0625rem;
+  padding: 0.2rem 0.2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+}
+.accionEliminar {
+  cursor: pointer;
+  display: flex;
+  height: 2.0625rem;
+  padding: 0.2rem 0.2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.1rem;
+}
+.TextAcciones {
+  color: #cf1348;
+
+  font-size: 1.057rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}

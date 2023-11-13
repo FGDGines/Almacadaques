@@ -1,0 +1,38 @@
+.BlogPodcast {
+  top: 0;
+  display: flex;
+  position: absolute;
+  background-color: #fcf1f4;
+  width: 100vw;
+  height: 100vh;
+}
+
+.BlogPodcastAdmin{
+  width: 90vw;
+}
+.conatinerInfopodcast{
+  width: 80vw;
+}
+
+.conatinerInfopodcast{
+  width: 89%;
+  padding-left: 4vw;
+  gap: 2.25vw;
+  display: flex;
+  padding-top: 5vw;
+  max-width: 89%;
+  overflow-x: auto;
+}
+
+.conatinerInfopodcast::-webkit-scrollbar {
+  width: 0px; /* Ancho del scrollbar */
+}
+
+.conatinerInfopodcast::-webkit-scrollbar-thumb {
+  background-color: #88888800; /* Color del pulgar */
+  opacity: 0.1;
+}
+
+.conatinerInfopodcast::-webkit-scrollbar-track {
+  background-color: #f1f1f100; /* Color de la pista del scrollbar */
+}

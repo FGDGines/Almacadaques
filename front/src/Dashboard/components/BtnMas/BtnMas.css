@@ -1,0 +1,14 @@
+.BtnMas {
+  display: flex;
+  width: 5vw;
+  height: 5vw;
+  justify-content: center;
+  align-items: center;
+  gap: 1.58088rem;
+  flex-shrink: 0;
+  border-radius: 7.90444rem;
+  background: var(--primario-principal, #cf1348);
+}
+.ImgColaboradoresAdmin {
+  width: 2.5vw;
+}

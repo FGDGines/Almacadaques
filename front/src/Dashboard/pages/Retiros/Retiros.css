@@ -1,0 +1,34 @@
+.retirosAdmin{
+    top: 0;
+  display: flex;
+  position: absolute;
+  background-color: #fcf1f4;
+  width: 100vw;
+  height: 100vh;
+}
+.conatinerRetiro{
+  width: 90%;
+}
+.infocontainerRetiro{
+  margin-top: 2vw;
+  width: 90%;
+  padding-left: 3vw;
+  gap: 2vw;
+  display: flex;
+  max-width: 90%;
+  overflow-x: auto;
+
+}
+
+.infocontainerRetiro::-webkit-scrollbar {
+  width: 0px; /* Ancho del scrollbar */
+}
+
+.infocontainerRetiro::-webkit-scrollbar-thumb {
+  background-color: #88888800; /* Color del pulgar */
+  opacity: 0.1;
+}
+
+.infocontainerRetiro::-webkit-scrollbar-track {
+  background-color: #f1f1f100; /* Color de la pista del scrollbar */
+}

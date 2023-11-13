@@ -6,13 +6,20 @@ border-radius: 1.93781rem;
 background: #FCF1F4;
 padding: .6vw 1.19vw;
 }
-
+.testimonioItem{
+    width: 73vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .imgUsertestimonio{
     width: 4vw;
     height: 4vw;
+    border-radius: 2vw;
 }
 .FraseTestimonio{
     color: #000;
+    width: 47vw;
 
 font-family: Montserrat;
 font-size: 1rem;

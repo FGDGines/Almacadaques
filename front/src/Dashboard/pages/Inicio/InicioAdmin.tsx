@@ -8,20 +8,20 @@ import { RedesBienestar } from '../../components/redesBienestar/redesBienestar'
 function InicioAdmin() {
   return (
     <div className="inicioAdmin">
-      <NarbarAdmin />
+      <NarbarAdmin />      
       <div className="contenidoPrincipal">
         <BarSession tituloVista='Inicio' segundoTitulo='Dashboard' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
-        <ItemCarrusel />
+        <ItemCarrusel direccion={29} />
 
         <div className="contenidoBienestar">
-                  
-            <EspaciosBienestar></EspaciosBienestar>
-              <RedesBienestar></RedesBienestar>
+
+          <EspaciosBienestar />
+          <RedesBienestar />
 
 
         </div>
       </div>
-    </div>
+      </div>
 
 
   )
