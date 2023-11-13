@@ -1,7 +1,7 @@
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import { BarSession } from '../../barSession/barSession';
 import '../FormularioEspaciosBienestar/FormularioEspaciosBienestar.css';
-import React, { useState, ChangeEvent, FormEvent } from 'react';
+import { useState, ChangeEvent, FormEvent } from 'react';
 
 
 interface FormData {

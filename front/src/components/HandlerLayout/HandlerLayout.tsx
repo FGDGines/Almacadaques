@@ -146,11 +146,7 @@ const HandlerLayout = () => {
     case 29:
       screen = <FormularioCarrousel />;
       break;
-
-
-
-
-
+      
     default:
       break;
   }
