@@ -23,6 +23,13 @@ import { ColaboradoresAdmin } from '../../Dashboard/pages/Colaboradores/Colabora
 import { InicioAdmin } from '../../Dashboard/pages/Inicio/InicioAdmin';
 import { RetirosAdmin } from '../../Dashboard/pages/Retiros/RetirosAdmin';
 import { SobreMIAdmin } from '../../Dashboard/pages/SobreMI/SobreMIAdmin';
+import { NuevosEventos } from '../../Dashboard/components/NuevosEventos/NuevosEventos';
+import { FormularioRedes } from '../../Dashboard/components/Formularios/FormularioRedes/FormularioRedes';
+import { FormularioTestimonios } from '../../Dashboard/components/Formularios/FormularioTestimonios/FormularioTestimonios';
+import { BlogBienestar } from '../../Dashboard/components/BlogBienestar/BlogBienestar';
+import { BlogPodcast } from '../../Dashboard/components/BlogPodcast/BlogPodcast';
+import { FormularioEspaciosBienestar } from '../../Dashboard/components/Formularios/FormularioEspaciosBienestar/FormularioEspaciosBienestar';
+import { FormularioCarrousel } from '../../Dashboard/components/Formularios/FormularioCarrousel/FormularioCarrousel';
 
 const HandlerLayout = () => {
   const { layoutID, setLayoutID } = useContext(GlobalContext);
@@ -114,6 +121,34 @@ const HandlerLayout = () => {
     case 22:
       screen = <RetirosAdmin />;
       break;
+    case 23:
+      screen = <NuevosEventos />;
+      break;
+    case 25:
+      screen = <BlogBienestar />;
+      break;
+    case 26:
+      screen = <BlogPodcast />;
+      break;
+    //Formularios
+    case 24:
+      screen = <FormularioRedes />;
+      break;
+
+    case 27:
+      screen = <FormularioEspaciosBienestar />;
+      break;
+
+    case 28:
+      screen = <FormularioTestimonios />;
+      break;
+
+    case 29:
+      screen = <FormularioCarrousel />;
+      break;
+
+
+
 
 
     default:

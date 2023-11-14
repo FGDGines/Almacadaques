@@ -4,9 +4,9 @@
     font-family: sans-serif;
 }
 .CoachingInternacional{
-    background-color: white;
 }
 .containerInnformacion1{
+    background-color: white;
     display: flex;
     padding: 3vw 7vw;
 }
@@ -52,6 +52,7 @@
     width: 90vw;
     display: flex;
     justify-content: center;
+    background-color: white;
 }
 .imgCoachingInternacional{
     width: 86vw;
@@ -65,6 +66,12 @@
 }
 .infotestimonios{
     display: flex;
+}
+.containerInnformacion2{
+    background-color: white;
+}
+.imgCoachingInternacional{
+    height: 10vw;
 }
 .containerInnformacion2  .info{
     color: #cf1348;

@@ -6,7 +6,21 @@
     position: absolute;
     top: 0;
 }
+.contIncioAdmin{
+    position: relative;
+}
 
 .contenidoPrincipal{
     width: 93vw;
+    
 }
+
+.contenidoBienestar {
+    width: 96%;
+    margin: 2vw auto;
+    display: grid;
+    grid-template-columns: 53% 45%;
+    gap: 2%; 
+    height: 100%;
+
+  }

@@ -125,7 +125,7 @@
   word-spacing: 7px;
 }
 
-.input:focus,
+/* .input:focus,
 input:valid {
   outline: none;
   border: 2px solid #cf1348;
@@ -138,7 +138,7 @@ input:valid ~ label {
   color: #cf1348;
   font-size: 1rem;
   word-spacing: 0px;
-}
+} */
 
 .buttonFooter {
   border: none;

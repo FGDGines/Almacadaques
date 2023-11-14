@@ -1,6 +1,5 @@
 .Podcast {
   background-color: white;
-  
 }
 
 .ctTitulos {
@@ -56,7 +55,7 @@
   font-size: 1.5rem;
 }
 
-.ctResultadosBusqueda{
+.ctResultadosBusqueda {
   width: 98%;
   margin: 15px auto;
   background-color: #eeeeee;
@@ -65,12 +64,12 @@
   overflow-y: scroll;
   height: 300px;
 }
-.ctResultadosBusqueda .mensaje{
+.ctResultadosBusqueda .mensaje {
   color: #787474;
   font-size: 1.5rem;
 }
 
-.ctResultadosBusqueda .containerPod{
+.ctResultadosBusqueda .containerPod {
   width: 98%;
   margin: 0 auto;
   height: 150px;
@@ -218,12 +217,12 @@
 .listaPodcast {
   width: 90%;
   margin: 0 auto;
-  display: flex;
   height: 80%;
   overflow-x: scroll;
-
+  overflow-y: hidden;
+  white-space: nowrap;
 }
-.arrow-left{
+.arrow-left {
   background-color: #bebebef1;
   padding: 10px;
   z-index: 4;
@@ -236,7 +235,7 @@
   display: none;
 }
 
-.arrow-right{
+.arrow-right {
   text-align: center;
   display: flex;
   justify-content: center;
@@ -253,10 +252,9 @@
   cursor: pointer;
   font-size: 1.5rem;
   font-weight: 600;
-  box-shadow: -8px 10px 68px 0px rgba(0,0,0,0.75);
--webkit-box-shadow: -8px 10px 68px 0px rgba(0,0,0,0.75);
--moz-box-shadow: -8px 10px 68px 0px rgba(0,0,0,0.75);
-
+  box-shadow: -8px 10px 68px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -8px 10px 68px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -8px 10px 68px 0px rgba(0, 0, 0, 0.75);
 }
 @media (min-width: 764px) {
   .titulosPodcast h2 {
@@ -277,10 +275,23 @@
 }
 
 .containerPod {
+  display: inline-block;
   width: 100%;
-  height: 100%;
+  height: 90%;
   margin-right: 10px;
   cursor: pointer;
+  position: relative;
+}
+.cubrir{
+  position: absolute;
+  width: 100%;
+  background-color: #78747468;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  justify-content:center ;
+  align-items: center;
+  border-radius: 1rem;
 }
 @media (min-width: 1024px) {
   .containerPod {
@@ -316,4 +327,8 @@
     margin-top: 60px;
     height: 50vh;
   }
+}
+
+.podcastPrincipal {
+  height: 100%;
 }
