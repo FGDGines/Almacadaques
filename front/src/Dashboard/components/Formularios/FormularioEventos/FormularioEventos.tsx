@@ -1,20 +1,35 @@
+import './FormularioEventos.css'
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
-import '../FormularioCarrousel/FormularioCarrousel.css';
 import { BarSession } from '../../barSession/barSession';
 import { useState, ChangeEvent, FormEvent } from 'react';
 
 
 interface FormData {
-    Frase: string;
-    Firma: string;
+    Titulo: string;
+    Inicio: Date;
+    Final: Date;
+    Descripcion: string;
+    Nombre: string;
     Url: string;
     archivo: File | null;
 }
 
-export const FormularioCarrousel = () => {
+
+function FormularioEventos() {
+
+    function formatDate(date: Date): string {
+        const year = date.getFullYear();
+        const month = (date.getMonth() + 1).toString().padStart(2, '0');
+        const day = date.getDate().toString().padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    }
+
     const [formData, setFormData] = useState<FormData>({
-        Frase: '',
-        Firma: '',
+        Titulo: '',
+        Inicio: new Date(),
+        Final: new Date(),
+        Descripcion: '',
+        Nombre: '',
         Url: '',
         archivo: null,
     });
@@ -55,8 +70,11 @@ export const FormularioCarrousel = () => {
                 console.log('Datos del formulario enviados exitosamente');
                 // Limpiar el formulario después de enviar los datos
                 setFormData({
-                    Frase: '',
-                    Firma: '',
+                    Titulo: '',
+                    Inicio: new Date(),
+                    Final: new Date(),
+                    Descripcion: '',
+                    Nombre: '',
                     Url: '',
                     archivo: null,
                 });
@@ -69,11 +87,11 @@ export const FormularioCarrousel = () => {
     };
 
     return (
-        <div className='formularioCarrousel'>
+        <div className='FormularioEventos'>
             <NarbarAdmin></NarbarAdmin>
 
             <div className="contenidoFormCarrousel">
-                <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Carrousel' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
+                <BarSession direccion={17} tituloVista='Evento' segundoTitulo='Añadir nuevo eventos' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
 
 
                 <form className='formCarrousel' onSubmit={handleSubmit}>
@@ -89,30 +107,61 @@ export const FormularioCarrousel = () => {
                         />
                     </div>
                     <div className="restInputs">
-                        <label className='labelsCarrousel' form='Frase'>Frase</label>
+                        <label className='labelsCarrousel' form='Titulo'>Titulo</label>
                         <input className='inputsFormCarrousel'
                             type="text"
-                            name="Frase"
-                            value={formData.Frase}
+                            name="Titulo"
+                            value={formData.Titulo}
                             onChange={handleInputChange}
                         />
 
-                        <label className='labelsCarrousel' form='Firma'>Firma autor</label>
+                        <div className="Dataevent">
+                            <div >
+                                <label className='labelsCarrousel' form='Inicio'>Inicio</label>
+                                <input className='inputsFormCarrousel InicioEvento'
+                                    type="date"
+                                    name="Inicio"
+                                    value={formatDate(formData.Inicio)}
+                                    onChange={handleInputChange}
+                                />
+                            </div>
+                            <div >
+                                <label className='labelsCarrousel ' form='Final'>Final</label>
+                                <input className='inputsFormCarrousel InicioEvento'
+                                    type="date"
+                                    name="Final"
+                                    value={formatDate(formData.Final)}
+                                    onChange={handleInputChange}
+                                />
+                            </div>
+
+
+                        </div>
+
+
+                        <label className='labelsCarrousel' form='Descripcion'>Descripcion</label>
                         <input className='inputsFormCarrousel'
                             type="text"
-                            name="Firma"
-                            value={formData.Firma}
+                            name="Descripcion"
+                            value={formData.Descripcion}
                             onChange={handleInputChange}
                         />
 
-                        <label className='labelsCarrousel' form='Url'>Link autor</label>
+                        <label className='labelsCarrousel' form='Nombre'>Nombre</label>
+                        <input className='inputsFormCarrousel'
+                            type="text"
+                            name="Nombre"
+                            value={formData.Nombre}
+                            onChange={handleInputChange}
+                        />
+
+                        <label className='labelsCarrousel' form='Url'>Enlace</label>
                         <input className='inputsFormCarrousel'
                             type="url"
                             name="Url"
                             value={formData.Url}
                             onChange={handleInputChange}
                         />
-                        
 
                     </div>
                 </form>
@@ -124,5 +173,10 @@ export const FormularioCarrousel = () => {
                 </div>
             </div>
         </div>
-    );
-};
+
+
+    )
+
+}
+
+export { FormularioEventos }

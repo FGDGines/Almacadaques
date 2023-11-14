@@ -69,14 +69,16 @@
 }
 .inputsFormRedes {
   display: flex;
-  height: 4.29069rem;
+  height: 2.5rem;
+  font-size: 1.5vw;
   align-items: center;
   flex-shrink: 0;
   align-self: stretch;
   border-radius: 0.59181rem;
   border: 0.592px solid #bdbdbd;
   background: rgba(242, 242, 242, 0.4);
-  margin-bottom: 15px
+  margin-bottom: 3vw;
+  
 }
 .restInputs {
   display: flex;
@@ -93,4 +95,11 @@
   line-height: 1.33163rem !important;
   letter-spacing: 0.0185rem !important;
   margin-bottom: 15px;
+}
+.GuardarRedesSocialesAdmin{
+  padding: 1.1vw 2vw;
+  background-color: #CF1348;
+  color: white;
+  border-radius: 2.5735rem;
+  text-decoration: none;
 }

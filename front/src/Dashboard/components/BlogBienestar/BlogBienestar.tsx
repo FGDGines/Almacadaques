@@ -2,8 +2,13 @@ import { NarbarAdmin } from "../NarbarAdmin/NarbarAdmin";
 import { BarSession } from "../barSession/barSession";
 import { BienestarAdmin } from "../BienestarAdmin/BienestarAdmin";
 import "./BlogBienestar.css";
+import { BtnMas } from "../BtnMas/BtnMas";
+import { GlobalContext } from '../../../contexts/GlobalContext'; 
+import { useContext } from 'react';
+
 
 const BlogBienestar = () => {
+  const { setLayoutID } = useContext(GlobalContext);
   return (
     <div className="BlogBienestar">
       <NarbarAdmin />
@@ -15,6 +20,9 @@ const BlogBienestar = () => {
           <BienestarAdmin />
           <BienestarAdmin />
         </div>
+        <div className="BtonAgregarEventosmain" onClick={() => setLayoutID(32)}>
+            <BtnMas/>
+          </div>
       </div>
     </div>
 

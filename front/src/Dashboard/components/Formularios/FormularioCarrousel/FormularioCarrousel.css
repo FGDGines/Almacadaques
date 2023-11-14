@@ -71,7 +71,7 @@
 }
 .inputsFormCarrousel {
   display: flex;
-  height: 3rem;
+  height: 2.5rem;
   width: 30vw;
   align-items: center;
   flex-shrink: 0;
@@ -80,6 +80,7 @@
   border: 0.592px solid #bdbdbd;
   background: rgba(242, 242, 242, 0.4);
   margin-bottom: 15px;
+  font-size: 1.2vw;
 }
 .restInputs {
   display: flex;

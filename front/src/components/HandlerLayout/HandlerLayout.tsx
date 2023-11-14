@@ -30,6 +30,9 @@ import { BlogBienestar } from '../../Dashboard/components/BlogBienestar/BlogBien
 import { BlogPodcast } from '../../Dashboard/components/BlogPodcast/BlogPodcast';
 import { FormularioEspaciosBienestar } from '../../Dashboard/components/Formularios/FormularioEspaciosBienestar/FormularioEspaciosBienestar';
 import { FormularioCarrousel } from '../../Dashboard/components/Formularios/FormularioCarrousel/FormularioCarrousel';
+import { FormularioEventos } from '../../Dashboard/components/Formularios/FormularioEventos/FormularioEventos';
+import { FormularioColaboradores } from '../../Dashboard/components/Formularios/FormularioColaboradores/FormularioColaboradores';
+import { FormularioBlogBienestar } from '../../Dashboard/components/Formularios/FormularioBlogBienestar/FormularioBlogBienestar';
 
 const HandlerLayout = () => {
   const { layoutID, setLayoutID } = useContext(GlobalContext);
@@ -145,6 +148,16 @@ const HandlerLayout = () => {
 
     case 29:
       screen = <FormularioCarrousel />;
+      break;
+
+    case 30:
+      screen = <FormularioEventos />;
+      break;
+    case 31:
+      screen = <FormularioColaboradores />;
+      break;
+    case 32:
+      screen = <FormularioBlogBienestar />;
       break;
       
     default:
