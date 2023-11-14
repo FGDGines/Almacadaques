@@ -2,7 +2,9 @@
 
 function FormularioPospcast() {
   return (
-    <div>FormularioPospcast</div>
+    <div className="FormularioPospcast">
+      
+    </div>
   )
 }
 

@@ -74,6 +74,7 @@
   justify-content: center;
   width: 96%;
   height: 96%;
+  padding: 1vw 0;
 }
 .titlePortal h3 {
   font-size: 1.1vw;
@@ -134,8 +135,11 @@
   background-color: #cf134867 !important;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
+}
+.ctOverlayBook .FinalLibro{
+  padding-top: 22vw;
+  font-size: 1.1vw;
 }
 
 .ctOverlayBook h1 {
@@ -143,6 +147,17 @@
   font-size: 3vw;
   font-family: "PT-Script-Monsoon";
   color: white;
+  margin: 0;
+  padding-top: 2vw;
+  padding-bottom: 1vw;
+}
+.ctOverlayBook h3 {
+  margin: 0;
+  text-align: center;
+  font-size: 2vw;
+  font-family: "PT-Script-Monsoon";
+  color: white;
+  padding-bottom: 12vw;
 }
 .ctOverlayBook p {
   font-size: 1vw;

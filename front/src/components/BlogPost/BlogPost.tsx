@@ -62,7 +62,9 @@ const BlogPost = () => {
                 <img src="../../../src/assets/background/fondo-libro.jpg" alt="" />
                 <div className="ctOverlayBook">
                   <h1>Almacadaqués</h1>
+                  <h3>5 Tips Parar</h3>
                   <p>Elisabet Coll-Vinent</p>
+                  
                 </div>
               </div>
             </div>
@@ -90,7 +92,7 @@ const BlogPost = () => {
                 <div className="titlePortal">
                   <h4>TIPS BIENESTAR. ARTICULO 1.</h4>
                   <h3>PARAR </h3>
-                  <p>En las experiencias de bienestar que organizamos desde @almacadaques uno de los elementos más importantes que promovemos es PARAR.</p>
+                  <p>En las experiencias de bienestar que organizamos desde @almacadaques uno de los elementos. </p>
 
                 </div>
 
@@ -103,7 +105,7 @@ const BlogPost = () => {
 
             <div className="marco">
               <div className="titlePortal">
-
+<p> más importantes que promovemos es PARAR.</p>
                 <p>5 tips para parar y dedicarte tiempo para ti:</p>
                 <h3>1.Establece límites:  </h3>
                 <p>Parar y establecer límites te permite mantener un equilibrio entre tus responsabilidades y tu bienestar.
@@ -172,7 +174,7 @@ const BlogPost = () => {
               <div className="titlePortal2">
                 <img src="../../../src/assets/background/fondo-libro.jpg" alt="" />
                 <div className="ctOverlayBook">
-
+                  <h3 className='FinalLibro'>© Elisabet Coll-Vinent@almacadaques.com</h3>
                 </div>
               </div>
             </div>
