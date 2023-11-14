@@ -1,5 +1,6 @@
 import { portApi, urlApi } from "../data/env"
 import { tpDtmResponse } from "../types/typesComponents"
+import { formDataToObject } from "./Forms"
 import { mostrarAlerta } from "./MostrarAlerta"
 
 export const fetchDefault = (endpoint: string , init:{[key: string]: unknown} , resolve = (arg: tpDtmResponse )=>mostrarAlerta(arg) , reject = (arg: tpDtmResponse )=>mostrarAlerta(arg) )=>{
@@ -27,4 +28,10 @@ export const fetchDefault = (endpoint: string , init:{[key: string]: unknown} , 
         console.log(err)
         reject({msg: 'No disponible' , status: 500})
     })
+}
+
+export const subtmitOnFormDefault = (bag: FormData) => {
+    bag.append("fragment", "Experiencias de medida")
+    const res = fetchDefault('/mail/create', {body: JSON.stringify(formDataToObject(bag))})    
+    console.log('Datos enviados:', res);
 }

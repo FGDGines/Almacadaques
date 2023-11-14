@@ -6,6 +6,7 @@ import { textos } from '../../data/textos';
 import { useContext } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
 import FormDefault from '../FormDefault/FormDefault';
+import { subtmitOnFormDefault } from '../../helpers/Server';
 
 const CoachingBienestar = () => {
     const {  languageFlag } = useContext(GlobalContext);
@@ -46,7 +47,7 @@ const CoachingBienestar = () => {
                         {textos[languageFlag].textcoachingpide}
                     </p>
                 <div className='ctForm'>
-                    <FormDefault />
+                    <FormDefault hSubmit={subtmitOnFormDefault}/>
                     <img className='imgEquip'  src="../../../src/assets/background/contactanos.jpg" alt="Equipo de trabajo" />
                 </div>
             </div>
