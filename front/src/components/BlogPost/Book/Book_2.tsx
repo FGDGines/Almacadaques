@@ -60,6 +60,7 @@ const Book2 = () => {
                                 <img src="../../../src/assets/background/fondo-libro.jpg" alt="" />
                                 <div className="ctOverlayBook">
                                     <h1>Almacadaqués</h1>
+                                    <h3>5 tips Emociones</h3>
                                     <p>Elisabet Coll-Vinent</p>
                                 </div>
                             </div>
@@ -103,7 +104,7 @@ const Book2 = () => {
                                 <h3>2. Date permiso</h3>
                                 <p>Si suprimimos la emoción volverá a aparecer. Si puedes posponerla para 30 minutos más tarde, cuando regrese la intensidad será menor.</p>
                                 <h3>3. Escribe un diario de tus emociones</h3>
-                                <p>Mantener un “diario emocional” sobre lo que sientes en determinadas situaciones te ayudará a integrar tus emociones y reducir la recurrencia de pensamientos negativos.</p>
+                                <p>Mantener un “diario emocional” sobre lo que sientes en determinadas situaciones te ayudará </p>
 
                             </div>
                         </div>
@@ -113,6 +114,7 @@ const Book2 = () => {
 
                         <div className="marco">
                             <div className="titlePortal">
+                                <p>a integrar tus emociones y reducir la recurrencia de pensamientos negativos.</p>
                                 <h3>4. Tómate un respiro</h3>
                                 <p>Respira profundamente 3 o 4 veces y usa las afirmaciones positivas para que te sientas bien.</p>
                                 <h3>5. Encuentra el motivo de tus emociones</h3>
@@ -138,7 +140,7 @@ const Book2 = () => {
                             <div className="titlePortal2">
                                 <img src="../../../src/assets/background/fondo-libro.jpg" alt="" />
                                 <div className="ctOverlayBook">
-
+                                <h3 className='FinalLibro'>© Elisabet Coll-Vinent@almacadaques.com</h3>
                                 </div>
                             </div>
                         </div>

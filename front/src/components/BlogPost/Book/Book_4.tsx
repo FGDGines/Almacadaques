@@ -60,6 +60,7 @@ const Book4 = () => {
                                 <img src="../../../src/assets/background/fondo-libro.jpg" alt="" />
                                 <div className="ctOverlayBook">
                                     <h1>Almacadaqués</h1>
+                                    <h3>5 tips para fluir</h3>
                                     <p>Elisabet Coll-Vinent</p>
                                 </div>
                             </div>
@@ -85,7 +86,7 @@ const Book4 = () => {
                                 <div className="imgLibro">
                                     <img src="../../../../src/assets/ImgLibro/5.jpg" alt="" />
                                 </ div>
-                                <h3>Tip de Bienestar: Fluir con la vida</h3>
+                                
 
                             </div>
                         </div>
@@ -95,6 +96,7 @@ const Book4 = () => {
 
                         <div className="marco">
                             <div className="titlePortal">
+                                <h3>Tip de Bienestar: Fluir con la vida</h3>
                                 <h4>Aquello a lo que nos resistimos persiste y aquello con lo que fluimos nos permite avanzar y crecer. Cuando estoy cerca del mar fluyo mejor con la vida.
                                 </h4>
                                 <p>Aquí te comparto 5 consejos para fluir con la vida:</p>
@@ -103,7 +105,7 @@ const Book4 = () => {
                                 <br />
                                 <p>2. Vive el presente: Concéntrate en el aquí y ahora. Deja de preocuparte por el pasado o el futuro y disfruta plenamente cada momento.</p>
                                 <br />
-                                <p>3. Sigue tu intuición: Escucha tu voz interior y confía en tus instintos. Sigue tu intuición para tomar decisiones y guiar tus acciones.</p>
+                                
                             </div>
                         </div>
 
@@ -113,6 +115,8 @@ const Book4 = () => {
 
                         <div className="marco">
                             <div className="titlePortal">
+                            <p>3. Sigue tu intuición: Escucha tu voz interior y confía en tus instintos. Sigue tu intuición para tomar decisiones y guiar tus acciones.</p>
+                                <br />
                                 <p>4. Deja ir el control: Aprende a soltar el control y confiar en el proceso de la vida. No intentes controlar todo, permite que las cosas fluyan naturalmente.</p>
                                 <br />
                                 <p>5. Encuentra tu pasión: Descubre lo que te apasiona y haz más de eso. Cuando haces lo que amas, te sentirás más conectado y en armonía con la vida.</p>
@@ -134,7 +138,7 @@ const Book4 = () => {
                             <div className="titlePortal2">
                                 <img src="../../../src/assets/background/fondo-libro.jpg" alt="" />
                                 <div className="ctOverlayBook">
-
+                                <h3 className='FinalLibro'>© Elisabet Coll-Vinent@almacadaques.com</h3>
                                 </div>
                             </div>
                         </div>
