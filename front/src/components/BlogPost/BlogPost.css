@@ -1,8 +1,10 @@
 .BlogPost {
+  
   background-color: rgb(255, 255, 255);
 }
+
 .BookItem {
-  padding: 0vw 1vw;
+  padding: 2vw 1vw;
   display: flex;
   gap: 20vw;
   margin: 0;
@@ -11,6 +13,8 @@
   align-items: center;
 }
 .carduser {
+
+  
   overflow-y: auto;
   max-width: 32vw;
   width: 25vw;
@@ -68,8 +72,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 23vw;
-  height: 25vw;
+  width: 96%;
+  height: 96%;
 }
 .titlePortal h3 {
   font-size: 1.1vw;
@@ -148,7 +152,7 @@
 }
 
 .imgLibro {
-  width: 20vw;
+  width: 100%;
 }
 .imgLibro img {
   width: 100%;

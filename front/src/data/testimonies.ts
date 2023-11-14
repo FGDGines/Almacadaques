@@ -21,12 +21,12 @@ export const testimonies = [
     },
     {
       id: 3,
-      witness: "Sonia Pleguezuelo",
+      witness: "Toni García",
       image:
         "https://media.istockphoto.com/id/1344327532/photo/studio-portrait-of-attractive-19-year-old-woman-with-brown-hair.webp?b=1&s=170667a&w=0&k=20&c=qPtuG5hKcC8vva8y_HC9Xm5z31DeQG4LTI6RuSXJ6wE=",
       day: 1,
       month: 2,
       year: 2023,
-      testimony: "En mi proceso de coaching me sentí muy bien acompañada por Elisabet. Su gran escucha y el trabajo personal que me ayudó a hacer me invitaron a realizar profundas reflexiones sobre mí misma y mi forma de gestionar diferentes situaciones en mi vida. Me doy las gracias por decidir trabajar en mí, y le doy las gracias a Elisabet por saber cómo acompañarme tan sabia y respetuosamente",
+      testimony: "Me encontraba perdido y bloqueado. Las sesiones con Elisabet me han ayudado a clarificar mis ideas y pensamientos y redescubrir mis potenciales. Destaco su implicación, profesionalidad y amabilidad con la que te va formulando preguntas que me han ayudado a conocerme mejor, a saber qué me apasiona, qué quiero hacer en mi vida y pasar a la acción. En 3 meses soy otra persona, me siento más seguro, más inspirado y más empoderado.",
     }
 ]
