@@ -46,7 +46,7 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #7e7777;
   text-align: end;
-  font-size: .85rem;
+  font-size: .90rem;
 }
 
 .photo_2 {
@@ -64,7 +64,7 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #7e7777;
   text-align: end;
-  font-size: .85rem;
+  font-size: .90rem;
 }
 .infoSobremi_1 {
   width: 45vw;
@@ -113,7 +113,8 @@
 }
 
 .containerSobremi_1 .photo_1 img {
-  width: 100%;
+  width: 90%;
+  /* height: 90%; */
   border-radius: 0.4vw;
 }
 .containerSobremi_2 .photo_2 img {
