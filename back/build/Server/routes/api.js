@@ -5,8 +5,10 @@ const app = (0, express_1.Router)();
 app.use('/mail', require('../api/routes/mail'));
 app.use('/auth', require('../api/routes/auth'));
 app.use('/testimony', require('../api/routes/testimony'));
-<<<<<<< HEAD
-=======
+app.use('/collaborator', require('../api/routes/collaborator'));
 app.use('/carousel', require('../api/routes/carousel'));
->>>>>>> 1955cb35f018a4e1899049395c6cbad17a288276
+app.use('/espacio', require('../api/routes/espacio'));
+app.use('/blog_retiro', require('../api/routes/blog_retiro'));
+app.use('/podcast', require('../api/routes/podcast'));
+app.use('/text_libro', require('../api/routes/text_libro'));
 module.exports = app;

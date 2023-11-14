@@ -3,6 +3,7 @@ import React, { FC, useState } from 'react';
 
 import './FormAgenda.css'
 import { tpFormAgenda } from '../../types/typesComponents';
+import { fetchDefault } from '../../helpers/Server';
 
 const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
   
@@ -23,8 +24,17 @@ const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
+    const data = {body: JSON.stringify({
+      nombre: formData.nombre,
+      correo: formData.correo,
+      msg: `telefono: ${formData.telefono} \n actividad: ${formData.actividad}`,
+      fragment: "experiencias de bienestar"
+    })}
+    console.log(data)
+    const res = fetchDefault("/mail/create", data )
     
-    console.log('Datos enviados:', formData);
+    console.log('Datos enviados:', res, formData);
   };
 
 

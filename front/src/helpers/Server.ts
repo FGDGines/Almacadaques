@@ -3,6 +3,7 @@ import { tpDtmResponse } from "../types/typesComponents"
 import { mostrarAlerta } from "./MostrarAlerta"
 
 export const fetchDefault = (endpoint: string , init:{[key: string]: unknown} , resolve = (arg: tpDtmResponse )=>mostrarAlerta(arg) , reject = (arg: tpDtmResponse )=>mostrarAlerta(arg) )=>{
+    console.log(`${urlApi}:${portApi}/api${endpoint}`)
     fetch(`${urlApi}:${portApi}/api${endpoint}`, {
         'method':'POST', 
         'headers': {

@@ -5,5 +5,9 @@ exports.Formatos = {
     "image": ['jpg', 'jpeg', 'png', 'gif']
 };
 exports.RelativePath = {
-    "carousel": '../../../public/carousel'
+    "carousel": '../../../public/carousel',
+    "collaborator": '../../../public/collaborator',
+    "blog_retiro": '../../../public/blog_retiro',
+    "podcast": '../../../public/podcast',
+    "text_libro": '../../../public/text_libro',
 };
