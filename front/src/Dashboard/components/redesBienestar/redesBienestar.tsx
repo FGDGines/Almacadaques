@@ -1,9 +1,14 @@
-import React from 'react';
+
 import './redesBienestar.css';
 import { BtnMasAgregar } from '../BtnMasAgregar/BtnMasAgregar';
 import { redes } from '../../../data/redes'; // Asegúrate de ajustar la ruta según la ubicación real del archivo
+import { useContext } from 'react';
+import { GlobalContext } from '../../../contexts/GlobalContext';
 
 export const RedesBienestar = () => {
+  const { setLayoutID } = useContext(GlobalContext);
+
+
   return (
     <div className="redesBienestar">
       <div className="barraRedes">
@@ -21,7 +26,7 @@ export const RedesBienestar = () => {
               </a>
             </p>
             <div className="iconosAcciones">
-              <div className="accionEditar">
+              <div className="accionEditar" onClick={() => setLayoutID(24)}>
                 <img
                   src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
                   alt=""

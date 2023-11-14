@@ -39,7 +39,7 @@ const AboutMe = () => {
                     <p> Elisabet Coll-Vinent (Psicóloga – Mentora – Coach)</p>
                 </div>
                 <div className="infoSobremi_2User">
-                    <p>{textos[languageFlag].titleparrafo}</p>  
+                    <p >{textos[languageFlag].titleparrafo}</p>  
                     <ul>
                         <li>{textos[languageFlag].parrafosobremi5}</li>
                         <li>{textos[languageFlag].parrafosobremi6}</li>

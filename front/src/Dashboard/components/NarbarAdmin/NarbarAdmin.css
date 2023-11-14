@@ -5,6 +5,7 @@
   justify-content: space-evenly;
   align-items: center;
   width: 7vw;
+  height: 100vh;
   border-radius: 0 2.5vw 2.5vw 0;
 }
 

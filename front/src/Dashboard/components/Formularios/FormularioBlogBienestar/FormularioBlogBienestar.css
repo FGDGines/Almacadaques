@@ -1,0 +1,9 @@
+.editordeLibroFormulario{
+    width: 50vw;
+    height: 40vh;
+    padding-top: 2vw;
+    display: flex;
+    gap: 1.5vw;
+    overflow-x: auto;
+    max-width: 80vw;
+  }

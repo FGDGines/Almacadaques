@@ -28,7 +28,7 @@ const Testimony: FC<tpTestimony> = ({
         {/* <img src={image} alt={witness} /> */}
         <h4>{witness}</h4>
         <div className="date">
-          {day}.{month}.{year}
+          {day}/{month}/{year}
         </div>
       </div>
     </div>
