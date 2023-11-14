@@ -37,6 +37,8 @@ import { Book1 } from '../BlogPost/Book/Book_1';
 import { Book2 } from '../BlogPost/Book/Book_2';
 import { Book3 } from '../BlogPost/Book/Book_3';
 import { Book4 } from '../BlogPost/Book/Book_4';
+import { FormularioPospcast } from '../../Dashboard/components/Formularios/FormularioPospcast/FormularioPospcast'; 
+import { FormularioRetiros } from '../../Dashboard/components/Formularios/FormularioRetiros/FormularioRetiros';
 
 
 const HandlerLayout = () => {
@@ -176,7 +178,12 @@ const HandlerLayout = () => {
     case 36:
       screen = <Book4 />;
       break;
-
+      case 37:
+        screen = <FormularioPospcast />;
+        break;
+        case 38:
+          screen = <FormularioRetiros />;
+          break;
 
 
     default:

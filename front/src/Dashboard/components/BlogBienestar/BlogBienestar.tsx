@@ -20,7 +20,7 @@ const BlogBienestar = () => {
           <BienestarAdmin />
           <BienestarAdmin />
         </div>
-        <div className="BtonAgregarEventosmain" onClick={() => setLayoutID(32)}>
+        <div className="BtonAgregarEventosmain" onClick={() => setLayoutID(38)}>
             <BtnMas/>
           </div>
       </div>
