@@ -1,20 +1,16 @@
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import { BarSession } from '../../barSession/barSession';
 import '../FormularioEspaciosBienestar/FormularioEspaciosBienestar.css';
-import React, { useState, ChangeEvent, FormEvent } from 'react';
+import { useState, ChangeEvent, FormEvent } from 'react';
 
 
 interface FormData {
-    url: string;
-    cuenta: string;
-    archivo: File | null;
+    Frase: string;
 }
 
 export const FormularioEspaciosBienestar = () => {
     const [formData, setFormData] = useState<FormData>({
-        url: '',
-        cuenta: '',
-        archivo: null,
+        Frase: '',
     });
 
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -25,16 +21,7 @@ export const FormularioEspaciosBienestar = () => {
         });
     };
 
-    const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
-        const selectedFile = event.target.files?.[0] as File;
 
-        if (selectedFile) {
-            setFormData({
-                ...formData,
-                archivo: selectedFile,
-            });
-        }
-    };
 
     const handleSubmit = async (event: FormEvent) => {
         event.preventDefault();
@@ -53,9 +40,7 @@ export const FormularioEspaciosBienestar = () => {
                 console.log('Datos del formulario enviados exitosamente');
                 // Limpiar el formulario después de enviar los datos
                 setFormData({
-                    url: '',
-                    cuenta: '',
-                    archivo: null,
+                    Frase: '',
                 });
             } else {
                 console.error('Error al enviar los datos del formulario');
@@ -68,44 +53,32 @@ export const FormularioEspaciosBienestar = () => {
     return (
         <div className='formularioEspaciosBienestar'>
             <NarbarAdmin></NarbarAdmin>
-          
+
             <div className="contenidoFormEspaciosBienestar">
 
-            <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Espacios de Bienestar'></BarSession>
+                <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Espacios de Bienestar' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
+
 
 
                 <form className='formEspaciosBienestar' onSubmit={handleSubmit}>
-                    <div className="subirArchivos">
-                    <label htmlFor="File" className='labelArchivo'>
-                            <img src="../../../../src/assets/Dashboard-almacadaques/inicio/nube.svg" alt="" />
-                            <span className='arrastra'>Arrastra y suelta o <span>sube</span> </span>
-                            <span className='formatos'>Supported formates: JPEG, PNG, GIF, MP4, PDF, PSD, AI, Word, PPT</span>
-                        </label>
-                        <input id='File' className='cargarArchivo'
-                            type="file"
-                            onChange={handleFileChange}
-                        />
-                    </div>
+
+
                     <div className="restInputs">
-                        <label className='labelsEspaciosBienestar'>URL:</label>
+                        <label className='labelsEspaciosBienestar' form='Frase'>Frase</label>
                         <input className='inputsFormEspaciosBienestar'
                             type="text"
-                            name="url"
-                            value={formData.url}
+                            name="Frase"
+                            value={formData.Frase}
                             onChange={handleInputChange}
                         />
 
-                        <label className='labelsEspaciosBienestar'>Cuenta:</label>
-                        <input className='inputsFormEspaciosBienestar'
-                            type="text"
-                            name="cuenta"
-                            value={formData.cuenta}
-                            onChange={handleInputChange}
-                        />
-                        <button type="submit">Guardar EspaciosBienestar</button>
 
                     </div>
+                    
                 </form>
+                <div className="GuardarEspaciosBienestar">
+                        <a href="" className='btnGuardarEspaciosBienestarAdmin'>Guardar</a>
+                    </div>
             </div>
         </div>
     );

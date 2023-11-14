@@ -15,8 +15,7 @@ function Colaboradores() {
             <Navbar />
             <Franja text='Colaborad@res' />
             {/* <h2 className='TitleColab'>
-                {textos[languageFlag].textocolaborador} 
-
+            {textos[languageFlag].textcolamiembrequi}
                 </h2> */}
             <div className="colaboradores">
                     <Tarjetacolaboradores colaboradores={ListaColaboradores} />

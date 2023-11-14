@@ -112,7 +112,7 @@ const Podcast = () => {
                     </div>
                 </div>
 
-             {searchTerm.trim() !== '' && (
+            {searchTerm.trim() !== '' && (
                     <div className="ctResultadosBusqueda">
                         {displayedResults.length === 0 ? (
                             <p className='mensaje'>No hay resultados para '{searchTerm}'</p>
@@ -121,12 +121,12 @@ const Podcast = () => {
                                 <div className='containerPod' key={index} onClick={() => handlePodcastClick(podcast)}>
                                     <div className="cubrir"></div>
                                     {podcast.titulo && (
-                                           <VideosPodcast
-                                           url={podcast.url}
-                                           titulo={podcast.titulo}
-                                           autor={podcast.autor}
-                                           enPodcast={podcast.enPodcast}
-                                       />
+                                        <VideosPodcast
+                                        url={podcast.url}
+                                        titulo={podcast.titulo}
+                                        autor={podcast.autor}
+                                        enPodcast={podcast.enPodcast}
+                                    />
                                     )}
                                 </div>
                             ))

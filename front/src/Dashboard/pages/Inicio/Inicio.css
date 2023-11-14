@@ -1,7 +1,6 @@
 .inicioAdmin{
     background-color: #fcf1f4;
     width: 100vw;
-    height: 100vh;
     display: flex;
     position: absolute;
     top: 0;
@@ -21,6 +20,5 @@
     display: grid;
     grid-template-columns: 53% 45%;
     gap: 2%; 
-    height: 100%;
 
   }

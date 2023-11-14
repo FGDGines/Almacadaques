@@ -1,4 +1,5 @@
 .BtnMas {
+  cursor: pointer;
   display: flex;
   width: 5vw;
   height: 5vw;
