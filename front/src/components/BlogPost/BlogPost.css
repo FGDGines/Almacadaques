@@ -148,8 +148,8 @@
   font-family: "PT-Script-Monsoon";
   color: white;
   margin: 0;
-  padding-top: 2vw;
-  padding-bottom: 1vw;
+  padding-top: 1vw;
+  padding-bottom: 0.5vw;
 }
 .ctOverlayBook h3 {
   margin: 0;
@@ -157,7 +157,7 @@
   font-size: 2vw;
   font-family: "PT-Script-Monsoon";
   color: white;
-  padding-bottom: 10vw;
+  padding-bottom: 8vw;
 }
 .ctOverlayBook p {
   font-size: 1vw;
