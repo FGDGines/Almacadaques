@@ -69,7 +69,7 @@ const Footer = () => {
                         
                     </div>
                     
-                    <h4 className='textFooteer'>© 2023 Almacadaquest reservado todos los derechos Diseño: FGD Desarrollo Web</h4>
+                    <h4 className='textFooteer'>© 2023 Almacadaques reservado todos los derechos Diseño: FGD Desarrollo Web</h4>
                     
                 </div>
                 
