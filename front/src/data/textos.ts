@@ -161,7 +161,7 @@ export const textos: TextosType<
         parrafosobremi8: "Me encanta aprender cada día y siempre tengo retos.",
         parrafosobremi9: "Me gusta cuidarme y es muy importante mi bienestar. Cuando yo estoy bien mi entorno también.",
         parrafosobremi10: "Mis hobbies favoritos son: leer, escribir, arte, nadar en el mar, cantar, bailar, viajar, descubrir otras culturas, senderismo.",
-        titleparrafo3: "Bibliografía personal :",
+        titleparrafo3: "Bibliografía personal",
         parrafosobremi11:"Licenciada en Psicología (Universidad Oberta de Catalunya).",
         parrafosobremi12:"Máster en Coaching Teleológico (Universidad de Barcelona).",
         parrafosobremi13:"Posgrado en Liderazgo y Desarrollo personal (Instituto Borja Vilaseca).",
