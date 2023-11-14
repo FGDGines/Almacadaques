@@ -8,6 +8,7 @@ import { useContext } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
 import { testimonies } from '../../data/testimonies';
 import Testimony from '../Testimony/Testimony';
+import { subtmitOnFormDefault } from '../../helpers/Server';
 
 const CoachingInternacional = () => {
     const { languageFlag } = useContext(GlobalContext)
@@ -69,7 +70,7 @@ const CoachingInternacional = () => {
                 <p className='parrafo info'>{textos[languageFlag].textcoachinginterPideinfo}</p>
 
                 <div className='ctForm'>
-                    <FormDefault />
+                    <FormDefault  hSubmit={subtmitOnFormDefault}/>
                     <img className='imgEquip' src=".../../../src/assets/background/contactanos.jpg" alt="Equipo de trabajo" />
                 </div>
 
