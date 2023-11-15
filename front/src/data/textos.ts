@@ -102,6 +102,7 @@ export const textos: TextosType<
     //Agenda Experiencias de bienestar
     //Agenda experiencias a medida
     //colaborador
+    "textoColaboradores" |
     "textoeducadora" |
     "textcolaborcontact"
     //blo( Tips de bienestar)
@@ -120,7 +121,7 @@ export const textos: TextosType<
         expDeMedida: "Expeiencias de Medida",
         colabrador: "Colaborad@r",
         testimonios: "Testominio",
-        blog: "blog",
+        blog: "Blog",
         blogPost: "Tips de Bienestar",
         blogRetiro: "Blog Retiros",
         podcast: "Podcast",
@@ -206,6 +207,7 @@ export const textos: TextosType<
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
         //colaborador
+        textoColaboradores :"Colaborador@s",
         textoeducadora: "Educadora de Masaje Infantil",
         textcolaborcontact: "Contactame",
         //blo( Tips de bienestar)
@@ -308,6 +310,7 @@ export const textos: TextosType<
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
         //colaborador
+        textoColaboradores :"Collaborators",
         textoeducadora: "Infant Massage Educator",
         textcolaborcontact: "Contact me",
         //blo( Tips de bienestar)
@@ -409,6 +412,7 @@ export const textos: TextosType<
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
         //colaborador
+        textoColaboradores :"Col·laborador@s",
         textoeducadora: "Educadora de Massatge Infantil",
         textcolaborcontact: "Contacta'm",
         //blo( Tips de bienestar)
