@@ -80,6 +80,14 @@ export const textos: TextosType<
     "textcomentario" |
     "textplaceholcoment" |
     "textaceptar" |
+
+    //Textos carrousel 
+    "TitleCarrousel1"|
+    "TitleCarrousel2"|
+    "TitleCarrousel3"|
+    "TitleCarrousel4"|
+    "TitleCarrousel5"|
+    "TitleCarrousel6"|
     //cocaching & mentoring internacional
     "textcoachingtitleInternacional" |
     "textcoachinginterna1" |
@@ -176,6 +184,14 @@ export const textos: TextosType<
         parrafosobremi16:"Doing Business Globally (ESADE).",
         parrafosobremi17:"Postgrado en Licitaciones Internacionales (Universidad La Salle).",
         parrafosobremi18:"Formación continuada en el ámbito de empresa y crecimiento personal.",
+
+        TitleCarrousel1:"¿Te sientes estresad@?",
+        TitleCarrousel2: "¿Quieres un cambio de aires?",
+        TitleCarrousel3: "¿Sientes que estás bloquead@?",
+        TitleCarrousel4: "¿Quieres hacer un cambio y no sabes por dónde empezar?",
+        TitleCarrousel5: "¿Necesitas inspiración?",
+        TitleCarrousel6: "¿Quieres ser tu mejor versión?",
+
         //Coaching para el Bienestar
         textcoaching1: "¿Sientes que existe una brecha entre la vida que llevas y la que quieres llevar?¿Quieres convertirte en tu mejor versión?",
         textcoachingParrafo1:"Un proceso de coaching, respetuoso, amable y profesional, te ayudará a alcanzar tu objetivo. ¿Te acompaño?",
@@ -292,6 +308,15 @@ export const textos: TextosType<
         textcoaching4: "I help he person through a journey of inner exploration. We will start from where your conflict or discomfort begins and go through to achieve your goals.",
         textcoaching5: "When you make the determination to lead your life, possibly after some crisis or imbalance, the support of a coach can help you accelerate and achieve better results",
         textcoachingpide:"Request more information without obligation",
+
+        TitleCarrousel1: "Feeling stressed?",
+        TitleCarrousel2: "Need a change of scenery?",
+        TitleCarrousel3: "Feeling stuck?",
+        TitleCarrousel4: "Want to make a change but don't know where to start?",
+        TitleCarrousel5: "Need inspiration?",
+        TitleCarrousel6: "Want to be your best self?",
+
+
         //formulario coaching para el bienestar
         textnombre:"Name",
         textplaceholdescribe: "Enter your name here",
@@ -427,6 +452,15 @@ export const textos: TextosType<
         textcoachinginterna10: "Com a mentora internacional et comparteixo les meves pròpies experiències i amb molta empatia i sensibilitat t'acompanyo a assolir els objectius que vols assolir, aconseguint així més benestar.",
         textcoachinginterna11: "Contacta per definir junts com et puc ajudar a aconseguir els resultats que cerques.",
         textcoachinginterPideinfo: "Demana més informació sense compromís",
+
+        TitleCarrousel1: "Et sents estressat/da?",
+        TitleCarrousel2: "Vols un canvi d'aires?",
+        TitleCarrousel3: "Et sents bloquejat/da?",
+        TitleCarrousel4: "Vols fer un canvi i no saps per on començar?",
+        TitleCarrousel5: "Necessites inspiració?",
+        TitleCarrousel6: "Vols ser la teva millor versió?",
+
+
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
         //colaborador

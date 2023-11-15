@@ -1,13 +1,12 @@
 .TestimonyBar {
   background-color: white;
-  overflow-x: hidden;
-  margin-inline: auto;
+  overflow-x: auto;
   width: 90vw;
   margin-block: 3rem;
 }
 
 .Testimony {
-  flex-basis: 100%;
+  width: 100%;
   margin-inline: 1.2rem;
 }
 
