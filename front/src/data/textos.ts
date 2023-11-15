@@ -101,6 +101,8 @@ export const textos: TextosType<
 
     //Agenda Experiencias de bienestar
     //Agenda experiencias a medida
+    "textoeresunaempersa" |
+    "textotrabajemosjuntos" |
     //colaborador
     "textoColaboradores" |
     "textoeducadora" |
@@ -124,7 +126,7 @@ export const textos: TextosType<
         coaching: "Coaching",
         agenda: "Agenda",
         expBienestar: "Experiencias de Bienestar",
-        expDeMedida: "Expeiencias de Medida",
+        expDeMedida: "Experiencias a Medida",
         colabrador: "Colaborad@r",
         testimonios: "Testominio",
         blog: "Blog",
@@ -171,7 +173,7 @@ export const textos: TextosType<
         parrafosobremi11:"Licenciada en Psicología (Universidad Oberta de Catalunya).",
         parrafosobremi12:"Máster en Coaching Teleológico (Universidad de Barcelona).",
         parrafosobremi13:"Posgrado en Liderazgo y Desarrollo personal (Instituto Borja Vilaseca).",
-        parrafosobremi14:"Licenciada en Ciencias Económicas y Empresariales (Universidad Autónoma de Barcelona).",
+        parrafosobremi14:"Licenciada en Ciencias Económicas y Empresariales (UAB).",
         parrafosobremi15:"Posgrado y Máster en comercio internacional (Universidad Pompeu Fabra).",
         parrafosobremi16:"Doing Business Globally (ESADE).",
         parrafosobremi17:"Postgrado en Licitaciones Internacionales (Universidad La Salle).",
@@ -212,6 +214,8 @@ export const textos: TextosType<
         textcoachinginterPideinfo: "Pide más información sin compromiso",
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
+        textoeresunaempersa: "¿Eres una empresa consciente que invierte en el bienestar de sus trabajadores? Contáctanos para organizarte la experiencia a medida que mejor se adapte a tu perfil!.",
+        textotrabajemosjuntos: "Trabajemos Juntos",
         //colaborador
         textoColaboradores :"Colaborador@s",
         textoeducadora: "Educadora de Masaje Infantil",
@@ -278,7 +282,7 @@ export const textos: TextosType<
         parrafosobremi11:"Graduate in Psychology (Open University of Catalonia).",
         parrafosobremi12:"Master in Teleological Coaching (University of Barcelona).",
         parrafosobremi13:"Postgraduate in Leadership and Personal Development (Borja Vilaseca Institute).",
-        parrafosobremi14:"Graduate in Economics and Business Sciences (Autonomous University of Barcelona)",
+        parrafosobremi14:"Graduate in Economics and Business Sciences (UAB)",
         parrafosobremi15:"Postgraduate and Master in International Trade (Pompeu Fabra University)",
         parrafosobremi16:"Doing Business Globally (ESADE)",
         parrafosobremi17:"Postgraduate in International Tenders (La Salle University)",
@@ -321,6 +325,8 @@ export const textos: TextosType<
 
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
+        textoeresunaempersa: "Are you a conscious company that invests in the well-being of its workers? Contact us to organize the experience as it best suits your profile!.",
+        textotrabajemosjuntos: "Let's work together",
         //colaborador
         textoColaboradores :"Collaborators",
         textoeducadora: "Infant Massage Educator",
@@ -388,7 +394,7 @@ export const textos: TextosType<
         parrafosobremi11:"Llicenciada en Psicologia (Universitat Oberta de Catalunya).",
         parrafosobremi12:"Màster en Coaching Teleològic (Universitat de Barcelona).",
         parrafosobremi13:"Postgrau en Lideratge i Desenvolupament personal (Institut Borja Vilaseca).",
-        parrafosobremi14:"Llicenciada en Ciències Econòmiques i Empresarials (Universitat Autònoma de Barcelona).",
+        parrafosobremi14:"Llicenciada en Ciències Econòmiques i Empresarials (UAB).",
         parrafosobremi15:"Postgrau i Màster en comerç internacional (Universitat Pompeu Fabra).",
         parrafosobremi16:"Doing Business Globally (ESADE).",
         parrafosobremi17:"Postgrau en Licitacions Internacionals (Universitat La Salle).",
@@ -429,6 +435,8 @@ export const textos: TextosType<
         textcoachinginterPideinfo: "Demana més informació sense compromís",
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
+        textoeresunaempersa: "Are you a conscious company that invests in the well-being of its workers? Contact us to organize the experience as it best suits your profile!.",
+        textotrabajemosjuntos: "Treballem Junts",
         //colaborador
         textoColaboradores :"Col·laborador@s",
         textoeducadora: "Educadora de Massatge Infantil",

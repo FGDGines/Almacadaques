@@ -27,7 +27,7 @@ const Navbar = () => {
               },
               {
                 target: 10,
-                text: `coaching & mentoring internacional`, 
+                text: `Coaching & Mentoring Internacional`, 
               },
             ]}
           />
@@ -105,7 +105,7 @@ const Navbar = () => {
               },
               {
                 target: 10,
-                text: `coaching & mentoring internacional`,
+                text: `Coaching & Mentoring Internacional`,
               },
             ]}
           />

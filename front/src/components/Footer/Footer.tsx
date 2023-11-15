@@ -39,7 +39,7 @@ const Footer = () => {
                 </div>
 
                 <div className="containerLeft">
-                    <h3 className='titleFooter'>Newlester </h3>
+                    <h3 className='titleFooter'>Newsletter</h3>
                     <div className="span7"></div>
                     <form action="#">
                         <p className='correo'>{textos[languageFlag].textfooteremail}</p>
