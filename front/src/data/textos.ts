@@ -435,7 +435,7 @@ export const textos: TextosType<
         textcoachinginterPideinfo: "Demana més informació sense compromís",
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
-        textoeresunaempersa: "Are you a conscious company that invests in the well-being of its workers? Contact us to organize the experience as it best suits your profile!.",
+        textoeresunaempersa: "Ets una empresa conscient que inverteix en el benestar dels treballadors? Contacta'ns per organitzar-te l'experiència a mesura que millor s'adapti al teu perfil!.",
         textotrabajemosjuntos: "Treballem Junts",
         //colaborador
         textoColaboradores :"Col·laborador@s",
