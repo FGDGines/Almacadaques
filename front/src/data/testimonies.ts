@@ -28,5 +28,15 @@ export const testimonies = [
       month: 9,
       year: 2023,
       testimony: "Me encontraba perdido y bloqueado. Las sesiones con Elisabet me han ayudado a clarificar mis ideas y pensamientos y redescubrir mis potenciales. Destaco su implicación, profesionalidad y amabilidad con la que te va formulando preguntas que me han ayudado a conocerme mejor, a saber qué me apasiona, qué quiero hacer en mi vida y pasar a la acción. En 3 meses soy otra persona, me siento más seguro, más inspirado y más empoderado.",
-    }
+    },
+    {
+      id: 4,
+      witness: "Marta López",
+      image:
+        "https://media.istockphoto.com/id/1344327532/photo/studio-portrait-of-attractive-19-year-old-woman-with-brown-hair.webp?b=1&s=170667a&w=0&k=20&c=qPtuG5hKcC8vva8y_HC9Xm5z31DeQG4LTI6RuSXJ6wE=",
+      day: 20,
+      month: 9,
+      year: 2023,
+      testimony: "Estaba enfrentando una etapa confusa y desafiante en mi vida. Gracias a las sesiones con Elisabet, he logrado despejar mis pensamientos y redescubrir mis habilidades. Destaco su enfoque profesional, compromiso y amabilidad al plantear preguntas que me han guiado para conocerme mejor. En solo tres meses, me siento transformada: más segura, inspirada y empoderada para tomar acción en mi vida.",
+    },
 ]
