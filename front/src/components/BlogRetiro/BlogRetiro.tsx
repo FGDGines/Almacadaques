@@ -4,7 +4,11 @@ import Navbar from "../Navbar/Navbar";
 import "./BlogRetiro.css";
 import retiroInfo from "../../data/blogRetiro";
 import { DetailBlogRetiro } from "../DetailBlogRetiro/DetailBlogRetiro";
-import { useState } from "react";
+
+
+import { GlobalContext } from "../../contexts/GlobalContext"; 
+import { useContext } from 'react';
+import { useState } from 'react';
 
 interface Retiro {
   index: number;
@@ -19,6 +23,7 @@ interface Retiro {
 
 
 function BlogRetiro() {
+  const { setLayoutID } = useContext(GlobalContext);
   const [showDersail, setShowDersail] = useState(false);
   const [selectedRetiro, setSelectedRetiro] = useState<Retiro | null>(null);
 
@@ -79,8 +84,8 @@ function BlogRetiro() {
                     </p>
 
                   </div>
-                  <div className="authorRetiro">
-                    <h4>{retiro.author}</h4>
+                  <div className="authorRetiro" onClick={() => setLayoutID(6)}>
+                    <a href="#">Inscribirse</a>
                   </div>
                 </div>
               </div>

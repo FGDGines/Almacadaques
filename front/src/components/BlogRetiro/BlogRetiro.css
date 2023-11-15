@@ -110,14 +110,20 @@
 .time p {
   font-size: 1vw;
 }
-.authorRetiro h4 {
+.authorRetiro a {
   font-size: 1.1vw;
   font-weight: 700;
+  text-decoration: none;
+  color: #cf1348;
+  cursor: pointer;
 }
 .informacionderetiro {
-  width: 98vw;
+  width: 100vw;
   height: 100vh;
-  padding: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ padding-left: 25vw;
   position: absolute;
   z-index: 10;
   background: rgba(255, 255, 255, 0.7);
