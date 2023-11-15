@@ -33,10 +33,11 @@
     padding-left: 25px;
     border: 1px solid gray;
 }
+
 .BtNice{
-    background-color: #cf1348;
-    color: white;
+    border: none;
 }
+
 
 
 @media (max-width: 780px) {
