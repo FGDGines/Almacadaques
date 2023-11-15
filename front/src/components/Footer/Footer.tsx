@@ -1,11 +1,27 @@
 import './Footer.css';
 import { textos } from '../../data/textos';
-import { useContext } from 'react';
+import { FormEvent, useContext } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
+import { fetchDefault } from '../../helpers/Server';
+import { formDataToObject } from '../../helpers/Forms';
+
 
 const Footer = () => {
     const { languageFlag } = useContext(GlobalContext)
     const { setLayoutID } = useContext(GlobalContext);
+
+    const send = (event: FormEvent<HTMLFormElement>) => {
+        event.stopPropagation()
+        event.preventDefault()
+        if(event.target instanceof HTMLFormElement){
+            const bag  = new FormData(event.target)
+            console.log(bag.getAll("email"))
+            const res = fetchDefault('/mail/create', {body: JSON.stringify(formDataToObject(bag))})
+    
+            console.log('Datos enviados:', res);
+            event.target.reset()
+        }
+    }
     return (
         <div className="Footer">
             <div className="container1">
@@ -41,14 +57,14 @@ const Footer = () => {
                 <div className="containerLeft">
                     <h3 className='titleFooter'>Newlester </h3>
                     <div className="span7"></div>
-                    <form action="#">
+                    <form onSubmit={send}>
                         <p className='correo'>{textos[languageFlag].textfooteremail}</p>
                         <div className="input-group">
                             <input required type="email" name="email" autoComplete="on" className="input1" />
                             <label className="user-label">{textos[languageFlag].textfooteremail2}</label>
                         </div>
+                        <button className='buttonFooter' type='submit'>{textos[languageFlag].textfooterregistro}</button>
                     </form>
-                    <button className='buttonFooter' type='button'>{textos[languageFlag].textfooterregistro}</button>
                 </div>
 
                 

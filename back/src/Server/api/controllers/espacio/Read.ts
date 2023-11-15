@@ -7,7 +7,7 @@ export const Read = async ( req: Request ,res: Response)=>{
     
     try{
         const tEspacio = await Espacio.findAll({
-            attributes:[lang]
+            attributes:["id", lang]
         });  
         
         return res.status(200).json({status: 200, msg: "Espacios obtenidos con éxito" , bag: tEspacio})

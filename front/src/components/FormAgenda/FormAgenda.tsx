@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react';
 
 
 import './FormAgenda.css'
-import { tpFormAgenda } from '../../types/typesComponents';
+import { tpDtmResponse, tpFormAgenda } from '../../types/typesComponents';
 import { fetchDefault } from '../../helpers/Server';
 
 const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
@@ -32,7 +32,11 @@ const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
       fragment: "experiencias de bienestar"
     })}
     console.log(data)
-    const res = fetchDefault("/mail/create", data )
+    const res = fetchDefault("/mail/create", data, (d: tpDtmResponse) => {
+      console.log(d)
+    }, (e: tpDtmResponse) => {
+      console.log(e)
+    })
     
     console.log('Datos enviados:', res, formData);
   };
