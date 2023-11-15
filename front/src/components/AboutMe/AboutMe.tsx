@@ -67,8 +67,8 @@ const AboutMe = () => {
                         <li>{textos[languageFlag].parrafosobremi18}</li>
                     </ul>
                 </div>
-                <div className="photo_1">
-                    <img src="../../../src/assets/background/3.foto.jpg" alt="Bibliografía" />
+                <div className="photo_3">
+                    <img src="../../../src/assets/background/3.foto.jpg" alt="Bibliografía" className='BibliografíaSobreMi'/>
                     <p> Elisabet Coll-Vinent (Psicóloga – Mentora – Coach)</p>
                 </div>
             </div>

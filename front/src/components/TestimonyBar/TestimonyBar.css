@@ -22,8 +22,22 @@
 
 .testimony .text{
   height: 10ch;
-  overflow: hidden;
+  max-height: 10ch;
+  overflow-y: auto;
   font-size: 1.2rem;
+}
+
+.testimony .text::-webkit-scrollbar {
+  width: 0px; /* Ancho del scrollbar */
+}
+
+.testimony .text::-webkit-scrollbar-thumb {
+  background-color: #88888800; /* Color del pulgar */
+  opacity: 0.1;
+}
+
+.testimony .text::-webkit-scrollbar-track {
+  background-color: #f1f1f100; /* Color de la pista del scrollbar */
 }
 
 .testimony .TestimonyLink {

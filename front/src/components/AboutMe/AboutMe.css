@@ -59,6 +59,19 @@
   align-items: center;
   flex-direction: column;
 }
+.photo_3{
+  width: 25vw;
+  display: flex;
+  justify-content: end;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.BibliografíaSobreMi{
+  width: 20vw;
+}
 .photo_2 p {
   font-weight: bold;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -89,12 +102,15 @@
   margin-top: 0;
   font-size: 1.5vw;
 }
+
 @media (min-width: 464px) {
   .infoSobremi_2 {
     width: 45vw;
     font-size: 2.1vw;
     height: 30vh;
   }
+ 
+
 }
 
 @media (min-width: 764px) {
@@ -103,14 +119,27 @@
     font-size: 1.4vw;
     height: 24vw;
   }
+  .BibliografíaSobreMi{
+    width: 29vw;
+  }
+  .infoSobremi_2User {
+    width: 94%;
+    background-color: #cf1348;
+    padding: 1vw;
+    color: white;
+    height: 18vw;
+  }
+
 }
 @media (min-width: 1024px) {
   .infoSobremi_2User {
     width: 45vw;
-    font-size: 1.3vw;
-    height: 15.5vw;
+    font-size: 1.2vw;
+    height: 19.5vw;
   }
+  
 }
+
 
 .containerSobremi_1 .photo_1 img {
   width: 90%;
@@ -122,6 +151,10 @@
   border-radius: 0.4vw;
 }
 
+.photo_3 .BibliografíaSobreMi{
+  width: 90%;
+  border-radius: 0.4vw;
+}
 @media (max-width: 780px) {
   .infoSobremi_1 {
     width: 45vw;
@@ -130,6 +163,12 @@
     color: black;
     font-size: 1.6vw;
   }
+  .photo_3 .BibliografíaSobreMi{
+    width: 100%;
+    border-radius: 0.4vw;
+  }
+  
+
 }
 
 @media (max-width: 450px) {
@@ -171,6 +210,18 @@
     width: 94vw;
     margin: 5px 0;
   }
+  .photo_3{
+  width: 97vw;
+  display: flex;
+  margin-right: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.BibliografíaSobreMi{
+  width: 90vw;
+}
   .infoSobremi_1 {
     width: 90vw;
     background-color: white;

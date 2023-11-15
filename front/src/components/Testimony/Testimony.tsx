@@ -17,11 +17,7 @@ const Testimony: FC<tpTestimony> = ({
         <p className="text">
           {testimony}
         </p>
-        <div className="TestimonyLink">
-          <div>
-            Ver más
-          </div>
-        </div>
+        
       </div>
 
       <div className="witness">
