@@ -57,10 +57,12 @@ const Book3 = () => {
                     <div className="demoPage" >
                         <div className="port">
                             <div className="titlePortal2">
-                                <img src="../../../src/assets/background/fondo-libro.jpg" alt="" />
+                                <img src="../../../src/assets/ImgLibro/portada.jpeg" alt="" />
                                 <div className="ctOverlayBook">
-                                    <h1>Almacadaqués</h1>
-                                    <h3>5 tips lidiar dia a dia</h3>
+                                    <div className="titleCortoPor">
+                                        <h1>Almacadaqués</h1>
+                                        <h3>5 tips lidiar dia a dia</h3>
+                                    </div>
                                     <p>Elisabet Coll-Vinent</p>
                                 </div>
                             </div>
@@ -70,7 +72,7 @@ const Book3 = () => {
                         <div className="port">
 
                             <div className="titlePortal2">
-                                <img src="../../../src/assets/background/fondo-libro.jpg" alt="" />
+                                <img src="../../../src/assets/ImgLibro/portada.jpeg" alt="" />
                                 <div className="ctOverlayBook">
 
                                 </div>
@@ -92,7 +94,7 @@ const Book3 = () => {
                                 <p>5 tips para lidiar con tu día a día practicando “menos es mas”</p>
                                 <h3>1. Estar presente</h3>
                                 <p>Cuando estoy presente con lo que estoy haciendo (por ejemplo lavando los platos, saboreando la comida, hablando con la vecina, leyendo, etc) </p>
-                                
+
 
 
                             </div>
@@ -110,7 +112,7 @@ const Book3 = () => {
                                 <p>Si tu actitud es constructiva y das lo mejor de ti, todo irá lo mejor que puede ir, no tiene sentido estar pendiente de los resultados y apegarte a ellos ya que siempre habrá variables que no dependen de ti.</p>
                                 <h3>4. No des vueltas a lo que podría ser</h3>
                                 <p>Cuando simplificas tus tareas diarias (evitando </p>
-                                
+
 
 
                             </div>
@@ -137,14 +139,14 @@ const Book3 = () => {
 
 
 
-                    
+
                     <div className="demoPage">
                         <div className="port">
 
                             <div className="titlePortal2">
-                                <img src="../../../src/assets/background/fondo-libro.jpg" alt="" />
+                                <img src="../../../src/assets/ImgLibro/portada.jpeg" alt="" />
                                 <div className="ctOverlayBook">
-                                <h3 className='FinalLibro'>© Elisabet Coll-Vinent@almacadaques.com</h3>
+                                    <h3 className='FinalLibro'>© Elisabet Coll-Vinent@almacadaques.com</h3>
                                 </div>
                             </div>
                         </div>
