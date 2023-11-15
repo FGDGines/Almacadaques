@@ -69,7 +69,7 @@ const Footer = () => {
                         
                     </div>
                     
-                    <h4 className='textFooteer'>© 2023 Almacadaques reservado todos los derechos Diseño: FGD Desarrollo Web</h4>
+                    <h4 className='textFooteer'>© 2023 Almacadaques reservado todos los derechos <a href="https://www.fgddesarrolloweb.es/" target='_blank'><span className='diseño'>Diseño: FGD Desarrollo Web</span></a> </h4>
                     
                 </div>
                 
