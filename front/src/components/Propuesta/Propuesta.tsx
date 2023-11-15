@@ -1,31 +1,31 @@
 import './Propuesta.css'
 import AlternateTimeline from '../TimeLine/TimeLine';
-import { tlEspacios, tlTextosType } from '../../data/tlEspacios';
-import { useContext, useEffect, useState } from 'react';
+import { tlEspacios } from '../../data/tlEspacios';
+import { useContext, useEffect } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
 import { fetchDefault } from '../../helpers/Server';
 import { formDataToObject } from '../../helpers/Forms';
 import { tpTimeLineData } from '../../types/typesComponents';
-const Propuesta = ()=>{
-    const {languageFlag} = useContext(GlobalContext)
+const Propuesta = () => {
+    const { languageFlag } = useContext(GlobalContext)
 
-    const l = languageFlag.toLowerCase() 
+    const l = languageFlag.toLowerCase()
     const da = new FormData()
     da.set("lang", l)
-    
-    const data = {body: JSON.stringify(formDataToObject(da))}
+
+    const data = { body: JSON.stringify(formDataToObject(da)) }
     const espacios: tpTimeLineData[] = []
 
     useEffect(() => {
         const api = async () => {
-            await fetchDefault("/espacio/read", data, (d:tpDtmResponse) => {
+            fetchDefault("/espacio/read", data, (d) => {
                 for (let index = 0; index < d.bag.length; index++) {
                     const element = d.bag[index];
-                    espacios.push({id: element.id, text: element.es || element.en || element.cat})
+                    espacios.push({ id: element.id, text: element.es || element.en || element.cat })
                 }
                 const t = tlEspacios[languageFlag]
                 console.log(espacios[0], t[0])
-            }) 
+            })
         };
         api();
     }, []);
@@ -35,7 +35,7 @@ const Propuesta = ()=>{
         </div>
         <br />
         <AlternateTimeline data={espacios} />
-        
+
     </div>
 }
 
