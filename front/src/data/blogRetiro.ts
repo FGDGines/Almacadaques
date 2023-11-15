@@ -12,7 +12,8 @@ const retiroInfo = [
       ],
       title: "Nature & Kaiaking Weekend en Cadaqué",
       // author: "Ana Sánchez",
-      description: "Nadaremos la vida, Kaiak, haremos baños sanadores y mucho más! ( NATURALEZA – KAIAK – MOVIMIENTO VITAL COMPARTIR – BAÑO SANADOR – CAMINAR LA VIDA – AUTOCUIDADO. ) "
+      description: "Nadaremos la vida, Kaiak, haremos baños sanadores y mucho más! ( NATURALEZA – KAIAK – MOVIMIENTO VITAL COMPARTIR – BAÑO SANADOR – CAMINAR LA VIDA – AUTOCUIDADO. ) ",
+      estado:'Completo',
     },
     {
       index: 2,
@@ -24,7 +25,8 @@ const retiroInfo = [
       ],
       title: "Happy Dance Weekend con Paz Jiménez en Cadaqués",
       // author: "Andres Brito",
-      description: "Danzaremos la vida, haremos baños sanadores y mucho más! ( NATURALEZA – BAILE – MOVIMIENTO VITAL – COMPARTIR – BAÑO SANADOR – CAMINAR LA VIDA - AUTOCUIDADO.) "
+      description: "Danzaremos la vida, haremos baños sanadores y mucho más! ( NATURALEZA – BAILE – MOVIMIENTO VITAL – COMPARTIR – BAÑO SANADOR – CAMINAR LA VIDA - AUTOCUIDADO.) ",
+      estado:'Completo',
     },
     {
       index: 3,
@@ -36,7 +38,8 @@ const retiroInfo = [
       ],
       title: "Happy Dance Weekend,Con Paz Jiménez ",
       // author: "Luis Ramirez",
-      description: "En Avinyonet de Puigventós (Alt Empordá) ,Danzaremos la vida, respiraremos naturaleza y mucho más! ( NATURALEZA – BAILE – MOVIMIENTO VITAL – RELAJACIÓN – COMPARTIR – BAÑO DE BOSQUE – CABALLOS - AUTOCUIDADO .)"
+      description: "En Avinyonet de Puigventós (Alt Empordá) ,Danzaremos la vida, respiraremos naturaleza y mucho más! ( NATURALEZA – BAILE – MOVIMIENTO VITAL – RELAJACIÓN – COMPARTIR – BAÑO DE BOSQUE – CABALLOS - AUTOCUIDADO .)",
+      estado:'Completo',
     },
     {
       index: 4,
@@ -50,7 +53,8 @@ const retiroInfo = [
       ],
       title: "Happy Dance Weekend  con Paz Jiménez",
       // author: "Luis Ramirez",
-      description: "En Avinyonet de Puigventós (Alt Empordá) ,Danzaremos la vida, respiraremos naturaleza y mucho más! ( NATURALEZA – BAILE – MOVIMIENTO VITAL – RELAJACIÓN – COMPARTIR – BAÑO DE BOSQUE – CABALLOS - AUTOCUIDADO .) Para más información y reservar tu plaza: Acceda artraves del link"
+      description: "En Avinyonet de Puigventós (Alt Empordá) ,Danzaremos la vida, respiraremos naturaleza y mucho más! ( NATURALEZA – BAILE – MOVIMIENTO VITAL – RELAJACIÓN – COMPARTIR – BAÑO DE BOSQUE – CABALLOS - AUTOCUIDADO .) Para más información y reservar tu plaza: Acceda artraves del link",
+      estado:'Aplazado',
     },
     {
       index: 5,
@@ -64,7 +68,8 @@ const retiroInfo = [
       ],
       title: "Magic Heart and Paradise,con Merce Cazés.",
       // author: "Luis Ramirez",
-      description: "@‌mercecazés impartirá formación del método TASI y también disfrutaremos de otras muchas actividades en una masía preciosa de Deltebre FORMACIÓN TASI- NATURA –MOVIMIENTO VITAL – RELAJACIÓN – COMPARTIR – JUGAR – SORPRESAS"
+      description: "@‌mercecazés impartirá formación del método TASI y también disfrutaremos de otras muchas actividades en una masía preciosa de Deltebre FORMACIÓN TASI- NATURA –MOVIMIENTO VITAL – RELAJACIÓN – COMPARTIR – JUGAR – SORPRESAS",
+      estado:'Aplazado',
     },
     {
       index: 6,
@@ -78,7 +83,8 @@ const retiroInfo = [
       ],
       title: "Aventura & Autocuidado en Bali.",
       // author: "Luis Ramirez",
-      description: "visitaremos este hermoso paraíso, disfrutaremos de su gente, su gastronomía, sus templos, sus playas y sus paisajes, haremos actividades de bienestar y mucho más! Escríbenos sin compromiso y te ampliamos la información.( NATURALEZA  – TEMPLOS - PLAYAS - DELICIOSA GASTRONOMIA -MOVIMIENTO VITAL – AUTOCUIDADO - TERAPIAS Y ACTIVIDADES DE BIENESTAR. ) "
+      description: "visitaremos este hermoso paraíso, disfrutaremos de su gente, su gastronomía, sus templos, sus playas y sus paisajes, haremos actividades de bienestar y mucho más! Escríbenos sin compromiso y te ampliamos la información.( NATURALEZA  – TEMPLOS - PLAYAS - DELICIOSA GASTRONOMIA -MOVIMIENTO VITAL – AUTOCUIDADO - TERAPIAS Y ACTIVIDADES DE BIENESTAR. ) ",
+      estado:'Plazas limitadas',
     },
     {
       index: 7,
@@ -92,7 +98,8 @@ const retiroInfo = [
       ],
       title: "Happy Dance Weekend  con Paz Jiménez",
       // author: "Luis Ramirez",
-      description: "en Cadaqués, danzaremos la vida, haremos baños sanadores y mucho más! ( NATURALEZA – BAILE – MOVIMIENTO VITAL – COMPARTIR – BAÑO SANADOR – CAMINAR LA VIDA - AUTOCUIDADO.)"
+      description: "en Cadaqués, danzaremos la vida, haremos baños sanadores y mucho más! ( NATURALEZA – BAILE – MOVIMIENTO VITAL – COMPARTIR – BAÑO SANADOR – CAMINAR LA VIDA - AUTOCUIDADO.)",
+      estado:'Plazas limitadas',
     },
   ];
   
