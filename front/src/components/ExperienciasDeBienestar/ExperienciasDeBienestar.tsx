@@ -1,5 +1,5 @@
 import './ExperienciasDeBienestar.css'
-import { useContext } from 'react';
+
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import Franja from '../Franja/Franja';
@@ -12,7 +12,8 @@ import { tpCalendarDates } from '../../types/typesComponents';
 import { eventos, pastEvent } from '../../data/calendar';
 import DialogMUI1 from '../DialogMUI1/DialogMUI1';
 import { statisticInfo } from '../../data/StatisticComponent';
-
+import { textos } from '../../data/textos';
+import { useContext } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
 import { useState } from 'react';
 
@@ -37,14 +38,14 @@ const ExperienciasDeBienestar = () => {
         handleClickOpen()
     }
 
-
+    const { languageFlag } =useContext(GlobalContext)
     return <div className='ExperienciasDeBienestar'>
         <Navbar />
         <Franja text='Experiencias de Bienestar' />
         <div className='ctMain'>
             <div className='ctTitle'>
-                <span style={{ color: "#75151E" }}> ❝ </span>
-                ¡Invierte en tu bienestar!
+                <span style={{ color: "#75151E" }}> ❝ 
+                    </span>{textos[languageFlag].textosinviertebienestar}
                 <span style={{ color: "#75151E" }}> ❞ </span>
             </div>
             <div className='ctCards'>
@@ -55,22 +56,15 @@ const ExperienciasDeBienestar = () => {
             </div>
             {/* <AboutMeAbstract /> */}
             <div className='ctDescription'>
-                <span style={{ color: "#75151E" }}> ❝ </span>
-                Talleres y retiros con colaboradores expertos en distintas disciplinas.
+                <span style={{ color: "#75151E" }}> ❝ </span>{textos[languageFlag].textostalleresyretiros}
                 <span style={{ color: "#75151E" }}> ❞ </span>
             </div>
-
             <StatisticComponent titles={statisticInfo.bienestar} type="bienestar" />
-   
-
             <div className='ctAgenda'>
- 
-
                 <div className="ctContentAgenda">
                     <div className="ctCalendario">
                         <Agenda hSelect={SeleccionarEvento} />
                     </div>
-
                     <div className="ctFormulario">
                         <FormAgenda actividades={eventos} />
                     </div>
@@ -78,11 +72,10 @@ const ExperienciasDeBienestar = () => {
 
             </div>
             <div className="ctContentBoton">
-                     
-                     <div className="botonRetiros diagonal" onClick={() => setLayoutID(14)}>
-                        Retiros Anteriores 
-                     </div>
-                 </div>
+                    <div className="botonRetiros diagonal" onClick={() => setLayoutID(14)}>
+                        {textos[languageFlag].textosretirosanteriores}
+                    </div>
+                </div>
 
             <DialogMUI1 open={open} handlerClose={handleClose} handleClickOpen={handleClickOpen} evento={evento} />
            
