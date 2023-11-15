@@ -110,7 +110,32 @@ export const textos: TextosType<
     "textoColaboradores" |
     "textoeducadora" |
     "textcolaborcontact"|
-    //blo( Tips de bienestar)
+    //blog( Tips de bienestar)
+    "textostipsabundancia" |
+    "textoqueeslaabundancia" |
+    "textoenfunciondequien" |
+    "textoscuandosientoabundancia" |
+    "textosllenatumente" |
+    "textosamenudoconectamos" |
+    "textoslarealidadesneutra" |
+    "textospontedellado" |
+    "textossabiasquelaoportunidad" |
+    "textossabiasquetumiedo" |
+    "textosestasatisfaccion" |
+    "textosentrenalacompresion" |
+    "textoscomprensioneslocontrario" |
+    "textosagradececadamañana" |
+    "textosrecuerdaquesi" |
+    "textosdehechoelagradecimiento" |
+    "textosmueveteactuaprueba" |
+    "textoslaabundanciaparavalientes" |
+    "textosdescubreelverdadero" |
+    "textosenconclusionbusca" |
+    "textostipsparar" |
+    "tipsabundancia" |
+    "tipsemociones" |
+    "textostipslidiardiadia" |
+    "textostipsparafluir" |
     //podcast
     //blog retiros
     //Contactar
@@ -226,7 +251,32 @@ export const textos: TextosType<
         textoColaboradores :"Colaborador@s",
         textoeducadora: "Educadora de Masaje Infantil",
         textcolaborcontact: "Contactame",
-        //blo( Tips de bienestar)
+        //blog( Tips de bienestar)
+        textostipsabundancia: "5 Tips Abundancia", 
+        textoqueeslaabundancia: "¿Qué es la abundancia?¿Qué es la abundancia?", 
+        textoenfunciondequien: "En función de a quien le preguntes la respuesta será una u otra.Según los estoicos, la abundancia no se basa en la posesión de bienes materiales, sino en la virtud y vivir de acuerdo a la naturaleza Para ellos, la verdadera abundancia está en tener una mente tranquila, estar en armonía con el universo y ser autosuficiente emocionalmente. Hay quien dice que la abundancia es un estado de plenitud y cercanía en todas las áreas de tu vida. Para mí, la abundancia me conecta con la felicidad. ", 
+        textoscuandosientoabundancia: "cuando siento abundancia me siento feliz. Y aquí quiero proponerte 5 claves para atraer a Abundancia.", 
+        textosllenatumente: "1. Llena tu mente de creencias positivas y expansivas",
+        textosamenudoconectamos: "A menudo nos conectamos con creencias absorbidas en la infancia y otras experiencias que han dejado una impronta que sólo tiene que ver con una vivencia personal e individual y no con la realidad",
+        textoslarealidadesneutra: "La realidad es neutra, observa cómo la interpretas y descubrirás el sesgo de tu mente y de tus emociones.", 
+        textospontedellado: "2. Ponte del lado de la oportunidad", 
+        textossabiasquelaoportunidad: " ¿Sabías que la oportunidad está al otro lado del miedo?.  ", 
+        textossabiasquetumiedo: "¿Sabías que tus miedos esconden tu mayor potencial?, ¿Sabías que el despliegue de tu potencial y tus dones son el camino a la abundancia Enfrentar nuestros miedos nos sitúa instantáneamente a la superación. Seguro que has experimentado más de una vez esa sensación después de haber conseguido algo que al principio te generaba temor. ",
+        textosestasatisfaccion: "Esta satisfacción te da confianza y empoderamiento, porque sabes que, si lo has hecho una vez, puedes hacerlo más veces en otros ámbitos.", 
+        textosentrenalacompresion: "3. Entrena la comprensión", 
+        textoscomprensioneslocontrario: " La comprensión es lo contrario a la envidia y se refiere al sentimiento de felicidad genuina y alegría por la felicidad del otro, en un sentido auténtico, íntegro y total, sin condicionamientos", 
+        textosagradececadamañana: " 4. Agradece cada mañana y cada noche lo que tienes, lo que eres y la vida que vives", 
+        textosrecuerdaquesi: "Recuerda que, si no eres feliz con lo que tienes, tampoco serás feliz con lo que no tienes. Agradecer es verte abundante ahora, en este momento, y la vida te ofrece más de lo que tienes y valoras. ", 
+        textosdehechoelagradecimiento: "De hecho, el agradecimiento es una de las energías y actitudes más poderosas. Numerosos estudios de investigación sobre la felicidad detectan que uno de los pilares básicos de un sentimiento es así el agradecimiento.", 
+        textosmueveteactuaprueba: "5. Muévete, actúa, prueba, acierta y equivócate", 
+        textoslaabundanciaparavalientes: "¡La Abundancia es para los valientes que se mueven, se lanzan, se atreven y vibran! Las personas más exitosas son las que han abierto las puertas y han salido fuera, las que se han paseado entre dificultades, retos, obstáculos, logros y pérdidas.", 
+        textosdescubreelverdadero: "Descubre el verdadero origen de tus bloqueos personales y abordarlo desde la raíz para desplegar todo tu potencial y alcanzar por fin la autoconfianza, la paz mental y el sentido de vida que anhelas.", 
+        textosenconclusionbusca: "En conclusión, busca siempre una mejor versión de ti y la vida entenderá que ante algo mejor lo que le corresponde es lo excelente, entenderá que vives sintonizado con la abundancia.",
+        textostipsparar: "5 Tips Parar",
+        tipsabundancia: "5 Tips Abundancia",
+        tipsemociones: "5 tips Emociones",
+        textostipslidiardiadia: "5 tips lidiar dia a dia ",
+        textostipsparafluir: "5 tips para fluir",
         //podcast
         //blog retiros
         //Contactar
@@ -338,7 +388,32 @@ export const textos: TextosType<
         textoColaboradores :"Collaborators",
         textoeducadora: "Infant Massage Educator",
         textcolaborcontact: "Contact me",
-        //blo( Tips de bienestar)
+        //blog( Tips de bienestar)
+        textostipsabundancia: "5 Abundance Tips", 
+        textoqueeslaabundancia: "What is abundance?What is abundance?", 
+        textoenfunciondequien: "Depending on who you ask, the answer will be one or the other. According to the Stoics, abundance is not based on the possession of material goods, but on virtue and living according to nature. For them, true abundance lies in having a calm mind, being in harmony with the universe, and being emotionally self-sufficient. There are those who say that abundance is a state of fullness and closeness in all areas of your life. For me, abundance connects me with happiness.", 
+        textoscuandosientoabundancia: "When I feel abundance I feel happy. And here I want to propose 5 keys to attract Abundance.", 
+        textosllenatumente: "1. Fill your mind with positive and expansive beliefs",
+        textosamenudoconectamos: "We often connect with beliefs absorbed in childhood and other experiences that have left an imprint that only has to do with a personal and individual experience and not with reality.",
+        textoslarealidadesneutra: "Reality is neutral, observe how you interpret it and you will discover the bias of your mind and your emotions.", 
+        textospontedellado: "2. Take the side of opportunity", 
+        textossabiasquelaoportunidad: "Did you know that opportunity is on the other side? Did you know that opportunity is on the other side of fear? side of fear?", 
+        textossabiasquetumiedo: "Did you know that your fears hide your greatest potential? Did you know that the deployment of your potential and your gifts are the path to abundance. Facing our fears instantly puts us on the path to improvement. Surely you have experienced that feeling more than once after having achieved something that initially scared you.",
+        textosestasatisfaccion: "This satisfaction gives you confidence and empowerment, because you know that, if you have done it once, you can do it more times in other areas.", 
+        textosentrenalacompresion: "3. Train understanding", 
+        textoscomprensioneslocontrario: "Understanding is the opposite of envy and refers to the feeling of genuine happiness and joy for the happiness of another, in an authentic, complete and total sense, without conditioning.", 
+        textosagradececadamañana: "4. Be grateful every morning and every night for what you have, what you are and the life you live. Be grateful every morning and every night for what you have, what you are and the life you live", 
+        textosrecuerdaquesi: "Remember that if you are not happy with what you have, you will not be happy with what you do not have. To be grateful is to see yourself abundant now, in this moment, and life offers you more of what you have and value.", 
+        textosdehechoelagradecimiento: "In fact, gratitude is one of the most powerful energies and attitudes. Numerous research studies on happiness detect that one of the basic pillars of a feeling is gratitude.", 
+        textosmueveteactuaprueba: "5. Move, act, try, be right and wrong", 
+        textoslaabundanciaparavalientes: "Abundance is for the brave who move, launch, dare and vibrate! The most successful people are those who have opened the doors and gone outside, those who have walked through difficulties, challenges, obstacles, achievements and losses.", 
+        textosdescubreelverdadero: "Discover the true origin of your personal blocks and address it from the root to unfold your full potential and finally achieve the self-confidence, peace of mind and the meaning of life you long for.", 
+        textosenconclusionbusca: "In conclusion, always look for a better version of yourself and life will understand that when faced with something better, what corresponds to excellence, it will understand that you live in tune with abundance.",
+        textostipsparar: "5 Tips to Stop",
+        tipsabundancia: "5 Abundance Tips",
+        tipsemociones: "5 tips Emotions",
+        textostipslidiardiadia: "5 tips to deal with day by day",
+        textostipsparafluir: "5 tips to flow",
         //podcast
         //blog retiros
         //Contactar
@@ -452,6 +527,31 @@ export const textos: TextosType<
         textoeducadora: "Educadora de Massatge Infantil",
         textcolaborcontact: "Contacta'm",
         //blo( Tips de bienestar)
+        textostipsabundancia: "5 Tips Abundància", 
+        textoqueeslaabundancia: "Què és l'abundància? Què és l'abundància?", 
+        textoenfunciondequien: "En funció de qui li preguntis la resposta serà una o una altra. Segons els estoics, l'abundància no es basa en la possessió de béns materials, sinó en la virtut i la vida d'acord amb la naturalesa. Per a ells, la veritable abundància és tenir una ment tranquil·la, estar en harmonia amb l'univers i ser autosuficient emocionalment. Hi ha qui diu que l'abundància és un estat de plenitud i proximitat a totes les àrees de la teva vida. Per mi, l'abundància em connecta amb la felicitat.", 
+        textoscuandosientoabundancia: "Quan sento abundància em sento feliç. I aquí vull proposar-te 5 claus per atraure Abundància.", 
+        textosllenatumente: "1. Omple la teva ment de creences positives i expansives",
+        textosamenudoconectamos: "Sovint ens connectem amb creences absorbides a la infància i altres experiències que han deixat una empremta que només té a veure amb una vivència personal i individual i no amb la realitat.",
+        textoslarealidadesneutra: "La realitat és neutra, observa com la interpretes i descobriràs el biaix de la teva ment i de les teves emocions.", 
+        textospontedellado: "2. Posa't del costat de l'oportunitat", 
+        textossabiasquelaoportunidad: "Sabies que l'oportunitat està a l'altra banda de la por?", 
+        textossabiasquetumiedo: "Sabies que les teves pors amaguen el teu major potencial? Sabies que el desplegament del teu potencial i els teus dons són el camí a l'abundància Enfrontar les nostres pors ens situa instantàniament a la superació. Segur que has experimentat més d'una vegada aquesta sensació després d'haver aconseguit una cosa que al principi et generava por.",
+        textosestasatisfaccion: "Aquesta satisfacció et dóna confiança i empoderament, perquè saps que, si ho has fet una vegada, ho pots fer més vegades en altres àmbits.", 
+        textosentrenalacompresion: "3. Entrena la comprensió", 
+        textoscomprensioneslocontrario: "La comprensió és el contrari a l'enveja i fa referència al sentiment de felicitat genuïna i alegria per la felicitat de l'altre, en un sentit autèntic, íntegre i total, sense condicionaments", 
+        textosagradececadamañana: "4. Agraeix cada matí i cada nit allò que tens, allò que ets i la vida que vius", 
+        textosrecuerdaquesi: "Recorda que, si no ets feliç amb allò que tens, tampoc seràs feliç amb allò que no tens. Agrair és veure't abundant ara, en aquest moment, i la vida t'ofereix més del que tens i valores.", 
+        textosdehechoelagradecimiento: "De fet, l'agraïment és una de les energies i les actituds més poderoses. Nombrosos estudis de recerca sobre la felicitat detecten que un dels pilars bàsics d'un sentiment és així l'agraïment.", 
+        textosmueveteactuaprueba: "5. Mou-te, actua, prova, encerta i equivoca't", 
+        textoslaabundanciaparavalientes: "¡L'Abundància és per als valents que es mouen, es llancen, s'atreveixen i vibren! Les persones més reeixides són les que han obert les portes i n'han sortit fora, les que s'han passejat entre dificultats, reptes, obstacles, èxits i pèrdues.", 
+        textosdescubreelverdadero: "Descobreix el veritable origen dels teus bloquejos personals i abordar-lo des de l'arrel per desplegar tot el teu potencial i assolir per fi l'autoconfiança, la pau mental i el sentit de vida que anheles.", 
+        textosenconclusionbusca: "En conclusió, busca sempre una millor versió de tu i la vida entendrà que davant una cosa millor el que li correspon és l'excel·lent, entendrà que vius sintonitzat amb l'abundància.",
+        textostipsparar: "5 Tips Aturar",
+        tipsabundancia: "5 Tips Abundància",
+        tipsemociones: "5 tips Emocions",
+        textostipslidiardiadia: "5 tipus bregar dia a dia",
+        textostipsparafluir: "5 tips to flow",
         //podcast
         //blog retiros
         //Contactar
