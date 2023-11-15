@@ -57,10 +57,12 @@ const Book2 = () => {
                     <div className="demoPage" >
                         <div className="port">
                             <div className="titlePortal2">
-                                <img src="../../../src/assets/background/fondo-libro.jpg" alt="" />
+                                <img src="../../../src/assets/ImgLibro/portada.jpeg" alt="" />
                                 <div className="ctOverlayBook">
-                                    <h1>Almacadaqués</h1>
-                                    <h3>5 tips Emociones</h3>
+                                    <div className="titleCortoPor">
+                                        <h1>Almacadaqués</h1>
+                                        <h3>5 tips Emociones</h3>
+                                    </div>
                                     <p>Elisabet Coll-Vinent</p>
                                 </div>
                             </div>
@@ -70,7 +72,7 @@ const Book2 = () => {
                         <div className="port">
 
                             <div className="titlePortal2">
-                                <img src="../../../src/assets/background/fondo-libro.jpg" alt="" />
+                                <img src="../../../src/assets/ImgLibro/portada.jpeg" alt="" />
                                 <div className="ctOverlayBook">
 
 
@@ -133,14 +135,14 @@ const Book2 = () => {
 
 
 
-                    
+
                     <div className="demoPage">
                         <div className="port">
 
                             <div className="titlePortal2">
-                                <img src="../../../src/assets/background/fondo-libro.jpg" alt="" />
+                                <img src="../../../src/assets/ImgLibro/portada.jpeg" alt="" />
                                 <div className="ctOverlayBook">
-                                <h3 className='FinalLibro'>© Elisabet Coll-Vinent@almacadaques.com</h3>
+                                    <h3 className='FinalLibro'>© Elisabet Coll-Vinent@almacadaques.com</h3>
                                 </div>
                             </div>
                         </div>

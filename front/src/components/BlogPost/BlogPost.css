@@ -100,13 +100,13 @@
 .titlePortal2 {
   width: 100%;
   height: 100%;
+  background-color: rgba(13, 253, 253, 0.726);
   position: relative;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   margin: 0 auto;
   overflow: hidden;
-  background-image: url("../../../src/assets/background/fondo-libro.jpg");
 }
 
 .soft {
@@ -132,10 +132,10 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #cf134867 !important;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 .ctOverlayBook .FinalLibro{
   padding-top: 22vw;
@@ -146,24 +146,23 @@
   text-align: center;
   font-size: 3vw;
   font-family: "PT-Script-Monsoon";
-  color: white;
+  color: #CF1348;
   margin: 0;
   padding-top: 1vw;
-  padding-bottom: 0.5vw;
 }
 .ctOverlayBook h3 {
   margin: 0;
   text-align: center;
   font-size: 2vw;
   font-family: "PT-Script-Monsoon";
-  color: white;
+  color: #CF1348;
   padding-bottom: 8vw;
 }
 .ctOverlayBook p {
   font-size: 1vw;
   text-align: center;
   font-family: "PT-Script-Monsoon";
-  color: white;
+  color: #CF1348;
 }
 
 .imgLibro {
