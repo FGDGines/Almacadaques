@@ -102,11 +102,18 @@ export const textos: TextosType<
     //Agenda Experiencias de bienestar
     //Agenda experiencias a medida
     //colaborador
+    "textoColaboradores" |
     "textoeducadora" |
-    "textcolaborcontact"
+    "textcolaborcontact"|
     //blo( Tips de bienestar)
     //podcast
     //blog retiros
+    //Contactar
+    "textocontactar1" | 
+    "textocontactar2" |
+    "textocontactarjuntoscrearemos" |
+    "textocontactartelf" |
+    "textocontactarformulariotexto1" 
     
 
     
@@ -120,7 +127,7 @@ export const textos: TextosType<
         expDeMedida: "Expeiencias de Medida",
         colabrador: "Colaborad@r",
         testimonios: "Testominio",
-        blog: "blog",
+        blog: "Blog",
         blogPost: "Tips de Bienestar",
         blogRetiro: "Blog Retiros",
         podcast: "Podcast",
@@ -206,11 +213,18 @@ export const textos: TextosType<
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
         //colaborador
+        textoColaboradores :"Colaborador@s",
         textoeducadora: "Educadora de Masaje Infantil",
         textcolaborcontact: "Contactame",
         //blo( Tips de bienestar)
         //podcast
         //blog retiros
+        //Contactar
+        textocontactar1: "Contacto",
+        textocontactar2: "¿Estás realmente comprometid@ en transformarte para cambiar tu vida?",
+        textocontactarjuntoscrearemos: "Juntos crearemos el plan de acción que necesitas para dar el giro que te llevará al siguiente nivel en tu vida, logrando un mayor bienestar.",
+        textocontactartelf: "Teléfono:",
+        textocontactarformulariotexto1: "Ponerse en contacto",
     },
     [enLanguageFlag.EN]: {
         inicio: "Home",
@@ -308,11 +322,18 @@ export const textos: TextosType<
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
         //colaborador
+        textoColaboradores :"Collaborators",
         textoeducadora: "Infant Massage Educator",
         textcolaborcontact: "Contact me",
         //blo( Tips de bienestar)
         //podcast
         //blog retiros
+        //Contactar
+        textocontactar1: "Contact",
+        textocontactar2: "Are you really committed to transforming yourself to change your life?",
+        textocontactarjuntoscrearemos: "Together we will create the action plan you need to take the turn that will take you to the next level in your life, achieving greater well-being.",
+        textocontactartelf: "Telephone:",
+        textocontactarformulariotexto1: "Get in touch",
     
     },
     [enLanguageFlag.CAT]: {
@@ -409,11 +430,20 @@ export const textos: TextosType<
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
         //colaborador
+        textoColaboradores :"Col·laborador@s",
         textoeducadora: "Educadora de Massatge Infantil",
         textcolaborcontact: "Contacta'm",
         //blo( Tips de bienestar)
         //podcast
         //blog retiros
+        //Contactar
+        textocontactar1: "Contacte",
+        textocontactar2: "Estàs realment compromès a transformar-te per canviar la teva vida?",
+        textocontactarjuntoscrearemos: "Junts crearem el pla d'acció que necessites per fer el gir que et portarà al següent nivell a la teva vida, aconseguint un benestar més gran.",
+        textocontactartelf: "Telèfon:",
+        textocontactarformulariotexto1: "Poseu-vos en contacte",
+
+
     }
 
 };
