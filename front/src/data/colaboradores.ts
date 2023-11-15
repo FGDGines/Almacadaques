@@ -9,8 +9,8 @@ export interface Colaborador {
 export const ListaColaboradores: Colaborador[] = [
 {
     id:1,
-    nombre: 'Mercè Caces',
-    cargo: 'Educadora de Masaje Infantil',
+    nombre: 'Mercè Cazes',
+    cargo: 'Facilitadora del método TASI',
     descripcion: 'Canalizadora, facilitadora y formadora de la técnica de sanación energética TASI (Terapia Avanzada de Salud Integral)',
     imagen: '../../src/assets/imagen_colaboradores/colaborador1.jpeg',
     contacto: 'https://mercecazes.com/',
@@ -40,5 +40,5 @@ export const ListaColaboradores: Colaborador[] = [
     contacto: 'https://instagram.com/monti.serra?igshid=MTk0NTkyODZkYg==',
 }
 
-  
+
 ]

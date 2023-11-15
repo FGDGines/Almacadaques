@@ -103,7 +103,6 @@ export const textos: TextosType<
     //Agenda experiencias a medida
     //colaborador
     "textoeducadora" |
-    "textcolamiembrequi" |
     "textcolaborcontact"
     //blo( Tips de bienestar)
     //podcast
@@ -119,7 +118,7 @@ export const textos: TextosType<
         agenda: "Agenda",
         expBienestar: "Experiencias de Bienestar",
         expDeMedida: "Expeiencias de Medida",
-        colabrador: "Colaborador",
+        colabrador: "Colaborad@r",
         testimonios: "Testominio",
         blog: "blog",
         blogPost: "Tips de Bienestar",
@@ -208,7 +207,6 @@ export const textos: TextosType<
         //Agenda experiencias a medida
         //colaborador
         textoeducadora: "Educadora de Masaje Infantil",
-        textcolamiembrequi: "Miembros del Equipo",
         textcolaborcontact: "Contactame",
         //blo( Tips de bienestar)
         //podcast
@@ -311,7 +309,6 @@ export const textos: TextosType<
         //Agenda experiencias a medida
         //colaborador
         textoeducadora: "Infant Massage Educator",
-        textcolamiembrequi: "Team members",
         textcolaborcontact: "Contact me",
         //blo( Tips de bienestar)
         //podcast
@@ -325,7 +322,7 @@ export const textos: TextosType<
         agenda: "Agenda",
         expBienestar: "Experiències de benestar",
         expDeMedida: "Experiències a mida",
-        colabrador: "COLABORAD@RS",
+        colabrador: "Colaborad@rs",
         testimonios: "Testomini",
         blog: "Blog",
         blogPost: "Tips de Bienestar",
@@ -413,7 +410,6 @@ export const textos: TextosType<
         //Agenda experiencias a medida
         //colaborador
         textoeducadora: "Educadora de Massatge Infantil",
-        textcolamiembrequi: "Membres de l'equip",
         textcolaborcontact: "Contacta'm",
         //blo( Tips de bienestar)
         //podcast

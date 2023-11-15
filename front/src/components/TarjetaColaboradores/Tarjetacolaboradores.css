@@ -10,7 +10,7 @@
 }
 
 .card:hover {
-  box-shadow: 0 5px 15px #2c7dcf;
+  box-shadow: 0 5px 15px #76EEFE;
   transform: translateY(-15px);
 }
 
@@ -25,7 +25,8 @@
   width: 21vw;
   height: 21vw;
   border-radius: 50%;
-  background: #7da0c3;
+  background: #8CF3FF;
+  /* background: #3D98A7; */
   bottom: 0;
 }
 
@@ -90,7 +91,7 @@
 }
 
 .card .contact a:hover {
-  background: #cf1348;
+  background: #2a67a4;
 }
 
 @media (max-width: 780px) {
