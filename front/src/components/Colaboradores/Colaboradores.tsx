@@ -9,7 +9,7 @@ function Colaboradores() {
     return (
         <>
             <Navbar />
-            <Franja text='Colaborad@res' />
+            <Franja text='Colaborador@s' />
             <div className="colaboradores">
                     <Tarjetacolaboradores colaboradores={ListaColaboradores} />
             </div>
