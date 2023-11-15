@@ -28,17 +28,17 @@ const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
     const data = {body: JSON.stringify({
       nombre: formData.nombre,
       correo: formData.correo,
-      msg: `telefono: ${formData.telefono} \n actividad: ${formData.actividad}`,
+      msg: `telefono: ${formData.telefono}, actividad: ${formData.actividad}`,
       fragment: "experiencias de bienestar"
     })}
     console.log(data)
-    const res = fetchDefault("/mail/create", data, (d: tpDtmResponse) => {
-      console.log(d)
+    fetchDefault("/mail/create", data, (d: tpDtmResponse) => {
+      console.log("response",d)
     }, (e: tpDtmResponse) => {
-      console.log(e)
+      console.log("error", e)
     })
     
-    console.log('Datos enviados:', res, formData);
+    console.log('Datos enviados:', formData);
   };
 
 

@@ -9,7 +9,6 @@ export const SendMail= (init: {[key: string]: string})=>{
     Object.keys(init).forEach(item=>{
         bag.set(String(item) ,String(init[item]) )
     })
-        console.log(1)
     fetch(String(process.env.API_MAIL) , {
         method: 'POST', 
         body: bag

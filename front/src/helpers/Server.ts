@@ -33,9 +33,3 @@ export const fetchDefault = (endpoint: string , init:{[key: string]: unknown} , 
         reject({msg: 'No disponible' , status: 500})
     })
 }
-
-export const subtmitOnFormDefault = (bag: FormData) => {
-    bag.append("fragment", "Experiencias de medida")
-    const res = fetchDefault('/mail/create', {body: JSON.stringify(formDataToObject(bag))})    
-    console.log('Datos enviados:', res);
-}

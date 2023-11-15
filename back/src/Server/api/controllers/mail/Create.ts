@@ -15,7 +15,9 @@ export const Create = async (req: Request, res: Response) => {
             topic: `Almacadaquest | ${fragment} `,
             body: `\t\tNUEVO MENSAJE\nNombre: ${nombre}\nCorreo: ${correo}\nMensaje: ${msg}`
         }
+        console.log(1)
         SendMail(init)
+        console.log(2)
         return res.status(200).json({ status: 200, msg: "Mensaje enviado" })
     } catch (err) {
         return res.status(200).json({ status: 500, err, msg: "No podemos enviar mensajes en este momento " })
