@@ -6,9 +6,26 @@ import { textos } from '../../data/textos';
 import { useContext } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
 import FormDefault from '../FormDefault/FormDefault';
+import { formDataToObject } from '../../helpers/Forms';
+import { tpDtmResponse } from '../../types/typesComponents';
+import { fetchDefault } from '../../helpers/Server';
 
 const CoachingBienestar = () => {
     const {  languageFlag } = useContext(GlobalContext);
+
+    const subtmitOnFormDefault = (bag: FormData) => {
+        bag.append("fragment", "Coaching Bienestar")
+        const data = {body: JSON.stringify(formDataToObject(bag))}
+        console.log(data)
+        fetchDefault("/mail/create", data, (d: tpDtmResponse) => {
+            console.log("response",d)
+        }, (e: tpDtmResponse) => {
+            console.log("error", e)
+        })
+        
+        console.log('Datos enviados:', data);
+    }
+
     return <div className="CoachingBienestar">
         <Navbar />
         <Franja text="Coaching para el Bienestar " />
@@ -46,7 +63,7 @@ const CoachingBienestar = () => {
                         {textos[languageFlag].textcoachingpide}
                     </p>
                 <div className='ctForm'>
-                    <FormDefault />
+                    <FormDefault hSubmit={subtmitOnFormDefault}/>
                     <img className='imgEquip'  src="../../../src/assets/background/contactanos.jpg" alt="Equipo de trabajo" />
                 </div>
             </div>

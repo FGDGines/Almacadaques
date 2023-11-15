@@ -8,9 +8,27 @@ import { useContext } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
 import { testimonies } from '../../data/testimonies';
 import Testimony from '../Testimony/Testimony';
+import { tpDtmResponse } from '../../types/typesComponents';
+import { formDataToObject } from '../../helpers/Forms';
+import { fetchDefault } from '../../helpers/Server';
 
 const CoachingInternacional = () => {
     const { languageFlag } = useContext(GlobalContext)
+
+
+    const subtmitOnFormDefault = (bag: FormData) => {
+        bag.append("fragment", "Coaching Internacional")
+        const data = {body: JSON.stringify(formDataToObject(bag))}
+        console.log(data)
+        fetchDefault("/mail/create", data, (d: tpDtmResponse) => {
+            console.log("response",d)
+        }, (e: tpDtmResponse) => {
+            console.log("error", e)
+        })
+        
+        console.log('Datos enviados:', data);
+    }
+
     return <div className="CoachingInternacional">
         <Navbar />
         <Franja text={textos[languageFlag].textcoachingtitleInternacional} />
@@ -71,7 +89,7 @@ const CoachingInternacional = () => {
                 <p className='parrafo info'>{textos[languageFlag].textcoachinginterPideinfo}</p>
 
                 <div className='ctForm'>
-                    <FormDefault />
+                    <FormDefault  hSubmit={subtmitOnFormDefault}/>
                     <img className='imgEquip' src=".../../../src/assets/background/contactanos.jpg" alt="Equipo de trabajo" />
                 </div>
 

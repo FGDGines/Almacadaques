@@ -5,10 +5,26 @@ import Franja from '../Franja/Franja';
 import FormDefault from '../FormDefault/FormDefault';
 import StatisticComponent from '../StatisticComponent/StatisticComponent';
 import { statisticInfo } from '../../data/StatisticComponent';
+import { formDataToObject } from '../../helpers/Forms';
+import { tpDtmResponse } from '../../types/typesComponents';
+import { fetchDefault } from '../../helpers/Server';
 
 
 
 function ExperienciasDeMedida() {
+    const subtmitOnFormDefault = (bag: FormData) => {
+        bag.append("fragment", "Experiencias de medida")
+        const data = {body: JSON.stringify(formDataToObject(bag))}
+        console.log(data)
+        fetchDefault("/mail/create", data, (d: tpDtmResponse) => {
+            console.log("response",d)
+        }, (e: tpDtmResponse) => {
+            console.log("error", e)
+        })
+        
+        console.log('Datos enviados:', data);
+    }
+
     return (
         <div className="ExperienciasdeMedida">
             <Navbar />
@@ -27,7 +43,7 @@ function ExperienciasDeMedida() {
                         <img className='imgEquip' src="../../../src/assets/background/contactanos.jpg" alt="Equipo de trabajo" />
                         <div className='ctFor'>
                             <h3>Trabajemos Juntos</h3>
-                            <FormDefault />
+                            <FormDefault hSubmit={subtmitOnFormDefault}/>
                         </div>
 
                     </div>

@@ -1,3 +1,4 @@
+import {FormData} from "formdata-node"
 require('dotenv').config()
 export const SendMail= (init: {[key: string]: string})=>{
     const bag  = new FormData()
