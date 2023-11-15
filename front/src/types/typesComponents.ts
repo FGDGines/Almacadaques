@@ -150,12 +150,25 @@ type AudioPlayerProps = {
     url?: string;
     titulo?: string;
     autor?: string;
+<<<<<<< HEAD
+    imagen?: string;
+<<<<<<< HEAD
+    mostrarDatos?: boolean
+    mostrarControles?: boolean
+    enPodcast?:boolean
+};
+=======
+    mostrarDatos?: boolean;
+    mostrarControles?: boolean;
+=======
+>>>>>>> 6d6416dc2b888df8d3d33a0c30994eedc4286369
     enPodcast?: boolean;
     categoria?: string;
 };
 type iconsProps = {
     src?: string
 }
+>>>>>>> 2d90af9bb00b27b2fdbb89b7719bcf1d02336b1d
 
 interface Red {
     archivo: string;

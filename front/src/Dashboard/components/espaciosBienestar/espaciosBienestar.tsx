@@ -1,10 +1,12 @@
 
 import './espaciosBienestar.css'
-
 import { tlEspacios } from '../../../data/tlEspacios';
 import { useState } from 'react';
+import { useContext } from 'react';
+import { GlobalContext } from '../../../contexts/GlobalContext';
 
 export const EspaciosBienestar = () => {
+    const { setLayoutID } = useContext(GlobalContext);
     const tlData = tlEspacios.ES;
     const [data, setData] = useState(tlData);
 
@@ -22,7 +24,7 @@ export const EspaciosBienestar = () => {
             <div className="barraBienestar">
                 <h2>Espacios de Bienestar</h2>
                 <div className='Buton'>
-                    <a href="#" className='EnlaceBton'>
+                    <a href="#" className='EnlaceBton' onClick={() => setLayoutID(27)}>
                         <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/mingcute_add-line.svg" alt="" />
                         Agregar
                     </a>
@@ -42,7 +44,7 @@ export const EspaciosBienestar = () => {
                             <img src="../../../../src/assets/Dashboard-almacadaques/inicio/checks.svg" alt="" className="iconoBienestar" />
                             <p className="fraseBienestar">{item.text}</p>
                             <div className="iconosAcciones">
-                                <div className="accionEditar">
+                                <div className="accionEditar" onClick={() => setLayoutID(27)}>
                                     <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" />
                                     <p className="TextAcciones">Editar</p>
                                 </div>

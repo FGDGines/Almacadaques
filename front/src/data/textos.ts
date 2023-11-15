@@ -80,6 +80,14 @@ export const textos: TextosType<
     "textcomentario" |
     "textplaceholcoment" |
     "textaceptar" |
+
+    //Textos carrousel 
+    "TitleCarrousel1"|
+    "TitleCarrousel2"|
+    "TitleCarrousel3"|
+    "TitleCarrousel4"|
+    "TitleCarrousel5"|
+    "TitleCarrousel6"|
     //cocaching & mentoring internacional
     "textcoachingtitleInternacional" |
     "textcoachinginterna1" |
@@ -102,12 +110,18 @@ export const textos: TextosType<
     //Agenda Experiencias de bienestar
     //Agenda experiencias a medida
     //colaborador
+    "textoColaboradores" |
     "textoeducadora" |
-    "textcolamiembrequi" |
-    "textcolaborcontact"
+    "textcolaborcontact"|
     //blo( Tips de bienestar)
     //podcast
     //blog retiros
+    //Contactar
+    "textocontactar1" | 
+    "textocontactar2" |
+    "textocontactarjuntoscrearemos" |
+    "textocontactartelf" |
+    "textocontactarformulariotexto1" 
     
 
     
@@ -119,9 +133,9 @@ export const textos: TextosType<
         agenda: "Agenda",
         expBienestar: "Experiencias de Bienestar",
         expDeMedida: "Expeiencias de Medida",
-        colabrador: "Colaborador",
+        colabrador: "Colaborad@r",
         testimonios: "Testominio",
-        blog: "blog",
+        blog: "Blog",
         blogPost: "Tips de Bienestar",
         blogRetiro: "Blog Retiros",
         podcast: "Podcast",
@@ -161,7 +175,7 @@ export const textos: TextosType<
         parrafosobremi8: "Me encanta aprender cada día y siempre tengo retos.",
         parrafosobremi9: "Me gusta cuidarme y es muy importante mi bienestar. Cuando yo estoy bien mi entorno también.",
         parrafosobremi10: "Mis hobbies favoritos son: leer, escribir, arte, nadar en el mar, cantar, bailar, viajar, descubrir otras culturas, senderismo.",
-        titleparrafo3: "Bibliografía personal :",
+        titleparrafo3: "Bibliografía personal",
         parrafosobremi11:"Licenciada en Psicología (Universidad Oberta de Catalunya).",
         parrafosobremi12:"Máster en Coaching Teleológico (Universidad de Barcelona).",
         parrafosobremi13:"Posgrado en Liderazgo y Desarrollo personal (Instituto Borja Vilaseca).",
@@ -170,6 +184,14 @@ export const textos: TextosType<
         parrafosobremi16:"Doing Business Globally (ESADE).",
         parrafosobremi17:"Postgrado en Licitaciones Internacionales (Universidad La Salle).",
         parrafosobremi18:"Formación continuada en el ámbito de empresa y crecimiento personal.",
+
+        TitleCarrousel1:"¿Te sientes estresad@?",
+        TitleCarrousel2: "¿Quieres un cambio de aires?",
+        TitleCarrousel3: "¿Sientes que estás bloquead@?",
+        TitleCarrousel4: "¿Quieres hacer un cambio y no sabes por dónde empezar?",
+        TitleCarrousel5: "¿Necesitas inspiración?",
+        TitleCarrousel6: "¿Quieres ser tu mejor versión?",
+
         //Coaching para el Bienestar
         textcoaching1: "¿Sientes que existe una brecha entre la vida que llevas y la que quieres llevar?¿Quieres convertirte en tu mejor versión?",
         textcoachingParrafo1:"Un proceso de coaching, respetuoso, amable y profesional, te ayudará a alcanzar tu objetivo. ¿Te acompaño?",
@@ -207,12 +229,18 @@ export const textos: TextosType<
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
         //colaborador
+        textoColaboradores :"Colaborador@s",
         textoeducadora: "Educadora de Masaje Infantil",
-        textcolamiembrequi: "Miembros del Equipo",
         textcolaborcontact: "Contactame",
         //blo( Tips de bienestar)
         //podcast
         //blog retiros
+        //Contactar
+        textocontactar1: "Contacto",
+        textocontactar2: "¿Estás realmente comprometid@ en transformarte para cambiar tu vida?",
+        textocontactarjuntoscrearemos: "Juntos crearemos el plan de acción que necesitas para dar el giro que te llevará al siguiente nivel en tu vida, logrando un mayor bienestar.",
+        textocontactartelf: "Teléfono:",
+        textocontactarformulariotexto1: "Ponerse en contacto",
     },
     [enLanguageFlag.EN]: {
         inicio: "Home",
@@ -280,6 +308,15 @@ export const textos: TextosType<
         textcoaching4: "I help he person through a journey of inner exploration. We will start from where your conflict or discomfort begins and go through to achieve your goals.",
         textcoaching5: "When you make the determination to lead your life, possibly after some crisis or imbalance, the support of a coach can help you accelerate and achieve better results",
         textcoachingpide:"Request more information without obligation",
+
+        TitleCarrousel1: "Feeling stressed?",
+        TitleCarrousel2: "Need a change of scenery?",
+        TitleCarrousel3: "Feeling stuck?",
+        TitleCarrousel4: "Want to make a change but don't know where to start?",
+        TitleCarrousel5: "Need inspiration?",
+        TitleCarrousel6: "Want to be your best self?",
+
+
         //formulario coaching para el bienestar
         textnombre:"Name",
         textplaceholdescribe: "Enter your name here",
@@ -310,12 +347,18 @@ export const textos: TextosType<
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
         //colaborador
+        textoColaboradores :"Collaborators",
         textoeducadora: "Infant Massage Educator",
-        textcolamiembrequi: "Team members",
         textcolaborcontact: "Contact me",
         //blo( Tips de bienestar)
         //podcast
         //blog retiros
+        //Contactar
+        textocontactar1: "Contact",
+        textocontactar2: "Are you really committed to transforming yourself to change your life?",
+        textocontactarjuntoscrearemos: "Together we will create the action plan you need to take the turn that will take you to the next level in your life, achieving greater well-being.",
+        textocontactartelf: "Telephone:",
+        textocontactarformulariotexto1: "Get in touch",
     
     },
     [enLanguageFlag.CAT]: {
@@ -325,7 +368,7 @@ export const textos: TextosType<
         agenda: "Agenda",
         expBienestar: "Experiències de benestar",
         expDeMedida: "Experiències a mida",
-        colabrador: "COLABORAD@RS",
+        colabrador: "Colaborad@rs",
         testimonios: "Testomini",
         blog: "Blog",
         blogPost: "Tips de Bienestar",
@@ -409,15 +452,32 @@ export const textos: TextosType<
         textcoachinginterna10: "Com a mentora internacional et comparteixo les meves pròpies experiències i amb molta empatia i sensibilitat t'acompanyo a assolir els objectius que vols assolir, aconseguint així més benestar.",
         textcoachinginterna11: "Contacta per definir junts com et puc ajudar a aconseguir els resultats que cerques.",
         textcoachinginterPideinfo: "Demana més informació sense compromís",
+
+        TitleCarrousel1: "Et sents estressat/da?",
+        TitleCarrousel2: "Vols un canvi d'aires?",
+        TitleCarrousel3: "Et sents bloquejat/da?",
+        TitleCarrousel4: "Vols fer un canvi i no saps per on començar?",
+        TitleCarrousel5: "Necessites inspiració?",
+        TitleCarrousel6: "Vols ser la teva millor versió?",
+
+
         //Agenda Experiencias de bienestar
         //Agenda experiencias a medida
         //colaborador
+        textoColaboradores :"Col·laborador@s",
         textoeducadora: "Educadora de Massatge Infantil",
-        textcolamiembrequi: "Membres de l'equip",
         textcolaborcontact: "Contacta'm",
         //blo( Tips de bienestar)
         //podcast
         //blog retiros
+        //Contactar
+        textocontactar1: "Contacte",
+        textocontactar2: "Estàs realment compromès a transformar-te per canviar la teva vida?",
+        textocontactarjuntoscrearemos: "Junts crearem el pla d'acció que necessites per fer el gir que et portarà al següent nivell a la teva vida, aconseguint un benestar més gran.",
+        textocontactartelf: "Telèfon:",
+        textocontactarformulariotexto1: "Poseu-vos en contacte",
+
+
     }
 
 };

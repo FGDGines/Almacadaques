@@ -1,3 +1,4 @@
+@import '../../../src/fonts.css';
 .BlogRetiros {
   background-color: rgb(240, 240, 240);
   display: flex;
@@ -9,11 +10,13 @@
   position: relative;
   z-index: 1;
   width: 93.5vw;
-  padding: 3vw;
+  max-width: 93.5vw;
+  padding: 2vw;
+  overflow-x: auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  gap: 2vw;
 }
+
 .infoCtRetiro {
   width: 25vw;
   border-radius: .4vw;
@@ -21,11 +24,67 @@
   margin-bottom: 2vw;
 }
 .imgRetiro {
+  position: relative;
   width: 25vw;
+  overflow: hidden;
 }
 .imgRetiro img {
   width: 100%;
   height: 100%;
+}
+.cintaCompleto{
+  position: absolute;
+  margin-top: 2.5vw;
+  margin-left: -6.5vw;
+  padding: .2vw;
+  width: 20vw;
+  height: 6vh;
+  background-color: #cf1348;
+  position: absolute;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: cursive;
+  font-size: 1.4vw;
+  font-family: PT-Script-Monsoon;
+  transform: rotate(-45deg);
+}
+.cintaAplazado{
+  position: absolute;
+  margin-top: 2.5vw;
+  margin-left: -6.5vw;
+  padding: .2vw;
+  width: 20vw;
+  height: 6vh;
+  background-color: #FC9627;
+  position: absolute;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: cursive;
+  font-size: 1.4vw;
+  font-family: PT-Script-Monsoon;
+  transform: rotate(-45deg);
+}
+.cintaPlazasLimitadas{
+  position: absolute;
+  margin-top: 2.5vw;
+  margin-left: -6.5vw;
+  padding: .2vw;
+  width: 20vw;
+  height: 6vh;
+  background-color: green;
+  position: absolute;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: cursive;
+  font-size: 1.1vw;
+  font-family: PT-Script-Monsoon;
+  transform: rotate(-45deg);
 }
 .infoRetiro {
   width: 22vw;
@@ -51,14 +110,20 @@
 .time p {
   font-size: 1vw;
 }
-.authorRetiro h4 {
+.authorRetiro a {
   font-size: 1.1vw;
   font-weight: 700;
+  text-decoration: none;
+  color: #cf1348;
+  cursor: pointer;
 }
 .informacionderetiro {
-  width: 98vw;
+  width: 100vw;
   height: 100vh;
-  padding: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ padding-left: 25vw;
   position: absolute;
   z-index: 10;
   background: rgba(255, 255, 255, 0.7);

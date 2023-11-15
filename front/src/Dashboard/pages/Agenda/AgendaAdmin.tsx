@@ -32,7 +32,7 @@ function AgendaAdmin() {
 
         </div>
 
-          <div className="BtonAgregarEventosmain" onClick={() => setLayoutID(23)}>
+          <div className="BtonAgregarEventosmain" onClick={() => setLayoutID(30)}>
             <BtnMas/>
           </div>
           
