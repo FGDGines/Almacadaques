@@ -100,6 +100,9 @@ export const textos: TextosType<
 
 
     //Agenda Experiencias de bienestar
+    "textosinviertebienestar" |
+    "textostalleresyretiros" |
+    "textosretirosanteriores" |
     //Agenda experiencias a medida
     "textoeresunaempersa" |
     "textotrabajemosjuntos" |
@@ -213,6 +216,9 @@ export const textos: TextosType<
         textcoachinginterna11: "Contácta  para definir juntos como te puedo ayudar a conseguir los resultados que buscas.",
         textcoachinginterPideinfo: "Pide más información sin compromiso",
         //Agenda Experiencias de bienestar
+        textosinviertebienestar: "¡Invierte en tu bienestar!",
+        textostalleresyretiros: " Talleres y retiros con colaboradores expertos en distintas disciplinas.",
+        textosretirosanteriores: " Retiros Anteriores ",
         //Agenda experiencias a medida
         textoeresunaempersa: "¿Eres una empresa consciente que invierte en el bienestar de sus trabajadores? Contáctanos para organizarte la experiencia a medida que mejor se adapte a tu perfil!.",
         textotrabajemosjuntos: "Trabajemos Juntos",
@@ -321,9 +327,10 @@ export const textos: TextosType<
         textcoachinginterna10: "As an international mentor I share my own experiences with you and with a lot of empathy and sensitivity I help you achieve the objectives you want to achieve, thus achieving greater well-being.",
         textcoachinginterna11: "Contact us to define together how I can help you achieve the results you are looking for.",
         textcoachinginterPideinfo: "Request more information without obligation",
-
-
         //Agenda Experiencias de bienestar
+        textosinviertebienestar: "Invest in your well-being!",
+        textostalleresyretiros: " Workshops and retreats with expert collaborators in different disciplines.",
+        textosretirosanteriores: " Previous Withdrawals ",
         //Agenda experiencias a medida
         textoeresunaempersa: "Are you a conscious company that invests in the well-being of its workers? Contact us to organize the experience as it best suits your profile!.",
         textotrabajemosjuntos: "Let's work together",
@@ -339,7 +346,7 @@ export const textos: TextosType<
         textocontactar2: "Are you really committed to transforming yourself to change your life?",
         textocontactarjuntoscrearemos: "Together we will create the action plan you need to take the turn that will take you to the next level in your life, achieving greater well-being.",
         textocontactartelf: "Telephone:",
-        textocontactarformulariotexto1: "Get in touch",
+        textocontactarformulariotexto1: "Contact us",
     
     },
     [enLanguageFlag.CAT]: {
@@ -434,6 +441,9 @@ export const textos: TextosType<
         textcoachinginterna11: "Contacta per definir junts com et puc ajudar a aconseguir els resultats que cerques.",
         textcoachinginterPideinfo: "Demana més informació sense compromís",
         //Agenda Experiencias de bienestar
+        textosinviertebienestar: "Inverteix en el teu benestar!",
+        textostalleresyretiros: " Tallers i recessos amb col·laboradors experts en diferents disciplines.",
+        textosretirosanteriores: "Retirs Anteriors",
         //Agenda experiencias a medida
         textoeresunaempersa: "Ets una empresa conscient que inverteix en el benestar dels treballadors? Contacta'ns per organitzar-te l'experiència a mesura que millor s'adapti al teu perfil!.",
         textotrabajemosjuntos: "Treballem Junts",
