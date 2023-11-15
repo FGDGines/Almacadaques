@@ -11,12 +11,17 @@
     "front": "vite --mode development"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^40.0.0",
+    "@ckeditor/ckeditor5-react": "^6.1.0",
+    "@mui/icons-material": "^5.14.16",
     "@mui/lab": "^5.0.0-alpha.145",
     "@mui/material": "^5.14.10",
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide": "^4.1.4",
     "@types/sequelize": "^4.28.17",
+    "moment": "^2.29.4",
     "react": "^18.2.0",
+    "react-big-calendar": "^1.8.5",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
     "react-pageflip": "^2.0.3",
