@@ -1,11 +1,11 @@
 import './Propuesta.css'
-import {AlternateTimeline} from '../TimeLine/TimeLine';
+import AlternateTimeline from '../TimeLine/TimeLine';
 import { tlEspacios } from '../../data/tlEspacios';
 import { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
 import { fetchDefault } from '../../helpers/Server';
 import { formDataToObject } from '../../helpers/Forms';
-import { tpTimeLineData } from '../../types/typesComponents';
+import { tpDtmResponse, tpTimeLineData } from '../../types/typesComponents';
 
 const Propuesta = ()=>{
     const {languageFlag} = useContext(GlobalContext)
@@ -19,9 +19,10 @@ const Propuesta = ()=>{
 
     useEffect(() => {
         const api = async () => {
-            fetchDefault("/espacio/read", data, (d) => {
+            fetchDefault("/espacio/read", data, (d: tpDtmResponse) => {
+                if(!d.bag || !d.bag.length)return  
                 for (let index = 0; index < d.bag.length; index++) {
-                    const element = d.bag[index];
+                    const element:{id: number , es:string , en: string , cat: string} = d.bag[index];
                     espacios.push({ id: element.id, text: element.es || element.en || element.cat })
                 }
                 const t = tlEspacios[languageFlag]
@@ -31,6 +32,7 @@ const Propuesta = ()=>{
             
         };
         api()
+        // eslint-disable-next-line
     }, []);
     return <div className="Propuesta">
         <div className="title">
