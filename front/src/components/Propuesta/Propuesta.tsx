@@ -15,11 +15,13 @@ const Propuesta = ()=>{
     da.set("lang", l)
 
     const data = {body: JSON.stringify(formDataToObject(da))}
-    const espacios: tpTimeLineData[] = []
+    
+    
 
     useEffect(() => {
         const api = async () => {
             fetchDefault("/espacio/read", data, (d: tpDtmResponse) => {
+                const espacios: tpTimeLineData[] = []            
                 if(!d.bag || !d.bag.length)return  
                 for (let index = 0; index < d.bag.length; index++) {
                     const element:{id: number , es:string , en: string , cat: string} = d.bag[index];
