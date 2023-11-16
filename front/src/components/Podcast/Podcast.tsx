@@ -47,7 +47,7 @@ const Podcast = () => {
     const handleCategoryFilter = (category: string) => {
         setSelectedCategory(category);
 
-        console.log(category)
+        // console.log(category)
 
         const term = removeAccents(searchTerm).toLowerCase();
 
@@ -55,18 +55,18 @@ const Podcast = () => {
         if (searchTerm.trim() === '') {
             const filteredByCategory = podcastData.filter(podcast => {
                 const podcastCategory = removeAccents(podcast.categoria?.toLowerCase() || ''); // Asegúrate de manejar 'categoria' como una cadena
-                console.log('Podcast Category:', podcastCategory); // Muestra la categoría del podcast en la consola
+                // console.log('Podcast Category:', podcastCategory); // Muestra la categoría del podcast en la consola
                 const match = podcastCategory === removeAccents(category);
-                console.log('Match:', match); // Muestra si hay coincidencia en la consola
+                // console.log('Match:', match); // Muestra si hay coincidencia en la consola
                 return podcast.categoria && match;
             });
-            console.log('Resultados filtrados por categoría:', filteredByCategory); // Muestra los resultados filtrados en la consola
+            // console.log('Resultados filtrados por categoría:', filteredByCategory); // Muestra los resultados filtrados en la consola
 
             setFilteredResults(filteredByCategory);
 
         } else {
             const regex = new RegExp(term.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&"));
-            console.log(regex);
+            // console.log(regex);
             const filteredByCategory = podcastData.filter(podcast =>
                 podcast.categoria &&
                 removeAccents(podcast.categoria.toLowerCase()) === removeAccents(category) &&
@@ -76,10 +76,10 @@ const Podcast = () => {
                 )
             );
 
-            console.log(filteredByCategory);
+            // console.log(filteredByCategory);
 
             setFilteredResults(filteredByCategory);
-            console.log(setFilteredResults(filteredByCategory));
+            // console.log(setFilteredResults(filteredByCategory));
         }
     };
 

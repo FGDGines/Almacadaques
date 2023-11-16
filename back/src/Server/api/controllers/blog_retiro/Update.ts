@@ -94,7 +94,6 @@ export const Update = async (req: Request, res: Response) => {
             }
             if (past) {
                 const uploadDir = path.join(__dirname,  RelativePath.blog_retiro)
-                console.log(path.join(uploadDir, json[image_number]))
                 await DeleteFile(path.join(uploadDir, json[image_number]))        
             }
             const url = await UploadFile( image, path.join(__dirname,  RelativePath.blog_retiro), "jpg", Formatos.image)

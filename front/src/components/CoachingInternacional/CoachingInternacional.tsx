@@ -6,7 +6,6 @@ import FormDefault from '../FormDefault/FormDefault';
 import { textos } from '../../data/textos';
 import { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
-// import { testimonies } from '../../data/testimonies';
 import Testimony from '../Testimony/Testimony';
 import { tpDtmResponse } from '../../types/typesComponents';
 import { formDataToObject } from '../../helpers/Forms';
@@ -19,14 +18,9 @@ const CoachingInternacional = () => {
     const subtmitOnFormDefault = (bag: FormData) => {
         bag.append("fragment", "Coaching Internacional")
         const data = {body: JSON.stringify(formDataToObject(bag))}
-        console.log(data)
-        fetchDefault("/mail/create", data, (d: tpDtmResponse) => {
-            console.log("response",d)
-        }, (e: tpDtmResponse) => {
-            console.log("error", e)
-        })
+        fetchDefault("/mail/create", data)
         
-        console.log('Datos enviados:', data);
+        // console.log('Datos enviados:', data);
     }
 
 
@@ -41,7 +35,6 @@ const CoachingInternacional = () => {
             const data = {body: JSON.stringify(formDataToObject(da))}
             const testimony: tpTestimony[] = []
             fetchDefault("/testimony/read", data, (d: tpDtmResponse) => {
-            console.log(d)
                 if (!d.bag) {
                     return
                 }
@@ -57,7 +50,6 @@ const CoachingInternacional = () => {
                     })
                 }
                 setTestimonies(testimony)
-                console.log(testimonies)
             })  
             
         };

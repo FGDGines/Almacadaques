@@ -12,7 +12,7 @@ import './BlogPost.css';
 const BlogPost = () => {
   const { setLayoutID } = useContext(GlobalContext);
   const handleBookInit = () => {
-    console.log('El libro se ha inicializado.');
+    // console.log('El libro se ha inicializado.');
   };
 
 

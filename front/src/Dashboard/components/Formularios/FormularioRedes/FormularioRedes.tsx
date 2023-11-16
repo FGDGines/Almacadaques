@@ -48,7 +48,7 @@ export const FormularioRedes = () => {
             });
 
             if (response.ok) {
-                console.log('Datos del formulario enviados exitosamente');
+                // console.log('Datos del formulario enviados exitosamente');
                 // Limpiar el formulario después de enviar los datos
                 setFormData({
                     url: '',

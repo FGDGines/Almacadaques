@@ -14,7 +14,6 @@ export const Create = async (req: Request, res: Response) => {
     try {
         // @ts-ignore
         const image = req.files.src.data 
-        console.log(image)
         if (image) {
             const url = await UploadFile( image, path.join(__dirname,  RelativePath.blog_retiro), "jpg", Formatos.image)
         
