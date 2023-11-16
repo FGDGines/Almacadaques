@@ -30,30 +30,34 @@ const CoachingInternacional = () => {
     }
 
 
-    const [result, setResult] = useState<tpTestimony[]>([]);
+    const [testimonies, setTestimonies] = useState<tpTestimony[]>([]);
     const l = languageFlag.toLowerCase() 
-    const da = new FormData()
-    da.set("lang", l)
-
-    const data = {body: JSON.stringify(formDataToObject(da))}
-    const espacios: tpTestimony[] = []
 
     useEffect(() => {
         const api = async () => {
+            const da = new FormData()
+            da.set("lang", l)
+        
+            const data = {body: JSON.stringify(formDataToObject(da))}
+            const testimony: tpTestimony[] = []
             fetchDefault("/testimony/read", data, (d: tpDtmResponse) => {
+            console.log(d)
+                if (!d.bag) {
+                    return
+                }
                 for (let index = 0; index < d.bag.length; index++) {
-                    const element = d.bag[index];
-                    espacios.push({
+                    const element: { id: number, witness: string, createdAt: string, data_testimony: { es: string, en: string, cat: string}}= d.bag[index];
+                    testimony.push({
                         id: element.id,
                         witness: element.witness,
                         day: 0,
                         month: 0,
                         year: 0,
-                        testimony: element.es || element.en || element.cat
+                        testimony: element.data_testimony.es || element.data_testimony.en || element.data_testimony.cat
                     })
                 }
-                console.log(espacios[0])
-                setResult(espacios)
+                setTestimonies(testimony)
+                console.log(testimonies)
             })  
             
         };
@@ -89,7 +93,7 @@ const CoachingInternacional = () => {
                 <div className="testimonio">
                     <h3 className='titletestimonio'>{textos[languageFlag].textcoachinginternaTestimonio}</h3>
                     <div className="infotestimonios">
-                        {result.map((testimony) => (
+                        {testimonies.map((testimony) => (
                             <Testimony
                                 key={testimony.id}
                                 id={testimony.id}
