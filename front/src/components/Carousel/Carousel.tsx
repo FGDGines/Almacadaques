@@ -46,10 +46,11 @@ const Carousel: FC<tpCarouselData> = ({ items }) => {
     const da = new FormData()
     da.set("lang", l)
     const data = {body: JSON.stringify(formDataToObject(da))}
-    const carousel: tpCarouelItem[] = []
+    
     
     useEffect(() => {
         const api = async () => {
+            const carousel: tpCarouelItem[] = []
             fetchDefault("/carousel/read", data, (d: tpDtmResponse) => {
                 if(!d.bag) return 
                 for (let index = 0; index < d.bag.length; index++) {
