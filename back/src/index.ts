@@ -1,5 +1,4 @@
-const Server = require('./Server/models/Server')
+import { setUpServer } from './Server/models/Server'
 require('dotenv').config()
 
-
-const app = new Server(process.env.PORT)
+setUpServer(process.env.PORT)
