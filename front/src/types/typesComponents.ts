@@ -36,7 +36,7 @@ type tpTestimony = {
 
 type tpBlogInfo = {
     index: number;
-    day?: number[];
+    day?: number[] | number;
     month?: number;
     year?: number;
     image: string;
@@ -135,7 +135,7 @@ type tpDialogMUI1 = {
 type tpDtmResponse = {
     msg: string
     status: number
-    bag?: [] | unknown
+    bag?: [] 
 }
 
 type tpObjectStringToStrig = {
@@ -150,9 +150,13 @@ type AudioPlayerProps = {
     url?: string;
     titulo?: string;
     autor?: string;
-    enPodcast?: boolean;
-    categoria?: string;
+    imagen?: string;
+    mostrarDatos?: boolean
+    mostrarControles?: boolean
+    enPodcast?:boolean,
+    categoria?: string 
 };
+
 type iconsProps = {
     src?: string
 }

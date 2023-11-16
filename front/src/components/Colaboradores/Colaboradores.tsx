@@ -13,11 +13,7 @@ function Colaboradores() {
     return (
         <>
             <Navbar />
-            <Franja text='Colaborad@res' />
-            <h2 className='TitleColab'>
-            {textos[languageFlag].textcolamiembrequi}
-              
-                </h2>
+            <Franja text={textos[languageFlag].textoColaboradores}/>
             <div className="colaboradores">
                     <Tarjetacolaboradores colaboradores={ListaColaboradores} />
             </div>

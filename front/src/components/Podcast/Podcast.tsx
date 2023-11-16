@@ -4,7 +4,7 @@ import Franja from '../Franja/Franja';
 import Footer from '../Footer/Footer';
 import { podcastData } from "../../data/listPodcast";
 import { VideosPodcast } from '../ItemPodcast/ItemPodcast'
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { AudioPlayerProps } from '../../types/typesComponents';
 
 const removeAccents = (text: string) => {
@@ -16,18 +16,17 @@ const removeAccents = (text: string) => {
 const Podcast = () => {
 
     const [selectedPodcast, setSelectedPodcast] = useState<AudioPlayerProps>(podcastData[0]);
-    const [searchInput, setSearchInput] = useState('');
-    const [filteredPodcasts, setFilteredPodcasts] = useState<AudioPlayerProps[]>(podcastData);
 
 
     const handlePodcastClick = (podcast: AudioPlayerProps) => {
         setSelectedPodcast(podcast);
     };
     const [selectedCategory, setSelectedCategory] = useState('');
+    selectedCategory
 
     const [filteredResults, setFilteredResults] = useState<AudioPlayerProps[]>([]);
     const [searchTerm, setSearchTerm] = useState('');
-    const [searchResults, setSearchResults] = useState<AudioPlayerProps[]>([]);
+    // const [searchResults, setSearchResults] = useState<AudioPlayerProps[]>([]);
 
 
     const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -84,7 +83,7 @@ const Podcast = () => {
         }
     };
 
-    let displayedResults = searchTerm.trim() !== '' ? filteredResults : podcastData;
+    const  displayedResults = searchTerm.trim() !== '' ? filteredResults : podcastData;
     return (
         <div className="Podcast">
             <Navbar />
@@ -112,7 +111,7 @@ const Podcast = () => {
                     </div>
                 </div>
 
-             {searchTerm.trim() !== '' && (
+            {searchTerm.trim() !== '' && (
                     <div className="ctResultadosBusqueda">
                         {displayedResults.length === 0 ? (
                             <p className='mensaje'>No hay resultados para '{searchTerm}'</p>
@@ -121,12 +120,12 @@ const Podcast = () => {
                                 <div className='containerPod' key={index} onClick={() => handlePodcastClick(podcast)}>
                                     <div className="cubrir"></div>
                                     {podcast.titulo && (
-                                           <VideosPodcast
-                                           url={podcast.url}
-                                           titulo={podcast.titulo}
-                                           autor={podcast.autor}
-                                           enPodcast={podcast.enPodcast}
-                                       />
+                                        <VideosPodcast
+                                        url={podcast.url}
+                                        titulo={podcast.titulo}
+                                        autor={podcast.autor}
+                                        enPodcast={podcast.enPodcast}
+                                    />
                                     )}
                                 </div>
                             ))

@@ -19,42 +19,42 @@ const Mensaje = DB.define('mensaje', {
         allowNull: true
     }
 }, {
-    paranoid: true 
+    paranoid: true
 })
 
 
 const User = DB.define('user', {
-    correo:{
+    correo: {
         type: DataTypes.STRING
     },
-    password:{
+    password: {
         type: DataTypes.STRING
     },
-    id_data_user:{
+    id_data_user: {
         type: DataTypes.NUMBER
-    }, 
+    },
     deletedAt: {
         type: DataTypes.DATE,
         allowNull: true
     }
 }, {
-    paranoid: true 
+    paranoid: true
 })
 
 const DataUser = DB.define('data_user', {
     nombre: {
         type: DataTypes.STRING
     },
-    src:{
+    src: {
         type: DataTypes.STRING
-    }, 
+    },
     id_rol: {
         type: DataTypes.NUMBER
     }
 })
 
 const Rol = DB.define('role', {
-    label:{
+    label: {
         type: DataTypes.STRING
     }
 })
@@ -66,8 +66,8 @@ const Testimonio = DB.define('testimonio', {
     id_data: {
         type: DataTypes.STRING
     },
-    deletedAt:{
-        type: DataTypes.DATE, 
+    deletedAt: {
+        type: DataTypes.DATE,
         allowNull: true
     }
 }, {
@@ -76,27 +76,197 @@ const Testimonio = DB.define('testimonio', {
 
 
 const DataTestimonio = DB.define("data_testimonys", {
-    es:{
+    es: {
         type: DataTypes.STRING
     },
-    en:{
+    en: {
         type: DataTypes.STRING
     },
-    cat:{
+    cat: {
         type: DataTypes.STRING
     }
 })
 
-User.belongsTo(DataUser,{foreignKey: 'id_data_user'})
-DataUser.belongsTo(Rol,{foreignKey: 'id_rol'})
-Testimonio.belongsTo(DataTestimonio , {foreignKey: 'id_data'})
+const BlogRetiro = DB.define("blog_retiro", {
+    indice: {
+        type: DataTypes.INTEGER
+    },
+    day: {
+        type: DataTypes.JSON
+    },
+    month: {
+        type: DataTypes.INTEGER
+    },
+    year: {
+        type: DataTypes.INTEGER
+    },
+    image: {
+        type: DataTypes.JSON
+    },
+    id_title_lang: {
+        type: DataTypes.INTEGER
+    },
+    author: {
+        type: DataTypes.STRING
+    },
+    id_description_lang: {
+        type: DataTypes.INTEGER
+    }
+}) 
 
+
+const TextLibro = DB.define("text_libro", {
+    title: {
+        type: DataTypes.STRING
+    },
+    subtitle: {
+        type: DataTypes.STRING
+    },
+    content: {
+        type: DataTypes.JSON
+    },
+    imagen_src: {
+        type: DataTypes.STRING
+    }
+}) 
+
+
+const Carousel = DB.define("carousels", {
+    src: {
+        type: DataTypes.STRING
+    },
+    autor: {
+        type: DataTypes.STRING
+    },
+    link_autor: {
+        type: DataTypes.STRING
+    },
+    id_data_carousel: {
+        type: DataTypes.NUMBER
+    }, 
+    deletedAt:{
+        type: DataTypes.DATE,
+        allowNull: true
+    }
+},{
+    paranoid: false
+})
+
+
+const Podcast = DB.define("podcast", {
+    url: {
+        type: DataTypes.STRING
+    },
+    titulo: {
+        type: DataTypes.STRING
+    },
+    autor: {
+        type: DataTypes.TEXT
+    },
+    imagen: {
+        type: DataTypes.STRING
+    },
+    fecha: {
+        type: DataTypes.STRING
+    },
+    categoria: {
+        type: DataTypes.STRING
+    }
+}) 
+ 
+const Colaborador = DB.define("colaborador", {
+    nombre: {
+        type: DataTypes.STRING
+    },
+    cargo: {
+        type: DataTypes.STRING
+    },
+    descripcion: {
+        type: DataTypes.TEXT
+    },
+    imagen: {
+        type: DataTypes.STRING
+    },
+    contacto: {
+        type: DataTypes.STRING
+    }
+}) 
+
+const Espacio = DB.define("espacio", {
+    es: {
+        type: DataTypes.STRING
+    },
+    en: {
+        type: DataTypes.STRING
+    },
+    cat: {
+        type: DataTypes.STRING
+    }
+}) 
+
+const TitleLang = DB.define("title_lang", {
+    es: {
+        type: DataTypes.STRING
+    },
+    en: {
+        type: DataTypes.STRING
+    },
+    cat: {
+        type: DataTypes.STRING
+    }
+}) 
+
+const DescriptionLang = DB.define("description_lang", {
+    es: {
+        type: DataTypes.TEXT
+    },
+    en: {
+        type: DataTypes.TEXT
+    },
+    cat: {
+        type: DataTypes.TEXT
+    }
+}) 
+
+const DataCarousel = DB.define('data_carousels', {
+    es: {
+        type: DataTypes.STRING
+    },
+    en: {
+        type: DataTypes.STRING
+    },
+    cat: {
+        type: DataTypes.STRING
+    },
+    deletedAt:{
+        type: DataTypes.DATE, 
+        allowNull: true 
+    }
+}, {
+    paranoid: false
+})
+
+User.belongsTo(DataUser, { foreignKey: 'id_data_user' })
+DataUser.belongsTo(Rol, { foreignKey: 'id_rol' })
+Testimonio.belongsTo(DataTestimonio, { foreignKey: 'id_data' })
+Carousel.belongsTo(DataCarousel , {foreignKey: 'id_data_carousel'})
+BlogRetiro.belongsTo(TitleLang, {foreignKey: "id_title_lang"})
+BlogRetiro.belongsTo(DescriptionLang, {foreignKey: "id_description_lang"})
 
 export {
-    DataUser, 
+    DataUser,
     Mensaje,
-    Rol, 
+    Rol,
     User,
     Testimonio,
-    DataTestimonio
+    DataTestimonio, 
+    BlogRetiro,
+    TitleLang,
+    DescriptionLang,
+    Podcast,
+    Colaborador,
+    TextLibro,
+    Carousel,
+    Espacio,
+    DataCarousel 
 }

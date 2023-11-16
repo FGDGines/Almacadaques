@@ -5,6 +5,7 @@ import { NuevoCarrusel } from './NuevoCarrusel/NuevoCarrusel';
 import { GlobalContext } from '../../../contexts/GlobalContext';
 import { Loader } from '../LoaderOverlay/LoaderOverlay';
 
+
 interface ContentItem {
   src: string;
   alt: string;
@@ -30,7 +31,7 @@ interface Item {
 }
 
 
-export const ItemCarrusel: React.FC<BtnMasAgregarProps> = ({ direccion }) => {
+export const ItemCarrusel: React.FC<BtnMasAgregarProps> = () => {
   const [data, setData] = useState<Item[]>(itemsData);
 
   const handleDeleteItemCarrusel = (index: number) => {
@@ -38,29 +39,12 @@ export const ItemCarrusel: React.FC<BtnMasAgregarProps> = ({ direccion }) => {
     setData(updatedData);
   };
 
-  const handleUpdate = (index: number, newText: string) => {
-    const updatedData = data.map((item) => {
-      if (item.index === index && 'content' in item.content[0]) {
-        item.content[0].content[0].content[0].text = newText;
-      }
-      return item;
-    });
-    setData(updatedData);
-  };
+ 
 
   const { setLayoutID } = useContext(GlobalContext);
   const [showLoader, setShowLoader] = useState(false);
 
-  const handleClick = () => {
-    if (direccion !== undefined) {
-      setShowLoader(true);
-
-      // Simula un redireccionamiento
-      setTimeout(() => {
-        setLayoutID(direccion);
-      }, 1000); // Simulando una espera de 3 segundos
-    }
-  };
+  
 
   // Oculta el loader después de 3 segundos
   useEffect(() => {
@@ -104,7 +88,7 @@ export const ItemCarrusel: React.FC<BtnMasAgregarProps> = ({ direccion }) => {
                       <i onClick={() => handleDeleteItemCarrusel(item.index)}>
                         <img src="../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/Borrar.svg" alt="Borrar" />
                       </i>
-                      <i onClick={handleClick}>
+                      <i  onClick={() => setLayoutID(29)} >
                         <img src="../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/Editar.svg" alt="Editar" />
                       </i>
                     </div>
@@ -116,7 +100,7 @@ export const ItemCarrusel: React.FC<BtnMasAgregarProps> = ({ direccion }) => {
                       <i onClick={() => handleDeleteItemCarrusel(item.index)}>
                         <img src="../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/Borrar.svg" alt="Borrar" />
                       </i>
-                      <i onClick={handleClick}>
+                      <i  onClick={() => setLayoutID(29)}>
                         <img src="../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/Editar.svg" alt="Editar" />
                       </i>
                     </div>

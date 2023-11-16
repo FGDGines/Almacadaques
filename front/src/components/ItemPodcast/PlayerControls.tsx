@@ -6,6 +6,7 @@ import { Duration } from "./Duration";
 import './ItemPodcast.css'
 
 type Props = {
+  // eslint-disable-next-line
   playerRef: any;
   playing: boolean;
   loop: boolean;
@@ -46,14 +47,17 @@ export const PlayerControls = ({
     }
   };
 
-  const handleSeekMouseDown = (e: any) => {
+  const handleSeekMouseDown = () => {
     setSeeking(true);
   };
 
+  // eslint-disable-next-line
   const handleSeekChange = (e: any) => {
+
     setPlayed(parseFloat(e.target.value));
   };
 
+  // eslint-disable-next-line
   const handleSeekMouseUp = (e: any) => {
     playerRef.current?.seekTo(parseFloat(e.target.value));
     setSeeking(false);

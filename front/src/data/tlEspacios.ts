@@ -1,7 +1,7 @@
 import { tpTimeLineData } from "../types/typesComponents";
 import { enLanguageFlag } from "../types/typesContext";
 
-type tlTextosType = {
+export type tlTextosType = {
     [key in enLanguageFlag]: tpTimeLineData[]
 }
 
