@@ -8,6 +8,7 @@
 }
 .containerMainTesti {
   width: 93vw;
+  overflow-x: scroll;
 }
 .ItemTestimonioadmin {
   width: 100%;
@@ -15,12 +16,13 @@
 .timeBton {
   border-radius: 1.59713rem;
   background: #fefefe;
-  box-shadow: 0px 10.22142px 30.66425px 0px #fefefe;
-  width: 90%;
+  box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.25);
+  width: 85%;
   margin: 0px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding: 3vw;
 }
 .time {
@@ -30,11 +32,19 @@
   align-items: center;
 }
 
-.fechadetestimonio{
-  color:#38272D;
-font-family: Montserrat;
-font-size: 1.25rem;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
+.fechadetestimonio {
+  color: #38272d;
+  font-family: Montserrat;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+@media (max-width: 780px) {
+}
+@media (max-width: 450px) {
+  .time .fechadetestimonio {
+    font-size: .8rem;
+  }
 }

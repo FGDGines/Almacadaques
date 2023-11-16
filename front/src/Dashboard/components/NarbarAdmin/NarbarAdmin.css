@@ -39,6 +39,18 @@
   position: relative;
   z-index: 10;
 }
+.ImgIconHeaderAdmin:hover {
+  border-radius: 2rem;
+  padding: .2vw;
+  background: rgba(247, 215, 224, 0.50);
+}
+
+.selected {
+  background: rgba(247, 215, 224, 0.50);
+  border-radius: 2.5rem;
+  padding: .2vw;
+}
+
 .ImgIconHeaderAdmin {
   width: 1.5vw;
   cursor: pointer;
@@ -64,4 +76,42 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+}
+
+
+@media (max-width: 780px) {
+ .narbarAdmin{
+  z-index: 10000000000000000000000000000000;
+  width: 8vw;
+ }
+
+ .iconadmin p {
+  display: none;
+}
+.buttonSessionesAdmin .iconadmin img{
+  width: 4vw;
+  padding-bottom: 2.5vw;
+}
+.ImgIconHeaderAdmin{
+  width: 4vw;
+}
+
+}
+
+@media (max-width: 450px) {
+  .narbarAdmin{
+    z-index: 10000000000000000000000000000000;
+    width: 13vw;
+   }
+
+   .iconadmin p {
+    display: none;
+  }
+  .buttonSessionesAdmin .iconadmin img{
+    width: 7vw;
+    padding-bottom: 8vw;
+  }
+  .ImgIconHeaderAdmin{
+    width: 7vw;
+  }
 }

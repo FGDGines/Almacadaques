@@ -82,7 +82,7 @@ function FormularioColaboradores() {
             <NarbarAdmin></NarbarAdmin>
 
             <div className="contenidoFormCarrousel">
-                <BarSession direccion={17} tituloVista='Colaboradores' segundoTitulo='Añadir nuevo Colaborador' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
+                <BarSession direccion={20} tituloVista='Colaboradores' segundoTitulo='Añadir nuevo Colaborador' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
 
 
                 <form className='formCarrousel' onSubmit={handleSubmit}>

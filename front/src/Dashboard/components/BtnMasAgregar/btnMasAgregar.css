@@ -9,3 +9,25 @@
     align-items: center;
     justify-content: center;
 }
+@media (max-width: 780px) {
+    
+    .EnlaceBton{
+        border-radius: 1.94856rem;
+        padding: .5vw 2vw;
+        gap: 1vw;
+    }
+    .Img+{
+        width: 50vw;
+        height: 50vw;
+    }
+}
+@media (max-width: 450px) {
+    .EnlaceBton{
+        padding: .2vw 1.95vw;
+        gap: 1vw;
+    }
+    .Img+{
+        width: 30vw;
+        height: 30vw;
+    }
+}

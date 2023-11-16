@@ -16,17 +16,6 @@ function RetirosAdmin() {
         <BarSession tituloVista='Blogs' segundoTitulo='Retiros' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
         <div className="infocontainerRetiro">
           <ContainerRetiro/>
-          <ContainerRetiro/>
-          <ContainerRetiro/>
-          <ContainerRetiro/>
-          <ContainerRetiro/>
-          <ContainerRetiro/>
-          <ContainerRetiro/>
-          <ContainerRetiro/>
-          <ContainerRetiro/>
-          <ContainerRetiro/>
-          <ContainerRetiro/>
-          <ContainerRetiro/>
         </div>
         
       </div>

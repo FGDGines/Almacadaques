@@ -3,6 +3,7 @@
   background: #fefefe;
   box-shadow: 0px 8px 24px 0px #fcf1f4;
   height: 100%;
+  box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.25);
 }
 
 .barraBienestar {
@@ -99,4 +100,48 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+}
+
+@media (max-width: 780px) {
+  .barraBienestar h2 {
+    font-size: 2vw;
+  }
+  .espaciosBienestar {
+    border-radius: .5rem;
+  }
+  
+}
+
+@media (max-width: 450px) {
+  
+  .barraBienestar h2 {
+    font-size: 4vw;
+  }
+  .accionEditar img{
+    width: 4vw;
+  }
+  .accionEliminar img{
+    width: 4vw;
+  }
+  .accionEditar p{
+    font-size: 3vw;
+  }
+  .accionEliminar p{
+    font-size: 3vw;
+  }
+  .containerBienestarItems .bienestarTitulos {
+    width: 70%;
+  }
+  .ctBienestarItems {
+    height: 100%;
+  }
+  .itemsBienestar {
+    border-radius: 1rem;
+    padding: 1vw 1.5vw;
+    height: 10vw;
+    margin-bottom: 4vw;
+  }
+  .containerBienestarItems {
+    height: 45vw;
+  }
 }

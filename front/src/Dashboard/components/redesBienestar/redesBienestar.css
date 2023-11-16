@@ -2,6 +2,7 @@
   border-radius: 1.875rem;
   background: #fefefe;
   box-shadow: 0px 8px 24px 0px #fcf1f4;
+  box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.25);
 }
 
 .barraRedes {
@@ -77,4 +78,32 @@
   font-style: normal;
   font-weight: 600;
   line-height: normal;
+}
+
+@media (max-width: 780px) {
+
+}
+
+@media (max-width: 450px) {
+  .redesBienestar {
+    border-radius: .5rem;
+  }
+  .barraRedes h2 {
+    font-size: 5vw;
+  }
+  .iconoRedes {
+    width: 6vw;
+    height: 6vw;
+    margin-right: 1vw;
+  }
+  .containerBiernestarRedes{
+    padding: 4vw 0;
+  }
+  .itemsRedes {
+    border-radius: 1rem;
+    padding: 0.6vw 1.19vw;
+    margin-bottom: 2vw;
+    height: 6.5vw;
+  }
+
 }

@@ -91,7 +91,7 @@ function FormularioBlogBienestar() {
                 <NarbarAdmin></NarbarAdmin>
 
                 <div className="contenidoFormCarrousel">
-                    <BarSession direccion={17} tituloVista='Blog' segundoTitulo='Blog Bienestar' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
+                    <BarSession direccion={25} tituloVista='Blog' segundoTitulo='Blog Bienestar' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
 
 
                     <form className='formCarrousel' onSubmit={handleSubmit}>
