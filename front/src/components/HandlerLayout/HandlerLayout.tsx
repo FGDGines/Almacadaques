@@ -30,6 +30,16 @@ import { BlogBienestar } from '../../Dashboard/components/BlogBienestar/BlogBien
 import { BlogPodcast } from '../../Dashboard/components/BlogPodcast/BlogPodcast';
 import { FormularioEspaciosBienestar } from '../../Dashboard/components/Formularios/FormularioEspaciosBienestar/FormularioEspaciosBienestar';
 import { FormularioCarrousel } from '../../Dashboard/components/Formularios/FormularioCarrousel/FormularioCarrousel';
+import { FormularioEventos } from '../../Dashboard/components/Formularios/FormularioEventos/FormularioEventos';
+import { FormularioColaboradores } from '../../Dashboard/components/Formularios/FormularioColaboradores/FormularioColaboradores';
+import { FormularioBlogBienestar } from '../../Dashboard/components/Formularios/FormularioBlogBienestar/FormularioBlogBienestar';
+import { Book1 } from '../BlogPost/Book/Book_1';
+import { Book2 } from '../BlogPost/Book/Book_2';
+import { Book3 } from '../BlogPost/Book/Book_3';
+import { Book4 } from '../BlogPost/Book/Book_4';
+import { FormularioPospcast } from '../../Dashboard/components/Formularios/FormularioPospcast/FormularioPospcast'; 
+import { FormularioRetiros } from '../../Dashboard/components/Formularios/FormularioRetiros/FormularioRetiros';
+
 
 const HandlerLayout = () => {
   const { layoutID, setLayoutID } = useContext(GlobalContext);
@@ -147,8 +157,33 @@ const HandlerLayout = () => {
       screen = <FormularioCarrousel />;
       break;
 
-
-
+    case 30:
+      screen = <FormularioEventos />;
+      break;
+    case 31:
+      screen = <FormularioColaboradores />;
+      break;
+    case 32:
+      screen = <FormularioBlogBienestar />;
+      break;
+    case 33:
+      screen = <Book1 />;
+      break;
+    case 34:
+      screen = <Book2 />;
+      break;
+    case 35:
+      screen = <Book3 />;
+      break;
+    case 36:
+      screen = <Book4 />;
+      break;
+      case 37:
+        screen = <FormularioPospcast />;
+        break;
+        case 38:
+          screen = <FormularioRetiros />;
+          break;
 
 
     default:

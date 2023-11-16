@@ -11,7 +11,7 @@ const Home = () => {
       <Welcome />
       <Description />
       <ComoYDonde />
-      <Footer />
+      <Footer/>
     </div>
   );
 };

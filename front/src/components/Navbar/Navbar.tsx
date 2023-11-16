@@ -27,7 +27,7 @@ const Navbar = () => {
               },
               {
                 target: 10,
-                text: `coaching & mentoring internacional`,
+                text: `coaching & mentoring internacional`, 
               },
             ]}
           />

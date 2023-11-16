@@ -3,9 +3,9 @@ export const Formatos ={
 }
 
 export const RelativePath ={
-    "carousel": '../../../public/carousel',
-    "collaborator": '../../../public/collaborator',
-    "blog_retiro": '../../../public/blog_retiro',
-    "podcast": '../../../public/podcast',
-    "text_libro": '../../../public/text_libro',
+    "carousel":      '../../../../../public/src/carousel',
+    "collaborator":  '../../../../../public/src/collaborator',
+    "blog_retiro":   '../../../../../public/src/blog_retiro',
+    "podcast":       '../../../../../public/src/podcast',
+    "text_libro":    '../../../../../public/src/text_libro',
 }

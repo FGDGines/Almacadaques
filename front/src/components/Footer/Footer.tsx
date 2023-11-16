@@ -15,6 +15,9 @@ const Footer = () => {
         event.preventDefault()
         if(event.target instanceof HTMLFormElement){
             const bag  = new FormData(event.target)
+            bag.set('nombre',"NewsLetterUser"); 
+            bag.set('msg', 'Este usuario quere Unirse a tu newsletter')
+            bag.set('fragment', 'Newsletter Footer')
             console.log(bag.getAll("email"))
             const res = fetchDefault('/mail/create', {body: JSON.stringify(formDataToObject(bag))})
     
@@ -60,8 +63,8 @@ const Footer = () => {
                     <form onSubmit={send}>
                         <p className='correo'>{textos[languageFlag].textfooteremail}</p>
                         <div className="input-group">
-                            <input required type="email" name="email" autoComplete="on" className="input1" />
-                            <label className="user-label">{textos[languageFlag].textfooteremail2}</label>
+                            <input required type="email" name="correo"  placeholder={`${textos[languageFlag].textfooteremail2}`} autoComplete="on" className="input1" />
+                            {/* <label className="user-label">{textos[languageFlag].textfooteremail2}</label> */}
                         </div>
                         <button className='buttonFooter' type='submit'>{textos[languageFlag].textfooterregistro}</button>
                     </form>
@@ -85,7 +88,7 @@ const Footer = () => {
                         
                     </div>
                     
-                    <h4 className='textFooteer'>© 2023 Almacadaquest reservado todos los derechos Diseño: FGD Desarrollo Web</h4>
+                    <h4 className='textFooteer'>© 2023 Almacadaques reservado todos los derechos Diseño: FGD Desarrollo Web</h4>
                     
                 </div>
                 

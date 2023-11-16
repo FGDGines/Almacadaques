@@ -9,7 +9,7 @@ import { cardsData } from '../../data/cardsExp';
 import Agenda from '../Agenda/Agenda';
 import FormAgenda from '../FormAgenda/FormAgenda';
 import { tpCalendarDates } from '../../types/typesComponents';
-import { eventos, pastEvent } from '../../data/calendar';
+import { eventos } from '../../data/calendar';
 import DialogMUI1 from '../DialogMUI1/DialogMUI1';
 import { statisticInfo } from '../../data/StatisticComponent';
 

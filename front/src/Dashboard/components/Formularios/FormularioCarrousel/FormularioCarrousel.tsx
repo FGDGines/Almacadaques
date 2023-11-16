@@ -1,19 +1,21 @@
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import '../FormularioCarrousel/FormularioCarrousel.css';
 import { BarSession } from '../../barSession/barSession';
-import React, { useState, ChangeEvent, FormEvent } from 'react';
+import { useState, ChangeEvent, FormEvent } from 'react';
 
 
 interface FormData {
-    url: string;
-    cuenta: string;
+    Frase: string;
+    Firma: string;
+    Url: string;
     archivo: File | null;
 }
 
 export const FormularioCarrousel = () => {
     const [formData, setFormData] = useState<FormData>({
-        url: '',
-        cuenta: '',
+        Frase: '',
+        Firma: '',
+        Url: '',
         archivo: null,
     });
 
@@ -53,8 +55,9 @@ export const FormularioCarrousel = () => {
                 console.log('Datos del formulario enviados exitosamente');
                 // Limpiar el formulario después de enviar los datos
                 setFormData({
-                    url: '',
-                    cuenta: '',
+                    Frase: '',
+                    Firma: '',
+                    Url: '',
                     archivo: null,
                 });
             } else {
@@ -70,7 +73,7 @@ export const FormularioCarrousel = () => {
             <NarbarAdmin></NarbarAdmin>
 
             <div className="contenidoFormCarrousel">
-                <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Carrousel'></BarSession>
+                <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Carrousel' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
 
 
                 <form className='formCarrousel' onSubmit={handleSubmit}>
@@ -86,29 +89,38 @@ export const FormularioCarrousel = () => {
                         />
                     </div>
                     <div className="restInputs">
-                        <label className='labelsCarrousel'>URL:</label>
+                        <label className='labelsCarrousel' form='Frase'>Frase</label>
                         <input className='inputsFormCarrousel'
                             type="text"
-                            name="url"
-                            value={formData.url}
+                            name="Frase"
+                            value={formData.Frase}
                             onChange={handleInputChange}
                         />
 
-                        <label className='labelsCarrousel'>Cuenta:</label>
+                        <label className='labelsCarrousel' form='Firma'>Firma autor</label>
                         <input className='inputsFormCarrousel'
                             type="text"
-                            name="cuenta"
-                            value={formData.cuenta}
+                            name="Firma"
+                            value={formData.Firma}
                             onChange={handleInputChange}
                         />
-                        <button type="submit">Guardar Carrousel</button>
+
+                        <label className='labelsCarrousel' form='Url'>Link autor</label>
+                        <input className='inputsFormCarrousel'
+                            type="url"
+                            name="Url"
+                            value={formData.Url}
+                            onChange={handleInputChange}
+                        />
+                        
 
                     </div>
                 </form>
 
 
                 <div className="botonesFormCarrousel">
-
+                    <a href="#" className='CancelarCarousel'>Cancelar</a>
+                    <a href="#" className='AgregarCarousel'>Agregar</a>
                 </div>
             </div>
         </div>

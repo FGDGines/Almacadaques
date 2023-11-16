@@ -4,7 +4,11 @@ import Navbar from "../Navbar/Navbar";
 import "./BlogRetiro.css";
 import retiroInfo from "../../data/blogRetiro";
 import { DetailBlogRetiro } from "../DetailBlogRetiro/DetailBlogRetiro";
-import { useState } from "react";
+
+
+import { GlobalContext } from "../../contexts/GlobalContext"; 
+import { useContext } from 'react';
+import { useState } from 'react';
 
 interface Retiro {
   index: number;
@@ -13,12 +17,13 @@ interface Retiro {
   year: number;
   image: string[] | string;
   title: string;
-  author: string;
+  author?: string;
   description?: string;
 }
 
 
 function BlogRetiro() {
+  const { setLayoutID } = useContext(GlobalContext);
   const [showDersail, setShowDersail] = useState(false);
   const [selectedRetiro, setSelectedRetiro] = useState<Retiro | null>(null);
 
@@ -56,9 +61,13 @@ function BlogRetiro() {
         </div>
         <Franja text="Blog Retiros" />
         <div className="blog_Retiro">
+
           {retiroInfo.map((retiro) => (
             <div className="infoCtRetiro" key={retiro.index}>
               <div className="imgRetiro">
+                {retiro.estado === "Completo" && <div className="cintaCompleto">Completo</div>}
+                {retiro.estado === "Aplazado" && <div className="cintaAplazado">Aplazado</div>}
+                {retiro.estado === "Plazas limitadas" && <div className="cintaPlazasLimitadas">Plazas limitadas</div>}
                 <img src={retiro.image[0]} alt="Imagen de retiro" />
               </div>
 
@@ -74,11 +83,9 @@ function BlogRetiro() {
                         : `del ${retiro.day[0]} al ${retiro.day[retiro.day.length - 1]} de ${monthNames[retiro.month]}, ${retiro.year}`}
                     </p>
 
-
-
                   </div>
-                  <div className="authorRetiro">
-                    <h4>{retiro.author}</h4>
+                  <div className="authorRetiro" onClick={() => setLayoutID(6)}>
+                    <a href="#">Inscribirse</a>
                   </div>
                 </div>
               </div>

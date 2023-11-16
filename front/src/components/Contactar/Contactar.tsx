@@ -3,6 +3,9 @@ import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import Franja from '../Franja/Franja';
 import FormDefault from '../FormDefault/FormDefault';
+import { textos } from '../../data/textos';
+import { GlobalContext } from '../../contexts/GlobalContext';
+import { useContext } from 'react';
 import { fetchDefault } from '../../helpers/Server';
 import { formDataToObject } from '../../helpers/Forms';
 
@@ -12,42 +15,29 @@ const Contactar = ()=>{
         bag.set('fragment'  , 'Contactar')
         fetchDefault('/mail/create', {body: JSON.stringify(formDataToObject(bag))})        
     }
-
+    const { languageFlag } = useContext(GlobalContext)
     return <div className="Contactar">
         <Navbar />
-        <Franja text='Contactar' />
+        <Franja text={textos[languageFlag].textocontactar1} />
         <div className="imgContacto">
                 <img src="../../../src/assets/background/contactanos.jpg" alt="elizabet" className='elizabet' />
             </div>
         <div className='ctSections'>
             
             <div className='ctLeftContaT'>
-                <div className='title1'>
-                    Estoy aquí para responder cualquier pregunta que puedas tener.
-                </div>
+                <div className='title1'>{textos[languageFlag].textocontactar2}</div>
                 <br />
-                <div className='title2'>
-                    Cuéntame todo sobre tu problema, estaré encantado de ayudarte. Rellena el formulario, o si lo prefieres envíanos un email.
-                </div>
+                <div className='title2'>{textos[languageFlag].textocontactarjuntoscrearemos}</div>
                 <br />
-                <div className='ctTelef'>
-                    Teléfono:  +1 (256) 1087 000
+                <div className='ctTelef'>{textos[languageFlag].textocontactartelf}(+34) 660 30 54 21
                 </div>
                 <div className='ctCorreo'>
-                    correo@demolink.org
+                    hola@almacadaques.com
                 </div>
                 <br />
-                <div className='ctDireccion'>
-                    3828 Fincham Road <br />
-                    Los Ángeles, CA <br />
-                    California 90017 <br />
-                </div>
             </div>
             <div className='ctRight'>
-                <div className='TitleForm'>
-                    Ponerse en contacto                    
-                </div>
-
+                <div className='TitleForm'>{textos[languageFlag].textocontactarformulariotexto1}</div>
                 <FormDefault hSubmit={enviarFormulario} />
             </div>
         </div>

@@ -1,19 +1,17 @@
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import '../FormularioRedes/FormularioRedes.css';
 import { BarSession } from '../../barSession/barSession';
-import React, { useState, ChangeEvent, FormEvent } from 'react';
+import { useState, ChangeEvent, FormEvent } from 'react';
 
 
 interface FormData {
     url: string;
-    cuenta: string;
     archivo: File | null;
 }
 
 export const FormularioRedes = () => {
     const [formData, setFormData] = useState<FormData>({
         url: '',
-        cuenta: '',
         archivo: null,
     });
 
@@ -54,7 +52,6 @@ export const FormularioRedes = () => {
                 // Limpiar el formulario después de enviar los datos
                 setFormData({
                     url: '',
-                    cuenta: '',
                     archivo: null,
                 });
             } else {
@@ -70,7 +67,7 @@ export const FormularioRedes = () => {
             <NarbarAdmin></NarbarAdmin>
 
             <div className="contenidoFormRedes">
-                <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Redes'></BarSession>
+                <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Redes' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
 
 
                 <form className='formRedes' onSubmit={handleSubmit}>
@@ -86,7 +83,7 @@ export const FormularioRedes = () => {
                         />
                     </div>
                     <div className="restInputs">
-                        <label className='labelsRedes'>URL:</label>
+                        <label className='labelsRedes' form='URL'>URL:</label>
                         <input className='inputsFormRedes'
                             type="text"
                             name="url"
@@ -94,15 +91,10 @@ export const FormularioRedes = () => {
                             onChange={handleInputChange}
                         />
 
-                        <label className='labelsRedes'>Cuenta:</label>
-                        <input className='inputsFormRedes'
-                            type="text"
-                            name="cuenta"
-                            value={formData.cuenta}
-                            onChange={handleInputChange}
-                        />
-                        <button type="submit">Guardar Redes</button>
-
+                        
+                        <div className="btnGuardarRedes">
+                            <a href="" className='GuardarRedesSocialesAdmin'>Guardar</a>
+                        </div>
                     </div>
                 </form>
 

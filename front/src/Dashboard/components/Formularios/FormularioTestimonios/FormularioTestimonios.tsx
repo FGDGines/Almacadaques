@@ -1,19 +1,17 @@
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import '../FormularioTestimonios/FormularioTestimonios.css';
 import { BarSession } from '../../barSession/barSession';
-import React, { useState, ChangeEvent, FormEvent } from 'react';
+import  { useState, ChangeEvent, FormEvent } from 'react';
 
 
 interface FormData {
-    url: string;
-    cuenta: string;
+    Frase: string;
     archivo: File | null;
 }
 
 export const FormularioTestimonios = () => {
     const [formData, setFormData] = useState<FormData>({
-        url: '',
-        cuenta: '',
+        Frase: '',
         archivo: null,
     });
 
@@ -53,8 +51,7 @@ export const FormularioTestimonios = () => {
                 console.log('Datos del formulario enviados exitosamente');
                 // Limpiar el formulario después de enviar los datos
                 setFormData({
-                    url: '',
-                    cuenta: '',
+                    Frase: '',
                     archivo: null,
                 });
             } else {
@@ -86,27 +83,23 @@ export const FormularioTestimonios = () => {
                         />
                     </div>
                     <div className="restInputs">
-                        <label className='labelsTestimonios'>URL:</label>
+                        <label className='labelsTestimonios' form='Frase'>Frase de Testimonios</label>
                         <input className='inputsFormTestimonios'
                             type="text"
-                            name="url"
-                            value={formData.url}
+                            name="Frase"
+                            value={formData.Frase}
                             onChange={handleInputChange}
                         />
 
-                        <label className='labelsTestimonios'>Cuenta:</label>
-                        <input className='inputsFormTestimonios'
-                            type="text"
-                            name="cuenta"
-                            value={formData.cuenta}
-                            onChange={handleInputChange}
-                        />
-                        <button type="submit">Guardar Testimonios</button>
+                        
+                        
 
                     </div>
 
 
-
+                    <div className="GuardarEspaciosBienestar">
+                        <a href="" className='btnGuardarEspaciosBienestarAdmin'>Guardar Testimonios</a>
+                    </div>
 
                 </form>
             </div>

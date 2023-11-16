@@ -69,12 +69,14 @@ const CoachingInternacional = () => {
                     <img src="../../../src/assets/background/unnamed (2).jpg" alt="Elisabet" className='imgBienertar' />
                 </div>
                 <div className="contseccionn1">
+                <br/>
                     {/* <h3>PREGUNTAS DESTACADAS:</h3> */}
                     <p className='parrafo'>{textos[languageFlag].textcoachinginterna1}</p>
                     <p className='parrafo'>{textos[languageFlag].textcoachinginterna2}</p>
                     <p className='parrafo'>{textos[languageFlag].textcoachinginterna3}</p>
                     <p className='parrafo'>{textos[languageFlag].textcoachinginterna4}</p>
-                    <p className='parrafo'>{textos[languageFlag].textcoachinginterna5} <span className='TeAcompaño'>¿Te acompaño?</span></p>
+                    <p className='parrafo'>{textos[languageFlag].textcoachinginterna5} 
+                    <span className='TeAcompaño'>¿Te acompaño?</span></p>
 
                 </div>
 

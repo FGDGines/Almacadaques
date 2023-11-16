@@ -52,7 +52,7 @@ const CoachingBienestar = () => {
             <div className="containerInnformacion2">
                 <span style={{ color: "#75151E" }}> ❝ </span>
                     {textos[languageFlag].textcoaching5}
-                <span style={{ color: "#75151E" }}> ❞<p className='autorParrafo'><br/>Herminia Gomá.</p></span>
+                <span style={{ color: "#75151E" }}> ❞<p className='autorParrafo'>Herminia Gomá.</p></span>
                 <div className="containerImg1">
                     <img src="../../../src/assets/images/img_coaching_internacional.jpg" className='imgInternacional' alt="Imagen de coaching" />
                 </div>

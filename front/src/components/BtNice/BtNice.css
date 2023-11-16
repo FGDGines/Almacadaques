@@ -1,6 +1,6 @@
 .BtNice {
     color: white;
-    background-color: #222222;
+    background-color: #cf1348;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +15,7 @@
 
 
 .BtNice:hover{
-    background-color: #556362;
+    background-color: #37b1da;
 }
 
 

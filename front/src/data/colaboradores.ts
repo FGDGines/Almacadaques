@@ -9,8 +9,8 @@ export interface Colaborador {
 export const ListaColaboradores: Colaborador[] = [
 {
     id:1,
-    nombre: 'Mercè Caces',
-    cargo: 'Educadora de Masaje Infantil',
+    nombre: 'Mercè Cazes',
+    cargo: 'Facilitadora del método TASI',
     descripcion: 'Canalizadora, facilitadora y formadora de la técnica de sanación energética TASI (Terapia Avanzada de Salud Integral)',
     imagen: '../../src/assets/imagen_colaboradores/colaborador1.jpeg',
     contacto: 'https://mercecazes.com/',
@@ -27,7 +27,7 @@ export const ListaColaboradores: Colaborador[] = [
     id:3,
     nombre: 'Maribel Salvador',
     cargo: 'CEO maribelsalvador.com',
-    descripcion: 'Acompanya empreses i organitzacions perquè els seus professionals i equips millorin, gràcies a la comunicació emocional aplicada al lideratge i al treball en equip. ',
+    descripcion: 'Acompaña a empresas y organizaciones para que sus profesionales y equipos mejoren, gracias a la comunicación emocional aplicada al liderazgo y al trabajo en equipo ',
     imagen: '../../src/assets/imagen_colaboradores/colaboradores4.jpeg',
     contacto: 'https://www.linkedin.com/in/maribel-salvador-alcaraz-formacion/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app',
 },
@@ -37,8 +37,8 @@ export const ListaColaboradores: Colaborador[] = [
     cargo: 'Entrenadora Bienestar Emocional',
     descripcion: 'Creadora de formaciones y experiencias de autocuidado emocional para aprender a llenar y alimentar nuestro cuerpo.',
     imagen: '../../src/assets/imagen_colaboradores/colaborador3.jpeg',
-    contacto: 'https://www.montiserra.com/ca/',
+    contacto: 'https://instagram.com/monti.serra?igshid=MTk0NTkyODZkYg==',
 }
 
-  
+
 ]

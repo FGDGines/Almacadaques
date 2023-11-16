@@ -39,7 +39,7 @@ const AboutMe = () => {
                     <p> Elisabet Coll-Vinent (Psicóloga – Mentora – Coach)</p>
                 </div>
                 <div className="infoSobremi_2User">
-                    <p>{textos[languageFlag].titleparrafo}</p>  
+                    <p >{textos[languageFlag].titleparrafo}</p>  
                     <ul>
                         <li>{textos[languageFlag].parrafosobremi5}</li>
                         <li>{textos[languageFlag].parrafosobremi6}</li>
@@ -67,8 +67,8 @@ const AboutMe = () => {
                         <li>{textos[languageFlag].parrafosobremi18}</li>
                     </ul>
                 </div>
-                <div className="photo_1">
-                    <img src="../../../src/assets/background/3.foto.jpg" alt="Bibliografía" />
+                <div className="photo_3">
+                    <img src="../../../src/assets/background/3.foto.jpg" alt="Bibliografía" className='BibliografíaSobreMi'/>
                     <p> Elisabet Coll-Vinent (Psicóloga – Mentora – Coach)</p>
                 </div>
             </div>
