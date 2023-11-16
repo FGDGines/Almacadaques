@@ -4,12 +4,12 @@ import './DetailBlogRetiro.css';
 
 interface Retiro {
     index: number;
-    day: number;
+    day: number | number[];
     month: number;
     year: number;
     image: string[] | string;
     title: string;
-    author: string;
+    author?: string;
     description?: string;
 }
 
