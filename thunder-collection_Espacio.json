@@ -1,0 +1,85 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Espacio",
+    "dateExported": "2023-11-16T06:01:30.610Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "40874971-91c1-46ba-8f20-7b75374ae839",
+            "colId": "a67d4adb-d2f6-42b8-93d8-1f6666db728c",
+            "containerId": "",
+            "name": "http://localhost:6589/api/espacio/read",
+            "url": "http://localhost:6589/api/espacio/read",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-11-16T05:38:01.700Z",
+            "modified": "2023-11-16T05:38:01.700Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"lang\": \"es\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "112f6f25-14a0-4ddc-89b7-011d945030b1",
+            "colId": "a67d4adb-d2f6-42b8-93d8-1f6666db728c",
+            "containerId": "",
+            "name": "http://localhost:6589/api/espacio/delete",
+            "url": "http://localhost:6589/api/espacio/delete",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-11-16T05:38:47.521Z",
+            "modified": "2023-11-16T05:38:47.521Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"id\": 3\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "b2b2808b-e68b-4fb3-8428-6ab25a9e8908",
+            "colId": "a67d4adb-d2f6-42b8-93d8-1f6666db728c",
+            "containerId": "",
+            "name": "http://localhost:6589/api/espacio/create",
+            "url": "http://localhost:6589/api/espacio/create",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-11-16T05:40:07.723Z",
+            "modified": "2023-11-16T05:40:07.723Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"text_es\": \"ds\",\n  \"text_en\": \"ew\",\n  \"text_cat\": \"dsc\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "7a8a27f5-3c62-4b02-8efe-7a9796f4a823",
+            "colId": "a67d4adb-d2f6-42b8-93d8-1f6666db728c",
+            "containerId": "",
+            "name": "http://localhost:6589/api/espacio/update",
+            "url": "http://localhost:6589/api/espacio/update",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2023-11-16T05:41:19.809Z",
+            "modified": "2023-11-16T05:41:19.809Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"text_es\": \"ds\",\n  \"text_en\": \"ew\",\n  \"text_cat\": \"dsc\",\n  \"id\": 4\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ]
+}

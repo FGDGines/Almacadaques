@@ -4,14 +4,14 @@ import Franja from '../Franja/Franja';
 import Footer from '../Footer/Footer';
 import FormDefault from '../FormDefault/FormDefault';
 import { textos } from '../../data/textos';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
-import { testimonies } from '../../data/testimonies';
+// import { testimonies } from '../../data/testimonies';
 import Testimony from '../Testimony/Testimony';
 import { tpDtmResponse } from '../../types/typesComponents';
 import { formDataToObject } from '../../helpers/Forms';
 import { fetchDefault } from '../../helpers/Server';
-
+import { tpTestimony} from "../../types/typesComponents"
 const CoachingInternacional = () => {
     const { languageFlag } = useContext(GlobalContext)
 
@@ -28,6 +28,37 @@ const CoachingInternacional = () => {
         
         console.log('Datos enviados:', data);
     }
+
+
+    const [result, setResult] = useState<tpTestimony[]>([]);
+    const l = languageFlag.toLowerCase() 
+    const da = new FormData()
+    da.set("lang", l)
+
+    const data = {body: JSON.stringify(formDataToObject(da))}
+    const espacios: tpTestimony[] = []
+
+    useEffect(() => {
+        const api = async () => {
+            fetchDefault("/testimony/read", data, (d: tpDtmResponse) => {
+                for (let index = 0; index < d.bag.length; index++) {
+                    const element = d.bag[index];
+                    espacios.push({
+                        id: element.id,
+                        witness: element.witness,
+                        day: 0,
+                        month: 0,
+                        year: 0,
+                        testimony: element.es || element.en || element.cat
+                    })
+                }
+                console.log(espacios[0])
+                setResult(espacios)
+            })  
+            
+        };
+        api()
+    }, []);
 
     return <div className="CoachingInternacional">
         <Navbar />
@@ -56,7 +87,7 @@ const CoachingInternacional = () => {
                 <div className="testimonio">
                     <h3 className='titletestimonio'>{textos[languageFlag].textcoachinginternaTestimonio}</h3>
                     <div className="infotestimonios">
-                        {testimonies.map((testimony) => (
+                        {result.map((testimony) => (
                             <Testimony
                                 key={testimony.id}
                                 id={testimony.id}

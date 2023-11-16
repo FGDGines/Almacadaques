@@ -32,7 +32,7 @@ app.post('/delete' , [security_post,
     , validarCampos], Delete)
 
 
-app.post('/update' , [
+app.post('/update' , [security_post,
     check('id', 'El blog retiro a actualizar es obligatorio').isNumeric()
     , validarCampos] , Update)
 

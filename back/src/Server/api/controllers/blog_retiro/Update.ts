@@ -93,8 +93,9 @@ export const Update = async (req: Request, res: Response) => {
                 return res.status(200).json({ status: 400, msg: "Número de la imagen no válido" })
             }
             if (past) {
-                const uploadDir = path.join(__dirname,  RelativePath.text_libro)
-                await DeleteFile(path.join(uploadDir, past))        
+                const uploadDir = path.join(__dirname,  RelativePath.blog_retiro)
+                console.log(path.join(uploadDir, json[image_number]))
+                await DeleteFile(path.join(uploadDir, json[image_number]))        
             }
             const url = await UploadFile( image, path.join(__dirname,  RelativePath.blog_retiro), "jpg", Formatos.image)
             json[image_number] = url
@@ -110,6 +111,6 @@ export const Update = async (req: Request, res: Response) => {
         return res.status(200).json({status: 200, msg: "Updated" , bag: {updates}})
 
     } catch (err) {
-        return res.status(200).json({ status: 500, err, msg: "No podemos editar colaborador en este momento" })
+        return res.status(200).json({ status: 500, err, msg: "No podemos editar blog_retiro en este momento" })
     }
 }
