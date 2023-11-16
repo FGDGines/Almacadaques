@@ -1,5 +1,5 @@
 import './Propuesta.css'
-import {AlternateTimeline} from '../TimeLine/TimeLine';
+import AlternateTimeline from '../TimeLine/TimeLine';
 import { tlEspacios } from '../../data/tlEspacios';
 import { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';

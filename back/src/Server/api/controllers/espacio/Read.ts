@@ -5,7 +5,10 @@ export const Read = async ( req: Request ,res: Response)=>{
     const {body} = req
     const { lang } = body
     
+    if(lang != "es" && lang != 'en' && lang != 'cat')return res.status(200).json({status: 400, msg: 'Debe proporcionar un idioma válido '})
+    
     try{
+        
         const tEspacio = await Espacio.findAll({
             attributes:["id", lang]
         });  
