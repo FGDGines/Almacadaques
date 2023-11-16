@@ -55,7 +55,7 @@ const Carousel: FC<tpCarouselData> = ({ items }) => {
                 if(!d.bag) return 
                 for (let index = 0; index < d.bag.length; index++) {
                     const element: {id: number , autor: string  , link_autor: string, src:string, data_carousel: {es: string, en: string , cat: string} } = d.bag[index];
-                    const r = "../../../../back/src/public/carousel/";
+                    const r = "src/carousel/";
 
                     carousel.push({ id: element.id, autor: element.autor, link_autor: element.link_autor, src: r + element.src, title: element.data_carousel.es || element.data_carousel.en || element.data_carousel.cat });
                     console.log("carousel", element);
