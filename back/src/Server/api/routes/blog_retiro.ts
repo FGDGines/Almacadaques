@@ -25,6 +25,7 @@ app.post('/create', [security_post,
     , validarCampos], Create)
 
 app.post('/read', [
+    check('lang', 'El lenguaje es obligatorio').not().isEmpty()
     ], Read)
 
 app.post('/delete' , [security_post,
