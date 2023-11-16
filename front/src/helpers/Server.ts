@@ -1,6 +1,5 @@
 import { portApi, urlApi } from "../data/env"
 import { tpDtmResponse } from "../types/typesComponents"
-import { formDataToObject } from "./Forms"
 import { mostrarAlerta } from "./MostrarAlerta"
  
 

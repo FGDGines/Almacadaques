@@ -5,7 +5,6 @@ import "../TestimonyBar/TestimonyBar.css"
 const Testimony: FC<tpTestimony> = ({
   id,
   witness,
-  image,
   day,
   month,
   year,

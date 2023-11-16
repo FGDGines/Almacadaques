@@ -153,7 +153,8 @@ type AudioPlayerProps = {
     imagen?: string;
     mostrarDatos?: boolean
     mostrarControles?: boolean
-    enPodcast?:boolean
+    enPodcast?:boolean,
+    categoria?: string 
 };
 
 type iconsProps = {
