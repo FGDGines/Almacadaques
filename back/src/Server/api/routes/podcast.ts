@@ -9,7 +9,7 @@ import { Update } from '../controllers/podcast/Update'
 
 const app = Router()
  
-app.post('/register' , [security_post,
+app.post('/register' , [
     check('url', 'La url es obligatoria').not().isEmpty(), 
     check('titulo', 'El titulo es obligatorio').not().isEmpty(), 
     check('autor', 'El autor es obligatorio').not().isEmpty(), 

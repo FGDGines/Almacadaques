@@ -2,10 +2,11 @@ import './Podcast.css'
 import Navbar from '../Navbar/Navbar';
 import Franja from '../Franja/Franja';
 import Footer from '../Footer/Footer';
-import { podcastData } from "../../data/listPodcast";
+// import { podcastData } from "../../data/listPodcast";
 import { VideosPodcast } from '../ItemPodcast/ItemPodcast'
-import React, { useState } from 'react';
-import { AudioPlayerProps } from '../../types/typesComponents';
+import React, { useEffect, useState } from 'react';
+import { AudioPlayerProps, tpDtmResponse } from '../../types/typesComponents';
+import { fetchDefault } from '../../helpers/Server';
 
 const removeAccents = (text: string) => {
     return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -14,8 +15,14 @@ const removeAccents = (text: string) => {
 
 
 const Podcast = () => {
-
-    const [selectedPodcast, setSelectedPodcast] = useState<AudioPlayerProps>(podcastData[0]);
+    const [podcastData, setPodcastData] = useState<AudioPlayerProps[]>([]);
+    const [selectedPodcast, setSelectedPodcast] = useState<AudioPlayerProps>({
+        url:"",
+        titulo: "",
+        autor: "",
+        fecha:"",
+        categoria: ""
+    });
 
 
     const handlePodcastClick = (podcast: AudioPlayerProps) => {
@@ -83,7 +90,25 @@ const Podcast = () => {
         }
     };
 
-    const  displayedResults = searchTerm.trim() !== '' ? filteredResults : podcastData;
+    const  displayedResults = searchTerm.trim() !== '' ? filteredResults : podcastData;    
+    
+    useEffect(() => {
+        const api = async () => {
+            const podcast: AudioPlayerProps[] = []
+            fetchDefault("/podcast/read", {}, (d: tpDtmResponse) => {
+                if(!d.bag) return 
+                for (let index = 0; index < d.bag.length; index++) {
+                    const element: {url: string , titulo: string, autor: string, fecha:string, categoria: string } = d.bag[index];
+                    podcast.push({ url: element.url, titulo: element.titulo, autor: element.autor, fecha: element.fecha, categoria: element.categoria });
+                }
+                setPodcastData(podcast);
+                console.log(podcast)
+                setSelectedPodcast(podcast[0])
+            }) 
+        };
+        api();
+        // eslint-disable-next-line
+    }, []);
     return (
         <div className="Podcast">
             <Navbar />
