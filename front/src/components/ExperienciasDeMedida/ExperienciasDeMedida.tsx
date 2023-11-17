@@ -16,6 +16,19 @@ import { fetchDefault } from '../../helpers/Server';
 
 function ExperienciasDeMedida() {
     const { languageFlag } = useContext(GlobalContext)
+    const subtmitOnFormDefault = (bag: FormData) => {
+        bag.append("fragment", "Experiencias de medida")
+        const data = {body: JSON.stringify(formDataToObject(bag))}
+        console.log(data)
+        fetchDefault("/mail/create", data, (d: tpDtmResponse) => {
+            console.log("response",d)
+        }, (e: tpDtmResponse) => {
+            console.log("error", e)
+        })
+        
+        console.log('Datos enviados:', data);
+    }
+
     return (
         <div className="ExperienciasdeMedida">
             <Navbar />
