@@ -1,8 +1,10 @@
 import { portApi, urlApi } from "../data/env"
 import { tpDtmResponse } from "../types/typesComponents"
 import { mostrarAlerta } from "./MostrarAlerta"
+ 
 
 export const fetchDefault = (endpoint: string , init:{[key: string]: unknown} , resolve = (arg: tpDtmResponse )=>mostrarAlerta(arg) , reject = (arg: tpDtmResponse )=>mostrarAlerta(arg) )=>{
+    console.log(`${urlApi}:${portApi}/api${endpoint}`)
     fetch(`${urlApi}:${portApi}/api${endpoint}`, {
         'method':'POST', 
         'headers': {
@@ -21,6 +23,8 @@ export const fetchDefault = (endpoint: string , init:{[key: string]: unknown} , 
         }
     })
     .then(data=>{
+        // console.log(data)
+        // return data
         resolve(data)
     })
     .catch(err=>{

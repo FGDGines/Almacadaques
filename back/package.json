@@ -6,7 +6,7 @@
   "scripts": {
     "tsc": "tsc",
     "dev": "ts-node-dev src/index.ts",
-    "start": " build/index.js",
+    "start": "build/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -24,15 +24,19 @@
     "@types/jsonwebtoken": "^9.0.4",
     "@types/multer": "^1.4.8",
     "@types/sequelize": "^4.28.16",
+    "@types/uuid": "^9.0.6",
     "bcrypt": "^5.1.1",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "4.18.2",
+    "express-fileupload": "^1.4.2",
     "express-validator": "^7.0.1",
+    "formdata-node": "^6.0.3",
     "jsonwebtoken": "^9.0.2",
     "multer": "1.4.5-lts.1",
     "mysql2": "^3.6.1",
-    "sequelize": "^6.33.0"
+    "sequelize": "^6.33.0",
+    "uuid": "^9.0.1"
   }
 }

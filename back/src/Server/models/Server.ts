@@ -1,6 +1,5 @@
 import express from 'express';
 import cors from 'cors';
-// import multer from 'multer';
 import DB from '../db/conexion';
 const fileUpload = require("express-fileupload")
 
@@ -20,8 +19,11 @@ class Server {
     middlewares() {
         // Configuraciones de middleware
         // Peticiones de origen cruzado
+        this.__app.use(express.static('public'))
+        
         this.__app.use(cors());
         this.__app.use(express.json())
+        this.__app.use(express.raw({ type: 'image/*', limit: '100mb' }))
         this.__app.use(express.urlencoded({extended: true}))
         // File Upload
         this.__app.use(fileUpload({

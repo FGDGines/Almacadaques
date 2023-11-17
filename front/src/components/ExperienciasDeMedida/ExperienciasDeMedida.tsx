@@ -8,6 +8,9 @@ import { useContext } from 'react';
 import FormDefault from '../FormDefault/FormDefault';
 import StatisticComponent from '../StatisticComponent/StatisticComponent';
 import { statisticInfo } from '../../data/StatisticComponent';
+import { formDataToObject } from '../../helpers/Forms';
+import { tpDtmResponse } from '../../types/typesComponents';
+import { fetchDefault } from '../../helpers/Server';
 
 
 
@@ -28,7 +31,7 @@ function ExperienciasDeMedida() {
                     <div className="ctphoto">
                         <img className='imgEquip' src="../../../src/assets/background/contactanos.jpg" alt="Equipo de trabajo" />
                         <div className='ctFor'>
-                            <h3>{textos[languageFlag].textotrabajemosjuntos}</h3>
+                            <h3>Trabajemos Juntos</h3>
                             <FormDefault />
                         </div>
 
