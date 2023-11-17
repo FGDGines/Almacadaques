@@ -53,6 +53,18 @@ const DataUser = DB.define('data_user', {
     }
 })
 
+const Red = DB.define('red', {
+    archivo: {
+        type: DataTypes.STRING
+    },
+    url: {
+        type: DataTypes.STRING
+    },
+    cuenta: {
+        type: DataTypes.NUMBER
+    }
+})
+
 const Rol = DB.define('role', {
     label: {
         type: DataTypes.STRING
@@ -258,6 +270,7 @@ export {
     Mensaje,
     Rol,
     User,
+    Red,
     Testimonio,
     DataTestimonio, 
     BlogRetiro,

@@ -38,7 +38,7 @@ app.post('/update' , [security_post,
     , validarCampos] , Update)
 
 app.post('/add_file' , [security_post,
-    check('id', 'El blog retiro a eliminar es olbigatorio').isNumeric()
+    check('id', 'El blog retiro a actualizar es olbigatorio').isNumeric()
     , validarCampos], AddFile)
 
 

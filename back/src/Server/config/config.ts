@@ -8,4 +8,5 @@ export const RelativePath ={
     "blog_retiro":   '../../../../../public/src/blog_retiro',
     "podcast":       '../../../../../public/src/podcast',
     "text_libro":    '../../../../../public/src/text_libro',
+    "red":    '../../../../../public/src/red',
 }
