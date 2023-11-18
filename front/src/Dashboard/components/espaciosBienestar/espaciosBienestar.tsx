@@ -13,10 +13,10 @@ export const EspaciosBienestar = () => {
     //Mirar en la consola que si funciona
 
     const handleEliminar = (id: number) => {
-        console.log('Eliminar', id);
+        // console.log('Eliminar', id);
         const updatedData = data.filter(item => item.id !== id);
         setData(updatedData);
-        console.log(updatedData);
+        // console.log(updatedData);
     };
 
     return (

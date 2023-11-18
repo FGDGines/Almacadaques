@@ -2,10 +2,11 @@ import './Podcast.css'
 import Navbar from '../Navbar/Navbar';
 import Franja from '../Franja/Franja';
 import Footer from '../Footer/Footer';
-import { podcastData } from "../../data/listPodcast";
+// import { podcastData } from "../../data/listPodcast";
 import { VideosPodcast } from '../ItemPodcast/ItemPodcast'
-import React, { useState } from 'react';
-import { AudioPlayerProps } from '../../types/typesComponents';
+import React, { useEffect, useState } from 'react';
+import { AudioPlayerProps, tpDtmResponse } from '../../types/typesComponents';
+import { fetchDefault } from '../../helpers/Server';
 
 const removeAccents = (text: string) => {
     return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -14,8 +15,14 @@ const removeAccents = (text: string) => {
 
 
 const Podcast = () => {
-
-    const [selectedPodcast, setSelectedPodcast] = useState<AudioPlayerProps>(podcastData[0]);
+    const [podcastData, setPodcastData] = useState<AudioPlayerProps[]>([]);
+    const [selectedPodcast, setSelectedPodcast] = useState<AudioPlayerProps>({
+        url:"",
+        titulo: "",
+        autor: "",
+        fecha:"",
+        categoria: ""
+    });
 
 
     const handlePodcastClick = (podcast: AudioPlayerProps) => {
@@ -47,7 +54,7 @@ const Podcast = () => {
     const handleCategoryFilter = (category: string) => {
         setSelectedCategory(category);
 
-        console.log(category)
+        // console.log(category)
 
         const term = removeAccents(searchTerm).toLowerCase();
 
@@ -55,18 +62,18 @@ const Podcast = () => {
         if (searchTerm.trim() === '') {
             const filteredByCategory = podcastData.filter(podcast => {
                 const podcastCategory = removeAccents(podcast.categoria?.toLowerCase() || ''); // Asegúrate de manejar 'categoria' como una cadena
-                console.log('Podcast Category:', podcastCategory); // Muestra la categoría del podcast en la consola
+                // console.log('Podcast Category:', podcastCategory); // Muestra la categoría del podcast en la consola
                 const match = podcastCategory === removeAccents(category);
-                console.log('Match:', match); // Muestra si hay coincidencia en la consola
+                // console.log('Match:', match); // Muestra si hay coincidencia en la consola
                 return podcast.categoria && match;
             });
-            console.log('Resultados filtrados por categoría:', filteredByCategory); // Muestra los resultados filtrados en la consola
+            // console.log('Resultados filtrados por categoría:', filteredByCategory); // Muestra los resultados filtrados en la consola
 
             setFilteredResults(filteredByCategory);
 
         } else {
             const regex = new RegExp(term.replace(/[-[\]{}()*+?.,\\^$|#\s]/g, "\\$&"));
-            console.log(regex);
+            // console.log(regex);
             const filteredByCategory = podcastData.filter(podcast =>
                 podcast.categoria &&
                 removeAccents(podcast.categoria.toLowerCase()) === removeAccents(category) &&
@@ -76,14 +83,32 @@ const Podcast = () => {
                 )
             );
 
-            console.log(filteredByCategory);
+            // console.log(filteredByCategory);
 
             setFilteredResults(filteredByCategory);
-            console.log(setFilteredResults(filteredByCategory));
+            // console.log(setFilteredResults(filteredByCategory));
         }
     };
 
-    const  displayedResults = searchTerm.trim() !== '' ? filteredResults : podcastData;
+    const  displayedResults = searchTerm.trim() !== '' ? filteredResults : podcastData;    
+    
+    useEffect(() => {
+        const api = async () => {
+            const podcast: AudioPlayerProps[] = []
+            fetchDefault("/podcast/read", {}, (d: tpDtmResponse) => {
+                if(!d.bag) return 
+                for (let index = 0; index < d.bag.length; index++) {
+                    const element: {url: string , titulo: string, autor: string, fecha:string, categoria: string } = d.bag[index];
+                    podcast.push({ url: element.url, titulo: element.titulo, autor: element.autor, fecha: element.fecha, categoria: element.categoria });
+                }
+                setPodcastData(podcast);
+                console.log(podcast)
+                setSelectedPodcast(podcast[0])
+            }) 
+        };
+        api();
+        // eslint-disable-next-line
+    }, []);
     return (
         <div className="Podcast">
             <Navbar />

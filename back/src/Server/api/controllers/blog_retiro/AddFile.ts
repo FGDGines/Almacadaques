@@ -20,7 +20,6 @@ export const AddFile = async (req: Request, res: Response) => {
     })
         // @ts-ignore
         const image = req.files.src.data 
-        // console.log(image)
         if(image){
             const past = tBlogRetiro.image
             const json = JSON.parse(past)

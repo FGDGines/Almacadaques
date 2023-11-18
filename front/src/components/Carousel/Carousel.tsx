@@ -56,13 +56,8 @@ const Carousel: FC<tpCarouselData> = ({ items }) => {
                 for (let index = 0; index < d.bag.length; index++) {
                     const element: {id: number , autor: string  , link_autor: string, src:string, data_carousel: {es: string, en: string , cat: string} } = d.bag[index];
                     const r = "src/carousel/";
-
                     carousel.push({ id: element.id, autor: element.autor, link_autor: element.link_autor, src: r + element.src, title: element.data_carousel.es || element.data_carousel.en || element.data_carousel.cat });
-                    console.log("carousel", element);
                 }
-                // const t = tlEspacios[languageFlag]
-                // console.log(espacios[0], t[0])
-                console.log(sheets, carousel);
                 setSheets(carousel);
             }) 
         };

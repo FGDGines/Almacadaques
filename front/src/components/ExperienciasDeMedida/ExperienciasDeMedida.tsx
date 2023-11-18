@@ -19,14 +19,9 @@ function ExperienciasDeMedida() {
     const subtmitOnFormDefault = (bag: FormData) => {
         bag.append("fragment", "Experiencias de medida")
         const data = {body: JSON.stringify(formDataToObject(bag))}
-        console.log(data)
-        fetchDefault("/mail/create", data, (d: tpDtmResponse) => {
-            console.log("response",d)
-        }, (e: tpDtmResponse) => {
-            console.log("error", e)
-        })
+        fetchDefault("/mail/create", data)
         
-        console.log('Datos enviados:', data);
+        // console.log('Datos enviados:', data);
     }
 
     return (

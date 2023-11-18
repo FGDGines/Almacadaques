@@ -27,7 +27,7 @@ app.post('/delete' , [security_post ,
      , validarCampos], Delete)
 
 
-app.post('/update' , [
+app.post('/update' , [security_post,
     check('id', 'El id del carosuel a eliminar es obligatorio').isNumeric()
      , validarCampos] , Update)
 

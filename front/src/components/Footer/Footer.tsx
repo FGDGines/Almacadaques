@@ -18,10 +18,11 @@ const Footer = () => {
             bag.set('nombre',"NewsLetterUser"); 
             bag.set('msg', 'Este usuario quere Unirse a tu newsletter')
             bag.set('fragment', 'Newsletter Footer')
-            console.log(bag.getAll("email"))
-            const res = fetchDefault('/mail/create', {body: JSON.stringify(formDataToObject(bag))})
+            // console.log(bag.getAll("email"))
+            // const res = fetchDefault('/mail/create', {body: JSON.stringify(formDataToObject(bag))})
+            fetchDefault('/mail/create', {body: JSON.stringify(formDataToObject(bag))}) // override
     
-            console.log('Datos enviados:', res);
+            // console.log('Datos enviados:', res);
             event.target.reset()
         }
     }

@@ -9,8 +9,6 @@ import { Formatos, RelativePath } from "../../../config/config";
 
 export const Register = async (req: Request, res: Response) => {
     const { body } = req
-    // @ts-ignore
-    console.log(req.files.src.data)
     try { 
         // @ts-ignore
         if (req.files.src.data) {
