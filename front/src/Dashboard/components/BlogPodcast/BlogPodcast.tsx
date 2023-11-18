@@ -15,10 +15,6 @@ function BlogPodcast() {
         <BarSession tituloVista='Blog' segundoTitulo='Podcast' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
           <div className="conatinerInfopodcast">
             <Podcast/>
-            <Podcast/>
-            <Podcast/>
-            <Podcast/>
-            <Podcast/>
           </div>
           <div className="BtonAgregarEventosmain" onClick={() => setLayoutID(37)}>
             <BtnMas/>

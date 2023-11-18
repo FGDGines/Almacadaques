@@ -26,7 +26,8 @@ function App() {
   return (
       <div className={`App ${upOrDown?'':'down'}`} onScroll={(arg) => handlerScroll(arg)}>
         <HandlerLayout />
-      </div>
+        
+      </div>   
   )
 }
 

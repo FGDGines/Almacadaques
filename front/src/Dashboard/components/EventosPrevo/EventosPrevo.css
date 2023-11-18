@@ -1,6 +1,7 @@
 
 
 .eventosPrevios {
+  
   width: 20rem;
   flex-shrink: 0;
   border-radius: 1rem;
@@ -10,6 +11,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  box-shadow: 0px 8px 24px 0px rgba(63, 63, 63, 0.25);
+}
+.OrdenarItem{
+  display: flex;
+  gap: 2vw;
 }
 .titleEventos {
   top: 0;
@@ -68,10 +74,13 @@
 }
 
 .fechaInicio {
+  word-wrap: break-word;
   display: flex;
   gap: 0.5vw;
+  width: 18vw;
 }
 .titleMainEvento {
+  word-wrap: break-word;
   margin: 0;
   color: #979797;
   font-family: Montserrat;
@@ -81,6 +90,8 @@
   line-height: normal;
 }
 .DescripcionMainEvento {
+  word-wrap: break-word;
+  width: 14.6vw;
   margin: 0;
   color: #777;
 
@@ -89,4 +100,36 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+
+@media (max-width: 780px) {
+}
+@media (max-width: 450px) {
+  .titleEventos {
+   
+    width: 70vw;
+    padding-left: 3vw;
+  }
+  .informacionEvenetosMain{
+    width: 50vw;
+  }
+  .fechaInicio{
+    width: 50vw;
+  }
+  .DescripcionMainEvento {
+    width: 70vw;
+  }
+  .paddinIcono{
+    width: 7vw;
+    height: 7vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .DescripcionMainEvento{
+    width: 50vw;
+  }
+  .BtnEditarEvento{
+    width: 5vw;
+  }
 }

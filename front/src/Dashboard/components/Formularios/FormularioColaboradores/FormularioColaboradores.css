@@ -141,3 +141,13 @@
     line-height: normal;
   }
   
+  @media (max-width: 780px) {
+  }
+  @media (max-width: 450px) {
+    .formCarrousel{
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+    }
+    
+  }

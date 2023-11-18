@@ -25,7 +25,7 @@ export const EspaciosBienestar = () => {
                 <h2>Espacios de Bienestar</h2>
                 <div className='Buton'>
                     <a href="#" className='EnlaceBton' onClick={() => setLayoutID(27)}>
-                        <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/mingcute_add-line.svg" alt="" />
+                        <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/mingcute_add-line.svg" alt="" className='Img+' />
                         Agregar
                     </a>
                 </div>

@@ -65,3 +65,24 @@ gap: 0.1rem;
     font-weight: 600;
     line-height: normal;
 }
+
+@media (max-width: 780px) {
+
+}
+@media (max-width: 450px) {
+    .testimonioItem .imgUsertestimonio{
+      display: none;
+    }
+    .testimonioItem .FraseTestimonio{
+      font-size: 3.5vw;
+    }
+    .iconEditar{
+        flex-direction: column;
+    }
+  .iconEditar .editar img{
+    width: 4vw;
+  } 
+  .iconEditar .eliminar img{
+    width: 4vw;
+  } 
+}

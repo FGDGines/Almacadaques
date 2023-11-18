@@ -67,7 +67,7 @@ export const FormularioTestimonios = () => {
             <NarbarAdmin></NarbarAdmin>
 
             <div className="contenidoFormTestimonios">
-            <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Testimonios'></BarSession>
+            <BarSession direccion={18} tituloVista='Inicio' segundoTitulo='Testimonios'></BarSession>
 
 
                 <form className='formTestimonios' onSubmit={handleSubmit}>

@@ -66,3 +66,15 @@
   letter-spacing: 0.0185rem !important;
   margin-bottom: 15px;
 }
+
+
+@media (max-width: 780px) {
+}
+@media (max-width: 450px) {
+  .formTestimonios{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
