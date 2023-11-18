@@ -11,7 +11,7 @@ const app = Router()
 
 app.post('/create', [
     check('url', 'La url es obligatoria').not().isEmpty(),
-    check('cuenta', 'La cuenta es obligatoria').isEmail()
+    check('cuenta', 'La cuenta es obligatoria').not().isEmpty()
     , validarCampos], Create)
 
 app.post('/read', [

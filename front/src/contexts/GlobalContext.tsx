@@ -11,7 +11,9 @@ export const GlobalContext = createContext<GlobalContextType>({
     upOrDown: false,
     setUpOrDown() {  },
     indexCarrousel: -1,
-    setIndexCarrousel() {}
+    setIndexCarrousel() {},
+    indexRed: -1,
+    setIndexRed() {}
 })
 
 export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -20,6 +22,7 @@ export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ child
     const [languageFlag, setLanguageFlag] = useState<enLanguageFlag>(enLanguageFlag.ES)
     const [upOrDownState, setUpOrDownState] = useState(true);
     const [indexCarrousel, setIndexCarrousel] = useState<string>(-1);
+    const [indexRed, setIndexRed] = useState<string>(-1);
 
     const setUpOrDown = (arg: boolean) => {
         setUpOrDownState(arg);
@@ -54,7 +57,9 @@ export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ child
                 upOrDown: upOrDownState,
                 setUpOrDown: setUpOrDown,
                 indexCarrousel,
-                setIndexCarrousel
+                setIndexCarrousel,
+                indexRed,
+                setIndexRed
             }
         }>
         {children}

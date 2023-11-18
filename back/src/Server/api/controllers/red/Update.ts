@@ -17,7 +17,7 @@ export const Update = async ( req: Request ,res: Response)=>{
             include: [{all:true}]
         })
 
-        if(!tRed) return res.status(200).json({status: 400, msg: "El espacio debe ser válido" })
+        if(!tRed) return res.status(200).json({status: 400, msg: "La red debe ser válida" })
 
         if(url){
             const past = tRed.url
@@ -27,7 +27,7 @@ export const Update = async ( req: Request ,res: Response)=>{
 
         if(cuenta){
             const past = tRed.cuenta
-            await tRed.update({text_en: cuenta})
+            await tRed.update({cuenta: cuenta})
             updates.push({path: 'cuenta', past , now: cuenta})
         }
 
@@ -38,7 +38,9 @@ export const Update = async ( req: Request ,res: Response)=>{
                 const past = tRed.archivo
                 if (past) {
                     const uploadDir = path.join(__dirname,  RelativePath.red)
-                    await DeleteFile(path.join(uploadDir, past))        
+                    try {
+                        await DeleteFile(path.join(uploadDir, past))   
+                    } catch (error) {}     
                 }
                 const img = await UploadFile( imagen, path.join(__dirname,  RelativePath.podcast), "jpg", Formatos.image)
                 await tRed.update({archivo: img})

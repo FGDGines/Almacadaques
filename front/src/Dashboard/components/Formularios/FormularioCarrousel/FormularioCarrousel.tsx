@@ -27,7 +27,7 @@ export const FormularioCarrousel = () => {
     const { languageFlag } = useContext(GlobalContext)
     const lf = languageFlag.toLowerCase() 
 
-    const { indexCarrousel, setIndexCarrousel } = useContext(GlobalContext)
+    const { indexCarrousel } = useContext(GlobalContext)
     
 
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -54,8 +54,6 @@ export const FormularioCarrousel = () => {
 
     const handleSubmit = () => {
         const da = new FormData()
-        da.append("id", `${indexCarrousel}`)
-        da.append(`frase_${lf}`, formData.Frase)
         da.append("autor", formData.Firma)
         da.append("link_autor", formData.Url)
         da.append("token", getToken()) 
@@ -64,22 +62,25 @@ export const FormularioCarrousel = () => {
             da.append("src", formData.archivo);
             da.append("fileExtension", "jpg");
         }
-        fetchForm("/carousel/update", da,(d: tpDtmResponse) => {
-            if (d.status == 404) { // si da mensaje de que no encuentra el id entonces crea un nuevo carrousel
-                da.append("frase_es", ".")
-                da.append("frase_en", ".")
-                da.append("frase_cat", ".")
-                da.set(`frase_${lf}`, formData.Frase)
-                console.log(da.getAll("frase_es"), languageFlag)
-                fetchForm("/carousel/create", da,(tp: tpDtmResponse) => {
-                    console.log(tp)
-                })
-            }
-            console.log(d)
-        }, (d: tpDtmResponse) => {
-           console.log(d) 
-        })
-
+        if (indexCarrousel != -1) {
+            da.append(`frase_${lf}`, formData.Frase)
+            da.append("id", `${indexCarrousel}`)
+            fetchForm("/carousel/update", da,(d: tpDtmResponse) => {
+                console.log(d)
+            }, (d: tpDtmResponse) => {
+               console.log(d) 
+            })
+    
+        } else {
+            da.append("frase_es", ".")
+            da.append("frase_en", ".")
+            da.append("frase_cat", ".")
+            da.set(`frase_${lf}`, formData.Frase)
+            fetchForm("/carousel/create", da,(tp: tpDtmResponse) => {
+                console.log(tp)
+            })
+        }
+        
     };
 
     

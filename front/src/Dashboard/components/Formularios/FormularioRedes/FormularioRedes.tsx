@@ -1,19 +1,26 @@
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import '../FormularioRedes/FormularioRedes.css';
 import { BarSession } from '../../barSession/barSession';
-import { useState, ChangeEvent, FormEvent } from 'react';
+import { useState, ChangeEvent, FormEvent, useContext } from 'react';
+import { getToken } from '../../../../helpers/JWT';
+import { fetchForm } from '../../../../helpers/Server';
+import { tpDtmResponse } from '../../../../types/typesComponents';
+import { GlobalContext } from '../../../../contexts/GlobalContext';
 
 
 interface FormData {
     url: string;
     archivo: File | null;
+    cuenta: string;
 }
 
 export const FormularioRedes = () => {
     const [formData, setFormData] = useState<FormData>({
         url: '',
         archivo: null,
+        cuenta: ''
     });
+    const { indexRed } = useContext(GlobalContext)
 
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
@@ -34,31 +41,30 @@ export const FormularioRedes = () => {
         }
     };
 
-    const handleSubmit = async (event: FormEvent) => {
-        event.preventDefault();
-
-        try {
-            // Enviar datos al backend usando fetch
-            const response = await fetch('http://tu-backend.com/api/redes', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
-
-            if (response.ok) {
-                // console.log('Datos del formulario enviados exitosamente');
-                // Limpiar el formulario después de enviar los datos
-                setFormData({
-                    url: '',
-                    archivo: null,
-                });
-            } else {
-                console.error('Error al enviar los datos del formulario');
-            }
-        } catch (error) {
-            console.error('Error al enviar los datos del formulario:', error);
+    const handleSubmit = () => {
+        const da = new FormData()
+        da.append("url", formData.url)
+        da.append("cuenta", formData.cuenta)
+        da.append("token", getToken()) 
+        console.log(formData.cuenta)
+        if (formData.archivo) {
+            da.append("src", formData.archivo);
+            da.append("fileExtension", "jpg");
+        }
+        if (indexRed != -1) {
+            da.append("id", `${indexRed}`)
+            console.log(indexRed)
+            fetchForm("/red/update", da,(d: tpDtmResponse) => {
+                console.log(d)
+            }, (d: tpDtmResponse) => {
+               console.log(d) 
+            })
+    
+        } else {
+            console.log()
+            fetchForm("/red/create", da,(tp: tpDtmResponse) => {
+                console.log(tp)
+            })
         }
     };
 
@@ -70,7 +76,7 @@ export const FormularioRedes = () => {
                 <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Redes' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
 
 
-                <form className='formRedes' onSubmit={handleSubmit}>
+                <form className='formRedes'>
                     <div className="subirArchivos">
                         <label htmlFor="File" className='labelArchivo'>
                             <img src="../../../../src/assets/Dashboard-almacadaques/inicio/nube.svg" alt="" />
@@ -91,9 +97,16 @@ export const FormularioRedes = () => {
                             onChange={handleInputChange}
                         />
 
+                        <label className='labelsRedes' form='URL'>cuenta:</label>
+                        <input className='inputsFormRedes'
+                            type="text"
+                            name="cuenta"
+                            value={formData.cuenta}
+                            onChange={handleInputChange}
+                        />
                         
                         <div className="btnGuardarRedes">
-                            <a href="" className='GuardarRedesSocialesAdmin'>Guardar</a>
+                            <a href="#" onClick={handleSubmit} className='GuardarRedesSocialesAdmin'>Guardar</a>
                         </div>
                     </div>
                 </form>

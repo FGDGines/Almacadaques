@@ -162,6 +162,7 @@ type iconsProps = {
 }
 
 interface Red {
+    index: number;
     archivo: string;
     url: string;
     cuenta: string;
