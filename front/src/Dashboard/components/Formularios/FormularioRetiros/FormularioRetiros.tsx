@@ -8,6 +8,7 @@ interface FormData {
     Autor: string
     Fecha: Date,
     Descripcion: string;
+    Estado: string;
     archivo: File | null;
   }
 
@@ -24,6 +25,7 @@ function FormularioRetiros() {
         Autor: '',
         Fecha: new Date(),
         Descripcion: '',
+        Estado: '',
         archivo: null,
       });
     
@@ -67,6 +69,7 @@ function FormularioRetiros() {
               Autor: '',
               Fecha: new Date(),
               Descripcion: '',
+              Estado: '',
               archivo: null,
             });
           } else {
@@ -81,7 +84,7 @@ function FormularioRetiros() {
 <NarbarAdmin></NarbarAdmin>
 
 <div className="contenidoFormCarrousel">
-  <BarSession direccion={17} tituloVista='Retiro' segundoTitulo='Añadir nuevo Retiro' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
+  <BarSession direccion={22} tituloVista='Retiro' segundoTitulo='Añadir nuevo Retiro' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
 
 
   <form className='formCarrousel' onSubmit={handleSubmit}>
@@ -134,6 +137,13 @@ function FormularioRetiros() {
         type="text"
         name="Descripcion"
         value={formData.Descripcion}
+        onChange={handleInputChange}
+      />
+      <label className='labelsCarrousel' form='Estado'>Estado</label>
+      <input className='inputsFormCarrousel'
+        type="text"
+        name="Estado"
+        value={formData.Estado}
         onChange={handleInputChange}
       />
 

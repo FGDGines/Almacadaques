@@ -1,6 +1,6 @@
 import './Carousel.css';
 import { FC, useContext, useEffect, useRef, useState } from 'react'
-import { tpCarouelItem, tpCarouselData } from '../../types/typesComponents'
+import { tpCarouelItem, tpCarouselData, tpDtmResponse } from '../../types/typesComponents'
 import { GrLinkPrevious as FcPrevious, GrLinkNext as FcNext } from 'react-icons/gr'
 import { fetchDefault } from '../../helpers/Server';
 
@@ -46,27 +46,31 @@ const Carousel: FC<tpCarouselData> = ({ items }) => {
     const da = new FormData()
     da.set("lang", l)
     const data = {body: JSON.stringify(formDataToObject(da))}
-    const carousel: tpCarouelItem[] = []
+    
     
     useEffect(() => {
         const api = async () => {
-            await fetchDefault("/carousel/read", data, (d:tpDtmResponse) => {
+            const carousel: tpCarouelItem[] = []
+            fetchDefault("/carousel/read", data, (d: tpDtmResponse) => {
+                if(!d.bag) return 
                 for (let index = 0; index < d.bag.length; index++) {
-                    const element = d.bag[index];
-                    const r = "../../../../back/src/public/carousel/"
-                    carousel.push({id: element.id, autor: element.autor, link_autor: element.link_autor, src: r + element.src, title: element.data_carousel.es || element.data_carousel.en || element.data_carousel.cat})
-                    console.log("carousel", element)
+                    const element: {id: number , autor: string  , link_autor: string, src:string, data_carousel: {es: string, en: string , cat: string} } = d.bag[index];
+                    const r = "src/carousel/";
+
+                    carousel.push({ id: element.id, autor: element.autor, link_autor: element.link_autor, src: r + element.src, title: element.data_carousel.es || element.data_carousel.en || element.data_carousel.cat });
+                    console.log("carousel", element);
                 }
                 // const t = tlEspacios[languageFlag]
                 // console.log(espacios[0], t[0])
-                console.log(sheets, carousel)
-                setSheets(carousel)
+                console.log(sheets, carousel);
+                setSheets(carousel);
             }) 
         };
         api();
+        // eslint-disable-next-line
     }, []);
 
-    return <div className='Carousel'>
+    return !sheets.length? '' : <div className='Carousel'>
         <div className='ctPicture' ref={ctPicture}>
             {
                 sheets.map((sheet) => {

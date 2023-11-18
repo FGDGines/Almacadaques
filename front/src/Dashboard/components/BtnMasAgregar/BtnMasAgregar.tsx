@@ -43,7 +43,7 @@ export const BtnMasAgregar: React.FC<BtnMasAgregarProps> = ({ direccion }) => {
         <Loader></Loader>
       )}
       <a onClick={handleClick} href="#" className='EnlaceBton'>
-        <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/mingcute_add-line.svg" alt="" />
+        <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/mingcute_add-line.svg" alt="" className='Img+' />
         Agregar
       </a>
     </div>

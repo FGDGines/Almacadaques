@@ -86,7 +86,7 @@ function FormularioPospcast() {
       <NarbarAdmin></NarbarAdmin>
 
       <div className="contenidoFormCarrousel">
-        <BarSession direccion={17} tituloVista='Blog' segundoTitulo='Añadir nuevo Podcast' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
+        <BarSession direccion={26} tituloVista='Blog' segundoTitulo='Añadir nuevo Podcast' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
 
 
         <form className='formCarrousel' onSubmit={handleSubmit}>

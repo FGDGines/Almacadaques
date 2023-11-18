@@ -17,7 +17,7 @@ interface Retiro {
   year: number;
   image: string[] | string;
   title: string;
-  author: string;
+  author?: string;
   description?: string;
 }
 

@@ -5,12 +5,13 @@ const retiroInfo = [
       index: 1,
       day: [1, 3],
       month: 8,
+      autor: '', 
       year: 2023,
       image: [
         "../../src/assets/carouselBlog/img2_2.jpg",
         
       ],
-      title: "Nature & Kaiaking Weekend en Cadaqué",
+      title: "Nature & Kaiaking Weekend en Cadaqués",
       // author: "Ana Sánchez",
       description: "Nadaremos la vida, Kaiak, haremos baños sanadores y mucho más! ( NATURALEZA – KAIAK – MOVIMIENTO VITAL COMPARTIR – BAÑO SANADOR – CAMINAR LA VIDA – AUTOCUIDADO. ) ",
       estado:'Completo',
@@ -19,6 +20,7 @@ const retiroInfo = [
       index: 2,
       day: [22, 24],
       month: 8,
+      autor: '', 
       year: 2023,
       image: [
         "../../src/assets/carouselBlog/img3.jpg",
@@ -32,6 +34,7 @@ const retiroInfo = [
       index: 3,
       day: [27, 29],
       month: 9,
+      autor: '', 
       year: 2023,
       image: [
         ".../../src/assets/carouselBlog/img1_1.jpg",
@@ -45,21 +48,23 @@ const retiroInfo = [
       index: 4,
       day: [24, 26],
       month: 10,
+      autor: '', 
       year: 2023,
       image: [
-        "../../src/assets/FotosRetiros/1_1.jpg",
+        "../../src/assets/FotosRetiros/3_4.jpeg",
         // "./src/assets/images/blog-line-1-620x464.jpg",
         // "../../src/assets/carouselBlog/img3.jpg",
       ],
       title: "Happy Dance Weekend  con Paz Jiménez",
       // author: "Luis Ramirez",
       description: "En Avinyonet de Puigventós (Alt Empordá) ,Danzaremos la vida, respiraremos naturaleza y mucho más! ( NATURALEZA – BAILE – MOVIMIENTO VITAL – RELAJACIÓN – COMPARTIR – BAÑO DE BOSQUE – CABALLOS - AUTOCUIDADO .) Para más información y reservar tu plaza: Acceda artraves del link",
-      estado:'Aplazado',
+      estado:'Plazas limitadas',
     },
     {
       index: 5,
       day: [6, 10],
       month: 11,
+      autor: '', 
       year: 2023,
       image: [
         "../../src/assets/carouselBlog/img3.jpg",
@@ -74,6 +79,7 @@ const retiroInfo = [
     {
       index: 6,
       day: [19, 29],
+      autor: '', 
       month: 1,
       year: 2024,
       image: [
@@ -90,6 +96,7 @@ const retiroInfo = [
       index: 7,
       day: [22, 24],
       month: 2,
+      autor: '', 
       year: 2024,
       image: [
         "../../src/assets/carouselBlog/img3.jpg",

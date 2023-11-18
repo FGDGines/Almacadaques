@@ -4,6 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.25);
 }
 
 .titleContainerRetiro {
@@ -22,7 +23,7 @@
   line-height: normal;
 }
 .ImgFondoRetiro {
-  margin-top: -3.5vw;
+  margin-top: -4.1vw;
   width: 19vw;
   background-color: #646363;
 }
@@ -49,4 +50,43 @@ font-size: 1.25rem;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+}
+
+@media (max-width: 780px) {
+  .ContainerRetiro{
+    width: 30vw;
+   }
+   .titleContainerRetiro {
+    width: 30vw;
+   }
+   .ImgFondoRetiro {
+    margin-top: -8vw;
+    width: 30vw;
+   }
+   .infoRetiroAdmin {
+    width: 25vw;
+   }
+   .infoRetiro {
+    width: 50vw;
+   }
+}
+@media (max-width: 450px) {
+ .ContainerRetiro{
+  width: 80vw;
+  margin-right: 5vw;
+ }
+ .titleContainerRetiro {
+  width: 80vw;
+ }
+ 
+ .ImgFondoRetiro {
+  margin-top: -18vw;
+  width: 80vw;
+ }
+ .infoRetiroAdmin {
+  width: 80vw;
+ }
+ .infoRetiro {
+  width: 80vw;
+ }
 }

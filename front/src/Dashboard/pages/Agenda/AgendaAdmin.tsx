@@ -16,20 +16,6 @@ function AgendaAdmin() {
         <BarSession tituloVista='Agenda/Experiencias de Bienestar:' segundoTitulo='Eventos' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg'/>
         <div className="itemAgendaAdmin">
           <EventosPrevo />
-          <EventosPrevo />
-          <EventosPrevo />
-          <EventosPrevo />
-          <EventosPrevo />
-          <EventosPrevo />
-          <EventosPrevo />
-          <EventosPrevo />
-          <EventosPrevo />
-          <EventosPrevo />
-          <EventosPrevo />
-          <EventosPrevo />
-
-
-
         </div>
 
           <div className="BtonAgregarEventosmain" onClick={() => setLayoutID(30)}>

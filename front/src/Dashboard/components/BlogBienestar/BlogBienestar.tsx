@@ -16,11 +16,8 @@ const BlogBienestar = () => {
         <BarSession tituloVista='Blog' segundoTitulo='Tips Bienestar' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
         <div className="editordeLibro">
           <BienestarAdmin />
-          <BienestarAdmin />
-          <BienestarAdmin />
-          <BienestarAdmin />
         </div>
-        <div className="BtonAgregarEventosmain" onClick={() => setLayoutID(38)}>
+        <div className="BtonAgregarEventosmain" onClick={() => setLayoutID(32)}>
             <BtnMas/>
           </div>
       </div>

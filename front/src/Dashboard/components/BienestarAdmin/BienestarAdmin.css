@@ -7,6 +7,8 @@
   flex-direction: column;
   align-items: center;
   padding-top: 1vw;
+  box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: 1vw;
 }
 .editarContBienestar {
   display: flex;
@@ -34,4 +36,21 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+@media (max-width: 780px) {
+}
+@media (max-width: 450px) {
+  .BienestarAdmin{
+    margin-top: 15vw;
+    width: 40vw;
+  }
+  .editarContBienestar{
+    width: 40vw;
+  }
+  .ImgBienestarAdmin{
+    width: 35vw;
+  }
+  .textBienestarAdmin{
+    width: 37vw;
+  }
 }

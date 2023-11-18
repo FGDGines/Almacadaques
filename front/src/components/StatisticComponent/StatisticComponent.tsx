@@ -1,10 +1,5 @@
-import React from 'react';
 import { Container, Grid, Paper, Typography } from '@mui/material';
-import { MdOutlineEmojiPeople, MdOutlineMood } from 'react-icons/md';
-import { GiMeditation } from 'react-icons/gi';
-import { BsFillHeartPulseFill } from 'react-icons/bs';
 import { iconos } from "../../data/icons";
-
 import './StatisticComponent.css'; // Importa el archivo CSS
 import { Tilt } from 'react-tilt';
 
