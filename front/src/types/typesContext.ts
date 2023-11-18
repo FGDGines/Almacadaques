@@ -12,7 +12,9 @@ type GlobalContextType = {
     languageFlag: enLanguageFlag
     setLanguageFlag: (arg: enLanguageFlag) => void
     upOrDown: boolean
-    setUpOrDown: (arg: boolean)=>void
+    setUpOrDown: (arg: boolean)=>void,
+    indexCarrousel: number,
+    setIndexCarrousel: (arg: number)=>void
 }
 
 export type {

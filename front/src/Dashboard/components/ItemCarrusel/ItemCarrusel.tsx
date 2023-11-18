@@ -4,6 +4,10 @@ import itemsData from '../../../data/itemCarrousel';
 import { NuevoCarrusel } from './NuevoCarrusel/NuevoCarrusel';
 import { GlobalContext } from '../../../contexts/GlobalContext';
 import { Loader } from '../LoaderOverlay/LoaderOverlay';
+import { formDataToObject } from '../../../helpers/Forms';
+import { tpCarouelItem, tpDtmResponse } from '../../../types/typesComponents';
+import { fetchDefault } from '../../../helpers/Server';
+import { getToken } from '../../../helpers/JWT';
 
 
 interface ContentItem {
@@ -33,10 +37,24 @@ interface Item {
 
 export const ItemCarrusel: React.FC<BtnMasAgregarProps> = () => {
   const [data, setData] = useState<Item[]>(itemsData);
+  const { languageFlag } = useContext(GlobalContext)
+  const { indexCarrousel, setIndexCarrousel } = useContext(GlobalContext);
+  const l = languageFlag.toLowerCase() 
 
   const handleDeleteItemCarrusel = (index: number) => {
-    const updatedData = data.filter((item) => item.index !== index);
-    setData(updatedData);
+    // elimina de la base de datos
+    const da = new FormData()
+    da.set("id", `${index}`)
+    da.set("token", getToken())
+    const dat = {body: JSON.stringify(formDataToObject(da))}
+
+    fetchDefault("/carousel/delete", dat, (d: tpDtmResponse) => {
+      if (d.status != 200) return
+      const updatedData = data.filter((item) => item.index !== index);
+      setData(updatedData);
+    }, (d: tpDtmResponse) => {
+      console.log(d)
+    })
   };
 
  
@@ -59,6 +77,54 @@ export const ItemCarrusel: React.FC<BtnMasAgregarProps> = () => {
       clearTimeout(timeout);
     };
   }, [showLoader]);
+
+
+  const edit = (index: number) => {
+    setIndexCarrousel(index)
+    setLayoutID(29)
+  }
+
+  
+  // carga los carrousel
+  useEffect(() => {
+      const api = async () => {
+        const da = new FormData()
+        da.set("lang", l)
+        const dat = {body: JSON.stringify(formDataToObject(da))}
+        
+        const carousel: Item[] = []
+        fetchDefault("/carousel/read", dat, (d: tpDtmResponse) => {
+            if(!d.bag) return 
+            for (let index = 0; index < d.bag.length; index++) {
+                const element: {id: number , autor: string  , link_autor: string, src:string, data_carousel: {es: string, en: string , cat: string} } = d.bag[index];
+                const r = "src/carousel/";
+                const value = { 
+                  index: element.id, 
+                  content: [
+                    {
+                      src: r + element.src,
+                      alt: "autor"
+                    },
+                    {
+                      content: [
+                        {
+                          content: [
+                            { text: element.data_carousel.es || element.data_carousel.en || element.data_carousel.cat},
+                            { text: element.link_autor }
+                          ]
+                        }
+                      ]
+                    }
+                  ] 
+                }
+                carousel.push(value)
+            }
+            setData(carousel);
+        }) 
+      };
+      api();
+      // eslint-disable-next-line
+  }, []);
 
   return (
     <div className='ItemCarrusel'>
@@ -88,7 +154,7 @@ export const ItemCarrusel: React.FC<BtnMasAgregarProps> = () => {
                       <i onClick={() => handleDeleteItemCarrusel(item.index)}>
                         <img src="../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/Borrar.svg" alt="Borrar" />
                       </i>
-                      <i  onClick={() => setLayoutID(29)} >
+                      <i  onClick={() => edit(item.index)} >
                         <img src="../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/Editar.svg" alt="Editar" />
                       </i>
                     </div>
@@ -100,7 +166,7 @@ export const ItemCarrusel: React.FC<BtnMasAgregarProps> = () => {
                       <i onClick={() => handleDeleteItemCarrusel(item.index)}>
                         <img src="../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/Borrar.svg" alt="Borrar" />
                       </i>
-                      <i  onClick={() => setLayoutID(29)}>
+                      <i  onClick={() => edit(item.index)}>
                         <img src="../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/Editar.svg" alt="Editar" />
                       </i>
                     </div>

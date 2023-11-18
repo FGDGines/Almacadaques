@@ -9,7 +9,9 @@ export const GlobalContext = createContext<GlobalContextType>({
     languageFlag: enLanguageFlag.ES,
     setLanguageFlag() { },
     upOrDown: false,
-    setUpOrDown() {  }
+    setUpOrDown() {  },
+    indexCarrousel: -1,
+    setIndexCarrousel() {}
 })
 
 export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -17,6 +19,7 @@ export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ child
     const [languajeActive, setLanguajeActive] = useState<number>(1)
     const [languageFlag, setLanguageFlag] = useState<enLanguageFlag>(enLanguageFlag.ES)
     const [upOrDownState, setUpOrDownState] = useState(true);
+    const [indexCarrousel, setIndexCarrousel] = useState<string>(-1);
 
     const setUpOrDown = (arg: boolean) => {
         setUpOrDownState(arg);
@@ -49,7 +52,9 @@ export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ child
                 languageFlag,
                 setLanguageFlag,
                 upOrDown: upOrDownState,
-                setUpOrDown: setUpOrDown
+                setUpOrDown: setUpOrDown,
+                indexCarrousel,
+                setIndexCarrousel
             }
         }>
         {children}

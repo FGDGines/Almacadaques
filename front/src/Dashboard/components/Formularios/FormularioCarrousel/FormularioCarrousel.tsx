@@ -1,7 +1,12 @@
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import '../FormularioCarrousel/FormularioCarrousel.css';
 import { BarSession } from '../../barSession/barSession';
-import { useState, ChangeEvent, FormEvent } from 'react';
+import { useState, ChangeEvent, useContext } from 'react';
+import { fetchForm } from '../../../../helpers/Server';
+import { formDataToObject } from '../../../../helpers/Forms';
+import { GlobalContext } from '../../../../contexts/GlobalContext';
+import { getToken } from '../../../../helpers/JWT';
+import { tpDtmResponse } from '../../../../types/typesComponents';
 
 
 interface FormData {
@@ -18,6 +23,11 @@ export const FormularioCarrousel = () => {
         Url: '',
         archivo: null,
     });
+
+    const { languageFlag } = useContext(GlobalContext)
+
+    const { indexCarrousel } = useContext(GlobalContext)
+    
 
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
@@ -38,36 +48,29 @@ export const FormularioCarrousel = () => {
         }
     };
 
-    const handleSubmit = async (event: FormEvent) => {
-        event.preventDefault();
 
-        try {
-            // Enviar datos al backend usando fetch
-            const response = await fetch('http://tu-backend.com/api/Carrousel', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
 
-            if (response.ok) {
-                // console.log('Datos del formulario enviados exitosamente');
-                // Limpiar el formulario después de enviar los datos
-                setFormData({
-                    Frase: '',
-                    Firma: '',
-                    Url: '',
-                    archivo: null,
-                });
-            } else {
-                console.error('Error al enviar los datos del formulario');
-            }
-        } catch (error) {
-            console.error('Error al enviar los datos del formulario:', error);
+
+    const handleSubmit = () => {
+        const da = new FormData()
+        da.append("id", `${indexCarrousel}`)
+        da.append(`frase_${languageFlag}`, formData.Frase)
+        da.append("autor", formData.Firma)
+        da.append("link_autor", formData.Url)
+        da.append("token", getToken()) 
+        
+        if (formData.archivo) {
+            da.append("src", formData.archivo);
+            da.append("fileExtension", "jpg");
         }
+        fetchForm("/carousel/update", da,(d: tpDtmResponse) => {
+            console.log(d)
+        }, (d: tpDtmResponse) => {
+           console.log(d) 
+        })
     };
 
+    
     return (
         <div className='formularioCarrousel'>
             <NarbarAdmin></NarbarAdmin>
@@ -76,7 +79,7 @@ export const FormularioCarrousel = () => {
                 <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Carrousel' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
 
 
-                <form className='formCarrousel' onSubmit={handleSubmit}>
+                <form className='formCarrousel'>
                     <div className="subirArchivos">
                         <label htmlFor="File" className='labelArchivo'>
                             <img src="../../../../src/assets/Dashboard-almacadaques/inicio/nube.svg" alt="" />
@@ -120,7 +123,7 @@ export const FormularioCarrousel = () => {
 
                 <div className="botonesFormCarrousel">
                     <a href="#" className='CancelarCarousel'>Cancelar</a>
-                    <a href="#" className='AgregarCarousel'>Agregar</a>
+                    <a href="#" className='AgregarCarousel' onClick={handleSubmit}>Agregar</a>
                 </div>
             </div>
         </div>
