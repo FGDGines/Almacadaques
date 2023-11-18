@@ -6,7 +6,6 @@ import { check } from "express-validator";
 import { Read } from "../controllers/carousel/Read";
 import { Delete } from "../controllers/carousel/Delete";
 import { Update } from "../controllers/carousel/Update";
-import { Test } from "../controllers/carousel/Test";
 
 const app = Router()
 
@@ -31,8 +30,5 @@ app.post('/delete' , [security_post,
 app.post('/update' , [security_post,
     check('id', 'El id del carosuel a actualizar es obligatorio').isNumeric()
      , validarCampos] , Update)
-
-app.post('/test' , [
-    ] , Test)
 
 module.exports = app

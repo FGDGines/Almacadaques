@@ -38,7 +38,7 @@ interface Item {
 export const ItemCarrusel: React.FC<BtnMasAgregarProps> = () => {
   const [data, setData] = useState<Item[]>(itemsData);
   const { languageFlag } = useContext(GlobalContext)
-  const { indexCarrousel, setIndexCarrousel } = useContext(GlobalContext);
+  const { setIndexCarrousel } = useContext(GlobalContext);
   const l = languageFlag.toLowerCase() 
 
   const handleDeleteItemCarrusel = (index: number) => {
