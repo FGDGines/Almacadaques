@@ -1,7 +1,11 @@
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import { BarSession } from '../../barSession/barSession';
 import '../FormularioEspaciosBienestar/FormularioEspaciosBienestar.css';
-import { useState, ChangeEvent, FormEvent } from 'react';
+import { useState, ChangeEvent, FormEvent, useContext } from 'react';
+import { getToken } from '../../../../helpers/JWT';
+import { GlobalContext } from '../../../../contexts/GlobalContext';
+import { tpDtmResponse } from '../../../../types/typesComponents';
+import { fetchForm } from '../../../../helpers/Server';
 
 
 interface FormData {
@@ -12,6 +16,7 @@ export const FormularioEspaciosBienestar = () => {
     const [formData, setFormData] = useState<FormData>({
         Frase: '',
     });
+    const { indexEspacio } = useContext(GlobalContext)
 
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
@@ -23,30 +28,26 @@ export const FormularioEspaciosBienestar = () => {
 
 
 
-    const handleSubmit = async (event: FormEvent) => {
-        event.preventDefault();
-
-        try {
-            // Enviar datos al backend usando fetch
-            const response = await fetch('http://tu-backend.com/api/EspaciosBienestar', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
-
-            if (response.ok) {
-                // console.log('Datos del formulario enviados exitosamente');
-                // Limpiar el formulario después de enviar los datos
-                setFormData({
-                    Frase: '',
-                });
-            } else {
-                console.error('Error al enviar los datos del formulario');
-            }
-        } catch (error) {
-            console.error('Error al enviar los datos del formulario:', error);
+    const handleSubmit = () => {
+        const da = new FormData()
+        da.append("text_es", formData.Frase)
+        da.append("text_en", formData.Frase)
+        da.append("text_cat", formData.Frase)
+        da.append("token", getToken()) 
+        
+        if (indexEspacio != -1) {
+            da.append("id", `${indexEspacio}`)
+            fetchForm("/espacio/update", da, (d: tpDtmResponse) => {
+                console.log(d)
+            }, (d: tpDtmResponse) => {
+               console.log(d) 
+            })
+    
+        } else {
+            console.log(da.get("es"))
+            fetchForm("/espacio/create", da, (tp: tpDtmResponse) => {
+                console.log(tp)
+            })
         }
     };
 
@@ -60,7 +61,7 @@ export const FormularioEspaciosBienestar = () => {
 
 
 
-                <form className='formEspaciosBienestar' onSubmit={handleSubmit}>
+                <form className='formEspaciosBienestar' >
 
 
                     <div className="restInputs">
@@ -77,7 +78,7 @@ export const FormularioEspaciosBienestar = () => {
                     
                 </form>
                 <div className="GuardarEspaciosBienestar">
-                        <a href="" className='btnGuardarEspaciosBienestarAdmin'>Guardar</a>
+                        <a href="#" onClick={handleSubmit} className='btnGuardarEspaciosBienestarAdmin'>Guardar</a>
                     </div>
             </div>
         </div>

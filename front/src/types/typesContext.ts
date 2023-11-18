@@ -16,7 +16,9 @@ type GlobalContextType = {
     indexCarrousel: number,
     setIndexCarrousel: (arg: number)=>void
     indexRed: number,
-    setIndexRed: (arg: number)=>void
+    setIndexRed: (arg: number)=>void,
+    indexEspacio: number,
+    setIndexEspacio: (arg: number)=>void
 }
 
 export type {

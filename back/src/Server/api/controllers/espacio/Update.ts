@@ -17,20 +17,20 @@ export const Update = async ( req: Request ,res: Response)=>{
         if(!tEspacio) return res.status(200).json({status: 400, msg: "El espacio debe ser válido" })
 
         if(text_es){
-            const past = tEspacio.text_es
-            await tEspacio.update({text_es: text_es})
+            const past = tEspacio.es
+            await tEspacio.update({es: text_es})
             updates.push({path: 'text_es', past , now: text_es})
         }
 
         if(text_en){
-            const past = tEspacio.text_en
-            await tEspacio.update({text_en: text_en})
+            const past = tEspacio.en
+            await tEspacio.update({en: text_en})
             updates.push({path: 'text_en', past , now: text_en})
         }
 
         if(text_cat){
-            const past = tEspacio.text_cat
-            await tEspacio.update({text_cat: text_cat})
+            const past = tEspacio.cat
+            await tEspacio.update({cat: text_cat})
             updates.push({path: 'text_cat', past , now: text_cat})
         }
 
