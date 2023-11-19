@@ -44,7 +44,6 @@ export const FormularioEspaciosBienestar = () => {
             })
     
         } else {
-            console.log(da.get("es"))
             fetchForm("/espacio/create", da, (tp: tpDtmResponse) => {
                 console.log(tp)
             })

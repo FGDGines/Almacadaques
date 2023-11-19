@@ -54,13 +54,13 @@ function FormularioColaboradores() {
             da.append("nombre", formData.Nombre)
         }
         if (formData.Contacto) {
-            da.append("nombre", formData.Contacto)
+            da.append("contacto", formData.Contacto)
         }
         if (formData.Cargo) {
-            da.append("nombre", formData.Cargo)
+            da.append("cargo", formData.Cargo)
         }
         if (formData.Descripcion) {
-            da.append("nombre", formData.Descripcion)
+            da.append("descripcion", formData.Descripcion)
         }
         da.append("token", getToken()) 
         
@@ -77,7 +77,7 @@ function FormularioColaboradores() {
             })
     
         } else {
-            fetchForm("/collaborator/create", da,(tp: tpDtmResponse) => {
+            fetchForm("/collaborator/register", da,(tp: tpDtmResponse) => {
                 console.log(tp)
             })
         }
