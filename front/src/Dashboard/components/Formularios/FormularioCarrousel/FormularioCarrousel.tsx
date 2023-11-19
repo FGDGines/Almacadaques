@@ -54,8 +54,15 @@ export const FormularioCarrousel = () => {
 
     const handleSubmit = () => {
         const da = new FormData()
-        da.append("autor", formData.Firma)
-        da.append("link_autor", formData.Url)
+        if (formData.Firma) {
+            da.append("autor", formData.Firma)
+        }
+        if (formData.Url) {
+            da.append("link_autor", formData.Url)
+        }
+        if (formData.Frase){
+            da.append(`frase_${lf}`, formData.Frase)
+        }
         da.append("token", getToken()) 
         
         if (formData.archivo) {
@@ -63,7 +70,6 @@ export const FormularioCarrousel = () => {
             da.append("fileExtension", "jpg");
         }
         if (indexCarrousel != -1) {
-            da.append(`frase_${lf}`, formData.Frase)
             da.append("id", `${indexCarrousel}`)
             fetchForm("/carousel/update", da,(d: tpDtmResponse) => {
                 console.log(d)

@@ -20,7 +20,9 @@ type GlobalContextType = {
     indexEspacio: number,
     setIndexEspacio: (arg: number)=>void
     indexTestimony: number,
-    setIndexTestimony: (arg: number)=>void
+    setIndexTestimony: (arg: number)=>void,
+    indexCollaborator: number,
+    setIndexCollaborator: (arg: number)=>void
 }
 
 export type {

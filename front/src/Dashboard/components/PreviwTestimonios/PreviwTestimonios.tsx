@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import "./PreviwTestimonios.css";
-import { testimonies } from "../../../data/testimonies";
+// import { testimonies } from "../../../data/testimonies";
 import { getToken } from '../../../helpers/JWT';
 import { formDataToObject } from '../../../helpers/Forms';
 import { fetchDefault } from '../../../helpers/Server';

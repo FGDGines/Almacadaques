@@ -43,17 +43,19 @@ export const FormularioRedes = () => {
 
     const handleSubmit = () => {
         const da = new FormData()
-        da.append("url", formData.url)
-        da.append("cuenta", formData.cuenta)
+        if (formData.url) {
+            da.append("url", formData.url)
+        }
+        if (formData.cuenta) {
+            da.append("cuenta", formData.cuenta)
+        }
         da.append("token", getToken()) 
-        console.log(formData.cuenta)
         if (formData.archivo) {
             da.append("src", formData.archivo);
             da.append("fileExtension", "jpg");
         }
         if (indexRed != -1) {
             da.append("id", `${indexRed}`)
-            console.log(indexRed)
             fetchForm("/red/update", da,(d: tpDtmResponse) => {
                 console.log(d)
             }, (d: tpDtmResponse) => {
@@ -61,7 +63,6 @@ export const FormularioRedes = () => {
             })
     
         } else {
-            console.log()
             fetchForm("/red/create", da,(tp: tpDtmResponse) => {
                 console.log(tp)
             })
