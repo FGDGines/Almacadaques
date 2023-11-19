@@ -19,6 +19,8 @@ type GlobalContextType = {
     setIndexRed: (arg: number)=>void,
     indexEspacio: number,
     setIndexEspacio: (arg: number)=>void
+    indexTestimony: number,
+    setIndexTestimony: (arg: number)=>void
 }
 
 export type {

@@ -15,7 +15,9 @@ export const GlobalContext = createContext<GlobalContextType>({
     indexRed: -1,
     setIndexRed() {},
     indexEspacio: -1,
-    setIndexEspacio() {}
+    setIndexEspacio() {},
+    indexTestimony: -1,
+    setIndexTestimony() {}
 })
 
 export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -26,6 +28,7 @@ export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ child
     const [indexCarrousel, setIndexCarrousel] = useState<number>(-1);
     const [indexRed, setIndexRed] = useState<number>(-1);
     const [indexEspacio, setIndexEspacio] = useState<number>(-1);
+    const [indexTestimony, setIndexTestimony] = useState<number>(-1);
 
     const setUpOrDown = (arg: boolean) => {
         setUpOrDownState(arg);
@@ -64,7 +67,9 @@ export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ child
                 indexRed,
                 setIndexRed,
                 indexEspacio,
-                setIndexEspacio
+                setIndexEspacio,
+                indexTestimony,
+                setIndexTestimony
             }
         }>
         {children}
