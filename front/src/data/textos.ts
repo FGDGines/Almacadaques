@@ -152,6 +152,57 @@ export const textos: TextosType<
     "textocontactarjuntoscrearemos" |
     "textocontactartelf" |
     "textocontactarformulariotexto1" |
+    //Aviso Legal 
+    "textoAvisoLegal" |
+    "textos1titulo" |
+    "textos1parrafo1" |
+    "textos1parrafo2" |
+    "textos1parrafo3" |
+    "textos1parrafo4" |
+    "textos1parrafo5" |
+    "textos2titulo" |
+    "textos2parrafo1" |
+    "textos2parrafo2" |
+    "textos2parrafo3" | 
+    "textos2parrafo4" | 
+    "textos2parrafo5" | 
+    "textos2parrafo6" |
+    "textos2parrafo7" | 
+    "textos2parrafo8" | 
+    "textos2parrafo9" | 
+    "textos2parrafo10" | 
+    "textos2parrafo11" | 
+    "textos2parrafo12" |
+    "textos2parrafo13" | 
+    "textos2parrafo14" |
+    "textos2parrafo15" | 
+    "textos3titulo1" |
+    "textos3parrafo1" |
+    "textos3parrafo2" |
+    "textos3parrafo3" |
+    "textos4titulo1" |
+    "textos4parrafo1" |
+    "textos4parrafo2" |
+    "textos4parrafo3" |
+    "textos4parrafo4" |
+    "textos4parrafo5" |
+    "textos4parrafo6" |
+    "textos4parrafo7" |
+    "textos4parrafo8" |
+    "textos4parrafo9" |
+    "textos4parrafo10" |
+    "textos4parrafo11" |
+//"FIXME:"
+    "textos5titulo1" |
+    "textos5parrafo1" |
+    "textos5parrafo2" |
+    "textos5parrafo3" |
+    "textos5parrafo4" |
+    "textos6titulo1" |
+    "textos6parrafo1" |
+    "textos6parrafo2" |
+    
+
     //politica de privacidad
     "textospoliticaprivacidad" |
     "textosI" |
@@ -228,8 +279,7 @@ export const textos: TextosType<
     "textosparrafoXIItexto2" |
     "textosparrafoXIItexto3" |
     "textosparrafoXIItexto4"
-    //--------------------------REVISION-------------------------------------------"TODO:"
-    //---------------------------------------------------------------------
+    
     
     
 > = {
@@ -378,6 +428,56 @@ export const textos: TextosType<
         textocontactarjuntoscrearemos: "Juntos crearemos el plan de acción que necesitas para dar el giro que te llevará al siguiente nivel en tu vida, logrando un mayor bienestar.",
         textocontactartelf: "Teléfono:",
         textocontactarformulariotexto1: "Ponerse en contacto",
+        //Aviso Legal 
+        textoAvisoLegal: "AVISO LEGAL Y CONDICIONES GENERALES DE USO",
+        textos1titulo: "I. INFORMACIÓN GENERAL",
+        textos1parrafo1: "En cumplimiento con el deber de información dispuesto en la Ley 34/2002 de Servicios de la Sociedad dela Información y el Comercio Electrónico (LSSI-CE) de 11 de julio, se facilitan a continuación los siguientes datos de información general de este sitio web:",
+        textos1parrafo2: "La titularidad de este sitio web, https://almacadaques.com/, (en adelante, Sitio Web) la ostenta: Elisabet Coll-Vinent Puig, con NIF: 46132263J, y cuyos datos de contacto son:",
+        textos1parrafo3: "Dirección: Paseo Sant Gervasi, 59, 08022 Barcelona",
+        textos1parrafo4: "Teléfono de contacto: +34 660 30 54 21",
+        textos1parrafo5: "Email de contacto: hola@almacadaques.com",
+        textos2titulo: "II. TÉRMINOS Y CONDICIONES GENERALES DE USO",
+        textos2parrafo1: "El objeto de las condiciones: El Sitio Web",
+        textos2parrafo2: "El objeto de las presentes Condiciones Generales de Uso (en adelante, Condiciones) es regular el acceso y la utilización del Sitio Web. A los efectos de las presentes Condiciones se entenderá como Sitio Web: la apariencia externa de los interfaces de pantalla, tanto de forma estática como de forma dinámica, es decir, el árbol de navegación; y todos los elementos integrados tanto en los interfaces de pantalla como en el árbol de navegación (en adelante, Contenidos) y todos aquellos servicios o recursos en línea que en su caso ofrezca a los Usuarios (en adelante, Servicios).",
+        textos2parrafo3: "Coaching y experiencias de bienestar se reserva la facultad de modificar, en cualquier momento, y sin aviso previo, la presentación y configuración del Sitio Web y de los Contenidos y Servicios que en él pudieran estar incorporados. El Usuario reconoce y acepta que en cualquier momento Coaching y experiencias de bienestar pueda interrumpir, desactivar y/o cancelar cualquiera de estos elementos que se integran en el Sitio Web o el acceso a los mismos.",
+        textos2parrafo4: "El acceso al Sitio Web por el Usuario tiene carácter libre y, por lo general, es gratuito sin que el Usuario deba proporcionar una contraprestación para poder disfrutarlo, salvo el coste de conexión a través de la red de telecomunicaciones suministrada por el proveedor de acceso que haya contratado el Usuario",
+        textos2parrafo5: "La utilización de alguno de los Contenidos o Servicios del Sitio Web podrá hacerse mediante la suscripción o registro previo del Usuario.",
+        textos2parrafo6: "El Usuario",
+        textos2parrafo7: "El acceso, la navegación y uso del Sitio Web, así como por los espacios habilitados para interactuar entre los Usuarios, y el Usuario y Coaching y experiencias de bienestar, como los comentarios y/o espacios de blogging, confiere la condición de Usuario, por lo que se aceptan, desde que se inicia la navegación por el Sitio Web, todas las Condiciones aquí establecidas, así como sus ulteriores modificaciones, sin perjuicio de la aplicación de la correspondiente normativa legal de obligado cumplimiento según el caso. Dada la relevancia de lo anterior, se recomienda al Usuario leerlas cada vez que visite el Sitio Web.",
+        textos2parrafo8: "El Sitio Web de Coaching y experiencias de bienestar proporciona gran diversidad de información, servicios y datos. El Usuario asume su responsabilidad para realizar un uso correcto del Sitio Web. Esta responsabilidad se extenderá a:",
+        textos2parrafo9: "Un uso de la información, Contenidos y/o Servicios y datos ofrecidos por Coaching y experiencias de bienestar sin que sea contrario a lo dispuesto por las presentes Condiciones, la Ley, la moral o el orden público, o que de cualquier otro modo puedan suponer lesión de los derechos de terceros o del mismo funcionamiento del Sitio Web.",
+        textos2parrafo10: "La veracidad y licitud de las informaciones aportadas por el Usuario en los formularios extendidos por Coaching y experiencias de bienestar para el acceso a ciertos Contenidos o Servicios ofrecidos por el Sitio Web. En todo caso, el Usuario notificará de forma inmediata a Coaching y experiencias de bienestar acerca de cualquier hecho que permita el uso indebido de la información registrada en dichos formularios, tales como, pero no solo, el robo, extravío, o el acceso no autorizado a identificadores y/o contraseñas, con el fin de proceder a su inmediata cancelación.",
+        textos2parrafo11: "Coaching y experiencias de bienestar se reserva el derecho de retirar todos aquellos comentarios y aportaciones que vulneren la ley, el respeto a la dignidad de la persona, que sean discriminatorios, xenófobos, racistas, pornográficos, spamming, que atenten contra la juventud o la infancia, el orden o la seguridad pública o que, a su juicio, no resultaran adecuados para su publicación.",
+        textos2parrafo12: "En cualquier caso, Coaching y experiencias de bienestar no será responsable de las opiniones vertidas por los Usuarios a través de comentarios u otras herramientas de blogging o de participación que pueda haber.",
+        textos2parrafo13: "El mero acceso a este Sitio Web no supone entablar ningún tipo de relación de carácter comercial entre Coaching y experiencias de bienestar y el Usuario.",
+        textos2parrafo14: "El Usuario declara ser mayor de edad y disponer de la capacidad jurídica suficiente para vincularse por las presentes Condiciones. Por lo tanto, este Sitio Web de Coaching y experiencias de bienestar no se dirige a menores de edad. Coaching y experiencias de bienestar declina cualquier responsabilidad por el incumplimiento de este requisito.",
+        textos2parrafo15: "El Sitio Web está dirigido principalmente a Usuarios residentes en España. Coaching y experiencias de bienestar no asegura que el Sitio Web cumpla con legislaciones de otros países, ya sea total o parcialmente. Si el Usuario reside o tiene su domiciliado en otro lugar y decide acceder y/o navegar en el Sitio Web lo hará bajo su propia responsabilidad, deberá asegurarse de que tal acceso y navegación cumple con la legislación local que le es aplicable, no asumiendo Coaching y experiencias de bienestar responsabilidad alguna que se pueda derivar de dicho acceso.",
+        textos3titulo1: "III. ACCESO Y NAVEGACIÓN EN EL SITIO WEB: EXCLUSIÓN DE GARANTÍAS Y RESPONSABILIDAD",
+        textos3parrafo1: "Coaching y experiencias de bienestar no garantiza la continuidad, disponibilidad y utilidad del Sitio Web, ni de los Contenidos o Servicios. Coaching y experiencias de bienestar hará todo lo posible por el buen funcionamiento del Sitio Web, sin embargo, no se responsabiliza ni garantiza que el acceso a este Sitio Web no vaya a ser ininterrumpido o que esté libre de error.",
+        textos3parrafo2: "Tampoco se responsabiliza o garantiza que el contenido o software al que pueda accederse a través de este Sitio Web, esté libre de error o cause un daño al sistema informático (software y hardware) del Usuario. En ningún caso Coaching y experiencias de bienestar será responsable por las pérdidas, daños o perjuicios de cualquier tipo que surjan por el acceso, navegación y el uso del Sitio Web, incluyéndose, pero no limitándose, a los ocasionados a los sistemas informáticos o los provocados por la introducción de virus.",
+        textos3parrafo3: "Coaching y experiencias de bienestar tampoco se hace responsable de los daños que pudiesen ocasionarse a los usuarios por un uso inadecuado de este Sitio Web. En particular, no se hace responsable en modo alguno de las caídas, interrupciones, falta o defecto de las telecomunicaciones que pudieran ocurrir.",
+        textos4titulo1: "IV. POLÍTICA DE ENLACES",
+        textos4parrafo1: "Se informa que el Sitio Web de Coaching y experiencias de bienestar pone o puede poner a disposición de los Usuarios medios de enlace (como, entre otros, links, banners, botones), directorios y motores de búsqueda que permiten a los Usuarios acceder a sitios web pertenecientes y/o gestionados por terceros.",
+        textos4parrafo2: "La instalación de estos enlaces, directorios y motores de búsqueda en el Sitio Web tiene por objeto facilitar a los Usuarios la búsqueda de y acceso a la información disponible en Internet, sin que pueda considerarse una sugerencia, recomendación o invitación para la visita de los mismos.",
+        textos4parrafo3: "Coaching y experiencias de bienestar ofrece contenidos patrocinados, anuncios y/o enlaces de afiliados. La información que aparece en estos enlaces de afiliados o los anuncios insertados, son facilitados por los propios anunciantes, por lo que Coaching y experiencias de bienestar no se hace responsable de posibles inexactitudes o errores que pudieran contener los anuncios, ni garantiza en modo alguno la experiencia,  integridad o responsabilidad de los anunciantes o la calidad de sus productos y/o servicios.",
+        textos4parrafo4: "Asimismo, tampoco garantizará la disponibilidad técnica, exactitud, veracidad, validez o legalidad de sitios ajenos a su propiedad a los que se pueda acceder por medio de los enlaces.",
+        textos4parrafo5: "Coaching y experiencias de bienestar en ningún caso revisará o controlará el contenido de otros sitios web, así como tampoco aprueba, examina ni hace propios los productos y servicios, contenidos, archivos y cualquier otro material existente en los referidos sitios enlazados.",
+        textos4parrafo6: "Coaching y experiencias de bienestar no asume ninguna responsabilidad por los daños y perjuicios que pudieran producirse por el acceso, uso, calidad o licitud de los contenidos, comunicaciones, opiniones, productos y servicios de los sitios web no gestionados por Coaching y experiencias de bienestar y que sean enlazados en este Sitio Web.",
+        textos4parrafo7: "El Usuario o tercero que realice un hipervínculo desde una página web de otro, distinto, sitio web al Sitio Web de Coaching y experiencias de bienestar deberá saber que:",
+        textos4parrafo8: "No se permite la reproducción —total o parcialmente— de ninguno de los Contenidos y/o Servicios del Sitio Web sin autorización expresa de Coaching y experiencias de bienestar.",
+        textos4parrafo9: "No se permite tampoco ninguna manifestación falsa, inexacta o incorrecta sobre el Sitio Web de Coaching y experiencias de bienestar, ni sobre los Contenidos y/o Servicios del mismo.",
+        textos4parrafo10: "A excepción del hipervínculo, el sitio web en el que se establezca dicho hiperenlace no contendrá ningún elemento, de este Sitio Web, protegido como propiedad intelectual por el ordenamiento jurídico español,  salvo autorización expresa de Coaching y experiencias de bienestar.",
+        textos4parrafo11: "El establecimiento del hipervínculo no implicará la existencia de relaciones entre Coaching y experiencias de bienestar y el titular del sitio web desde el cual se realice, ni el conocimiento y aceptación de Coaching y experiencias de bienestar de los contenidos, servicios y/o actividades ofrecidas en dicho sitio web, y viceversa.",
+        // "TODO:"
+        textos5titulo1: "V. PROPIEDAD INTELECTUAL E INDUSTRIAL",
+        textos5parrafo1: "Coaching y experiencias de bienestar por sí o como parte cesionaria, es titular de todos los derechos de propiedad intelectual e industrial del Sitio Web, así como de los elementos contenidos en el mismo (a título enunciativo y no exhaustivo, imágenes, sonido, audio, vídeo, software o textos, marcas o logotipos, combinaciones de colores, estructura y diseño, selección de materiales usados, programas de ordenador necesarios para su funcionamiento, acceso y uso, etc.). Serán, por consiguiente, obras protegidas como propiedad intelectual por el ordenamiento jurídico español, siéndoles aplicables tanto la normativa española y comunitaria en este campo, como los tratados internacionales relativos a la materia y suscritos por España.",
+        textos5parrafo2: "Todos los derechos reservados. En virtud de lo dispuesto en la Ley de Propiedad Intelectual, quedan expresamente prohibidas la reproducción, la distribución y la comunicación pública, incluida su modalidad de puesta a disposición, de la totalidad o parte de los contenidos de esta página web, con fines comerciales, en cualquier soporte y por cualquier medio técnico, sin la autorización de Coaching y experiencias de bienestar.",
+        textos5parrafo3: "El Usuario se compromete a respetar los derechos de propiedad intelectual e industrial de Coaching y experiencias de bienestar. Podrá visualizar los elementos del Sitio Web o incluso imprimirlos, copiarlos y almacenarlos en el disco duro de su ordenador o en cualquier otro soporte físico siempre y cuando sea, exclusivamente, para su uso personal. El Usuario, sin embargo, no podrá suprimir, alterar, o manipular cualquier dispositivo de protección o sistema de seguridad que estuviera instalado en el Sitio Web.",
+        textos5parrafo4: "En caso de que el Usuario o tercero considere que cualquiera de los Contenidos del Sitio Web suponga una violación de los derechos de protección de la propiedad intelectual, deberá comunicarlo inmediatamente a Coaching y experiencias de bienestar a través de los datos de contacto del apartado de INFORMACIÓN GENERAL de este Aviso Legal y Condiciones Generales de Uso.",
+        textos6titulo1: "VI. ACCIONES LEGALES, LEGISLACIÓN APLICABLE Y JURISDICCIÓN",
+        textos6parrafo1:"Coaching y experiencias de bienestar se reserva la facultad de presentar las acciones civiles o penales que considere necesarias por la utilización indebida del Sitio Web y Contenidos, o por el incumplimiento de las presentes Condiciones.",
+        textos6parrafo2:"La relación entre el Usuario y Coaching y experiencias de bienestar se regirá por la normativa vigente y de aplicación en el territorio español. De surgir cualquier controversia en relación con la interpretación y/o a la aplicación de estas Condiciones las partes someterán sus conflictos a la jurisdicción ordinaria sometiéndose a los jueces y tribunales que correspondan conforme a derecho.",
+        
         //politica de privacidad 
         textospoliticaprivacidad: "POLÍTICA DE PRIVACIDAD",
         textosI:"I. POLÍTICA DE PRIVACIDAD Y PROTECCIÓN DE DATOS",
@@ -600,6 +700,57 @@ export const textos: TextosType<
         textocontactarjuntoscrearemos: "Together we will create the action plan you need to take the turn that will take you to the next level in your life, achieving greater well-being.",
         textocontactartelf: "Telephone:",
         textocontactarformulariotexto1: "Contact us",
+        //Aviso Legal 
+        textoAvisoLegal: "LEGAL NOTICE AND GENERAL CONDITIONS OF USE",
+        textos1titulo: "I. GENERAL INFORMATION",
+        textos1parrafo1: "In compliance with the duty of information provided in Law 34/2002 on Information Society Services and Electronic Commerce (LSSI-CE) of July 11, the following general information data on this website is provided below:",
+        textos1parrafo2: "The ownership of this website, https://almacadaques.com/, (hereinafter, Website) is held by: Elisabet Coll-Vinent Puig, with NIF: 46132263J, and whose contact information is:",
+        textos1parrafo3: "Address: Paseo Sant Gervasi, 59, 08022 Barcelona",
+        textos1parrafo4: "Contact telephone number: +34 660 30 54 21",
+        textos1parrafo5: "Contact email: hola@almacadaques.com",
+        textos2titulo: "II. GENERAL TERMS AND CONDITIONS OF USE",
+        textos2parrafo1: "The object of the conditions: The Website",
+        textos2parrafo2: "The purpose of these General Conditions of Use (hereinafter, Conditions) is to regulate access and use of the Website. For the purposes of these Conditions, the Website will be understood as: the external appearance of the screen interfaces, both statically and dynamically, that is, the navigation tree; and all the elements integrated in both the screen interfaces and the navigation tree (hereinafter, Contents) and all those online services or resources that it offers to Users (hereinafter, Services).",
+        textos2parrafo3: "Coaching and wellness experiences reserves the right to modify, at any time, and without prior notice, the presentation and configuration of the Website and the Content and Services that may be incorporated therein. The User acknowledges and accepts that at any time Coaching and wellness experiences may interrupt, deactivate and/or cancel any of these elements that are integrated into the Website or access to them.",
+        textos2parrafo4: "Access to the Website by the User is free and, as a general rule, is free without the User having to provide any compensation to be able to enjoy it, except in relation to the cost of connection through the telecommunications network provided. by the access provider that the User has contracted",
+        textos2parrafo5: "The use of any of the Content or Services of the Website may be done through the User's prior subscription or registration.",
+        textos2parrafo6: "The user",
+        textos2parrafo7: "Access, navigation and use of the Website, as well as the spaces enabled to interact between Users, and the User and Coaching and well-being experiences, such as comments and/or blogging spaces, confers the status of User, for which is accepted, from the moment you begin browsing the Website, all the Conditions established here, as well as their subsequent modifications, without prejudice to the application of the corresponding legal regulations of mandatory compliance as the case may be. Given the relevance of the above, the User is recommended to read them every time they visit the Website.",
+        textos2parrafo8: "The Coaching and Wellness Experiences Website provides a wide variety of information, services and data. The User assumes responsibility for correct use of the Website. This responsibility will extend to:",
+        textos2parrafo9: "A use of the information, Content and/or Services and data offered by Coaching and well-being experiences without it being contrary to the provisions of these Conditions, the Law, morality or public order, or that in any other way may imply injury to the rights of third parties or the operation of the Website.",
+        textos2parrafo10: "The veracity and legality of the information provided by the User in the forms issued by Coaching and Wellness Experiences for access to certain Content or Services offered by the Website. In any case, the User will immediately notify Coaching and Wellness Experiences about any fact that allows the improper use of the information registered in said forms, such as, but not only, theft, loss, or unauthorized access. to identifiers and/or passwords, in order to proceed to their immediate cancellation.",
+        textos2parrafo11: "Coaching and well-being experiences reserves the right to withdraw all comments and contributions that violate the law, respect for the dignity of the person, that are discriminatory, xenophobic, racist, pornographic, spamming, that attack youth or childhood. , order or public safety or that, in its opinion, are not appropriate for publication.",
+        textos2parrafo12: "In any case, Coaching and well-being experiences will not be responsible for the opinions expressed by Users through comments or other blogging or participation tools that may exist.",
+        textos2parrafo13: "Mere access to this Website does not imply establishing any type of commercial relationship between Coaching and wellness experiences and the User.",
+        textos2parrafo14: "The User declares to be of legal age and to have sufficient legal capacity to be bound by these Conditions. Therefore, this Coaching and Wellness Experiences Website is not directed at minors. Coaching and Wellness Experiences declines any responsibility for failure to comply with this requirement.",
+        textos2parrafo15: "The Website is aimed mainly at Users residing in Spain. Coaching and wellness experiences does not ensure that the Website complies with the laws of other countries, either totally or partially. If the User resides or is domiciled in another place and decides to access and/or browse the Website, they will do so under their own responsibility, and must ensure that such access and navigation complies with the local legislation that applies to them, not assuming Coaching and well-being experiences any responsibility that may arise from such access.",
+        textos3titulo1: "III. ACCESS AND NAVIGATION ON THE WEBSITE: EXCLUSION OF GUARANTEES AND RESPONSIBILITY",
+        textos3parrafo1: "Coaching and wellness experiences does not guarantee the continuity, availability and usefulness of the Website, or the Contents or Services. Coaching and Wellness Experiences will make every effort to ensure the proper functioning of the Website, however, it is not responsible nor does it guarantee that access to this Website will not be uninterrupted or error-free.",
+        textos3parrafo2: "Nor is it responsible or guaranteed that the content or software that can be accessed through this Website is free of error or causes damage to the User's computer system (software and hardware). In no case will Coaching and wellness experiences be responsible for losses, damages or losses of any kind arising from access, navigation and use of the Website, including, but not limited to, those caused to computer systems or those caused due to the introduction of viruses.",
+        textos3parrafo3: "Coaching and well-being experiences is also not responsible for any damage that may be caused to users due to improper use of this Website. In particular, it is not responsible in any way for any telecommunications drops, interruptions, lack or defect that may occur.",
+        textos4titulo1: "IV. LINK POLICY",
+        textos4parrafo1: "It is reported that the Coaching and Wellness Experiences Website makes or may make available to Users link means (such as, among others, links, banners, buttons), directories and search engines that allow Users to access sites. websites owned and/or managed by third parties.",
+        textos4parrafo2: "The installation of these links, directories and search engines on the Website is intended to facilitate Users' search for and access to the information available on the Internet, without it being considered a suggestion, recommendation or invitation to visit them. .",
+        textos4parrafo3: "Coaching and Wellness Experiences offers sponsored content, advertisements and/or affiliate links. The information that appears in these affiliate links or the inserted advertisements is provided by the advertisers themselves, so Coaching and well-being experiences is not responsible for possible inaccuracies or errors that the advertisements may contain, nor does it guarantee in any way the experience, integrity or responsibility of advertisers or the quality of their products and/or services.",
+        textos4parrafo4: "Likewise, it will not guarantee the technical availability, accuracy, veracity, validity or legality of sites other than its property that can be accessed through the links.",
+        textos4parrafo5: "Coaching and wellness experiences will in no case review or control the content of other websites, nor does it approve, examine or endorse the products and services, content, files and any other material existing on the aforementioned linked sites.",
+        textos4parrafo6: "Coaching and well-being experiences does not assume any responsibility for any damages that may occur due to the access, use, quality or legality of the content, communications, opinions, products and services of websites not managed by Coaching and well-being experiences and that are linked on this Website.",
+        textos4parrafo7: "The User or third party who makes a hyperlink from a web page of another, different, website to the Coaching and Wellness Experiences Website must know that:",
+        textos4parrafo8: "Reproduction - in whole or in part - of any of the Contents and/or Services of the Website is not permitted without express authorization from Coaching and Wellness Experiences.",
+        textos4parrafo9: "Nor is any false, inaccurate or incorrect statement permitted about the Coaching and Wellness Experiences Website, nor about its Contents and/or Services.",
+        textos4parrafo10: "With the exception of the hyperlink, the website on which said hyperlink is established will not contain any element of this Website, protected as intellectual property by the Spanish legal system, unless expressly authorized by Coaching and Wellness Experiences.",
+        textos4parrafo11: "The establishment of the hyperlink will not imply the existence of relations between Coaching and well-being experiences and the owner of the website from which it is made, nor the knowledge and acceptance of Coaching and well-being experiences of the contents, services and/or activities offered on said website, and vice versa.",
+        // "TODO:"
+        textos5titulo1: "V. INTELLECTUAL AND INDUSTRIAL PROPERTY",
+        textos5parrafo1: "Coaching and wellness experiences by itself or as an assignee, is the owner of all intellectual and industrial property rights of the Website, as well as the elements contained therein (by way of example and not exhaustive, images, sound, audio, video, software or texts, brands or logos, color combinations, structure and design, selection of materials used, computer programs necessary for its operation, access and use, etc.). They will, therefore, be works protected as intellectual property by the Spanish legal system, with both Spanish and Community regulations in this field, as well as international treaties related to the matter and signed by Spain, being applicable to them.",
+        textos5parrafo2: "All rights reserved. By virtue of the provisions of the Intellectual Property Law, the reproduction, distribution and public communication, including the method of making available, of all or part of the contents of this website, for commercial purposes, are expressly prohibited. in any medium and by any technical means, without the authorization of Coaching and Wellness Experiences.",
+        textos5parrafo3: "The User agrees to respect the intellectual and industrial property rights of Coaching and wellness experiences. You may view the elements of the Website or even print, copy and store them on the hard drive of your computer or on any other physical medium as long as it is exclusively for your personal use. The User, however, may not delete, alter, or manipulate any protection device or security system that was installed on the Website.",
+        textos5parrafo4: "In the event that the User or third party considers that any of the Contents of the Website constitutes a violation of the intellectual property protection rights, they must immediately notify Coaching and well-being experiences through the contact details in the INFORMATION section. GENERAL of this Legal Notice and General Conditions of Use.",
+        textos6titulo1: "VI.LEGAL ACTIONS, APPLICABLE LAW AND JURISDICTION",
+        textos6parrafo1:"Coaching and wellness experiences reserves the right to file civil or criminal actions that it deems necessary for improper use of the Website and Content, or for non-compliance with these Conditions.",
+        textos6parrafo2:"The relationship between the User and Coaching and wellness experiences will be governed by the regulations in force and applicable in Spanish territory. If any controversy arises in relation to the interpretation and/or application of these Conditions, the parties will submit their conflicts to ordinary jurisdiction, submitting to the corresponding judges and courts in accordance with law.",
+        
+
         //politica de privacidad 
         textospoliticaprivacidad: "PRIVACY POLICY",
         textosI:"I. PRIVACY AND DATA PROTECTION POLICY",
@@ -823,6 +974,57 @@ export const textos: TextosType<
         textocontactarjuntoscrearemos: "Junts crearem el pla d'acció que necessites per fer el gir que et portarà al següent nivell a la teva vida, aconseguint un benestar més gran.",
         textocontactartelf: "Telèfon:",
         textocontactarformulariotexto1: "Poseu-vos en contacte",
+        //Aviso Legal 
+        textoAvisoLegal: "AVÍS LEGAL I CONDICIONS GENERALS D'ÚS",
+        textos1titulo: "I. INFORMACIÓ GENERAL",
+        textos1parrafo1: "En compliment amb el deure informació disposat a la Llei 34/2002 de Serveis de la Societat de la Informació i el Comerç Electrònic (LSSI-CE) d'11 de juliol, es faciliten a continuació les dades d'informació general d'aquest lloc web següents:",
+        textos1parrafo2: "La titularitat d'aquest lloc web, https://almacadaques.com/, (d'ara endavant, Lloc Web) l'ostenta: Elisabet Coll-Vinent Puig, amb NIF: 46132263J, i les dades de contacte de les quals són:",
+        textos1parrafo3: "Adreça: Passeig Sant Gervasi, 59, 08022 Barcelona",
+        textos1parrafo4: "Telèfon de contacte: +34 660 30 54 21",
+        textos1parrafo5: "Email de contacte: hola@almacadaques.com",
+        textos2titulo: "II. TERMES I CONDICIONS GENERALS D'ÚS",
+        textos2parrafo1: "L'objecte de les condicions: El Lloc Web",
+        textos2parrafo2: "L'objecte d'aquestes Condicions Generals d'Ús (d'ara endavant, Condicions) és regular l'accés i la utilització del Lloc Web. Als efectes de les presents Condicions s'entendrà com a Lloc Web: l'aparença externa de les interfícies de pantalla, tant de forma estàtica com de forma dinàmica, és a dir, l'arbre de navegació; i tots els elements integrats tant a les interfícies de pantalla com a l'arbre de navegació (d'ara endavant, Continguts) i tots aquells serveis o recursos en línia que si escau ofereixi als Usuaris (d'ara endavant, Serveis).",
+        textos2parrafo3: "Coaching i experiències de benestar es reserva la facultat de modificar, en qualsevol moment, i sense avís previ, la presentació i configuració del Lloc Web i dels Continguts i Serveis que hi poguessin estar incorporats. L'Usuari reconeix i accepta que en qualsevol moment Coaching i experiències de benestar pugui interrompre, desactivar i/o cancel·lar qualsevol d'aquests elements que s'integren al Lloc Web o accedir-hi.",
+        textos2parrafo4: "L'accés al Lloc Web per l'Usuari té caràcter lliure i, per regla general, és gratuït sense que l'Usuari hagi de proporcionar una contraprestació per poder-ne gaudir, llevat del cost de connexió a través de la xarxa de telecomunicacions subministrada pel proveïdor d'accés que hagi contractat l'Usuari.",
+        textos2parrafo5: "La utilització d'algun dels continguts o serveis del lloc web es pot fer mitjançant la subscripció o el registre previ de l'usuari.",
+        textos2parrafo6: "L'Usuari",
+        textos2parrafo7: "L'accés, la navegació i l'ús del Lloc Web, així com pels espais habilitats per interactuar entre els Usuaris, i l'Usuari i Coaching i experiències de benestar, com els comentaris i/o espais de blogging, confereix la condició d'Usuari, per allò que s'accepten, des que s'inicia la navegació pel Lloc Web, totes les Condicions aquí establertes, així com les seves modificacions ulteriors, sense perjudici de l'aplicació de la corresponent normativa legal de compliment obligat segons el cas. Atesa la rellevància de l'anterior, es recomana a l'Usuari llegir-les cada cop que visiteu el Lloc Web.",
+        textos2parrafo8: "El Lloc Web de Coaching i experiències de benestar proporciona una gran diversitat d'informació, serveis i dades. L'Usuari assumeix la seva responsabilitat per fer un ús correcte del Lloc Web. Aquesta responsabilitat s'estendrà a:",
+        textos2parrafo9: "Un ús de la informació, continguts i/o serveis i dades ofertes per coaching i experiències de benestar sense que sigui contrari al que disposen aquestes condicions, la llei, la moral o l'ordre públic, o que de qualsevol altra manera puguin suposar lesió dels drets de tercers o del mateix funcionament del Lloc Web.",
+        textos2parrafo10: "La veracitat i licitud de les informacions aportades per l'Usuari als formularis estesos per Coaching i experiències de benestar per a l'accés a certs Continguts o Serveis oferts pel Lloc Web. En tot cas, l'Usuari notificarà de forma immediata a Coaching i experiències de benestar sobre qualsevol fet que permeti l'ús indegut de la informació registrada en aquests formularis, com ara, però no només, el robatori, la pèrdua, o l'accés no autoritzat a identificadors i/o contrasenyes, a fi de procedir a la seva cancel·lació immediata.",
+        textos2parrafo11: "Coaching i experiències de benestar es reserva el dret de retirar tots aquells comentaris i aportacions que vulnerin la llei, el respecte a la dignitat de la persona, que siguin discriminatoris, xenòfobs, racistes, pornogràfics, spamming, que atemptin contra la joventut o la infància , l'ordre o la seguretat pública o que, a parer seu, no resultessin adequats per a la seva publicació.",
+        textos2parrafo12: "En qualsevol cas, Coaching i experiències de benestar no serà responsable de les opinions abocades pels Usuaris a través de comentaris o altres eines de blogging o de participació que hi pugui haver.",
+        textos2parrafo13: "El mer accés a aquest Lloc Web no suposa entaular cap mena de relació de caràcter comercial entre Coaching i experiències de benestar i l'Usuari.",
+        textos2parrafo14: "L'Usuari declara que és més gran i disposar de la capacitat jurídica suficient per vincular-se per aquestes Condicions. Per tant, aquest Lloc Web de Coaching i experiències de benestar no es dirigeix a menors dedat. Coaching i experiències de benestar declina qualsevol responsabilitat per incomplir aquest requisit.",
+        textos2parrafo15: "El Lloc Web està dirigit principalment a Usuaris residents a Espanya. Coaching i experiències de benestar no assegura que el Lloc Web compleixi amb legislacions d'altres països, ja sigui totalment o parcialment. Si l'Usuari resideix o té el domiciliat en un altre lloc i decideix accedir i/o navegar al Lloc Web ho farà sota la seva pròpia responsabilitat, assegureu-vos que aquest accés i navegació compleix amb la legislació local que us és aplicable, no assumint Coaching i experiències de benestar cap responsabilitat que es pugui derivar del dit accés.",
+        textos3titulo1: "III. ACCÉS I NAVEGACIÓ AL LLOC WEB: EXCLUSIÓ DE GARANTIES I RESPONSABILITAT",
+        textos3parrafo1: "Coaching i experiències de benestar no garanteix la continuïtat, disponibilitat i utilitat del Lloc Web, ni dels Continguts o Serveis. Coaching i experiències de benestar farà tot el possible pel bon funcionament del Lloc Web, però, no es responsabilitza ni garanteix que l'accés a aquest Lloc Web no sigui ininterromput o que estigui lliure d'error.",
+        textos3parrafo2: "Tampoc no es responsabilitza o garanteix que el contingut o programari al qual es pugui accedir a través d'aquest Lloc Web, estigui lliure d'error o causi un dany al sistema informàtic (programari i maquinari) de l'Usuari. En cap cas Coaching i experiències de benestar serà responsable per les pèrdues, danys o perjudicis de qualsevol tipus que sorgeixin per l'accés, navegació i ús del Lloc Web, incloent-hi, però no limitant-se, els ocasionats als sistemes informàtics o els provocats per la introducció de virus.",
+        textos3parrafo3: "Coaching i experiències de benestar tampoc no es fa responsable dels danys que poguessin ocasionar-se als usuaris per un ús inadequat d'aquest Lloc Web. En particular, no es fa responsable de cap manera de les caigudes, interrupcions, falta o defecte de les telecomunicacions que poguessin ocórrer.",
+        textos4titulo1: "IV. POLÍTICA D'ENLLAÇOS",
+        textos4parrafo1: "S'informa que el Lloc Web de Coaching i experiències de benestar posa o pot posar a disposició dels usuaris mitjans d'enllaç (com, entre d'altres, links, banners, botons), directoris i motors de cerca que permeten als usuaris accedir a llocs web pertanyents i/o gestionats per tercers.",
+        textos4parrafo2: "La instal·lació d'aquests enllaços, directoris i motors de cerca al Lloc Web té per objecte facilitar als Usuaris la cerca de i accés a la informació disponible a Internet, sense que es pugui considerar un suggeriment, recomanació o invitació per a la visita dels mateixos .",
+        textos4parrafo3: "Coaching i experiències de benestar ofereix continguts patrocinats, anuncis i/o enllaços d'afiliats. La informació que apareix en aquests enllaços d'afiliats o els anuncis inserits, són facilitats pels mateixos anunciants, per la qual cosa Coaching i experiències de benestar no es fa responsable de possibles inexactituds o errors que poguessin contenir els anuncis, ni garanteix de cap manera la experiència, integritat o responsabilitat dels anunciants o la qualitat dels seus productes i/o serveis.",
+        textos4parrafo4: "Així mateix, tampoc garantirà la disponibilitat tècnica, exactitud, veracitat, validesa o legalitat de llocs aliens a la seva propietat a què es pugui accedir per mitjà dels enllaços.",
+        textos4parrafo5: "Coaching i experiències de benestar en cap cas revisarà o controlarà el contingut d'altres llocs web, així com tampoc aprova, examina ni fa propis els productes i serveis, continguts, arxius i qualsevol altre material existent als referits llocs enllaçats.",
+        textos4parrafo6: "Coaching i experiències de benestar no assumeix cap responsabilitat pels danys i perjudicis que es puguin produir per l'accés, ús, qualitat o licitud dels continguts, comunicacions, opinions, productes i serveis dels llocs web no gestionats per Coaching i experiències de benestar i que siguin enllaçats en aquest Lloc Web.",
+        textos4parrafo7: "L'Usuari o tercer que faci un hiperenllaç des d'una pàgina web d'un altre, diferent, lloc web al Lloc Web de Coaching i experiències de benestar haurà de saber que:",
+        textos4parrafo8: "No es permet la reproducció —totalment o parcialment— de cap dels Continguts i/o Serveis del Lloc Web sense autorització expressa de Coaching i experiències de benestar.",
+        textos4parrafo9: "No es permet tampoc cap manifestació falsa, inexacta o incorrecta sobre el Lloc Web de Coaching i experiències de benestar, ni sobre els continguts i/o serveis del mateix.",
+        textos4parrafo10: "A excepció de l'hiperenllaç, el lloc web on s'estableixi aquest hiperenllaç no contindrà cap element, d'aquest Lloc Web, protegit com a propietat intel·lectual per l'ordenament jurídic espanyol, excepte autorització expressa de Coaching i experiències de benestar.",
+        textos4parrafo11: "L'establiment de l'hipervincle no implicarà l'existència de relacions entre Coaching i experiències de benestar i el titular del lloc web des del qual es realitzi, ni el coneixement i l'acceptació de Coaching i experiències de benestar dels continguts, serveis i/o activitats ofertes en aquest lloc web, i viceversa.",
+        // "TODO:"
+        textos5titulo1: "V. PROPIETAT INTEL·LECTUAL I INDUSTRIAL",
+        textos5parrafo1: "Coaching i experiències de benestar per si o com a part cessionària, és titular de tots els drets de propietat intel·lectual i industrial del Lloc Web, així com dels elements continguts en aquest (a títol enunciatiu i no exhaustiu, imatges, so, àudio, vídeo, programari o textos, marques o logotips, combinacions de colors, estructura i disseny, selecció de materials usats, programes dordinador necessaris per al seu funcionament, accés i ús, etc.). Seran, per tant, obres protegides com a propietat intel·lectual per l'ordenament jurídic espanyol, i els seran aplicables tant la normativa espanyola i comunitària en aquest camp, com els tractats internacionals relatius a la matèria i subscrits per Espanya.",
+        textos5parrafo2: "Tots els drets reservats. En virtut del que disposa la Llei de propietat intel·lectual, queden expressament prohibides la reproducció, la distribució i la comunicació pública, inclosa la seva modalitat de posada a disposició, de la totalitat o part dels continguts d'aquesta pàgina web, amb fins comercials, en qualsevol suport i per qualsevol mitjà tècnic, sense lautorització de Coaching i experiències de benestar.",
+        textos5parrafo3: "L'usuari es compromet a respectar els drets de propietat intel·lectual i industrial de Coaching i experiències de benestar. Podreu visualitzar els elements del Lloc Web o fins i tot imprimir-los, copiar-los i emmagatzemar-los al disc dur del vostre ordinador o en qualsevol altre suport físic sempre que sigui, exclusivament, per al seu ús personal. L'Usuari, però, no podrà suprimir, alterar, o manipular qualsevol dispositiu de protecció o sistema de seguretat que estigués instal·lat al Lloc Web.",
+        textos5parrafo4: "En cas que l'Usuari o tercer consideri que qualsevol dels Continguts del Lloc Web suposi una violació dels drets de protecció de la propietat intel·lectual, ho haurà de comunicar immediatament a Coaching i experiències de benestar a través de les dades de contacte de l'apartat d'INFORMACIÓ GENERAL daquest Avís Legal i Condicions Generals dÚs.",
+        textos6titulo1: "VI. ACCIONS LEGALS, LEGISLACIÓ APLICABLE I JURISDICCIÓ",
+        textos6parrafo1:"Coaching i experiències de benestar es reserva la facultat de presentar les accions civils o penals que consideri necessàries per la utilització indeguda del Lloc Web i Continguts, o per l'incompliment de les presents Condicions.",
+        textos6parrafo2:"La relació entre l'Usuari i Coaching i experiències de benestar es regirà per la normativa vigent i aplicable al territori espanyol. Si sorgeix qualsevol controvèrsia en relació amb la interpretació i/o l'aplicació d'aquestes Condicions, les parts sotmetran els seus conflictes a la jurisdicció ordinària sotmetent-se als jutges i tribunals que corresponguin d'acord amb el dret.",
+        
+
         //politica de privacidad 
         textospoliticaprivacidad: "POLÍTICA DE PRIVACITAT",
         textosI:"I. POLÍTICA DE PRIVACITAT I PROTECCIÓ DE DADES",
