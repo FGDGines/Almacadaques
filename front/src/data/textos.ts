@@ -192,7 +192,7 @@ export const textos: TextosType<
     "textos4parrafo9" |
     "textos4parrafo10" |
     "textos4parrafo11" |
-//"FIXME:"
+    //"FIXME:"
     "textos5titulo1" |
     "textos5parrafo1" |
     "textos5parrafo2" |
@@ -201,8 +201,18 @@ export const textos: TextosType<
     "textos6titulo1" |
     "textos6parrafo1" |
     "textos6parrafo2" |
+    // "TODO:"
+    "textospoliticadecookies" |
+    "textoscookieparrafo1" |
+    "textoscookieparrafo2" |
+    "textoscookieparrafo3" |
+    "textoscookieparrafo4" |
+    "textostitulocookie" |
+    "textoscookiepropias" |
+    "textoscookiesdeshabilitar" |
+    "textoscookiesdesparrafo1" |
     
-
+    
     //politica de privacidad
     "textospoliticaprivacidad" |
     "textosI" |
@@ -468,7 +478,6 @@ export const textos: TextosType<
         textos4parrafo9: "No se permite tampoco ninguna manifestación falsa, inexacta o incorrecta sobre el Sitio Web de Coaching y experiencias de bienestar, ni sobre los Contenidos y/o Servicios del mismo.",
         textos4parrafo10: "A excepción del hipervínculo, el sitio web en el que se establezca dicho hiperenlace no contendrá ningún elemento, de este Sitio Web, protegido como propiedad intelectual por el ordenamiento jurídico español,  salvo autorización expresa de Coaching y experiencias de bienestar.",
         textos4parrafo11: "El establecimiento del hipervínculo no implicará la existencia de relaciones entre Coaching y experiencias de bienestar y el titular del sitio web desde el cual se realice, ni el conocimiento y aceptación de Coaching y experiencias de bienestar de los contenidos, servicios y/o actividades ofrecidas en dicho sitio web, y viceversa.",
-        // "TODO:"
         textos5titulo1: "V. PROPIEDAD INTELECTUAL E INDUSTRIAL",
         textos5parrafo1: "Coaching y experiencias de bienestar por sí o como parte cesionaria, es titular de todos los derechos de propiedad intelectual e industrial del Sitio Web, así como de los elementos contenidos en el mismo (a título enunciativo y no exhaustivo, imágenes, sonido, audio, vídeo, software o textos, marcas o logotipos, combinaciones de colores, estructura y diseño, selección de materiales usados, programas de ordenador necesarios para su funcionamiento, acceso y uso, etc.). Serán, por consiguiente, obras protegidas como propiedad intelectual por el ordenamiento jurídico español, siéndoles aplicables tanto la normativa española y comunitaria en este campo, como los tratados internacionales relativos a la materia y suscritos por España.",
         textos5parrafo2: "Todos los derechos reservados. En virtud de lo dispuesto en la Ley de Propiedad Intelectual, quedan expresamente prohibidas la reproducción, la distribución y la comunicación pública, incluida su modalidad de puesta a disposición, de la totalidad o parte de los contenidos de esta página web, con fines comerciales, en cualquier soporte y por cualquier medio técnico, sin la autorización de Coaching y experiencias de bienestar.",
@@ -477,6 +486,16 @@ export const textos: TextosType<
         textos6titulo1: "VI. ACCIONES LEGALES, LEGISLACIÓN APLICABLE Y JURISDICCIÓN",
         textos6parrafo1:"Coaching y experiencias de bienestar se reserva la facultad de presentar las acciones civiles o penales que considere necesarias por la utilización indebida del Sitio Web y Contenidos, o por el incumplimiento de las presentes Condiciones.",
         textos6parrafo2:"La relación entre el Usuario y Coaching y experiencias de bienestar se regirá por la normativa vigente y de aplicación en el territorio español. De surgir cualquier controversia en relación con la interpretación y/o a la aplicación de estas Condiciones las partes someterán sus conflictos a la jurisdicción ordinaria sometiéndose a los jueces y tribunales que correspondan conforme a derecho.",
+         // "TODO:"
+        textospoliticadecookies: "POLÍTICA DE COOKIES",
+        textoscookieparrafo1: "El acceso a este Sitio Web puede implicar la utilización de cookies. Las cookies son pequeñas cantidades de información que se almacenan en el navegador utilizado por cada Usuario — en los distintos dispositivos que pueda utilizar para navegar — para que el servidor recuerde cierta información que posteriormente y únicamente el servidor que la implementó leerá. Las cookies facilitan la navegación, la hacen más amigable, y no dañan el dispositivo de navegación.",
+        textoscookieparrafo2: "Las cookies son procedimientos automáticos de recogida de información relativa a las preferencias determinadas por el Usuario durante su visita al Sitio Web con el fin de reconocerlo como Usuario, y personalizar su experiencia y el uso del Sitio Web, y pueden también, por ejemplo, ayudar a identificar y resolver errores.",
+        textoscookieparrafo3: "La información recabada a través de las cookies puede incluir la fecha y hora de visitas al Sitio Web, las páginas visionadas, el tiempo que ha estado en el Sitio Web y los sitios visitados justo antes y después del mismo. Sin embargo, ninguna cookie permite que esta misma pueda contactarse con el número de teléfono del Usuario o con cualquier otro medio de contacto personal. Ninguna cookie puede extraer información del disco duro del Usuario o robar información personal. La única manera de que la información privada del Usuario forme parte del archivo Cookie es que el usuario dé personalmente esa información al servidor.",
+        textoscookieparrafo4: "Las cookies que permiten identificar a una persona se consideran datos personales. Por tanto, a las mismas les será de aplicación la Política de Privacidad anteriormente descrita. En este sentido, para la utilización de las mismas será necesario el consentimiento del Usuario.  Este consentimiento será comunicado, en base a una elección auténtica, ofrecido mediante una decisión afirmativa y positiva, antes del tratamiento inicial, removible y documentado.",
+        textostitulocookie: "Cookies propias",
+        textoscookiepropias: "Son aquellas cookies que son enviadas al ordenador o dispositivo del Usuario y gestionadas exclusivamente por Coaching y experiencias de bienestar para el mejor funcionamiento del Sitio Web. La información que se recaba se emplea para mejorar la calidad del Sitio Web y su Contenido y su experiencia como Usuario. Estas cookies permiten reconocer al Usuario como visitante recurrente del Sitio Web y adaptar el contenido para ofrecerle contenidos que se ajusten a sus preferencias.",
+        textoscookiesdeshabilitar: "Deshabilitar, rechazar y eliminar cookies",
+        textoscookiesdesparrafo1: "El Usuario puede deshabilitar, rechazar y eliminar las cookies —total o parcialmente— instaladas en su dispositivo mediante la configuración de su navegador (entre los que se encuentran, por ejemplo, Chrome, Firefox, Safari, Explorer). En este sentido, los procedimientos para rechazar y eliminar las cookies pueden diferir de un navegador de Internet a otro. En consecuencia, el Usuario debe acudir a las instrucciones facilitadas por el propio navegador de Internet que esté utilizando. En el supuesto de que rechace el uso cookies —total o parcialmente— podrá seguir usando el Sitio Web, si bien podrá tener limitada la utilización de algunas de las prestaciones del mismo.",
         
         //politica de privacidad 
         textospoliticaprivacidad: "POLÍTICA DE PRIVACIDAD",
@@ -749,6 +768,16 @@ export const textos: TextosType<
         textos6titulo1: "VI.LEGAL ACTIONS, APPLICABLE LAW AND JURISDICTION",
         textos6parrafo1:"Coaching and wellness experiences reserves the right to file civil or criminal actions that it deems necessary for improper use of the Website and Content, or for non-compliance with these Conditions.",
         textos6parrafo2:"The relationship between the User and Coaching and wellness experiences will be governed by the regulations in force and applicable in Spanish territory. If any controversy arises in relation to the interpretation and/or application of these Conditions, the parties will submit their conflicts to ordinary jurisdiction, submitting to the corresponding judges and courts in accordance with law.",
+        // "TODO:"
+        textospoliticadecookies: "COOKIES POLICY",
+        textoscookieparrafo1: "Access to this Website may involve the use of cookies. Cookies are small amounts of information that are stored in the browser used by each User - on the different devices they may use to browse - so that the server remembers certain information that will later be read only by the server that implemented it. Cookies make browsing easier, more user-friendly, and do not damage the browsing device.",
+        textoscookieparrafo2: "Cookies are automatic procedures for collecting information related to the preferences determined by the User during their visit to the Website in order to recognize them as a User, and personalize their experience and use of the Website, and they can also, for example, help to identify and resolve errors.",
+        textoscookieparrafo3: "The information collected through cookies may include the date and time of visits to the Website, the pages viewed, the time spent on the Website and the sites visited just before and after the Website. However, no cookie allows it to contact the User's telephone number or any other means of personal contact. No cookie can extract information from the User's hard drive or steal personal information. The only way for the User's private information to be part of the Cookie file is for the user to personally give that information to the server.",
+        textoscookieparrafo4: "Cookies that allow a person to be identified are considered personal data. Therefore, the Privacy Policy described above will apply to them. In this sense, the User's consent will be necessary for their use. This consent will be communicated, based on an authentic choice, offered through an affirmative and positive decision, before the initial, removable and documented treatment.",
+        textostitulocookie: "Own cookies",
+        textoscookiepropias: "These are cookies that are sent to the User's computer or device and managed exclusively by Coaching and Wellness Experiences for the best functioning of the Website. The information collected is used to improve the quality of the Website and its Content and your experience as a User. These cookies allow us to recognize the User as a recurring visitor to the Website and adapt the content to offer content that fits their preferences.",
+        textoscookiesdeshabilitar: "Disable, reject and delete cookies",
+        textoscookiesdesparrafo1: "The User can disable, reject and delete the cookies – totally or partially – installed on their device through the settings of their browser (including, for example, Chrome, Firefox, Safari, Explorer). In this sense, the procedures for rejecting and deleting cookies may differ from one Internet browser to another. Consequently, the User must follow the instructions provided by the Internet browser he or she is using. In the event that you reject the use of cookies – in whole or in part – you may continue using the Website, although the use of some of its features may be limited.",
         
 
         //politica de privacidad 
@@ -1014,7 +1043,6 @@ export const textos: TextosType<
         textos4parrafo9: "No es permet tampoc cap manifestació falsa, inexacta o incorrecta sobre el Lloc Web de Coaching i experiències de benestar, ni sobre els continguts i/o serveis del mateix.",
         textos4parrafo10: "A excepció de l'hiperenllaç, el lloc web on s'estableixi aquest hiperenllaç no contindrà cap element, d'aquest Lloc Web, protegit com a propietat intel·lectual per l'ordenament jurídic espanyol, excepte autorització expressa de Coaching i experiències de benestar.",
         textos4parrafo11: "L'establiment de l'hipervincle no implicarà l'existència de relacions entre Coaching i experiències de benestar i el titular del lloc web des del qual es realitzi, ni el coneixement i l'acceptació de Coaching i experiències de benestar dels continguts, serveis i/o activitats ofertes en aquest lloc web, i viceversa.",
-        // "TODO:"
         textos5titulo1: "V. PROPIETAT INTEL·LECTUAL I INDUSTRIAL",
         textos5parrafo1: "Coaching i experiències de benestar per si o com a part cessionària, és titular de tots els drets de propietat intel·lectual i industrial del Lloc Web, així com dels elements continguts en aquest (a títol enunciatiu i no exhaustiu, imatges, so, àudio, vídeo, programari o textos, marques o logotips, combinacions de colors, estructura i disseny, selecció de materials usats, programes dordinador necessaris per al seu funcionament, accés i ús, etc.). Seran, per tant, obres protegides com a propietat intel·lectual per l'ordenament jurídic espanyol, i els seran aplicables tant la normativa espanyola i comunitària en aquest camp, com els tractats internacionals relatius a la matèria i subscrits per Espanya.",
         textos5parrafo2: "Tots els drets reservats. En virtut del que disposa la Llei de propietat intel·lectual, queden expressament prohibides la reproducció, la distribució i la comunicació pública, inclosa la seva modalitat de posada a disposició, de la totalitat o part dels continguts d'aquesta pàgina web, amb fins comercials, en qualsevol suport i per qualsevol mitjà tècnic, sense lautorització de Coaching i experiències de benestar.",
@@ -1023,6 +1051,16 @@ export const textos: TextosType<
         textos6titulo1: "VI. ACCIONS LEGALS, LEGISLACIÓ APLICABLE I JURISDICCIÓ",
         textos6parrafo1:"Coaching i experiències de benestar es reserva la facultat de presentar les accions civils o penals que consideri necessàries per la utilització indeguda del Lloc Web i Continguts, o per l'incompliment de les presents Condicions.",
         textos6parrafo2:"La relació entre l'Usuari i Coaching i experiències de benestar es regirà per la normativa vigent i aplicable al territori espanyol. Si sorgeix qualsevol controvèrsia en relació amb la interpretació i/o l'aplicació d'aquestes Condicions, les parts sotmetran els seus conflictes a la jurisdicció ordinària sotmetent-se als jutges i tribunals que corresponguin d'acord amb el dret.",
+        // "TODO:"
+        textospoliticadecookies: "POLÍTICA DE COOKIES",
+        textoscookieparrafo1: "L'accés a aquest Lloc Web pot implicar la utilització de galetes. Les galetes són petites quantitats d'informació que s'emmagatzemen al navegador utilitzat per cada Usuari - en els diferents dispositius que pugui utilitzar per navegar - perquè el servidor recordi certa informació que posteriorment i únicament el servidor que la va implementar llegirà. Les galetes faciliten la navegació, la fan més amigable, i no fan malbé el dispositiu de navegació.",
+        textoscookieparrafo2: "Les cookies són procediments automàtics de recollida d'informació relativa a les preferències determinades per l'Usuari durant la visita al Lloc Web per tal de reconèixer-lo com a Usuari, i personalitzar la seva experiència i l'ús del Lloc Web, i poden també, per exemple, ajudar a identificar i resoldre errors.",
+        textoscookieparrafo3: "La informació recollida a través de les galetes pot incloure la data i hora de visites al Lloc Web, les pàgines visionades, el temps que ha estat al Lloc Web i els llocs visitats just abans i després. Tot i això, cap galeta permet que aquesta mateixa pugui contactar amb el número de telèfon de l'Usuari o amb qualsevol altre mitjà de contacte personal. Cap galeta no pot extreure informació del disc dur de l'Usuari o robar informació personal. L'única manera que la informació privada de l'Usuari formi part del fitxer Cookie és que l'usuari doni personalment aquesta informació al servidor.",
+        textoscookieparrafo4: "Les galetes que permeten identificar una persona es consideren dades personals. Per tant, a les mateixes els serà aplicable la Política de Privadesa anteriorment descrita. En aquest sentit, per utilitzar-les serà necessari el consentiment de l'Usuari. Aquest consentiment serà comunicat, en base a una elecció autèntica, ofert mitjançant una decisió afirmativa i positiva, abans del tractament inicial, removible i documentat.",
+        textostitulocookie: "Own cookies",
+        textoscookiepropias: "Són aquelles galetes que són enviades a l'ordinador o dispositiu de l'Usuari i gestionades exclusivament per Coaching i experiències de benestar per al millor funcionament del Lloc Web. La informació que es recull s'empra per millorar la qualitat del Lloc Web i el seu Contingut i la seva experiència com a Usuari. Aquestes cookies permeten reconèixer l'Usuari com a visitant recurrent del Lloc Web i adaptar el contingut per oferir continguts que s'ajustin a les seves preferències.",
+        textoscookiesdeshabilitar: "Deshabilitar, rebutjar i eliminar cookies",
+        textoscookiesdesparrafo1: "L'Usuari pot deshabilitar, rebutjar i eliminar les cookies —totalment o parcialment— instal·lades al dispositiu mitjançant la configuració del vostre navegador (entre els quals es troben, per exemple, Chrome, Firefox, Safari, Explorer). En aquest sentit, els procediments per rebutjar i eliminar les galetes poden diferir d'un navegador d'Internet a un altre. En conseqüència, l'Usuari ha d'acudir a les instruccions facilitades pel navegador d'Internet mateix que utilitzi. En cas que rebutgi l'ús galetes —totalment o parcialment— podrà continuar usant el Lloc Web, si bé podrà tenir limitada la utilització d'algunes de les prestacions del mateix.",
         
 
         //politica de privacidad 
