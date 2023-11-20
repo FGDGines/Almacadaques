@@ -37,16 +37,10 @@ export const FormularioEspaciosBienestar = () => {
         
         if (indexEspacio != -1) {
             da.append("id", `${indexEspacio}`)
-            fetchForm("/espacio/update", da, (d: tpDtmResponse) => {
-                console.log(d)
-            }, (d: tpDtmResponse) => {
-               console.log(d) 
-            })
+            fetchForm("/espacio/update", da)
     
         } else {
-            fetchForm("/espacio/create", da, (tp: tpDtmResponse) => {
-                console.log(tp)
-            })
+            fetchForm("/espacio/create", da)
         }
     };
 

@@ -9,10 +9,8 @@ export const generateJwt = ()=> {
 
     const data = {body: JSON.stringify(formDataToObject(da))}
     fetchDefault("/auth/login", data, (d: tpDtmResponse) => {
-        console.log(d)
         if (d.bag && typeof d.bag === 'object' && 'token' in d.bag) {
-            const element:{token: string} = d.bag as {token: string};
-            console.log(element.token)
+            // const element:{token: string} = d.bag as {token: string};
             return 
         }
     })

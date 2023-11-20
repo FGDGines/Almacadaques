@@ -71,20 +71,14 @@ export const FormularioCarrousel = () => {
         }
         if (indexCarrousel != -1) {
             da.append("id", `${indexCarrousel}`)
-            fetchForm("/carousel/update", da,(d: tpDtmResponse) => {
-                console.log(d)
-            }, (d: tpDtmResponse) => {
-               console.log(d) 
-            })
+            fetchForm("/carousel/update", da)
     
         } else {
             da.append("frase_es", ".")
             da.append("frase_en", ".")
             da.append("frase_cat", ".")
             da.set(`frase_${lf}`, formData.Frase)
-            fetchForm("/carousel/create", da,(tp: tpDtmResponse) => {
-                console.log(tp)
-            })
+            fetchForm("/carousel/create", da)
         }
         
     };

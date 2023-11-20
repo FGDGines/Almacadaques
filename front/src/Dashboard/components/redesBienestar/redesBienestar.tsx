@@ -37,7 +37,6 @@ export const RedesBienestar = () => {
                 cuenta: element.cuenta
               }
               reds.push(value)
-              console.log(value)
           }
           setRedes(reds);
       }) 

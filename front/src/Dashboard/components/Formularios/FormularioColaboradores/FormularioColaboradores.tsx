@@ -70,16 +70,10 @@ function FormularioColaboradores() {
         }
         if (indexCollaborator != -1) {
             da.append("id", `${indexCollaborator}`)
-            fetchForm("/collaborator/update", da,(d: tpDtmResponse) => {
-                console.log(d)
-            }, (d: tpDtmResponse) => {
-               console.log(d) 
-            })
+            fetchForm("/collaborator/update", da)
     
         } else {
-            fetchForm("/collaborator/register", da,(tp: tpDtmResponse) => {
-                console.log(tp)
-            })
+            fetchForm("/collaborator/register", da)
         }
     };
 

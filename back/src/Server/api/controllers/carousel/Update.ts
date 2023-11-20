@@ -9,7 +9,6 @@ export const Update = async (req: Request, res: Response) => {
     const { id, frase_es, frase_en, frase_cat, autor, link_autor, fileExtension} = body
     const updates = []
     try {
-        console.log(frase_es)
         const tCarousels = await Carousel.findOne({
             where: {
                 id: id

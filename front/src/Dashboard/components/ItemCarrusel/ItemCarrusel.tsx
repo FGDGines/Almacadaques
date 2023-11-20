@@ -52,8 +52,6 @@ export const ItemCarrusel: React.FC<BtnMasAgregarProps> = () => {
       if (d.status != 200) return
       const updatedData = data.filter((item) => item.index !== index);
       setData(updatedData);
-    }, (d: tpDtmResponse) => {
-      console.log(d)
     })
   };
 

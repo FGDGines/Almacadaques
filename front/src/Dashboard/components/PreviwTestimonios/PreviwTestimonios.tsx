@@ -23,8 +23,6 @@ function PreviwTestimonios() {
         if (d.status != 200) return
         const updatedData = data.filter((item) => item.id!== id);
         setData(updatedData);
-    }, (d: tpDtmResponse) => {
-        console.log(d)
     }) 
   };
 
@@ -51,8 +49,8 @@ function PreviwTestimonios() {
       const test: tpTestimony[] = []
       fetchDefault("/testimony/read", dat, (d: tpDtmResponse) => {
           if(!d.bag) return 
+      console.log(d)
           for (let index = 0; index < d.bag.length; index++) {
-              console.log(d)
               const element: {id: number, witness: string, data_testimony: {es: string, en: string , cat: string} } = d.bag[index];
               const value = { 
                   id: element.id, 

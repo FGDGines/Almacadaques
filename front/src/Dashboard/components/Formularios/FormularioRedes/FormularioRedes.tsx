@@ -56,16 +56,10 @@ export const FormularioRedes = () => {
         }
         if (indexRed != -1) {
             da.append("id", `${indexRed}`)
-            fetchForm("/red/update", da,(d: tpDtmResponse) => {
-                console.log(d)
-            }, (d: tpDtmResponse) => {
-               console.log(d) 
-            })
+            fetchForm("/red/update", da)
     
         } else {
-            fetchForm("/red/create", da,(tp: tpDtmResponse) => {
-                console.log(tp)
-            })
+            fetchForm("/red/create", da)
         }
     };
 

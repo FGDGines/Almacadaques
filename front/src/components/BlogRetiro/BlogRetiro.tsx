@@ -84,7 +84,6 @@ function BlogRetiro() {
                       title: element.title_lang.es || element.title_lang.en || element.title_lang.cat,
                       description: element.description_lang.es || element.description_lang.en || element.description_lang.cat
                     });
-                    console.log(element)
                 }
                 setRetiros(retiro);
             }) 

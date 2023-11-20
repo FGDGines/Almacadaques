@@ -28,8 +28,6 @@ export const EspaciosBienestar = () => {
             if (d.status != 200) return
             const updatedData = data.filter((item) => item.id!== id);
             setData(updatedData);
-        }, (d: tpDtmResponse) => {
-            console.log(d)
         }) 
     };
 
@@ -53,7 +51,6 @@ export const EspaciosBienestar = () => {
         const da = new FormData()
         da.set("lang", lg)
         const dat = {body: JSON.stringify(formDataToObject(da))}
-        console.log(1)
         const esp: tpTimeLineData[] = []
         fetchDefault("/espacio/read", dat, (d: tpDtmResponse) => {
             if(!d.bag) return 
@@ -63,7 +60,6 @@ export const EspaciosBienestar = () => {
                     id: element.id, 
                     text: element.es || element.en || element.cat
                 }
-                console.log(value)
                 esp.push(value)
             }
             setData(esp);

@@ -1,10 +1,41 @@
 import './Podcast.css'
 import { podcastData } from '../../../data/listPodcast'
+import { useEffect, useState } from 'react';
+import { formDataToObject } from '../../../helpers/Forms';
+import { AudioPlayerProps, tpDtmResponse } from '../../../types/typesComponents';
+import { fetchDefault } from '../../../helpers/Server';
 
 function Podcast() {
+  const [ data, setData ] = useState<AudioPlayerProps[]>([])
+
+  useEffect(() => {
+    const api = async () => {
+    const podcast: AudioPlayerProps[] = []
+    fetchDefault("/podcast/read", {}, (d: tpDtmResponse) => {
+        if(!d.bag) return 
+        for (let index = 0; index < d.bag.length; index++) {
+            const element: {id: number, url: string, titulo: string, autor: string, imagen: string, fecha: string, categoria: string } = d.bag[index];
+            const value = { 
+                id: element.id, 
+                url: element.url,
+                titulo: element.titulo,
+                autor: element.autor,
+                imagen: element.imagen,
+                fecha: element.fecha,
+                categoria: element.categoria
+            }
+            podcast.push(value)
+        }
+        setData(podcast);
+    }) 
+    };
+    api();
+    // eslint-disable-next-line
+}, []);
+
   return (
     <>
-    {podcastData.map((podcast, index) => (
+    {data.map((podcast, index) => (
       <div key={index} className="podcast">
         <div className="IconoEditarPodcast">
           <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" className="IconEditarPodcast" />

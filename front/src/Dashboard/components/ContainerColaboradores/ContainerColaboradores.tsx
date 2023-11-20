@@ -24,8 +24,6 @@ function ContainerColaboradores() {
       if (d.status != 200) return
       const updatedData = data.filter((item) => item.id !== index);
       setData(updatedData);
-    }, (d: tpDtmResponse) => {
-      console.log(d)
     })
   };
 
