@@ -142,6 +142,7 @@ type tpFormDefault = {
     hSubmit: (bag: FormData) => void
 }
 type AudioPlayerProps = {
+    id: number;
     fecha?: string;
     url?: string;
     titulo?: string;

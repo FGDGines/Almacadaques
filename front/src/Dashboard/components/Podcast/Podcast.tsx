@@ -1,12 +1,20 @@
 import './Podcast.css'
 import { podcastData } from '../../../data/listPodcast'
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { formDataToObject } from '../../../helpers/Forms';
 import { AudioPlayerProps, tpDtmResponse } from '../../../types/typesComponents';
 import { fetchDefault } from '../../../helpers/Server';
+import { GlobalContext } from '../../../contexts/GlobalContext';
 
 function Podcast() {
   const [ data, setData ] = useState<AudioPlayerProps[]>([])
+  const { setLayoutID, setIndexPodcast } = useContext(GlobalContext);
+  
+
+  const edit = (id: number) => {
+    setIndexPodcast(id)
+    setLayoutID(37)
+  }
 
   useEffect(() => {
     const api = async () => {
@@ -20,7 +28,6 @@ function Podcast() {
                 url: element.url,
                 titulo: element.titulo,
                 autor: element.autor,
-                imagen: element.imagen,
                 fecha: element.fecha,
                 categoria: element.categoria
             }
@@ -37,7 +44,7 @@ function Podcast() {
     <>
     {data.map((podcast, index) => (
       <div key={index} className="podcast">
-        <div className="IconoEditarPodcast">
+        <div className="IconoEditarPodcast" onClick={() => edit(podcast.id)}>
           <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" className="IconEditarPodcast" />
           <p className="TitleBtnEditarColaborador">Editar</p>
         </div>

@@ -22,7 +22,9 @@ type GlobalContextType = {
     indexTestimony: number,
     setIndexTestimony: (arg: number)=>void,
     indexCollaborator: number,
-    setIndexCollaborator: (arg: number)=>void
+    setIndexCollaborator: (arg: number)=>void,
+    indexPodcast: number,
+    setIndexPodcast: (arg: number)=>void
 }
 
 export type {
