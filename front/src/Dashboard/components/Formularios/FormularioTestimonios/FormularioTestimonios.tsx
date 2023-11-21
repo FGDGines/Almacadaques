@@ -1,7 +1,11 @@
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import '../FormularioTestimonios/FormularioTestimonios.css';
 import { BarSession } from '../../barSession/barSession';
-import  { useState, ChangeEvent, FormEvent } from 'react';
+import  { useState, ChangeEvent, FormEvent, useContext } from 'react';
+import { getToken } from '../../../../helpers/JWT';
+import { GlobalContext } from '../../../../contexts/GlobalContext';
+import { fetchForm } from '../../../../helpers/Server';
+import { tpDtmResponse } from '../../../../types/typesComponents';
 
 
 interface FormData {
@@ -14,6 +18,8 @@ export const FormularioTestimonios = () => {
         Frase: '',
         archivo: null,
     });
+    const { indexTestimony, languageFlag } = useContext(GlobalContext)
+    const lf = languageFlag.toLowerCase()
 
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
@@ -34,31 +40,28 @@ export const FormularioTestimonios = () => {
         }
     };
 
-    const handleSubmit = async (event: FormEvent) => {
-        event.preventDefault();
-
-        try {
-            // Enviar datos al backend usando fetch
-            const response = await fetch('http://tu-backend.com/api/FormularioTestimonios', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
-
-            if (response.ok) {
-                // console.log('Datos del formulario enviados exitosamente');
-                // Limpiar el formulario después de enviar los datos
-                setFormData({
-                    Frase: '',
-                    archivo: null,
-                });
-            } else {
-                console.error('Error al enviar los datos del formulario');
-            }
-        } catch (error) {
-            console.error('Error al enviar los datos del formulario:', error);
+    const handleSubmit = () => {
+        const da = new FormData()
+        console.log(indexTestimony)
+        if (formData.Frase) {
+            da.append("testimony_es", formData.Frase)
+            da.append("testimony_en", formData.Frase)
+            da.append("testimony_cat", formData.Frase)
+        }
+        da.append("token", getToken()) 
+        
+        if (formData.archivo) {
+            da.append("src", formData.archivo);
+            da.append("fileExtension", "jpg");
+        }
+        if (indexTestimony != -1) {
+            da.append("id", `${indexTestimony}`)
+            fetchForm("/testimony/update", da)
+        } else {
+            da.append("witness", formData.Frase)
+            fetchForm("/testimony/create", da, (d: tpDtmResponse) => {
+                console.log(d)
+            })
         }
     };
 
@@ -70,7 +73,7 @@ export const FormularioTestimonios = () => {
             <BarSession direccion={18} tituloVista='Inicio' segundoTitulo='Testimonios'></BarSession>
 
 
-                <form className='formTestimonios' onSubmit={handleSubmit}>
+                <form className='formTestimonios'>
                     <div className="subirArchivos">
                     <label htmlFor="File" className='labelArchivo'>
                             <img src="../../../../src/assets/Dashboard-almacadaques/inicio/nube.svg" alt="" />
@@ -98,7 +101,7 @@ export const FormularioTestimonios = () => {
 
 
                     <div className="GuardarEspaciosBienestar">
-                        <a href="" className='btnGuardarEspaciosBienestarAdmin'>Guardar Testimonios</a>
+                        <a href="#" className='btnGuardarEspaciosBienestarAdmin'  onClick={handleSubmit}>Guardar Testimonios</a>
                     </div>
 
                 </form>

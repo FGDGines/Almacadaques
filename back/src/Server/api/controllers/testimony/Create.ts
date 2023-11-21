@@ -6,6 +6,7 @@ export const Create = async ( req: Request ,res: Response)=>{
     const {witness,testimony_es,testimony_en,testimony_cat}  = body
 
     try{
+        console.log(testimony_es)
         const tDataTestimonio = new DataTestimonio({es:testimony_es , cat:testimony_cat, en:testimony_en})
         await tDataTestimonio.save()
 

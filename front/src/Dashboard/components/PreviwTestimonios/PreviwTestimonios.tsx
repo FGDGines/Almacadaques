@@ -30,14 +30,10 @@ function PreviwTestimonios() {
   // para editar el elemento
   const edit = (index: number) => {
     setIndexTestimony(index)
-    setLayoutID(27)
+    setLayoutID(28)
   }
 
-  // agregar elemento
-  const add = () => {
-      setIndexTestimony(-1)
-      setLayoutID(27)
-  }
+  
 
     
   // carga los carrousel
@@ -79,7 +75,7 @@ function PreviwTestimonios() {
                   src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
                   alt=""
                 />
-                <p className="Textedit">Editar</p>
+                <p className="Textedit" onClick={() => edit(testimonial.id)}>Editar</p>
               </div>
               <div className="eliminar" onClick={() => handleEliminar(testimonial.id)}>
                 <img
