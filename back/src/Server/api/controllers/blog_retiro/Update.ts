@@ -30,7 +30,6 @@ export const Update = async (req: Request, res: Response) => {
 
         const tTitleLang = tBlogRetiro.title_lang
         const tDescriptionLang = tBlogRetiro.description_lang
-
         if(title_es){
             const past = tTitleLang.title_es
             await tTitleLang.update({es: title_es})
@@ -94,7 +93,9 @@ export const Update = async (req: Request, res: Response) => {
             }
             if (past) {
                 const uploadDir = path.join(__dirname,  RelativePath.blog_retiro)
-                await DeleteFile(path.join(uploadDir, json[image_number]))        
+                try {
+                    await DeleteFile(path.join(uploadDir, json[image_number]))
+                } catch (error) {}            
             }
             const url = await UploadFile( image, path.join(__dirname,  RelativePath.blog_retiro), "jpg", Formatos.image)
             json[image_number] = url

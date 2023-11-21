@@ -7,7 +7,13 @@ import { GlobalContext } from '../../../contexts/GlobalContext';
 import { useContext } from 'react';
 
 function BlogPodcast() {
-  const { setLayoutID } = useContext(GlobalContext);
+  const { setLayoutID, setIndexPodcast } = useContext(GlobalContext);
+
+  const add = () => {
+    setIndexPodcast(-1)
+    setLayoutID(37)
+  }
+
   return (
     <div className='BlogPodcast'>
       <NarbarAdmin />
@@ -16,7 +22,7 @@ function BlogPodcast() {
           <div className="conatinerInfopodcast">
             <Podcast/>
           </div>
-          <div className="BtonAgregarEventosmain" onClick={() => setLayoutID(37)}>
+          <div className="BtonAgregarEventosmain" onClick={add}>
             <BtnMas/>
           </div>
       </div>

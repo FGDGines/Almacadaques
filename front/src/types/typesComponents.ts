@@ -35,7 +35,7 @@ type tpBlogInfo = {
     day?: number[] | number;
     month?: number;
     year?: number;
-    image: string;
+    image: string[];
     title: string;
     author?: string;
     tags?: string[];

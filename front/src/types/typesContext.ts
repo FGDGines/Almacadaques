@@ -24,7 +24,9 @@ type GlobalContextType = {
     indexCollaborator: number,
     setIndexCollaborator: (arg: number)=>void,
     indexPodcast: number,
-    setIndexPodcast: (arg: number)=>void
+    setIndexPodcast: (arg: number)=>void,
+    indexBlogRetiro: number,
+    setIndexBlogRetiro: (arg: number)=>void
 }
 
 export type {
