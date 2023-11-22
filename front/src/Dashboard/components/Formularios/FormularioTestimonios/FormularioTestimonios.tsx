@@ -11,6 +11,7 @@ import { tpDtmResponse } from '../../../../types/typesComponents';
 interface FormData {
     Frase_es: string;
     Frase_en: string;
+    Witness: string;
     Frase_cat: string;
     archivo: File | null;
 }
@@ -20,6 +21,7 @@ export const FormularioTestimonios = () => {
         Frase_es: '',
         Frase_en: '',
         Frase_cat: '',
+        Witness: '',
         archivo: null,
     });
     const { indexTestimony, languageFlag } = useContext(GlobalContext)
@@ -49,7 +51,7 @@ export const FormularioTestimonios = () => {
         if (formData.Frase_es) da.append("testimony_es", formData.Frase_es)
         if (formData.Frase_en) da.append("testimony_en", formData.Frase_en)
         if (formData.Frase_cat) da.append("testimony_cat", formData.Frase_cat)
-        
+        if (formData.Witness) da.append("witness", formData.Witness)
         da.append("token", getToken()) 
         
         if (formData.archivo) {
@@ -87,7 +89,15 @@ export const FormularioTestimonios = () => {
                         />
                     </div>
                     <div className="restInputs">
-                        <label className='labelsTestimonios' form='Frase'>Frase de Testimonios español</label>
+                    <label className='labelsTestimonios' form='Witness'>Witness</label>
+                        <input className='inputsFormTestimonios'
+                            type="text"
+                            name="Witness"
+                            value={formData.Witness}
+                            onChange={handleInputChange}
+                        />
+
+                        <label className='labelsTestimonios' form='Frase_es'>Frase de Testimonios español</label>
                         <input className='inputsFormTestimonios'
                             type="text"
                             name="Frase_es"
@@ -95,7 +105,7 @@ export const FormularioTestimonios = () => {
                             onChange={handleInputChange}
                         />
 
-                        <label className='labelsTestimonios' form='Frase'>Frase de Testimonios inglés</label>
+                        <label className='labelsTestimonios' form='Frase_en'>Frase de Testimonios inglés</label>
                         <input className='inputsFormTestimonios'
                             type="text"
                             name="Frase_en"
@@ -103,7 +113,7 @@ export const FormularioTestimonios = () => {
                             onChange={handleInputChange}
                         />
 
-                        <label className='labelsTestimonios' form='Frase'>Frase de Testimonios catalán</label>
+                        <label className='labelsTestimonios' form='Frase_cat'>Frase de Testimonios catalán</label>
                         <input className='inputsFormTestimonios'
                             type="text"
                             name="Frase_cat"
