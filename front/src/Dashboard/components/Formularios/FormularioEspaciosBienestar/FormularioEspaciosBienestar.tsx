@@ -34,9 +34,9 @@ export const FormularioEspaciosBienestar = () => {
 
     const handleSubmit = () => {
         const da = new FormData()
-        da.append("text_es", formData.Frase_es)
-        da.append("text_en", formData.Frase_en)
-        da.append("text_cat", formData.Frase_cat)
+        if (formData.Frase_es) da.append("text_es", formData.Frase_es)
+        if (formData.Frase_en) da.append("text_en", formData.Frase_en)
+        if (formData.Frase_cat) da.append("text_cat", formData.Frase_cat)
         da.append("token", getToken()) 
         
         if (indexEspacio != -1) {
