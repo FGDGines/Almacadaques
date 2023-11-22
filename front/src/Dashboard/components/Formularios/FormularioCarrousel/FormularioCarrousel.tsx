@@ -10,7 +10,9 @@ import { tpDtmResponse } from '../../../../types/typesComponents';
 
 
 interface FormData {
-    Frase: string;
+    Frase_es: string;
+    Frase_en: string;
+    Frase_cat: string;
     Firma: string;
     Url: string;
     archivo: File | null;
@@ -18,7 +20,9 @@ interface FormData {
 
 export const FormularioCarrousel = () => {
     const [formData, setFormData] = useState<FormData>({
-        Frase: '',
+        Frase_es: '',
+        Frase_en: '',
+        Frase_cat: '',
         Firma: '',
         Url: '',
         archivo: null,
@@ -60,8 +64,14 @@ export const FormularioCarrousel = () => {
         if (formData.Url) {
             da.append("link_autor", formData.Url)
         }
-        if (formData.Frase){
-            da.append(`frase_${lf}`, formData.Frase)
+        if (formData.Frase_es){
+            da.append(`frase_es`, formData.Frase_es)
+        }
+        if (formData.Frase_en){
+            da.append(`frase_en`, formData.Frase_en)
+        }
+        if (formData.Frase_cat){
+            da.append(`frase_cat`, formData.Frase_cat)
         }
         da.append("token", getToken()) 
         
@@ -70,14 +80,13 @@ export const FormularioCarrousel = () => {
             da.append("fileExtension", "jpg");
         }
         if (indexCarrousel != -1) {
+            console.log(indexCarrousel)
             da.append("id", `${indexCarrousel}`)
-            fetchForm("/carousel/update", da)
+            fetchForm("/carousel/update", da, (d: tpDtmResponse) => {
+                console.log(d)
+            })
     
         } else {
-            da.append("frase_es", ".")
-            da.append("frase_en", ".")
-            da.append("frase_cat", ".")
-            da.set(`frase_${lf}`, formData.Frase)
             fetchForm("/carousel/create", da)
         }
         
@@ -105,11 +114,27 @@ export const FormularioCarrousel = () => {
                         />
                     </div>
                     <div className="restInputs">
-                        <label className='labelsCarrousel' form='Frase'>Frase</label>
+                        <label className='labelsCarrousel' form='Frase'>Frase_es</label>
                         <input className='inputsFormCarrousel'
                             type="text"
-                            name="Frase"
-                            value={formData.Frase}
+                            name="Frase_es"
+                            value={formData.Frase_es}
+                            onChange={handleInputChange}
+                        />
+
+                        <label className='labelsCarrousel' form='Frase'>Frase_en</label>
+                        <input className='inputsFormCarrousel'
+                            type="text"
+                            name="Frase_en"
+                            value={formData.Frase_en}
+                            onChange={handleInputChange}
+                        />
+
+                        <label className='labelsCarrousel' form='Frase'>Frase_cat</label>
+                        <input className='inputsFormCarrousel'
+                            type="text"
+                            name="Frase_cat"
+                            value={formData.Frase_cat}
                             onChange={handleInputChange}
                         />
 
