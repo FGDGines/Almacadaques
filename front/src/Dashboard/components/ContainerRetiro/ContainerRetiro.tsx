@@ -5,6 +5,7 @@ import { tpBlogInfo, tpDtmResponse } from "../../../types/typesComponents";
 import { formDataToObject } from "../../../helpers/Forms";
 import { fetchDefault } from "../../../helpers/Server";
 import { GlobalContext } from "../../../contexts/GlobalContext";
+import { getToken } from "../../../helpers/JWT";
 
 function formatFecha(day: string, month: number, year: number) {
     const options = { month: 'short', year: 'numeric' };
@@ -18,6 +19,20 @@ function ContainerRetiro() {
     const { languageFlag, setIndexBlogRetiro, setLayoutID } = useContext(GlobalContext)
     const lf = languageFlag.toLowerCase()
 
+
+    const handleDelete = (id:number) => {
+        // elimina de la base de datos
+        const da = new FormData()
+        da.set("id", `${id}`)
+        da.set("token", getToken())
+        const dat = {body: JSON.stringify(formDataToObject(da))}
+    
+        fetchDefault("/blog_retiro/delete", dat, (d: tpDtmResponse) => {
+          if (d.status != 200) return
+          const updatedData = data.filter((item) => item.index !== id);
+          setData(updatedData);
+        })
+      }
 
     const edit = (id: number) => {
         setIndexBlogRetiro(id)
@@ -66,6 +81,9 @@ function ContainerRetiro() {
                     <p className="titleRetiro">{retiro.title}</p>
                     <div className="paddinIcono" onClick={() => edit(retiro.index)}>
                         <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" className="BtnEditarEvento" />
+                    </div>
+                    <div className="paddinIcono" onClick={() => handleDelete(retiro.index)}>
+                        <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg" alt="" className="BtnEditarEvento" />
                     </div>
                 </div>
                 <img src={retiro.image[0]} alt="" className="ImgFondoRetiro" />
