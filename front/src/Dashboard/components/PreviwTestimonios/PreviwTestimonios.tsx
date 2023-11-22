@@ -70,12 +70,12 @@ function PreviwTestimonios() {
           <div className="testimonioItem">
             <p className="FraseTestimonio">{testimonial.testimony}</p>
             <div className="iconEditar">
-              <div className="editar">
+              <div className="editar"  onClick={() => edit(testimonial.id)}>
                 <img
                   src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
                   alt=""
                 />
-                <p className="Textedit" onClick={() => edit(testimonial.id)}>Editar</p>
+                <p className="Textedit">Editar</p>
               </div>
               <div className="eliminar" onClick={() => handleEliminar(testimonial.id)}>
                 <img
