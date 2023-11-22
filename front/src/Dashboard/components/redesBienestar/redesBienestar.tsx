@@ -8,11 +8,27 @@ import { formDataToObject } from '../../../helpers/Forms';
 import { fetchDefault } from '../../../helpers/Server';
 import { tpDtmResponse } from '../../../types/typesComponents';
 import { RedesProps } from "../../../types/typesComponents";
+import { getToken } from '../../../helpers/JWT';
 
 export const RedesBienestar = () => {
   const { setLayoutID } = useContext(GlobalContext);
   const { setIndexRed } = useContext(GlobalContext);
   const [ redes, setRedes ] = useState<RedesProps>([])
+
+
+  const handleEliminar = (id: number) => {
+    const da = new FormData()
+    da.set("id", `${id}`)
+    da.set("token", getToken())
+    const dat = {body: JSON.stringify(formDataToObject(da))}
+
+    fetchDefault("/red/delete", dat, (d: tpDtmResponse) => {
+        if (d.status != 200) return
+        const updatedData = redes.filter((item) => item.index!== id);
+        setRedes(updatedData);
+    }) 
+};
+
 
   const edit = (e: number) => {
     setIndexRed(e)
@@ -44,6 +60,7 @@ export const RedesBienestar = () => {
     api();
     // eslint-disable-next-line
 }, []);
+
   return (
     <div className="redesBienestar">
       <div className="barraRedes">
@@ -70,6 +87,10 @@ export const RedesBienestar = () => {
                   alt=""
                 />
                 <p className="TextAcciones">Editar</p>
+              </div>
+              <div className="accionEliminar" onClick={() => handleEliminar(red.index)}>
+                <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg" alt="" />
+                <p className="TextAcciones">Eliminar</p>
               </div>
             </div>
           </div>
