@@ -67,10 +67,19 @@ function ContainerColaboradores() {
     <>
       {data.map((colaborador) => (
         <div key={colaborador.id} className="ContainerColaboradores">
-          <div className="IconoEditarColaboradores" onClick={() => edit(colaborador.id)}>
-            <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" className="IconEditarColaboradores" />
-            <p className="TitleBtnEditarColaborador">Editar</p>
+          
+          <div className="editarContBienestar">
+            <div className="accionEliminar" onClick={() => handleDeleteItemCarrusel(colaborador.id)}>
+              <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg" alt="" className="IconEditarColaboradores"/>
+              <p className="TitleBtnEditarColaborador">Eliminar</p>
+            </div>
+            <div className="IconoEditarColaboradores" onClick={() => edit(colaborador.id)}>
+              <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" className="IconEditarColaboradores" />
+              <p className="TitleBtnEditarColaborador">Editar</p>
+            </div>
           </div>
+
+          
           <img src={colaborador.imagen} alt={colaborador.nombre} className="imgUsuarioColaboradores" />
 
           <div className="NombreCargo">
