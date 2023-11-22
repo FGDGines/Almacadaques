@@ -3,7 +3,6 @@ import '../FormularioCarrousel/FormularioCarrousel.css';
 import { BarSession } from '../../barSession/barSession';
 import { useState, ChangeEvent, useContext } from 'react';
 import { fetchForm } from '../../../../helpers/Server';
-import { formDataToObject } from '../../../../helpers/Forms';
 import { GlobalContext } from '../../../../contexts/GlobalContext';
 import { getToken } from '../../../../helpers/JWT';
 import { tpDtmResponse } from '../../../../types/typesComponents';
@@ -28,9 +27,6 @@ export const FormularioCarrousel = () => {
         archivo: null,
     });
 
-    const { languageFlag } = useContext(GlobalContext)
-    const lf = languageFlag.toLowerCase() 
-
     const { indexCarrousel } = useContext(GlobalContext)
     
 
@@ -52,9 +48,6 @@ export const FormularioCarrousel = () => {
             });
         }
     };
-
-
-
 
     const handleSubmit = () => {
         const da = new FormData()

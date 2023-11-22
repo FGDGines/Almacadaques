@@ -9,12 +9,16 @@ import { fetchForm } from '../../../../helpers/Server';
 
 
 interface FormData {
-    Frase: string;
+    Frase_es: string;
+    Frase_en: string;
+    Frase_cat: string;
 }
 
 export const FormularioEspaciosBienestar = () => {
     const [formData, setFormData] = useState<FormData>({
-        Frase: '',
+        Frase_es: '',
+        Frase_en: '',
+        Frase_cat: '',
     });
     const { indexEspacio } = useContext(GlobalContext)
 
@@ -30,9 +34,9 @@ export const FormularioEspaciosBienestar = () => {
 
     const handleSubmit = () => {
         const da = new FormData()
-        da.append("text_es", formData.Frase)
-        da.append("text_en", formData.Frase)
-        da.append("text_cat", formData.Frase)
+        da.append("text_es", formData.Frase_es)
+        da.append("text_en", formData.Frase_en)
+        da.append("text_cat", formData.Frase_cat)
         da.append("token", getToken()) 
         
         if (indexEspacio != -1) {
@@ -58,15 +62,29 @@ export const FormularioEspaciosBienestar = () => {
 
 
                     <div className="restInputs">
-                        <label className='labelsEspaciosBienestar' form='Frase'>Frase</label>
+                        <label className='labelsEspaciosBienestar' form='Frase'>Frase_es</label>
                         <input className='inputsFormEspaciosBienestar'
                             type="text"
-                            name="Frase"
-                            value={formData.Frase}
+                            name="Frase_es"
+                            value={formData.Frase_es}
                             onChange={handleInputChange}
                         />
 
+                        <label className='labelsEspaciosBienestar' form='Frase'>Frase_en</label>
+                        <input className='inputsFormEspaciosBienestar'
+                            type="text"
+                            name="Frase_en"
+                            value={formData.Frase_en}
+                            onChange={handleInputChange}
+                        />
 
+                        <label className='labelsEspaciosBienestar' form='Frase'>Frase_cat</label>
+                        <input className='inputsFormEspaciosBienestar'
+                            type="text"
+                            name="Frase_cat"
+                            value={formData.Frase_cat}
+                            onChange={handleInputChange}
+                        />
                     </div>
                     
                 </form>
