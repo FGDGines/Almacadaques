@@ -1,3 +1,4 @@
+import { type } from "os";
 import { ReactNode } from "react";
 
 // Definición del tipo de evento
@@ -158,6 +159,14 @@ type iconsProps = {
     src?: string
 }
 
+type tpTextLibro = {
+    id: number;
+    title: string;
+    subtitle: string;
+    content: string;
+    imagenSrc: string;
+}
+
 interface Red {
     index: number;
     archivo: string;
@@ -193,5 +202,6 @@ export type {
     tpObjectStringToStrig,
     AudioPlayerProps,
     iconsProps,
+    tpTextLibro,
     RedesProps
 };

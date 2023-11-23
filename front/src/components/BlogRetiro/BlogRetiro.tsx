@@ -57,40 +57,40 @@ function BlogRetiro() {
 
 
   const { languageFlag } = useContext(GlobalContext)
-    const l = languageFlag.toLowerCase() 
-    const da = new FormData()
-    da.set("lang", l)
-    const data = {body: JSON.stringify(formDataToObject(da))}
+  const l = languageFlag.toLowerCase() 
+  const da = new FormData()
+  da.set("lang", l)
+  const data = {body: JSON.stringify(formDataToObject(da))}
     
     
-    useEffect(() => {
-        const api = async () => {
-            const retiro: Retiro[] = []
-            fetchDefault("/blog_retiro/read", data, (d: tpDtmResponse) => {
-                if(!d.bag) return 
-                for (let index = 0; index < d.bag.length; index++) {
-                    const element: {id: number , indice: string  , day: string, image: string, title_lang: {es: string, en: string , cat: string},
-                       description_lang: {es: string, en: string , cat: string}, year: number, month: number, author: string} = d.bag[index];
-                    // const r = "src/blog_retiro/";
-                    const day = JSON.parse(JSON.parse(element.day))
-                    const image = JSON.parse(element.image)
-                    retiro.push({
-                      index: element.id,
-                      day: day,
-                      month: element.month,
-                      year: element.year,
-                      image: image,
-                      author: element.author,
-                      title: element.title_lang.es || element.title_lang.en || element.title_lang.cat,
-                      description: element.description_lang.es || element.description_lang.en || element.description_lang.cat
-                    });
-                }
-                setRetiros(retiro);
-            }) 
-        };
-        api();
-        // eslint-disable-next-line
-    }, []);
+  useEffect(() => {
+    const api = async () => {
+      const retiro: Retiro[] = []
+      fetchDefault("/blog_retiro/read", data, (d: tpDtmResponse) => {
+        if(!d.bag) return 
+        for (let index = 0; index < d.bag.length; index++) {
+          const element: {id: number , indice: string  , day: string, image: string, title_lang: {es: string, en: string , cat: string},
+              description_lang: {es: string, en: string , cat: string}, year: number, month: number, author: string} = d.bag[index];
+          // const r = "src/blog_retiro/";
+          const day = JSON.parse(JSON.parse(element.day))
+          const image = JSON.parse(element.image)
+          retiro.push({
+            index: element.id,
+            day: day,
+            month: element.month,
+            year: element.year,
+            image: image,
+            author: element.author,
+            title: element.title_lang.es || element.title_lang.en || element.title_lang.cat,
+            description: element.description_lang.es || element.description_lang.en || element.description_lang.cat
+          });
+        }
+        setRetiros(retiro);
+      }) 
+    };
+    api();
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <>

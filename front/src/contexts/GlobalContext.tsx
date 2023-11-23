@@ -23,7 +23,11 @@ export const GlobalContext = createContext<GlobalContextType>({
     indexPodcast: -1,
     setIndexPodcast() {},
     indexBlogRetiro: -1,
-    setIndexBlogRetiro() {}
+    setIndexBlogRetiro() {},
+    indexTextLibro: -1,
+    setIndexTextLibro() {},
+    indexCalendarEvent: -1,
+    setIndexCalendarEvent() {}
 })
 
 export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -38,6 +42,8 @@ export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ child
     const [indexCollaborator, setIndexCollaborator] = useState<number>(-1);
     const [indexPodcast, setIndexPodcast] = useState<number>(-1);
     const [indexBlogRetiro, setIndexBlogRetiro] = useState<number>(-1);
+    const [indexCalendarEvent, setIndexCalendarEvent] = useState<number>(-1);
+    const [indexTextLibro, setIndexTextLibro] = useState<number>(-1);
 
     const setUpOrDown = (arg: boolean) => {
         setUpOrDownState(arg);
@@ -84,7 +90,11 @@ export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ child
                 indexPodcast,
                 setIndexPodcast,
                 indexBlogRetiro, 
-                setIndexBlogRetiro
+                setIndexBlogRetiro,
+                indexCalendarEvent, 
+                setIndexCalendarEvent,
+                indexTextLibro, 
+                setIndexTextLibro
             }
         }>
         {children}

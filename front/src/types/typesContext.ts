@@ -26,7 +26,11 @@ type GlobalContextType = {
     indexPodcast: number,
     setIndexPodcast: (arg: number)=>void,
     indexBlogRetiro: number,
-    setIndexBlogRetiro: (arg: number)=>void
+    setIndexBlogRetiro: (arg: number)=>void,
+    indexCalendarEvent: number,
+    setIndexCalendarEvent: (arg: number)=>void,
+    indexTextLibro: number,
+    setIndexTextLibro: (arg: number)=>void
 }
 
 export type {

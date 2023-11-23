@@ -8,7 +8,13 @@ import { useContext } from 'react';
 
 
 const BlogBienestar = () => {
-  const { setLayoutID } = useContext(GlobalContext);
+  const { setLayoutID, setIndexTextLibro } = useContext(GlobalContext);
+
+  const add = () => {
+      setIndexTextLibro(-1)
+      setLayoutID(32)
+  }
+
   return (
     <div className="BlogBienestar">
       <NarbarAdmin />
@@ -17,7 +23,7 @@ const BlogBienestar = () => {
         <div className="editordeLibro">
           <BienestarAdmin />
         </div>
-        <div className="BtonAgregarEventosmain" onClick={() => setLayoutID(32)}>
+        <div className="BtonAgregarEventosmain" onClick={add}>
             <BtnMas/>
           </div>
       </div>

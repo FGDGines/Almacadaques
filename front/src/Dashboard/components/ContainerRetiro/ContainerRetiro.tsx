@@ -26,13 +26,13 @@ function ContainerRetiro() {
         da.set("id", `${id}`)
         da.set("token", getToken())
         const dat = {body: JSON.stringify(formDataToObject(da))}
-    
+
         fetchDefault("/blog_retiro/delete", dat, (d: tpDtmResponse) => {
-          if (d.status != 200) return
-          const updatedData = data.filter((item) => item.index !== id);
-          setData(updatedData);
+            if (d.status != 200) return
+            const updatedData = data.filter((item) => item.index !== id);
+            setData(updatedData);
         })
-      }
+    }
 
     const edit = (id: number) => {
         setIndexBlogRetiro(id)
