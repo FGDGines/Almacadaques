@@ -9,7 +9,7 @@ import { Formatos, RelativePath } from "../../../config/config";
 
 export const Create = async (req: Request, res: Response) => {
     const { body } = req
-    const { title_es, title_en, title_cat, description_es, description_en, description_cat, index, day, month, year, author } = body
+    const { title_es, title_en, title_cat, description_es, description_en, description_cat, index, day, month, year, author, estado } = body
 
     try {
         // @ts-ignore
@@ -23,7 +23,7 @@ export const Create = async (req: Request, res: Response) => {
             await tDescriptionLang.save()
     
             const tBlogRetiro = new BlogRetiro({indice: index, day: day, month: month, year: year, image: [url],
-                id_title_lang: tTitleLang.id, author: author, id_description_lang: tTitleLang.id })
+                id_title_lang: tTitleLang.id, author: author, id_description_lang: tTitleLang.id, estado: estado })
             await tBlogRetiro.save()
     
             return res.status(200).json({ status: 200, msg: "Blog Retiro Creado" })

@@ -6,7 +6,7 @@ import { Formatos, RelativePath } from "../../../config/config";
 
 export const Update = async (req: Request, res: Response) => {
     const { body } = req
-    const { id, title_es, title_en, title_cat, description_es, description_en, description_cat, index, day, month, year, image_number, author} = body
+    const { id, title_es, title_en, title_cat, description_es, description_en, description_cat, index, day, month, year, estado, image_number, author} = body
     
     const updates = []
     try {
@@ -81,6 +81,11 @@ export const Update = async (req: Request, res: Response) => {
             const past = tBlogRetiro.year
             await tBlogRetiro.update({year: year})
             updates.push({path: 'year', past , now: year})
+        }
+        if(estado){
+            const past = tBlogRetiro.estado
+            await tBlogRetiro.update({estado: estado})
+            updates.push({path: 'estado', past , now: estado})
         }
 
         // @ts-ignore

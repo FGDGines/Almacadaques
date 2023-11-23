@@ -123,6 +123,9 @@ const BlogRetiro = DB.define("blog_retiro", {
     },
     id_description_lang: {
         type: DataTypes.INTEGER
+    },
+    estado: {
+        type: DataTypes.STRING
     }
 }) 
 

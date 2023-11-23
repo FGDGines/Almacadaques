@@ -6,7 +6,7 @@ export const Read = async (req: Request, res: Response) => {
     const { lang } = body
     try {
         const tBlogRetiros = await BlogRetiro.findAll({
-            attributes: ["id", "indice", "day", "month", "year", "image", "author"],
+            attributes: ["id", "indice", "day", "month", "year", "image", "author", "estado"],
             include: [
                 {
                     model: TitleLang,
