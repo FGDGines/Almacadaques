@@ -72,7 +72,7 @@ function BlogRetiro() {
                     const element: {id: number , indice: string  , day: string, image: string, title_lang: {es: string, en: string , cat: string},
                        description_lang: {es: string, en: string , cat: string}, year: number, month: number, author: string} = d.bag[index];
                     // const r = "src/blog_retiro/";
-                    const day = JSON.parse(element.day)
+                    const day = JSON.parse(JSON.parse(element.day))
                     const image = JSON.parse(element.image)
                     retiro.push({
                       index: element.id,

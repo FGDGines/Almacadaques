@@ -14,7 +14,7 @@ export const Update = async (req: Request, res: Response) => {
             where: {
                 id: id
             },
-            attributes: ["id", "indice", "day", "month", "year", "image", "author"],
+            attributes: ["id", "indice", "day", "month", "year", "image", "author", "estado"],
             include: [
                 {
                     model: TitleLang
@@ -84,29 +84,35 @@ export const Update = async (req: Request, res: Response) => {
         }
         if(estado){
             const past = tBlogRetiro.estado
+            console.log(past)
             await tBlogRetiro.update({estado: estado})
             updates.push({path: 'estado', past , now: estado})
         }
 
-        // @ts-ignore
-        const image = req.files.src.data 
-        if(image){
-            const past = tBlogRetiro.image
-            const json = JSON.parse(past)
-            if (json.length <= image_number) {
-                return res.status(200).json({ status: 400, msg: "Número de la imagen no válido" })
+        try {
+            // @ts-ignore
+            const image = req.files.src.data 
+            if(image){
+                const past = tBlogRetiro.image
+                const json = JSON.parse(past)
+                if (json.length <= image_number) {
+                    return res.status(200).json({ status: 400, msg: "Número de la imagen no válido" })
+                }
+                if (past) {
+                    const uploadDir = path.join(__dirname,  RelativePath.blog_retiro)
+                    try {
+                        await DeleteFile(path.join(uploadDir, json[image_number]))
+                    } catch (error) {}            
+                }
+                        
+                const url = await UploadFile( image, path.join(__dirname,  RelativePath.blog_retiro), "jpg", Formatos.image)
+                json[image_number] = url
+                console.log(json[image_number])
+                await tBlogRetiro.update({image: json})
+                updates.push({path: 'image', past , now: json})
             }
-            if (past) {
-                const uploadDir = path.join(__dirname,  RelativePath.blog_retiro)
-                try {
-                    await DeleteFile(path.join(uploadDir, json[image_number]))
-                } catch (error) {}            
-            }
-            const url = await UploadFile( image, path.join(__dirname,  RelativePath.blog_retiro), "jpg", Formatos.image)
-            json[image_number] = url
-            await tBlogRetiro.update({image: json})
-            updates.push({path: 'image', past , now: json})
-        }
+        } catch (error) {}
+        
         if(author){
             const past = tBlogRetiro.author
             await tBlogRetiro.update({author: author})

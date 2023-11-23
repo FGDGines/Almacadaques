@@ -11,6 +11,7 @@ interface FormData {
     Titulo: string;
     Autor: string
     Fecha: Date,
+    day: number
     Descripcion: string;
     Estado: string;
     archivo: File | null;
@@ -38,11 +39,12 @@ function FormularioRetiros() {
     Titulo: '',
     Autor: '',
     Fecha: new Date(),
+    day: 0,
     Descripcion: '',
     Estado: '',
     archivo: null,
   });
-
+  
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
     setFormData({
@@ -73,18 +75,26 @@ function FormularioRetiros() {
     }
     if (formData.Fecha){
       const sd = separatedDate(formData.Fecha)
+      let day: number = sd[0]
+      if (formData.day) {
+        day = formData.day
+      }
       console.log(sd[0], sd[1], sd[2])
-      da.append("day", `[${sd[0]},${sd[0]}]`)
+      da.append("day", `[${sd[0]}, ${day}]`)
       da.append("month", `${sd[1]}`)
       da.append("year", `${sd[2]}`)
     }
     if (formData.Descripcion) {
         da.append(`descripction_${lf}`, formData.Descripcion)
     }
+    if (formData.Estado) {
+      da.append("estado", formData.Estado)
+    }
     da.append("token", getToken()) 
     
     if (formData.archivo) {
         da.append("src", formData.archivo);
+        da.append("image_number", 0)
         da.append("fileExtension", "jpg");
     }
     console.log(indexBlogRetiro)
@@ -147,7 +157,13 @@ function FormularioRetiros() {
         onChange={handleInputChange}
       />
 
-
+      <label className='labelsCarrousel' form='day'>Dia fin</label>
+      <input className='inputsFormCarrousel'
+        type="number"
+        name="day"
+        value={formData.day}
+        onChange={handleInputChange}
+      />
 
 
 

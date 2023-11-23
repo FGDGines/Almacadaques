@@ -22,18 +22,21 @@ export const Update = async (req: Request, res: Response) => {
 
         if(!tCarousels) return res.status(200).json({status: 404 , msg: 'No existe carousel con el id ' + id})
         
-        // @ts-ignore
-        const src = req.files.src.data
-        if (src != undefined) {
-            const past = tCarousels.src
-            if (past) {
-                const uploadDir = path.join(__dirname,  RelativePath.carousel)
-                await DeleteFile(path.join(uploadDir, past))        
+        try {
+            // @ts-ignore
+            const src = req.files.src.data
+            if (src != undefined) {
+                const past = tCarousels.src
+                if (past) {
+                    const uploadDir = path.join(__dirname,  RelativePath.carousel)
+                    await DeleteFile(path.join(uploadDir, past))        
+                }
+                const url = await UploadFile( src, path.join(__dirname,  RelativePath.carousel), fileExtension, Formatos.image)
+                await tCarousels.update({src: url})
+                updates.push({path: 'src', past , now: url})
             }
-            const url = await UploadFile( src, path.join(__dirname,  RelativePath.carousel), fileExtension, Formatos.image)
-            await tCarousels.update({src: url})
-            updates.push({path: 'src', past , now: url})
-        }
+        } catch (error) {}
+        
 
         const idC = tCarousels.id_data_carousel
         const tDataCarousel = await DataCarousel.findOne({

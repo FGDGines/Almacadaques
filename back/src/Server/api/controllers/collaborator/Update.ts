@@ -38,19 +38,20 @@ export const Update = async ( req: Request ,res: Response)=>{
             updates.push({path: 'descripcion', past , now: descripcion})
         }
 
-        // @ts-ignore
-        const imagen = req.files.src.data
-
-        if(imagen){
-            const past = tColaborador.imagen
-            if (past) {
-                const uploadDir = path.join(__dirname,  RelativePath.collaborator)
-                await DeleteFile(path.join(uploadDir, past))        
+        try {
+            // @ts-ignore
+            const imagen = req.files.src.data
+            if(imagen){
+                const past = tColaborador.imagen
+                if (past) {
+                    const uploadDir = path.join(__dirname,  RelativePath.collaborator)
+                    await DeleteFile(path.join(uploadDir, past))        
+                }
+                const url = await UploadFile( imagen, path.join(__dirname,  RelativePath.collaborator), "jpg", Formatos.image)
+                await tColaborador.update({imagen: url})
+                updates.push({path: 'imagen', past , now: url})
             }
-            const url = await UploadFile( imagen, path.join(__dirname,  RelativePath.collaborator), "jpg", Formatos.image)
-            await tColaborador.update({imagen: url})
-            updates.push({path: 'imagen', past , now: url})
-        }
+        } catch (error) {}
 
         if(contacto){
             const past = tColaborador.contacto
