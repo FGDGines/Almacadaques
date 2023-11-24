@@ -145,6 +145,27 @@ const TextLibro = DB.define("text_libro", {
     }
 }) 
 
+const CalendarEvent = DB.define("calendar_event", {
+    titulo: {
+        type: DataTypes.STRING
+    },
+    inicio: {
+        type: DataTypes.DATE
+    },
+    final: {
+        type: DataTypes.DATE
+    },
+    descripcion: {
+        type: DataTypes.STRING
+    },
+    nombre: {
+        type: DataTypes.STRING
+    },
+    enlace: {
+        type: DataTypes.STRING
+    }
+}) 
+
 
 const Carousel = DB.define("carousels", {
     src: {
@@ -284,5 +305,6 @@ export {
     TextLibro,
     Carousel,
     Espacio,
-    DataCarousel 
+    DataCarousel,
+    CalendarEvent
 }
