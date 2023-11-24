@@ -43,7 +43,7 @@ import { FormularioRetiros } from '../../Dashboard/components/Formularios/Formul
 
 const HandlerLayout = () => {
   const { layoutID, setLayoutID } = useContext(GlobalContext);
-
+  
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       // Verifica si se presiona Ctrl (o Command en Mac) y la tecla 'I'

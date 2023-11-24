@@ -1,17 +1,26 @@
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import { BarSession } from '../../barSession/barSession';
 import '../FormularioEspaciosBienestar/FormularioEspaciosBienestar.css';
-import { useState, ChangeEvent, FormEvent } from 'react';
+import { useState, ChangeEvent, FormEvent, useContext } from 'react';
+import { getToken } from '../../../../helpers/JWT';
+import { GlobalContext } from '../../../../contexts/GlobalContext';
+import { tpDtmResponse } from '../../../../types/typesComponents';
+import { fetchForm } from '../../../../helpers/Server';
 
 
 interface FormData {
-    Frase: string;
+    Frase_es: string;
+    Frase_en: string;
+    Frase_cat: string;
 }
 
 export const FormularioEspaciosBienestar = () => {
     const [formData, setFormData] = useState<FormData>({
-        Frase: '',
+        Frase_es: '',
+        Frase_en: '',
+        Frase_cat: '',
     });
+    const { indexEspacio } = useContext(GlobalContext)
 
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
@@ -23,30 +32,19 @@ export const FormularioEspaciosBienestar = () => {
 
 
 
-    const handleSubmit = async (event: FormEvent) => {
-        event.preventDefault();
-
-        try {
-            // Enviar datos al backend usando fetch
-            const response = await fetch('http://tu-backend.com/api/EspaciosBienestar', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
-
-            if (response.ok) {
-                console.log('Datos del formulario enviados exitosamente');
-                // Limpiar el formulario después de enviar los datos
-                setFormData({
-                    Frase: '',
-                });
-            } else {
-                console.error('Error al enviar los datos del formulario');
-            }
-        } catch (error) {
-            console.error('Error al enviar los datos del formulario:', error);
+    const handleSubmit = () => {
+        const da = new FormData()
+        if (formData.Frase_es) da.append("text_es", formData.Frase_es)
+        if (formData.Frase_en) da.append("text_en", formData.Frase_en)
+        if (formData.Frase_cat) da.append("text_cat", formData.Frase_cat)
+        da.append("token", getToken()) 
+        
+        if (indexEspacio != -1) {
+            da.append("id", `${indexEspacio}`)
+            fetchForm("/espacio/update", da)
+    
+        } else {
+            fetchForm("/espacio/create", da)
         }
     };
 
@@ -60,24 +58,38 @@ export const FormularioEspaciosBienestar = () => {
 
 
 
-                <form className='formEspaciosBienestar' onSubmit={handleSubmit}>
+                <form className='formEspaciosBienestar' >
 
 
                     <div className="restInputs">
-                        <label className='labelsEspaciosBienestar' form='Frase'>Frase</label>
+                        <label className='labelsEspaciosBienestar' form='Frase'>Frase_es</label>
                         <input className='inputsFormEspaciosBienestar'
                             type="text"
-                            name="Frase"
-                            value={formData.Frase}
+                            name="Frase_es"
+                            value={formData.Frase_es}
                             onChange={handleInputChange}
                         />
 
+                        <label className='labelsEspaciosBienestar' form='Frase'>Frase_en</label>
+                        <input className='inputsFormEspaciosBienestar'
+                            type="text"
+                            name="Frase_en"
+                            value={formData.Frase_en}
+                            onChange={handleInputChange}
+                        />
 
+                        <label className='labelsEspaciosBienestar' form='Frase'>Frase_cat</label>
+                        <input className='inputsFormEspaciosBienestar'
+                            type="text"
+                            name="Frase_cat"
+                            value={formData.Frase_cat}
+                            onChange={handleInputChange}
+                        />
                     </div>
                     
                 </form>
                 <div className="GuardarEspaciosBienestar">
-                        <a href="" className='btnGuardarEspaciosBienestarAdmin'>Guardar</a>
+                        <a href="#" onClick={handleSubmit} className='btnGuardarEspaciosBienestarAdmin'>Guardar</a>
                     </div>
             </div>
         </div>

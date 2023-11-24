@@ -22,13 +22,13 @@ app.post('/read', [
     check('lang', 'El idioma es obligatorio').not().isEmpty(),
     validarCampos], Read)
 
-app.post('/delete' , [security_post ,
+app.post('/delete' , [security_post,
     check('id', 'El carousel item a eliminar es olbigatorio').isNumeric()
      , validarCampos], Delete)
 
 
-app.post('/update' , [
-    check('id', 'El id del carosuel a eliminar es obligatorio').isNumeric()
+app.post('/update' , [security_post,
+    check('id', 'El id del carosuel a actualizar es obligatorio').isNumeric()
      , validarCampos] , Update)
 
 module.exports = app

@@ -8,6 +8,7 @@
     
 }
 .containerColaboradores{
+  overflow-x: scroll;
     position: relative;
     width: 90%;
     display: flex;
@@ -16,6 +17,7 @@
 .itenColaboradores{
     width: 93%;
     padding-left: 3vw;
+    padding-bottom: 1vw;
     gap: 2.25vw;
     display: flex;
     padding-top: 3vw;

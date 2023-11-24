@@ -15,6 +15,7 @@ dist-ssr
 
 # images
 src/Server/public
+public/src
 
 # Editor directories and files
 .vscode/*

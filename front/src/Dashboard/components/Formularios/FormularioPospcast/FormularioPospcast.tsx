@@ -1,7 +1,11 @@
 import "./FormularioPospcast.css"
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import { BarSession } from '../../barSession/barSession';
-import { useState, ChangeEvent, FormEvent } from 'react';
+import { useState, ChangeEvent, FormEvent, useContext } from 'react';
+import { getToken } from "../../../../helpers/JWT";
+import { GlobalContext } from "../../../../contexts/GlobalContext";
+import { fetchForm } from "../../../../helpers/Server";
+import { tpDtmResponse } from "../../../../types/typesComponents";
 
 interface FormData {
   Titulo: string;
@@ -14,6 +18,8 @@ interface FormData {
 
 
 function FormularioPospcast() {
+  const { indexPodcast } = useContext(GlobalContext)
+
   function formatDate(date: Date): string {
     const year = date.getFullYear();
     const month = (date.getMonth() + 1).toString().padStart(2, '0');
@@ -49,35 +55,35 @@ function FormularioPospcast() {
     }
   };
 
-  const handleSubmit = async (event: FormEvent) => {
-    event.preventDefault();
+  const handleSubmit = () => {
+    const da = new FormData()
+    if (formData.Titulo) {
+        da.append("titulo", formData.Titulo)
+    }
+    if (formData.Autor) {
+        da.append("autor", formData.Autor)
+    }
+    if (formData.Fecha){
+        da.append("fecha", formatDate(formData.Fecha))
+    }
+    if (formData.Categoria) {
+        da.append("categoria", formData.Categoria)
+    }
+    if (formData.Url) {
+        da.append("url", formData.Url)
+    }
+    da.append("token", getToken()) 
+    if (formData.archivo) {
+        da.append("src", formData.archivo);
+        da.append("fileExtension", "jpg");
+    }
 
-    try {
-      // Enviar datos al backend usando fetch
-      const response = await fetch('http://tu-backend.com/api/Carrousel', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+    if (indexPodcast != -1) {
+        da.append("id", `${indexPodcast}`)
+        fetchForm("/podcast/update", da)
 
-      if (response.ok) {
-        console.log('Datos del formulario enviados exitosamente');
-        // Limpiar el formulario después de enviar los datos
-        setFormData({
-          Titulo: '',
-          Autor: '',
-          Fecha: new Date(),
-          Categoria: '',
-          Url: '',
-          archivo: null,
-        });
-      } else {
-        console.error('Error al enviar los datos del formulario');
-      }
-    } catch (error) {
-      console.error('Error al enviar los datos del formulario:', error);
+    } else {
+        fetchForm("/podcast/register", da)
     }
   };
 
@@ -86,10 +92,10 @@ function FormularioPospcast() {
       <NarbarAdmin></NarbarAdmin>
 
       <div className="contenidoFormCarrousel">
-        <BarSession direccion={17} tituloVista='Blog' segundoTitulo='Añadir nuevo Podcast' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
+        <BarSession direccion={26} tituloVista='Blog' segundoTitulo='Añadir nuevo Podcast' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
 
 
-        <form className='formCarrousel' onSubmit={handleSubmit}>
+        <form className='formCarrousel'>
           <div className="subirArchivos">
             <label htmlFor="File" className='labelArchivo'>
               <img src="../../../../src/assets/Dashboard-almacadaques/inicio/nube.svg" alt="" />
@@ -156,7 +162,7 @@ function FormularioPospcast() {
 
         <div className="botonesFormCarrousel">
           <a href="#" className='CancelarCarousel'>Cancelar</a>
-          <a href="#" className='AgregarCarousel'>Agregar</a>
+          <a href="#" className='AgregarCarousel'  onClick={handleSubmit}>Agregar</a>
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ const Book1 = () => {
   const { setLayoutID } = useContext(GlobalContext);
 
   const handleBookInit = () => {
-    console.log('El libro se ha inicializado.');
+    // console.log('El libro se ha inicializado.');
   };
 
 

@@ -103,3 +103,14 @@
   border-radius: 2.5735rem;
   text-decoration: none;
 }
+
+@media (max-width: 780px) {
+}
+@media (max-width: 450px) {
+  .formRedes{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+}

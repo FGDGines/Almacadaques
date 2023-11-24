@@ -11,7 +11,7 @@ const retiroInfo = [
         "../../src/assets/carouselBlog/img2_2.jpg",
         
       ],
-      title: "Nature & Kaiaking Weekend en Cadaqué",
+      title: "Nature & Kaiaking Weekend en Cadaqués",
       // author: "Ana Sánchez",
       description: "Nadaremos la vida, Kaiak, haremos baños sanadores y mucho más! ( NATURALEZA – KAIAK – MOVIMIENTO VITAL COMPARTIR – BAÑO SANADOR – CAMINAR LA VIDA – AUTOCUIDADO. ) ",
       estado:'Completo',
@@ -51,14 +51,14 @@ const retiroInfo = [
       autor: '', 
       year: 2023,
       image: [
-        "../../src/assets/FotosRetiros/1_1.jpg",
+        "../../src/assets/FotosRetiros/3_4.jpeg",
         // "./src/assets/images/blog-line-1-620x464.jpg",
         // "../../src/assets/carouselBlog/img3.jpg",
       ],
       title: "Happy Dance Weekend  con Paz Jiménez",
       // author: "Luis Ramirez",
       description: "En Avinyonet de Puigventós (Alt Empordá) ,Danzaremos la vida, respiraremos naturaleza y mucho más! ( NATURALEZA – BAILE – MOVIMIENTO VITAL – RELAJACIÓN – COMPARTIR – BAÑO DE BOSQUE – CABALLOS - AUTOCUIDADO .) Para más información y reservar tu plaza: Acceda artraves del link",
-      estado:'Aplazado',
+      estado:'Plazas limitadas',
     },
     {
       index: 5,

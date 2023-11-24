@@ -80,3 +80,55 @@
   line-height: normal;
   margin: 0;
 }
+.containerUser .nombrePerfil a {
+  text-decoration: none;
+  color: black;
+}
+
+@media (max-width: 780px) {
+  .containerUser {
+    width: 10vw;
+  }
+  .containerUser .nombrePerfil h3 {
+    font-size: 1.1rem;
+  }
+  .containerUser .nombrePerfil a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5vw;
+  }
+  .barSession {
+    width: 95%;
+    height: 10vw;
+  }
+  
+}
+
+@media (max-width: 450px) {
+  .containerUser {
+    width: 25vw;
+    margin-right: -7vw;
+  }
+  .containerUser .nombrePerfil h3 {
+    font-size: 1.1rem;
+  }
+  .containerUser .user img {
+    width: 10vw;
+  }
+  .barSession .containerTitulos h3 {
+    font-size: 1rem;
+  }
+  
+  .barSession .containerTitulos h2 {
+    font-size: 4vw;
+  }
+  .containerUser .nombrePerfil a {
+    text-decoration: none;
+    color: black;
+    font-size: 3vw;
+  }
+  .barSession {
+    width: 95%;
+    height: 15vw;
+  }
+}

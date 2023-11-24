@@ -6,7 +6,7 @@ import { Formatos, RelativePath } from "../../../config/config";
 
 export const Update = async (req: Request, res: Response) => {
     const { body } = req
-    const { id, title_es, title_en, title_cat, description_es, description_en, description_cat, index, day, month, year, image_number, author} = body
+    const { id, title_es, title_en, title_cat, description_es, description_en, description_cat, index, day, month, year, estado, image_number, author} = body
     
     const updates = []
     try {
@@ -14,7 +14,7 @@ export const Update = async (req: Request, res: Response) => {
             where: {
                 id: id
             },
-            attributes: ["id", "indice", "day", "month", "year", "image", "author"],
+            attributes: ["id", "indice", "day", "month", "year", "image", "author", "estado"],
             include: [
                 {
                     model: TitleLang
@@ -30,7 +30,6 @@ export const Update = async (req: Request, res: Response) => {
 
         const tTitleLang = tBlogRetiro.title_lang
         const tDescriptionLang = tBlogRetiro.description_lang
-
         if(title_es){
             const past = tTitleLang.title_es
             await tTitleLang.update({es: title_es})
@@ -83,24 +82,37 @@ export const Update = async (req: Request, res: Response) => {
             await tBlogRetiro.update({year: year})
             updates.push({path: 'year', past , now: year})
         }
-
-        // @ts-ignore
-        const image = req.files.src.data 
-        if(image){
-            const past = tBlogRetiro.image
-            const json = JSON.parse(past)
-            if (json.length <= image_number) {
-                return res.status(200).json({ status: 400, msg: "Número de la imagen no válido" })
-            }
-            if (past) {
-                const uploadDir = path.join(__dirname,  RelativePath.text_libro)
-                await DeleteFile(path.join(uploadDir, past))        
-            }
-            const url = await UploadFile( image, path.join(__dirname,  RelativePath.blog_retiro), "jpg", Formatos.image)
-            json[image_number] = url
-            await tBlogRetiro.update({image: json})
-            updates.push({path: 'image', past , now: json})
+        if(estado){
+            const past = tBlogRetiro.estado
+            console.log(past)
+            await tBlogRetiro.update({estado: estado})
+            updates.push({path: 'estado', past , now: estado})
         }
+
+        try {
+            // @ts-ignore
+            const image = req.files.src.data 
+            if(image){
+                const past = tBlogRetiro.image
+                const json = JSON.parse(past)
+                if (json.length <= image_number) {
+                    return res.status(200).json({ status: 400, msg: "Número de la imagen no válido" })
+                }
+                if (past) {
+                    const uploadDir = path.join(__dirname,  RelativePath.blog_retiro)
+                    try {
+                        await DeleteFile(path.join(uploadDir, json[image_number]))
+                    } catch (error) {}            
+                }
+                        
+                const url = await UploadFile( image, path.join(__dirname,  RelativePath.blog_retiro), "jpg", Formatos.image)
+                json[image_number] = url
+                console.log(json[image_number])
+                await tBlogRetiro.update({image: json})
+                updates.push({path: 'image', past , now: json})
+            }
+        } catch (error) {}
+        
         if(author){
             const past = tBlogRetiro.author
             await tBlogRetiro.update({author: author})
@@ -110,6 +122,6 @@ export const Update = async (req: Request, res: Response) => {
         return res.status(200).json({status: 200, msg: "Updated" , bag: {updates}})
 
     } catch (err) {
-        return res.status(200).json({ status: 500, err, msg: "No podemos editar colaborador en este momento" })
+        return res.status(200).json({ status: 500, err, msg: "No podemos editar blog_retiro en este momento" })
     }
 }

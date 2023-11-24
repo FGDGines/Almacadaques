@@ -1,28 +1,76 @@
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import "./PreviwTestimonios.css";
-import { testimonies } from "../../../data/testimonies";
+// import { testimonies } from "../../../data/testimonies";
+import { getToken } from '../../../helpers/JWT';
+import { formDataToObject } from '../../../helpers/Forms';
+import { fetchDefault } from '../../../helpers/Server';
+import { tpDtmResponse, tpTestimony } from '../../../types/typesComponents';
+import { GlobalContext } from '../../../contexts/GlobalContext';
 
 function PreviwTestimonios() {
-  const [data, setData] = useState(testimonies);
+  const [data, setData] = useState<tpTestimony[]>([]);
+  const { setLayoutID, setIndexTestimony } = useContext(GlobalContext);
+  const { languageFlag } = useContext(GlobalContext)
+  const lg = languageFlag.toLowerCase() 
 
   const handleEliminar = (id: number) => {
-    const updatedData = data.filter((testimonial) => testimonial.id !== id);
-    setData(updatedData);
+    const da = new FormData()
+    da.set("id", `${id}`)
+    da.set("token", getToken())
+    const dat = {body: JSON.stringify(formDataToObject(da))}
+
+    fetchDefault("/testimony/delete", dat, (d: tpDtmResponse) => {
+        if (d.status != 200) return
+        const updatedData = data.filter((item) => item.id!== id);
+        setData(updatedData);
+    }) 
   };
+
+
+  // para editar el elemento
+  const edit = (index: number) => {
+    setIndexTestimony(index)
+    setLayoutID(28)
+  }
+
+  
+
+    
+  // carga los carrousel
+  useEffect(() => {
+      const api = async () => {
+      const da = new FormData()
+      da.set("lang", lg)
+      const dat = {body: JSON.stringify(formDataToObject(da))}
+      const test: tpTestimony[] = []
+      fetchDefault("/testimony/read", dat, (d: tpDtmResponse) => {
+          if(!d.bag) return 
+      console.log(d)
+          for (let index = 0; index < d.bag.length; index++) {
+              const element: {id: number, witness: string, data_testimony: {es: string, en: string , cat: string} } = d.bag[index];
+              const value = { 
+                  id: element.id, 
+                  witness: element.witness,
+                  testimony: element.data_testimony.es || element.data_testimony.en || element.data_testimony.cat
+              }
+              console.log(value)
+              test.push(value)
+          }
+          setData(test);
+      }) 
+      };
+      api();
+      // eslint-disable-next-line
+  }, []);
 
   return (
     <>
       {data.map((testimonial) => (
         <div key={testimonial.id} className="testimonioMain">
           <div className="testimonioItem">
-            <img
-              src={testimonial.image}
-              alt={testimonial.witness}
-              className="imgUsertestimonio"
-            />
             <p className="FraseTestimonio">{testimonial.testimony}</p>
             <div className="iconEditar">
-              <div className="editar">
+              <div className="editar"  onClick={() => edit(testimonial.id)}>
                 <img
                   src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
                   alt=""

@@ -67,7 +67,7 @@ function FormularioEventos() {
             });
 
             if (response.ok) {
-                console.log('Datos del formulario enviados exitosamente');
+                // console.log('Datos del formulario enviados exitosamente');
                 // Limpiar el formulario después de enviar los datos
                 setFormData({
                     Titulo: '',
@@ -91,7 +91,7 @@ function FormularioEventos() {
             <NarbarAdmin></NarbarAdmin>
 
             <div className="contenidoFormCarrousel">
-                <BarSession direccion={17} tituloVista='Evento' segundoTitulo='Añadir nuevo eventos' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
+                <BarSession direccion={19} tituloVista='Evento' segundoTitulo='Añadir nuevo eventos' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
 
 
                 <form className='formCarrousel' onSubmit={handleSubmit}>

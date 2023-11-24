@@ -9,7 +9,25 @@ export const GlobalContext = createContext<GlobalContextType>({
     languageFlag: enLanguageFlag.ES,
     setLanguageFlag() { },
     upOrDown: false,
-    setUpOrDown() {  }
+    setUpOrDown() {  },
+    indexCarrousel: -1,
+    setIndexCarrousel() {},
+    indexRed: -1,
+    setIndexRed() {},
+    indexEspacio: -1,
+    setIndexEspacio() {},
+    indexTestimony: -1,
+    setIndexTestimony() {},
+    indexCollaborator: -1,
+    setIndexCollaborator() {},
+    indexPodcast: -1,
+    setIndexPodcast() {},
+    indexBlogRetiro: -1,
+    setIndexBlogRetiro() {},
+    indexTextLibro: -1,
+    setIndexTextLibro() {},
+    indexCalendarEvent: -1,
+    setIndexCalendarEvent() {}
 })
 
 export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -17,6 +35,15 @@ export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ child
     const [languajeActive, setLanguajeActive] = useState<number>(1)
     const [languageFlag, setLanguageFlag] = useState<enLanguageFlag>(enLanguageFlag.ES)
     const [upOrDownState, setUpOrDownState] = useState(true);
+    const [indexCarrousel, setIndexCarrousel] = useState<number>(-1);
+    const [indexRed, setIndexRed] = useState<number>(-1);
+    const [indexEspacio, setIndexEspacio] = useState<number>(-1);
+    const [indexTestimony, setIndexTestimony] = useState<number>(-1);
+    const [indexCollaborator, setIndexCollaborator] = useState<number>(-1);
+    const [indexPodcast, setIndexPodcast] = useState<number>(-1);
+    const [indexBlogRetiro, setIndexBlogRetiro] = useState<number>(-1);
+    const [indexCalendarEvent, setIndexCalendarEvent] = useState<number>(-1);
+    const [indexTextLibro, setIndexTextLibro] = useState<number>(-1);
 
     const setUpOrDown = (arg: boolean) => {
         setUpOrDownState(arg);
@@ -49,7 +76,25 @@ export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ child
                 languageFlag,
                 setLanguageFlag,
                 upOrDown: upOrDownState,
-                setUpOrDown: setUpOrDown
+                setUpOrDown: setUpOrDown,
+                indexCarrousel,
+                setIndexCarrousel,
+                indexRed,
+                setIndexRed,
+                indexEspacio,
+                setIndexEspacio,
+                indexTestimony,
+                setIndexTestimony,
+                indexCollaborator,
+                setIndexCollaborator,
+                indexPodcast,
+                setIndexPodcast,
+                indexBlogRetiro, 
+                setIndexBlogRetiro,
+                indexCalendarEvent, 
+                setIndexCalendarEvent,
+                indexTextLibro, 
+                setIndexTextLibro
             }
         }>
         {children}

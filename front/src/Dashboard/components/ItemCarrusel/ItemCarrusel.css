@@ -4,8 +4,8 @@
   flex-shrink: 0;
   border-radius: 1.875rem;
   background: #fefefe;
-  box-shadow: 0px 8px 24px 0px #fcf1f4;
   margin: 0 auto;
+  box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.25);
 }
 
 .barraCarrusel {
@@ -95,6 +95,11 @@
 
 .ctOver .iconosItems i {
   cursor: pointer;
+  width: 3vw;
+}
+
+.iconosItems i img {
+  width: 2.5vw;
 }
 
 .ctOver .contenidoItems {
@@ -106,14 +111,14 @@
   justify-content: center;
   align-items: center;
 }
-.ctOver .contenidoItems .ItemsDescripcion{
+.ctOver .contenidoItems .ItemsDescripcion {
   width: 100%;
   height: 50%;
   color: white;
   font-style: normal;
   line-height: normal;
 }
-.ctOver .contenidoItems .firma{
+.ctOver .contenidoItems .firma {
   width: 100%;
   display: flex;
   height: 50%;
@@ -122,4 +127,71 @@
   font-style: normal;
   line-height: normal;
   margin: 0;
+}
+
+@media (max-width: 780px) {
+  .ItemCarrusel {
+    width: 90vw;
+    height: 33vw;
+  }
+  .items {
+    width: 20vw;
+    height: 100%;
+  }
+  .ctOver .contenidoItems .ItemsDescripcion {
+    width: 100%;
+    word-wrap: break-word;
+  }
+  .barraCarrusel .tituloCarrusel p {
+    font-size: 1.8vw;
+  }
+  .ctOver .iconosItems i {
+    cursor: pointer;
+    width: 3vw;
+  }
+}
+
+@media (max-width: 450px) {
+  
+  .ItemCarrusel {
+    width: 85vw;
+    height: 43vw;
+    border-radius: 1.5vw;
+  }
+  .items {
+    width: 26vw;
+    height: 100%;
+    margin-right: 4vw;
+  }
+  .ctOver .contenidoItems .ItemsDescripcion {
+    width: 100%;
+    word-wrap: break-word;
+  }
+  .barraCarrusel .tituloCarrusel p {
+    font-size: 3vw;
+  }
+  .ctOver .iconosItems i {
+    cursor: pointer;
+    margin-top: 3vw;
+    width: 5vw;
+  }
+  .iconosItems i img {
+    width: 4.5vw;
+  }
+  .botonesCarrusel .left {
+    width: 5vw;
+    height: 5vw;
+  }
+  .botonesCarrusel .right {
+    width: 5vw;
+    height: 5vw;
+  }
+  .botonesCarrusel .right img{
+    width: 4.5vw;
+    height: 4.5vw;
+  }
+  .botonesCarrusel .left img{
+    width: 4.5vw;
+    height: 4.5vw;
+  }
 }

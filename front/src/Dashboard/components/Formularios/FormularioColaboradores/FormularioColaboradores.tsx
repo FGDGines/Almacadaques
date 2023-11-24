@@ -1,7 +1,11 @@
 import './FormularioColaboradores.css'
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import { BarSession } from '../../barSession/barSession';
-import { useState, ChangeEvent, FormEvent } from 'react';
+import { useState, ChangeEvent, FormEvent, useContext } from 'react';
+import { fetchForm } from '../../../../helpers/Server';
+import { tpDtmResponse } from '../../../../types/typesComponents';
+import { GlobalContext } from '../../../../contexts/GlobalContext';
+import { getToken } from '../../../../helpers/JWT';
 
 
 interface FormData {
@@ -14,9 +18,6 @@ interface FormData {
 
 
 function FormularioColaboradores() {
-
-
-
     const [formData, setFormData] = useState<FormData>({
 
         Nombre: '',
@@ -25,6 +26,8 @@ function FormularioColaboradores() {
         Contacto: '',
         archivo: null,
     });
+
+    const { indexCollaborator } = useContext(GlobalContext)
 
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
@@ -45,34 +48,32 @@ function FormularioColaboradores() {
         }
     };
 
-    const handleSubmit = async (event: FormEvent) => {
-        event.preventDefault();
-
-        try {
-            // Enviar datos al backend usando fetch
-            const response = await fetch('http://tu-backend.com/api/Carrousel', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
-
-            if (response.ok) {
-                console.log('Datos del formulario enviados exitosamente');
-                // Limpiar el formulario después de enviar los datos
-                setFormData({
-                    Nombre: '',
-                    Cargo: '',
-                    Descripcion: '',
-                    Contacto: '',
-                    archivo: null,
-                });
-            } else {
-                console.error('Error al enviar los datos del formulario');
-            }
-        } catch (error) {
-            console.error('Error al enviar los datos del formulario:', error);
+    const handleSubmit = () => {
+        const da = new FormData()
+        if (formData.Nombre) {
+            da.append("nombre", formData.Nombre)
+        }
+        if (formData.Contacto) {
+            da.append("contacto", formData.Contacto)
+        }
+        if (formData.Cargo) {
+            da.append("cargo", formData.Cargo)
+        }
+        if (formData.Descripcion) {
+            da.append("descripcion", formData.Descripcion)
+        }
+        da.append("token", getToken()) 
+        
+        if (formData.archivo) {
+            da.append("src", formData.archivo);
+            da.append("fileExtension", "jpg");
+        }
+        if (indexCollaborator != -1) {
+            da.append("id", `${indexCollaborator}`)
+            fetchForm("/collaborator/update", da)
+    
+        } else {
+            fetchForm("/collaborator/register", da)
         }
     };
 
@@ -82,10 +83,10 @@ function FormularioColaboradores() {
             <NarbarAdmin></NarbarAdmin>
 
             <div className="contenidoFormCarrousel">
-                <BarSession direccion={17} tituloVista='Colaboradores' segundoTitulo='Añadir nuevo Colaborador' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
+                <BarSession direccion={20} tituloVista='Colaboradores' segundoTitulo='Añadir nuevo Colaborador' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
 
 
-                <form className='formCarrousel' onSubmit={handleSubmit}>
+                <form className='formCarrousel'>
                     <div className="subirArchivos">
                         <label htmlFor="File" className='labelArchivo'>
                             <img src="../../../../src/assets/Dashboard-almacadaques/inicio/nube.svg" alt="" />
@@ -136,7 +137,7 @@ function FormularioColaboradores() {
 
                 <div className="botonesFormCarrousel">
                     <a href="#" className='CancelarCarousel'>Cancelar</a>
-                    <a href="#" className='AgregarCarousel'>Agregar</a>
+                    <a href="#" className='AgregarCarousel'  onClick={handleSubmit}>Agregar</a>
                 </div>
             </div>
         </div>

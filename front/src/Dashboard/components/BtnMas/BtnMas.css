@@ -13,3 +13,14 @@
 .ImgColaboradoresAdmin {
   width: 2.5vw;
 }
+@media (max-width: 780px) {
+}
+@media (max-width: 450px) {
+  .BtnMas {
+    width: 15vw;
+    height: 15vw;
+  }
+  .ImgColaboradoresAdmin {
+    width: 7vw;
+  }
+}

@@ -9,7 +9,6 @@ import { FC } from 'react';
 import { tpAlternateTimeLine } from '../../types/typesComponents';
 import './TimeLine.css'
 const AlternateTimeline: FC<tpAlternateTimeLine> = ({data}) => {
-  console.log(data)
   return (
     <Timeline position="alternate">
       {data.map((item )=>{

@@ -7,7 +7,13 @@ import { useContext } from 'react';
 import { BtnMas } from '../../components/BtnMas/BtnMas';
 
 function RetirosAdmin() {
-  const { setLayoutID } = useContext(GlobalContext);
+  const { setLayoutID, setIndexBlogRetiro } = useContext(GlobalContext);
+
+  const add = () => {
+    console.log(1)
+    setIndexBlogRetiro(-1)
+    setLayoutID(38)
+  }
   return (
     <div className='retirosAdmin'>
 
@@ -16,21 +22,10 @@ function RetirosAdmin() {
         <BarSession tituloVista='Blogs' segundoTitulo='Retiros' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
         <div className="infocontainerRetiro">
           <ContainerRetiro/>
-          <ContainerRetiro/>
-          <ContainerRetiro/>
-          <ContainerRetiro/>
-          <ContainerRetiro/>
-          <ContainerRetiro/>
-          <ContainerRetiro/>
-          <ContainerRetiro/>
-          <ContainerRetiro/>
-          <ContainerRetiro/>
-          <ContainerRetiro/>
-          <ContainerRetiro/>
         </div>
         
       </div>
-      <div className="BtonAgregarEventosmain" onClick={() => setLayoutID(38)}>
+      <div className="BtonAgregarEventosmain" onClick={add}>
             <BtnMas/>
           </div>
     </div>

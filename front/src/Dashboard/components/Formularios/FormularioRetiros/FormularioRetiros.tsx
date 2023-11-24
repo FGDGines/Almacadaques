@@ -1,90 +1,131 @@
 import "./FormularioRetiros.css"
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import { BarSession } from '../../barSession/barSession';
-import { useState, ChangeEvent, FormEvent } from 'react';
+import { useState, ChangeEvent, FormEvent, useContext } from 'react';
+import { getToken } from "../../../../helpers/JWT";
+import { GlobalContext } from "../../../../contexts/GlobalContext";
+import { fetchForm } from "../../../../helpers/Server";
+import { tpDtmResponse } from "../../../../types/typesComponents";
 
 interface FormData {
     Titulo: string;
     Autor: string
     Fecha: Date,
+    day: number
     Descripcion: string;
+    Estado: string;
     archivo: File | null;
   }
 
 function FormularioRetiros() {
-    function formatDate(date: Date): string {
-        const year = date.getFullYear();
-        const month = (date.getMonth() + 1).toString().padStart(2, '0');
-        const day = date.getDate().toString().padStart(2, '0');
-        return `${year}-${month}-${day}`;
-      }
-    
-      const [formData, setFormData] = useState<FormData>({
-        Titulo: '',
-        Autor: '',
-        Fecha: new Date(),
-        Descripcion: '',
-        archivo: null,
+  const { languageFlag, indexBlogRetiro } = useContext(GlobalContext)
+  const lf = languageFlag.toLowerCase() 
+
+
+  function formatDate(date: Date): string {
+    const year = date.getFullYear();
+    const month = (date.getMonth() + 1).toString().padStart(2, '0');
+    const day = date.getDate().toString().padStart(2, '0');
+    return `${year}-${month}-${day}`;
+  }
+  const separatedDate = (date: Date): number[] => {
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
+    return [day, month, year];
+  }
+
+  const [formData, setFormData] = useState<FormData>({
+    Titulo: '',
+    Autor: '',
+    Fecha: new Date(),
+    day: 0,
+    Descripcion: '',
+    Estado: '',
+    archivo: null,
+  });
+  
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = event.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const selectedFile = event.target.files?.[0] as File;
+
+    if (selectedFile) {
+      setFormData({
+        ...formData,
+        archivo: selectedFile,
       });
+    }
+  };
+
     
-      const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = event.target;
-        setFormData({
-          ...formData,
-          [name]: value,
-        });
-      };
+  const handleSubmit = () => {
+    const da = new FormData()
+    if (formData.Titulo) {
+        da.append(`title_${lf}`, formData.Titulo)
+    }
+    if (formData.Autor) {
+        da.append("author", formData.Autor)
+    }
+    if (formData.Fecha){
+      const sd = separatedDate(formData.Fecha)
+      let day: number = sd[0]
+      if (formData.day) {
+        day = formData.day
+      }
+      console.log(sd[0], sd[1], sd[2])
+      da.append("day", `[${sd[0]}, ${day}]`)
+      da.append("month", `${sd[1]}`)
+      da.append("year", `${sd[2]}`)
+    }
+    if (formData.Descripcion) {
+        da.append(`descripction_${lf}`, formData.Descripcion)
+    }
+    if (formData.Estado) {
+      da.append("estado", formData.Estado)
+    }
+    da.append("token", getToken()) 
     
-      const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
-        const selectedFile = event.target.files?.[0] as File;
-    
-        if (selectedFile) {
-          setFormData({
-            ...formData,
-            archivo: selectedFile,
-          });
-        }
-      };
-    
-      const handleSubmit = async (event: FormEvent) => {
-        event.preventDefault();
-    
-        try {
-          // Enviar datos al backend usando fetch
-          const response = await fetch('http://tu-backend.com/api/Carrousel', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(formData),
-          });
-    
-          if (response.ok) {
-            console.log('Datos del formulario enviados exitosamente');
-            // Limpiar el formulario después de enviar los datos
-            setFormData({
-              Titulo: '',
-              Autor: '',
-              Fecha: new Date(),
-              Descripcion: '',
-              archivo: null,
-            });
-          } else {
-            console.error('Error al enviar los datos del formulario');
-          }
-        } catch (error) {
-          console.error('Error al enviar los datos del formulario:', error);
-        }
-      };
+    if (formData.archivo) {
+        da.append("src", formData.archivo);
+        da.append("image_number", 0)
+        da.append("fileExtension", "jpg");
+    }
+    console.log(indexBlogRetiro)
+    if (indexBlogRetiro != -1) {
+        da.append("id", `${indexBlogRetiro}`)
+        fetchForm("/blog_retiro/update", da, (d: tpDtmResponse) => {
+          console.log(d)
+        })
+
+    } else {
+        da.set("title_es", formData.Titulo)
+        da.set("title_en", formData.Titulo)
+        da.set("title_cat", formData.Titulo)
+        da.set("description_es", formData.Titulo)
+        da.set("description_en", formData.Titulo)
+        da.set("description_cat", formData.Titulo)
+        da.set("index", "1")
+        fetchForm("/blog_retiro/create", da, (d: tpDtmResponse) => {
+          console.log(d)
+        })
+    }
+  };
   return (
     <div className="FormularioRetiros">
-<NarbarAdmin></NarbarAdmin>
+    <NarbarAdmin></NarbarAdmin>
 
-<div className="contenidoFormCarrousel">
-  <BarSession direccion={17} tituloVista='Retiro' segundoTitulo='Añadir nuevo Retiro' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
+    <div className="contenidoFormCarrousel">
+      <BarSession direccion={22} tituloVista='Retiro' segundoTitulo='Añadir nuevo Retiro' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
 
 
-  <form className='formCarrousel' onSubmit={handleSubmit}>
+  <form className='formCarrousel'>
     <div className="subirArchivos">
       <label htmlFor="File" className='labelArchivo'>
         <img src="../../../../src/assets/Dashboard-almacadaques/inicio/nube.svg" alt="" />
@@ -116,7 +157,13 @@ function FormularioRetiros() {
         onChange={handleInputChange}
       />
 
-
+      <label className='labelsCarrousel' form='day'>Dia fin</label>
+      <input className='inputsFormCarrousel'
+        type="number"
+        name="day"
+        value={formData.day}
+        onChange={handleInputChange}
+      />
 
 
 
@@ -136,6 +183,13 @@ function FormularioRetiros() {
         value={formData.Descripcion}
         onChange={handleInputChange}
       />
+      <label className='labelsCarrousel' form='Estado'>Estado</label>
+      <input className='inputsFormCarrousel'
+        type="text"
+        name="Estado"
+        value={formData.Estado}
+        onChange={handleInputChange}
+      />
 
       
 
@@ -145,7 +199,7 @@ function FormularioRetiros() {
 
   <div className="botonesFormCarrousel">
     <a href="#" className='CancelarCarousel'>Cancelar</a>
-    <a href="#" className='AgregarCarousel'>Agregar</a>
+    <a href="#" className='AgregarCarousel'  onClick={handleSubmit}>Agregar</a>
   </div>
 </div>
 </div>

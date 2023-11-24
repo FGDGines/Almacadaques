@@ -1,16 +1,20 @@
 .inicioAdmin{
     background-color: #fcf1f4;
     width: 100vw;
+    height: 100vh;
     display: flex;
     position: absolute;
     top: 0;
 }
 .contIncioAdmin{
     position: relative;
+
 }
 
 .contenidoPrincipal{
     width: 93vw;
+    overflow-x: scroll;
+
     
 }
 
@@ -20,5 +24,22 @@
     display: grid;
     grid-template-columns: 53% 45%;
     gap: 2%; 
-
   }
+
+
+@media (max-width: 780px) {
+    .contenidoBienestar {
+        width: 96%;
+        margin: 3vw auto;
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 2%; 
+        padding: 2vw;
+      }
+
+}
+@media (max-width: 450px) {
+    .contenidoBienestar {
+        width: 96%;
+    }
+}

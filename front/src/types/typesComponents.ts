@@ -1,3 +1,4 @@
+import { type } from "os";
 import { ReactNode } from "react";
 
 // Definición del tipo de evento
@@ -27,10 +28,6 @@ type tpTestimonyBar = {
 type tpTestimony = {
     id: number;
     witness: string;
-    image?: string;
-    day: number;
-    month: number;
-    year: number;
     testimony: string;
 };
 
@@ -39,7 +36,7 @@ type tpBlogInfo = {
     day?: number[] | number;
     month?: number;
     year?: number;
-    image: string;
+    image: string[];
     title: string;
     author?: string;
     tags?: string[];
@@ -146,6 +143,7 @@ type tpFormDefault = {
     hSubmit: (bag: FormData) => void
 }
 type AudioPlayerProps = {
+    id: number;
     fecha?: string;
     url?: string;
     titulo?: string;
@@ -161,7 +159,16 @@ type iconsProps = {
     src?: string
 }
 
+type tpTextLibro = {
+    id: number;
+    title: string;
+    subtitle: string;
+    content: string;
+    imagenSrc: string;
+}
+
 interface Red {
+    index: number;
     archivo: string;
     url: string;
     cuenta: string;
@@ -195,5 +202,6 @@ export type {
     tpObjectStringToStrig,
     AudioPlayerProps,
     iconsProps,
+    tpTextLibro,
     RedesProps
 };

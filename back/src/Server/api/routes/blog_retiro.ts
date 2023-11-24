@@ -21,10 +21,12 @@ app.post('/create', [security_post,
     check('day', 'El dia es obligatorio').not().isEmpty(),
     check('month', 'El mes es obligatorio').not().isEmpty(),
     check('year', 'El  año es obligatorio').not().isEmpty(),
-    check('author', 'El autor es obligatorio').not().isEmpty()
+    check('author', 'El autor es obligatorio').not().isEmpty(),
+    check('estado', 'El estado es obligatorio').not().isEmpty()
     , validarCampos], Create)
 
 app.post('/read', [
+    check('lang', 'El lenguaje es obligatorio').not().isEmpty()
     ], Read)
 
 app.post('/delete' , [security_post,
@@ -32,12 +34,12 @@ app.post('/delete' , [security_post,
     , validarCampos], Delete)
 
 
-app.post('/update' , [
+app.post('/update' , [security_post,
     check('id', 'El blog retiro a actualizar es obligatorio').isNumeric()
     , validarCampos] , Update)
 
 app.post('/add_file' , [security_post,
-    check('id', 'El blog retiro a eliminar es olbigatorio').isNumeric()
+    check('id', 'El blog retiro a actualizar es olbigatorio').isNumeric()
     , validarCampos], AddFile)
 
 

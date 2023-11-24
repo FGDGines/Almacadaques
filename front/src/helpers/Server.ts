@@ -3,6 +3,7 @@ import { mostrarAlerta } from "./MostrarAlerta"
  
 
 export const fetchDefault = (endpoint: string , init:{[key: string]: unknown} , resolve = (arg: tpDtmResponse )=>mostrarAlerta(arg) , reject = (arg: tpDtmResponse )=>mostrarAlerta(arg) )=>{
+    // let headers: string
     fetch(`/api${endpoint}`, {
         'method':'POST', 
         'headers': {
@@ -21,12 +22,37 @@ export const fetchDefault = (endpoint: string , init:{[key: string]: unknown} , 
         }
     })
     .then(data=>{
-        // console.log(data)
-        // return data
         resolve(data)
     })
     .catch(err=>{
-        console.log(err)
+        err
+        reject({msg: 'No disponible' , status: 500})
+    })
+}
+
+export const fetchForm = (endpoint: string , data: FormData , resolve = (arg: tpDtmResponse )=>mostrarAlerta(arg) , reject = (arg: tpDtmResponse )=>mostrarAlerta(arg) )=>{
+    fetch(`/api${endpoint}`, {
+        'method':'POST', 
+        'headers': {
+            // 'Content-Type': 'application/json',
+        }, 
+        body: data
+    })
+    .then(async (res) => {
+        switch(res.status){
+            case 200:
+                return res.json()
+            break ;
+            default: 
+                throw new Error("Respuesta desconocida del Servidor" + JSON.stringify({status: res.status, text: await res.text()}))                
+            break 
+        }
+    })
+    .then(data=>{
+        resolve(data)
+    })
+    .catch(err=>{
+        err
         reject({msg: 'No disponible' , status: 500})
     })
 }

@@ -4,14 +4,13 @@ import Franja from '../Franja/Franja';
 import Footer from '../Footer/Footer';
 import FormDefault from '../FormDefault/FormDefault';
 import { textos } from '../../data/textos';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
-import { testimonies } from '../../data/testimonies';
 import Testimony from '../Testimony/Testimony';
 import { tpDtmResponse } from '../../types/typesComponents';
 import { formDataToObject } from '../../helpers/Forms';
 import { fetchDefault } from '../../helpers/Server';
-
+import { tpTestimony} from "../../types/typesComponents"
 const CoachingInternacional = () => {
     const { languageFlag } = useContext(GlobalContext)
 
@@ -19,15 +18,43 @@ const CoachingInternacional = () => {
     const subtmitOnFormDefault = (bag: FormData) => {
         bag.append("fragment", "Coaching Internacional")
         const data = {body: JSON.stringify(formDataToObject(bag))}
-        console.log(data)
-        fetchDefault("/mail/create", data, (d: tpDtmResponse) => {
-            console.log("response",d)
-        }, (e: tpDtmResponse) => {
-            console.log("error", e)
-        })
+        fetchDefault("/mail/create", data)
         
-        console.log('Datos enviados:', data);
+        // console.log('Datos enviados:', data);
     }
+
+
+    const [testimonies, setTestimonies] = useState<tpTestimony[]>([]);
+    const l = languageFlag.toLowerCase() 
+
+    useEffect(() => {
+        const api = async () => {
+            const da = new FormData()
+            da.set("lang", l)
+        
+            const data = {body: JSON.stringify(formDataToObject(da))}
+            const testimony: tpTestimony[] = []
+            fetchDefault("/testimony/read", data, (d: tpDtmResponse) => {
+                if (!d.bag) {
+                    return
+                }
+                for (let index = 0; index < d.bag.length; index++) {
+                    const element: { id: number, witness: string, createdAt: string, data_testimony: { es: string, en: string, cat: string}}= d.bag[index];
+                    testimony.push({
+                        id: element.id,
+                        witness: element.witness,
+                        day: 0,
+                        month: 0,
+                        year: 0,
+                        testimony: element.data_testimony.es || element.data_testimony.en || element.data_testimony.cat
+                    })
+                }
+                setTestimonies(testimony)
+            })  
+            
+        };
+        api()
+    }, []);
 
     return <div className="CoachingInternacional">
         <Navbar />

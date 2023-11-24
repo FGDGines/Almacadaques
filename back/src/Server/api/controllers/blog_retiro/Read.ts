@@ -1,11 +1,23 @@
 import { Request, Response } from "express";
-import { BlogRetiro } from "../../../db/models";
+import { BlogRetiro, DescriptionLang, TitleLang } from "../../../db/models";
 
 export const Read = async (req: Request, res: Response) => {
     const { body } = req
-    const {} = body
+    const { lang } = body
     try {
-        const tBlogRetiros = await BlogRetiro.findAll()
+        const tBlogRetiros = await BlogRetiro.findAll({
+            attributes: ["id", "indice", "day", "month", "year", "image", "author", "estado"],
+            include: [
+                {
+                    model: TitleLang,
+                    attributes:[`${lang}`]
+                },
+                {
+                    model: DescriptionLang,
+                    attributes:[`${lang}`]
+                }
+            ]
+        })
 
         return res.status(200).json({ status: 200, msg: "Blog retiro obtenidos con éxito",bag: tBlogRetiros })
     } catch (err) {

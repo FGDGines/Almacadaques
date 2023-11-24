@@ -31,14 +31,9 @@ const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
       msg: `telefono: ${formData.telefono}, actividad: ${formData.actividad}`,
       fragment: "experiencias de bienestar"
     })}
-    console.log(data)
-    fetchDefault("/mail/create", data, (d: tpDtmResponse) => {
-      console.log("response",d)
-    }, (e: tpDtmResponse) => {
-      console.log("error", e)
-    })
+    fetchDefault("/mail/create", data)
     
-    console.log('Datos enviados:', formData);
+    // console.log('Datos enviados:', formData);
   };
 
 

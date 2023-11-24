@@ -12,6 +12,7 @@ app.use('/espacio', require('../api/routes/espacio'))
 app.use('/blog_retiro', require('../api/routes/blog_retiro')) 
 app.use('/podcast', require('../api/routes/podcast')) 
 app.use('/text_libro', require('../api/routes/text_libro')) 
+app.use('/red', require('../api/routes/red')) 
 
 
 

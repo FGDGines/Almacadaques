@@ -1,6 +1,5 @@
 import './Propuesta.css'
 import AlternateTimeline from '../TimeLine/TimeLine';
-import { tlEspacios } from '../../data/tlEspacios';
 import { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
 import { fetchDefault } from '../../helpers/Server';
@@ -21,15 +20,13 @@ const Propuesta = ()=>{
     useEffect(() => {
         const api = async () => {
             fetchDefault("/espacio/read", data, (d: tpDtmResponse) => {
-                const espacios: tpTimeLineData[] = []            
+                const propuesta: tpTimeLineData[] = []            
                 if(!d.bag || !d.bag.length)return  
                 for (let index = 0; index < d.bag.length; index++) {
                     const element:{id: number , es:string , en: string , cat: string} = d.bag[index];
-                    espacios.push({ id: element.id, text: element.es || element.en || element.cat })
+                    propuesta.push({ id: element.id, text: element.es || element.en || element.cat })
                 }
-                const t = tlEspacios[languageFlag]
-                console.log(espacios[0], t[0])
-                setResult(espacios)
+                setResult(propuesta)
             })  
             
         };

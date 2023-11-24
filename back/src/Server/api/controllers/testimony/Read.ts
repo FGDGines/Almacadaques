@@ -9,7 +9,7 @@ export const Read = async ( req: Request ,res: Response)=>{
 
     try{
         const tTestimonios = await Testimonio.findAll({
-            attributes:['witness'] , 
+            attributes:['witness', "id", "createdAt"] , 
             include:[{
                 model: DataTestimonio, 
                 attributes:[lang]            
