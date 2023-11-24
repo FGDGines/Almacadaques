@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useContext } from 'react';
+import  React, { useState, useEffect, useContext } from 'react';
 import './ItemCarrusel.css';
 import itemsData from '../../../data/itemCarrousel';
 import { NuevoCarrusel } from './NuevoCarrusel/NuevoCarrusel';
 import { GlobalContext } from '../../../contexts/GlobalContext';
 import { Loader } from '../LoaderOverlay/LoaderOverlay';
 import { formDataToObject } from '../../../helpers/Forms';
-import { tpCarouelItem, tpDtmResponse } from '../../../types/typesComponents';
+import { tpDtmResponse } from '../../../types/typesComponents';
 import { fetchDefault } from '../../../helpers/Server';
 import { getToken } from '../../../helpers/JWT';
 

@@ -4,7 +4,7 @@ import { mostrarAlerta } from "./MostrarAlerta"
  
 
 export const fetchDefault = (endpoint: string , init:{[key: string]: unknown} , resolve = (arg: tpDtmResponse )=>mostrarAlerta(arg) , reject = (arg: tpDtmResponse )=>mostrarAlerta(arg) )=>{
-    let headers: string
+    
     fetch(`${urlApi}:${portApi}/api${endpoint}`, {
         'method':'POST', 
         'headers': {
@@ -25,7 +25,7 @@ export const fetchDefault = (endpoint: string , init:{[key: string]: unknown} , 
     .then(data=>{
         resolve(data)
     })
-    .catch(err=>{
+    .catch(()=>{
         reject({msg: 'No disponible' , status: 500})
     })
 }
@@ -51,7 +51,7 @@ export const fetchForm = (endpoint: string , data: FormData , resolve = (arg: tp
     .then(data=>{
         resolve(data)
     })
-    .catch(err=>{
+    .catch(()=>{
         reject({msg: 'No disponible' , status: 500})
     })
 }

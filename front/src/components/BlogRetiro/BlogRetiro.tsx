@@ -21,6 +21,7 @@ interface Retiro {
   title: string;
   author?: string;
   description?: string;
+  estado: string
 }
 
 
@@ -70,7 +71,7 @@ function BlogRetiro() {
         if(!d.bag) return 
         for (let index = 0; index < d.bag.length; index++) {
           const element: {id: number , indice: string  , day: string, image: string, title_lang: {es: string, en: string , cat: string},
-              description_lang: {es: string, en: string , cat: string}, year: number, month: number, author: string} = d.bag[index];
+              description_lang: {es: string, en: string , cat: string}, year: number, month: number, author: string, estado: string} = d.bag[index];
           // const r = "src/blog_retiro/";
           const day = JSON.parse(JSON.parse(element.day))
           const image = JSON.parse(element.image)
@@ -82,7 +83,8 @@ function BlogRetiro() {
             image: image,
             author: element.author,
             title: element.title_lang.es || element.title_lang.en || element.title_lang.cat,
-            description: element.description_lang.es || element.description_lang.en || element.description_lang.cat
+            description: element.description_lang.es || element.description_lang.en || element.description_lang.cat,
+            estado: element.estado
           });
         }
         setRetiros(retiro);

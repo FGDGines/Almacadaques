@@ -1,10 +1,10 @@
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import '../FormularioRedes/FormularioRedes.css';
 import { BarSession } from '../../barSession/barSession';
-import { useState, ChangeEvent, FormEvent, useContext } from 'react';
+import { useState, ChangeEvent, useContext } from 'react';
 import { getToken } from '../../../../helpers/JWT';
 import { fetchForm } from '../../../../helpers/Server';
-import { tpDtmResponse } from '../../../../types/typesComponents';
+// import { tpDtmResponse } from '../../../../types/typesComponents';
 import { GlobalContext } from '../../../../contexts/GlobalContext';
 
 

@@ -1,11 +1,11 @@
 import "./FormularioPospcast.css"
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import { BarSession } from '../../barSession/barSession';
-import { useState, ChangeEvent, FormEvent, useContext } from 'react';
+import { useState, ChangeEvent, useContext } from 'react';
 import { getToken } from "../../../../helpers/JWT";
 import { GlobalContext } from "../../../../contexts/GlobalContext";
 import { fetchForm } from "../../../../helpers/Server";
-import { tpDtmResponse } from "../../../../types/typesComponents";
+// import { tpDtmResponse } from "../../../../types/typesComponents";
 
 interface FormData {
   Titulo: string;

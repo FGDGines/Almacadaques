@@ -1,5 +1,5 @@
 import './NarbarAdmin.css'
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useState } from 'react';
 import { GlobalContext } from '../../../contexts/GlobalContext';
 
 function NarbarAdmin() {
@@ -27,7 +27,7 @@ function NarbarAdmin() {
         setShowSubMenu(false);
     };
 
-    const handleIconClick = (index) => {
+    const handleIconClick = (index: number) => {
         const newSelectedIcons = [...selectedIcons];
         newSelectedIcons[index] = !newSelectedIcons[index];
         setSelectedIcons(newSelectedIcons);

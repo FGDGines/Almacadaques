@@ -11,7 +11,7 @@ const Blog = () => {
     day: 15,
     month: 8,
     year: 2021,
-    image: "./src/assets/images/blog-line-1-620x464.jpg",
+    image: ["./src/assets/images/blog-line-1-620x464.jpg"],
     title: "Mejorando tu calidad de vida",
     tags: ["CalidadDeVida", "Bienestar", "Salud"],
     abstract:
@@ -61,7 +61,7 @@ const Blog = () => {
       <Franja text="Tips de Bienestar" />
       <div className="blog">
         <div className="blog-content">
-          <img src={blog.image} alt={blog.title} />
+          <img src={blog.image[0]} alt={blog.title} />
           <h2>{blog.title}</h2>
           <p className="date">
             {blog.day}/{blog.month}/{blog.year}
@@ -83,7 +83,7 @@ const Blog = () => {
               month={5}
               year={2023}
               tags={["Salud", "Fitness", "Nutrición", "Mente"]}
-              image="./src/assets/images/blog-line-1-620x464.jpg"
+              image={["./src/assets/images/blog-line-1-620x464.jpg"]}
               title="The ultimate guide to time management"
             />
             <BlogPreview
@@ -92,7 +92,7 @@ const Blog = () => {
               month={5}
               year={2023}
               tags={["Salud", "Fitness", "Nutrición", "Mente"]}
-              image="./src/assets/images/blog-line-1-771x515.jpg"
+              image={["./src/assets/images/blog-line-1-771x515.jpg"]}
               title="The ultimate guide to time management"
             />
             <BlogPreview
@@ -101,7 +101,7 @@ const Blog = () => {
               month={5}
               year={2023}
               tags={["Salud", "Fitness", "Nutrición", "Mente"]}
-              image="./src/assets/images/blog-line-2-770x433.jpg"
+              image={["./src/assets/images/blog-line-2-770x433.jpg"]}
               title="The ultimate guide to time management"
             />
           </div>

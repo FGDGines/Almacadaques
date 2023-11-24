@@ -1,7 +1,7 @@
 import "./FormularioRetiros.css"
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import { BarSession } from '../../barSession/barSession';
-import { useState, ChangeEvent, FormEvent, useContext } from 'react';
+import { useState, ChangeEvent, useContext } from 'react';
 import { getToken } from "../../../../helpers/JWT";
 import { GlobalContext } from "../../../../contexts/GlobalContext";
 import { fetchForm } from "../../../../helpers/Server";
@@ -94,7 +94,7 @@ function FormularioRetiros() {
     
     if (formData.archivo) {
         da.append("src", formData.archivo);
-        da.append("image_number", 0)
+        da.append("image_number", "0")
         da.append("fileExtension", "jpg");
     }
     console.log(indexBlogRetiro)

@@ -1,7 +1,7 @@
 import './FormularioBlogBienestar.css'
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import { BarSession } from '../../barSession/barSession';
-import { useState, ChangeEvent, FormEvent, useContext } from 'react';
+import { useState, ChangeEvent, useContext } from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { fetchForm } from '../../../../helpers/Server';
@@ -28,6 +28,7 @@ function FormularioBlogBienestar() {
 
         Titulo: '',
         Contenido: '',
+        Subtitulo: '',
         archivo: null,
     });
 
