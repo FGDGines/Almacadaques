@@ -20,12 +20,12 @@ app.post('/create', [security_post,
 app.post('/read', [
     ], Read)
 
-app.post('/delete' , [
+app.post('/delete' , [security_post,
     check('id', 'El id a eliminar es obligatorio').isNumeric()
      , validarCampos], Delete)
 
 
-app.post('/update' , [
+app.post('/update' , [security_post,
     check('id', 'El id del calendar event a actualizar es obligatorio').isNumeric()
      , validarCampos] , Update)
 
