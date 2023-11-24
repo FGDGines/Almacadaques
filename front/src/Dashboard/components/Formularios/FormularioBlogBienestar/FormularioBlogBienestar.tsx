@@ -12,6 +12,7 @@ import { getToken } from '../../../../helpers/JWT';
 interface FormData {
     Titulo: string;
     Contenido: string;
+    Subtitulo: string;
     archivo: File | null;
 }
 
@@ -64,8 +65,11 @@ function FormularioBlogBienestar() {
         if (formData.Titulo) {
             da.append("title", formData.Titulo)
         }
-        if (formData.Contenido) {
-            da.append("content", formData.Contenido)
+        if (editorData) {
+            da.append("content", editorData)
+        }
+        if (formData.Subtitulo) {
+            da.append("subtitle", formData.Subtitulo)
         }
         da.append("token", getToken()) 
         
@@ -80,6 +84,7 @@ function FormularioBlogBienestar() {
             })
     
         } else {
+            console.log(editorData)
             fetchForm("/text_libro/register", da, (d: tpDtmResponse) => {
               console.log(d)
             })
@@ -114,6 +119,14 @@ function FormularioBlogBienestar() {
                                 type="text"
                                 name="Titulo"
                                 value={formData.Titulo}
+                                onChange={handleInputChange}
+                            />
+
+                            <label className='labelsCarrousel' form='Titulo'>Subtitulo</label>
+                            <input className='inputsFormCarrousel'
+                                type="text"
+                                name="Subtitulo"
+                                value={formData.Subtitulo}
                                 onChange={handleInputChange}
                             />
 

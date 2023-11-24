@@ -1,5 +1,5 @@
 import "./BienestarAdmin.css"
-import { textLibro } from "../../../../src/data/TextLibro"
+// import { textLibro } from "../../../../src/data/TextLibro"
 import { useContext, useEffect, useState } from "react";
 import { fetchDefault } from "../../../helpers/Server";
 import { tpDtmResponse, tpTextLibro } from "../../../types/typesComponents";
@@ -58,7 +58,7 @@ function BienestarAdmin() {
 
     return (
         <div className="OrdenarItem">
-        {textLibro.map((item, index) => (
+        {data.map((item, index) => (
             <div key={index} className='BienestarAdmin'>
                 <div className="editarContBienestar">
                     <div className="accionEditar" onClick={() => edit(item.id)}>
