@@ -46,6 +46,11 @@ export const FormularioEspaciosBienestar = () => {
         } else {
             fetchForm("/espacio/create", da)
         }
+        setFormData({
+            Frase_es: '',
+            Frase_en: '',
+            Frase_cat: '',
+        })
     };
 
     return (

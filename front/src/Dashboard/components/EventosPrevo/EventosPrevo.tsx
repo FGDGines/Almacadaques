@@ -1,6 +1,6 @@
 
 import "./EventosPrevo.css";
-import { pastEvent } from "../../../data/calendar";
+// import { pastEvent } from "../../../data/calendar";
 import { useContext, useEffect, useState } from "react";
 import { GlobalContext } from "../../../contexts/GlobalContext";
 import { tpCalendarEvent, tpDtmResponse } from "../../../types/typesComponents";

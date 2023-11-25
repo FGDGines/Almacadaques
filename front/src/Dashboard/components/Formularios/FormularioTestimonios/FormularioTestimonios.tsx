@@ -65,6 +65,13 @@ export const FormularioTestimonios = () => {
                 console.log(d)
             })
         }
+        setFormData({
+            Frase_es: '',
+            Frase_en: '',
+            Frase_cat: '',
+            Witness: '',
+            archivo: null,
+        })
     };
 
     return (

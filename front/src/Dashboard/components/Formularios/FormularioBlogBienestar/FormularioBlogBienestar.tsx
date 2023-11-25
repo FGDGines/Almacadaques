@@ -19,7 +19,7 @@ interface FormData {
 
 function FormularioBlogBienestar() {
     const [editorData, setEditorData] = useState('');
-    const { indexTextLibro} = useContext(GlobalContext)
+    const { indexTextLibro, setLayoutID} = useContext(GlobalContext)
 
 
 
@@ -90,7 +90,14 @@ function FormularioBlogBienestar() {
               console.log(d)
             })
         }
-      };
+        setFormData({
+            Titulo: '',
+            Contenido: '',
+            Subtitulo: '',
+            archivo: null,
+        })
+        setEditorData('')
+    };
 
 
     return (
@@ -147,7 +154,7 @@ function FormularioBlogBienestar() {
 
 
                     <div className="botonesFormCarrousel">
-                        <a href="#" className='CancelarCarousel'>Cancelar</a>
+                        <a href="#" className='CancelarCarousel' onClick={() => setLayoutID(25)}>Cancelar</a>
                         <a href="#" className='AgregarCarousel' onClick={handleSubmit}>Agregar</a>
                     </div>
                 </div>

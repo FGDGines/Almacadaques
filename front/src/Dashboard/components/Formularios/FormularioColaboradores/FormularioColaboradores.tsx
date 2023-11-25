@@ -27,7 +27,7 @@ function FormularioColaboradores() {
         archivo: null,
     });
 
-    const { indexCollaborator } = useContext(GlobalContext)
+    const { indexCollaborator, setLayoutID } = useContext(GlobalContext)
 
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
@@ -75,6 +75,13 @@ function FormularioColaboradores() {
         } else {
             fetchForm("/collaborator/register", da)
         }
+        setFormData({
+            Nombre: '',
+            Cargo: '',
+            Descripcion: '',
+            Contacto: '',
+            archivo: null,
+        })
     };
 
 
@@ -136,7 +143,7 @@ function FormularioColaboradores() {
 
 
                 <div className="botonesFormCarrousel">
-                    <a href="#" className='CancelarCarousel'>Cancelar</a>
+                    <a href="#" className='CancelarCarousel' onClick={() => setLayoutID(20)}>Cancelar</a>
                     <a href="#" className='AgregarCarousel'  onClick={handleSubmit}>Agregar</a>
                 </div>
             </div>

@@ -61,6 +61,11 @@ export const FormularioRedes = () => {
         } else {
             fetchForm("/red/create", da)
         }
+        setFormData({
+            url: '',
+            archivo: null,
+            cuenta: ''
+        })
     };
 
     return (
