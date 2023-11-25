@@ -45,7 +45,6 @@ function PreviwTestimonios() {
       const test: tpTestimony[] = []
       fetchDefault("/testimony/read", dat, (d: tpDtmResponse) => {
           if(!d.bag) return 
-      console.log(d)
           for (let index = 0; index < d.bag.length; index++) {
               const element: {id: number, witness: string, data_testimony: {es: string, en: string , cat: string} } = d.bag[index];
               const value = { 
@@ -53,7 +52,6 @@ function PreviwTestimonios() {
                   witness: element.witness,
                   testimony: element.data_testimony.es || element.data_testimony.en || element.data_testimony.cat
               }
-              console.log(value)
               test.push(value)
           }
           setData(test);

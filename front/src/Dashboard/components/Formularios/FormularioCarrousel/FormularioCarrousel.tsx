@@ -5,7 +5,7 @@ import { useState, ChangeEvent, useContext } from 'react';
 import { fetchForm } from '../../../../helpers/Server';
 import { GlobalContext } from '../../../../contexts/GlobalContext';
 import { getToken } from '../../../../helpers/JWT';
-import { tpDtmResponse } from '../../../../types/typesComponents';
+// import { tpDtmResponse } from '../../../../types/typesComponents';
 
 
 interface FormData {
@@ -73,11 +73,8 @@ export const FormularioCarrousel = () => {
             da.append("fileExtension", "jpg");
         }
         if (indexCarrousel != -1) {
-            console.log(indexCarrousel)
             da.append("id", `${indexCarrousel}`)
-            fetchForm("/carousel/update", da, (d: tpDtmResponse) => {
-                console.log(d)
-            })
+            fetchForm("/carousel/update", da)
     
         } else {
             fetchForm("/carousel/create", da)

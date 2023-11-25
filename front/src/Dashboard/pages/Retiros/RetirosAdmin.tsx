@@ -10,7 +10,6 @@ function RetirosAdmin() {
   const { setLayoutID, setIndexBlogRetiro } = useContext(GlobalContext);
 
   const add = () => {
-    console.log(1)
     setIndexBlogRetiro(-1)
     setLayoutID(38)
   }

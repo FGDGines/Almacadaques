@@ -63,7 +63,6 @@ function EventosPrevo() {
     }, []);
 
 
-            console.log(data)
     return (
         <div className="OrdenarItem">
             {data.map((event) => (

@@ -17,14 +17,13 @@ export const mostrarAlerta = (arg: tpDtmResponse , toast = true) => {
         window.localStorage.setItem('alertQueue' , String(Number(window.localStorage.getItem('alertQueue'))-1))
       }, 2010 *  Number(window.localStorage.getItem('alertQueue')))
       window.localStorage.setItem('alertQueue' , String(Number(window.localStorage.getItem('alertQueue'))+1))
-  }
+      lanzarAlerta(arg, toast)}
 }
 
 
 const lanzarAlerta = (arg: tpDtmResponse , toast = true) => {
   const {msg , status} = arg
   let tipo: SweetAlertIcon = 'info'
-
   switch(status){
     case 200:
       tipo='success' 

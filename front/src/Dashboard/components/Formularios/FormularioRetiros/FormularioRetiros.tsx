@@ -5,7 +5,7 @@ import { useState, ChangeEvent, useContext } from 'react';
 import { getToken } from "../../../../helpers/JWT";
 import { GlobalContext } from "../../../../contexts/GlobalContext";
 import { fetchForm } from "../../../../helpers/Server";
-import { tpDtmResponse } from "../../../../types/typesComponents";
+// import { tpDtmResponse } from "../../../../types/typesComponents";
 
 interface FormData {
     Titulo: string;
@@ -79,7 +79,7 @@ function FormularioRetiros() {
       if (formData.day) {
         day = formData.day
       }
-      console.log(sd[0], sd[1], sd[2])
+      
       da.append("day", `[${sd[0]}, ${day}]`)
       da.append("month", `${sd[1]}`)
       da.append("year", `${sd[2]}`)
@@ -99,9 +99,7 @@ function FormularioRetiros() {
     }
     if (indexBlogRetiro != -1) {
         da.append("id", `${indexBlogRetiro}`)
-        fetchForm("/blog_retiro/update", da, (d: tpDtmResponse) => {
-          console.log(d)
-        })
+        fetchForm("/blog_retiro/update", da)
 
     } else {
         da.set("title_es", formData.Titulo)
@@ -111,9 +109,7 @@ function FormularioRetiros() {
         da.set("description_en", formData.Titulo)
         da.set("description_cat", formData.Titulo)
         da.set("index", "1")
-        fetchForm("/blog_retiro/create", da, (d: tpDtmResponse) => {
-          console.log(d)
-        })
+        fetchForm("/blog_retiro/create", da)
     }
     setFormData({
       Titulo: '',

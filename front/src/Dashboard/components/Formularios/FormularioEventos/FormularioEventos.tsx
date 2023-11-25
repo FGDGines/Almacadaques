@@ -5,7 +5,7 @@ import { useState, ChangeEvent, useContext } from 'react';
 import { getToken } from '../../../../helpers/JWT';
 import { GlobalContext } from '../../../../contexts/GlobalContext';
 import { fetchForm } from '../../../../helpers/Server';
-import { tpDtmResponse } from '../../../../types/typesComponents';
+// import { tpDtmResponse } from '../../../../types/typesComponents';
 
 
 interface FormData {
@@ -49,7 +49,6 @@ function FormularioEventos() {
 
     const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
         const selectedFile = event.target.files?.[0] as File;
-        console.log(selectedFile)
         if (selectedFile) {
             setFormData({
                 ...formData,
@@ -76,9 +75,7 @@ function FormularioEventos() {
             fetchForm("/calendar_event/update", da)
     
         } else {
-            fetchForm("/calendar_event/create", da, (d: tpDtmResponse) => {
-                console.log(d)
-            })
+            fetchForm("/calendar_event/create", da)
         }
 
         setFormData({

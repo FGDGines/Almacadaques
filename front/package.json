@@ -22,7 +22,7 @@
     "react-pageflip": "^2.0.3",
     "react-player": "^2.13.0",
     "react-tilt": "^1.0.2",
-    "sweetalert2": "^11.7.12"
+    "sweetalert2": "^11.7.32"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

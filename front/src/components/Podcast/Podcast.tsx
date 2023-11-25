@@ -103,7 +103,6 @@ const Podcast = () => {
                     podcast.push({ id: element.id, url: element.url, titulo: element.titulo, autor: element.autor, fecha: element.fecha, categoria: element.categoria });
                 }
                 setPodcastData(podcast);
-                console.log(podcast)
                 setSelectedPodcast(podcast[0])
             }) 
         };

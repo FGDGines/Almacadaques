@@ -5,7 +5,7 @@ import { useState, ChangeEvent, useContext } from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { fetchForm } from '../../../../helpers/Server';
-import { tpDtmResponse } from '../../../../types/typesComponents';
+// import { tpDtmResponse } from '../../../../types/typesComponents';
 import { GlobalContext } from '../../../../contexts/GlobalContext';
 import { getToken } from '../../../../helpers/JWT';
 
@@ -80,15 +80,10 @@ function FormularioBlogBienestar() {
         }
         if (indexTextLibro != -1) {
             da.append("id", `${indexTextLibro}`)
-            fetchForm("/text_libro/update", da, (d: tpDtmResponse) => {
-              console.log(d)
-            })
+            fetchForm("/text_libro/update", da)
     
         } else {
-            console.log(editorData)
-            fetchForm("/text_libro/register", da, (d: tpDtmResponse) => {
-              console.log(d)
-            })
+            fetchForm("/text_libro/register", da)
         }
         setFormData({
             Titulo: '',

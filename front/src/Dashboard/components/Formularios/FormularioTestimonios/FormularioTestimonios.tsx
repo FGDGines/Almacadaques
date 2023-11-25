@@ -45,21 +45,16 @@ export const FormularioTestimonios = () => {
         
         if (indexTestimony != -1) {
             da.append("id", `${indexTestimony}`)
-            fetchForm("/testimony/update", da, (d: tpDtmResponse) => {
-                mostrarAlerta(d)
-            })
+            fetchForm("/testimony/update", da)
         } else {
-            fetchForm("/testimony/create", da, (d: tpDtmResponse) => {
-                console.log(d)
-                mostrarAlerta(d)
-            })
+            fetchForm("/testimony/create", da)
         }
-        setFormData({
-            Frase_es: '',
-            Frase_en: '',
-            Frase_cat: '',
-            Witness: '',
-        })
+        // setFormData({
+        //     Frase_es: '',
+        //     Frase_en: '',
+        //     Frase_cat: '',
+        //     Witness: '',
+        // })
     };
 
     return (
