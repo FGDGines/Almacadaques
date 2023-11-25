@@ -7,7 +7,12 @@ import { useContext } from 'react';
 
 
 function ColaboradoresAdmin() {
-  const { setLayoutID } = useContext(GlobalContext);
+  const { setLayoutID, setIndexCollaborator } = useContext(GlobalContext);
+  
+  const add = () => {
+    setIndexCollaborator(-1)
+    setLayoutID(31)
+  }
   return (
     <div className="colaboradoresAdmin">
       <NarbarAdmin />
@@ -18,7 +23,7 @@ function ColaboradoresAdmin() {
           <ContainerColaboradores />
         </div>
         <div className="BtnAgregarMasColaborador">
-          <div className="BtnMas" onClick={() => setLayoutID(31)} >
+          <div className="BtnMas" onClick={add} >
             <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/mingcute_add-line.svg" alt="" className="ImgColaboradoresAdmin" />
           </div>
         </div>

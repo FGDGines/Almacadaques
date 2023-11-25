@@ -63,7 +63,7 @@ function FormularioColaboradores() {
             da.append("descripcion", formData.Descripcion)
         }
         da.append("token", getToken()) 
-        
+        console.log(indexCollaborator)
         if (formData.archivo) {
             da.append("src", formData.archivo);
             da.append("fileExtension", "jpg");

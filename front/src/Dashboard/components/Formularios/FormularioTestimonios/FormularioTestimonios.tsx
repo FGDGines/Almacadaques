@@ -49,12 +49,12 @@ export const FormularioTestimonios = () => {
         } else {
             fetchForm("/testimony/create", da)
         }
-        // setFormData({
-        //     Frase_es: '',
-        //     Frase_en: '',
-        //     Frase_cat: '',
-        //     Witness: '',
-        // })
+        setFormData({
+            Frase_es: '',
+            Frase_en: '',
+            Frase_cat: '',
+            Witness: '',
+        })
     };
 
     return (
