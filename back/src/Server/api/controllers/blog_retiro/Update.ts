@@ -84,7 +84,6 @@ export const Update = async (req: Request, res: Response) => {
         }
         if(estado){
             const past = tBlogRetiro.estado
-            console.log(past)
             await tBlogRetiro.update({estado: estado})
             updates.push({path: 'estado', past , now: estado})
         }
@@ -107,7 +106,6 @@ export const Update = async (req: Request, res: Response) => {
                         
                 const url = await UploadFile( image, path.join(__dirname,  RelativePath.blog_retiro), "jpg", Formatos.image)
                 json[image_number] = url
-                console.log(json[image_number])
                 await tBlogRetiro.update({image: json})
                 updates.push({path: 'image', past , now: json})
             }
