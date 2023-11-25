@@ -8,6 +8,7 @@ import { formDataToObject } from '../../../helpers/Forms';
 import { tpDtmResponse } from '../../../types/typesComponents';
 import { fetchDefault } from '../../../helpers/Server';
 import { getToken } from '../../../helpers/JWT';
+import { BtnMasAgregar } from '../BtnMasAgregar/BtnMasAgregar';
 
 
 interface ContentItem {
@@ -132,6 +133,9 @@ export const ItemCarrusel: React.FC<BtnMasAgregarProps> = () => {
       )}
       <div className="barraCarrusel">
         <div className="tituloCarrusel"><p>Item de Carrousel</p></div>
+        <div onClick={() => setIndexCarrousel(-1)} className="m2">
+          <BtnMasAgregar direccion={29}></BtnMasAgregar>
+        </div>
         <div className="botonesCarrusel">
           <i className='left'><img src="../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/left.svg" alt="Left" /></i>
           <i className='right'><img src="../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/right.svg" alt="Right" /></i>
