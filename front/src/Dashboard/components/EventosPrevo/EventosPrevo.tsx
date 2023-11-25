@@ -1,8 +1,68 @@
 
 import "./EventosPrevo.css";
 import { pastEvent } from "../../../data/calendar";
+import { useContext, useEffect, useState } from "react";
+import { GlobalContext } from "../../../contexts/GlobalContext";
+import { tpCalendarEvent, tpDtmResponse } from "../../../types/typesComponents";
+import { fetchDefault } from "../../../helpers/Server";
+import { formDataToObject } from "../../../helpers/Forms";
+import { getToken } from "../../../helpers/JWT";
 
 function EventosPrevo() {
+    const [data, setData] = useState<tpCalendarEvent[]>([]);
+    const { setIndexCalendarEvent, setLayoutID } = useContext(GlobalContext)
+
+    const handleDeleteItemCarrusel = (index: number) => {
+        // elimina de la base de datos
+        const da = new FormData()
+        da.set("id", `${index}`)
+        da.set("token", getToken())
+        const dat = {body: JSON.stringify(formDataToObject(da))}
+    
+        fetchDefault("/collaborator/delete", dat, (d: tpDtmResponse) => {
+          if (d.status != 200) return
+          const updatedData = data.filter((item) => item.id !== index);
+          setData(updatedData);
+        })
+      };
+    
+     
+     
+      
+    const edit = (index: number) => {
+        setIndexCalendarEvent(index)
+        setLayoutID(31)
+    }
+
+    
+    // carga los carrousel
+    useEffect(() => {
+        const api = async () => {
+        const event: tpCalendarEvent[] = []
+        fetchDefault("/collaborator/read", {}, (d: tpDtmResponse) => {
+            if(!d.bag) return 
+            for (let index = 0; index < d.bag.length; index++) {
+                const element: {id: number , title: string, inicio: string, final:string, descripcion: string, nombre: string, enlace: string, src: string } = d.bag[index];
+                const value = { 
+                    id: element.id,
+                    title: element.title,
+                    colaborador_name: element.nombre,
+                    colaborador_link: element.enlace,
+                    description: element.descripcion,
+                    start: element.inicio,
+                    end: element.final,
+                    src: element.src
+                }
+                event.push(value)
+            }
+            setData(event);
+        }) 
+        };
+        api();
+        // eslint-disable-next-line
+    }, []);
+
+
     return (
         <div className="OrdenarItem">
             {pastEvent.map((event) => (
@@ -10,7 +70,7 @@ function EventosPrevo() {
                     <div className="imgEventos">
                         <div className="titleEventos">
                             <p className="titleDejarSoltar" >{event.title}</p>
-                            <div className="paddinIcono">
+                            <div className="paddinIcono" onClick={() => edit(event.id)}>
                                 <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" className="BtnEditarEvento" />
                             </div>
                         </div>

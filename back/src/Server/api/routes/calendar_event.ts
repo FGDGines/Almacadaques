@@ -25,7 +25,7 @@ app.post('/delete' , [security_post,
      , validarCampos], Delete)
 
 
-app.post('/update' , [security_post,
+app.post('/update' , [
     check('id', 'El id del calendar event a actualizar es obligatorio').isNumeric()
      , validarCampos] , Update)
 

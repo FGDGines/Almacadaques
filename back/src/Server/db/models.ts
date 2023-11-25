@@ -163,6 +163,9 @@ const CalendarEvent = DB.define("calendar_event", {
     },
     enlace: {
         type: DataTypes.STRING
+    },
+    src: {
+        type: DataTypes.STRING
     }
 }) 
 

@@ -1,9 +1,12 @@
 import { Request, Response } from "express";
 import { CalendarEvent } from "../../../db/models";
+import { DeleteFile, UploadFile } from "../../../helpers/FileHandler";
+import path from 'path';
+import { Formatos, RelativePath } from "../../../config/config";
 
 export const Update = async (req: Request, res: Response) => {
     const { body } = req
-    const { id, titulo, inicio, final, descripcion, nombre, enlace } = body
+    const { id, titulo, inicio, final, descripcion, nombre, enlace, fileExtension } = body
     const updates = []
     try {
         const tCalendarEvent = await CalendarEvent.findOne({
@@ -45,6 +48,26 @@ export const Update = async (req: Request, res: Response) => {
             await tCalendarEvent.update({enlace:enlace})
             updates.push({path: 'enlace', past , now:enlace})
         }
+
+        try {
+            // @ts-ignore
+            const src = req.files.src.data
+            if (src != undefined) {
+                const past = tCalendarEvent.src
+                if (past) {
+                    const uploadDir = path.join(__dirname,  RelativePath.carousel)
+                    try {
+                         await DeleteFile(path.join(uploadDir, past))     
+                    } catch (error) {
+                        
+                    }
+                      
+                }
+                const url = await UploadFile( src, path.join(__dirname,  RelativePath.carousel), fileExtension, Formatos.image)
+                await tCalendarEvent.update({src: url})
+                updates.push({path: 'src', past , now: url})
+            }
+        } catch (error) {}
 
         return res.status(200).json({status: 200, msg: "Updated" , bag:{updates}})
 
