@@ -16,7 +16,6 @@ export const Create = async (req: Request, res: Response) => {
             // @ts-ignore
             const url = await UploadFile( req.files.src.data, path.join(__dirname,  RelativePath.calendar_event), fileExtension, Formatos.image)
 
-
             const tCarousel = new CalendarEvent({ 
                 titulo: titulo, nombre: nombre, descripcion: descripcion, enlace: enlace,
                 inicio: inicio, final: final, src: "ds "

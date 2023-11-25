@@ -12,14 +12,14 @@ function EventosPrevo() {
     const [data, setData] = useState<tpCalendarEvent[]>([]);
     const { setIndexCalendarEvent, setLayoutID } = useContext(GlobalContext)
 
-    const handleDeleteItemCarrusel = (index: number) => {
+    const handleDelete = (index: number) => {
         // elimina de la base de datos
         const da = new FormData()
         da.set("id", `${index}`)
         da.set("token", getToken())
         const dat = {body: JSON.stringify(formDataToObject(da))}
     
-        fetchDefault("/collaborator/delete", dat, (d: tpDtmResponse) => {
+        fetchDefault("/calendar_event/delete", dat, (d: tpDtmResponse) => {
           if (d.status != 200) return
           const updatedData = data.filter((item) => item.id !== index);
           setData(updatedData);
@@ -31,7 +31,7 @@ function EventosPrevo() {
       
     const edit = (index: number) => {
         setIndexCalendarEvent(index)
-        setLayoutID(31)
+        setLayoutID(30)
     }
 
     
@@ -39,15 +39,15 @@ function EventosPrevo() {
     useEffect(() => {
         const api = async () => {
         const event: tpCalendarEvent[] = []
-        fetchDefault("/collaborator/read", {}, (d: tpDtmResponse) => {
+        fetchDefault("/calendar_event/read", {}, (d: tpDtmResponse) => {
             if(!d.bag) return 
             for (let index = 0; index < d.bag.length; index++) {
                 const element: {id: number , title: string, inicio: string, final:string, descripcion: string, nombre: string, enlace: string, src: string } = d.bag[index];
                 const value = { 
                     id: element.id,
                     title: element.title,
-                    colaborador_name: element.nombre,
-                    colaborador_link: element.enlace,
+                    colaborator_name: element.nombre,
+                    colaborator_link: element.enlace,
                     description: element.descripcion,
                     start: element.inicio,
                     end: element.final,
@@ -63,15 +63,21 @@ function EventosPrevo() {
     }, []);
 
 
+            console.log(data)
     return (
         <div className="OrdenarItem">
-            {pastEvent.map((event) => (
+            {data.map((event) => (
                 <div className="eventosPrevios" key={event.id}>
                     <div className="imgEventos">
                         <div className="titleEventos">
                             <p className="titleDejarSoltar" >{event.title}</p>
-                            <div className="paddinIcono" onClick={() => edit(event.id)}>
-                                <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" className="BtnEditarEvento" />
+                            <div className="editarContBienestar">
+                                <div className="paddinIcono" onClick={() => edit(event.id)}>
+                                    <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" className="BtnEditarEvento" />
+                                </div>
+                                <div className="paddinIcono" onClick={() => handleDelete(event.id)}>
+                                    <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg" alt="" className="BtnEditarEvento" />
+                                </div>
                             </div>
                         </div>
                         <img src={event.src} alt="" className="ImgFondoEventos" />

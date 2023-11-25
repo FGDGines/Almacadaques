@@ -46,7 +46,12 @@ export const Update = async ( req: Request ,res: Response)=>{
                 const past = tTextLibro.imagen_src
                 if (past) {
                     const uploadDir = path.join(__dirname,  RelativePath.text_libro)
-                    await DeleteFile(path.join(uploadDir, past))        
+                    try {
+                        
+                    await DeleteFile(path.join(uploadDir, past))  
+                    } catch (error) {
+                        
+                    }      
                 }
                 const url = await UploadFile( imagen, path.join(__dirname,  RelativePath.text_libro), "jpg", Formatos.image)
                 await tTextLibro.update({imagen_src: url})

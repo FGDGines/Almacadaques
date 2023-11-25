@@ -29,7 +29,12 @@ export const Update = async (req: Request, res: Response) => {
                 const past = tCarousels.src
                 if (past) {
                     const uploadDir = path.join(__dirname,  RelativePath.carousel)
-                    await DeleteFile(path.join(uploadDir, past))        
+                    try {
+                        
+                        await DeleteFile(path.join(uploadDir, past))    
+                    } catch (error) {
+                        
+                    }    
                 }
                 const url = await UploadFile( src, path.join(__dirname,  RelativePath.carousel), fileExtension, Formatos.image)
                 await tCarousels.update({src: url})

@@ -7,7 +7,13 @@ import { GlobalContext } from '../../../contexts/GlobalContext';
 import { useContext } from 'react';
 
 function AgendaAdmin() {
-  const { setLayoutID } = useContext(GlobalContext);
+  const { setLayoutID, setIndexCalendarEvent } = useContext(GlobalContext);
+
+  const add = () => {
+    setIndexCalendarEvent(-1)
+    setLayoutID(30)
+  }
+
   return (
     <div className="agendaAdmin">
 
@@ -18,7 +24,7 @@ function AgendaAdmin() {
           <EventosPrevo />
         </div>
 
-          <div className="BtonAgregarEventosmain" onClick={() => setLayoutID(30)}>
+          <div className="BtonAgregarEventosmain" onClick={add}>
             <BtnMas/>
           </div>
           
