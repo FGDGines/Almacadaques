@@ -6,6 +6,7 @@ import { getToken } from '../../../../helpers/JWT';
 import { GlobalContext } from '../../../../contexts/GlobalContext';
 import { fetchForm } from '../../../../helpers/Server';
 import { tpDtmResponse } from '../../../../types/typesComponents';
+import { mostrarAlerta } from '../../../../helpers/MostrarAlerta';
 
 
 interface FormData {
@@ -13,7 +14,6 @@ interface FormData {
     Frase_en: string;
     Witness: string;
     Frase_cat: string;
-    archivo: File | null;
 }
 
 export const FormularioTestimonios = () => {
@@ -22,7 +22,6 @@ export const FormularioTestimonios = () => {
         Frase_en: '',
         Frase_cat: '',
         Witness: '',
-        archivo: null,
     });
     const { indexTestimony } = useContext(GlobalContext) 
 
@@ -34,16 +33,7 @@ export const FormularioTestimonios = () => {
         });
     };
 
-    const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
-        const selectedFile = event.target.files?.[0] as File;
-
-        if (selectedFile) {
-            setFormData({
-                ...formData,
-                archivo: selectedFile,
-            });
-        }
-    };
+    
 
     const handleSubmit = () => {
         const da = new FormData()
@@ -53,16 +43,15 @@ export const FormularioTestimonios = () => {
         if (formData.Witness) da.append("witness", formData.Witness)
         da.append("token", getToken()) 
         
-        if (formData.archivo) {
-            da.append("src", formData.archivo);
-            da.append("fileExtension", "jpg");
-        }
         if (indexTestimony != -1) {
             da.append("id", `${indexTestimony}`)
-            fetchForm("/testimony/update", da)
+            fetchForm("/testimony/update", da, (d: tpDtmResponse) => {
+                mostrarAlerta(d)
+            })
         } else {
             fetchForm("/testimony/create", da, (d: tpDtmResponse) => {
                 console.log(d)
+                mostrarAlerta(d)
             })
         }
         setFormData({
@@ -70,7 +59,6 @@ export const FormularioTestimonios = () => {
             Frase_en: '',
             Frase_cat: '',
             Witness: '',
-            archivo: null,
         })
     };
 
@@ -83,17 +71,7 @@ export const FormularioTestimonios = () => {
 
 
                 <form className='formTestimonios'>
-                    <div className="subirArchivos">
-                    <label htmlFor="File" className='labelArchivo'>
-                            <img src="../../../../src/assets/Dashboard-almacadaques/inicio/nube.svg" alt="" />
-                            <span className='arrastra'>Arrastra y suelta o <span>sube</span> </span>
-                            <span className='formatos'>Supported formates: JPEG, PNG, GIF, MP4, PDF, PSD, AI, Word, PPT</span>
-                        </label>
-                        <input id='File' className='cargarArchivo'
-                            type="file"
-                            onChange={handleFileChange}
-                        />
-                    </div>
+                    
                     <div className="restInputs">
                     <label className='labelsTestimonios' form='Witness'>Witness</label>
                         <input className='inputsFormTestimonios'
