@@ -1,7 +1,7 @@
 import "./FormularioRetiros.css"
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import { BarSession } from '../../barSession/barSession';
-import { useState, ChangeEvent, FormEvent, useContext } from 'react';
+import { useState, ChangeEvent, useContext } from 'react';
 import { getToken } from "../../../../helpers/JWT";
 import { GlobalContext } from "../../../../contexts/GlobalContext";
 import { fetchForm } from "../../../../helpers/Server";
@@ -18,7 +18,7 @@ interface FormData {
   }
 
 function FormularioRetiros() {
-  const { languageFlag, indexBlogRetiro } = useContext(GlobalContext)
+  const { languageFlag, indexBlogRetiro, setLayoutID } = useContext(GlobalContext)
   const lf = languageFlag.toLowerCase() 
 
 
@@ -94,10 +94,9 @@ function FormularioRetiros() {
     
     if (formData.archivo) {
         da.append("src", formData.archivo);
-        da.append("image_number", 0)
+        da.append("image_number", "0")
         da.append("fileExtension", "jpg");
     }
-    console.log(indexBlogRetiro)
     if (indexBlogRetiro != -1) {
         da.append("id", `${indexBlogRetiro}`)
         fetchForm("/blog_retiro/update", da, (d: tpDtmResponse) => {
@@ -116,6 +115,15 @@ function FormularioRetiros() {
           console.log(d)
         })
     }
+    setFormData({
+      Titulo: '',
+      Autor: '',
+      Fecha: new Date(),
+      day: 0,
+      Descripcion: '',
+      Estado: '',
+      archivo: null,
+    })
   };
   return (
     <div className="FormularioRetiros">
@@ -198,7 +206,7 @@ function FormularioRetiros() {
 
 
   <div className="botonesFormCarrousel">
-    <a href="#" className='CancelarCarousel'>Cancelar</a>
+    <a href="#" className='CancelarCarousel' onClick={() => setLayoutID(22)}>Cancelar</a>
     <a href="#" className='AgregarCarousel'  onClick={handleSubmit}>Agregar</a>
   </div>
 </div>

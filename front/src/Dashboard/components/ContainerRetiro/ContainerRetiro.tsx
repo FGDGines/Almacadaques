@@ -1,5 +1,5 @@
 import "./ContainerRetiro.css"
-import retiroInfo from "../../../data/blogRetiro"
+// import retiroInfo from "../../../data/blogRetiro"
 import { useContext, useEffect, useState } from "react";
 import { tpBlogInfo, tpDtmResponse } from "../../../types/typesComponents";
 import { formDataToObject } from "../../../helpers/Forms";
@@ -7,12 +7,11 @@ import { fetchDefault } from "../../../helpers/Server";
 import { GlobalContext } from "../../../contexts/GlobalContext";
 import { getToken } from "../../../helpers/JWT";
 
-function formatFecha(day: string, month: number, year: number) {
-    const options = { month: 'short', year: 'numeric' };
-    const d = JSON.parse(day)
-    const startDate = new Date(year, month - 1, d[0]).toLocaleDateString('es-ES', options);
-    const endDate = new Date(year, month - 1, d[1]).toLocaleDateString('es-ES', options);
-    return `Del ${d[0]} al ${d[1]} ${startDate}`;
+function formatFecha(day: number[], month: number, year: number) {
+    const options: Intl.DateTimeFormatOptions = { month: 'short', year: 'numeric' }; 
+    const startDate = new Date(year, month - 1, day[0]).toLocaleDateString('es-ES', options);
+    // const endDate = new Date(year, month - 1, d[1]).toLocaleDateString('es-ES', options);
+    return `Del ${day[0]} al ${day[1]} ${startDate}`;
 }
 function ContainerRetiro() {
     const [ data, setData ] = useState<tpBlogInfo[]>([])
@@ -51,8 +50,8 @@ function ContainerRetiro() {
               for (let index = 0; index < d.bag.length; index++) {
                   const element: {id: number , day: string, month: number, year: number, author: string, image: string[], title_lang: {es: string, en: string , cat: string},  description_lang: {es: string, en: string , cat: string}, estado: string } = d.bag[index];
                 //   const r = "src/blog_retiro/";
-                  const day = JSON.parse(element.day)
-                  console.log(day, element.day, JSON.stringify(element.day))
+                  const day: number[] = JSON.parse(JSON.parse(element.day))
+                //   console.log(day, element.day, JSON.stringify(element.day))
                   const value = { 
                     index: element.id,
                     day: day,
@@ -91,7 +90,9 @@ function ContainerRetiro() {
                 <div className="infoRetiroAdmin">
                     <div className="infoRetiro">
                         <p className="parraforetiroAdmin">{retiro.description}</p>
-                        <p className="fechaRetiroAdmin">{formatFecha(retiro.day, retiro.month, retiro.year)}</p>
+                        <p className="fechaRetiroAdmin">
+                        {Array.isArray(retiro.day) && retiro.month !== undefined && retiro.year !== undefined ? formatFecha(retiro.day, retiro.month, retiro.year) : 'Invalid date'}
+                        </p>
                         <p className="textBienestarAdmin"><span className="TitleBienestarAdmin">Estado: </span>{retiro.estado}</p>
                     </div>
                 </div>

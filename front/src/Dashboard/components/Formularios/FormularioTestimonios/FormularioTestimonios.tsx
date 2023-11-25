@@ -1,7 +1,7 @@
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import '../FormularioTestimonios/FormularioTestimonios.css';
 import { BarSession } from '../../barSession/barSession';
-import  { useState, ChangeEvent, FormEvent, useContext } from 'react';
+import  { useState, ChangeEvent, useContext } from 'react';
 import { getToken } from '../../../../helpers/JWT';
 import { GlobalContext } from '../../../../contexts/GlobalContext';
 import { fetchForm } from '../../../../helpers/Server';
@@ -24,8 +24,7 @@ export const FormularioTestimonios = () => {
         Witness: '',
         archivo: null,
     });
-    const { indexTestimony, languageFlag } = useContext(GlobalContext)
-    const lf = languageFlag.toLowerCase()
+    const { indexTestimony } = useContext(GlobalContext) 
 
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
@@ -66,6 +65,13 @@ export const FormularioTestimonios = () => {
                 console.log(d)
             })
         }
+        setFormData({
+            Frase_es: '',
+            Frase_en: '',
+            Frase_cat: '',
+            Witness: '',
+            archivo: null,
+        })
     };
 
     return (

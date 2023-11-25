@@ -72,7 +72,7 @@ export const RedesBienestar = () => {
       </div>
 
       <div className="containerBiernestarRedes">
-        {redes.map((red, index) => (
+        {redes.map((red) => (
           <div className="itemsRedes" key={red.index}>
             <img src={red.archivo} alt="" className="iconoRedes" />
             <p className="fraseRedes">

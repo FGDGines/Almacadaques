@@ -1,4 +1,4 @@
-import { type } from "os";
+// import { type } from "os";
 import { ReactNode } from "react";
 
 // Definición del tipo de evento
@@ -40,7 +40,9 @@ type tpBlogInfo = {
     title: string;
     author?: string;
     tags?: string[];
+    description?: string;
     abstract?: string;
+    estado?: string;
     btnInfo?: string;
     blogContent?: React.JSX.Element;
     hselect?: () => void

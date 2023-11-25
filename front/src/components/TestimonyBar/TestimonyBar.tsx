@@ -19,10 +19,10 @@ const TestimonyBar: FC<tpTestimonyBar> = ({
         <Testimony
           id={testimonies[i].id}
           witness={testimonies[i].witness}
-          image={testimonies[i].image}
-          day={testimonies[i].day}
-          month={testimonies[i].month}
-          year={testimonies[i].year}
+          // image={testimonies[i].image}
+          // day={testimonies[i].day}
+          // month={testimonies[i].month}
+          // year={testimonies[i].year}
           testimony={testimonies[i].testimony}
         />
       );

@@ -43,9 +43,6 @@ const CoachingInternacional = () => {
                     testimony.push({
                         id: element.id,
                         witness: element.witness,
-                        day: 0,
-                        month: 0,
-                        year: 0,
                         testimony: element.data_testimony.es || element.data_testimony.en || element.data_testimony.cat
                     })
                 }
@@ -91,9 +88,9 @@ const CoachingInternacional = () => {
                                 id={testimony.id}
                                 witness={testimony.witness}
                                 // image={testimony.image}
-                                day={testimony.day}
-                                month={testimony.month}
-                                year={testimony.year}
+                                // day={testimony.day}
+                                // month={testimony.month}
+                                // year={testimony.year}
                                 testimony={testimony.testimony}
                             />
                         ))}

@@ -1,11 +1,11 @@
 import "./FormularioPospcast.css"
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import { BarSession } from '../../barSession/barSession';
-import { useState, ChangeEvent, FormEvent, useContext } from 'react';
+import { useState, ChangeEvent, useContext } from 'react';
 import { getToken } from "../../../../helpers/JWT";
 import { GlobalContext } from "../../../../contexts/GlobalContext";
 import { fetchForm } from "../../../../helpers/Server";
-import { tpDtmResponse } from "../../../../types/typesComponents";
+// import { tpDtmResponse } from "../../../../types/typesComponents";
 
 interface FormData {
   Titulo: string;
@@ -18,7 +18,7 @@ interface FormData {
 
 
 function FormularioPospcast() {
-  const { indexPodcast } = useContext(GlobalContext)
+  const { indexPodcast, setLayoutID } = useContext(GlobalContext)
 
   function formatDate(date: Date): string {
     const year = date.getFullYear();
@@ -85,6 +85,15 @@ function FormularioPospcast() {
     } else {
         fetchForm("/podcast/register", da)
     }
+
+    setFormData({
+      Titulo: '',
+      Autor: '',
+      Fecha: new Date(),
+      Categoria: '',
+      Url: '',
+      archivo: null,
+    })
   };
 
   return (
@@ -161,7 +170,7 @@ function FormularioPospcast() {
 
 
         <div className="botonesFormCarrousel">
-          <a href="#" className='CancelarCarousel'>Cancelar</a>
+          <a href="#" className='CancelarCarousel' onClick={() => setLayoutID(26)}>Cancelar</a>
           <a href="#" className='AgregarCarousel'  onClick={handleSubmit}>Agregar</a>
         </div>
       </div>

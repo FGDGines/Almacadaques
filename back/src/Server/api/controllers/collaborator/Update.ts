@@ -45,7 +45,12 @@ export const Update = async ( req: Request ,res: Response)=>{
                 const past = tColaborador.imagen
                 if (past) {
                     const uploadDir = path.join(__dirname,  RelativePath.collaborator)
-                    await DeleteFile(path.join(uploadDir, past))        
+                    try {
+                        
+                    await DeleteFile(path.join(uploadDir, past))  
+                    } catch (error) {
+                        
+                    }      
                 }
                 const url = await UploadFile( imagen, path.join(__dirname,  RelativePath.collaborator), "jpg", Formatos.image)
                 await tColaborador.update({imagen: url})

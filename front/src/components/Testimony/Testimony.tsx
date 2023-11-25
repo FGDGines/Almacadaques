@@ -5,9 +5,9 @@ import "../TestimonyBar/TestimonyBar.css"
 const Testimony: FC<tpTestimony> = ({
   id,
   witness,
-  day,
-  month,
-  year,
+  // day,
+  // month,
+  // year,
   testimony,
 }) => {
   return (
@@ -22,9 +22,9 @@ const Testimony: FC<tpTestimony> = ({
       <div className="witness">
         {/* <img src={image} alt={witness} /> */}
         <h4>{witness}</h4>
-        <div className="date">
+        {/* <div className="date">
           {day}/{month}/{year}
-        </div>
+        </div> */}
       </div>
     </div>
   );

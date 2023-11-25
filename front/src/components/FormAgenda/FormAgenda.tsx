@@ -2,7 +2,7 @@ import React, { FC, useState } from 'react';
 
 
 import './FormAgenda.css'
-import { tpDtmResponse, tpFormAgenda } from '../../types/typesComponents';
+import { tpFormAgenda } from '../../types/typesComponents';
 import { fetchDefault } from '../../helpers/Server';
 
 const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {

@@ -17,6 +17,7 @@ const removeAccents = (text: string) => {
 const Podcast = () => {
     const [podcastData, setPodcastData] = useState<AudioPlayerProps[]>([]);
     const [selectedPodcast, setSelectedPodcast] = useState<AudioPlayerProps>({
+        id:-1,
         url:"",
         titulo: "",
         autor: "",
@@ -98,8 +99,8 @@ const Podcast = () => {
             fetchDefault("/podcast/read", {}, (d: tpDtmResponse) => {
                 if(!d.bag) return 
                 for (let index = 0; index < d.bag.length; index++) {
-                    const element: {url: string , titulo: string, autor: string, fecha:string, categoria: string } = d.bag[index];
-                    podcast.push({ url: element.url, titulo: element.titulo, autor: element.autor, fecha: element.fecha, categoria: element.categoria });
+                    const element: {id: number, url: string , titulo: string, autor: string, fecha:string, categoria: string } = d.bag[index];
+                    podcast.push({ id: element.id, url: element.url, titulo: element.titulo, autor: element.autor, fecha: element.fecha, categoria: element.categoria });
                 }
                 setPodcastData(podcast);
                 console.log(podcast)
@@ -146,6 +147,7 @@ const Podcast = () => {
                                     <div className="cubrir"></div>
                                     {podcast.titulo && (
                                         <VideosPodcast
+                                        id={podcast.id}
                                         url={podcast.url}
                                         titulo={podcast.titulo}
                                         autor={podcast.autor}
@@ -163,6 +165,7 @@ const Podcast = () => {
 
                     <div className="podcastPrincipal">
                         <VideosPodcast
+                            id={selectedPodcast.id}
                             url={selectedPodcast.url}
                             titulo={selectedPodcast.titulo}
                             autor={selectedPodcast.autor}
@@ -184,6 +187,7 @@ const Podcast = () => {
                                 <div className="cubrir">
                                 </div>
                                 <VideosPodcast
+                                    id={podcast.id}
                                     url={podcast.url}
                                     titulo={podcast.titulo}
                                     autor={podcast.autor}
@@ -211,6 +215,7 @@ const Podcast = () => {
                                 <div className="cubrir">
                                 </div>
                                 <VideosPodcast
+                                    id={podcast.id}
                                     url={podcast.url}
                                     titulo={podcast.titulo}
                                     autor={podcast.autor}

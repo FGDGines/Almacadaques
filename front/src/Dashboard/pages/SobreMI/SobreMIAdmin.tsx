@@ -7,7 +7,7 @@ import { useContext } from "react"
 import { GlobalContext } from "../../../contexts/GlobalContext"
 
 function SobreMIAdmin() {
-  const { setIndexTestimony, setLayoutID } = useContext(GlobalContext)
+  const { setIndexTestimony } = useContext(GlobalContext)
   // agregar elemento
   const add = () => {
     setIndexTestimony(-1)

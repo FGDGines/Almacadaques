@@ -9,7 +9,7 @@ import FormDefault from '../FormDefault/FormDefault';
 import StatisticComponent from '../StatisticComponent/StatisticComponent';
 import { statisticInfo } from '../../data/StatisticComponent';
 import { formDataToObject } from '../../helpers/Forms';
-import { tpDtmResponse } from '../../types/typesComponents';
+// // import { tpDtmResponse } from '../../types/typesComponents';
 import { fetchDefault } from '../../helpers/Server';
 
 
@@ -40,7 +40,7 @@ function ExperienciasDeMedida() {
                         <img className='imgEquip' src="../../../src/assets/background/contactanos.jpg" alt="Equipo de trabajo" />
                         <div className='ctFor'>
                             <h3>Trabajemos Juntos</h3>
-                            <FormDefault />
+                            <FormDefault hSubmit={subtmitOnFormDefault}/>
                         </div>
 
                     </div>

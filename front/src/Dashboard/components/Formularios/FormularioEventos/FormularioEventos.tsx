@@ -1,7 +1,11 @@
 import './FormularioEventos.css'
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import { BarSession } from '../../barSession/barSession';
-import { useState, ChangeEvent, FormEvent } from 'react';
+import { useState, ChangeEvent, useContext } from 'react';
+import { getToken } from '../../../../helpers/JWT';
+import { GlobalContext } from '../../../../contexts/GlobalContext';
+import { fetchForm } from '../../../../helpers/Server';
+import { tpDtmResponse } from '../../../../types/typesComponents';
 
 
 interface FormData {
@@ -16,12 +20,13 @@ interface FormData {
 
 
 function FormularioEventos() {
+    const { indexCalendarEvent, setLayoutID } = useContext(GlobalContext)
 
     function formatDate(date: Date): string {
         const year = date.getFullYear();
         const month = (date.getMonth() + 1).toString().padStart(2, '0');
         const day = date.getDate().toString().padStart(2, '0');
-        return `${year}-${month}-${day}`;
+        return `${year}/${month}/${day}`;
     }
 
     const [formData, setFormData] = useState<FormData>({
@@ -31,7 +36,7 @@ function FormularioEventos() {
         Descripcion: '',
         Nombre: '',
         Url: '',
-        archivo: null,
+        archivo: null
     });
 
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -44,7 +49,7 @@ function FormularioEventos() {
 
     const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
         const selectedFile = event.target.files?.[0] as File;
-
+        console.log(selectedFile)
         if (selectedFile) {
             setFormData({
                 ...formData,
@@ -53,37 +58,38 @@ function FormularioEventos() {
         }
     };
 
-    const handleSubmit = async (event: FormEvent) => {
-        event.preventDefault();
-
-        try {
-            // Enviar datos al backend usando fetch
-            const response = await fetch('http://tu-backend.com/api/Carrousel', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
-
-            if (response.ok) {
-                // console.log('Datos del formulario enviados exitosamente');
-                // Limpiar el formulario después de enviar los datos
-                setFormData({
-                    Titulo: '',
-                    Inicio: new Date(),
-                    Final: new Date(),
-                    Descripcion: '',
-                    Nombre: '',
-                    Url: '',
-                    archivo: null,
-                });
-            } else {
-                console.error('Error al enviar los datos del formulario');
-            }
-        } catch (error) {
-            console.error('Error al enviar los datos del formulario:', error);
+    const handleSubmit = () => {
+        const da = new FormData()
+        if (formData.Nombre) da.append("nombre", formData.Nombre)
+        if (formData.Descripcion) da.append("descripcion", formData.Descripcion)
+        if (formData.Titulo) da.append("titulo", formData.Titulo)
+        if (formData.Url) da.append("enlace", formData.Url)
+        if (formData.Final) da.append("final", formatDate(formData.Final))
+        if (formData.Inicio) da.append("inicio", formatDate(formData.Inicio))
+        da.append("token", getToken()) 
+        if (formData.archivo) {
+            da.append("src", formData.archivo);
+            da.append("fileExtension", "jpg");
         }
+        if (indexCalendarEvent != -1) {
+            da.append("id", `${indexCalendarEvent}`)
+            fetchForm("/calendar_event/update", da)
+    
+        } else {
+            fetchForm("/calendar_event/create", da, (d: tpDtmResponse) => {
+                console.log(d)
+            })
+        }
+
+        setFormData({
+            Titulo: '',
+            Inicio: new Date(),
+            Final: new Date(),
+            Descripcion: '',
+            Nombre: '',
+            Url: '',
+            archivo: null
+        })
     };
 
     return (
@@ -94,16 +100,16 @@ function FormularioEventos() {
                 <BarSession direccion={19} tituloVista='Evento' segundoTitulo='Añadir nuevo eventos' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
 
 
-                <form className='formCarrousel' onSubmit={handleSubmit}>
+                <form className='formCarrousel'>
                     <div className="subirArchivos">
                         <label htmlFor="File" className='labelArchivo'>
-                            <img src="../../../../src/assets/Dashboard-almacadaques/inicio/nube.svg" alt="" />
-                            <span className='arrastra'>Arrastra y suelta o <span>sube</span> </span>
-                            <span className='formatos'>Supported formates: JPEG, PNG, GIF, MP4, PDF, PSD, AI, Word, PPT</span>
+                        <img src="../../../../src/assets/Dashboard-almacadaques/inicio/nube.svg" alt="" />
+                        <span className='arrastra'>Arrastra y suelta o <span>sube</span> </span>
+                        <span className='formatos'>Supported formates: JPEG, PNG, GIF, MP4, PDF, PSD, AI, Word, PPT</span>
                         </label>
                         <input id='File' className='cargarArchivo'
-                            type="file"
-                            onChange={handleFileChange}
+                        type="file"
+                        onChange={handleFileChange}
                         />
                     </div>
                     <div className="restInputs">
@@ -162,14 +168,15 @@ function FormularioEventos() {
                             value={formData.Url}
                             onChange={handleInputChange}
                         />
+                        
 
                     </div>
                 </form>
 
 
                 <div className="botonesFormCarrousel">
-                    <a href="#" className='CancelarCarousel'>Cancelar</a>
-                    <a href="#" className='AgregarCarousel'>Agregar</a>
+                    <a href="#" className='CancelarCarousel' onClick={() => setLayoutID(19)}>Cancelar</a>
+                    <a href="#" className='AgregarCarousel' onClick={handleSubmit}>Agregar</a>
                 </div>
             </div>
         </div>

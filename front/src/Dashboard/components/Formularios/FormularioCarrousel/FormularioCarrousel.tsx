@@ -27,7 +27,7 @@ export const FormularioCarrousel = () => {
         archivo: null,
     });
 
-    const { indexCarrousel } = useContext(GlobalContext)
+    const { indexCarrousel, setLayoutID } = useContext(GlobalContext)
     
 
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -82,7 +82,14 @@ export const FormularioCarrousel = () => {
         } else {
             fetchForm("/carousel/create", da)
         }
-        
+        setFormData({
+            Frase_es: '',
+            Frase_en: '',
+            Frase_cat: '',
+            Firma: '',
+            Url: '',
+            archivo: null,
+        })
     };
 
     
@@ -153,7 +160,7 @@ export const FormularioCarrousel = () => {
 
 
                 <div className="botonesFormCarrousel">
-                    <a href="#" className='CancelarCarousel'>Cancelar</a>
+                    <a href="#" className='CancelarCarousel' onClick={() => setLayoutID(17)}>Cancelar</a>
                     <a href="#" className='AgregarCarousel' onClick={handleSubmit}>Agregar</a>
                 </div>
             </div>

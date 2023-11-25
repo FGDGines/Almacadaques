@@ -40,7 +40,7 @@ const BlogInfo: FC<tpBlogInfo> = ({
     <div className="BlogInfo">
 
       <div className="ctBlogInf">
-        <img src={thumbnail} alt={title} className="imgInfBlog" />
+        <img src={thumbnail[0]} alt={title} className="imgInfBlog" />
         <div className="dayTitle">
           {year && <div className="year">{year}</div>}
           {month && <div className="month">{monthStr[month]}</div>}

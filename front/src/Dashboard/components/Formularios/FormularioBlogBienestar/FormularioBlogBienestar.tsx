@@ -1,7 +1,7 @@
 import './FormularioBlogBienestar.css'
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import { BarSession } from '../../barSession/barSession';
-import { useState, ChangeEvent, FormEvent, useContext } from 'react';
+import { useState, ChangeEvent, useContext } from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { fetchForm } from '../../../../helpers/Server';
@@ -19,7 +19,7 @@ interface FormData {
 
 function FormularioBlogBienestar() {
     const [editorData, setEditorData] = useState('');
-    const { indexTextLibro} = useContext(GlobalContext)
+    const { indexTextLibro, setLayoutID} = useContext(GlobalContext)
 
 
 
@@ -28,6 +28,7 @@ function FormularioBlogBienestar() {
 
         Titulo: '',
         Contenido: '',
+        Subtitulo: '',
         archivo: null,
     });
 
@@ -89,7 +90,14 @@ function FormularioBlogBienestar() {
               console.log(d)
             })
         }
-      };
+        setFormData({
+            Titulo: '',
+            Contenido: '',
+            Subtitulo: '',
+            archivo: null,
+        })
+        setEditorData('')
+    };
 
 
     return (
@@ -146,7 +154,7 @@ function FormularioBlogBienestar() {
 
 
                     <div className="botonesFormCarrousel">
-                        <a href="#" className='CancelarCarousel'>Cancelar</a>
+                        <a href="#" className='CancelarCarousel' onClick={() => setLayoutID(25)}>Cancelar</a>
                         <a href="#" className='AgregarCarousel' onClick={handleSubmit}>Agregar</a>
                     </div>
                 </div>

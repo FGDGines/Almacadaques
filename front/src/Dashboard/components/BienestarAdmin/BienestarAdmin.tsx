@@ -70,7 +70,7 @@ function BienestarAdmin() {
                         <p className="TextAcciones">Eliminar</p>
                     </div>
                 </div>
-                <img src={item.imageSrc} alt="" className="ImgBienestarAdmin" />
+                <img src={item.imagenSrc} alt="" className="ImgBienestarAdmin" />
                 <div className="infoBienestarAdmin">
                     <p className="textBienestarAdmin"><span className="TitleBienestarAdmin">Titulo: </span>{item.title}</p>
                 </div>

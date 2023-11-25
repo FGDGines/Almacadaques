@@ -7,7 +7,9 @@
   margin: 0 auto;
   box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.25);
 }
-
+.m2{
+  margin: 7px;
+}
 .barraCarrusel {
   width: 95%;
   display: flex;
