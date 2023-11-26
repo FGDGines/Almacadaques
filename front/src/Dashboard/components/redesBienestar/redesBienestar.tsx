@@ -45,11 +45,11 @@ export const RedesBienestar = () => {
           if(!d.bag) return 
           for (let index = 0; index < d.bag.length; index++) {
               const element: { id: number, archivo: string  , url: string, cuenta:string } = d.bag[index];
-              const r = "src/redes/";
+              const r = "src/red/";
               const value = {
                 index: element.id,
-                archivo: element.archivo, 
-                url: r + element.url,
+                archivo: r + element.archivo, 
+                url: element.url,
                 cuenta: element.cuenta
               }
               reds.push(value)
