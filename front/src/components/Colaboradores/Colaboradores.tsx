@@ -22,7 +22,7 @@ function Colaboradores() {
                 if(!d.bag) return 
                 for (let index = 0; index < d.bag.length; index++) {
                     const element: {id: number , nombre: string  , descripcion: string, imagen: string, contacto: string, cargo: string } = d.bag[index];
-                    const r = "src/colaborador/";
+                    const r = "src/collaborador/";
                     colaborador.push(
                         {
                             id: element.id,

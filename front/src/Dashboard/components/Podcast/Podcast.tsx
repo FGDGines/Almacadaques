@@ -36,13 +36,15 @@ function Podcast() {
         if(!d.bag) return 
         for (let index = 0; index < d.bag.length; index++) {
             const element: {id: number, url: string, titulo: string, autor: string, imagen: string, fecha: string, categoria: string } = d.bag[index];
+            const r = "src/podcast/";
             const value = { 
                 id: element.id, 
                 url: element.url,
                 titulo: element.titulo,
                 autor: element.autor,
                 fecha: element.fecha,
-                categoria: element.categoria
+                categoria: element.categoria,
+                imagen: r + element.imagen
             }
             podcast.push(value)
         }
@@ -70,7 +72,8 @@ function Podcast() {
         </div>
 
         
-        <img src="../../../../src/assets/Dashboard-almacadaques/users/Ellipse 3551 (3).svg" alt="" className="imgUsuarioPodcast" />
+        {/* <img src="../../../../src/assets/Dashboard-almacadaques/users/Ellipse 3551 (3).svg" alt="" className="imgUsuarioPodcast" /> */}
+        <img src={podcast.imagen} alt="" className="imgUsuarioPodcast" />
 
         <p className="TituloPodcastAdmin">{podcast.titulo}</p>
         <p className="AutorPodcastAdmin"><span className="TitleAutor">Autor:</span> {podcast.autor}</p>
