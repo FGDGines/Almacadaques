@@ -38,14 +38,14 @@ function BienestarAdmin() {
         fetchDefault("/text_libro/read", {}, (d: tpDtmResponse) => {
             if(!d.bag) return 
             for (let index = 0; index < d.bag.length; index++) {
-            const element: {id: number , content: string, title: string, subtitle: string, image_src: string} = d.bag[index];
+            const element: {id: number , content: string, title: string, subtitle: string, imagen_src: string} = d.bag[index];
             const r = "src/text_libro/";
             textLibros.push({
                 id: element.id,
                 title: element.title,
                 subtitle: element.title,
                 content: element.subtitle,
-                imagenSrc: r + element.image_src
+                imagenSrc: r + element.imagen_src
                 });
             }
             setData(textLibros);
