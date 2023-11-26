@@ -63,7 +63,7 @@ const Carousel: FC<tpCarouselData> = ({ items }) => {
         };
         api();
         // eslint-disable-next-line
-    }, []);
+    }, [l]);
 
     return !sheets.length? '' : <div className='Carousel'>
         <div className='ctPicture' ref={ctPicture}>

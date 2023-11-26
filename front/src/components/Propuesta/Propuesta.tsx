@@ -32,7 +32,7 @@ const Propuesta = ()=>{
         };
         api()
         // eslint-disable-next-line
-    }, []);
+    }, [l]);
     return <div className="Propuesta">
         <div className="title">
             Espacios de bienestar en los que podrás:

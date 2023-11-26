@@ -4,9 +4,7 @@ import { BarSession } from '../../barSession/barSession';
 import  { useState, ChangeEvent, useContext } from 'react';
 import { getToken } from '../../../../helpers/JWT';
 import { GlobalContext } from '../../../../contexts/GlobalContext';
-import { fetchForm } from '../../../../helpers/Server';
-import { tpDtmResponse } from '../../../../types/typesComponents';
-import { mostrarAlerta } from '../../../../helpers/MostrarAlerta';
+import { fetchForm } from '../../../../helpers/Server'; 
 
 
 interface FormData {

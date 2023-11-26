@@ -51,7 +51,7 @@ const CoachingInternacional = () => {
             
         };
         api()
-    }, []);
+    }, [l]);
 
     return <div className="CoachingInternacional">
         <Navbar />

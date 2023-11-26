@@ -92,7 +92,7 @@ function BlogRetiro() {
     };
     api();
     // eslint-disable-next-line
-  }, []);
+  }, [l]);
 
   return (
     <>

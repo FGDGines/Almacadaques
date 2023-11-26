@@ -5,10 +5,6 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
-    "baseUrl": ".", // This must be specified if "paths" is.
-       "paths": {
-         "*": ["node_modules/*"] // This mapping is relative to "baseUrl"
-       },
 
     /* Bundler mode */
     "moduleResolution": "bundler",
