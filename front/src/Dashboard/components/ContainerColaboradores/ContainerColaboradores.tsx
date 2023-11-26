@@ -43,14 +43,14 @@ function ContainerColaboradores() {
         fetchDefault("/collaborator/read", {}, (d: tpDtmResponse) => {
             if(!d.bag) return 
             for (let index = 0; index < d.bag.length; index++) {
-                const element: {id: number , nombre: string  , cargo: string, descripcion:string, image: string, contacto: string } = d.bag[index];
+                const element: {id: number , nombre: string  , cargo: string, descripcion:string, imagen: string, contacto: string } = d.bag[index];
                 const r = "src/collaborator/";
                 const value = { 
                   id: element.id,
                   nombre: element.nombre,
                   cargo: element.cargo,
                   descripcion: element.descripcion,
-                  imagen: r + element.image,
+                  imagen: r + element.imagen,
                   contacto: element.contacto
                 }
                 colaborador.push(value)
