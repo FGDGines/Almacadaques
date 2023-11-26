@@ -43,6 +43,8 @@ function EventosPrevo() {
             if(!d.bag) return 
             for (let index = 0; index < d.bag.length; index++) {
                 const element: {id: number , title: string, inicio: string, final:string, descripcion: string, nombre: string, enlace: string, src: string } = d.bag[index];
+                const r = "src/calendar_event/";
+                console.log(r + element.src)
                 const value = { 
                     id: element.id,
                     title: element.title,
@@ -51,7 +53,7 @@ function EventosPrevo() {
                     description: element.descripcion,
                     start: element.inicio,
                     end: element.final,
-                    src: element.src
+                    src: r + element.src
                 }
                 event.push(value)
             }
