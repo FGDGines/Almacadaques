@@ -70,22 +70,26 @@ function BlogRetiro() {
       fetchDefault("/blog_retiro/read", data, (d: tpDtmResponse) => {
         if(!d.bag) return 
         for (let index = 0; index < d.bag.length; index++) {
-          const element: {id: number , indice: string  , day: string, image: string, title_lang: {es: string, en: string , cat: string},
-              description_lang: {es: string, en: string , cat: string}, year: number, month: number, author: string, estado: string} = d.bag[index];
-          const r = "src/blog_retiro/";
-          const day = JSON.parse(JSON.parse(element.day))
-          const image = JSON.parse(element.image)
-          retiro.push({
-            index: element.id,
-            day: day,
-            month: element.month,
-            year: element.year,
-            image: r + image,
-            author: element.author,
-            title: element.title_lang.es || element.title_lang.en || element.title_lang.cat,
-            description: element.description_lang.es || element.description_lang.en || element.description_lang.cat,
-            estado: element.estado
-          });
+          const element: {id: number , day: string, month: number, year: number, author: string, image: string, title_lang: {es: string, en: string , cat: string},  description_lang: {es: string, en: string , cat: string}, estado: string } = d.bag[index];
+            const r = "src/blog_retiro/";
+            console.log(element.image[0])
+            let image: string[] =  JSON.parse(element.image)
+            for (let i = 0; i < image.length; i++) {
+                image[i] = r + image[i]
+            }
+            const day: number[] = JSON.parse(JSON.parse(element.day))
+            const value = { 
+                index: element.id,
+                day: day,
+                month: element.month,
+                year: element.year,
+                autor: element.author,
+                image: image,
+                title: element.title_lang.es || element.title_lang.en || element.title_lang.cat,
+                description: element.description_lang.es || element.description_lang.en || element.description_lang.cat,
+                estado: element.estado
+            }
+            retiro.push(value)
         }
         setRetiros(retiro);
       }) 
