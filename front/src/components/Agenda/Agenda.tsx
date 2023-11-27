@@ -3,7 +3,7 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 import moment from 'moment';
 import './Agenda.css';
 import { tpAgenda, tpCalendarDates, tpCalendarEvent, tpDtmResponse } from '../../types/typesComponents';
-import { eventos } from '../../data/calendar';
+// import { eventos } from '../../data/calendar';
 import { FC, useEffect, useState } from 'react';
 import { fetchDefault } from '../../helpers/Server';
 
@@ -15,13 +15,13 @@ const Agenda: FC<tpAgenda> = ({hSelect}) => {
   // Eventos de ejemplo (puedes reemplazarlos con tus propios datos)
   const [calendarEvent, setCalendarEvent] = useState<tpCalendarEvent[]>([]);
   
-  const eventsWithDates: tpCalendarDates[] = eventos.map(event => ({
-    id: event.id, 
-    title: event.title,
-    description: event.description , 
-    start: new Date(event.start),
-    end: new Date(event.end),
-  }));
+  // const eventsWithDates: tpCalendarDates[] = eventos.map(event => ({
+  //   id: event.id, 
+  //   title: event.title,
+  //   description: event.description , 
+  //   start: new Date(event.start),
+  //   end: new Date(event.end),
+  // }));
 
 
   const handleSelectEvent = (event: tpCalendarDates) => {
