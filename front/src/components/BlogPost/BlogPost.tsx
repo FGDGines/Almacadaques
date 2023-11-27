@@ -93,7 +93,7 @@ const BlogPost = () => {
                   <img src="../../../src/assets/ImgLibro/1.jpg" alt="" />
                 </div>
                 <div className="titlePortal">
-                  <h4>TIPS BIENESTAR. ARTICULO 1.</h4>
+                  {/* <h4>TIPS BIENESTAR. ARTICULO 1.</h4> */}
                   <h3>PARAR </h3>
                   <p>En las experiencias de bienestar que organizamos desde @almacadaques uno de los elementos. </p>
 
@@ -108,8 +108,8 @@ const BlogPost = () => {
 
             <div className="marco">
               <div className="titlePortal">
-<p> más importantes que promovemos es PARAR.</p>
-                <p>5 tips para parar y dedicarte tiempo para ti:</p>
+                <p> más importantes que promovemos es PARAR.</p>
+                <p>5 Tips para parar y dedicarte tiempo para ti:</p>
                 <h3>1.Establece límites:  </h3>
                 <p>Parar y establecer límites te permite mantener un equilibrio entre tus responsabilidades y tu bienestar.
                   Al establecer límites, evitas el agotamiento y el estrés excesivo, lo que te permite tener más energía y disfrutar de la vida.</p>
@@ -191,9 +191,9 @@ const BlogPost = () => {
             <ul className='UlLista'>
               <a href="#" className='EnlacesItem ' onClick={() => setLayoutID(5)}>5 Tips Parar</a>
               <a href="#" className='EnlacesItem' onClick={() => setLayoutID(33)}>5 Tips Abundancia</a>
-              <a href="#" className='EnlacesItem' onClick={() => setLayoutID(34)}>5 tips Emociones</a>
-              <a href="#" className='EnlacesItem' onClick={() => setLayoutID(35)}>5 tips lidiar dia a dia </a>
-              <a href="#" className='EnlacesItem' onClick={() => setLayoutID(36)}>5 tips para fluir</a>
+              <a href="#" className='EnlacesItem' onClick={() => setLayoutID(34)}>5 Tips Emociones</a>
+              <a href="#" className='EnlacesItem' onClick={() => setLayoutID(35)}>5 Tips lidiar dia a dia </a>
+              <a href="#" className='EnlacesItem' onClick={() => setLayoutID(36)}>5 Tips para Fluir</a>
             </ul>
           </div>
         </div>
