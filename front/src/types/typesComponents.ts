@@ -1,4 +1,5 @@
 // import { type } from "os";
+import { type } from "os";
 import { ReactNode } from "react";
 
 // Definición del tipo de evento
@@ -175,6 +176,9 @@ interface Red {
     url: string;
     cuenta: string;
 }
+
+type RedProps = Red
+
 type RedesProps = Red[];
 
 export type {
@@ -205,5 +209,6 @@ export type {
     AudioPlayerProps,
     iconsProps,
     tpTextLibro,
-    RedesProps
+    RedesProps,
+    RedProps
 };

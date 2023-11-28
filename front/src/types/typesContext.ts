@@ -1,3 +1,5 @@
+import { RedProps } from "./typesComponents"
+
 export enum enLanguageFlag {
     ES = "ES",
     EN = "EN",
@@ -31,6 +33,8 @@ type GlobalContextType = {
     setIndexCalendarEvent: (arg: number)=>void,
     indexTextLibro: number,
     setIndexTextLibro: (arg: number)=>void
+    dataRed: RedProps | null,
+    setDataRed: (data: RedProps | null) => void;
 }
 
 export type {

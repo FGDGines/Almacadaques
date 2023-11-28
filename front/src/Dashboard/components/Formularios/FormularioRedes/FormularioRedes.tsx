@@ -15,12 +15,14 @@ interface FormData {
 }
 
 export const FormularioRedes = () => {
+    const { indexRed, dataRed } = useContext(GlobalContext)
     const [formData, setFormData] = useState<FormData>({
-        url: '',
-        archivo: null,
-        cuenta: ''
+        url: dataRed?.url || '',
+        archivo:  null,
+        cuenta: dataRed?.cuenta || ''
     });
-    const { indexRed } = useContext(GlobalContext)
+    const [imageURL, setImageURL] = useState<string | null>(dataRed?.archivo || null);
+
 
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
@@ -39,8 +41,10 @@ export const FormularioRedes = () => {
                 archivo: selectedFile,
             });
         }
+        setImageURL(URL.createObjectURL(selectedFile));
+        console.log(imageURL)
     };
-
+    
     const handleSubmit = () => {
         const da = new FormData()
         if (formData.url) {
@@ -79,7 +83,7 @@ export const FormularioRedes = () => {
                 <form className='formRedes'>
                     <div className="subirArchivos">
                         <label htmlFor="File" className='labelArchivo'>
-                            <img src="../../../../src/assets/Dashboard-almacadaques/inicio/nube.svg" alt="" />
+                            <img src={imageURL} alt="Selected" />
                             <span className='arrastra'>Arrastra y suelta o <span>sube</span> </span>
                             <span className='formatos'>Supported formates: JPEG, PNG, GIF, MP4, PDF, PSD, AI, Word, PPT</span>
                         </label>

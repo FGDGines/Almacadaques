@@ -1,18 +1,17 @@
 
 import './redesBienestar.css';
 import { BtnMasAgregar } from '../BtnMasAgregar/BtnMasAgregar';
-// import { redes } from '../../../data/redes'; // Asegúrate de ajustar la ruta según la ubicación real del archivo
+import { redes } from '../../../data/redes'; // Asegúrate de ajustar la ruta según la ubicación real del archivo
 import { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../../../contexts/GlobalContext';
 import { formDataToObject } from '../../../helpers/Forms';
 import { fetchDefault } from '../../../helpers/Server';
-import { tpDtmResponse } from '../../../types/typesComponents';
+import { RedProps, tpDtmResponse } from '../../../types/typesComponents';
 import { RedesProps } from "../../../types/typesComponents";
 import { getToken } from '../../../helpers/JWT';
 
 export const RedesBienestar = () => {
-  const { setLayoutID } = useContext(GlobalContext);
-  const { setIndexRed } = useContext(GlobalContext);
+  const { setLayoutID, setIndexRed, setDataRed } = useContext(GlobalContext);
   const [ redes, setRedes ] = useState<RedesProps>([])
 
 
@@ -30,9 +29,15 @@ export const RedesBienestar = () => {
 };
 
 
-  const edit = (e: number) => {
-    setIndexRed(e)
+  const edit = (red: RedProps, id: number) => {
+    setDataRed(red)
+    setIndexRed(id)
     setLayoutID(24)
+  }
+
+  const add = () => {
+    setDataRed(null)
+    setIndexRed(-1)
   }
 
   // carga los carrousel
@@ -65,7 +70,7 @@ export const RedesBienestar = () => {
     <div className="redesBienestar">
       <div className="barraRedes">
         <h2>Redes</h2>
-        <div onClick={() => setIndexRed(-1)}>
+        <div onClick={add}>
           <BtnMasAgregar direccion={24}></BtnMasAgregar>
         </div>
         
@@ -81,7 +86,7 @@ export const RedesBienestar = () => {
               </a>
             </p>
             <div className="iconosAcciones">
-              <div className="accionEditar" onClick={() => edit(red.index)}>
+              <div className="accionEditar" onClick={() => edit(red, red.index)}>
                 <img
                   src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
                   alt=""
