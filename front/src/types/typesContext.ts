@@ -1,4 +1,4 @@
-import { RedProps } from "./typesComponents"
+import { RedProps, tpBlogInfo } from "./typesComponents"
 
 export enum enLanguageFlag {
     ES = "ES",
@@ -34,7 +34,9 @@ type GlobalContextType = {
     indexTextLibro: number,
     setIndexTextLibro: (arg: number)=>void
     dataRed: RedProps | null,
-    setDataRed: (data: RedProps | null) => void;
+    setDataRed: (data: RedProps | null) => void,
+    dataRetiro: tpBlogInfo | null,
+    setDataRetiro: (data: tpBlogInfo | null) => void;
 }
 
 export type {

@@ -42,7 +42,6 @@ export const FormularioRedes = () => {
             });
         }
         setImageURL(URL.createObjectURL(selectedFile));
-        console.log(imageURL)
     };
     
     const handleSubmit = () => {

@@ -15,7 +15,7 @@ function formatFecha(day: number[], month: number, year: number) {
 }
 function ContainerRetiro() {
     const [ data, setData ] = useState<tpBlogInfo[]>([])
-    const { languageFlag, setIndexBlogRetiro, setLayoutID } = useContext(GlobalContext)
+    const { languageFlag, setIndexBlogRetiro, setLayoutID, setDataRetiro } = useContext(GlobalContext)
     const lf = languageFlag.toLowerCase()
 
 
@@ -33,7 +33,8 @@ function ContainerRetiro() {
         })
     }
 
-    const edit = (id: number) => {
+    const edit = (id: number, item: tpBlogInfo) => {
+        setDataRetiro(item)
         setIndexBlogRetiro(id)
         setLayoutID(38)
     }
@@ -83,7 +84,7 @@ function ContainerRetiro() {
             <div key={retiro.index} className="ContainerRetiro">
                 <div className="titleContainerRetiro">
                     <p className="titleRetiro">{retiro.title}</p>
-                    <div className="paddinIcono" onClick={() => edit(retiro.index)}>
+                    <div className="paddinIcono" onClick={() => edit(retiro.index, retiro)}>
                         <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" className="BtnEditarEvento" />
                     </div>
                     <div className="paddinIcono" onClick={() => handleDelete(retiro.index)}>

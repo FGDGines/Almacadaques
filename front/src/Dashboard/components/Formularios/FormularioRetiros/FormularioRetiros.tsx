@@ -18,7 +18,7 @@ interface FormData {
   }
 
 function FormularioRetiros() {
-  const { languageFlag, indexBlogRetiro, setLayoutID } = useContext(GlobalContext)
+  const { languageFlag, indexBlogRetiro, setLayoutID, dataRetiro } = useContext(GlobalContext)
   const lf = languageFlag.toLowerCase() 
 
 
@@ -36,14 +36,16 @@ function FormularioRetiros() {
   }
 
   const [formData, setFormData] = useState<FormData>({
-    Titulo: '',
-    Autor: '',
+    Titulo: dataRetiro?.title || '',
+    Autor: dataRetiro?.author || '',
     Fecha: new Date(),
     day: 0,
-    Descripcion: '',
-    Estado: '',
+    Descripcion: dataRetiro?.description || '',
+    Estado: dataRetiro?.estado || '',
     archivo: null,
   });
+  const [imageURL, setImageURL] = useState<string | null>(dataRetiro?.image[0] || null);
+
   
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -57,13 +59,14 @@ function FormularioRetiros() {
     const selectedFile = event.target.files?.[0] as File;
 
     if (selectedFile) {
-      setFormData({
-        ...formData,
-        archivo: selectedFile,
-      });
+        setFormData({
+            ...formData,
+            archivo: selectedFile,
+        });
     }
+    setImageURL(URL.createObjectURL(selectedFile));
   };
-
+console.log(dataRetiro)
     
   const handleSubmit = () => {
     const da = new FormData()
@@ -132,7 +135,7 @@ function FormularioRetiros() {
   <form className='formCarrousel'>
     <div className="subirArchivos">
       <label htmlFor="File" className='labelArchivo'>
-        <img src="../../../../src/assets/Dashboard-almacadaques/inicio/nube.svg" alt="" />
+        <img src={imageURL} alt="Selected" />
         <span className='arrastra'>Arrastra y suelta o <span>sube</span> </span>
         <span className='formatos'>Supported formates: JPEG, PNG, GIF, MP4, PDF, PSD, AI, Word, PPT</span>
       </label>

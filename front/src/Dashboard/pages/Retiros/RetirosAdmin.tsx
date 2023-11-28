@@ -7,9 +7,10 @@ import { useContext } from 'react';
 import { BtnMas } from '../../components/BtnMas/BtnMas';
 
 function RetirosAdmin() {
-  const { setLayoutID, setIndexBlogRetiro } = useContext(GlobalContext);
+  const { setLayoutID, setIndexBlogRetiro, setDataRetiro } = useContext(GlobalContext);
 
   const add = () => {
+    setDataRetiro(null)
     setIndexBlogRetiro(-1)
     setLayoutID(38)
   }

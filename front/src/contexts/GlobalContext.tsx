@@ -1,5 +1,5 @@
 import { FC, createContext, useState } from "react";
-import { RedProps } from "../types/typesComponents";
+import { RedProps, tpBlogInfo } from "../types/typesComponents";
 import { GlobalContextType, enLanguageFlag } from "../types/typesContext";
 
 export const GlobalContext = createContext<GlobalContextType>({
@@ -30,7 +30,9 @@ export const GlobalContext = createContext<GlobalContextType>({
     indexCalendarEvent: -1,
     setIndexCalendarEvent() {},
     dataRed: null,
-    setDataRed() {}
+    setDataRed() {},
+    dataRetiro: null,
+    setDataRetiro() {}
 })
 
 export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -47,7 +49,9 @@ export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ child
     const [indexBlogRetiro, setIndexBlogRetiro] = useState<number>(-1);
     const [indexCalendarEvent, setIndexCalendarEvent] = useState<number>(-1);
     const [indexTextLibro, setIndexTextLibro] = useState<number>(-1);
-    const [ dataRed, setDataRed ] = useState<RedProps | null>(null)
+    const [ dataRed, setDataRed ] = useState<RedProps | null>(null);
+    const [ dataRetiro, setDataRetiro ] = useState<tpBlogInfo | null>(null);
+
     const setUpOrDown = (arg: boolean) => {
         setUpOrDownState(arg);
     } 
@@ -99,7 +103,9 @@ export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ child
                 indexTextLibro, 
                 setIndexTextLibro,
                 dataRed,
-                setDataRed
+                setDataRed,
+                dataRetiro,
+                setDataRetiro
             }
         }>
         {children}
