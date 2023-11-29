@@ -6,6 +6,7 @@ import { check } from "express-validator";
 import { Read } from "../controllers/carousel/Read";
 import { Delete } from "../controllers/carousel/Delete";
 import { Update } from "../controllers/carousel/Update";
+import { ReadById } from "../controllers/carousel/ReadById";
 
 const app = Router()
 
@@ -21,6 +22,11 @@ app.post('/create', [security_post,
 app.post('/read', [
     check('lang', 'El idioma es obligatorio').not().isEmpty(),
     validarCampos], Read)
+
+app.post('/readbyid', [
+    check('id', 'El id es obligatorio').not().isEmpty(),
+    validarCampos], ReadById)
+    
 
 app.post('/delete' , [security_post,
     check('id', 'El carousel item a eliminar es olbigatorio').isNumeric()

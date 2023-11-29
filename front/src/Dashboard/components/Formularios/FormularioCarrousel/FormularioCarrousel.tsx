@@ -1,10 +1,12 @@
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import '../FormularioCarrousel/FormularioCarrousel.css';
 import { BarSession } from '../../barSession/barSession';
-import { useState, ChangeEvent, useContext } from 'react';
-import { fetchForm } from '../../../../helpers/Server';
+import { useState, ChangeEvent, useContext, useEffect } from 'react';
+import { fetchDefault, fetchForm } from '../../../../helpers/Server';
 import { GlobalContext } from '../../../../contexts/GlobalContext';
 import { getToken } from '../../../../helpers/JWT';
+import { formDataToObject } from '../../../../helpers/Forms';
+import { tpDtmResponse } from '../../../../types/typesComponents';
 // import { tpDtmResponse } from '../../../../types/typesComponents';
 
 
@@ -26,7 +28,7 @@ export const FormularioCarrousel = () => {
         Url: '',
         archivo: null,
     });
-
+    const [imageURL, setImageURL] = useState<string | null>(null);
     const { indexCarrousel, setLayoutID } = useContext(GlobalContext)
     
 
@@ -47,6 +49,7 @@ export const FormularioCarrousel = () => {
                 archivo: selectedFile,
             });
         }
+        setImageURL(URL.createObjectURL(selectedFile));
     };
 
     const handleSubmit = () => {
@@ -89,6 +92,33 @@ export const FormularioCarrousel = () => {
         })
     };
 
+
+    useEffect(() => {
+        const api = async () => {
+            if (indexCarrousel == -1) return
+            const da = new FormData()
+            da.set("id", `${indexCarrousel}`)
+            const dat = {body: JSON.stringify(formDataToObject(da))}
+            fetchDefault("/carousel/readbyid", dat, (d: tpDtmResponse) => {
+                if(!d.bag) return 
+                for (let index = 0; index < d.bag.length; index++) {
+                    const element: {id: number , autor: string  , link_autor: string, src:string, data_carousel: {es: string, en: string , cat: string} } = d.bag[index];
+                    const value = { 
+                        Frase_es: element.data_carousel.es,
+                        Frase_en: element.data_carousel.en,
+                        Frase_cat: element.data_carousel.cat,
+                        Firma: element.autor,
+                        Url: element.link_autor,
+                        archivo: null
+                    } 
+                    setImageURL(element.src)
+                    setFormData(value);
+                }
+            }) 
+        };
+        api();
+            // eslint-disable-next-line
+    }, []);
     
     return (
         <div className='formularioCarrousel'>
@@ -101,7 +131,7 @@ export const FormularioCarrousel = () => {
                 <form className='formCarrousel'>
                     <div className="subirArchivos">
                         <label htmlFor="File" className='labelArchivo'>
-                            <img src="../../../../src/assets/Dashboard-almacadaques/inicio/nube.svg" alt="" />
+                            <img src={imageURL || ""} alt="Selected" />
                             <span className='arrastra'>Arrastra y suelta o <span>sube</span> </span>
                             <span className='formatos'>Supported formates: JPEG, PNG, GIF, MP4, PDF, PSD, AI, Word, PPT</span>
                         </label>
