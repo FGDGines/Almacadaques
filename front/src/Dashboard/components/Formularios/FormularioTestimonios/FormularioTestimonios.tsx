@@ -6,7 +6,7 @@ import { getToken } from '../../../../helpers/JWT';
 import { GlobalContext } from '../../../../contexts/GlobalContext';
 import { fetchDefault, fetchForm } from '../../../../helpers/Server'; 
 import { formDataToObject } from '../../../../helpers/Forms';
-import { tpDtmResponse, tpTestimony } from '../../../../types/typesComponents';
+import { tpDtmResponse } from '../../../../types/typesComponents';
 
 
 interface FormData {
@@ -80,8 +80,8 @@ export const FormularioTestimonios = () => {
         }) 
     };
     api();
-    // eslint-disable-next-line
-}, []);
+        // eslint-disable-next-line
+    }, []);
 
     return (
         <div className='formularioTestimonios'>

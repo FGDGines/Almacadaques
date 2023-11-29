@@ -1,11 +1,13 @@
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import { BarSession } from '../../barSession/barSession';
 import '../FormularioEspaciosBienestar/FormularioEspaciosBienestar.css';
-import { useState, ChangeEvent, useContext } from 'react';
+import { useState, ChangeEvent, useContext, useEffect } from 'react';
 import { getToken } from '../../../../helpers/JWT';
 import { GlobalContext } from '../../../../contexts/GlobalContext';
 // import { tpDtmResponse } from '../../../../types/typesComponents';
-import { fetchForm } from '../../../../helpers/Server';
+import { fetchDefault, fetchForm } from '../../../../helpers/Server';
+import { tpDtmResponse } from '../../../../types/typesComponents';
+import { formDataToObject } from '../../../../helpers/Forms';
 
 
 interface FormData {
@@ -52,6 +54,29 @@ export const FormularioEspaciosBienestar = () => {
             Frase_cat: '',
         })
     };
+
+    useEffect(() => {
+        const api = async () => {
+            if (indexEspacio == -1) return
+            const da = new FormData()
+            da.set("id", `${indexEspacio}`)
+            const dat = {body: JSON.stringify(formDataToObject(da))}
+            fetchDefault("/espacio/readbyid", dat, (d: tpDtmResponse) => {
+                if(!d.bag) return 
+                for (let index = 0; index < d.bag.length; index++) {
+                    const element: { es: string, en: string , cat: string } = d.bag[index];
+                    const value = { 
+                        Frase_es: element.es,
+                        Frase_en: element.en,
+                        Frase_cat: element.cat
+                    } 
+                    setFormData(value);
+                }
+            }) 
+        };
+        api();
+            // eslint-disable-next-line
+    }, []);
 
     return (
         <div className='formularioEspaciosBienestar'>
