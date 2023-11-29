@@ -7,9 +7,10 @@ import { GlobalContext } from '../../../contexts/GlobalContext';
 import { useContext } from 'react';
 
 function BlogPodcast() {
-  const { setLayoutID, setIndexPodcast } = useContext(GlobalContext);
+  const { setLayoutID, setIndexPodcast, setDataPodcast } = useContext(GlobalContext);
 
   const add = () => {
+    setDataPodcast(null)
     setIndexPodcast(-1)
     setLayoutID(37)
   }

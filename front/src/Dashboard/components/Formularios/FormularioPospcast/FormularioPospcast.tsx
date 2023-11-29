@@ -18,7 +18,7 @@ interface FormData {
 
 
 function FormularioPospcast() {
-  const { indexPodcast, setLayoutID } = useContext(GlobalContext)
+  const { indexPodcast, setLayoutID, dataPodcast} = useContext(GlobalContext)
 
   function formatDate(date: Date): string {
     const year = date.getFullYear();
@@ -28,13 +28,15 @@ function FormularioPospcast() {
   }
 
   const [formData, setFormData] = useState<FormData>({
-    Titulo: '',
-    Autor: '',
+    Titulo: dataPodcast?.titulo || '',
+    Autor: dataPodcast?.autor || '',
     Fecha: new Date(),
-    Categoria: '',
-    Url: '',
+    Categoria: dataPodcast?.categoria || '',
+    Url: dataPodcast?.url || '',
     archivo: null,
   });
+
+  const [imageURL, setImageURL] = useState<string | null>(dataPodcast?.imagen || null);
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -48,11 +50,12 @@ function FormularioPospcast() {
     const selectedFile = event.target.files?.[0] as File;
 
     if (selectedFile) {
-      setFormData({
-        ...formData,
-        archivo: selectedFile,
-      });
+        setFormData({
+            ...formData,
+            archivo: selectedFile,
+        });
     }
+    setImageURL(URL.createObjectURL(selectedFile));
   };
 
   const handleSubmit = () => {
@@ -107,7 +110,7 @@ function FormularioPospcast() {
         <form className='formCarrousel'>
           <div className="subirArchivos">
             <label htmlFor="File" className='labelArchivo'>
-              <img src="../../../../src/assets/Dashboard-almacadaques/inicio/nube.svg" alt="" />
+              <img src={imageURL || ""} alt="Selected" />
               <span className='arrastra'>Arrastra y suelta o <span>sube</span> </span>
               <span className='formatos'>Supported formates: JPEG, PNG, GIF, MP4, PDF, PSD, AI, Word, PPT</span>
             </label>

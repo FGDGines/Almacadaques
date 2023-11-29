@@ -4,7 +4,7 @@ import { BarSession } from '../../barSession/barSession';
 import { useState, ChangeEvent, useContext, useEffect } from 'react';
 import { getToken } from "../../../../helpers/JWT";
 import { GlobalContext } from "../../../../contexts/GlobalContext";
-import { fetchDefault, fetchForm } from "../../../../helpers/Server";
+import { fetchDefault } from "../../../../helpers/Server";
 import { formDataToObject } from "../../../../helpers/Forms";
 import { tpDtmResponse } from "../../../../types/typesComponents";
 // import { tpDtmResponse } from "../../../../types/typesComponents";
@@ -24,8 +24,7 @@ interface FormData {
   }
 
 function FormularioRetiros() {
-  const { languageFlag, indexBlogRetiro, setLayoutID, dataRetiro } = useContext(GlobalContext)
-  const lf = languageFlag.toLowerCase() 
+  const { indexBlogRetiro, setLayoutID, dataRetiro } = useContext(GlobalContext)
 
 
   function formatDate(date: Date): string {

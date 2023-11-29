@@ -69,6 +69,7 @@ export const FormularioRedes = () => {
             archivo: null,
             cuenta: ''
         })
+        setImageURL("")
     };
 
     return (

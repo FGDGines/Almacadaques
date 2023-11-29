@@ -1,5 +1,5 @@
 import { FC, createContext, useState } from "react";
-import { RedProps, tpBlogInfo, tpTestimony } from "../types/typesComponents";
+import { AudioPlayerProps, RedProps, tpBlogInfo } from "../types/typesComponents";
 import { GlobalContextType, enLanguageFlag } from "../types/typesContext";
 
 export const GlobalContext = createContext<GlobalContextType>({
@@ -33,8 +33,8 @@ export const GlobalContext = createContext<GlobalContextType>({
     setDataRed() {},
     dataRetiro: null,
     setDataRetiro() {},
-    dataTransfer: null,
-    setDataTransfer() {}
+    dataPodcast: null,
+    setDataPodcast() {}
 })
 
 export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -53,7 +53,7 @@ export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ child
     const [indexTextLibro, setIndexTextLibro] = useState<number>(-1);
     const [ dataRed, setDataRed ] = useState<RedProps | null>(null);
     const [ dataRetiro, setDataRetiro ] = useState<tpBlogInfo | null>(null);
-    const [ dataTransfer, setDataTransfer ] = useState<tpBlogInfo | RedProps | tpTestimony | null>(null);
+    const [ dataPodcast, setDataPodcast ] = useState<AudioPlayerProps | null>(null);
 
     const setUpOrDown = (arg: boolean) => {
         setUpOrDownState(arg);
@@ -109,8 +109,8 @@ export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ child
                 setDataRed,
                 dataRetiro,
                 setDataRetiro,
-                dataTransfer,
-                setDataTransfer
+                dataPodcast,
+                setDataPodcast
             }
         }>
         {children}

@@ -8,7 +8,7 @@ import { getToken } from '../../../helpers/JWT';
 
 function Podcast() {
   const [ data, setData ] = useState<AudioPlayerProps[]>([])
-  const { setLayoutID, setIndexPodcast } = useContext(GlobalContext);
+  const { setLayoutID, setIndexPodcast, setDataPodcast } = useContext(GlobalContext);
   
   const handleDelete = (id:number) => {
     // elimina de la base de datos
@@ -24,7 +24,8 @@ function Podcast() {
     })
   }
 
-  const edit = (id: number) => {
+  const edit = (id: number, data: AudioPlayerProps) => {
+    setDataPodcast(data)
     setIndexPodcast(id)
     setLayoutID(37)
   }
@@ -65,7 +66,7 @@ function Podcast() {
             <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg" alt="" className="IconEditarColaboradores"/>
             <p className="TitleBtnEditarColaborador">Eliminar</p>
           </div>
-          <div className="IconoEditarPodcast" onClick={() => edit(podcast.id)}>
+          <div className="IconoEditarPodcast" onClick={() => edit(podcast.id, podcast)}>
             <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" className="IconEditarPodcast" />
             <p className="TitleBtnEditarColaborador">Editar</p>
           </div>
