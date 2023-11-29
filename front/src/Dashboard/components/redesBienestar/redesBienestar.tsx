@@ -1,7 +1,7 @@
 
 import './redesBienestar.css';
 import { BtnMasAgregar } from '../BtnMasAgregar/BtnMasAgregar';
-import { redes } from '../../../data/redes'; // Asegúrate de ajustar la ruta según la ubicación real del archivo
+// import { redes } from '../../../data/redes'; // Asegúrate de ajustar la ruta según la ubicación real del archivo
 import { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../../../contexts/GlobalContext';
 import { formDataToObject } from '../../../helpers/Forms';

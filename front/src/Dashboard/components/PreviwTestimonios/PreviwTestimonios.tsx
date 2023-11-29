@@ -9,7 +9,7 @@ import { GlobalContext } from '../../../contexts/GlobalContext';
 
 function PreviwTestimonios() {
   const [data, setData] = useState<tpTestimony[]>([]);
-  const { setLayoutID, setIndexTestimony } = useContext(GlobalContext);
+  const { setLayoutID, setIndexTestimony, setDataTransfer } = useContext(GlobalContext);
   const { languageFlag } = useContext(GlobalContext)
   const lg = languageFlag.toLowerCase() 
 
@@ -28,7 +28,8 @@ function PreviwTestimonios() {
 
 
   // para editar el elemento
-  const edit = (index: number) => {
+  const edit = (index: number, data: tpTestimony) => {
+    setDataTransfer(data)
     setIndexTestimony(index)
     setLayoutID(28)
   }
@@ -68,7 +69,7 @@ function PreviwTestimonios() {
           <div className="testimonioItem">
             <p className="FraseTestimonio">{testimonial.testimony}</p>
             <div className="iconEditar">
-              <div className="editar"  onClick={() => edit(testimonial.id)}>
+              <div className="editar"  onClick={() => edit(testimonial.id, testimonial)}>
                 <img
                   src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
                   alt=""

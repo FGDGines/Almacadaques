@@ -6,6 +6,7 @@ import { check } from "express-validator";
 import { Delete } from "../controllers/testimony/Delete";
 import { Update } from "../controllers/testimony/Update";
 import { Read } from "../controllers/testimony/Read";
+import { ReadById } from "../controllers/testimony/ReadByID";
 
 const app = Router()
 
@@ -27,4 +28,8 @@ app.post('/delete', [security_post ,
 app.post('/read',[
     check('lang', "El idioma es obligatorio").not().isEmpty(), 
     validarCampos] ,Read)
+
+app.post('/readbyid',[
+    check('id', "El id es obligatorio").not().isEmpty(), 
+    validarCampos] ,ReadById)
 module.exports = app

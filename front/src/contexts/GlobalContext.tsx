@@ -1,5 +1,5 @@
 import { FC, createContext, useState } from "react";
-import { RedProps, tpBlogInfo } from "../types/typesComponents";
+import { RedProps, tpBlogInfo, tpTestimony } from "../types/typesComponents";
 import { GlobalContextType, enLanguageFlag } from "../types/typesContext";
 
 export const GlobalContext = createContext<GlobalContextType>({
@@ -32,7 +32,9 @@ export const GlobalContext = createContext<GlobalContextType>({
     dataRed: null,
     setDataRed() {},
     dataRetiro: null,
-    setDataRetiro() {}
+    setDataRetiro() {},
+    dataTransfer: null,
+    setDataTransfer() {}
 })
 
 export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -51,6 +53,7 @@ export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ child
     const [indexTextLibro, setIndexTextLibro] = useState<number>(-1);
     const [ dataRed, setDataRed ] = useState<RedProps | null>(null);
     const [ dataRetiro, setDataRetiro ] = useState<tpBlogInfo | null>(null);
+    const [ dataTransfer, setDataTransfer ] = useState<tpBlogInfo | RedProps | tpTestimony | null>(null);
 
     const setUpOrDown = (arg: boolean) => {
         setUpOrDownState(arg);
@@ -105,7 +108,9 @@ export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ child
                 dataRed,
                 setDataRed,
                 dataRetiro,
-                setDataRetiro
+                setDataRetiro,
+                dataTransfer,
+                setDataTransfer
             }
         }>
         {children}

@@ -1,14 +1,13 @@
 import './FormularioBlogBienestar.css'
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import { BarSession } from '../../barSession/barSession';
-import { useState, ChangeEvent, useContext, useEffect } from 'react';
+import { useState, ChangeEvent, useContext } from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
-import { fetchDefault, fetchForm } from '../../../../helpers/Server';
+import { fetchForm } from '../../../../helpers/Server';
 // import { tpDtmResponse } from '../../../../types/typesComponents';
 import { GlobalContext } from '../../../../contexts/GlobalContext';
-import { getToken } from '../../../../helpers/JWT';
-import { tpDtmResponse } from '../../../../types/typesComponents';
+import { getToken } from '../../../../helpers/JWT'; 
 
 interface FormData {
     Titulo: string;
@@ -94,29 +93,7 @@ function FormularioBlogBienestar() {
         })
         setEditorData('')
     };
-
-
-    useEffect(() => {
-        const api = async () => {
-        const textLibros: FormData[] = []
-        fetchDefault("/text_libro/read", {}, (d: tpDtmResponse) => {
-            if(!d.bag) return 
-            for (let index = 0; index < d.bag.length; index++) {
-            const element: {id: number , content: string, title: string, subtitle: string, imagen_src: string} = d.bag[index];
-            const r = "src/text_libro/";
-            textLibros.push({
-                Titulo: element.title,
-                Subtitulo: element.title,
-                Contenido: element.subtitle,
-                archivo: null
-                });
-            }
-            setFormData(textLibros);
-        }) 
-    };
-    api();
-    // eslint-disable-next-line
-  }, []);
+ 
 
 
     return (

@@ -1,10 +1,12 @@
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import '../FormularioTestimonios/FormularioTestimonios.css';
 import { BarSession } from '../../barSession/barSession';
-import  { useState, ChangeEvent, useContext } from 'react';
+import  { useState, ChangeEvent, useContext, useEffect } from 'react';
 import { getToken } from '../../../../helpers/JWT';
 import { GlobalContext } from '../../../../contexts/GlobalContext';
-import { fetchForm } from '../../../../helpers/Server'; 
+import { fetchDefault, fetchForm } from '../../../../helpers/Server'; 
+import { formDataToObject } from '../../../../helpers/Forms';
+import { tpDtmResponse, tpTestimony } from '../../../../types/typesComponents';
 
 
 interface FormData {
@@ -54,6 +56,32 @@ export const FormularioTestimonios = () => {
             Witness: '',
         })
     };
+
+
+    // carga los carrousel
+  useEffect(() => {
+    const api = async () => {
+        if (indexTestimony == -1) return
+        const da = new FormData()
+        da.set("id", `${indexTestimony}`)
+        const dat = {body: JSON.stringify(formDataToObject(da))}
+        fetchDefault("/testimony/readbyid", dat, (d: tpDtmResponse) => {
+            if(!d.bag) return 
+            for (let index = 0; index < d.bag.length; index++) {
+                const element: { witness: string, data_testimony: {es: string, en: string , cat: string} } = d.bag[index];
+                const value = { 
+                    Witness: element.witness,
+                    Frase_es: element.data_testimony.es,
+                    Frase_en: element.data_testimony.en,
+                    Frase_cat: element.data_testimony.cat
+                } 
+                setFormData(value);
+            }
+        }) 
+    };
+    api();
+    // eslint-disable-next-line
+}, []);
 
     return (
         <div className='formularioTestimonios'>

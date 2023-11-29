@@ -1,5 +1,4 @@
 // import { type } from "os";
-import { type } from "os";
 import { ReactNode } from "react";
 
 // Definición del tipo de evento
