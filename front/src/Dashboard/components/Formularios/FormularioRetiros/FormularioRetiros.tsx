@@ -1,18 +1,24 @@
 import "./FormularioRetiros.css"
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import { BarSession } from '../../barSession/barSession';
-import { useState, ChangeEvent, useContext } from 'react';
+import { useState, ChangeEvent, useContext, useEffect } from 'react';
 import { getToken } from "../../../../helpers/JWT";
 import { GlobalContext } from "../../../../contexts/GlobalContext";
-import { fetchForm } from "../../../../helpers/Server";
+import { fetchDefault, fetchForm } from "../../../../helpers/Server";
+import { formDataToObject } from "../../../../helpers/Forms";
+import { tpDtmResponse } from "../../../../types/typesComponents";
 // import { tpDtmResponse } from "../../../../types/typesComponents";
 
 interface FormData {
-    Titulo: string;
+    Titulo_es: string;
+    Titulo_en: string;
+    Titulo_cat: string;
     Autor: string
     Fecha: Date,
-    day: number
-    Descripcion: string;
+    day: number;
+    Descripcion_es: string;
+    Descripcion_en: string;
+    Descripcion_cat: string;
     Estado: string;
     archivo: File | null;
   }
@@ -36,12 +42,16 @@ function FormularioRetiros() {
   }
 
   const [formData, setFormData] = useState<FormData>({
-    Titulo: dataRetiro?.title || '',
-    Autor: dataRetiro?.author || '',
+    Titulo_es: '',
+    Titulo_en: '',
+    Titulo_cat: '',
+    Autor: '',
     Fecha: new Date(),
     day: 0,
-    Descripcion: dataRetiro?.description || '',
-    Estado: dataRetiro?.estado || '',
+    Descripcion_es: '',
+    Descripcion_en: '',
+    Descripcion_cat: '',
+    Estado: '',
     archivo: null,
   });
   const [imageURL, setImageURL] = useState<string | null>(dataRetiro?.image[0] || null);
@@ -66,17 +76,22 @@ function FormularioRetiros() {
     }
     setImageURL(URL.createObjectURL(selectedFile));
   };
-console.log(dataRetiro)
     
   const handleSubmit = () => {
     const da = new FormData()
-    if (formData.Titulo) {
-        da.append(`title_${lf}`, formData.Titulo)
+    if (formData.Titulo_es) {
+      da.append("title_es", formData.Titulo_es)
+    }
+    if (formData.Titulo_en) {
+      da.append("title_en", formData.Titulo_en)
+    }
+    if (formData.Titulo_cat) {
+      da.append("title_cat", formData.Titulo_cat)
     }
     if (formData.Autor) {
         da.append("author", formData.Autor)
     }
-    if (formData.Fecha){
+    if (!isNaN(formData.Fecha.getTime())){
       const sd = separatedDate(formData.Fecha)
       let day: number = sd[0]
       if (formData.day) {
@@ -87,8 +102,14 @@ console.log(dataRetiro)
       da.append("month", `${sd[1]}`)
       da.append("year", `${sd[2]}`)
     }
-    if (formData.Descripcion) {
-        da.append(`descripction_${lf}`, formData.Descripcion)
+    if (formData.Descripcion_es) {
+        da.append("description_es", formData.Descripcion_es)
+    }
+    if (formData.Descripcion_en) {
+        da.append("description_en", formData.Descripcion_en)
+    }
+    if (formData.Descripcion_cat) {
+        da.append("description_cat", formData.Descripcion_cat)
     }
     if (formData.Estado) {
       da.append("estado", formData.Estado)
@@ -100,30 +121,68 @@ console.log(dataRetiro)
         da.append("image_number", "0")
         da.append("fileExtension", "jpg");
     }
-    if (indexBlogRetiro != -1) {
-        da.append("id", `${indexBlogRetiro}`)
-        fetchForm("/blog_retiro/update", da)
+    // if (indexBlogRetiro != -1) {
+    //     da.append("id", `${indexBlogRetiro}`)
+    //     fetchForm("/blog_retiro/update", da)
 
-    } else {
-        da.set("title_es", formData.Titulo)
-        da.set("title_en", formData.Titulo)
-        da.set("title_cat", formData.Titulo)
-        da.set("description_es", formData.Titulo)
-        da.set("description_en", formData.Titulo)
-        da.set("description_cat", formData.Titulo)
-        da.set("index", "1")
-        fetchForm("/blog_retiro/create", da)
-    }
-    setFormData({
-      Titulo: '',
-      Autor: '',
-      Fecha: new Date(),
-      day: 0,
-      Descripcion: '',
-      Estado: '',
-      archivo: null,
-    })
+    // } else {
+    //     da.set("index", "1")
+    //     console.log(1)
+    //     fetchForm("/blog_retiro/create", da)
+    // }
+    // setFormData({
+    //   Titulo_es: '',
+    //   Titulo_en: '',
+    //   Titulo_cat: '',
+    //   Autor: '',
+    //   Fecha: new Date(),
+    //   day: 0,
+    //   Descripcion_es: '',
+    //   Descripcion_en: '',
+    //   Descripcion_cat: '',
+    //   Estado: '',
+    //   archivo: null,
+    // })
+    // setImageURL("")
   };
+
+  useEffect(() => {
+    const api = async () => {
+        if (indexBlogRetiro == -1) return
+        const da = new FormData()
+        da.set("id", `${indexBlogRetiro}`)
+        const dat = {body: JSON.stringify(formDataToObject(da))}
+        fetchDefault("/blog_retiro/readbyid", dat, (d: tpDtmResponse) => {
+            if(!d.bag) return 
+            for (let index = 0; index < d.bag.length; index++) {
+              const element: {id: number , day: string, month: number, year: number, author: string, image: string, title_lang: {es: string, en: string , cat: string},  description_lang: {es: string, en: string , cat: string}, estado: string } = d.bag[index];
+              const r = "src/blog_retiro/";
+              let image: string[] =  JSON.parse(element.image)
+              for (let i = 0; i < image.length; i++) {
+                  image[i] = r + image[i]
+              }
+              const day: number[] = JSON.parse(JSON.parse(element.day))
+              const value = { 
+                  Titulo_es: element.title_lang.es,
+                  Titulo_en: element.title_lang.en,
+                  Titulo_cat: element.title_lang.cat,
+                  Autor: element.author,
+                  Fecha: new Date(`${element.month}-${element.year}-${element.day[0]}`),
+                  day: day[1],
+                  Descripcion_es: element.description_lang.es,
+                  Descripcion_en: element.description_lang.en,
+                  Descripcion_cat: element.description_lang.cat,
+                  Estado: element.estado,
+                  archivo: null,
+              }
+              setFormData(value);
+            }
+        }) 
+    };
+    api();
+        // eslint-disable-next-line
+}, []);
+
   return (
     <div className="FormularioRetiros">
     <NarbarAdmin></NarbarAdmin>
@@ -144,12 +203,29 @@ console.log(dataRetiro)
         onChange={handleFileChange}
       />
     </div>
+
     <div className="restInputs">
-      <label className='labelsCarrousel' form='Titulo'>Titulo</label>
+      <label className='labelsCarrousel' form='Titulo_es'>Titulo_es</label>
       <input className='inputsFormCarrousel'
         type="text"
-        name="Titulo"
-        value={formData.Titulo}
+        name="Titulo_es"
+        value={formData.Titulo_es}
+        onChange={handleInputChange}
+      />
+ 
+      <label className='labelsCarrousel' form='Titulo_en'>Titulo_en</label>
+      <input className='inputsFormCarrousel'
+        type="text"
+        name="Titulo_en"
+        value={formData.Titulo_en}
+        onChange={handleInputChange}
+      />
+ 
+      <label className='labelsCarrousel' form='Titulo_es'>Titulo_cat</label>
+      <input className='inputsFormCarrousel'
+        type="text"
+        name="Titulo_cat"
+        value={formData.Titulo_cat}
         onChange={handleInputChange}
       />
 
@@ -183,13 +259,30 @@ console.log(dataRetiro)
         onChange={handleInputChange}
       />
 
-      <label className='labelsCarrousel' form='Descripcion'>Descripcion</label>
+      <label className='labelsCarrousel' form='Descripcion_es'>Descripcion_es</label>
       <input className='inputsFormCarrousel'
         type="text"
-        name="Descripcion"
-        value={formData.Descripcion}
+        name="Descripcion_es"
+        value={formData.Descripcion_es}
         onChange={handleInputChange}
       />
+
+      <label className='labelsCarrousel' form='Descripcion_en'>Descripcion_en</label>
+      <input className='inputsFormCarrousel'
+        type="text"
+        name="Descripcion_en"
+        value={formData.Descripcion_en}
+        onChange={handleInputChange}
+      />
+
+      <label className='labelsCarrousel' form='Descripcion_cat'>Descripcion_cat</label>
+      <input className='inputsFormCarrousel'
+        type="text"
+        name="Descripcion_cat"
+        value={formData.Descripcion_cat}
+        onChange={handleInputChange}
+      />
+
       <label className='labelsCarrousel' form='Estado'>Estado</label>
       <input className='inputsFormCarrousel'
         type="text"
@@ -199,7 +292,7 @@ console.log(dataRetiro)
       />
 
       
-
+      
     </div>
   </form>
 

@@ -7,6 +7,7 @@ import { Read } from "../controllers/blog_retiro/Read";
 import { Delete } from "../controllers/blog_retiro/Delete";
 import { Update } from "../controllers/blog_retiro/Update";
 import { AddFile } from "../controllers/blog_retiro/AddFile";
+import { ReadById } from "../controllers/blog_retiro/ReadById";
 
 const app = Router()
 
@@ -14,9 +15,9 @@ app.post('/create', [security_post,
     check('title_es','El titulo en español es obligatorio').not().isEmpty(), 
     check('title_en','El titulo en ingles es obligatorio').not().isEmpty(), 
     check('title_cat','El titulo en catalan es obligatorio').not().isEmpty(), 
-    check('description_es','El titulo en español es obligatorio').not().isEmpty(), 
-    check('description_en','El titulo en ingles es obligatorio').not().isEmpty(), 
-    check('description_cat','El titulo en catalan es obligatorio').not().isEmpty(),  
+    check('description_es','La descripcion en español es obligatorio').not().isEmpty(), 
+    check('description_en','La descripcion en ingles es obligatorio').not().isEmpty(), 
+    check('description_cat','La descripcion en catalan es obligatorio').not().isEmpty(),  
     check('index', 'El indice es obligatorio').not().isEmpty(),
     check('day', 'El dia es obligatorio').not().isEmpty(),
     check('month', 'El mes es obligatorio').not().isEmpty(),
@@ -28,6 +29,11 @@ app.post('/create', [security_post,
 app.post('/read', [
     check('lang', 'El lenguaje es obligatorio').not().isEmpty()
     ], Read)
+
+app.post('/readbyid', [
+    check('id', 'El id es obligatorio').not().isEmpty()
+    ], ReadById)
+    
 
 app.post('/delete' , [security_post,
     check('id', 'El blog retiro a eliminar es olbigatorio').isNumeric()
