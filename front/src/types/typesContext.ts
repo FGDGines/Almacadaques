@@ -1,4 +1,5 @@
-import { AudioPlayerProps, RedProps, tpBlogInfo } from "./typesComponents"
+import { Colaborador } from "../data/colaboradores"
+import { AudioPlayerProps, RedProps, tpBlogInfo, tpCalendarEvent } from "./typesComponents"
 
 export enum enLanguageFlag {
     ES = "ES",
@@ -39,6 +40,10 @@ type GlobalContextType = {
     setDataRetiro: (data: tpBlogInfo | null) => void;
     dataPodcast: AudioPlayerProps | null,
     setDataPodcast: (data: AudioPlayerProps | null) => void;
+    dataEvent: tpCalendarEvent | null,
+    setDataEvent: (data: tpCalendarEvent | null) => void;
+    dataColaborador: Colaborador | null,
+    setDataColaborador: (data: Colaborador | null) => void;
 }
 
 export type {

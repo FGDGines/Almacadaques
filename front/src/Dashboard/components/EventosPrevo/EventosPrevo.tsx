@@ -7,10 +7,11 @@ import { tpCalendarEvent, tpDtmResponse } from "../../../types/typesComponents";
 import { fetchDefault } from "../../../helpers/Server";
 import { formDataToObject } from "../../../helpers/Forms";
 import { getToken } from "../../../helpers/JWT";
+import { title } from "process";
 
 function EventosPrevo() {
     const [data, setData] = useState<tpCalendarEvent[]>([]);
-    const { setIndexCalendarEvent, setLayoutID } = useContext(GlobalContext)
+    const { setIndexCalendarEvent, setLayoutID, setDataEvent } = useContext(GlobalContext)
 
     const handleDelete = (index: number) => {
         // elimina de la base de datos
@@ -29,7 +30,8 @@ function EventosPrevo() {
      
      
       
-    const edit = (index: number) => {
+    const edit = (index: number, data: tpCalendarEvent) => {
+        setDataEvent(data)
         setIndexCalendarEvent(index)
         setLayoutID(30)
     }
@@ -42,12 +44,11 @@ function EventosPrevo() {
         fetchDefault("/calendar_event/read", {}, (d: tpDtmResponse) => {
             if(!d.bag) return 
             for (let index = 0; index < d.bag.length; index++) {
-                const element: {id: number , title: string, inicio: string, final:string, descripcion: string, nombre: string, enlace: string, src: string } = d.bag[index];
+                const element: {id: number , titulo: string, inicio: string, final:string, descripcion: string, nombre: string, enlace: string, src: string } = d.bag[index];
                 const r = "src/calendar_event/";
-                console.log(r + element.src)
                 const value = { 
                     id: element.id,
-                    title: element.title,
+                    title: element.titulo,
                     colaborator_name: element.nombre,
                     colaborator_link: element.enlace,
                     description: element.descripcion,
@@ -73,7 +74,7 @@ function EventosPrevo() {
                         <div className="titleEventos">
                             <p className="titleDejarSoltar" >{event.title}</p>
                             <div className="editarContBienestar">
-                                <div className="paddinIcono" onClick={() => edit(event.id)}>
+                                <div className="paddinIcono" onClick={() => edit(event.id, event)}>
                                     <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" className="BtnEditarEvento" />
                                 </div>
                                 <div className="paddinIcono" onClick={() => handleDelete(event.id)}>

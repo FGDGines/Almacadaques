@@ -7,9 +7,10 @@ import { GlobalContext } from '../../../contexts/GlobalContext';
 import { useContext } from 'react';
 
 function AgendaAdmin() {
-  const { setLayoutID, setIndexCalendarEvent } = useContext(GlobalContext);
+  const { setLayoutID, setIndexCalendarEvent, setDataEvent } = useContext(GlobalContext);
 
   const add = () => {
+    setDataEvent(null)
     setIndexCalendarEvent(-1)
     setLayoutID(30)
   }

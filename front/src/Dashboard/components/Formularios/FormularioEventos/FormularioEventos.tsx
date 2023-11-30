@@ -20,7 +20,7 @@ interface FormData {
 
 
 function FormularioEventos() {
-    const { indexCalendarEvent, setLayoutID } = useContext(GlobalContext)
+    const { indexCalendarEvent, setLayoutID, dataEvent } = useContext(GlobalContext)
 
     function formatDate(date: Date): string {
         const year = date.getFullYear();
@@ -30,31 +30,35 @@ function FormularioEventos() {
     }
 
     const [formData, setFormData] = useState<FormData>({
-        Titulo: '',
-        Inicio: new Date(),
-        Final: new Date(),
-        Descripcion: '',
-        Nombre: '',
-        Url: '',
+        Titulo: dataEvent?.title || '',
+        Inicio: dataEvent?.start ? new Date(dataEvent.start) : new Date(),
+        Final: dataEvent?.end ? new Date(dataEvent.end) : new Date(),
+        Descripcion: dataEvent?.description || '',
+        Nombre: dataEvent?.colaborator_name || '',
+        Url: dataEvent?.colaborator_link || '',
         archivo: null
-    });
+    }); 
+    const [imageURL, setImageURL] = useState<string | null>(dataEvent?.src || null);
 
+  
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = event.target;
-        setFormData({
-            ...formData,
-            [name]: value,
-        });
+      const { name, value } = event.target;
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
     };
-
+  
     const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
-        const selectedFile = event.target.files?.[0] as File;
-        if (selectedFile) {
-            setFormData({
-                ...formData,
-                archivo: selectedFile,
-            });
-        }
+      const selectedFile = event.target.files?.[0] as File;
+  
+      if (selectedFile) {
+          setFormData({
+              ...formData,
+              archivo: selectedFile,
+          });
+      }
+      setImageURL(URL.createObjectURL(selectedFile));
     };
 
     const handleSubmit = () => {
@@ -87,6 +91,7 @@ function FormularioEventos() {
             Url: '',
             archivo: null
         })
+        setImageURL("")
     };
 
     return (
@@ -100,7 +105,7 @@ function FormularioEventos() {
                 <form className='formCarrousel'>
                     <div className="subirArchivos">
                         <label htmlFor="File" className='labelArchivo'>
-                        <img src="../../../../src/assets/Dashboard-almacadaques/inicio/nube.svg" alt="" />
+                        <img src={imageURL || ""} alt="Selected" />
                         <span className='arrastra'>Arrastra y suelta o <span>sube</span> </span>
                         <span className='formatos'>Supported formates: JPEG, PNG, GIF, MP4, PDF, PSD, AI, Word, PPT</span>
                         </label>

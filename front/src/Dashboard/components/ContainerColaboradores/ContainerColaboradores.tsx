@@ -11,7 +11,7 @@ import { tpDtmResponse } from '../../../types/typesComponents';
 function ContainerColaboradores() {
 
   const [data, setData] = useState<Colaborador[]>([]);
-  const { setIndexCollaborator, setLayoutID } = useContext(GlobalContext)
+  const { setIndexCollaborator, setLayoutID, setDataColaborador } = useContext(GlobalContext)
 
   const handleDeleteItemCarrusel = (index: number) => {
     // elimina de la base de datos
@@ -30,7 +30,8 @@ function ContainerColaboradores() {
  
  
   
-  const edit = (index: number) => {
+  const edit = (index: number, data: Colaborador) => {
+    setDataColaborador(data)
     setIndexCollaborator(index)
     setLayoutID(31)
   }
@@ -73,7 +74,7 @@ function ContainerColaboradores() {
               <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg" alt="" className="IconEditarColaboradores"/>
               <p className="TitleBtnEditarColaborador">Eliminar</p>
             </div>
-            <div className="IconoEditarColaboradores" onClick={() => edit(colaborador.id)}>
+            <div className="IconoEditarColaboradores" onClick={() => edit(colaborador.id, colaborador)}>
               <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" className="IconEditarColaboradores" />
               <p className="TitleBtnEditarColaborador">Editar</p>
             </div>

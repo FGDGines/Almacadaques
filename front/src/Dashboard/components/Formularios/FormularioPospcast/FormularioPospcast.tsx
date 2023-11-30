@@ -97,6 +97,7 @@ function FormularioPospcast() {
       Url: '',
       archivo: null,
     })
+    setImageURL("")
   };
 
   return (

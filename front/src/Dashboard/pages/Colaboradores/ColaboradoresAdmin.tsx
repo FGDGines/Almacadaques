@@ -7,9 +7,10 @@ import { useContext } from 'react';
 
 
 function ColaboradoresAdmin() {
-  const { setLayoutID, setIndexCollaborator } = useContext(GlobalContext);
+  const { setLayoutID, setIndexCollaborator, setDataColaborador } = useContext(GlobalContext);
   
   const add = () => {
+    setDataColaborador(null)
     setIndexCollaborator(-1)
     setLayoutID(31)
   }

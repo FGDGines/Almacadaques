@@ -18,34 +18,37 @@ interface FormData {
 
 
 function FormularioColaboradores() {
-    const [formData, setFormData] = useState<FormData>({
+    const { indexCollaborator, setLayoutID, dataColaborador } = useContext(GlobalContext)
 
-        Nombre: '',
-        Cargo: '',
-        Descripcion: '',
-        Contacto: '',
+    const [formData, setFormData] = useState<FormData>({
+        Nombre: dataColaborador?.nombre || '',
+        Cargo: dataColaborador?.cargo || '',
+        Descripcion: dataColaborador?.descripcion || '',
+        Contacto: dataColaborador?.contacto || '',
         archivo: null,
     });
 
-    const { indexCollaborator, setLayoutID } = useContext(GlobalContext)
+    const [imageURL, setImageURL] = useState<string | null>(dataColaborador?.imagen || null);
 
+  
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-        const { name, value } = event.target;
-        setFormData({
-            ...formData,
-            [name]: value,
-        });
+      const { name, value } = event.target;
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
     };
-
+  
     const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
-        const selectedFile = event.target.files?.[0] as File;
-
-        if (selectedFile) {
-            setFormData({
-                ...formData,
-                archivo: selectedFile,
-            });
-        }
+      const selectedFile = event.target.files?.[0] as File;
+  
+      if (selectedFile) {
+          setFormData({
+              ...formData,
+              archivo: selectedFile,
+          });
+      }
+      setImageURL(URL.createObjectURL(selectedFile));
     };
 
     const handleSubmit = () => {
@@ -96,7 +99,7 @@ function FormularioColaboradores() {
                 <form className='formCarrousel'>
                     <div className="subirArchivos">
                         <label htmlFor="File" className='labelArchivo'>
-                            <img src="../../../../src/assets/Dashboard-almacadaques/inicio/nube.svg" alt="" />
+                        <img src={imageURL || ""} alt="Selected" />
                             <span className='arrastra'>Arrastra y suelta o <span>sube</span> </span>
                             <span className='formatos'>Supported formates: JPEG, PNG, GIF, MP4, PDF, PSD, AI, Word, PPT</span>
                         </label>
