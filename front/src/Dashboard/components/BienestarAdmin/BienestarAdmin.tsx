@@ -39,15 +39,16 @@ function BienestarAdmin() {
         fetchDefault("/text_libro/read", {}, (d: tpDtmResponse) => {
             if(!d.bag) return 
             for (let index = 0; index < d.bag.length; index++) {
-            const element: {id: number , content: string, title: string, subtitle: string, imagen_src: string} = d.bag[index];
-            const r = "src/text_libro/";
-            textLibros.push({
-                id: element.id,
-                title: element.title,
-                subtitle: element.subtitle,
-                content: element.content,
-                imagenSrc: r + element.imagen_src
-                });
+                const element: {id: number , content: string, title: string, subtitle: string, imagen_src: string} = d.bag[index];
+                const content = element.content ? JSON.parse(JSON.parse(element.content)) : []
+                const r = "src/text_libro/";
+                textLibros.push({
+                    id: element.id,
+                    title: element.title,
+                    subtitle: element.subtitle,
+                    content: content,
+                    imagenSrc: r + element.imagen_src
+                    });
             }
             setData(textLibros);
         }) 

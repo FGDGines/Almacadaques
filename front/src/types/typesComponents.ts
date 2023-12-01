@@ -165,7 +165,7 @@ type tpTextLibro = {
     id: number;
     title: string;
     subtitle: string;
-    content: string;
+    content: string[];
     imagenSrc: string;
 }
 

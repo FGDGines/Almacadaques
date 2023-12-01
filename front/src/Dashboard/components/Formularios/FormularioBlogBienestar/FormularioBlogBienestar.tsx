@@ -11,7 +11,6 @@ import { getToken } from '../../../../helpers/JWT';
 
 interface FormData {
     Titulo: string;
-    Contenido: string;
     Subtitulo: string;
     archivo: File | null;
 }
@@ -26,7 +25,6 @@ function FormularioBlogBienestar() {
     const [formData, setFormData] = useState<FormData>({
 
         Titulo: dataText?.title || '',
-        Contenido: dataText?.content || '',
         Subtitulo: dataText?.subtitle || '',
         archivo: null,
     });
@@ -78,7 +76,6 @@ function FormularioBlogBienestar() {
         }
         setFormData({
             Titulo: '',
-            Contenido: '',
             Subtitulo: '',
             archivo: null,
         }) 
@@ -110,7 +107,7 @@ function FormularioBlogBienestar() {
 
     useEffect(() => {
         const api = () => { 
-            const d = dataText?.content ? JSON.parse(JSON.parse(dataText?.content)) : []
+            const d = dataText?.content ? dataText.content : []
             setEditors(d)
         };
         api();
