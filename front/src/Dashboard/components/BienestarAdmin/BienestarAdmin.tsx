@@ -9,7 +9,7 @@ import { formDataToObject } from "../../../helpers/Forms";
 
 
 function BienestarAdmin() {
-    const { setLayoutID, setIndexTextLibro } = useContext(GlobalContext);
+    const { setLayoutID, setIndexTextLibro,  setDataText } = useContext(GlobalContext);
     const [data, setData] = useState<tpTextLibro[]>([]);
 
 
@@ -27,7 +27,8 @@ function BienestarAdmin() {
         })
     }
 
-    const edit = (id: number) => {
+    const edit = (id: number, data: tpTextLibro) => {
+        setDataText(data)
         setIndexTextLibro(id)
         setLayoutID(32)
     }
@@ -43,8 +44,8 @@ function BienestarAdmin() {
             textLibros.push({
                 id: element.id,
                 title: element.title,
-                subtitle: element.title,
-                content: element.subtitle,
+                subtitle: element.subtitle,
+                content: element.content,
                 imagenSrc: r + element.imagen_src
                 });
             }
@@ -61,7 +62,7 @@ function BienestarAdmin() {
         {data.map((item, index) => (
             <div key={index} className='BienestarAdmin'>
                 <div className="editarContBienestar">
-                    <div className="accionEditar" onClick={() => edit(item.id)}>
+                    <div className="accionEditar" onClick={() => edit(item.id, item)}>
                         <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" />
                         <p className="TextAcciones">Editar</p>
                     </div>

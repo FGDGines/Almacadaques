@@ -8,11 +8,12 @@ import { useContext } from 'react';
 
 
 const BlogBienestar = () => {
-  const { setLayoutID, setIndexTextLibro } = useContext(GlobalContext);
+  const { setLayoutID, setIndexTextLibro, setDataText } = useContext(GlobalContext);
 
   const add = () => {
-      setIndexTextLibro(-1)
-      setLayoutID(32)
+    setDataText(null)
+    setIndexTextLibro(-1)
+    setLayoutID(32)
   }
 
   return (

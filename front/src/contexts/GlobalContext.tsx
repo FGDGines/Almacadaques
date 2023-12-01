@@ -1,6 +1,6 @@
 import { FC, createContext, useState } from "react";
 import { Colaborador } from "../data/colaboradores";
-import { AudioPlayerProps, RedProps, tpBlogInfo, tpCalendarEvent } from "../types/typesComponents";
+import { AudioPlayerProps, RedProps, tpBlogInfo, tpCalendarEvent, tpTextLibro } from "../types/typesComponents";
 import { GlobalContextType, enLanguageFlag } from "../types/typesContext";
 
 export const GlobalContext = createContext<GlobalContextType>({
@@ -39,7 +39,9 @@ export const GlobalContext = createContext<GlobalContextType>({
     dataEvent: null,
     setDataEvent() {},
     dataColaborador: null,
-    setDataColaborador() {}
+    setDataColaborador() {},
+    dataText: null,
+    setDataText() {}
 })
 
 export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -61,6 +63,7 @@ export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ child
     const [ dataPodcast, setDataPodcast ] = useState<AudioPlayerProps | null>(null);
     const [ dataEvent, setDataEvent ] = useState<tpCalendarEvent | null>(null); 
     const [ dataColaborador, setDataColaborador ] = useState<Colaborador | null>(null); 
+    const [ dataText, setDataText ] = useState<tpTextLibro | null>(null); 
 
 
     const setUpOrDown = (arg: boolean) => {
@@ -122,7 +125,9 @@ export const GlobalContextProvider: FC<{ children: React.ReactNode }> = ({ child
                 dataEvent,
                 setDataEvent,
                 dataColaborador,
-                setDataColaborador
+                setDataColaborador,
+                dataText,
+                setDataText
             }
         }>
         {children}

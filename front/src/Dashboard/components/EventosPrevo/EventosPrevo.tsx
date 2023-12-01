@@ -7,7 +7,6 @@ import { tpCalendarEvent, tpDtmResponse } from "../../../types/typesComponents";
 import { fetchDefault } from "../../../helpers/Server";
 import { formDataToObject } from "../../../helpers/Forms";
 import { getToken } from "../../../helpers/JWT";
-import { title } from "process";
 
 function EventosPrevo() {
     const [data, setData] = useState<tpCalendarEvent[]>([]);
