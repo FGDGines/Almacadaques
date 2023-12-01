@@ -166,15 +166,23 @@ function FormularioBlogBienestar() {
                                 <div>
                         {editors.map((editorData, index) => (
                             <div key={index}>
-                            <CKEditor
-                                editor={ClassicEditor}
-                                data={editorData}
-                                onChange={(_event: any, editor: { getData: () => string; }) => handleEditorChange(index, editor)}
-                            />
-                            <button type="button" onClick={() => removeEditor(index)}>Remove</button>
+                                <CKEditor
+                                    editor={ClassicEditor}
+                                    data={editorData}
+                                    onChange={(_event: any, editor: { getData: () => string; }) => handleEditorChange(index, editor)}
+                                />
+                                <div className="accionEliminar"onClick={() => removeEditor(index)}>
+                                    <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg" alt="" />
+                                    <p className="TextAcciones">Eliminar</p>
+                                </div>
                             </div>
                         ))}
-                        <button type="button" onClick={addEditor}>Add Editor</button>
+                        <div className='Buton'>
+                                <p className='EnlaceBton' onClick={addEditor}>
+                                    <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/mingcute_add-line.svg" alt="" className='Img+' />
+                                    Agregar
+                                </p>
+                            </div>
                         </div>
                             </div>
 
