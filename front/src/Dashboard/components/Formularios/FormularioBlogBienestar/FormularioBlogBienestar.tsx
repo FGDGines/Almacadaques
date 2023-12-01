@@ -81,8 +81,7 @@ function FormularioBlogBienestar() {
             Contenido: '',
             Subtitulo: '',
             archivo: null,
-        })
-        setEditorData('')
+        }) 
         setImageURL('')
     };
     
@@ -172,10 +171,10 @@ function FormularioBlogBienestar() {
                                 data={editorData}
                                 onChange={(_event: any, editor: { getData: () => string; }) => handleEditorChange(index, editor)}
                             />
-                            <button onClick={() => removeEditor(index)}>Remove</button>
+                            <button type="button" onClick={() => removeEditor(index)}>Remove</button>
                             </div>
                         ))}
-                        <button onClick={addEditor}>Add Editor</button>
+                        <button type="button" onClick={addEditor}>Add Editor</button>
                         </div>
                             </div>
 
