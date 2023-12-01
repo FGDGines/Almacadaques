@@ -5,6 +5,7 @@
     display: flex;
     position: absolute;
     top: 0;
+    overflow-x: scroll;
   }
   .contenidoFormCarrousel {
     width: 91vw;
@@ -141,3 +142,9 @@
     line-height: normal;
   }
   
+
+.restInputs {
+  overflow-x: scroll;
+  height: 700px;
+  width: 400px;
+}
