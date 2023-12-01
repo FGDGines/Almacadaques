@@ -21,7 +21,11 @@ function FormularioBlogBienestar() {
     const { indexTextLibro, setLayoutID, dataText } = useContext(GlobalContext)
     const [editorData, setEditorData] = useState(dataText?.content);
     const [imageURL, setImageURL] = useState<string | null>(dataText?.imagenSrc || null);
-console.log(dataText)
+
+    let image: string[] =  JSON.parse(dataText?.content || "")
+    console.log(image)
+    const [editors, setEditors] = useState<string[]>([]);
+
     const [formData, setFormData] = useState<FormData>({
 
         Titulo: dataText?.title || '',
@@ -30,23 +34,14 @@ console.log(dataText)
         archivo: null,
     });
 
-    // eslint-disable-next-line no-unused-vars
-    const handleEditorChange = (
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        _event: any,
-        editor: { getData: () => string }
-    ) => {
-        const data = editor.getData();
-        setEditorData(data);
-    };
-
+    
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
         setFormData({
           ...formData,
           [name]: value,
         });
-      };
+    };
     
       const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
         const selectedFile = event.target.files?.[0] as File;
@@ -58,7 +53,7 @@ console.log(dataText)
             });
         }
         setImageURL(URL.createObjectURL(selectedFile));
-      };
+    };
 
     const handleSubmit = () => {
         const da = new FormData()
@@ -66,7 +61,7 @@ console.log(dataText)
             da.append("title", formData.Titulo)
         }
         if (editorData) {
-            da.append("content", editorData)
+            da.append("content", JSON.stringify(editors))
         }
         if (formData.Subtitulo) {
             da.append("subtitle", formData.Subtitulo)
@@ -93,9 +88,30 @@ console.log(dataText)
         setEditorData('')
         setImageURL('')
     };
+    
+  
+    const handleEditorChange = (index: number, editor: { getData: () => string }) => {
+        setEditors(prevEditors => {
+            const newEditors = [...prevEditors];
+            newEditors[index] = editor.getData();
+            return newEditors;
+        });
+    };
+
+
+    const addEditor = () => {
+        const t = [
+            ...editors,
+            ""
+        ]
+        setEditors(t);
+    };
+
  
-
-
+    const removeEditor = (index: number) => {
+        setEditors(prevEditors => prevEditors.filter((_, i) => i !== index));
+    }
+ 
     return (
         <div className='FormularioBlogBienestar'>
             <div className='FormularioColaboradores'>
@@ -117,6 +133,9 @@ console.log(dataText)
                                 onChange={handleFileChange}
                             />
                         </div>
+
+                        
+
                         <div className="restInputs">
                             <label className='labelsCarrousel' form='Titulo'>Titulo</label>
                             <input className='inputsFormCarrousel'
@@ -133,14 +152,25 @@ console.log(dataText)
                                 value={formData.Subtitulo}
                                 onChange={handleInputChange}
                             />
+                            
+                            
 
                             <div className="editordeLibroFormulario">
                                 {/* Agrega el componente CKEditor aquí */}
-                                <CKEditor
-                                    editor={ClassicEditor}
-                                    data={editorData}
-                                    onChange={(event, editor) => handleEditorChange(event, editor)}
-                                />
+                                
+                                <div>
+                        {editors.map((editorData, index) => (
+                            <div key={index}>
+                            <CKEditor
+                                editor={ClassicEditor}
+                                data={editorData}
+                                onChange={(_event: any, editor: { getData: () => string; }) => handleEditorChange(index, editor)}
+                            />
+                            <button onClick={() => removeEditor(index)}>Remove</button>
+                            </div>
+                        ))}
+                        <button onClick={addEditor}>Add Editor</button>
+                        </div>
                             </div>
 
 
