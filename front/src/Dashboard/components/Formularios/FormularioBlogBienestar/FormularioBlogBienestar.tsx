@@ -1,7 +1,7 @@
 import './FormularioBlogBienestar.css'
 import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import { BarSession } from '../../barSession/barSession';
-import { useState, ChangeEvent, useContext } from 'react';
+import { useState, ChangeEvent, useContext, useEffect } from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { fetchForm } from '../../../../helpers/Server';
@@ -19,11 +19,8 @@ interface FormData {
 
 function FormularioBlogBienestar() {
     const { indexTextLibro, setLayoutID, dataText } = useContext(GlobalContext)
-    const [editorData, setEditorData] = useState(dataText?.content);
+    // const [editorData, setEditorData] = useState(dataText?.content);
     const [imageURL, setImageURL] = useState<string | null>(dataText?.imagenSrc || null);
-
-    let image: string[] =  JSON.parse(dataText?.content || "")
-    console.log(image)
     const [editors, setEditors] = useState<string[]>([]);
 
     const [formData, setFormData] = useState<FormData>({
@@ -34,7 +31,7 @@ function FormularioBlogBienestar() {
         archivo: null,
     });
 
-    
+    // console.log(JSON.parse(JSON.parse(dataText?.content)))
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
         setFormData({
@@ -60,7 +57,7 @@ function FormularioBlogBienestar() {
         if (formData.Titulo) {
             da.append("title", formData.Titulo)
         }
-        if (editorData) {
+        if (editors.length > 0) {
             da.append("content", JSON.stringify(editors))
         }
         if (formData.Subtitulo) {
@@ -111,6 +108,15 @@ function FormularioBlogBienestar() {
     const removeEditor = (index: number) => {
         setEditors(prevEditors => prevEditors.filter((_, i) => i !== index));
     }
+
+    useEffect(() => {
+        const api = () => { 
+            const d = dataText?.content ? JSON.parse(JSON.parse(dataText?.content)) : []
+            setEditors(d)
+        };
+        api();
+            // eslint-disable-next-line
+    }, []);
  
     return (
         <div className='FormularioBlogBienestar'>
