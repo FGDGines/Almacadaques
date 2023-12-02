@@ -106,7 +106,6 @@ function FormularioRetiros() {
       if (formData.day) {
         day = formData.day
       }
-      console.log(sd[0], sd[1], sd[2])
       da.append("day", `[${sd[0]}, ${day}]`)
       da.append("month", `${sd[1]}`)
       da.append("year", `${sd[2]}`)
@@ -138,20 +137,20 @@ function FormularioRetiros() {
         da.set("index", "1")
         fetchForm("/blog_retiro/create", da)
     }
-    // setFormData({
-    //   Titulo_es: '',
-    //   Titulo_en: '',
-    //   Titulo_cat: '',
-    //   Autor: '',
-    //   Fecha: new Date(),
-    //   day: 0,
-    //   Descripcion_es: '',
-    //   Descripcion_en: '',
-    //   Descripcion_cat: '',
-    //   Estado: '',
-    //   archivo: null,
-    // })
-    // setImageURL("")
+    setFormData({
+      Titulo_es: '',
+      Titulo_en: '',
+      Titulo_cat: '',
+      Autor: '',
+      Fecha: new Date(),
+      day: 0,
+      Descripcion_es: '',
+      Descripcion_en: '',
+      Descripcion_cat: '',
+      Estado: '',
+      archivo: null,
+    })
+    setImageURL("")
   };
 
   useEffect(() => {
@@ -171,10 +170,6 @@ function FormularioRetiros() {
               }
               const day: number[] = JSON.parse(JSON.parse(element.day))
               
-              const day1 = element.day[0].toString().padStart(2, '0');
-              const month = (element.month).toString().padStart(2, '0'); // Restamos 1 si los meses están en el rango 1-12
-              const year = element.year;
-
               const date = new Date(`${element.year}-${element.month}-${day[0]}`);
 
               const value = { 
@@ -190,7 +185,6 @@ function FormularioRetiros() {
                   Estado: element.estado,
                   archivo: null,
               }
-              console.log(formData.Fecha, `${element.year}-${element.month}-${element.day}`)
               setFormData(value);
             }
         }) 
