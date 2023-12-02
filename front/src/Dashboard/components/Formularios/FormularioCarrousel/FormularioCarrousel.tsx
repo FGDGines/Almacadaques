@@ -103,6 +103,7 @@ export const FormularioCarrousel = () => {
                 if(!d.bag) return 
                 for (let index = 0; index < d.bag.length; index++) {
                     const element: {id: number , autor: string  , link_autor: string, src:string, data_carousel: {es: string, en: string , cat: string} } = d.bag[index];
+                    const r = "src/carousel/";
                     const value = { 
                         Frase_es: element.data_carousel.es,
                         Frase_en: element.data_carousel.en,
@@ -111,7 +112,7 @@ export const FormularioCarrousel = () => {
                         Url: element.link_autor,
                         archivo: null
                     } 
-                    setImageURL(element.src)
+                    setImageURL(r + element.src)
                     setFormData(value);
                 }
             }) 
