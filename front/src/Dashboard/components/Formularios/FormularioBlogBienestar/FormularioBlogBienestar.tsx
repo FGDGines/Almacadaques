@@ -131,7 +131,7 @@ function FormularioBlogBienestar() {
                     <form className='formCarrousel'>
                         <div className="subirArchivos">
                             <label htmlFor="File" className='labelArchivo'>
-                                <img src={imageURL || ""} alt="Selected" />
+                                <img src={imageURL || ""}  className="img" alt="Selected" />
                                 <span className='arrastra'>Arrastra y suelta o <span>sube</span> </span>
                                 <span className='formatos'>Supported formates: JPEG, PNG, GIF, MP4, PDF, PSD, AI, Word, PPT</span>
                             </label>
