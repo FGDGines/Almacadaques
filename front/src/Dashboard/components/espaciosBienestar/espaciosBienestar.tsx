@@ -9,6 +9,12 @@ import { tpDtmResponse, tpTimeLineData } from '../../../types/typesComponents';
 import { fetchDefault } from '../../../helpers/Server';
 import { getToken } from '../../../helpers/JWT';
 
+
+import delImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg"
+import edtImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
+import checksImg from "../../../../src/assets/Dashboard-almacadaques/inicio/checks.svg"
+import a from "../../../../src/assets/Dashboard-almacadaques/iconBtn/mingcute_add-line.svg"
+
 export const EspaciosBienestar = () => {
     const { setLayoutID, setIndexEspacio } = useContext(GlobalContext);
     const { languageFlag } = useContext(GlobalContext)
@@ -75,7 +81,7 @@ export const EspaciosBienestar = () => {
                 <h2>Espacios de Bienestar</h2>
                 <div className='Buton'>
                     <a href="#" className='EnlaceBton' onClick={add}>
-                        <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/mingcute_add-line.svg" alt="" className='Img+' />
+                        <img src={a} alt="" className='Img+' />
                         Agregar
                     </a>
                 </div>
@@ -91,15 +97,15 @@ export const EspaciosBienestar = () => {
 
                     {data.map((item) => (
                         <div key={item.id} className="itemsBienestar">
-                            <img src="../../../../src/assets/Dashboard-almacadaques/inicio/checks.svg" alt="" className="iconoBienestar" />
+                            <img src={checksImg} alt="" className="iconoBienestar" />
                             <p className="fraseBienestar">{item.text}</p>
                             <div className="iconosAcciones">
                                 <div className="accionEditar" onClick={() => edit(item.id)}>
-                                    <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" />
+                                    <img src={edtImg} alt="" />
                                     <p className="TextAcciones">Editar</p>
                                 </div>
                                 <div className="accionEliminar" onClick={() => handleEliminar(item.id)}>
-                                    <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg" alt="" />
+                                    <img src={delImg} alt="" />
                                     <p className="TextAcciones">Eliminar</p>
                                 </div>
                             </div>

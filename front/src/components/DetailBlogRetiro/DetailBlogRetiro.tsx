@@ -2,6 +2,9 @@ import { useEffect} from "react";
 import Splide from '@splidejs/splide';
 import './DetailBlogRetiro.css';
 
+import closeImg from "../../../src/assets/images/cerrar.png"
+
+
 interface Retiro {
     index: number;
     day: number | number[];
@@ -75,7 +78,7 @@ function DetailBlogRetiro({ retiro, onClose }: DetailBlogRetiroProps) {
         <div className="previRetiro">
             <div className="ctPreviRetiro">
                 <div className="closePreviRetiro" onClick={onClose}>
-                    <img src="../../../src/assets/images/cerrar.png" alt="Cerrar" />
+                    <img src={closeImg} alt="Cerrar" />
                 </div>
 
                 <section className="splide" aria-label="Ejemplo HTML básico de Splide">

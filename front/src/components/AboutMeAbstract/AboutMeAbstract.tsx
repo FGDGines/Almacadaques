@@ -1,6 +1,8 @@
 import NavButton from "../NavButton/NavButton";
 import "./AboutMeAbstract.css";
 
+import u from "../../../src/assets/background/3.foto.jpg"
+
 const AboutMeAbstract = () => {
   return (
     <div className="AboutMeAbstract">
@@ -27,7 +29,7 @@ const AboutMeAbstract = () => {
         </p>
 
         <div className="coach">
-          <img src="./src/assets/background/unnamed (2).jpg" alt="" />
+          <img src={u} alt="" />
           <h3>Elizabet Coll-Vinent Puig</h3>
           <p>Coach de vida y bienestar</p>
         </div>

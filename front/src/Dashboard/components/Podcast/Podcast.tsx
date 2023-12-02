@@ -6,6 +6,14 @@ import { fetchDefault } from '../../../helpers/Server';
 import { GlobalContext } from '../../../contexts/GlobalContext';
 import { getToken } from '../../../helpers/JWT';
 
+
+
+
+
+import delImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg"
+import edtImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
+
+
 function Podcast() {
   const [ data, setData ] = useState<AudioPlayerProps[]>([])
   const { setLayoutID, setIndexPodcast, setDataPodcast } = useContext(GlobalContext);
@@ -63,11 +71,11 @@ function Podcast() {
 
         <div className="editarContBienestar">
           <div className="accionEliminar" onClick={() => handleDelete(podcast.id)}>
-            <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg" alt="" className="IconEditarColaboradores"/>
+            <img src={delImg} alt="" className="IconEditarColaboradores"/>
             <p className="TitleBtnEditarColaborador">Eliminar</p>
           </div>
           <div className="IconoEditarPodcast" onClick={() => edit(podcast.id, podcast)}>
-            <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" className="IconEditarPodcast" />
+            <img src={edtImg} alt="" className="IconEditarPodcast" />
             <p className="TitleBtnEditarColaborador">Editar</p>
           </div>
         </div>

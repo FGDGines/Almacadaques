@@ -6,6 +6,10 @@ import { textos } from "../../data/textos";
 import { GlobalContext } from "../../contexts/GlobalContext";
 import { useContext } from "react";
 
+
+import nextImg from "../../../src/assets/images/siguiente-boton.png"
+
+
 type PoliticasAbiertasType = {
   [key: string]: boolean;
 };
@@ -32,7 +36,7 @@ function PoliticayPrivacidad() {
           <div className={`buttonPlitica ${politicasAbiertas['1'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('1')} >
             <div className="imgPolitica">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`} />
+              <img src={nextImg} alt="Icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`} />
             </div>
             <h4>{textos[languageFlag].textosI}</h4>
           </div>
@@ -46,7 +50,7 @@ function PoliticayPrivacidad() {
           <div className={`buttonPlitica ${politicasAbiertas['2'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('2')} >
             <div className="imgPolitica">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['2'] ? 'rotated' : ''}`} />
+              <img src={nextImg} alt="Icono" className={`imagen ${politicasAbiertas['2'] ? 'rotated' : ''}`} />
             </div>
             <h4>{textos[languageFlag].textosII}</h4>
           </div>
@@ -62,7 +66,7 @@ function PoliticayPrivacidad() {
           <div className={`buttonPlitica ${politicasAbiertas['3'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('3')} >
             <div className="imgPolitica">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['3'] ? 'rotated' : ''}`} />
+              <img src={nextImg} alt="Icono" className={`imagen ${politicasAbiertas['3'] ? 'rotated' : ''}`} />
             </div>
             <h4>{textos[languageFlag].textosIII}</h4>
           </div>
@@ -83,7 +87,7 @@ function PoliticayPrivacidad() {
           <div className={`buttonPlitica ${politicasAbiertas['4'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('4')} >
             <div className="imgPolitica">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['4'] ? 'rotated' : ''}`} />
+              <img src={nextImg} alt="Icono" className={`imagen ${politicasAbiertas['4'] ? 'rotated' : ''}`} />
             </div>
             <h4>{textos[languageFlag].textosIV}</h4>
           </div>
@@ -96,7 +100,7 @@ function PoliticayPrivacidad() {
           <div className={`buttonPlitica ${politicasAbiertas['5'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('5')} >
             <div className="imgPolitica">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['5'] ? 'rotated' : ''}`} />
+              <img src={nextImg} alt="Icono" className={`imagen ${politicasAbiertas['5'] ? 'rotated' : ''}`} />
             </div>
             <h4>{textos[languageFlag].textosV}</h4>
           </div>
@@ -118,7 +122,7 @@ function PoliticayPrivacidad() {
           <div className={`buttonPlitica ${politicasAbiertas['6'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('6')} >
             <div className="imgPolitica">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['6'] ? 'rotated' : ''}`} />
+              <img src={nextImg} alt="Icono" className={`imagen ${politicasAbiertas['6'] ? 'rotated' : ''}`} />
             </div>
             <h4>{textos[languageFlag].textosVI}</h4>
           </div>
@@ -135,7 +139,7 @@ function PoliticayPrivacidad() {
           <div className={`buttonPlitica ${politicasAbiertas['7'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('7')} >
             <div className="imgPolitica">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['7'] ? 'rotated' : ''}`} />
+              <img src={nextImg} alt="Icono" className={`imagen ${politicasAbiertas['7'] ? 'rotated' : ''}`} />
             </div>
             <h4>{textos[languageFlag].textosVII}</h4>
           </div>
@@ -150,7 +154,7 @@ function PoliticayPrivacidad() {
           <div className={`buttonPlitica ${politicasAbiertas['8'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('8')} >
             <div className="imgPolitica">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['8'] ? 'rotated' : ''}`} />
+              <img src={nextImg} alt="Icono" className={`imagen ${politicasAbiertas['8'] ? 'rotated' : ''}`} />
             </div>
             <h4>{textos[languageFlag].textosVIII}</h4>
           </div>
@@ -167,7 +171,7 @@ function PoliticayPrivacidad() {
           <div className={`buttonPlitica ${politicasAbiertas['9'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('9')} >
             <div className="imgPolitica">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['9'] ? 'rotated' : ''}`} />
+              <img src={nextImg} alt="Icono" className={`imagen ${politicasAbiertas['9'] ? 'rotated' : ''}`} />
             </div>
             <h4>{textos[languageFlag].textosIX}</h4>
           </div>
@@ -186,7 +190,7 @@ function PoliticayPrivacidad() {
           <div className={`buttonPlitica ${politicasAbiertas['10'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('10')} >
             <div className="imgPolitica">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['10'] ? 'rotated' : ''}`} />
+              <img src={nextImg} alt="Icono" className={`imagen ${politicasAbiertas['10'] ? 'rotated' : ''}`} />
             </div>
             <h4>{textos[languageFlag].textosX}</h4>
           </div>
@@ -219,7 +223,7 @@ function PoliticayPrivacidad() {
           <div className={`buttonPlitica ${politicasAbiertas['11'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('11')} >
             <div className="imgPolitica">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['11'] ? 'rotated' : ''}`} />
+              <img src={nextImg} alt="Icono" className={`imagen ${politicasAbiertas['11'] ? 'rotated' : ''}`} />
             </div>
             <h4>{textos[languageFlag].textosXI}</h4>
           </div>
@@ -235,7 +239,7 @@ function PoliticayPrivacidad() {
           <div className={`buttonPlitica ${politicasAbiertas['12'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('12')}>
             <div className="imgPolitica">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="Icono" className={`imagen ${politicasAbiertas['12'] ? 'rotated' : ''}`} />
+              <img src={nextImg} alt="Icono" className={`imagen ${politicasAbiertas['12'] ? 'rotated' : ''}`} />
             </div>
 
             <h4>{textos[languageFlag].textosXII}</h4>

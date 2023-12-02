@@ -6,6 +6,7 @@ import { BtnMas } from "../BtnMas/BtnMas";
 import { GlobalContext } from '../../../contexts/GlobalContext'; 
 import { useContext } from 'react';
 
+import userImg from '../../../../src/assets/Dashboard-almacadaques/users/user.svg'
 
 const BlogBienestar = () => {
   const { setLayoutID, setIndexTextLibro, setDataText } = useContext(GlobalContext);
@@ -20,7 +21,7 @@ const BlogBienestar = () => {
     <div className="BlogBienestar">
       <NarbarAdmin />
       <div className="containerBlogBienestar">
-        <BarSession tituloVista='Blog' segundoTitulo='Tips Bienestar' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
+        <BarSession tituloVista='Blog' segundoTitulo='Tips Bienestar' nombre='Kristine' img={userImg} />
         <div className="editordeLibro">
           <BienestarAdmin />
         </div>

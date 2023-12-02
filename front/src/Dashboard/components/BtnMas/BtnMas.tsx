@@ -1,9 +1,10 @@
 import "./BtnMas.css"
 
+import a from "../../../../src/assets/Dashboard-almacadaques/iconBtn/mingcute_add-line.svg"
 function BtnMas() {
   return (
     <div className="BtnMas">
-        <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/mingcute_add-line.svg" alt="" className="ImgColaboradoresAdmin"/>
+        <img src={a} alt="" className="ImgColaboradoresAdmin"/>
     </div>
   )
 }

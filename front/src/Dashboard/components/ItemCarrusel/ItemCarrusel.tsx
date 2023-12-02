@@ -11,6 +11,12 @@ import { getToken } from '../../../helpers/JWT';
 import { BtnMasAgregar } from '../BtnMasAgregar/BtnMasAgregar';
 
 
+
+import delImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg"
+import edtImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
+import leftImg from "../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/left.svg"
+import rightImg from "../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/right.svg"
+
 interface ContentItem {
   src: string;
   alt: string;
@@ -137,8 +143,8 @@ export const ItemCarrusel: React.FC<BtnMasAgregarProps> = () => {
           <BtnMasAgregar direccion={29}></BtnMasAgregar>
         </div>
         <div className="botonesCarrusel">
-          <i className='left'><img src="../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/left.svg" alt="Left" /></i>
-          <i className='right'><img src="../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/right.svg" alt="Right" /></i>
+          <i className='left'><img src={leftImg} alt="Left" /></i>
+          <i className='right'><img src={rightImg} alt="Right" /></i>
         </div>
       </div>
 
@@ -154,10 +160,10 @@ export const ItemCarrusel: React.FC<BtnMasAgregarProps> = () => {
                     <img src={contentItem.src} alt={contentItem.alt} />
                     <div className="iconosItems">
                       <i onClick={() => handleDeleteItemCarrusel(item.index)}>
-                        <img src="../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/Borrar.svg" alt="Borrar" />
+                        <img src={delImg} alt="Borrar" />
                       </i>
                       <i  onClick={() => edit(item.index)} >
-                        <img src="../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/Editar.svg" alt="Editar" />
+                        <img src={edtImg} alt="Editar" />
                       </i>
                     </div>
                   </>
@@ -166,10 +172,10 @@ export const ItemCarrusel: React.FC<BtnMasAgregarProps> = () => {
                   <>
                     <div className="iconosItems">
                       <i onClick={() => handleDeleteItemCarrusel(item.index)}>
-                        <img src="../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/Borrar.svg" alt="Borrar" />
+                        <img src={delImg} alt="Borrar" />
                       </i>
                       <i  onClick={() => edit(item.index)}>
-                        <img src="../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/Editar.svg" alt="Editar" />
+                        <img src={edtImg} alt="Editar" />
                       </i>
                     </div>
                     <div className="contenidoItems">

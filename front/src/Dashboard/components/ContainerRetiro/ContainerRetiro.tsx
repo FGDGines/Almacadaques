@@ -7,6 +7,11 @@ import { fetchDefault } from "../../../helpers/Server";
 import { GlobalContext } from "../../../contexts/GlobalContext";
 import { getToken } from "../../../helpers/JWT";
 
+
+import delImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg"
+import edtImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
+
+
 function formatFecha(day: number[], month: number, year: number) {
     const options: Intl.DateTimeFormatOptions = { month: 'short', year: 'numeric' }; 
     const startDate = new Date(year, month - 1, day[0]).toLocaleDateString('es-ES', options);
@@ -85,10 +90,10 @@ function ContainerRetiro() {
                 <div className="titleContainerRetiro">
                     <p className="titleRetiro">{retiro.title}</p>
                     <div className="paddinIcono" onClick={() => edit(retiro.index, retiro)}>
-                        <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" className="BtnEditarEvento" />
+                        <img src={edtImg} alt="" className="BtnEditarEvento" />
                     </div>
                     <div className="paddinIcono" onClick={() => handleDelete(retiro.index)}>
-                        <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg" alt="" className="BtnEditarEvento" />
+                        <img src={delImg} alt="" className="BtnEditarEvento" />
                     </div>
                 </div>
                 <img src={retiro.image[0]} alt="" className="ImgFondoRetiro" />

@@ -7,6 +7,9 @@ import { useContext } from "react";
 
 import { useState } from 'react';
 
+
+import nextImg from "../../../src/assets/images/siguiente-boton.png"
+
 type PoliticasAbiertasType = {
   [key: string]: boolean;
 };
@@ -42,7 +45,7 @@ function PoliticaCookies() {
           <div className={`buttonCookies ${politicasAbiertas['1'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('1')} >
             <div className="imgCookies">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`}/>
+              <img src={nextImg} alt="icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`}/>
             </div>
 
             <h4>{textos[languageFlag].textostitulocookie}
@@ -58,7 +61,7 @@ function PoliticaCookies() {
           <div className={`buttonCookies ${politicasAbiertas['2'] ? 'rotate' : ''}`}
             onClick={() => handleButtonClick('2')} >
             <div className="imgCookies">
-              <img src="../../../src/assets/images/siguiente-boton.png" alt="icono" className={`imagen ${politicasAbiertas['2'] ? 'rotated' : ''}`}/>
+              <img src={nextImg} alt="icono" className={`imagen ${politicasAbiertas['2'] ? 'rotated' : ''}`}/>
             </div>
 
             <h4>{textos[languageFlag].textoscookiesdeshabilitar}</h4>

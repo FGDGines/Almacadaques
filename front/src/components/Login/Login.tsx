@@ -2,6 +2,10 @@ import './Login.css'
 import { useContext } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
 
+
+import logoImg from "../../../src/assets/Dashboard-almacadaques/Logo/bro.svg"
+
+
 const Login = () => {
   const { setLayoutID } = useContext(GlobalContext);
   return (
@@ -13,7 +17,7 @@ const Login = () => {
 
         <div className="containerLeftLogin">
           <div className="logoAdmin">
-            <img src="../../../src/assets/Dashboard-almacadaques/Logo/bro.svg" alt="" className='imgLoginadmin' />
+            <img src={logoImg} alt="" className='imgLoginadmin' />
           </div>
         </div>
         <div className="containerRightLogin">

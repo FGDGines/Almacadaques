@@ -6,6 +6,8 @@ import { textos } from "../../data/textos";
 import { useContext } from "react";
 import { GlobalContext } from "../../contexts/GlobalContext";
 
+import nextImg from "../../../src/assets/images/siguiente-boton.png"
+
 type PoliticasAbiertasType = {
     [key: string]: boolean;
 };
@@ -31,7 +33,7 @@ function AvisoLegal() {
                     <div className={`buttonAviso ${politicasAbiertas['1'] ? 'rotate' : ''}`}
                         onClick={() => handleButtonClick('1')} >
                         <div className="imgAviso">
-                            <img src="../../../src/assets/images/siguiente-boton.png" alt="icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`} />
+                            <img src={nextImg} alt="icono" className={`imagen ${politicasAbiertas['1'] ? 'rotated' : ''}`} />
                         </div>
 
 
@@ -51,7 +53,7 @@ function AvisoLegal() {
                     <div className={`buttonAviso ${politicasAbiertas['2'] ? 'rotate' : ''}`}
                         onClick={() => handleButtonClick('2')} >
                         <div className="imgAviso">
-                            <img src="../../../src/assets/images/siguiente-boton.png" alt="icono" className={`imagen ${politicasAbiertas['2'] ? 'rotated' : ''}`} />
+                            <img src={nextImg} alt="icono" className={`imagen ${politicasAbiertas['2'] ? 'rotated' : ''}`} />
                         </div>
                         <h4>{textos[languageFlag].textos2titulo}</h4>
                     </div>
@@ -81,7 +83,7 @@ function AvisoLegal() {
                     <div className={`buttonAviso ${politicasAbiertas['3'] ? 'rotate' : ''}`}
                         onClick={() => handleButtonClick('3')} >
                         <div className="imgAviso">
-                            <img src="../../../src/assets/images/siguiente-boton.png" alt="icono" className={`imagen ${politicasAbiertas['3'] ? 'rotated' : ''}`} />
+                            <img src={nextImg} alt="icono" className={`imagen ${politicasAbiertas['3'] ? 'rotated' : ''}`} />
                         </div>
 
                         <h4>{textos[languageFlag].textos3titulo1}</h4>
@@ -99,7 +101,7 @@ function AvisoLegal() {
                     <div className={`buttonAviso ${politicasAbiertas['4'] ? 'rotate' : ''}`}
                         onClick={() => handleButtonClick('4')} >
                         <div className="imgAviso">
-                            <img src="../../../src/assets/images/siguiente-boton.png" alt="icono" className={`imagen ${politicasAbiertas['4'] ? 'rotated' : ''}`} />
+                            <img src={nextImg} alt="icono" className={`imagen ${politicasAbiertas['4'] ? 'rotated' : ''}`} />
                         </div>
 
                         <h4>{textos[languageFlag].textos4titulo1}</h4>
@@ -124,7 +126,7 @@ function AvisoLegal() {
                     <div className={`buttonAviso ${politicasAbiertas['5'] ? 'rotate' : ''}`}
                         onClick={() => handleButtonClick('5')} >
                         <div className="imgAviso">
-                            <img src="../../../src/assets/images/siguiente-boton.png" alt="icono" className={`imagen ${politicasAbiertas['5'] ? 'rotated' : ''}`} />
+                            <img src={nextImg} alt="icono" className={`imagen ${politicasAbiertas['5'] ? 'rotated' : ''}`} />
                         </div>
 
                         <h4>{textos[languageFlag].textos5titulo1}</h4>
@@ -142,7 +144,7 @@ function AvisoLegal() {
                     <div className={`buttonAviso ${politicasAbiertas['6'] ? 'rotate' : ''}`}
                         onClick={() => handleButtonClick('6')} >
                         <div className="imgAviso">
-                            <img src="../../../src/assets/images/siguiente-boton.png" alt="icono" className={`imagen ${politicasAbiertas['6'] ? 'rotated' : ''}`} />
+                            <img src={nextImg} alt="icono" className={`imagen ${politicasAbiertas['6'] ? 'rotated' : ''}`} />
                         </div>
                         <h4>{textos[languageFlag].textos6titulo1}</h4>
                     </div>

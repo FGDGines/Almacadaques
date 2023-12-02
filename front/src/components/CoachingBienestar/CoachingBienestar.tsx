@@ -9,6 +9,11 @@ import FormDefault from '../FormDefault/FormDefault';
 import { formDataToObject } from '../../helpers/Forms';
 import { fetchDefault } from '../../helpers/Server';
 
+
+import contcImg from "./../../assets/background/contactanos.jpg"
+import chiImg from "../../../src/assets/images/img_coaching_internacional.jpg"
+import chbImg from "../../../src/assets/background/coachingBienestar.jpg"
+
 const CoachingBienestar = () => {
     const {  languageFlag } = useContext(GlobalContext);
 
@@ -27,7 +32,7 @@ const CoachingBienestar = () => {
 
             <div className="containerInnformacion1">
                 <div className="containerimg1">
-                    <img src="../../../src/assets/background/coachingBienestar.jpg" alt="Elisabet" className='imgBienertar' />
+                    <img src={chbImg} alt="Elisabet" className='imgBienertar' />
                 </div>
                 <div className="contseccionn1">
                     <span style={{ color: "#75151E" }} className='SpanTitle'> ❝ </span>
@@ -48,7 +53,7 @@ const CoachingBienestar = () => {
                     {textos[languageFlag].textcoaching5}
                 <span style={{ color: "#75151E" }}> ❞<p className='autorParrafo'>Herminia Gomá.</p></span>
                 <div className="containerImg1">
-                    <img src="../../../src/assets/images/img_coaching_internacional.jpg" className='imgInternacional' alt="Imagen de coaching" />
+                    <img src={chiImg} className='imgInternacional' alt="Imagen de coaching" />
                 </div>
                 
             </div>
@@ -58,7 +63,7 @@ const CoachingBienestar = () => {
                     </p>
                 <div className='ctForm'>
                     <FormDefault hSubmit={subtmitOnFormDefault}/>
-                    <img className='imgEquip'  src="../../../src/assets/background/contactanos.jpg" alt="Equipo de trabajo" />
+                    <img className='imgEquip'  src={contcImg} alt="Equipo de trabajo" />
                 </div>
             </div>
         </div>

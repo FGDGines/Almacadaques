@@ -8,6 +8,8 @@ import { useContext } from 'react';
 import TestimonyBar from "../TestimonyBar/TestimonyBar";
 import { testimonies } from '../../data/testimonies';
 
+import u from "../../../src/assets/ImgLibro/portada.jpeg"
+
 const Coaching = () => {
     const {languageFlag} = useContext(GlobalContext)
     return <div className="Coaching">
@@ -26,7 +28,7 @@ const Coaching = () => {
                 <p>{textos[languageFlag].textcoaching5}</p>
             </div>
             <div className='ctPhoto'>
-                <img className='Picture' src="./src/assets/background/unnamed (5).jpg" alt="" />
+                <img className='Picture' src={u} alt="" />
             </div>
         </div>
         <TestimonyBar

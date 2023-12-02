@@ -9,6 +9,7 @@ import { tpDtmResponse, tpTextLibro } from '../../types/typesComponents';
 import { fetchDefault } from '../../helpers/Server';
 
 
+import portImg from "../../../src/assets/ImgLibro/portada.jpeg"
 
 const BlogPost = () => {
   const [data, setData] = useState<tpTextLibro[]>([]);
@@ -84,7 +85,7 @@ const BlogPost = () => {
           <div className="demoPage" >
               <div className="port">
                   <div className="titlePortal2">
-                      <img src="../../../src/assets/ImgLibro/portada.jpeg" alt="" />
+                      <img src={portImg} alt="" />
                       <div className="ctOverlayBook">
                           <div className="titleCortoPor">
                               <h1>{current?.title}</h1>
@@ -99,7 +100,7 @@ const BlogPost = () => {
               <div className="port">
 
                   <div className="titlePortal2">
-                      <img src="../../../src/assets/ImgLibro/portada.jpeg" alt="" />
+                      <img src={portImg} alt="" />
                       <div className="ctOverlayBook">
 
 

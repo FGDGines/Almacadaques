@@ -10,6 +10,12 @@ import { RedProps, tpDtmResponse } from '../../../types/typesComponents';
 import { RedesProps } from "../../../types/typesComponents";
 import { getToken } from '../../../helpers/JWT';
 
+
+
+import delImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg"
+import edtImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
+
+
 export const RedesBienestar = () => {
   const { setLayoutID, setIndexRed, setDataRed } = useContext(GlobalContext);
   const [ redes, setRedes ] = useState<RedesProps>([])
@@ -88,13 +94,13 @@ export const RedesBienestar = () => {
             <div className="iconosAcciones">
               <div className="accionEditar" onClick={() => edit(red, red.index)}>
                 <img
-                  src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
+                  src={edtImg}
                   alt=""
                 />
                 <p className="TextAcciones">Editar</p>
               </div>
               <div className="accionEliminar" onClick={() => handleEliminar(red.index)}>
-                <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg" alt="" />
+                <img src={delImg} alt="" />
                 <p className="TextAcciones">Eliminar</p>
               </div>
             </div>

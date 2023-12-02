@@ -5,6 +5,11 @@ import Franja from '../Franja/Franja';
 import { textos } from '../../data/textos';
 import { GlobalContext } from '../../contexts/GlobalContext';
 import { useContext } from 'react';
+
+import f1 from "../../../src/assets/background/1.foto.jpg"
+import f2 from "../../../src/assets/background/2.foto.jpg"
+import f3 from "../../../src/assets/background/3.foto.jpg"
+
 const AboutMe = () => {
     const { languageFlag } = useContext(GlobalContext)
     return <div className="AboutMe">
@@ -28,14 +33,14 @@ const AboutMe = () => {
 
                 </div>
                 <div className="photo_1">
-                    <img src="../../../src/assets/background/1.foto.jpg" alt="Foto sobre mi" />
+                    <img src={f1} alt="Foto sobre mi" />
                     <p> Elisabet Coll-Vinent (Psicóloga – Mentora – Coach)</p>
                 </div>
             </div>
 
             <div className="containerSobremi_2">
                 <div className="photo_2">
-                    <img src="../../../src/assets/background/2.foto.jpg" alt="Foto sobre mi" />
+                    <img src={f2} alt="Foto sobre mi" />
                     <p> Elisabet Coll-Vinent (Psicóloga – Mentora – Coach)</p>
                 </div>
                 <div className="infoSobremi_2User">
@@ -68,7 +73,7 @@ const AboutMe = () => {
                     </ul>
                 </div>
                 <div className="photo_3">
-                    <img src="../../../src/assets/background/3.foto.jpg" alt="Bibliografía" className='BibliografíaSobreMi'/>
+                    <img src={f3} alt="Bibliografía" className='BibliografíaSobreMi'/>
                     <p> Elisabet Coll-Vinent (Psicóloga – Mentora – Coach)</p>
                 </div>
             </div>

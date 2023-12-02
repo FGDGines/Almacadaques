@@ -7,6 +7,12 @@ import { fetchDefault } from '../../../helpers/Server';
 import { tpDtmResponse, tpTestimony } from '../../../types/typesComponents';
 import { GlobalContext } from '../../../contexts/GlobalContext';
 
+
+
+import delImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg"
+import edtImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
+
+
 function PreviwTestimonios() {
   const [data, setData] = useState<tpTestimony[]>([]);
   const { setLayoutID, setIndexTestimony } = useContext(GlobalContext);
@@ -70,14 +76,14 @@ function PreviwTestimonios() {
             <div className="iconEditar">
               <div className="editar"  onClick={() => edit(testimonial.id)}>
                 <img
-                  src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
+                  src={edtImg}
                   alt=""
                 />
                 <p className="Textedit">Editar</p>
               </div>
               <div className="eliminar" onClick={() => handleEliminar(testimonial.id)}>
                 <img
-                  src="../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg"
+                  src={delImg}
                   alt=""
                 />
                 <p className="TextElim">Eliminar</p>

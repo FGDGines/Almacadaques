@@ -8,6 +8,10 @@ import { formDataToObject } from '../../../helpers/Forms';
 import { fetchDefault } from '../../../helpers/Server';
 import { tpDtmResponse } from '../../../types/typesComponents';
 
+
+import delImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg"
+import edtImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
+
 function ContainerColaboradores() {
 
   const [data, setData] = useState<Colaborador[]>([]);
@@ -71,11 +75,11 @@ function ContainerColaboradores() {
           
           <div className="editarContBienestar">
             <div className="accionEliminar" onClick={() => handleDeleteItemCarrusel(colaborador.id)}>
-              <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg" alt="" className="IconEditarColaboradores"/>
+              <img src={delImg} alt="" className="IconEditarColaboradores"/>
               <p className="TitleBtnEditarColaborador">Eliminar</p>
             </div>
             <div className="IconoEditarColaboradores" onClick={() => edit(colaborador.id, colaborador)}>
-              <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" className="IconEditarColaboradores" />
+              <img src={edtImg} alt="" className="IconEditarColaboradores" />
               <p className="TitleBtnEditarColaborador">Editar</p>
             </div>
           </div>

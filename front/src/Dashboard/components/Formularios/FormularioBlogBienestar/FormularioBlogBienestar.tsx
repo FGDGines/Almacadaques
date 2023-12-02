@@ -9,6 +9,11 @@ import { fetchForm } from '../../../../helpers/Server';
 import { GlobalContext } from '../../../../contexts/GlobalContext';
 import { getToken } from '../../../../helpers/JWT'; 
 
+
+import s from "./../../../../assets/Dashboard-almacadaques/iconBtn/Borrar.svg"
+import q from "./../../../../assets/Dashboard-almacadaques/iconBtn/mingcute_add-line.svg"
+
+
 interface FormData {
     Titulo: string;
     Subtitulo: string;
@@ -169,14 +174,14 @@ function FormularioBlogBienestar() {
                                     onChange={(_event: any, editor: { getData: () => string; }) => handleEditorChange(index, editor)}
                                 />
                                 <div className="accionEliminar"onClick={() => removeEditor(index)}>
-                                    <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg" alt="" />
+                                    <img src={s} alt="" />
                                     <p className="TextAcciones">Eliminar</p>
                                 </div>
                             </div>
                         ))}
                         <div className='Buton'>
-                                <p className='EnlaceBton' onClick={addEditor}>
-                                    <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/mingcute_add-line.svg" alt="" className='Img+' />
+                                <p className='EnlaceBton cursor' onClick={addEditor}>
+                                    <img src={q} alt="" className='Img+' />
                                     Agregar
                                 </p>
                             </div>

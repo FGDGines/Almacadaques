@@ -7,6 +7,8 @@ import { GlobalContext } from "../../../contexts/GlobalContext";
 import { getToken } from "../../../helpers/JWT";
 import { formDataToObject } from "../../../helpers/Forms";
 
+import addImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
+import delImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg"
 
 function BienestarAdmin() {
     const { setLayoutID, setIndexTextLibro,  setDataText } = useContext(GlobalContext);
@@ -64,11 +66,11 @@ function BienestarAdmin() {
             <div key={index} className='BienestarAdmin'>
                 <div className="editarContBienestar">
                     <div className="accionEditar" onClick={() => edit(item.id, item)}>
-                        <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" />
+                        <img src={addImg} alt="" />
                         <p className="TextAcciones">Editar</p>
                     </div>
                     <div className="accionEliminar" onClick={() => handleDelete(item.id)}>
-                        <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg" alt="" />
+                        <img src={delImg} alt="" />
                         <p className="TextAcciones">Eliminar</p>
                     </div>
                 </div>

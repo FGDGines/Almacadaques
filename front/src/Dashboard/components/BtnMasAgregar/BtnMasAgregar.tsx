@@ -5,6 +5,9 @@ import React, { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../../../contexts/GlobalContext';
 import { Loader } from '../LoaderOverlay/LoaderOverlay';
 
+
+import a from "../../../../src/assets/Dashboard-almacadaques/iconBtn/mingcute_add-line.svg"
+
 interface BtnMasAgregarProps {
   direccion: number; // Añadiendo la propiedad dirección como number
 }
@@ -43,7 +46,7 @@ export const BtnMasAgregar: React.FC<BtnMasAgregarProps> = ({ direccion }) => {
         <Loader></Loader>
       )}
       <a onClick={handleClick} href="#" className='EnlaceBton'>
-        <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/mingcute_add-line.svg" alt="" className='Img+' />
+        <img src={a} alt="" className='Img+' />
         Agregar
       </a>
     </div>

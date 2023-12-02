@@ -8,6 +8,12 @@ import { fetchDefault } from "../../../helpers/Server";
 import { formDataToObject } from "../../../helpers/Forms";
 import { getToken } from "../../../helpers/JWT";
 
+
+import delImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg"
+import edtImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
+
+
+
 function EventosPrevo() {
     const [data, setData] = useState<tpCalendarEvent[]>([]);
     const { setIndexCalendarEvent, setLayoutID, setDataEvent } = useContext(GlobalContext)
@@ -74,10 +80,10 @@ function EventosPrevo() {
                             <p className="titleDejarSoltar" >{event.title}</p>
                             <div className="editarContBienestar">
                                 <div className="paddinIcono" onClick={() => edit(event.id, event)}>
-                                    <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg" alt="" className="BtnEditarEvento" />
+                                    <img src={edtImg} alt="" className="BtnEditarEvento" />
                                 </div>
                                 <div className="paddinIcono" onClick={() => handleDelete(event.id)}>
-                                    <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg" alt="" className="BtnEditarEvento" />
+                                    <img src={delImg} alt="" className="BtnEditarEvento" />
                                 </div>
                             </div>
                         </div>

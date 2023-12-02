@@ -6,6 +6,8 @@ import { BtnMas } from '../BtnMas/BtnMas'
 import { GlobalContext } from '../../../contexts/GlobalContext'; 
 import { useContext } from 'react';
 
+import userImg from '../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+
 function BlogPodcast() {
   const { setLayoutID, setIndexPodcast, setDataPodcast } = useContext(GlobalContext);
 
@@ -19,7 +21,7 @@ function BlogPodcast() {
     <div className='BlogPodcast'>
       <NarbarAdmin />
       <div className="BlogPodcastAdmin">
-        <BarSession tituloVista='Blog' segundoTitulo='Podcast' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
+        <BarSession tituloVista='Blog' segundoTitulo='Podcast' nombre='Kristine' img={userImg} />
           <div className="conatinerInfopodcast">
             <Podcast/>
           </div>

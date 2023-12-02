@@ -9,6 +9,10 @@ import { useContext } from 'react';
 import { fetchDefault } from '../../helpers/Server';
 import { formDataToObject } from '../../helpers/Forms';
 
+
+import contcImg from "./../../assets/background/contactanos.jpg"
+
+
 const Contactar = ()=>{
     
     const enviarFormulario = (bag: FormData) =>{
@@ -20,7 +24,7 @@ const Contactar = ()=>{
         <Navbar />
         <Franja text={textos[languageFlag].textocontactar1} />
         <div className="imgContacto">
-                <img src="../../../src/assets/background/contactanos.jpg" alt="elizabet" className='elizabet' />
+                <img src={contcImg} alt="elizabet" className='elizabet' />
             </div>
         <div className='ctSections'>
             

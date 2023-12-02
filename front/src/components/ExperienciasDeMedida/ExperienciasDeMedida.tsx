@@ -13,6 +13,7 @@ import { formDataToObject } from '../../helpers/Forms';
 import { fetchDefault } from '../../helpers/Server';
 
 
+import contcImg from "./../../assets/background/contactanos.jpg" 
 
 function ExperienciasDeMedida() {
     const { languageFlag } = useContext(GlobalContext)
@@ -37,7 +38,7 @@ function ExperienciasDeMedida() {
                     <StatisticComponent titles={statisticInfo.medida} type="medida" />
                     </div>
                     <div className="ctphoto">
-                        <img className='imgEquip' src="../../../src/assets/background/contactanos.jpg" alt="Equipo de trabajo" />
+                        <img className='imgEquip' src={contcImg} alt="Equipo de trabajo" />
                         <div className='ctFor'>
                             <h3>Trabajemos Juntos</h3>
                             <FormDefault hSubmit={subtmitOnFormDefault}/>

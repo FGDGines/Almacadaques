@@ -11,6 +11,12 @@ import { tpDtmResponse } from '../../types/typesComponents';
 import { formDataToObject } from '../../helpers/Forms';
 import { fetchDefault } from '../../helpers/Server';
 import { tpTestimony} from "../../types/typesComponents"
+
+
+import contcImg from "./../../assets/background/contactanos.jpg" 
+import u from "../../../src/assets/background/unnamed (2).jpg"
+
+
 const CoachingInternacional = () => {
     const { languageFlag } = useContext(GlobalContext)
 
@@ -59,7 +65,7 @@ const CoachingInternacional = () => {
         <div className="containerInternacional">
             <div className="containerInnformacion1">
                 <div className="containerimg2">
-                    <img src="../../../src/assets/background/unnamed (2).jpg" alt="Elisabet" className='imgBienertar' />
+                    <img src={u} alt="Elisabet" className='imgBienertar' />
                 </div>
                 <div className="contseccionn1">
                 <br/>
@@ -114,7 +120,7 @@ const CoachingInternacional = () => {
 
                 <div className='ctForm'>
                     <FormDefault  hSubmit={subtmitOnFormDefault}/>
-                    <img className='imgEquip' src=".../../../src/assets/background/contactanos.jpg" alt="Equipo de trabajo" />
+                    <img className='imgEquip' src={contcImg} alt="Equipo de trabajo" />
                 </div>
 
             </div>
