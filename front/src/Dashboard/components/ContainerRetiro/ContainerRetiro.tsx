@@ -56,7 +56,6 @@ function ContainerRetiro() {
               for (let index = 0; index < d.bag.length; index++) {
                 const element: {id: number , day: string, month: number, year: number, author: string, image: string, title_lang: {es: string, en: string , cat: string},  description_lang: {es: string, en: string , cat: string}, estado: string } = d.bag[index];
                 const r = "src/blog_retiro/";
-                console.log(element.image[0])
                 let image: string[] =  JSON.parse(element.image)
                 for (let i = 0; i < image.length; i++) {
                     image[i] = r + image[i]

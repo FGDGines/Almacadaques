@@ -5,12 +5,16 @@ import { ItemCarrusel } from '../../components/ItemCarrusel/ItemCarrusel'
 import { EspaciosBienestar } from '../../components/espaciosBienestar/espaciosBienestar'
 import { RedesBienestar } from '../../components/redesBienestar/redesBienestar'
 
+
+import userImg from '../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+
+
 function InicioAdmin() {
   return (
     <div className="inicioAdmin">
       <NarbarAdmin />      
       <div className="contenidoPrincipal">
-        <BarSession tituloVista='Inicio' segundoTitulo='Dashboard' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
+        <BarSession tituloVista='Inicio' segundoTitulo='Dashboard' nombre='Kristine' img={userImg} />
         <ItemCarrusel direccion={29} />
 
         <div className="contenidoBienestar">

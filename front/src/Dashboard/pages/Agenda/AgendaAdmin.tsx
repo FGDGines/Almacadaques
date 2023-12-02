@@ -6,6 +6,9 @@ import { BtnMas } from '../../components/BtnMas/BtnMas'
 import { GlobalContext } from '../../../contexts/GlobalContext'; 
 import { useContext } from 'react';
 
+
+import userImg from '../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+
 function AgendaAdmin() {
   const { setLayoutID, setIndexCalendarEvent, setDataEvent } = useContext(GlobalContext);
 
@@ -20,7 +23,7 @@ function AgendaAdmin() {
 
       <NarbarAdmin />
       <div className="containerMainAgenda">
-        <BarSession tituloVista='Agenda/Experiencias de Bienestar:' segundoTitulo='Eventos' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg'/>
+        <BarSession tituloVista='Agenda/Experiencias de Bienestar:' segundoTitulo='Eventos' nombre='Kristine' img={userImg}/>
         <div className="itemAgendaAdmin">
           <EventosPrevo />
         </div>

@@ -28,15 +28,15 @@ function FormularioRetiros() {
 
 
   function formatDate(date: Date): string {
-    const year = date.getFullYear();
-    const month = (date.getMonth() + 1).toString().padStart(2, '0');
-    const day = date.getDate().toString().padStart(2, '0');
+    const year = date.getUTCFullYear();
+    const month = (date.getUTCMonth() + 1).toString().padStart(2, '0');
+    const day = date.getUTCDate().toString().padStart(2, '0');
     return `${year}-${month}-${day}`;
   }
   const separatedDate = (date: Date): number[] => {
-    const year = date.getFullYear();
-    const month = date.getMonth() + 1;
-    const day = date.getDate();
+    const year = date.getUTCFullYear();
+    const month = date.getUTCMonth() + 1;
+    const day = date.getUTCDate();
     return [day, month, year];
   }
 
@@ -60,17 +60,19 @@ function FormularioRetiros() {
     const { name, value } = event.target;
     
     if (name === "Fecha") {
-      setFormData({
-        ...formData,
-        [name]: new Date(value),
-      });
+        const [year, month, day] = value.split('-').map(Number);
+        setFormData({
+            ...formData,
+            [name]: new Date(Date.UTC(year, month - 1, day)),
+        });
     } else {
-      setFormData({
-        ...formData,
-        [name]: value,
-      });
+        setFormData({
+            ...formData,
+            [name]: value,
+        });
     }
   };
+
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
     const selectedFile = event.target.files?.[0] as File;
@@ -104,7 +106,7 @@ function FormularioRetiros() {
       if (formData.day) {
         day = formData.day
       }
-      
+      console.log(sd[0], sd[1], sd[2])
       da.append("day", `[${sd[0]}, ${day}]`)
       da.append("month", `${sd[1]}`)
       da.append("year", `${sd[2]}`)
@@ -136,20 +138,20 @@ function FormularioRetiros() {
         da.set("index", "1")
         fetchForm("/blog_retiro/create", da)
     }
-    setFormData({
-      Titulo_es: '',
-      Titulo_en: '',
-      Titulo_cat: '',
-      Autor: '',
-      Fecha: new Date(),
-      day: 0,
-      Descripcion_es: '',
-      Descripcion_en: '',
-      Descripcion_cat: '',
-      Estado: '',
-      archivo: null,
-    })
-    setImageURL("")
+    // setFormData({
+    //   Titulo_es: '',
+    //   Titulo_en: '',
+    //   Titulo_cat: '',
+    //   Autor: '',
+    //   Fecha: new Date(),
+    //   day: 0,
+    //   Descripcion_es: '',
+    //   Descripcion_en: '',
+    //   Descripcion_cat: '',
+    //   Estado: '',
+    //   archivo: null,
+    // })
+    // setImageURL("")
   };
 
   useEffect(() => {
@@ -168,12 +170,19 @@ function FormularioRetiros() {
                   image[i] = r + image[i]
               }
               const day: number[] = JSON.parse(JSON.parse(element.day))
+              
+              const day1 = element.day[0].toString().padStart(2, '0');
+              const month = (element.month).toString().padStart(2, '0'); // Restamos 1 si los meses están en el rango 1-12
+              const year = element.year;
+
+              const date = new Date(`${element.year}-${element.month}-${day[0]}`);
+
               const value = { 
                   Titulo_es: element.title_lang.es,
                   Titulo_en: element.title_lang.en,
                   Titulo_cat: element.title_lang.cat,
                   Autor: element.author,
-                  Fecha: new Date(`${element.month}-${element.year}-${element.day[0]}`),
+                  Fecha: date,
                   day: day[1],
                   Descripcion_es: element.description_lang.es,
                   Descripcion_en: element.description_lang.en,
@@ -181,6 +190,7 @@ function FormularioRetiros() {
                   Estado: element.estado,
                   archivo: null,
               }
+              console.log(formData.Fecha, `${element.year}-${element.month}-${element.day}`)
               setFormData(value);
             }
         }) 

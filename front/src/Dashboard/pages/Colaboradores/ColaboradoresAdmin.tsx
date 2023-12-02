@@ -5,6 +5,8 @@ import { ContainerColaboradores } from '../../components/ContainerColaboradores/
 import { GlobalContext } from '../../../contexts/GlobalContext'  
 import { useContext } from 'react';
 
+import addImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/mingcute_add-line.svg"
+import userImg from '../../../../src/assets/Dashboard-almacadaques/users/user.svg'
 
 function ColaboradoresAdmin() {
   const { setLayoutID, setIndexCollaborator, setDataColaborador } = useContext(GlobalContext);
@@ -19,13 +21,13 @@ function ColaboradoresAdmin() {
       <NarbarAdmin />
 
       <div className="containerColaboradores">
-        <BarSession tituloVista='Colaborador@s' segundoTitulo='Colaborador@s' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
+        <BarSession tituloVista='Colaborador@s' segundoTitulo='Colaborador@s' nombre='Kristine' img={userImg} />
         <div className="itenColaboradores">
           <ContainerColaboradores />
         </div>
         <div className="BtnAgregarMasColaborador">
           <div className="BtnMas" onClick={add} >
-            <img src="../../../../src/assets/Dashboard-almacadaques/iconBtn/mingcute_add-line.svg" alt="" className="ImgColaboradoresAdmin" />
+            <img src={addImg} alt="" className="ImgColaboradoresAdmin" />
           </div>
         </div>
       </div>

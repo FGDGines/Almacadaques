@@ -6,6 +6,10 @@ import { GlobalContext } from '../../../contexts/GlobalContext';
 import { useContext } from 'react';
 import { BtnMas } from '../../components/BtnMas/BtnMas';
 
+
+import userImg from '../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+
+
 function RetirosAdmin() {
   const { setLayoutID, setIndexBlogRetiro, setDataRetiro } = useContext(GlobalContext);
 
@@ -19,7 +23,7 @@ function RetirosAdmin() {
 
       <NarbarAdmin />
       <div className="conatinerRetiro">
-        <BarSession tituloVista='Blogs' segundoTitulo='Retiros' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
+        <BarSession tituloVista='Blogs' segundoTitulo='Retiros' nombre='Kristine' img={userImg} />
         <div className="infocontainerRetiro">
           <ContainerRetiro/>
         </div>
