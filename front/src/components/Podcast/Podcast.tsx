@@ -97,7 +97,7 @@ const Podcast = () => {
         const api = async () => {
             const podcast: AudioPlayerProps[] = []
             fetchDefault("/podcast/read", {}, (d: tpDtmResponse) => {
-                if(!d.bag) return 
+                if(!d.bag || d.bag.length == 0) return 
                 for (let index = 0; index < d.bag.length; index++) {
                     const element: {id: number, url: string , titulo: string, autor: string, fecha:string, categoria: string } = d.bag[index];
                     podcast.push({ id: element.id, url: element.url, titulo: element.titulo, autor: element.autor, fecha: element.fecha, categoria: element.categoria });
@@ -181,7 +181,7 @@ const Podcast = () => {
                         <i className="fas fa-arrow-left"></i>
                     </div>
                     <div className="listaPodcast">
-                        {podcastData.map((podcast, index) => (
+                        {podcastData ? podcastData.map((podcast, index) => (
                             <div className='containerPod' key={index} onClick={() => handlePodcastClick(podcast)}>
                                 <div className="cubrir">
                                 </div>
@@ -193,7 +193,7 @@ const Podcast = () => {
                                     enPodcast={podcast.enPodcast}
                                 />
                             </div>
-                        ))}
+                        )) : ""}
                     </div>
                     <div className="arrow-right">
                         <i className="fa-regular fa-chevron-right"></i>
