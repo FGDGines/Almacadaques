@@ -55,7 +55,7 @@ export const Update = async (req: Request, res: Response) => {
             if (src != undefined) {
                 const past = tCalendarEvent.src
                 if (past) {
-                    const uploadDir = path.join(__dirname,  RelativePath.carousel)
+                    const uploadDir = path.join(__dirname,  RelativePath.calendar_event)
                     try {
                          await DeleteFile(path.join(uploadDir, past))     
                     } catch (error) {
@@ -63,7 +63,7 @@ export const Update = async (req: Request, res: Response) => {
                     }
                       
                 }
-                const url = await UploadFile( src, path.join(__dirname,  RelativePath.carousel), fileExtension, Formatos.image)
+                const url = await UploadFile( src, path.join(__dirname,  RelativePath.calendar_event), fileExtension, Formatos.image)
                 await tCalendarEvent.update({src: url})
                 updates.push({path: 'src', past , now: url})
             }
