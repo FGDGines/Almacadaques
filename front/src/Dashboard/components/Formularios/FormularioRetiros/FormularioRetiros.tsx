@@ -4,7 +4,7 @@ import { BarSession } from '../../barSession/barSession';
 import { useState, ChangeEvent, useContext, useEffect } from 'react';
 import { getToken } from "../../../../helpers/JWT";
 import { GlobalContext } from "../../../../contexts/GlobalContext";
-import { fetchDefault } from "../../../../helpers/Server";
+import { fetchDefault, fetchForm } from "../../../../helpers/Server";
 import { formDataToObject } from "../../../../helpers/Forms";
 import { tpDtmResponse } from "../../../../types/typesComponents";
 // import { tpDtmResponse } from "../../../../types/typesComponents";
@@ -58,10 +58,18 @@ function FormularioRetiros() {
   
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    
+    if (name === "Fecha") {
+      setFormData({
+        ...formData,
+        [name]: new Date(value),
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
   };
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -120,29 +128,28 @@ function FormularioRetiros() {
         da.append("image_number", "0")
         da.append("fileExtension", "jpg");
     }
-    // if (indexBlogRetiro != -1) {
-    //     da.append("id", `${indexBlogRetiro}`)
-    //     fetchForm("/blog_retiro/update", da)
+    if (indexBlogRetiro != -1) {
+        da.append("id", `${indexBlogRetiro}`)
+        fetchForm("/blog_retiro/update", da)
 
-    // } else {
-    //     da.set("index", "1")
-    //     console.log(1)
-    //     fetchForm("/blog_retiro/create", da)
-    // }
-    // setFormData({
-    //   Titulo_es: '',
-    //   Titulo_en: '',
-    //   Titulo_cat: '',
-    //   Autor: '',
-    //   Fecha: new Date(),
-    //   day: 0,
-    //   Descripcion_es: '',
-    //   Descripcion_en: '',
-    //   Descripcion_cat: '',
-    //   Estado: '',
-    //   archivo: null,
-    // })
-    // setImageURL("")
+    } else {
+        da.set("index", "1")
+        fetchForm("/blog_retiro/create", da)
+    }
+    setFormData({
+      Titulo_es: '',
+      Titulo_en: '',
+      Titulo_cat: '',
+      Autor: '',
+      Fecha: new Date(),
+      day: 0,
+      Descripcion_es: '',
+      Descripcion_en: '',
+      Descripcion_cat: '',
+      Estado: '',
+      archivo: null,
+    })
+    setImageURL("")
   };
 
   useEffect(() => {

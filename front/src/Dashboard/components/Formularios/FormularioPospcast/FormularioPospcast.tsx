@@ -40,10 +40,18 @@ function FormularioPospcast() {
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    
+    if (name === "Fecha") {
+      setFormData({
+        ...formData,
+        [name]: new Date(value),
+      });
+    } else {
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
+    }
   };
 
   const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {

@@ -26,12 +26,12 @@ function FormularioEventos() {
         const year = date.getFullYear();
         const month = (date.getMonth() + 1).toString().padStart(2, '0');
         const day = date.getDate().toString().padStart(2, '0');
-        return `${year}/${month}/${day}`;
+        return `${year}-${month}-${day}`;
     }
 
     const [formData, setFormData] = useState<FormData>({
         Titulo: dataEvent?.title || '',
-        Inicio: dataEvent?.start ? new Date(dataEvent.start) : new Date(),
+        Inicio: dataEvent?.start ? (new Date(dataEvent.start)) : new Date(),
         Final: dataEvent?.end ? new Date(dataEvent.end) : new Date(),
         Descripcion: dataEvent?.description || '',
         Nombre: dataEvent?.colaborator_name || '',
@@ -42,13 +42,20 @@ function FormularioEventos() {
 
   
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
-      const { name, value } = event.target;
-      setFormData({
-        ...formData,
-        [name]: value,
-      });
+        const { name, value } = event.target;
+        
+        if (name === "Inicio" || name === "Final") {
+          setFormData({
+            ...formData,
+            [name]: new Date(value),
+          });
+        } else {
+          setFormData({
+            ...formData,
+            [name]: value,
+          });
+        }
     };
-  
     const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
       const selectedFile = event.target.files?.[0] as File;
   
@@ -94,6 +101,12 @@ function FormularioEventos() {
         setImageURL("")
     };
 
+    const hSubmit = (event: React.FormEvent) => {
+        console.log(1)
+        event.preventDefault();
+        // Resto de tu lógica de envío
+    };
+
     return (
         <div className='FormularioEventos'>
             <NarbarAdmin></NarbarAdmin>
@@ -102,7 +115,7 @@ function FormularioEventos() {
                 <BarSession direccion={19} tituloVista='Evento' segundoTitulo='Añadir nuevo eventos' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
 
 
-                <form className='formCarrousel'>
+                <form className='formCarrousel' onSubmit={hSubmit}>
                     <div className="subirArchivos">
                         <label htmlFor="File" className='labelArchivo'>
                         <img src={imageURL || ""} alt="Selected" />
@@ -142,7 +155,6 @@ function FormularioEventos() {
                                     onChange={handleInputChange}
                                 />
                             </div>
-
 
                         </div>
 
