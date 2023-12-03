@@ -8,6 +8,7 @@ import { tpDtmResponse, RedesProps } from '../../types/typesComponents';
 
 
 import telImg from "../../../src/assets/images/mensaje-de-telefono.png"
+import w from "../../../src/assets/images/whatsapp.png"
 
 
 const Footer = () => {
@@ -124,7 +125,7 @@ const Footer = () => {
                             <a href="https://www.instagram.com/almacadaques" target='_blank'><img className="img " src="../../../src/assets/images/instagram.png" alt="Instagram" /></a> */}
                         </div>
                         <div className="whats">
-                            <a href="https://wa.me/+34660305421?text=Hola Almacadaques" target='_blank'><img className="img1 " src="../../../src/assets/images/whatsapp.png" alt="whatsapp" /></a>
+                            <a href="https://wa.me/+34660305421?text=Hola Almacadaques" target='_blank'><img className="img1 " src={w} alt="whatsapp" /></a>
                         </div>
                         
                     </div>

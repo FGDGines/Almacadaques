@@ -42,7 +42,7 @@ export const Update = async ( req: Request ,res: Response)=>{
                         await DeleteFile(path.join(uploadDir, past))   
                     } catch (error) {}     
                 }
-                const img = await UploadFile( imagen, path.join(__dirname,  RelativePath.podcast), "jpg", Formatos.image)
+                const img = await UploadFile( imagen, path.join(__dirname,  RelativePath.red), "jpg", Formatos.image)
                 await tRed.update({archivo: img})
                 updates.push({path: 'archivo', past , now: img})
             }

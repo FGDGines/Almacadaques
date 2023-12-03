@@ -12,7 +12,6 @@ const localizer = momentLocalizer(moment);
 
 const Agenda: FC<tpAgenda> = ({ hSelect, calendar_event }) => {
   // Eventos de ejemplo (puedes reemplazarlos con tus propios datos)
-  console.log(calendar_event)
   // const eventsWithDates: tpCalendarDates[] = eventos.map(event => ({
   //   id: event.id, 
   //   title: event.title,
