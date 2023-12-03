@@ -2,10 +2,9 @@ import { Calendar, momentLocalizer } from 'react-big-calendar';
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import moment from 'moment';
 import './Agenda.css';
-import { tpAgenda, tpCalendarDates, tpCalendarEvent, tpDtmResponse } from '../../types/typesComponents';
+import { tpAgenda, tpCalendarDates } from '../../types/typesComponents';
 // import { eventos } from '../../data/calendar';
-import { FC, useEffect, useState } from 'react';
-import { fetchDefault } from '../../helpers/Server';
+import { FC } from 'react';
 
 // Configuración de localización utilizando moment.js
 moment.locale('es');

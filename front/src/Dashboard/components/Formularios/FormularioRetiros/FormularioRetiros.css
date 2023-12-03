@@ -143,10 +143,8 @@
   }
   
 
-.restInputs {
-  overflow-x: scroll;
-  height: 700px;
-  width: 400px;
+.restInputs { 
+  width: 100%;  
 }
 
 
