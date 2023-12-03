@@ -11,10 +11,9 @@ import { fetchDefault } from '../../helpers/Server';
 moment.locale('es');
 const localizer = momentLocalizer(moment);
 
-const Agenda: FC<tpAgenda> = ({hSelect}) => {
+const Agenda: FC<tpAgenda> = ({ hSelect, calendar_event }) => {
   // Eventos de ejemplo (puedes reemplazarlos con tus propios datos)
-  const [calendarEvent, setCalendarEvent] = useState<tpCalendarEvent[]>([]);
-  
+  console.log(calendar_event)
   // const eventsWithDates: tpCalendarDates[] = eventos.map(event => ({
   //   id: event.id, 
   //   title: event.title,
@@ -27,37 +26,13 @@ const Agenda: FC<tpAgenda> = ({hSelect}) => {
   const handleSelectEvent = (event: tpCalendarDates) => {
       hSelect(event)
   };
-
-
-  useEffect(() => {
-    const api = async () => {
-      const calendars: tpCalendarEvent[] = []
-      fetchDefault("/calendar_event/read", {}, (d: tpDtmResponse) => {
-        if(!d.bag) return 
-        for (let index = 0; index < d.bag.length; index++) {
-          const element: {id: number , titulo: string, descripcion: string, inicio: number, final: string } = d.bag[index];
-            const value = { 
-              id: element.id, 
-              title: element.titulo,
-              description: element.descripcion , 
-              start: new Date(element.inicio),
-              end: new Date(element.final),
-            }
-            calendars.push(value)
-        }
-        console.log(calendars)
-        setCalendarEvent(calendars);
-      }) 
-    };
-    api();
-    // eslint-disable-next-line
-  }, []);
+  
 
   return (
     <div style={{ height: '100%' }}>
       <Calendar
         localizer={localizer}
-        events={calendarEvent}
+        events={calendar_event}
         startAccessor="start"
         endAccessor="end"
         views={['month']}

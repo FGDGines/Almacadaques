@@ -111,7 +111,8 @@ type tpRetiroAnterior = {
 type tpCalendarDates = tpCalendarEvent //Alias para compativilidad
 
 type tpAgenda = {
-    hSelect: (arg: tpCalendarDates) => void
+    hSelect: (arg: tpCalendarDates) => void,
+    calendar_event: tpCalendarEvent[]
 }
 
 type tpItemSelect = {

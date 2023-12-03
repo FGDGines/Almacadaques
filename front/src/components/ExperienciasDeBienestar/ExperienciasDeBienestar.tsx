@@ -8,20 +8,21 @@ import CardM1 from '../CardM1/CardM1';
 import { cardsData } from '../../data/cardsExp';
 import Agenda from '../Agenda/Agenda';
 import FormAgenda from '../FormAgenda/FormAgenda';
-import { tpCalendarDates } from '../../types/typesComponents';
+import { tpAgenda, tpCalendarDates, tpCalendarEvent, tpDtmResponse } from '../../types/typesComponents';
 import { eventos } from '../../data/calendar';
 import DialogMUI1 from '../DialogMUI1/DialogMUI1';
 import { statisticInfo } from '../../data/StatisticComponent';
 import { textos } from '../../data/textos';
 import { useContext } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
-import { useState } from 'react';
-
+import { useEffect, useState } from 'react';
+import { fetchDefault } from '../../helpers/Server';
 
 
 const ExperienciasDeBienestar = () => {
     const { setLayoutID } = useContext(GlobalContext);
     const [evento, setEvento] = useState<tpCalendarDates>({ id: 0, start: '', end: '', title: '' })
+    const [calendarEvent, setCalendarEvent] = useState<tpCalendarEvent[]>([]);
 
     const [open, setOpen] = useState(false);
 
@@ -39,6 +40,33 @@ const ExperienciasDeBienestar = () => {
     }
 
     const { languageFlag } =useContext(GlobalContext)
+
+
+    useEffect(() => {
+        const api = async () => {
+          const calendars: tpCalendarEvent[] = []
+          fetchDefault("/calendar_event/read", {}, (d: tpDtmResponse) => {
+            if(!d.bag) return 
+            for (let index = 0; index < d.bag.length; index++) {
+              const element: {id: number , titulo: string, descripcion: string, inicio: number, final: string } = d.bag[index];
+                const value = { 
+                  id: element.id, 
+                  title: element.titulo,
+                  description: element.descripcion , 
+                  start: new Date(element.inicio),
+                  end: new Date(element.final),
+                }
+                calendars.push(value)
+            }
+            console.log(calendars)
+            setCalendarEvent(calendars);
+          }) 
+        };
+        api();
+        // eslint-disable-next-line
+      }, []);
+
+
     return <div className='ExperienciasDeBienestar'>
         <Navbar />
         <Franja text='Experiencias de Bienestar' />
@@ -63,10 +91,10 @@ const ExperienciasDeBienestar = () => {
             <div className='ctAgenda'>
                 <div className="ctContentAgenda">
                     <div className="ctCalendario">
-                        <Agenda hSelect={SeleccionarEvento} />
+                        <Agenda hSelect={SeleccionarEvento} calendar_event={calendarEvent}/>
                     </div>
                     <div className="ctFormulario">
-                        <FormAgenda actividades={eventos} />
+                        <FormAgenda actividades={calendarEvent} />
                     </div>
                 </div>
 

@@ -11,7 +11,7 @@ export const eventos: tpCalendarEvent[] = [
         end:   '2023-10-02T12:00:00',
     },
     {
-        id:1, 
+        id:2, 
         title: 'Evento',
         description: `Experiencia reparadora,
                       rodeado de la naturaleza,
@@ -20,7 +20,7 @@ export const eventos: tpCalendarEvent[] = [
         end:   '2023-10-14T12:00:00',
     },
     {
-        id:1, 
+        id:3, 
         title: 'Taller',
         description: `Experiencia reparadora,
                       rodeado de la naturaleza,

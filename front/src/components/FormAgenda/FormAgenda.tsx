@@ -16,6 +16,7 @@ const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
+    console.log(name, value)
     setFormData({
       ...formData,
       [name]: value,
