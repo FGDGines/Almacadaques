@@ -7,6 +7,8 @@ import { GlobalContext } from '../../../../contexts/GlobalContext';
 import { fetchForm } from '../../../../helpers/Server';
 // import { tpDtmResponse } from '../../../../types/typesComponents';
 
+import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+
 
 interface FormData {
     Titulo: string;
@@ -112,7 +114,7 @@ function FormularioEventos() {
             <NarbarAdmin></NarbarAdmin>
 
             <div className="contenidoFormCarrousel">
-                <BarSession direccion={19} tituloVista='Evento' segundoTitulo='Añadir nuevo eventos' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
+                <BarSession direccion={19} tituloVista='Evento' segundoTitulo='Añadir nuevo eventos' nombre='Kristine' img={userImg} />
 
 
                 <form className='formCarrousel' onSubmit={hSubmit}>

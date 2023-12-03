@@ -8,6 +8,9 @@ import { GlobalContext } from '../../../../contexts/GlobalContext';
 import { getToken } from '../../../../helpers/JWT';
 
 
+import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+
+
 interface FormData {
     Nombre: string;
     Cargo: string;
@@ -94,7 +97,7 @@ function FormularioColaboradores() {
             <NarbarAdmin></NarbarAdmin>
 
             <div className="contenidoFormCarrousel">
-                <BarSession direccion={20} tituloVista='Colaboradores' segundoTitulo='Añadir nuevo Colaborador' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
+                <BarSession direccion={20} tituloVista='Colaboradores' segundoTitulo='Añadir nuevo Colaborador' nombre='Kristine' img={userImg} />
 
 
                 <form className='formCarrousel'>

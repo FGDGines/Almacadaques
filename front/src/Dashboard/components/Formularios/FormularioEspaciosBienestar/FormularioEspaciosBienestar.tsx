@@ -10,6 +10,9 @@ import { tpDtmResponse } from '../../../../types/typesComponents';
 import { formDataToObject } from '../../../../helpers/Forms';
 
 
+import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+
+
 interface FormData {
     Frase_es: string;
     Frase_en: string;
@@ -84,7 +87,7 @@ export const FormularioEspaciosBienestar = () => {
 
             <div className="contenidoFormEspaciosBienestar">
 
-                <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Espacios de Bienestar' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
+                <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Espacios de Bienestar' nombre='Kristine' img={userImg} />
 
 
 

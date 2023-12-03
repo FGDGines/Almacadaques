@@ -7,6 +7,9 @@ import { GlobalContext } from "../../../../contexts/GlobalContext";
 import { fetchForm } from "../../../../helpers/Server";
 // import { tpDtmResponse } from "../../../../types/typesComponents";
 
+import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+
+
 interface FormData {
   Titulo: string;
   Autor: string;
@@ -113,7 +116,7 @@ function FormularioPospcast() {
       <NarbarAdmin></NarbarAdmin>
 
       <div className="contenidoFormCarrousel">
-        <BarSession direccion={26} tituloVista='Blog' segundoTitulo='Añadir nuevo Podcast' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
+        <BarSession direccion={26} tituloVista='Blog' segundoTitulo='Añadir nuevo Podcast' nombre='Kristine' img={userImg} />
 
 
         <form className='formCarrousel'>

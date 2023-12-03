@@ -9,6 +9,8 @@ import { formDataToObject } from '../../../../helpers/Forms';
 import { tpDtmResponse } from '../../../../types/typesComponents';
 // import { tpDtmResponse } from '../../../../types/typesComponents';
 
+import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+
 
 interface FormData {
     Frase_es: string;
@@ -127,7 +129,7 @@ export const FormularioCarrousel = () => {
             <NarbarAdmin></NarbarAdmin>
 
             <div className="contenidoFormCarrousel">
-                <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Carrousel' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
+                <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Carrousel' nombre='Kristine' img={userImg} />
 
 
                 <form className='formCarrousel'>

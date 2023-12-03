@@ -8,6 +8,9 @@ import { fetchForm } from '../../../../helpers/Server';
 import { GlobalContext } from '../../../../contexts/GlobalContext';
 
 
+import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+
+
 interface FormData {
     url: string;
     archivo: File | null;
@@ -77,7 +80,7 @@ export const FormularioRedes = () => {
             <NarbarAdmin></NarbarAdmin>
 
             <div className="contenidoFormRedes">
-                <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Redes' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
+                <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Redes' nombre='Kristine' img={userImg} />
 
 
                 <form className='formRedes'>

@@ -3,6 +3,9 @@ import React, { useContext, useState, useEffect } from 'react';
 import { GlobalContext } from '../../../contexts/GlobalContext';
 import {Loader} from '../LoaderOverlay/LoaderOverlay';
 
+
+import b from "../../../../src/assets/Dashboard-almacadaques/inicio/back.svg"
+
 interface BarSessionProps {
     tituloVista?: string;
     segundoTitulo?: string;
@@ -48,7 +51,7 @@ export const BarSession: React.FC<BarSessionProps> = ({ tituloVista, segundoTitu
             )}
             {direccion && (
                 <div className="volverVista">
-                    <i onClick={handleClick}><img src="../../../../src/assets/Dashboard-almacadaques/inicio/back.svg" alt="" /></i>
+                    <i onClick={handleClick}><img src={b} alt="" /></i>
                 </div>
             )}
 

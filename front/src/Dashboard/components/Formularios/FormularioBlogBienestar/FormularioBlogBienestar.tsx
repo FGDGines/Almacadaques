@@ -12,7 +12,7 @@ import { getToken } from '../../../../helpers/JWT';
 
 import s from "./../../../../assets/Dashboard-almacadaques/iconBtn/Borrar.svg"
 import q from "./../../../../assets/Dashboard-almacadaques/iconBtn/mingcute_add-line.svg"
-
+import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
 
 interface FormData {
     Titulo: string;
@@ -85,6 +85,7 @@ function FormularioBlogBienestar() {
             archivo: null,
         }) 
         setImageURL('')
+        setEditors([])
     };
     
   
@@ -125,7 +126,7 @@ function FormularioBlogBienestar() {
                 <NarbarAdmin></NarbarAdmin>
 
                 <div className="contenidoFormCarrousel">
-                    <BarSession direccion={25} tituloVista='Blog' segundoTitulo='Blog Bienestar' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
+                    <BarSession direccion={25} tituloVista='Blog' segundoTitulo='Blog Bienestar' nombre='Kristine' img={userImg} />
 
 
                     <form className='formCarrousel'>

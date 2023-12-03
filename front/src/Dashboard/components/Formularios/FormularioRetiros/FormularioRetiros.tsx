@@ -9,6 +9,9 @@ import { formDataToObject } from "../../../../helpers/Forms";
 import { tpDtmResponse } from "../../../../types/typesComponents";
 // import { tpDtmResponse } from "../../../../types/typesComponents";
 
+import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+
+
 interface FormData {
     Titulo_es: string;
     Titulo_en: string;
@@ -198,7 +201,7 @@ function FormularioRetiros() {
     <NarbarAdmin></NarbarAdmin>
 
     <div className="contenidoFormCarrousel">
-      <BarSession direccion={22} tituloVista='Retiro' segundoTitulo='Añadir nuevo Retiro' nombre='Kristine' img='../../../../src/assets/Dashboard-almacadaques/users/user.svg' />
+      <BarSession direccion={22} tituloVista='Retiro' segundoTitulo='Añadir nuevo Retiro' nombre='Kristine' img={userImg} />
 
 
   <form className='formCarrousel'>
