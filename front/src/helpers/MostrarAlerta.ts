@@ -4,19 +4,19 @@ import { tpDtmResponse } from '../types/typesComponents';
 
 
 export const mostrarAlerta = (arg: tpDtmResponse , toast = true) => {
-  if(!window.localStorage.getItem('alertQueue') ||  Number(window.localStorage.getItem('alertQueue')) == 0){
-    window.localStorage.setItem('alertQueue' , String(1))
+  if(!window.sessionStorage.getItem('alertQueue') ||  Number(window.sessionStorage.getItem('alertQueue')) == 0){
+    window.sessionStorage.setItem('alertQueue' , String(1))
     lanzarAlerta(arg, toast)
     setTimeout(()=>{
-      window.localStorage.setItem('alertQueue' , String(Number(window.localStorage.getItem('alertQueue'))-1))
+      window.sessionStorage.setItem('alertQueue' , String(Number(window.sessionStorage.getItem('alertQueue'))-1))
     }, 2010 )
 
   }else{
       setTimeout(()=>{
         lanzarAlerta(arg, toast)
-        window.localStorage.setItem('alertQueue' , String(Number(window.localStorage.getItem('alertQueue'))-1))
-      }, 2010 *  Number(window.localStorage.getItem('alertQueue')))
-      window.localStorage.setItem('alertQueue' , String(Number(window.localStorage.getItem('alertQueue'))+1))
+        window.sessionStorage.setItem('alertQueue' , String(Number(window.sessionStorage.getItem('alertQueue'))-1))
+      }, 2010 *  Number(window.sessionStorage.getItem('alertQueue')))
+      window.sessionStorage.setItem('alertQueue' , String(Number(window.sessionStorage.getItem('alertQueue'))+1))
       lanzarAlerta(arg, toast)}
 }
 
@@ -41,11 +41,12 @@ const lanzarAlerta = (arg: tpDtmResponse , toast = true) => {
     tipo = 'info'
   }
   
+  
   Swal.fire({
     icon: tipo,
     title: msg,
     showConfirmButton: false,
-    timer: 2000,
+    timer: 2000000,
     toast ,
     position: 'top-right' 
   });
