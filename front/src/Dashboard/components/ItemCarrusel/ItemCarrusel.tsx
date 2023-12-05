@@ -157,15 +157,15 @@ export const ItemCarrusel: React.FC<BtnMasAgregarProps> = () => {
               <div key={contentIndex} className="ctOver">
                 {('src' in contentItem) && (
                   <>
-                    <img src={contentItem.src} alt={contentItem.alt} />
-                    <div className="iconosItems">
+                    <img src={contentItem.src} className="img-item" alt={contentItem.alt} />
+                    {/* <div className="iconosItems">
                       <i onClick={() => handleDeleteItemCarrusel(item.index)}>
                         <img src={delImg} alt="Borrar" />
                       </i>
                       <i  onClick={() => edit(item.index)} >
                         <img src={edtImg} alt="Editar" />
                       </i>
-                    </div>
+                    </div> */}
                   </>
                 )}
                 {('content' in contentItem) && ('content' in contentItem.content[0]) && (
