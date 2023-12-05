@@ -108,13 +108,13 @@ function FormularioEventos() {
         event.preventDefault();
         // Resto de tu lógica de envío
     };
-
+console.log(indexCalendarEvent)
     return (
         <div className='FormularioEventos'>
             <NarbarAdmin></NarbarAdmin>
 
             <div className="contenidoFormCarrousel">
-                <BarSession direccion={19} tituloVista='Evento' segundoTitulo='Añadir nuevo eventos' nombre='Kristine' img={userImg} />
+                <BarSession direccion={19} tituloVista='Evento' segundoTitulo={`${indexCalendarEvent == -1 ? 'Añadir' : "Editar"} nuevo eventos`} nombre='Kristine' img={userImg} />
 
 
                 <form className='formCarrousel' onSubmit={hSubmit}>

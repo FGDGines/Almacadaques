@@ -201,7 +201,7 @@ function FormularioRetiros() {
     <NarbarAdmin></NarbarAdmin>
 
     <div className="contenidoFormCarrousel">
-      <BarSession direccion={22} tituloVista='Retiro' segundoTitulo='Añadir nuevo Retiro' nombre='Kristine' img={userImg} />
+      <BarSession direccion={22} tituloVista='Retiro' segundoTitulo={`${indexBlogRetiro == -1 ? "Añadir": "Editar"} Retiro`} nombre='Kristine' img={userImg} />
 
 
   <form className='formCarrousel'>

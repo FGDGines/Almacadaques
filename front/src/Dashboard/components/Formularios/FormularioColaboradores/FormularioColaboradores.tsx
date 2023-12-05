@@ -97,7 +97,7 @@ function FormularioColaboradores() {
             <NarbarAdmin></NarbarAdmin>
 
             <div className="contenidoFormCarrousel">
-                <BarSession direccion={20} tituloVista='Colaboradores' segundoTitulo='Añadir nuevo Colaborador' nombre='Kristine' img={userImg} />
+                <BarSession direccion={20} tituloVista='Colaboradores' segundoTitulo={`${indexCollaborator == -1 ? 'Añadir' : "Editar"} Colaborador`} nombre='Kristine' img={userImg} />
 
 
                 <form className='formCarrousel'>

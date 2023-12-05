@@ -22,13 +22,13 @@ export const Create = async (req: Request, res: Response) => {
              })
             tCarousel.save()
 
-            return res.status(200).json({ status: 200, msg: "Carousel Item Creado" })
+            return res.status(200).json({ status: 200, msg: "Calendar event creado" })
 
         }else{
             return res.status(200).json({status: 400, msg: "La imagen es obligatoria"})
         }
 
     } catch (err) {
-        return res.status(200).json({ status: 500, err, msg: "No podemos crear items del carousel en este momento" })
+        return res.status(200).json({ status: 500, err, msg: "No podemos crear items del calendar event en este momento" })
     }
 }

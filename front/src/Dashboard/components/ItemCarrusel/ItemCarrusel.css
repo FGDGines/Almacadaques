@@ -69,7 +69,7 @@
   margin: 0 auto;
   height: 100%;
   overflow: hidden;
-  background-image: url(../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/fondo-items.svg);
+  /* background-image: url(../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/fondo-items.svg); */
   position: relative;
   margin-right: 2vw;
 }
