@@ -22,7 +22,7 @@
     width: 96%;
     margin: 2vw auto;
     display: grid;
-    grid-template-columns: 53% 45%;
+    /* grid-template-columns: 53% 45%; */
     gap: 2%; 
   }
 
