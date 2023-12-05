@@ -46,7 +46,7 @@ const lanzarAlerta = (arg: tpDtmResponse , toast = true) => {
     icon: tipo,
     title: msg,
     showConfirmButton: false,
-    timer: 2000000,
+    timer: 2000,
     toast ,
     position: 'top-right' 
   });
