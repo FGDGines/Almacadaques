@@ -94,6 +94,10 @@
   background: #2a67a4;
 }
 
+.text-center {
+  text-align: center !important;
+}
+
 @media (max-width: 780px) {
   .card {
     width: 30vw;

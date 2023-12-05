@@ -4,6 +4,9 @@ import { textos } from '../../data/textos';
 import { useContext } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
 
+
+import './Tarjetacolaboradores.css'
+
 interface TarjetaColaboradoresProps {
     colaboradores: Colaborador[];
 }
@@ -23,7 +26,7 @@ function Tarjetacolaboradores({ colaboradores }: TarjetaColaboradoresProps) {
           <div className="description">
             <h3>{colaborador.nombre}</h3>
             <h4>{colaborador.cargo}</h4>
-            <p>{colaborador.descripcion}</p>
+            <p className="text-center">{colaborador.descripcion}</p>
           </div>
           <div className="contact">
             <a href={colaborador.contacto} target='_blank'>
