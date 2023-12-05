@@ -109,10 +109,14 @@ const BlogPost = () => {
               </div>
           </div>
 
-          {current?.content ? current?.content.map((content) => (
+          {current?.content ? current?.content.map((content, index) => (
             <div className="demoPage" >
               <div className="port">
-
+                {index == 0 ? (
+                  <div className="imgLibro">
+                  <img src="../../../../src/assets/ImgLibro/3.png" alt="" />
+              </ div>
+                ) : <></>}
                 <div className="titlePortal2">
                   <div dangerouslySetInnerHTML={{ __html: content }} />
                   
