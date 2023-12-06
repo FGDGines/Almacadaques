@@ -13,6 +13,7 @@
   "dependencies": {
     "@mui/lab": "^5.0.0-alpha.145",
     "@mui/material": "^5.14.10",
+    "@rollup/plugin-url": "^8.0.2",
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide": "^4.1.4",
     "@types/sequelize": "^4.28.17",

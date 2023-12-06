@@ -17,6 +17,7 @@ import { GlobalContext } from '../../contexts/GlobalContext';
 import { useEffect, useState } from 'react';
 import { fetchDefault } from '../../helpers/Server';
 
+import f from "./../../assets/background/rf.jpg"
 
 const ExperienciasDeBienestar = () => {
     const { setLayoutID } = useContext(GlobalContext);
@@ -69,6 +70,7 @@ const ExperienciasDeBienestar = () => {
     return <div className='ExperienciasDeBienestar'>
         <Navbar />
         <Franja text='Experiencias de Bienestar' />
+        <img src={f} width={0} height={0} alt="" />
         <div className='ctMain'>
             <div className='ctTitle'>
                 <span style={{ color: "#75151E" }}> ❝ 

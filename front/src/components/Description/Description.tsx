@@ -2,13 +2,38 @@ import './Description.css'
 import Carousel from '../Carousel/Carousel';
 import Propuesta from '../Propuesta/Propuesta';
 import { textos } from '../../data/textos';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
-import { carouselDescription } from '../../data/carousel';
+// import { carouselDescription } from '../../data/carousel';
+import { formDataToObject } from '../../helpers/Forms';
+import { tpCarouelItem, tpDtmResponse } from '../../types/typesComponents';
+import { fetchDefault } from '../../helpers/Server';
 const Description = () => {
-
-    const {languageFlag} = useContext(GlobalContext)
+    const [caorusels, setCarousels] = useState<tpCarouelItem[]>([]);
+    const { languageFlag } = useContext(GlobalContext)
+    const l = languageFlag.toLowerCase() 
+    const da = new FormData()
+    da.set("lang", l)
+    const data = {body: JSON.stringify(formDataToObject(da))}
     
+    
+    useEffect(() => {
+        const api = async () => {
+            const carousel: tpCarouelItem[] = []
+            fetchDefault("/carousel/read", data, (d: tpDtmResponse) => {
+                if(!d.bag) return 
+                for (let index = 0; index < d.bag.length; index++) {
+                    const element: {id: number , autor: string  , link_autor: string, src:string, data_carousel: {es: string, en: string , cat: string} } = d.bag[index];
+                    const r = "src/carousel/";
+                    carousel.push({ id: element.id, autor: element.autor, link_autor: element.link_autor, src: r + element.src, title: element.data_carousel.es || element.data_carousel.en || element.data_carousel.cat });
+                }
+                setCarousels(carousel);
+                console.log(carousel, caorusels)
+            }) 
+        };
+        api();
+        // eslint-disable-next-line
+    }, [l]); 
     return <>
         <div className='Description'>
             <div className='ctDefault'>
@@ -18,7 +43,7 @@ const Description = () => {
                 </div>
             </div>
             <div className='ctCarousel'>
-                <Carousel  items={carouselDescription} />
+                <Carousel  items={caorusels} />
             </div>
             <div className='ctDefault'>
                 <div className='ctTitle2'>  

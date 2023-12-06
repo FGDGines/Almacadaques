@@ -1,6 +1,6 @@
 import  React, { useState, useEffect, useContext } from 'react';
 import './ItemCarrusel.css';
-import itemsData from '../../../data/itemCarrousel';
+// import itemsData from '../../../data/itemCarrousel';
 import { NuevoCarrusel } from './NuevoCarrusel/NuevoCarrusel';
 import { GlobalContext } from '../../../contexts/GlobalContext';
 import { Loader } from '../LoaderOverlay/LoaderOverlay';
@@ -43,7 +43,7 @@ interface Item {
 
 
 export const ItemCarrusel: React.FC<BtnMasAgregarProps> = () => {
-  const [data, setData] = useState<Item[]>(itemsData);
+  const [data, setData] = useState<Item[]>([]);
   const { languageFlag } = useContext(GlobalContext)
   const { setIndexCarrousel } = useContext(GlobalContext);
   const l = languageFlag.toLowerCase() 
