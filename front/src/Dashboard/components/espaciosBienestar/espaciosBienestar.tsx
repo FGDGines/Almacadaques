@@ -14,6 +14,7 @@ import delImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar
 import edtImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
 import checksImg from "../../../../src/assets/Dashboard-almacadaques/inicio/checks.svg"
 import a from "../../../../src/assets/Dashboard-almacadaques/iconBtn/mingcute_add-line.svg"
+import { mostrarAlerta } from '../../../helpers/MostrarAlerta';
 
 export const EspaciosBienestar = () => {
     const { setLayoutID, setIndexEspacio } = useContext(GlobalContext);
@@ -31,6 +32,7 @@ export const EspaciosBienestar = () => {
         const dat = {body: JSON.stringify(formDataToObject(da))}
 
         fetchDefault("/espacio/delete", dat, (d: tpDtmResponse) => {
+            mostrarAlerta(d)
             if (d.status != 200) return
             const updatedData = data.filter((item) => item.id!== id);
             setData(updatedData);

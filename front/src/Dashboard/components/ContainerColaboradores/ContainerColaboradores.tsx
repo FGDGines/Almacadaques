@@ -11,6 +11,7 @@ import { tpDtmResponse } from '../../../types/typesComponents';
 
 import delImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg"
 import edtImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
+import { mostrarAlerta } from '../../../helpers/MostrarAlerta';
 
 function ContainerColaboradores() {
 
@@ -25,6 +26,7 @@ function ContainerColaboradores() {
     const dat = {body: JSON.stringify(formDataToObject(da))}
 
     fetchDefault("/collaborator/delete", dat, (d: tpDtmResponse) => {
+      mostrarAlerta(d)
       if (d.status != 200) return
       const updatedData = data.filter((item) => item.id !== index);
       setData(updatedData);

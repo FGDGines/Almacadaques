@@ -14,6 +14,7 @@ import { getToken } from '../../../helpers/JWT';
 
 import delImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg"
 import edtImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
+import { mostrarAlerta } from '../../../helpers/MostrarAlerta';
 
 
 export const RedesBienestar = () => {
@@ -28,6 +29,7 @@ export const RedesBienestar = () => {
     const dat = {body: JSON.stringify(formDataToObject(da))}
 
     fetchDefault("/red/delete", dat, (d: tpDtmResponse) => {
+      mostrarAlerta(d)
         if (d.status != 200) return
         const updatedData = redes.filter((item) => item.index!== id);
         setRedes(updatedData);

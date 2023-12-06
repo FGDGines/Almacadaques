@@ -16,6 +16,7 @@ import delImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar
 import edtImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
 import leftImg from "../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/left.svg"
 import rightImg from "../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/right.svg"
+import { mostrarAlerta } from '../../../helpers/MostrarAlerta';
 
 interface ContentItem {
   src: string;
@@ -56,6 +57,7 @@ export const ItemCarrusel: React.FC<BtnMasAgregarProps> = () => {
     const dat = {body: JSON.stringify(formDataToObject(da))}
 
     fetchDefault("/carousel/delete", dat, (d: tpDtmResponse) => {
+      mostrarAlerta(d)
       if (d.status != 200) return
       const updatedData = data.filter((item) => item.index !== index);
       setData(updatedData);

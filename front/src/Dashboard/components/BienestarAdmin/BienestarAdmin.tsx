@@ -9,6 +9,7 @@ import { formDataToObject } from "../../../helpers/Forms";
 
 import addImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
 import delImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg"
+import { mostrarAlerta } from "../../../helpers/MostrarAlerta";
 
 function BienestarAdmin() {
     const { setLayoutID, setIndexTextLibro,  setDataText } = useContext(GlobalContext);
@@ -23,6 +24,7 @@ function BienestarAdmin() {
         const dat = {body: JSON.stringify(formDataToObject(da))}
 
         fetchDefault("/text_libro/delete", dat, (d: tpDtmResponse) => {
+            mostrarAlerta(d)
             if (d.status != 200) return
             const updatedData = data.filter((item) => item.id !== id);
             setData(updatedData);

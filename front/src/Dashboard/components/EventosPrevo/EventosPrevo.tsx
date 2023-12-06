@@ -11,6 +11,7 @@ import { getToken } from "../../../helpers/JWT";
 
 import delImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg"
 import edtImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
+import { mostrarAlerta } from "../../../helpers/MostrarAlerta";
 
 
 
@@ -26,6 +27,7 @@ function EventosPrevo() {
         const dat = {body: JSON.stringify(formDataToObject(da))}
     
         fetchDefault("/calendar_event/delete", dat, (d: tpDtmResponse) => {
+            mostrarAlerta(d)
           if (d.status != 200) return
           const updatedData = data.filter((item) => item.id !== index);
           setData(updatedData);
