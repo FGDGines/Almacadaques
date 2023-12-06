@@ -141,7 +141,7 @@ const BlogPost = () => {
           
     )) : <></>} 
 
-    {dataText?.content && dataText.content.length % 2 == 0  ?(
+    {/* {dataText?.content && dataText.content.length % 2 == 0  ?(
       <div className="demoPage" key={`p-${current.id}`}>
         <div className="port">
 
@@ -154,7 +154,7 @@ const BlogPost = () => {
         </div>
       </div>
           
-    ) : <></>} 
+    ) : <></>}  */}
 
     {/* {current?.content  ?(
         
