@@ -118,10 +118,8 @@ const Footer = () => {
                         <div className="socialRed">
                         {
                             redes.map((red) => {
-                                <div key={`red-${red.index}`}>
-                                    <a href={red.url} target='_blank'>
-                                        <img className="img " src={red.archivo} alt={red.cuenta} />
-                                    </a>
+                                return <div key={`red-${red.index}`}>
+                                    <a href={red.url} target='_blank'><img className="img " width={17} height={17}  src={red.archivo} alt={red.cuenta} /></a>
                                 </div>
                             })
                         }

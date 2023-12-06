@@ -10,6 +10,7 @@ import { getToken } from "../../../helpers/JWT";
 
 import delImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg"
 import edtImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
+import { mostrarAlerta } from "../../../helpers/MostrarAlerta";
 
 
 function formatFecha(day: number[], month: number, year: number) {
@@ -32,6 +33,7 @@ function ContainerRetiro() {
         const dat = {body: JSON.stringify(formDataToObject(da))}
 
         fetchDefault("/blog_retiro/delete", dat, (d: tpDtmResponse) => {
+            mostrarAlerta(d)
             if (d.status != 200) return
             const updatedData = data.filter((item) => item.index !== id);
             setData(updatedData);
