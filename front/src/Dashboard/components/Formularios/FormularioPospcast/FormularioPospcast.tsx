@@ -5,9 +5,10 @@ import { useState, ChangeEvent, useContext } from 'react';
 import { getToken } from "../../../../helpers/JWT";
 import { GlobalContext } from "../../../../contexts/GlobalContext";
 import { fetchForm } from "../../../../helpers/Server";
-// import { tpDtmResponse } from "../../../../types/typesComponents";
+import { tpDtmResponse } from "../../../../types/typesComponents";
 
 import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+import { mostrarAlerta } from "../../../../helpers/MostrarAlerta";
 
 
 interface FormData {
@@ -69,6 +70,18 @@ function FormularioPospcast() {
     setImageURL(URL.createObjectURL(selectedFile));
   };
 
+  const clear = () => {
+    setFormData({
+      Titulo: '',
+      Autor: '',
+      Fecha: new Date(),
+      Categoria: '',
+      Url: '',
+      archivo: null,
+    })
+    setImageURL("")
+  }
+
   const handleSubmit = () => {
     const da = new FormData()
     if (formData.Titulo) {
@@ -94,21 +107,23 @@ function FormularioPospcast() {
 
     if (indexPodcast != -1) {
         da.append("id", `${indexPodcast}`)
-        fetchForm("/podcast/update", da)
+        fetchForm("/podcast/update", da, (d: tpDtmResponse) => {
+          if (d.status == 200) {
+             clear()
+          }
+          mostrarAlerta(d)
+        })
 
     } else {
-        fetchForm("/podcast/register", da)
+      fetchForm("/podcast/register", da, (d: tpDtmResponse) => {
+        if (d.status == 200) {
+          clear()
+        }
+        mostrarAlerta(d)
+      })
     }
 
-    setFormData({
-      Titulo: '',
-      Autor: '',
-      Fecha: new Date(),
-      Categoria: '',
-      Url: '',
-      archivo: null,
-    })
-    setImageURL("")
+    
   };
 
   return (

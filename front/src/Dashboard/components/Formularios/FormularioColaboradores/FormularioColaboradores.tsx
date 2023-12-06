@@ -3,12 +3,13 @@ import { NarbarAdmin } from '../../NarbarAdmin/NarbarAdmin';
 import { BarSession } from '../../barSession/barSession';
 import { useState, ChangeEvent, useContext } from 'react';
 import { fetchForm } from '../../../../helpers/Server';
-// import { tpDtmResponse } from '../../../../types/typesComponents';
+import { tpDtmResponse } from '../../../../types/typesComponents';
 import { GlobalContext } from '../../../../contexts/GlobalContext';
 import { getToken } from '../../../../helpers/JWT';
 
 
 import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+import { mostrarAlerta } from '../../../../helpers/MostrarAlerta';
 
 
 interface FormData {
@@ -54,6 +55,17 @@ function FormularioColaboradores() {
       setImageURL(URL.createObjectURL(selectedFile));
     };
 
+    const clear = () => {
+        setFormData({
+            Nombre: '',
+            Cargo: '',
+            Descripcion: '',
+            Contacto: '',
+            archivo: null,
+        })
+        setImageURL("")
+    }
+
     const handleSubmit = () => {
         const da = new FormData()
         if (formData.Nombre) {
@@ -76,19 +88,22 @@ function FormularioColaboradores() {
         }
         if (indexCollaborator != -1) {
             da.append("id", `${indexCollaborator}`)
-            fetchForm("/collaborator/update", da)
+            fetchForm("/collaborator/update", da, (d: tpDtmResponse) => {
+                if (d.status == 200) {
+                    clear()
+                }
+                mostrarAlerta(d)
+            })
     
         } else {
-            fetchForm("/collaborator/register", da)
+            fetchForm("/collaborator/register", da, (d: tpDtmResponse) => {
+                if (d.status == 200) {
+                    clear()
+                }
+                mostrarAlerta(d)
+            })
         }
-        setFormData({
-            Nombre: '',
-            Cargo: '',
-            Descripcion: '',
-            Contacto: '',
-            archivo: null,
-        })
-        setImageURL("")
+        
     };
 
 

@@ -6,10 +6,10 @@ import { getToken } from "../../../../helpers/JWT";
 import { GlobalContext } from "../../../../contexts/GlobalContext";
 import { fetchDefault, fetchForm } from "../../../../helpers/Server";
 import { formDataToObject } from "../../../../helpers/Forms";
-import { tpDtmResponse } from "../../../../types/typesComponents";
-// import { tpDtmResponse } from "../../../../types/typesComponents";
+import { tpDtmResponse } from "../../../../types/typesComponents"; 
 
 import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+import { mostrarAlerta } from "../../../../helpers/MostrarAlerta";
 
 
 interface FormData {
@@ -88,6 +88,23 @@ function FormularioRetiros() {
     }
     setImageURL(URL.createObjectURL(selectedFile));
   };
+
+  const clear = () => {
+    setFormData({
+      Titulo_es: '',
+      Titulo_en: '',
+      Titulo_cat: '',
+      Autor: '',
+      Fecha: new Date(),
+      day: 0,
+      Descripcion_es: '',
+      Descripcion_en: '',
+      Descripcion_cat: '',
+      Estado: '',
+      archivo: null,
+    })
+    setImageURL("")
+  }
     
   const handleSubmit = () => {
     const da = new FormData()
@@ -134,26 +151,22 @@ function FormularioRetiros() {
     }
     if (indexBlogRetiro != -1) {
         da.append("id", `${indexBlogRetiro}`)
-        fetchForm("/blog_retiro/update", da)
+        fetchForm("/blog_retiro/update", da, (d: tpDtmResponse) => {
+          if (d.status == 200) {
+             clear()
+          }
+          mostrarAlerta(d)
+        })
 
     } else {
         da.set("index", "1")
-        fetchForm("/blog_retiro/create", da)
+        fetchForm("/blog_retiro/create", da, (d: tpDtmResponse) => {
+          if (d.status == 200) {
+             clear()
+          }
+          mostrarAlerta(d)
+        })
     }
-    setFormData({
-      Titulo_es: '',
-      Titulo_en: '',
-      Titulo_cat: '',
-      Autor: '',
-      Fecha: new Date(),
-      day: 0,
-      Descripcion_es: '',
-      Descripcion_en: '',
-      Descripcion_cat: '',
-      Estado: '',
-      archivo: null,
-    })
-    setImageURL("")
   };
 
   useEffect(() => {

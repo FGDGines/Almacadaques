@@ -5,9 +5,10 @@ import { useState, ChangeEvent, useContext, useEffect } from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import { fetchForm } from '../../../../helpers/Server';
-// import { tpDtmResponse } from '../../../../types/typesComponents';
+import { tpDtmResponse } from '../../../../types/typesComponents';
 import { GlobalContext } from '../../../../contexts/GlobalContext';
 import { getToken } from '../../../../helpers/JWT'; 
+import { mostrarAlerta } from '../../../../helpers/MostrarAlerta';
 
 
 import s from "./../../../../assets/Dashboard-almacadaques/iconBtn/Borrar.svg"
@@ -55,6 +56,16 @@ function FormularioBlogBienestar() {
         setImageURL(URL.createObjectURL(selectedFile));
     };
 
+    const clear = () => {
+        setFormData({
+            Titulo: '',
+            Subtitulo: '',
+            archivo: null,
+        }) 
+        setImageURL('')
+        setEditors([])
+    }
+
     const handleSubmit = () => {
         const da = new FormData()
         if (formData.Titulo) {
@@ -74,18 +85,21 @@ function FormularioBlogBienestar() {
         }
         if (indexTextLibro != -1) {
             da.append("id", `${indexTextLibro}`)
-            fetchForm("/text_libro/update", da)
+            fetchForm("/text_libro/update", da, (d: tpDtmResponse) => {
+                if (d.status == 200) {
+                    clear()
+                }
+                mostrarAlerta(d)
+            })
     
         } else {
-            fetchForm("/text_libro/register", da)
+            fetchForm("/text_libro/register", da, (d: tpDtmResponse) => {
+                if (d.status == 200) {
+                    clear()
+                }
+                mostrarAlerta(d)
+            })
         }
-        setFormData({
-            Titulo: '',
-            Subtitulo: '',
-            archivo: null,
-        }) 
-        setImageURL('')
-        setEditors([])
     };
     
   

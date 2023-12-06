@@ -5,9 +5,10 @@ import { useState, ChangeEvent, useContext } from 'react';
 import { getToken } from '../../../../helpers/JWT';
 import { GlobalContext } from '../../../../contexts/GlobalContext';
 import { fetchForm } from '../../../../helpers/Server';
-// import { tpDtmResponse } from '../../../../types/typesComponents';
+import { tpDtmResponse } from '../../../../types/typesComponents';
 
 import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+import { mostrarAlerta } from '../../../../helpers/MostrarAlerta';
 
 
 interface FormData {
@@ -70,6 +71,19 @@ function FormularioEventos() {
       setImageURL(URL.createObjectURL(selectedFile));
     };
 
+    const clear = () => {
+        setFormData({
+            Titulo: '',
+            Inicio: new Date(),
+            Final: new Date(),
+            Descripcion: '',
+            Nombre: '',
+            Url: '',
+            archivo: null
+        })
+        setImageURL("")
+    }
+
     const handleSubmit = () => {
         const da = new FormData()
         if (formData.Nombre) da.append("nombre", formData.Nombre)
@@ -85,22 +99,22 @@ function FormularioEventos() {
         }
         if (indexCalendarEvent != -1) {
             da.append("id", `${indexCalendarEvent}`)
-            fetchForm("/calendar_event/update", da)
+            fetchForm("/calendar_event/update", da, (d: tpDtmResponse) => {
+                if (d.status == 200) {
+                    clear()
+                }
+                mostrarAlerta(d)
+            })
     
         } else {
-            fetchForm("/calendar_event/create", da)
+            fetchForm("/calendar_event/create", da, (d: tpDtmResponse) => {
+                if (d.status == 200) {
+                    clear()
+                }
+                mostrarAlerta(d)
+            })
         }
 
-        setFormData({
-            Titulo: '',
-            Inicio: new Date(),
-            Final: new Date(),
-            Descripcion: '',
-            Nombre: '',
-            Url: '',
-            archivo: null
-        })
-        setImageURL("")
     };
 
     const hSubmit = (event: React.FormEvent) => {

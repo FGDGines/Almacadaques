@@ -20,7 +20,7 @@ function InicioAdmin() {
         <div className="contenidoBienestar">
 
           <EspaciosBienestar />
-          {/* <RedesBienestar /> */}
+          <RedesBienestar />
 
 
         </div>

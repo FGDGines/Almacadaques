@@ -10,6 +10,7 @@ import { tpDtmResponse } from '../../../../types/typesComponents';
 
 
 import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+import { mostrarAlerta } from '../../../../helpers/MostrarAlerta';
 
 
 interface FormData {
@@ -36,7 +37,14 @@ export const FormularioTestimonios = () => {
         });
     };
 
-    
+    const clear = () => {
+        setFormData({
+            Frase_es: '',
+            Frase_en: '',
+            Frase_cat: '',
+            Witness: '',
+        })
+    }
 
     const handleSubmit = () => {
         const da = new FormData()
@@ -48,16 +56,21 @@ export const FormularioTestimonios = () => {
         
         if (indexTestimony != -1) {
             da.append("id", `${indexTestimony}`)
-            fetchForm("/testimony/update", da)
+            fetchForm("/testimony/update", da, (d: tpDtmResponse) => {
+                if (d.status == 200) {
+                    clear()
+                }
+                mostrarAlerta(d)
+            })
         } else {
-            fetchForm("/testimony/create", da)
+            fetchForm("/testimony/create", da, (d: tpDtmResponse) => {
+                if (d.status == 200) {
+                    clear()
+                }
+                mostrarAlerta(d)
+            })
         }
-        setFormData({
-            Frase_es: '',
-            Frase_en: '',
-            Frase_cat: '',
-            Witness: '',
-        })
+        
     };
 
 

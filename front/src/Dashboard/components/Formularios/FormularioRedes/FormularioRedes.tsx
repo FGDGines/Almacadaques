@@ -4,11 +4,12 @@ import { BarSession } from '../../barSession/barSession';
 import { useState, ChangeEvent, useContext } from 'react';
 import { getToken } from '../../../../helpers/JWT';
 import { fetchForm } from '../../../../helpers/Server';
-// import { tpDtmResponse } from '../../../../types/typesComponents';
+import { tpDtmResponse } from '../../../../types/typesComponents';
 import { GlobalContext } from '../../../../contexts/GlobalContext';
 
 
 import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+import { mostrarAlerta } from '../../../../helpers/MostrarAlerta';
 
 
 interface FormData {
@@ -46,7 +47,14 @@ export const FormularioRedes = () => {
         }
         setImageURL(URL.createObjectURL(selectedFile));
     };
-    
+    const clear = () => {
+        setFormData({
+            url: '',
+            archivo: null,
+            cuenta: ''
+        })
+        setImageURL("")
+    }
     const handleSubmit = () => {
         const da = new FormData()
         if (formData.url) {
@@ -62,17 +70,21 @@ export const FormularioRedes = () => {
         }
         if (indexRed != -1) {
             da.append("id", `${indexRed}`)
-            fetchForm("/red/update", da)
+            fetchForm("/red/update", da, (d: tpDtmResponse) => {
+                if (d.status == 200) {
+                    clear()
+                }
+                mostrarAlerta(d)
+            })
     
         } else {
-            fetchForm("/red/create", da)
+            fetchForm("/red/create", da, (d: tpDtmResponse) => {
+                if (d.status == 200) {
+                    clear()
+                }
+                mostrarAlerta(d)
+            })
         }
-        setFormData({
-            url: '',
-            archivo: null,
-            cuenta: ''
-        })
-        setImageURL("")
     };
 
     return (

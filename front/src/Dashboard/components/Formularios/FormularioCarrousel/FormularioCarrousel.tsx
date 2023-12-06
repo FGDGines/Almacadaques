@@ -6,10 +6,10 @@ import { fetchDefault, fetchForm } from '../../../../helpers/Server';
 import { GlobalContext } from '../../../../contexts/GlobalContext';
 import { getToken } from '../../../../helpers/JWT';
 import { formDataToObject } from '../../../../helpers/Forms';
-import { tpDtmResponse } from '../../../../types/typesComponents';
-// import { tpDtmResponse } from '../../../../types/typesComponents';
+import { tpDtmResponse } from '../../../../types/typesComponents'; 
 
 import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+import { mostrarAlerta } from '../../../../helpers/MostrarAlerta';
 
 
 interface FormData {
@@ -54,6 +54,18 @@ export const FormularioCarrousel = () => {
         setImageURL(URL.createObjectURL(selectedFile));
     };
 
+    const clear = () => {
+        setFormData({
+            Frase_es: '',
+            Frase_en: '',
+            Frase_cat: '',
+            Firma: '',
+            Url: '',
+            archivo: null,
+        })
+        setImageURL("")
+    }
+
     const handleSubmit = () => {
         const da = new FormData()
         if (formData.Firma) {
@@ -79,20 +91,21 @@ export const FormularioCarrousel = () => {
         }
         if (indexCarrousel != -1) {
             da.append("id", `${indexCarrousel}`)
-            fetchForm("/carousel/update", da)
+            fetchForm("/carousel/update", da, (d: tpDtmResponse) => {
+                if (d.status == 200) {
+                    clear()
+                }
+                mostrarAlerta(d)
+            })
     
         } else {
-            fetchForm("/carousel/create", da)
+            fetchForm("/carousel/create", da, (d: tpDtmResponse) => {
+                if (d.status == 200) {
+                    clear()
+                }
+                mostrarAlerta(d)
+            })
         }
-        setFormData({
-            Frase_es: '',
-            Frase_en: '',
-            Frase_cat: '',
-            Firma: '',
-            Url: '',
-            archivo: null,
-        })
-        setImageURL("")
     };
 
 

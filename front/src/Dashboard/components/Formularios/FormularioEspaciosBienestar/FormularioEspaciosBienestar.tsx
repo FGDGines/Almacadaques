@@ -11,6 +11,7 @@ import { formDataToObject } from '../../../../helpers/Forms';
 
 
 import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+import { mostrarAlerta } from '../../../../helpers/MostrarAlerta';
 
 
 interface FormData {
@@ -35,7 +36,13 @@ export const FormularioEspaciosBienestar = () => {
         });
     };
 
-
+    const clear = () => {
+        setFormData({
+            Frase_es: '',
+            Frase_en: '',
+            Frase_cat: '',
+        })
+    }
 
     const handleSubmit = () => {
         const da = new FormData()
@@ -46,16 +53,22 @@ export const FormularioEspaciosBienestar = () => {
         
         if (indexEspacio != -1) {
             da.append("id", `${indexEspacio}`)
-            fetchForm("/espacio/update", da)
+            fetchForm("/espacio/update", da, (d: tpDtmResponse) => {
+                if (d.status == 200) {
+                    clear()
+                }
+                mostrarAlerta(d)
+            })
     
         } else {
-            fetchForm("/espacio/create", da)
+            fetchForm("/espacio/create", da, (d: tpDtmResponse) => {
+                if (d.status == 200) {
+                    clear()
+                }
+                mostrarAlerta(d)
+            })
         }
-        setFormData({
-            Frase_es: '',
-            Frase_en: '',
-            Frase_cat: '',
-        })
+        
     };
 
     useEffect(() => {
