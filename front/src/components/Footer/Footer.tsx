@@ -4,7 +4,7 @@ import { ChangeEvent, useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
 import { fetchDefault } from '../../helpers/Server';
 import { formDataToObject } from '../../helpers/Forms';
-import { tpDtmResponse, RedesProps } from '../../types/typesComponents';
+import { tpDtmResponse, RedesProps, RedProps } from '../../types/typesComponents';
 
 
 import telImg from "../../../src/assets/images/mensaje-de-telefono.png"
@@ -20,7 +20,7 @@ const Footer = () => {
     const { setLayoutID } = useContext(GlobalContext);
     const [ redes, setRedes ] = useState<RedesProps>([])
     const [ email, setEmail ] = useState("")
-
+    const [ wats, setWats ] = useState<RedProps | null>(null)
 
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
         const { value } = event.target; 
@@ -50,12 +50,19 @@ const Footer = () => {
                 for (let index = 0; index < d.bag.length; index++) {
                     const element: {id: number , archivo: string, url: string, cuenta:string } = d.bag[index];
                     const r = "src/red/"
-                    red.push({ 
+                    const url = element.url
+                    const value = { 
                         index: element.id, 
                         archivo: r + element.archivo, 
-                        url: element.url, 
+                        url: url, 
                         cuenta: element.cuenta
-                     });
+                    }
+                    if (url.startsWith("https://wa.me/")) {
+                        setWats(value)
+                    } else { 
+                        red.push(value);
+                    }
+                   
                 }
                 setRedes(red);
             }) 
@@ -134,9 +141,15 @@ const Footer = () => {
                             <a href="mailto:hola@almacadaques.com" target='_blank'><img className="img email" src="../../../src/assets/images/email.png" alt="Email" /></a>
                             <a href="https://www.instagram.com/almacadaques" target='_blank'><img className="img " src="../../../src/assets/images/instagram.png" alt="Instagram" /></a> */}
                         </div>
-                        <div className="whats">
+
+
+                        {wats ? (<div className="whats">
+                            <a href={wats.url} target='_blank'><img className="img1 " src={wats.archivo} alt={wats.cuenta} /></a>
+                        </div>) : <></>}
+
+                        {/* <div className="whats">
                             <a href="https://wa.me/+34660305421?text=Hola Almacadaques" target='_blank'><img className="img1 " src={w} alt="whatsapp" /></a>
-                        </div>
+                        </div> */}
                         
                     </div>
                     

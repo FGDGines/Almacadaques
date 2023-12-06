@@ -3,18 +3,20 @@ import HTMLFlipBook from 'react-pageflip';
 import Navbar from "../Navbar/Navbar";
 import Franja from "../Franja/Franja";
 import Footer from "../Footer/Footer";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import './BlogPost.css';
 import { tpDtmResponse, tpTextLibro } from '../../types/typesComponents';
 import { fetchDefault } from '../../helpers/Server';
 
 
 import portImg from "../../../src/assets/ImgLibro/portada.jpeg"
+import { GlobalContext } from '../../contexts/GlobalContext';
 
 
 const BlogPost = () => {
   const [data, setData] = useState<tpTextLibro[]>([]);
   const [current, setCurrent] = useState<tpTextLibro | null>(null);
+  const {dataText, setDataText} = useContext(GlobalContext)
   const handleBookInit = () => {
     // console.log('El libro se ha inicializado.');
   };
@@ -22,6 +24,7 @@ const BlogPost = () => {
   const changeBock = (book: tpTextLibro) => {
     console.log(book)
     setCurrent(book)
+    setDataText(book)
   } 
 
 
@@ -44,15 +47,14 @@ const BlogPost = () => {
           }
           text.push(value)
         }
-        console.log(text)
         setData(text);
+        setDataText(text[0])
         setCurrent(text[0])
       }) 
     };
     api();
     // eslint-disable-next-line
   }, []);
-
 
   return (
     <div className="BlogPost">
@@ -119,12 +121,12 @@ const BlogPost = () => {
 
     {current?.content ? current?.content.map((content, index) => (
      
-        <div className="demoPage" key={`blog-${current.id}-${index}`}>
+        <div className="demoPage" key={`item-${index}`}>
           <div className="marco">
             <div className="titlePortal">
               {index == 0 ? (
                 <div className="imgLibro">
-                  <img src="../../../src/assets/ImgLibro/1.jpg" alt="" />
+                  <img src={current.imagenSrc} alt="" />
                 </div>
               ) : <></>}
               <div className="titlePortal">
@@ -138,9 +140,9 @@ const BlogPost = () => {
         </div>
           
     )) : <></>} 
-{/* 
-    {current?.content && current.content.length % 2 == 0  ?(
-      <div className="demoPage">
+
+    {dataText?.content && dataText.content.length % 2 == 0  ?(
+      <div className="demoPage" key={`p-${current.id}`}>
         <div className="port">
 
           <div className="titlePortal2">
@@ -154,7 +156,7 @@ const BlogPost = () => {
           
     ) : <></>} 
 
-    {current?.content  ?(
+    {/* {current?.content  ?(
         
       <div className="demoPage">
         <div className="port">
