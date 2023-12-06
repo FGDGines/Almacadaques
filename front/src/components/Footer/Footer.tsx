@@ -1,24 +1,24 @@
 import './Footer.css';
 import { textos } from '../../data/textos';
-import { ChangeEvent, useContext, useState } from 'react';
+import { ChangeEvent, useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
 import { fetchDefault } from '../../helpers/Server';
 import { formDataToObject } from '../../helpers/Forms';
-// import { tpDtmResponse, RedesProps } from '../../types/typesComponents';
+import { tpDtmResponse, RedesProps } from '../../types/typesComponents';
 
 
 import telImg from "../../../src/assets/images/mensaje-de-telefono.png"
 import w from "../../../src/assets/images/whatsapp.png"                            
-import facebook from "../../../src/assets/images/facebook.png"
-import linkedin from "../../../src/assets/images/linkedin.png"
-import em from "../../../src/assets/images/email.png"
-import instagram from "../../../src/assets/images/instagram.png"
+// import facebook from "../../../src/assets/images/facebook.png"
+// import linkedin from "../../../src/assets/images/linkedin.png"
+// import em from "../../../src/assets/images/email.png"
+// import instagram from "../../../src/assets/images/instagram.png"
 
 
 const Footer = () => {
     const { languageFlag } = useContext(GlobalContext)
     const { setLayoutID } = useContext(GlobalContext);
-    // const [ redes, setRedes ] = useState<RedesProps>([])
+    const [ redes, setRedes ] = useState<RedesProps>([])
     const [ email, setEmail ] = useState("")
 
 
@@ -42,27 +42,27 @@ const Footer = () => {
     }
 
 
-    // useEffect(() => {
-    //     const api = async () => {
-    //         const red: RedesProps = []
-    //         fetchDefault("/red/read", {}, (d: tpDtmResponse) => {
-    //             if(!d.bag) return 
-    //             for (let index = 0; index < d.bag.length; index++) {
-    //                 const element: {id: number , archivo: string, url: string, cuenta:string } = d.bag[index];
-    //                 const r = "src/red/"
-    //                 red.push({ 
-    //                     index: element.id, 
-    //                     archivo: r + element.archivo, 
-    //                     url: element.url, 
-    //                     cuenta: element.cuenta
-    //                  });
-    //             }
-    //             setRedes(red);
-    //         }) 
-    //     };
-    //     api();
-    //     // eslint-disable-next-line
-    // }, []);
+    useEffect(() => {
+        const api = async () => {
+            const red: RedesProps = []
+            fetchDefault("/red/read", {}, (d: tpDtmResponse) => {
+                if(!d.bag) return 
+                for (let index = 0; index < d.bag.length; index++) {
+                    const element: {id: number , archivo: string, url: string, cuenta:string } = d.bag[index];
+                    const r = "src/red/"
+                    red.push({ 
+                        index: element.id, 
+                        archivo: r + element.archivo, 
+                        url: element.url, 
+                        cuenta: element.cuenta
+                     });
+                }
+                setRedes(red);
+            }) 
+        };
+        api();
+        // eslint-disable-next-line
+    }, []);
 
     return (
         <div className="Footer">
@@ -116,19 +116,21 @@ const Footer = () => {
                 <div className="infofooter">
                     <div className="redes">
                         <div className="socialRed">
-                        {/* {
+                        {
                             redes.map((red) => {
-                                return <>
-                                    <a href={red.url} target='_blank'><img className="img " src={red.archivo} alt={red.cuenta} /></a>
-                                </>
+                                <div key={`red-${red.index}`}>
+                                    <a href={red.url} target='_blank'>
+                                        <img className="img " src={red.archivo} alt={red.cuenta} />
+                                    </a>
+                                </div>
                             })
-                        } */}
+                        }
 
-                        <a href="https://www.facebook.com/almacadaques?locale=es_LA" target='_blank'><img className=" " width={17} height={17}  src={facebook} alt="Facebook" /></a>
+                        {/* <a href="https://www.facebook.com/almacadaques?locale=es_LA" target='_blank'><img className=" " width={17} height={17}  src={facebook} alt="Facebook" /></a>
                         <a href="https://www.linkedin.com/in/elisabet-coll-vinent-b9765530" target='_blank'><img className=" " width={17} height={17} src={linkedin} alt="Linkedin" /></a>
                         <a href="mailto:hola@almacadaques.com" target='_blank'><img className=" email" width={17} height={17} src={em} alt="Email" /></a>
                         <a href="https://www.instagram.com/almacadaques" target='_blank'><img className=" " width={17} height={17} src={instagram} alt="Instagram" /></a> 
-                            
+                             */}
                             {/* <a href="https://www.facebook.com/almacadaques?locale=es_LA" target='_blank'><img className="" width={17} height={17} src="../../../src/assets/images/facebook.png" alt="Facebook" /></a> */}
                             {/* <a href="https://www.linkedin.com/in/elisabet-coll-vinent-b9765530" target='_blank'><img className="img " src="../../../src/assets/images/linkedin.png" alt="Linkedin" /></a>
                             <a href="mailto:hola@almacadaques.com" target='_blank'><img className="img email" src="../../../src/assets/images/email.png" alt="Email" /></a>
