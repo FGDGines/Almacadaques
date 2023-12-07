@@ -61,119 +61,41 @@ const BlogPost = () => {
       <Navbar />
       <Franja text="Tips de Bienestar" />
       <div className="BookItem">
-        <HTMLFlipBook
-          width={2500}
-          height={2500}
-          className={"libro"}
-          style={{
-            width: "85vw",
-            height: "25vw",
-          }}
-          startPage={0}
-          size={"stretch"}
-          minWidth={100}
-          maxWidth={3000}
-          minHeight={500}
-          maxHeight={5000}
-          drawShadow={true}
-          flippingTime={1000}
-          usePortrait={true}
-          startZIndex={1}
-          autoSize={true}
-          maxShadowOpacity={0.5}
-          showCover={true}
-          mobileScrollSupport={true}
-          clickEventForward={true}
-          useMouseEvents={true}
-          swipeDistance={30}
-          showPageCorners={true}
-          disableFlipByClick={false}
-          onInit={handleBookInit}
+      {current && current.content.length > 0 ?
+      
+      <div className="book">
+    <input type="radio" name="page" id="page-1" defaultChecked />
+    <label className="page cover" htmlFor="page-3"><h1>{current?.title}</h1><h2>{current?.subtitle}</h2></label>
+    <label className="page cover" htmlFor="page-1"></label>
 
-        >
+    <input type="radio" name="page" id={`page-3`} />
+    {(() => {
+        const pages = [];
+        let i: number = 0
+        for (let index = 0; index < current?.content.length/2; index+=1) {
+          const element = current.content[i];
+          const next = current.content[i + 1]
+          i+=2
+          console.log(element, next, index)
+            pages.push(
+                <>
+                    <label className="page" htmlFor={`page-${index * 2 + 5}`}>
+                        <p>{element}</p>
+                    </label>
+                    <label className="page" htmlFor={`page-${index * 2 + 3}`}>{next}</label>
+                    <input type="radio" name="page" id={`page-${index * 2 + 5}`} />
+                </>
+            );
+        }
+        return pages;
+    })()}
+    {/* <input type="radio" name="page" id={`page-${current?.content.length * 2 + 3}`} /> */}
+    <label className="page cover" htmlFor={`page-${current?.content.length  + 5}`}></label>
+    <label className="page cover" htmlFor={`page-${current?.content.length  + 3}`}></label>
+    <input type="radio" name="page" id={`page-${current?.content.length  + 5}`} />
+</div>
 
-
-
-    <div className="demoPage" >
-        <div className="port">
-            <div className="titlePortal2">
-                <img src={portImg} alt="" />
-                <div className="ctOverlayBook">
-                    <div className="titleCortoPor">
-                        <h1>{current?.title}</h1>
-                        <h3>{current?.subtitle}</h3>
-                    </div>
-                    <p>Elisabet Coll-Vinent</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div className="demoPage" >
-      <div className="port">
-
-        <div className="titlePortal2">
-          <div className="ctOverlayBook">
-          <img src={portImg} alt="" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    {current?.content ? current?.content.map((content, index) => (
-     
-        <div className="demoPage" key={`item-${index}`}>
-          <div className="marco">
-            <div className="titlePortal">
-              {index == 0 ? (
-                <div className="imgLibro">
-                  <img src={current.imagenSrc} alt="" />
-                </div>
-              ) : <></>}
-              <div className="titlePortal">
-                {content}
-              </div>
-
-
-            </div>
-          </div>
-
-        </div>
-          
-    )) : <></>} 
-
-    {/* {dataText?.content && dataText.content.length % 2 == 0  ?(
-      <div className="demoPage" key={`p-${current.id}`}>
-        <div className="port">
-
-          <div className="titlePortal2">
-          <img src="../../../src/assets/ImgLibro/portada.jpeg" alt="" />
-            <div className="ctOverlayBook">
-
-            </div>
-          </div>
-        </div>
-      </div>
-          
-    ) : <></>}  */}
-
-    {/* {current?.content  ?(
-        
-      <div className="demoPage">
-        <div className="port">
-
-          <div className="titlePortal2">
-          <img src="../../../src/assets/ImgLibro/portada.jpeg" alt="" />
-            <div className="ctOverlayBook">
-              <h3 className='FinalLibro'>© Elisabet Coll-Vinent@almacadaques.com</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-          
-    ) : <></>}  */}
-
-
-      </HTMLFlipBook>
+    : <></>}
       <div className="ItemBookUser">
           <div className="carduser">
             <ul className='UlLista'>
