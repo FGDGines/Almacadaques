@@ -61,41 +61,58 @@ const BlogPost = () => {
       <Navbar />
       <Franja text="Tips de Bienestar" />
       <div className="BookItem">
-      {current && current.content.length > 0 ?
-      
-      <div className="book">
-    <input type="radio" name="page" id="page-1" defaultChecked />
-    <label className="page cover" htmlFor="page-3"><h1>{current?.title}</h1><h2>{current?.subtitle}</h2></label>
-    <label className="page cover" htmlFor="page-1"></label>
 
-    <input type="radio" name="page" id={`page-3`} />
-    {(() => {
-        const pages = [];
-        let i: number = 0
-        for (let index = 0; index < current?.content.length/2; index+=1) {
-          const element = current.content[i];
-          const next = current.content[i + 1]
-          i+=2
-          console.log(element, next, index)
-            pages.push(
-                <>
+        {current && current.content.length > 0 ?
+        
+          <div className="book">
+
+            {/* se construye como un i dos l  */}
+            {/* para que muestre en las dos caras primero pondremos cuatro y cambiaremoss a dos l un i */}
+            <input type="radio" name="page" id="page-1" defaultChecked />
+            <label className="page cover" htmlFor="page-3"><h1>{current?.title}</h1><h2>{current?.subtitle}</h2></label>
+            <label className="page cover" htmlFor="page-1"></label>
+
+            <input type="radio" name="page" id={`page-3`} />
+            {(() => {
+              const pages = [];
+              let i: number = 0
+              for (let index = 0; index < current?.content.length/2; index+=1) {
+                const element = current.content[i];
+                const next = current.content[i + 1]
+                i+=2
+                console.log(element, next, index)
+                if (index < current.content.length/2 || current.content.length % 2 != 0) {
+                  pages.push(
+                    <>
+                      <label className="page" htmlFor={`page-${index * 2 + 5}`}>
+                          <p>{element}</p>
+                      </label>
+                      <label className="page" htmlFor={`page-${index * 2 + 3}`}>{next}</label>
+                      <input type="radio" name="page" id={`page-${index * 2 + 5}`} />
+                    </>
+                  );
+                } else {
+                  pages.push(
+                    <>
                     <label className="page" htmlFor={`page-${index * 2 + 5}`}>
-                        <p>{element}</p>
+                      <p></p>
                     </label>
-                    <label className="page" htmlFor={`page-${index * 2 + 3}`}>{next}</label>
+                    <label className="page" htmlFor={`page-${index * 2 + 3}`}>{element}</label>
                     <input type="radio" name="page" id={`page-${index * 2 + 5}`} />
-                </>
-            );
-        }
-        return pages;
-    })()}
-    {/* <input type="radio" name="page" id={`page-${current?.content.length * 2 + 3}`} /> */}
-    <label className="page cover" htmlFor={`page-${current?.content.length  + 5}`}></label>
-    <label className="page cover" htmlFor={`page-${current?.content.length  + 3}`}></label>
-    <input type="radio" name="page" id={`page-${current?.content.length  + 5}`} />
-</div>
+                    </>
+                  )
+                }
+              }
+              return pages;
+            })()}
+            {/* <input type="radio" name="page" id={`page-${current?.content.length * 2 + 3}`} /> */}
+            <label className="page cover" htmlFor={`page-${(current?.content.length % 2 != 0 ? current.content.length + 1 : current.content.length)  + 5}`}></label>
+            <label className="page cover" htmlFor={`page-${(current?.content.length % 2 != 0 ? current.content.length + 1 : current.content.length)  + 3}`}></label>
+            <input type="radio" name="page" id={`page-${(current?.content.length % 2 != 0 ? current.content.length + 1 : current.content.length)  + 5}`} />
+          </div>
 
-    : <></>}
+        : <></>}
+
       <div className="ItemBookUser">
           <div className="carduser">
             <ul className='UlLista'>
@@ -114,6 +131,8 @@ const BlogPost = () => {
           </div>
         </div>
       </div>
+
+      <div className="separator"></div>
       <Footer />
     </div>
   );
