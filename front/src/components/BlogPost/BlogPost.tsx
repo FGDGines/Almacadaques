@@ -69,7 +69,13 @@ const BlogPost = () => {
             {/* se construye como un i dos l  */}
             {/* para que muestre en las dos caras primero pondremos cuatro y cambiaremoss a dos l un i */}
             <input type="radio" name="page" id="page-1" defaultChecked />
-            <label className="page cover" htmlFor="page-3"><h1>{current?.title}</h1><h2>{current?.subtitle}</h2></label>
+            <label className="page cover" htmlFor="page-3">
+              <div>
+                <h3>{current.title}</h3>
+                <h3>{current.subtitle}</h3>
+              </div>
+              <p className='cuenta'>Elisabet Coll-Vinent</p>
+            </label>
             <label className="page cover" htmlFor="page-1"></label>
 
             <input type="radio" name="page" id={`page-3`} />
@@ -81,33 +87,54 @@ const BlogPost = () => {
                 const next = current.content[i + 1]
                 i+=2
                 console.log(element, next, index)
-                if (index < current.content.length/2 || current.content.length % 2 != 0) {
+                if(index == 0) { // la primera cara tiene una foto
                   pages.push(
                     <>
                       <label className="page" htmlFor={`page-${index * 2 + 5}`}>
-                          <p>{element}</p>
+                        <div className="imgLibro">
+                          <img src="../../../../src/assets/ImgLibro/2.png" alt="" />
+                        </ div>
+                        <p>
+                          <div dangerouslySetInnerHTML={{ __html: element }} />
+                        </p>
                       </label>
-                      <label className="page" htmlFor={`page-${index * 2 + 3}`}>{next}</label>
+                      <label className="page" htmlFor={`page-${index * 2 + 3}`}><div dangerouslySetInnerHTML={{ __html: next }} /></label>
                       <input type="radio" name="page" id={`page-${index * 2 + 5}`} />
                     </>
                   );
-                } else {
-                  pages.push(
-                    <>
-                    <label className="page" htmlFor={`page-${index * 2 + 5}`}>
-                      <p></p>
-                    </label>
-                    <label className="page" htmlFor={`page-${index * 2 + 3}`}>{element}</label>
-                    <input type="radio" name="page" id={`page-${index * 2 + 5}`} />
-                    </>
-                  )
+                }
+                else {
+                  // para cuando tiene una cantidad impar le sobra un elemeto al final y hay que controlarlo
+                  if (index < current.content.length/2 || current.content.length % 2 != 0) {
+                    pages.push(
+                      <>
+                        <label className="page" htmlFor={`page-${index * 2 + 5}`}>
+                            <p><div dangerouslySetInnerHTML={{ __html: element }} /></p>
+                        </label>
+                        <label className="page" htmlFor={`page-${index * 2 + 3}`}><div dangerouslySetInnerHTML={{ __html: next }} /></label>
+                        <input type="radio" name="page" id={`page-${index * 2 + 5}`} />
+                      </>
+                    );
+                  } else {
+                    pages.push(
+                      <>
+                      <label className="page" htmlFor={`page-${index * 2 + 5}`}>
+                        <p></p>
+                      </label>
+                      <label className="page" htmlFor={`page-${index * 2 + 3}`}><div dangerouslySetInnerHTML={{ __html: element }} /></label>
+                      <input type="radio" name="page" id={`page-${index * 2 + 5}`} />
+                      </>
+                    )
+                  }
                 }
               }
               return pages;
             })()}
             {/* <input type="radio" name="page" id={`page-${current?.content.length * 2 + 3}`} /> */}
             <label className="page cover" htmlFor={`page-${(current?.content.length % 2 != 0 ? current.content.length + 1 : current.content.length)  + 5}`}></label>
-            <label className="page cover" htmlFor={`page-${(current?.content.length % 2 != 0 ? current.content.length + 1 : current.content.length)  + 3}`}></label>
+            <label className="page cover" htmlFor={`page-${(current?.content.length % 2 != 0 ? current.content.length + 1 : current.content.length)  + 3}`}>
+              <p className='cuenta '>Elisabet Coll-Vinent</p>
+            </label>
             <input type="radio" name="page" id={`page-${(current?.content.length % 2 != 0 ? current.content.length + 1 : current.content.length)  + 5}`} />
           </div>
 

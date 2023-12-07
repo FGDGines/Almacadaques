@@ -198,15 +198,7 @@
 
 
 
-
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  font-family: "Times New Roman", Times, serif;
-  background-image: radial-gradient(ellipse at center, blanchedalmond 0%, tan 100%);
-}
+ 
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -246,7 +238,7 @@ html, body {
 }
 .page:nth-of-type(2n) {
   left: 1px;
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0) 10%);
+  /* background-image: linear-gradient(to left, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0) 10%); */
   transform-origin: right center;
   transform: rotateY(0);
 }
@@ -292,12 +284,20 @@ input:checked + .page + .page + input + .page {
   top: 0;
   border-radius: 0 3px 3px 0;
   background-color: maroon;
+  background-image: url("./../../assets/ImgLibro/portada.jpeg");
 }
 .cover h1 {
   color: #ec5757;
   text-align: center;
   text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.5);
   margin-top: 50%;
+  position: relative;
+}
+.cover h3 {
+  color: #ec5757;
+  text-align: center;
+  text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.5);
+  margin-top: 10%;
   position: relative;
 }
 .cover h1::after {
@@ -315,7 +315,7 @@ input:checked + .page + .page + input + .page {
   border-radius: 3px 0 0 3px;
 }
 .cover:first-of-type, .cover:last-of-type {
-  background-image: none;
+  /* background-image: none; */
 }
 .cover:first-of-type::before, .cover:last-of-type::before {
   content: "";
@@ -381,4 +381,24 @@ input:checked + .page + .page + input + .page {
     width: 1px;
     height: 500px;
   }
+}
+
+
+
+
+.text-center {
+  text-align: center;
+}
+.text-red {
+  color: crimson;
+}
+
+.cuenta {
+  font-size: 1vw;
+  text-align: center;
+  font-family: "PT-Script-Monsoon";
+  color: #CF1348;
+  position: absolute;
+  top: 80%;
+  left: 25%;
 }
