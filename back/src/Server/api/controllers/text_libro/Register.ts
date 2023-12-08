@@ -4,16 +4,22 @@ import { UploadFile } from "../../../helpers/FileHandler";
 import path from 'path';
 import { Formatos, RelativePath } from "../../../config/config";
 
+
 export const Register = async (req: Request, res: Response) => {
     const { body } = req
-    const { title, subtitle } = body
-    console.log(String(title).length)
+    const { title, subtitle, content } = body
     if (String(title).length > 25) {
         return res.status(200).json({ status: 400, msg: "El titulo debe ser menos de 25 caracteres"})
     }
     if (String(subtitle).length > 25) {
         return res.status(200).json({ status: 400, msg: "El subtitulo debe ser menos de 25 caracteres"})
     }
+    try {
+        JSON.parse(content);
+    } catch (error) {
+        return res.status(200).json({ status: 400, msg: "El contenido debe ser un array de string"})
+    }
+
     try { 
         // @ts-ignore
         if (req.files.src.data) {
