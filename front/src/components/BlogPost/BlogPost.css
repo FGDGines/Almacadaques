@@ -402,3 +402,15 @@ input:checked + .page + .page + input + .page {
   top: 80%;
   left: 25%;
 }
+
+
+
+.page, .cover {
+  overflow-y: scroll;
+  scrollbar-width: none; /* Para Firefox */
+  -ms-overflow-style: none; /* Para Internet Explorer y Edge */
+}
+
+.page::-webkit-scrollbar, .cover::-webkit-scrollbar {
+  display: none; /* Para Chrome, Safari y Opera */
+}
