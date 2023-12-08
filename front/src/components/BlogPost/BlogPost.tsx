@@ -1,30 +1,22 @@
 
-import HTMLFlipBook from 'react-pageflip';
+// import HTMLFlipBook from 'react-pageflip';
 import Navbar from "../Navbar/Navbar";
 import Franja from "../Franja/Franja";
 import Footer from "../Footer/Footer";
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import './BlogPost.css';
 import { tpDtmResponse, tpTextLibro } from '../../types/typesComponents';
 import { fetchDefault } from '../../helpers/Server';
 
 
-import portImg from "../../../src/assets/ImgLibro/portada.jpeg"
-import { GlobalContext } from '../../contexts/GlobalContext';
-
+// import portImg from "../../../src/assets/ImgLibro/portada.jpeg"
 
 const BlogPost = () => {
   const [data, setData] = useState<tpTextLibro[]>([]);
   const [current, setCurrent] = useState<tpTextLibro | null>(null);
-  const {dataText, setDataText} = useContext(GlobalContext)
-  const handleBookInit = () => {
-    // console.log('El libro se ha inicializado.');
-  };
 
   const changeBock = (book: tpTextLibro) => {
-    console.log(book)
     setCurrent(book)
-    setDataText(book)
   } 
 
 
@@ -34,9 +26,9 @@ const BlogPost = () => {
       fetchDefault("/text_libro/read", {}, (d: tpDtmResponse) => {
         if(!d.bag) return 
         for (let index = 0; index < d.bag.length; index++) {
-          const element: {id: number , title: string, subtitle: string, content: string, image: string } = d.bag[index];
+          const element: {id: number , title: string, subtitle: string, content: string, imagen_src: string } = d.bag[index];
           const r = "src/text_libro/";
-          let image: string =  r + element.image
+          let image: string =  r + element.imagen_src
           let content: string[] =  JSON.parse(JSON.parse(element.content))
           const value = { 
             id: element.id,
@@ -48,7 +40,6 @@ const BlogPost = () => {
           text.push(value)
         }
         setData(text);
-        setDataText(text[0])
         setCurrent(text[0])
       }) 
     };
@@ -86,17 +77,14 @@ const BlogPost = () => {
                 const element = current.content[i];
                 const next = current.content[i + 1]
                 i+=2
-                console.log(element, next, index)
                 if(index == 0) { // la primera cara tiene una foto
                   pages.push(
                     <>
                       <label className="page" htmlFor={`page-${index * 2 + 5}`}>
                         <div className="imgLibro">
-                          <img src="../../../../src/assets/ImgLibro/2.png" alt="" />
+                          <img src={current.imagenSrc} alt="" />
                         </ div>
-                        <p>
-                          <div dangerouslySetInnerHTML={{ __html: element }} />
-                        </p>
+                        <div dangerouslySetInnerHTML={{ __html: element }} />
                       </label>
                       <label className="page" htmlFor={`page-${index * 2 + 3}`}><div dangerouslySetInnerHTML={{ __html: next }} /></label>
                       <input type="radio" name="page" id={`page-${index * 2 + 5}`} />
@@ -109,7 +97,7 @@ const BlogPost = () => {
                     pages.push(
                       <>
                         <label className="page" htmlFor={`page-${index * 2 + 5}`}>
-                            <p><div dangerouslySetInnerHTML={{ __html: element }} /></p>
+                          <div dangerouslySetInnerHTML={{ __html: element }} />
                         </label>
                         <label className="page" htmlFor={`page-${index * 2 + 3}`}><div dangerouslySetInnerHTML={{ __html: next }} /></label>
                         <input type="radio" name="page" id={`page-${index * 2 + 5}`} />

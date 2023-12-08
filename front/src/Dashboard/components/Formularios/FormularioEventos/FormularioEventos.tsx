@@ -118,11 +118,9 @@ function FormularioEventos() {
     };
 
     const hSubmit = (event: React.FormEvent) => {
-        console.log(1)
         event.preventDefault();
         // Resto de tu lógica de envío
     };
-console.log(indexCalendarEvent)
     return (
         <div className='FormularioEventos'>
             <NarbarAdmin></NarbarAdmin>

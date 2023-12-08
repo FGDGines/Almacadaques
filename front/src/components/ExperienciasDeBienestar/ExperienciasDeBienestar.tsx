@@ -58,7 +58,6 @@ const ExperienciasDeBienestar = () => {
                 }
                 calendars.push(value)
             }
-            console.log(calendars)
             setCalendarEvent(calendars);
           }) 
         };

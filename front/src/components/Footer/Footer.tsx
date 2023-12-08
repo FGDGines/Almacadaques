@@ -8,7 +8,7 @@ import { tpDtmResponse, RedesProps, RedProps } from '../../types/typesComponents
 
 
 import telImg from "../../../src/assets/images/mensaje-de-telefono.png"
-import w from "../../../src/assets/images/whatsapp.png"                            
+// import w from "../../../src/assets/images/whatsapp.png"                            
 // import facebook from "../../../src/assets/images/facebook.png"
 // import linkedin from "../../../src/assets/images/linkedin.png"
 // import em from "../../../src/assets/images/email.png"

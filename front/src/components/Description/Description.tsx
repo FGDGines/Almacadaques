@@ -28,7 +28,6 @@ const Description = () => {
                     carousel.push({ id: element.id, autor: element.autor, link_autor: element.link_autor, src: r + element.src, title: element.data_carousel.es || element.data_carousel.en || element.data_carousel.cat });
                 }
                 setCarousels(carousel);
-                console.log(carousel, caorusels)
             }) 
         };
         api();
