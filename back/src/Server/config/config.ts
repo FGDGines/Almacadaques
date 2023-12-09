@@ -10,4 +10,5 @@ export const RelativePath ={
     "text_libro":    '../../../../../public/src/text_libro',
     "red":    '../../../../../public/src/red',
     "calendar_event":    '../../../../../public/src/calendar_event',
+    "auth":    '../../../../../public/src/auth',
 }

@@ -12,14 +12,18 @@ export const Login = async (req: Request, res: Response) => {
         const tUser = await User.findOne({
             where: {
                 correo: correo
-            }
+            },
+            include: [{all:true}]
         })
 
         if (tUser && bycrypt.compareSync(password, tUser.password)) {
             
             const token = await generarJwt({id: tUser.id})
 
-            return res.status(200).json({ status: 200, msg: 'Usuario logeado', bag: { token } })
+            return res.status(200).json({ status: 200, msg: 'Usuario logeado', bag: { tUser: {
+                nombre: tUser.data_user.nombre,
+                src: tUser.data_user.src,
+            } ,token } })
         }
 
 

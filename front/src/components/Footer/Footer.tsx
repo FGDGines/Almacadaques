@@ -21,6 +21,7 @@ const Footer = () => {
     const [ redes, setRedes ] = useState<RedesProps>([])
     const [ email, setEmail ] = useState("")
     const [ wats, setWats ] = useState<RedProps | null>(null)
+    const [ watsNumber, setWatsNumber ] = useState<string>("")
 
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
         const { value } = event.target; 
@@ -58,7 +59,26 @@ const Footer = () => {
                         cuenta: element.cuenta
                     }
                     if (url.startsWith("https://wa.me/")) {
+                        let taken: string = "+"
+                        const init = "https://wa.me/".length
+                        if (url[init] != "+") {
+                            continue
+                        }
+
+                        console.log(url)
+                        for (let index = init + 1; index < url.length; index++) {
+                            const element = url[index];
+                            const regex = /^\d$/;
+                            if (!regex.test(element)) {
+                                break
+                            }
+                            taken += element
+                        }
                         setWats(value)
+                        console.log(taken)
+                        if (taken.length > 6) {
+                            setWatsNumber(taken)
+                        }
                     } else { 
                         red.push(value);
                     }
@@ -89,10 +109,17 @@ const Footer = () => {
                     <div className="containerCenter">
                         <h3 className='titleFooter'>{textos[languageFlag].textfooterInfo}</h3>
                         <div className="span4"></div>
-                        <p className='subtitlefooter'>
-                            <img src={telImg} alt="Telefono" className='whatsapp ' />
-                            <a href='https://wa.me/+34660305421?text=Hola Almacadaques' target='_blank' className='enlaceFooter'>
-                                +34 660 30 54 21</a> </p>
+                         {watsNumber != "" ? (
+                            <div>
+                                <p className="subtitlefoote">
+                                    <img src={telImg} alt="Telefono" className='whatsapp ' />
+                                    <a href={wats?.url} target='_blank' className='enlaceFooter'>
+                                        {/* +34 660 30 54 21*/}
+                                        {watsNumber}
+                                    </a> 
+                                </p>
+                            </div>
+                        ) : <></>}
                         <div className="span5"></div>
                         <p className='subtitlefooter' >
                             <a href='#' target='_blank' className='enlaceFooter'> hola@almacadaques.com</a> </p>
@@ -136,7 +163,7 @@ const Footer = () => {
                         <a href="mailto:hola@almacadaques.com" target='_blank'><img className=" email" width={17} height={17} src={em} alt="Email" /></a>
                         <a href="https://www.instagram.com/almacadaques" target='_blank'><img className=" " width={17} height={17} src={instagram} alt="Instagram" /></a> 
                              */}
-                            {/* <a href="https://www.facebook.com/almacadaques?locale=es_LA" target='_blank'><img className="" width={17} height={17} src="../../../src/assets/images/facebook.png" alt="Facebook" /></a> */}
+                            <a href="https://www.facebook.com/almacadaques?locale=es_LA" target='_blank'><img className="" width={17} height={17} src="../../../src/assets/images/facebook.png" alt="Facebook" /></a>
                             {/* <a href="https://www.linkedin.com/in/elisabet-coll-vinent-b9765530" target='_blank'><img className="img " src="../../../src/assets/images/linkedin.png" alt="Linkedin" /></a>
                             <a href="mailto:hola@almacadaques.com" target='_blank'><img className="img email" src="../../../src/assets/images/email.png" alt="Email" /></a>
                             <a href="https://www.instagram.com/almacadaques" target='_blank'><img className="img " src="../../../src/assets/images/instagram.png" alt="Instagram" /></a> */}
