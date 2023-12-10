@@ -5,7 +5,7 @@ function VisualTestMain() {
   return (
     <div className='VisualTestMain'>
         <div className="titletext">
-            <p className="titlephoto">Foto</p>
+            {/* <p className="titlephoto">Foto</p> */}
             <p className="titlephoto">Frase</p>
             <p className="titlephoto">Acciones</p>
         </div>
