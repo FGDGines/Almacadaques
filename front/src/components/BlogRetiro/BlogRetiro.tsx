@@ -41,7 +41,7 @@ function BlogRetiro() {
   };
 
   const monthNames = [
-
+    "",
     "Ene",
     "Feb",
     "Mar",
@@ -88,6 +88,7 @@ function BlogRetiro() {
                 description: element.description_lang.es || element.description_lang.en || element.description_lang.cat,
                 estado: element.estado
             }
+            console.log(value)
             retiro.push(value)
         }
         setRetiros(retiro);
