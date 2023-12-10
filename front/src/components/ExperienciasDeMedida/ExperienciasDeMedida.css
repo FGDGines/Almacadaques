@@ -8,6 +8,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    /* mias */
+    display: block;
+    padding-left: 60px;
 }
 .ct{
     width: 90vw;
