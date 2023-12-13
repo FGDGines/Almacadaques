@@ -59,20 +59,20 @@ function FormularioRetiros() {
   const [imageURL, setImageURL] = useState<string | null>(dataRetiro?.image[0] || null);
 
   
-  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = event.target;
-    
+  
     if (name === "Fecha") {
-        const [year, month, day] = value.split('-').map(Number);
-        setFormData({
-            ...formData,
-            [name]: new Date(Date.UTC(year, month - 1, day)),
-        });
+      const [year, month, day] = value.split('-').map(Number);
+      setFormData({
+        ...formData,
+        [name]: new Date(Date.UTC(year, month - 1, day)),
+      });
     } else {
-        setFormData({
-            ...formData,
-            [name]: value,
-        });
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
     }
   };
 
@@ -310,12 +310,15 @@ function FormularioRetiros() {
       />
 
       <label className='labelsCarrousel' form='Estado'>Estado</label>
-      <input className='inputsFormCarrousel'
-        type="text"
+      <select className='inputsFormCarrousel'
         name="Estado"
         value={formData.Estado}
         onChange={handleInputChange}
-      />
+>
+    <option value="Plazas limitadas">Plazas limitadas</option>
+    <option value="Completo">Completo</option>
+    <option value="Aplazado">Aplazado</option>
+</select>
 
       
       
