@@ -1,7 +1,10 @@
 .Home{
     display: flex;
     flex-direction: column;
-
+    background: rgb(70, 70, 160);
+    background-image: url("./src/assets/background/istockphoto-518832390-612x612.jpeg");
+    max-height: 100vh;
+    overflow-y: auto;
 }
 *{
 
