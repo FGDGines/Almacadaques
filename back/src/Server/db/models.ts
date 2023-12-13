@@ -200,7 +200,7 @@ const Podcast = DB.define("podcast", {
         type: DataTypes.STRING
     },
     autor: {
-        type: DataTypes.TEXT
+        type: DataTypes.STRING
     },
     imagen: {
         type: DataTypes.STRING
@@ -221,7 +221,7 @@ const Colaborador = DB.define("colaborador", {
         type: DataTypes.STRING
     },
     descripcion: {
-        type: DataTypes.TEXT
+        type: DataTypes.STRING
     },
     imagen: {
         type: DataTypes.STRING
@@ -257,13 +257,13 @@ const TitleLang = DB.define("title_lang", {
 
 const DescriptionLang = DB.define("description_lang", {
     es: {
-        type: DataTypes.TEXT
+        type: DataTypes.STRING
     },
     en: {
-        type: DataTypes.TEXT
+        type: DataTypes.STRING
     },
     cat: {
-        type: DataTypes.TEXT
+        type: DataTypes.STRING
     }
 }) 
 

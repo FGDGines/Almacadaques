@@ -121,6 +121,15 @@ function BlogRetiro() {
                 <div className="titleRetiroUser">
                   <h4 onClick={() => handleTitleClick(retiro)}>{retiro.title}</h4>
                 </div>
+                <div className="titleRetiroUser">
+                  <h4 onClick={() => handleTitleClick(retiro)}>Autor: {retiro.author}</h4>
+                </div>
+                <div className="titleRetiroUser">
+                  <h4 onClick={() => handleTitleClick(retiro)}>Estado: {retiro.estado}</h4>
+                </div>
+                <div className="titleRetiroUser">
+                  <h5 onClick={() => handleTitleClick(retiro)}>{retiro.description}</h5>
+                </div>
                 <div className="time_aut">
                   <div className="time">
                     <p>
