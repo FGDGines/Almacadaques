@@ -14,8 +14,8 @@ import { BtnMasAgregar } from '../BtnMasAgregar/BtnMasAgregar';
 
 import delImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg"
 import edtImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
-import leftImg from "../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/left.svg"
-import rightImg from "../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/right.svg"
+// import leftImg from "../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/left.svg"
+// import rightImg from "../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/right.svg"
 import { mostrarAlerta } from '../../../helpers/MostrarAlerta';
 
 interface ContentItem {

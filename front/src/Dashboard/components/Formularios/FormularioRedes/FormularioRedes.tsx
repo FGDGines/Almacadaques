@@ -25,7 +25,7 @@ export const FormularioRedes = () => {
         archivo:  null,
         cuenta: dataRed?.cuenta || ''
     });
-    const [imageURL, setImageURL] = useState<string | null>(dataRed?.archivo || null);
+    // const [imageURL, setImageURL] = useState<string | null>(dataRed?.archivo || null);
 
 
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -36,24 +36,24 @@ export const FormularioRedes = () => {
         });
     };
 
-    const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
-        const selectedFile = event.target.files?.[0] as File;
+    // const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
+    //     const selectedFile = event.target.files?.[0] as File;
 
-        if (selectedFile) {
-            setFormData({
-                ...formData,
-                archivo: selectedFile,
-            });
-        }
-        setImageURL(URL.createObjectURL(selectedFile));
-    };
+    //     if (selectedFile) {
+    //         setFormData({
+    //             ...formData,
+    //             archivo: selectedFile,
+    //         });
+    //     }
+    //     setImageURL(URL.createObjectURL(selectedFile));
+    // };
     const clear = () => {
         setFormData({
             url: '',
             archivo: null,
             cuenta: ''
         })
-        setImageURL("")
+        // setImageURL("")
     }
     const handleSubmit = () => {
         const da = new FormData()
@@ -96,7 +96,7 @@ export const FormularioRedes = () => {
 
 
                 <form className='formRedes'>
-                    <div className="subirArchivos">
+                    {/* <div className="subirArchivos">
                         <label htmlFor="File" className='labelArchivo'>
                             <img src={imageURL || ""} className="img" alt="Selected" />
                             <span className='arrastra'>Arrastra y suelta o <span>sube</span> </span>
@@ -106,7 +106,7 @@ export const FormularioRedes = () => {
                             type="file"
                             onChange={handleFileChange}
                         />
-                    </div>
+                    </div> */}
                     <div className="restInputs">
                         <label className='labelsRedes' form='URL'>URL:</label>
                         <input className='inputsFormRedes'
@@ -116,7 +116,7 @@ export const FormularioRedes = () => {
                             onChange={handleInputChange}
                         />
 
-                        <label className='labelsRedes' form='URL'>cuenta:</label>
+                        <label className='labelsRedes' form='URL'>Nombre de la red:</label>
                         <input className='inputsFormRedes'
                             type="text"
                             name="cuenta"

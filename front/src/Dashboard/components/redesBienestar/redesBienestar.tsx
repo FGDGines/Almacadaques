@@ -15,6 +15,7 @@ import { getToken } from '../../../helpers/JWT';
 import delImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg"
 import edtImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
 import { mostrarAlerta } from '../../../helpers/MostrarAlerta';
+import { iconRedByName } from '../../../helpers/IconsRedes';
 
 
 export const RedesBienestar = () => {
@@ -58,11 +59,12 @@ export const RedesBienestar = () => {
           if(!d.bag) return 
           for (let index = 0; index < d.bag.length; index++) {
               const element: { id: number, archivo: string  , url: string, cuenta:string } = d.bag[index];
-              const r = "src/red/";
+              // const r = "src/red/";
               const value = {
                 index: element.id,
-                archivo: r + element.archivo, 
-                url: element.url,
+                // archivo: r + element.archivo, 
+                archivo: iconRedByName(element.cuenta),
+                url: "element.url",
                 cuenta: element.cuenta
               }
               reds.push(value)

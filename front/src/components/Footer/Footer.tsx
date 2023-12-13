@@ -8,6 +8,7 @@ import { tpDtmResponse, RedesProps, RedProps } from '../../types/typesComponents
 
 
 import telImg from "../../../src/assets/images/mensaje-de-telefono.png"
+import { iconRedByName } from '../../helpers/IconsRedes';
 // import w from "../../../src/assets/images/whatsapp.png"                            
 // import facebook from "../../../src/assets/images/facebook.png"
 // import linkedin from "../../../src/assets/images/linkedin.png"
@@ -50,19 +51,20 @@ const Footer = () => {
                 if(!d.bag) return 
                 for (let index = 0; index < d.bag.length; index++) {
                     const element: {id: number , archivo: string, url: string, cuenta:string } = d.bag[index];
-                    const r = "src/red/"
+                    // const r = "src/red/"
                     const url = element.url
                     const value = { 
                         index: element.id, 
-                        archivo: r + element.archivo, 
+                        // archivo: r + element.archivo, 
+                        archivo: iconRedByName(element.cuenta),
                         url: url, 
                         cuenta: element.cuenta
                     }
-                    if (url.startsWith("https://wa.me/")) {
-                        let taken: string = "+"
+                    if (url.startsWith("https://wa.me/" || element.cuenta == "whatsapp")) {
+                        let taken: string = ""
                         const init = "https://wa.me/".length
                         if (url[init] != "+") {
-                            continue
+                            taken = "+"
                         }
 
                         console.log(url)
@@ -76,7 +78,7 @@ const Footer = () => {
                         }
                         setWats(value)
                         console.log(taken)
-                        if (taken.length > 6) {
+                        if (taken.length > 5) {
                             setWatsNumber(taken)
                         }
                     } else { 
