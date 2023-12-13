@@ -144,10 +144,6 @@ export const ItemCarrusel: React.FC<BtnMasAgregarProps> = () => {
         <div onClick={() => setIndexCarrousel(-1)} className="m2">
           <BtnMasAgregar direccion={29}></BtnMasAgregar>
         </div>
-        <div className="botonesCarrusel">
-          <i className='left'><img src={leftImg} alt="Left" /></i>
-          <i className='right'><img src={rightImg} alt="Right" /></i>
-        </div>
       </div>
 
       <div className="itemsCarrusel">
