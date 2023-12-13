@@ -2,12 +2,10 @@
     width: 50vw;
     height: 40vh;
     padding-top: 2vw;
-    display: flex;
+    /* display: flex; */
     gap: 1.5vw;
-    overflow-x: auto;
     max-width: 80vw;
-  }
-
+  } 
 
 @media (max-width: 780px) {
 }
@@ -22,3 +20,6 @@
   cursor: pointer;
 }
 
+.Buton{ 
+  width: 200px;
+}

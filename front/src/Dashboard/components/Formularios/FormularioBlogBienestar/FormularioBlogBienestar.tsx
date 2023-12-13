@@ -177,31 +177,32 @@ function FormularioBlogBienestar() {
                             
                             
 
+                            <label className='labelsCarrousel' form='Titulo'>Contenido</label>
                             <div className="editordeLibroFormulario">
                                 {/* Agrega el componente CKEditor aquí */}
                                 
                                 <div>
-                        {editors.map((editorData, index) => (
-                            <div key={index}>
-                                <CKEditor
-                                    editor={ClassicEditor}
-                                    data={editorData}
-                                    onChange={(_event: any, editor: { getData: () => string; }) => handleEditorChange(index, editor)}
-                                />
-                                <div className="accionEliminar"onClick={() => removeEditor(index)}>
-                                    <img src={s} alt="" />
-                                    <p className="TextAcciones">Eliminar</p>
+                                    {editors.map((editorData, index) => (
+                                        <div key={index} className='content-item'>
+                                            <CKEditor
+                                                editor={ClassicEditor}
+                                                data={editorData}
+                                                onChange={(_event: any, editor: { getData: () => string; }) => handleEditorChange(index, editor)}
+                                            />
+                                            <div className="accionEliminar"onClick={() => removeEditor(index)}>
+                                                <img src={s} alt="" />
+                                                <p className="TextAcciones">Eliminar</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                    <div className='Buton'>
+                                            <p className='EnlaceBton cursor' onClick={addEditor}>
+                                                <img src={q} alt="" className='Img+' />
+                                                Agregar Contenido
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        ))}
-                        <div className='Buton'>
-                                <p className='EnlaceBton cursor' onClick={addEditor}>
-                                    <img src={q} alt="" className='Img+' />
-                                    Agregar
-                                </p>
-                            </div>
-                        </div>
-                            </div>
 
 
 
