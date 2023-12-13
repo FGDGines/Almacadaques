@@ -3,7 +3,7 @@
   font-family: sans-serif;
 }
 .ExperienciasDeBienestar {
-  background: url("./src/assets/background/rf.jpg") url("rf-548f0541.jpg") no-repeat center/cover;
+  background: url("./src/assets/background/rf.jpg"), url("../assets/rf-548f0541.jpg") no-repeat center/cover;
   max-height: 100vh;
   /* overflow-y: auto; */
 }
