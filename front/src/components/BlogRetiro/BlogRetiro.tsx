@@ -82,7 +82,7 @@ function BlogRetiro() {
                 day: day,
                 month: element.month,
                 year: element.year,
-                autor: element.author,
+                author: element.author,
                 image: image,
                 title: element.title_lang.es || element.title_lang.en || element.title_lang.cat,
                 description: element.description_lang.es || element.description_lang.en || element.description_lang.cat,
@@ -122,7 +122,7 @@ function BlogRetiro() {
                   <h4 onClick={() => handleTitleClick(retiro)}>{retiro.title}</h4>
                 </div>
                 <div className="titleRetiroUser">
-                  <h4 onClick={() => handleTitleClick(retiro)}>Autor: {retiro.author}</h4>
+                  <span onClick={() => handleTitleClick(retiro)}>Autor: <span className="firma">{retiro.author}</span></span>
                 </div>
                 <div className="titleRetiroUser">
                   <h4 onClick={() => handleTitleClick(retiro)}>Estado: {retiro.estado}</h4>
