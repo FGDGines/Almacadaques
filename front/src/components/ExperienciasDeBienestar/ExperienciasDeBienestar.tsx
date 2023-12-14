@@ -67,50 +67,55 @@ const ExperienciasDeBienestar = () => {
 
 
     return <div className='ExperienciasDeBienestar'>
-        <div className='as'></div>
-        <Navbar />
-        <Franja text='Experiencias de Bienestar' />
-        <div className='ctMain'>
-            <div className='ctTitle'>
-                <span style={{ color: "#75151E" }}> ❝ 
-                    </span>{textos[languageFlag].textosinviertebienestar}
-                <span style={{ color: "#75151E" }}> ❞ </span>
-            </div>
-            <div className='ctCards'>
-                {cardsData.map((item, index) => {
-                    const { title, body } = item
-                    return <CardM1 key={index} title={title} body={body} />
-                })}
-            </div>
-            {/* <AboutMeAbstract /> */}
-            <div className='ctDescription'>
-                <span style={{ color: "#75151E" }}> ❝ </span>{textos[languageFlag].textostalleresyretiros}
-                <span style={{ color: "#75151E" }}> ❞ </span>
-            </div>
-            <StatisticComponent titles={statisticInfo.bienestar} type="bienestar" />
-            <div className='ctAgenda'>
-                <div className="ctContentAgenda">
-                    <div className="ctCalendario">
-                        <Agenda hSelect={SeleccionarEvento} calendar_event={calendarEvent}/>
-                    </div>
-                    <div className="ctFormulario">
-                        <FormAgenda actividades={calendarEvent} />
-                    </div>
+        <div className="as">
+            <div className="as-inner">
+    
+  
+            <Navbar />
+            <Franja text='Experiencias de Bienestar' />
+            <div className='ctMain'>
+                <div className='ctTitle'>
+                    <span style={{ color: "#75151E" }}> ❝ 
+                        </span>{textos[languageFlag].textosinviertebienestar}
+                    <span style={{ color: "#75151E" }}> ❞ </span>
                 </div>
+                <div className='ctCards'>
+                    {cardsData.map((item, index) => {
+                        const { title, body } = item
+                        return <CardM1 key={index} title={title} body={body} />
+                    })}
+                </div>
+                {/* <AboutMeAbstract /> */}
+                <div className='ctDescription'>
+                    <span style={{ color: "#75151E" }}> ❝ </span>{textos[languageFlag].textostalleresyretiros}
+                    <span style={{ color: "#75151E" }}> ❞ </span>
+                </div>
+                <StatisticComponent titles={statisticInfo.bienestar} type="bienestar" />
+                <div className='ctAgenda'>
+                    <div className="ctContentAgenda">
+                        <div className="ctCalendario">
+                            <Agenda hSelect={SeleccionarEvento} calendar_event={calendarEvent}/>
+                        </div>
+                        <div className="ctFormulario">
+                            <FormAgenda actividades={calendarEvent} />
+                        </div>
+                    </div>
+
+                </div>
+                <div className="ctContentBoton">
+                        <div className="botonRetiros diagonal" onClick={() => setLayoutID(14)}>
+                            {textos[languageFlag].textosretirosanteriores}
+                        </div>
+                    </div>
+
+                <DialogMUI1 open={open} handlerClose={handleClose} handleClickOpen={handleClickOpen} evento={evento} />
+            
+
 
             </div>
-            <div className="ctContentBoton">
-                    <div className="botonRetiros diagonal" onClick={() => setLayoutID(14)}>
-                        {textos[languageFlag].textosretirosanteriores}
-                    </div>
-                </div>
-
-            <DialogMUI1 open={open} handlerClose={handleClose} handleClickOpen={handleClickOpen} evento={evento} />
-           
-
-
+            <Footer />
+            </div>
         </div>
-        <Footer />
     </div>
 }
 

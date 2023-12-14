@@ -9,11 +9,19 @@
   z-index: 1000;
 }
 .as {
-  position: absolute;
-  z-index: 10;
-  width: 98.7vw;
+  /* position: absolute; */
+  z-index: 0;
+  width: 100vw;
   height: 100vh;
   background: url("./src/assets/background/rf.jpg"),url("../assets/rf-548f0541.jpg") no-repeat center/cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.as-inner {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
 }
 
 .ctTitle {
