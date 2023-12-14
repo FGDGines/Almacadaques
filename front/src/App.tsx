@@ -8,6 +8,8 @@ import { SyntheticEvent, useContext, useState } from "react";
 
 import d from "../src/assets/background/inicio'.jpeg"
 import a from "../src/assets/background/rf.jpg"
+import q from "../src/assets/background/istockphoto-518832390-612x612.jpeg"
+
 function App() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const {setUpOrDown , upOrDown} = useContext(GlobalContext)
@@ -29,6 +31,7 @@ function App() {
       <div className={`App ${upOrDown?'':'down'}`} onScroll={(arg) => handlerScroll(arg)}>
         <img src={d} className="fondo" alt="" />
         <img src={a} className="fondo" alt="" />
+        <img src={q} className="fondo" alt="" />
         <HandlerLayout />
       </div>   
   )

@@ -67,6 +67,7 @@ const ExperienciasDeBienestar = () => {
 
 
     return <div className='ExperienciasDeBienestar'>
+        <div className='as'></div>
         <Navbar />
         <Franja text='Experiencias de Bienestar' />
         <div className='ctMain'>

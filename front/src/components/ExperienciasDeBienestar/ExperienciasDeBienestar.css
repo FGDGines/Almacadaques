@@ -3,16 +3,48 @@
   font-family: sans-serif;
 }
 .ExperienciasDeBienestar {
-  background: url("./src/assets/background/rf.jpg"), url("../assets/rf-548f0541.jpg") no-repeat center/cover;
+  /* background: url("./src/assets/background/rf.jpg") no-repeat center/cover;
   max-height: 100vh;
-  overflow-y: auto;
+  overflow-y: auto; */
+  z-index: 1000;
+}
+.as {
+  position: absolute;
+  z-index: 10;
+  width: 98.7vw;
+  height: 100vh;
+  background: url("./src/assets/background/rf.jpg"),url("../assets/rf-548f0541.jpg") no-repeat center/cover;
 }
 
-
+.ctTitle {
+  z-index: 11;
+}
+.ctCards {
+  z-index: 11;
+}
+.ctDescription {
+  z-index: 11;
+}
+.stats {
+  z-index: 11;
+}
+.ctAgenda {
+  z-index: 11;
+}
+.ctContentBoton {
+  z-index: 11;
+}
+.container1 {
+  z-index: 11;
+}.container2 {
+  z-index: 11;
+}
 .ExperienciasDeBienestar .ctMain {
   display: flex;
   flex-direction: column;
+  
 }
+
 
 .ExperienciasDeBienestar .ctMain .ctTitle {
   /* border: 1px solid black; */

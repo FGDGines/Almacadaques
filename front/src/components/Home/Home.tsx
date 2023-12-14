@@ -7,6 +7,7 @@ import Footer from "../Footer/Footer";
 const Home = () => {
   return (
     <div className="Home">
+      <div className="foto-inicio"></div>
       <Navbar />
       <Welcome />
       <Description />
