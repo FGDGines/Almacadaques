@@ -261,10 +261,32 @@
   }
   .infoSobremi_2User {
     width: 100%;
+    height: auto;
   }
 }
 
 
 .foto-to-center {
   height: 400px;
+}
+
+
+
+
+@media (min-width: 801px) and (max-width: 1199px) {
+  .foto-to-center {
+    height: 200px;
+  }
+  .infoSobremi_2User {
+    height: 200px;
+  }
+}
+
+@media (min-width: 1901px) {
+  .foto-to-center {
+    height: 450px;
+  }
+  .infoSobremi_2User {
+    height: 450px;
+  }
 }
