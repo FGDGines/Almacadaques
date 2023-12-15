@@ -40,7 +40,7 @@ const AboutMe = () => {
 
             <div className="containerSobremi_2">
                 <div className="photo_2">
-                    <img src={f2} alt="Foto sobre mi" />
+                    <img src={f2} className='foto-to-center' alt="Foto sobre mi" />
                     <p> Elisabet Coll-Vinent (Psicóloga – Mentora – Coach)</p>
                 </div>
                 <div className="infoSobremi_2User">

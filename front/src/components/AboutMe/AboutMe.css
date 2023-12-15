@@ -97,6 +97,9 @@
   padding: 3vw;
   color: white;
   font-size: 3vw;
+
+  /* mio */
+  height: 400px;
 }
 .infoSobremi_2User p {
   margin-top: 0;
@@ -107,7 +110,7 @@
   .infoSobremi_2 {
     width: 45vw;
     font-size: 2.1vw;
-    height: 30vh;
+    /* height: 30vh; */
   }
  
 
@@ -117,7 +120,7 @@
   .infoSobremi_2User {
     width: 45vw;
     font-size: 1.4vw;
-    height: 24vw;
+    /* height: 24vw; */
   }
   .BibliografíaSobreMi{
     width: 29vw;
@@ -127,7 +130,7 @@
     background-color: #cf1348;
     padding: 1vw;
     color: white;
-    height: 18vw;
+    /* height: 18vw; */
   }
 
 }
@@ -135,7 +138,7 @@
   .infoSobremi_2User {
     width: 45vw;
     font-size: 1.2vw;
-    height: 19.5vw;
+    /* height: 19.5vw; */
   }
   
 }
@@ -236,4 +239,31 @@
   .containerSobremi_2 .photo_2 img {
     width: 100%;
   }
+}
+
+
+
+@media (max-width: 800px) {
+  .containerSobremi_2 {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .photo_2 {
+    display: flex;
+    width: 92vw;
+    margin: 5px 0;
+  }
+  .foto-to-center {
+    height: auto;
+  }
+  .infoSobremi_2User {
+    width: 100%;
+  }
+}
+
+
+.foto-to-center {
+  height: 400px;
 }
