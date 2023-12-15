@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
 import { Podcast } from "../../../db/models"; 
-import { DeleteFile, UploadFile } from "../../../helpers/FileHandler";
-import path from 'path';
-import { Formatos, RelativePath } from "../../../config/config";
+// import { DeleteFile, UploadFile } from "../../../helpers/FileHandler";
+// import path from 'path';
+// import { Formatos, RelativePath } from "../../../config/config";
 
 
 export const Update = async ( req: Request ,res: Response)=>{
@@ -39,25 +39,25 @@ export const Update = async ( req: Request ,res: Response)=>{
         }
 
         // sin el try si no mandas foto da error
-        try {
-            // @ts-ignore
-            const imagen = req.files.src.data
-            if(imagen){
-                const past = tPodcast.imagen
-                if (past) {
-                    const uploadDir = path.join(__dirname,  RelativePath.podcast)
-                    try {
+        // try {
+        //     // @ts-ignore
+        //     const imagen = req.files.src.data
+        //     if(imagen){
+        //         const past = tPodcast.imagen
+        //         if (past) {
+        //             const uploadDir = path.join(__dirname,  RelativePath.podcast)
+        //             try {
                         
-                    await DeleteFile(path.join(uploadDir, past))     
-                    } catch (error) {
+        //             await DeleteFile(path.join(uploadDir, past))     
+        //             } catch (error) {
                         
-                    }   
-                }
-                const url = await UploadFile( imagen, path.join(__dirname,  RelativePath.podcast), "jpg", Formatos.image)
-                await tPodcast.update({imagen: url})
-                updates.push({path: 'imagen', past , now: url})
-            }
-        } catch (error) {}
+        //             }   
+        //         }
+        //         const url = await UploadFile( imagen, path.join(__dirname,  RelativePath.podcast), "jpg", Formatos.image)
+        //         await tPodcast.update({imagen: url})
+        //         updates.push({path: 'imagen', past , now: url})
+        //     }
+        // } catch (error) {}
 
         
 

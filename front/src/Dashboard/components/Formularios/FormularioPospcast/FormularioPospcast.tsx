@@ -40,7 +40,7 @@ function FormularioPospcast() {
     archivo: null,
   });
 
-  const [imageURL, setImageURL] = useState<string | null>(dataPodcast?.imagen || null);
+  // const [imageURL, setImageURL] = useState<string | null>(dataPodcast?.imagen || null);
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -58,17 +58,25 @@ function FormularioPospcast() {
     }
   };
 
-  const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
-    const selectedFile = event.target.files?.[0] as File;
-
-    if (selectedFile) {
-        setFormData({
-            ...formData,
-            archivo: selectedFile,
-        });
-    }
-    setImageURL(URL.createObjectURL(selectedFile));
+  const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>) => {
+    const { name, value } = event.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   };
+
+  // const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
+  //   const selectedFile = event.target.files?.[0] as File;
+
+  //   if (selectedFile) {
+  //       setFormData({
+  //           ...formData,
+  //           archivo: selectedFile,
+  //       });
+  //   }
+  //   setImageURL(URL.createObjectURL(selectedFile));
+  // };
 
   const clear = () => {
     setFormData({
@@ -79,7 +87,7 @@ function FormularioPospcast() {
       Url: '',
       archivo: null,
     })
-    setImageURL("")
+    // setImageURL("")
   }
 
   const handleSubmit = () => {
@@ -135,7 +143,7 @@ function FormularioPospcast() {
 
 
         <form className='formCarrousel'>
-          <div className="subirArchivos">
+          {/* <div className="subirArchivos">
             <label htmlFor="File" className='labelArchivo'>
               <img src={imageURL || ""} className="img" alt="Selected" />
               <span className='arrastra'>Arrastra y suelta o <span>sube</span> </span>
@@ -145,7 +153,7 @@ function FormularioPospcast() {
               type="file"
               onChange={handleFileChange}
             />
-          </div>
+          </div> */}
           <div className="restInputs">
             <label className='labelsCarrousel' form='Titulo'>Titulo</label>
             <input className='inputsFormCarrousel'
@@ -180,12 +188,24 @@ function FormularioPospcast() {
             />
 
             <label className='labelsCarrousel' form='Categoria'>Categoria</label>
-            <input className='inputsFormCarrousel'
+            {/* <input className='inputsFormCarrousel'
               type="text"
               name="Categoria"
               value={formData.Categoria}
               onChange={handleInputChange}
-            />
+            /> */}
+            <select className="inputsFormCarrousel"
+              name="Categoria" 
+              value={formData.Categoria}
+              onChange={handleSelectChange}
+              >
+              <option value="" selected disabled >Seleccione una categoria</option>
+              <option value="Experiencias Almacadaqués">Experiencias Almacadaqués</option>
+              <option value="Meditaciones">Meditaciones</option>
+              <option value="Almas Inspiradoras">Almas Inspiradoras</option>
+              <option value="Libros con Alma">Libros con Alma</option>
+            </select>
+            
 
             <label className='labelsCarrousel' form='Url'>Enlace</label>
             <input className='inputsFormCarrousel'

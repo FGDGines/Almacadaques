@@ -84,7 +84,7 @@ function Podcast() {
 
         
         {/* <img src="../../../../src/assets/Dashboard-almacadaques/users/Ellipse 3551 (3).svg" alt="" className="imgUsuarioPodcast" /> */}
-        <img src={podcast.imagen} alt="" className="imgUsuarioPodcast" />
+        {/* <img src={podcast.imagen} alt="" className="imgUsuarioPodcast" /> */}
 
         <p className="TituloPodcastAdmin">{podcast.titulo}</p>
         <p className="AutorPodcastAdmin"><span className="TitleAutor">Autor:</span> {podcast.autor}</p>
