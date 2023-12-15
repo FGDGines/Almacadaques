@@ -8,7 +8,7 @@ import { tpDtmResponse, RedesProps, RedProps } from '../../types/typesComponents
 
 
 import telImg from "../../../src/assets/images/mensaje-de-telefono.png"
-import { iconRedByName } from '../../helpers/IconsRedes';
+import { iconRedByName, splitUrlRedesWatsap } from '../../helpers/RedesHelp';
 // import w from "../../../src/assets/images/whatsapp.png"                            
 // import facebook from "../../../src/assets/images/facebook.png"
 // import linkedin from "../../../src/assets/images/linkedin.png"
@@ -66,21 +66,24 @@ const Footer = () => {
                         if (url[init] != "+") {
                             taken = "+"
                         }
-
-                        console.log(url)
-                        for (let index = init + 1; index < url.length; index++) {
-                            const element = url[index];
-                            const regex = /^\d$/;
-                            if (!regex.test(element)) {
-                                break
-                            }
-                            taken += element
-                        }
+                        // console.log(url, splitUrlRedesWatsap(url)[0])
+                        setWatsNumber(splitUrlRedesWatsap(url)[0])
                         setWats(value)
-                        console.log(taken)
-                        if (taken.length > 5) {
-                            setWatsNumber(taken)
-                        }
+                        // console.log(url)
+                        // for (let index = init + 1; index < url.length; index++) {
+                        //     const element = url[index];
+                        //     const regex = /^\d$/;
+                        //     if (!regex.test(element)) {
+                        //         break
+                        //     }
+                        //     taken += element
+                        // }
+                        // setWats(value)
+                        // console.log(taken)
+                        // if (taken.length > 5) {
+                        //     console.log(taken, url)
+                        //     setWatsNumber(taken)
+                        // }
                     } else { 
                         red.push(value);
                     }

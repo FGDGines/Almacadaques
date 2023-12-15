@@ -10,23 +10,30 @@ import { GlobalContext } from '../../../../contexts/GlobalContext';
 
 import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
 import { mostrarAlerta } from '../../../../helpers/MostrarAlerta';
+import { splitUrlRedesWatsap } from '../../../../helpers/RedesHelp';
 
 
 interface FormData {
     url: string;
     archivo: File | null;
     cuenta: string;
+    numero: string;
+    mensaje: string;
 }
 
+
+// ahora si el nombre es watsapp sale un formulario para llenar el numero y el mensaje
 export const FormularioRedes = () => {
     const { indexRed, dataRed } = useContext(GlobalContext)
     const [formData, setFormData] = useState<FormData>({
         url: dataRed?.url || '',
         archivo:  null,
-        cuenta: dataRed?.cuenta || ''
+        cuenta: dataRed?.cuenta || '',
+        numero: dataRed?.cuenta == "whatsapp" ? splitUrlRedesWatsap(dataRed.url)[0] : "",
+        mensaje: dataRed?.cuenta == "whatsapp" ? splitUrlRedesWatsap(dataRed.url)[1] : ""
     });
     // const [imageURL, setImageURL] = useState<string | null>(dataRed?.archivo || null);
-
+// console.log(dataRed?.url)
 
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
         const { name, value } = event.target;
@@ -51,7 +58,9 @@ export const FormularioRedes = () => {
         setFormData({
             url: '',
             archivo: null,
-            cuenta: ''
+            cuenta: '',
+            numero: "",
+            mensaje: ""
         })
         // setImageURL("")
     }
@@ -62,6 +71,9 @@ export const FormularioRedes = () => {
         }
         if (formData.cuenta) {
             da.append("cuenta", formData.cuenta)
+        }
+        if (formData.cuenta == "whatsapp") {
+           da.set("url", `https://wa.me/${formData.numero}?text=${formData.mensaje}`) 
         }
         da.append("token", getToken()) 
         if (formData.archivo) {
@@ -87,6 +99,10 @@ export const FormularioRedes = () => {
         }
     };
 
+    const isWatsapp = () => {
+        return formData.cuenta.toLocaleLowerCase() == "whatsapp" ? 1 : 0
+    }
+
     return (
         <div className='formularioRedes'>
             <NarbarAdmin></NarbarAdmin>
@@ -108,14 +124,6 @@ export const FormularioRedes = () => {
                         />
                     </div> */}
                     <div className="restInputs">
-                        <label className='labelsRedes' form='URL'>URL:</label>
-                        <input className='inputsFormRedes'
-                            type="text"
-                            name="url"
-                            value={formData.url}
-                            onChange={handleInputChange}
-                        />
-
                         <label className='labelsRedes' form='URL'>Nombre de la red:</label>
                         <input className='inputsFormRedes'
                             type="text"
@@ -123,6 +131,36 @@ export const FormularioRedes = () => {
                             value={formData.cuenta}
                             onChange={handleInputChange}
                         />
+                        {!isWatsapp() ?
+                            <div>
+                                <label className='labelsRedes' form='URL'>URL:</label>
+                                <input className='inputsFormRedes'
+                                    type="text"
+                                    name="url"
+                                    value={formData.url}
+                                    onChange={handleInputChange}
+                                />
+                            </div>
+                        : 
+                            <div>
+                                <label className='labelsRedes' form='URL'>Numero:</label>
+                                <input className='inputsFormRedes'
+                                    type="number"
+                                    name="numero"
+                                    value={formData.numero}
+                                    onChange={handleInputChange}
+                                />
+                                <label className='labelsRedes' form='URL'>Mensaje:</label>
+                                <input className='inputsFormRedes'
+                                    type="text"
+                                    name="mensaje"
+                                    value={formData.mensaje}
+                                    onChange={handleInputChange}
+                                />
+                            </div>
+                        }
+
+                        
                         
                         <div className="btnGuardarRedes">
                             <a href="#" onClick={handleSubmit} className='GuardarRedesSocialesAdmin'>Guardar</a>

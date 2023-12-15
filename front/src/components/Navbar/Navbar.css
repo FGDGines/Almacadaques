@@ -244,7 +244,9 @@
 }
 
 
-
+.active-page {
+  background-color: #cf1348;
+}
 
 .Navbar {
   z-index: 22;
