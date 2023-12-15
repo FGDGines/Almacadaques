@@ -108,7 +108,7 @@ export const FormularioRedes = () => {
             <NarbarAdmin></NarbarAdmin>
 
             <div className="contenidoFormRedes">
-                <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Redes' nombre='Kristine' img={userImg} />
+                <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Redes' nombre='Elisabeth' img={userImg} />
 
 
                 <form className='formRedes'>

@@ -23,7 +23,7 @@ function RetirosAdmin() {
 
       <NarbarAdmin />
       <div className="conatinerRetiro">
-        <BarSession tituloVista='Blogs' segundoTitulo='Retiros' nombre='Kristine' img={userImg} />
+        <BarSession tituloVista='Blogs' segundoTitulo='Retiros' nombre='Elisabeth' img={userImg} />
         <div className="infocontainerRetiro">
           <ContainerRetiro/>
         </div>

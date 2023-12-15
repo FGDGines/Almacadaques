@@ -140,7 +140,7 @@ function FormularioBlogBienestar() {
                 <NarbarAdmin></NarbarAdmin>
 
                 <div className="contenidoFormCarrousel">
-                    <BarSession direccion={25} tituloVista='Blog' segundoTitulo='Blog Bienestar' nombre='Kristine' img={userImg} />
+                    <BarSession direccion={25} tituloVista='Blog' segundoTitulo='Blog Bienestar' nombre='Elisabeth' img={userImg} />
 
 
                     <form className='formCarrousel'>

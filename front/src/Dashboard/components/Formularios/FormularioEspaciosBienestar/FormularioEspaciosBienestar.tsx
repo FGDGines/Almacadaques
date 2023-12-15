@@ -100,7 +100,7 @@ export const FormularioEspaciosBienestar = () => {
 
             <div className="contenidoFormEspaciosBienestar">
 
-                <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Espacios de Bienestar' nombre='Kristine' img={userImg} />
+                <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Espacios de Bienestar' nombre='Elisabeth' img={userImg} />
 
 
 

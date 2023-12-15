@@ -142,7 +142,7 @@ export const FormularioCarrousel = () => {
             <NarbarAdmin></NarbarAdmin>
 
             <div className="contenidoFormCarrousel">
-                <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Carrousel' nombre='Kristine' img={userImg} />
+                <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Carrousel' nombre='Elisabeth' img={userImg} />
 
 
                 <form className='formCarrousel'>

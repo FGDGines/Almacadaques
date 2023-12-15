@@ -104,7 +104,7 @@ export const FormularioTestimonios = () => {
             <NarbarAdmin></NarbarAdmin>
 
             <div className="contenidoFormTestimonios">
-            <BarSession direccion={18} tituloVista='Inicio' segundoTitulo='Testimonios' nombre='Kristine' img={userImg} ></BarSession>
+            <BarSession direccion={18} tituloVista='Inicio' segundoTitulo='Testimonios' nombre='Elisabeth' img={userImg} ></BarSession>
 
 
                 <form className='formTestimonios'>

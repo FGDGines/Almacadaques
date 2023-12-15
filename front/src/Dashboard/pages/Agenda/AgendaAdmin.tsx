@@ -23,7 +23,7 @@ function AgendaAdmin() {
 
       <NarbarAdmin />
       <div className="containerMainAgenda">
-        <BarSession tituloVista='Agenda/Experiencias de Bienestar:' segundoTitulo='Eventos' nombre='Kristine' img={userImg}/>
+        <BarSession tituloVista='Agenda/Experiencias de Bienestar:' segundoTitulo='Eventos' nombre='Elisabeth' img={userImg}/>
         <div className="itemAgendaAdmin">
           <EventosPrevo />
         </div>

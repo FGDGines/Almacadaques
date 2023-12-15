@@ -21,7 +21,7 @@ function BlogPodcast() {
     <div className='BlogPodcast'>
       <NarbarAdmin />
       <div className="BlogPodcastAdmin">
-        <BarSession tituloVista='Blog' segundoTitulo='Podcast' nombre='Kristine' img={userImg} />
+        <BarSession tituloVista='Blog' segundoTitulo='Podcast' nombre='Elisabeth' img={userImg} />
           <div className="conatinerInfopodcast">
             <Podcast/>
           </div>

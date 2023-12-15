@@ -21,7 +21,7 @@ const BlogBienestar = () => {
     <div className="BlogBienestar">
       <NarbarAdmin />
       <div className="containerBlogBienestar">
-        <BarSession tituloVista='Blog' segundoTitulo='Tips Bienestar' nombre='Kristine' img={userImg} />
+        <BarSession tituloVista='Blog' segundoTitulo='Tips Bienestar' nombre='Elisabeth' img={userImg} />
         <div className="editordeLibro">
           <BienestarAdmin />
         </div>

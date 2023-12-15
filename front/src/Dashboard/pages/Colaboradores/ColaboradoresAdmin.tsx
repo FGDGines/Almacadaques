@@ -21,7 +21,7 @@ function ColaboradoresAdmin() {
       <NarbarAdmin />
 
       <div className="containerColaboradores">
-        <BarSession tituloVista='Colaborador@s' segundoTitulo='Colaborador@s' nombre='Kristine' img={userImg} />
+        <BarSession tituloVista='Colaborador@s' segundoTitulo='Colaborador@s' nombre='Elisabeth' img={userImg} />
         <div className="itenColaboradores">
           <ContainerColaboradores />
         </div>

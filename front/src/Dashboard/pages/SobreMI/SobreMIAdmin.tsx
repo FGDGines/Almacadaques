@@ -20,7 +20,7 @@ function SobreMIAdmin() {
     <div className="sobreMIA">
       <NarbarAdmin />
       <div className="containerMainTesti">
-        <BarSession tituloVista='Sobre mi' segundoTitulo='Testimonios' nombre='Kristine' img={userImg} />
+        <BarSession tituloVista='Sobre mi' segundoTitulo='Testimonios' nombre='Elisabeth' img={userImg} />
         <div className="timeBton">
           <div className="time">
             <p className="fechadetestimonio">Ultima actualización 24 jun 2023</p>
