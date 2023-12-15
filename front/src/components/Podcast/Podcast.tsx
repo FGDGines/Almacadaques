@@ -7,6 +7,7 @@ import { VideosPodcast } from '../ItemPodcast/ItemPodcast'
 import React, { useEffect, useState } from 'react';
 import { AudioPlayerProps, tpDtmResponse } from '../../types/typesComponents';
 import { fetchDefault } from '../../helpers/Server';
+import { convertUrlYoutube } from '../../helpers/PodcastHelp';
 
 const removeAccents = (text: string) => {
     return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -100,7 +101,7 @@ const Podcast = () => {
                 if(!d.bag || d.bag.length == 0) return 
                 for (let index = 0; index < d.bag.length; index++) {
                     const element: {id: number, url: string , titulo: string, autor: string, fecha:string, categoria: string } = d.bag[index];
-                    podcast.push({ id: element.id, url: element.url, titulo: element.titulo, autor: element.autor, fecha: element.fecha, categoria: element.categoria });
+                    podcast.push({ id: element.id, url: convertUrlYoutube(element.url), titulo: element.titulo, autor: element.autor, fecha: element.fecha, categoria: element.categoria });
                 }
                 setPodcastData(podcast);
                 setSelectedPodcast(podcast[0])
