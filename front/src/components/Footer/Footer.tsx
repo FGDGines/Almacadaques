@@ -61,11 +61,7 @@ const Footer = () => {
                         cuenta: element.cuenta
                     }
                     if (url.startsWith("https://wa.me/" || element.cuenta == "whatsapp")) {
-                        let taken: string = ""
-                        const init = "https://wa.me/".length
-                        if (url[init] != "+") {
-                            taken = "+"
-                        }
+                        
                         // console.log(url, splitUrlRedesWatsap(url)[0])
                         setWatsNumber(splitUrlRedesWatsap(url)[0])
                         setWats(value)
