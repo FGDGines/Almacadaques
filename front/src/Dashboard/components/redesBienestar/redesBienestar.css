@@ -24,7 +24,8 @@
   justify-content: space-between;
   align-items: center;
   border-radius: 1.93781rem;
-  background: #fcf1f4;
+  /* background: #fcf1f4; */
+  background: rgba(186, 181, 183, 1);
   padding: 0.6vw 1.19vw;
   height: 3.5vw;
   margin-bottom: 1vw;
