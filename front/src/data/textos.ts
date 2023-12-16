@@ -8,6 +8,24 @@ type TextosType<T extends string> = {
 
 export const textos: TextosType<
     //nav
+    "titleCardBienestar1" |
+    "titleCardBienestar2" |
+    "titleCardBienestar3"| 
+    "bodyCardBienestar1_1" |
+    "bodyCardBienestar1_2" |
+    "bodyCardBienestar1_3" |
+    "bodyCardBienestar1_4" |
+    "bodyCardBienestar1_5" |
+    "bodyCardBienestar2_1" |
+    "bodyCardBienestar2_2" |
+    "bodyCardBienestar2_3" |
+    "bodyCardBienestar2_4" |
+    "bodyCardBienestar2_5" |
+    "bodyCardBienestar3_1" |
+    "bodyCardBienestar3_2" |
+    "bodyCardBienestar3_3" |
+    "bodyCardBienestar3_4" |
+    "bodyCardBienestar3_5" |
     "inicio" |
     "sobreMi" |
     "coaching" |
@@ -294,6 +312,24 @@ export const textos: TextosType<
     
 > = {
     [enLanguageFlag.ES]: {
+        titleCardBienestar1: "PARAR",
+        titleCardBienestar2: "Soltar",
+        titleCardBienestar3: "Atraer a tu Vida",
+        bodyCardBienestar1_1: "• Respirar conscientemente",
+        bodyCardBienestar1_2: "• Relajarte",
+        bodyCardBienestar1_3: "• Alejarte de tu día a día y coger perspectiva",
+        bodyCardBienestar1_4: "",
+        bodyCardBienestar1_5: "",
+        bodyCardBienestar2_1: "• Creencias limitantes",
+        bodyCardBienestar2_2: "• Quejas ",
+        bodyCardBienestar2_3: "• Negatividad",
+        bodyCardBienestar2_4: "• Todo aquello que ya no te sirve",
+        bodyCardBienestar2_5: "",
+        bodyCardBienestar3_1: "• Abundancia",
+        bodyCardBienestar3_2: "• Paz interna ",
+        bodyCardBienestar3_3: "• Amor y autoestima",
+        bodyCardBienestar3_4: "• Alegría y empoderamiento",
+        bodyCardBienestar3_5: "",
         inicio: "Inicio",
         sobreMi: "Sobre Mi",
         coaching: "Coaching",
@@ -575,6 +611,24 @@ export const textos: TextosType<
         textosparrafoXIItexto4: "Este documento de Política de Privacidad de un sitio web ha sido creado mediante el generador de plantilla de política de privacidad web gratis online el día 09/10/2023." ,
     },
     [enLanguageFlag.EN]: {
+        titleCardBienestar1: "Stop",
+        titleCardBienestar2: "Get ride off",
+        titleCardBienestar3: "Work on your self-knowledge and leadership to attract",
+        bodyCardBienestar1_1: "•  Breathe consciously",
+        bodyCardBienestar1_2: "• Relax ",
+        bodyCardBienestar1_3: "• Get away from your daily life and gain perspective",
+        bodyCardBienestar1_4: "",
+        bodyCardBienestar1_5: "",
+        bodyCardBienestar2_1: "• Limiting beliefs",
+        bodyCardBienestar2_2: "• Complaints ",
+        bodyCardBienestar2_3: "• Negativity",
+        bodyCardBienestar2_4: "• Everything that no longer serves you",
+        bodyCardBienestar2_5: "",
+        bodyCardBienestar3_1: "• Abundance",
+        bodyCardBienestar3_2: "• Inner peace",
+        bodyCardBienestar3_3: "• Love and self-esteem",
+        bodyCardBienestar3_4: "• Joy and empowerment",
+        bodyCardBienestar3_5: "• Another perspective to life",
         inicio: "Home",
         sobreMi: "About Me",
         coaching: "Coaching",
@@ -859,6 +913,24 @@ export const textos: TextosType<
     
     },
     [enLanguageFlag.CAT]: {
+        titleCardBienestar1: "Aturar",
+        titleCardBienestar2: "Deixar anar",
+        titleCardBienestar3: "Treballar en el teu autoconeixement i lideratge per atraure",
+        bodyCardBienestar1_1: "• Respirar conscientment",
+        bodyCardBienestar1_2: "• Relaxar-te ",
+        bodyCardBienestar1_3: "• Allunyar-te del teu dia a dia i agafar perspectiva",
+        bodyCardBienestar1_4: "",
+        bodyCardBienestar1_5: "",
+        bodyCardBienestar2_1: "• Creences limitants",
+        bodyCardBienestar2_2: "• Queixes ",
+        bodyCardBienestar2_3: "• Negativitat",
+        bodyCardBienestar2_4: "• Tot allò que ja no et serveix",
+        bodyCardBienestar2_5: "",
+        bodyCardBienestar3_1: "• Abundància",
+        bodyCardBienestar3_2: "• Pau interna ",
+        bodyCardBienestar3_3: "• Amor i autoestima",
+        bodyCardBienestar3_4: "• Alegria i empoderament",
+        bodyCardBienestar3_5: "• Una altra mirada a la vida",
         inicio: "Inici",
         sobreMi: "Sobre mi",
         coaching: "Coaching",

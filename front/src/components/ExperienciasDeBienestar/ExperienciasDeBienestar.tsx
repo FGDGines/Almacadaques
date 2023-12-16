@@ -5,10 +5,10 @@ import Footer from '../Footer/Footer';
 import Franja from '../Franja/Franja';
 import StatisticComponent from '../StatisticComponent/StatisticComponent';
 import CardM1 from '../CardM1/CardM1';
-import { cardsData } from '../../data/cardsExp';
+// import { cardsData } from '../../data/cardsExp';
 import Agenda from '../Agenda/Agenda';
 import FormAgenda from '../FormAgenda/FormAgenda';
-import { tpCalendarDates, tpCalendarEvent, tpDtmResponse } from '../../types/typesComponents';
+import { tpCalendarDates, tpCalendarEvent, tpCardM1, tpDtmResponse } from '../../types/typesComponents';
 import DialogMUI1 from '../DialogMUI1/DialogMUI1';
 import { statisticInfo } from '../../data/StatisticComponent';
 import { textos } from '../../data/textos';
@@ -20,10 +20,12 @@ import { fetchDefault } from '../../helpers/Server';
 // import f from "./../../assets/background/rf.jpg"
 
 const ExperienciasDeBienestar = () => {
-    const { setLayoutID } = useContext(GlobalContext);
+    const { setLayoutID, languageFlag } = useContext(GlobalContext);
     const [evento, setEvento] = useState<tpCalendarDates>({ id: 0, start: '', end: '', title: '' })
     const [calendarEvent, setCalendarEvent] = useState<tpCalendarEvent[]>([]);
+    const [cardsData, setCardsData] = useState<tpCardM1[]>([]);
 
+    console.log(cardsData)
     const [open, setOpen] = useState(false);
 
     const handleClickOpen = () => {
@@ -39,7 +41,6 @@ const ExperienciasDeBienestar = () => {
         handleClickOpen()
     }
 
-    const { languageFlag } =useContext(GlobalContext)
 
 
     useEffect(() => {
@@ -65,6 +66,28 @@ const ExperienciasDeBienestar = () => {
         // eslint-disable-next-line
       }, []);
 
+      useEffect(() => {
+        const api = () => {
+            setCardsData([
+                {
+                    title: textos[languageFlag].titleCardBienestar1,
+                    body: [textos[languageFlag].bodyCardBienestar1_1 ,textos[languageFlag].bodyCardBienestar1_2, textos[languageFlag].bodyCardBienestar1_3]
+                },
+                {
+                    title: textos[languageFlag].titleCardBienestar2,
+                    body: [textos[languageFlag].bodyCardBienestar2_1 ,textos[languageFlag].bodyCardBienestar2_2, textos[languageFlag].bodyCardBienestar2_3]
+                },
+                {
+                    title: textos[languageFlag].titleCardBienestar3,
+                    body: [textos[languageFlag].bodyCardBienestar3_1 ,textos[languageFlag].bodyCardBienestar3_2, textos[languageFlag].bodyCardBienestar3_3, textos[languageFlag].bodyCardBienestar3_4, textos[languageFlag].bodyCardBienestar3_5]
+                
+                }
+            ])
+        };
+        api();
+        // eslint-disable-next-line
+      }, [languageFlag]);
+      
 
     return <div className='ExperienciasDeBienestar'>
         <div className="as">
