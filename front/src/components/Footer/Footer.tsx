@@ -117,9 +117,9 @@ const Footer = () => {
                         <div className="span4"></div>
                          {watsNumber != "" ? (
                             <div>
-                                <p className="subtitlefoote">
+                                <p className="subtitlefooter">
                                     <img src={telImg} alt="Telefono" className='whatsapp ' />
-                                    <a href={wats?.url} target='_blank' className='enlaceFooter'>
+                                    <a href={wats?.url} target='_blank' className='enlaceFooter mt-2'>
                                         {/* +34 660 30 54 21*/}
                                         {watsNumber}
                                     </a> 
