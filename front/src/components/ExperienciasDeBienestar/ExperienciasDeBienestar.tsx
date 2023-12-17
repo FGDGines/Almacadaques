@@ -16,6 +16,7 @@ import { useContext } from 'react';
 import { GlobalContext } from '../../contexts/GlobalContext';
 import { useEffect, useState } from 'react';
 import { fetchDefault } from '../../helpers/Server';
+import { eventos } from '../../data/calendar';
 
 // import f from "./../../assets/background/rf.jpg"
 
@@ -24,7 +25,7 @@ const ExperienciasDeBienestar = () => {
     const [evento, setEvento] = useState<tpCalendarDates>({ id: 0, start: '', end: '', title: '' })
     const [calendarEvent, setCalendarEvent] = useState<tpCalendarEvent[]>([]);
     const [cardsData, setCardsData] = useState<tpCardM1[]>([]);
-
+    const [actividades, setActividades] = useState<tpCalendarEvent[]>(eventos)
     console.log(cardsData)
     const [open, setOpen] = useState(false);
 
@@ -120,7 +121,7 @@ const ExperienciasDeBienestar = () => {
                             <Agenda hSelect={SeleccionarEvento} calendar_event={calendarEvent}/>
                         </div>
                         <div className="ctFormulario">
-                            <FormAgenda actividades={calendarEvent} />
+                            <FormAgenda actividades={actividades} />
                         </div>
                     </div>
 

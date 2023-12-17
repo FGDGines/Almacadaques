@@ -2,8 +2,9 @@ import React, { FC, useState } from 'react';
 
 
 import './FormAgenda.css'
-import { tpFormAgenda } from '../../types/typesComponents';
+import { tpDtmResponse, tpFormAgenda } from '../../types/typesComponents';
 import { fetchDefault } from '../../helpers/Server';
+import { mostrarAlerta } from '../../helpers/MostrarAlerta';
 
 const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
   
@@ -24,14 +25,24 @@ const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
+    console.log(formData.actividad)
     const data = {body: JSON.stringify({
       nombre: formData.nombre,
       correo: formData.correo,
       msg: `telefono: ${formData.telefono}, actividad: ${formData.actividad}`,
       fragment: "experiencias de bienestar"
     })}
-    fetchDefault("/mail/create", data)
+    fetchDefault("/mail/create", data, (d: tpDtmResponse) => {
+      if (d.status == 200) {
+        setFormData({
+          nombre: '',
+          correo: '',
+          telefono: '',
+          actividad: '',
+        })
+      }
+      mostrarAlerta(d)
+  })
     
     // console.log('Datos enviados:', formData);
   };
@@ -87,7 +98,7 @@ const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
             <option value="">Selecciona una actividad</option>
             {actividades.map((item )=>{
               const { id, title } =  item 
-              return <option key={id} value={`${id}`}>{title}</option>
+              return <option key={id} value={`${title}`}>{title}</option>
             })}
           </select>
         </div>
