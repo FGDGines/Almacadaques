@@ -14,7 +14,7 @@ const AboutMe = () => {
     const { languageFlag } = useContext(GlobalContext)
     return <div className="AboutMe">
         <Navbar />
-        <Franja text='Sobre Mi' />
+        <Franja text={textos[languageFlag].sobreMi} />
         <div className='title1'><span style={{ color: "#75151E" }}> ❝ </span>
             {textos[languageFlag].textsobremi1}
             <span style={{ color: "#75151E" }}> ❞ </span>

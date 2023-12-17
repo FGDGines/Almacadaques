@@ -8,6 +8,7 @@ type TextosType<T extends string> = {
 
 export const textos: TextosType<
     //nav
+    "footerRight" |
     "titleCardBienestar1" |
     "titleCardBienestar2" |
     "titleCardBienestar3"| 
@@ -312,6 +313,7 @@ export const textos: TextosType<
     
 > = {
     [enLanguageFlag.ES]: {
+        footerRight: "reservado todos los derechos",
         titleCardBienestar1: "PARAR",
         titleCardBienestar2: "Soltar",
         titleCardBienestar3: "Atraer a tu Vida",
@@ -611,6 +613,7 @@ export const textos: TextosType<
         textosparrafoXIItexto4: "Este documento de Política de Privacidad de un sitio web ha sido creado mediante el generador de plantilla de política de privacidad web gratis online el día 09/10/2023." ,
     },
     [enLanguageFlag.EN]: {
+        footerRight: "all rights reserved",
         titleCardBienestar1: "Stop",
         titleCardBienestar2: "Get ride off",
         titleCardBienestar3: "Work on your self-knowledge and leadership to attract",
@@ -644,7 +647,7 @@ export const textos: TextosType<
         contactar: "Contact",
         // Fin del Navbar
         //footer 
-        textfooteraviso: "AVISO LEGAL",
+        textfooteraviso: "Legal Clauses",
         textfooterpolitica: "Privacy Policy",
         textfootercoockies: "Cookie policy",
         textfooteraviso2:"Legal warning",
@@ -913,6 +916,7 @@ export const textos: TextosType<
     
     },
     [enLanguageFlag.CAT]: {
+        footerRight: "reservat tots els drets",
         titleCardBienestar1: "Aturar",
         titleCardBienestar2: "Deixar anar",
         titleCardBienestar3: "Treballar en el teu autoconeixement i lideratge per atraure",
@@ -967,7 +971,7 @@ export const textos: TextosType<
         textDesthome61: "(llocs amb  encant).",
         // seccion about me
         textsobremi1: "T'ajudo a viure en plenitud, trobar el teu benestar i la teva pau interior.",
-        titleparrafo: "Algunas cosas sobre mi catalan",
+        titleparrafo: "Algunes coses sobre mi",
         parrafosobremi1:"Des de sempre he sentit la inquietud d'entendre la vida, el món que m'envolta i l'ésser humà. Tinc un interès genuí per les persones, les biografies, les relacions personals i la diversitat cultural.",
         parrafosobremi2: "La meva trajectòria com a consultora internacional viatjant per tot el món m'ha permès conèixer diferents cultures i relacionar-me amb persones amb diferents valors i interessos, i m'ha dut a aprofundir i estudiar sobre autoconeixement, creixement personal i lideratge",
         parrafosobremi3: "Les crisis m'han portat a indagar dins meu per conèixer-me. I tots els sotracs han estat oportunitats per conèixer-me millor i créixer, minimitzant el patiment i trobant més pau i harmonia.",

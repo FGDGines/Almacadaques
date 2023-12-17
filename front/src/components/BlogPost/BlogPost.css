@@ -299,6 +299,7 @@ input:checked + .page + .page + input + .page {
   text-shadow: -1px -1px 2px rgba(0, 0, 0, 0.5);
   margin-top: 10%;
   position: relative;
+  line-height: normal;
 }
 .cover h1::after {
   content: "";
