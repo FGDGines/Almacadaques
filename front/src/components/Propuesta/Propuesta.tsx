@@ -5,6 +5,7 @@ import { GlobalContext } from '../../contexts/GlobalContext';
 import { fetchDefault } from '../../helpers/Server';
 import { formDataToObject } from '../../helpers/Forms';
 import { tpDtmResponse, tpTimeLineData } from '../../types/typesComponents';
+import { textos } from '../../data/textos';
 
 const Propuesta = ()=>{
     const {languageFlag} = useContext(GlobalContext)
@@ -35,7 +36,7 @@ const Propuesta = ()=>{
     }, [l]);
     return <div className="Propuesta">
         <div className="title">
-            Espacios de bienestar en los que podrás:
+            {textos[languageFlag].titleInicioBinestar}
         </div>
         <br /> 
         <AlternateTimeline data={result} />

@@ -8,6 +8,7 @@ type TextosType<T extends string> = {
 
 export const textos: TextosType<
     //nav
+    "titleInicioBinestar" |
     "footerRight" |
     "titleCardBienestar1" |
     "titleCardBienestar2" |
@@ -313,6 +314,7 @@ export const textos: TextosType<
     
 > = {
     [enLanguageFlag.ES]: {
+        titleInicioBinestar: "Espacios de bienestar en los que podrás:",
         footerRight: "reservado todos los derechos",
         titleCardBienestar1: "PARAR",
         titleCardBienestar2: "Soltar",
@@ -613,6 +615,7 @@ export const textos: TextosType<
         textosparrafoXIItexto4: "Este documento de Política de Privacidad de un sitio web ha sido creado mediante el generador de plantilla de política de privacidad web gratis online el día 09/10/2023." ,
     },
     [enLanguageFlag.EN]: {
+        titleInicioBinestar: "Wellbeing spaces for:",
         footerRight: "all rights reserved",
         titleCardBienestar1: "Stop",
         titleCardBienestar2: "Get ride off",
@@ -916,6 +919,7 @@ export const textos: TextosType<
     
     },
     [enLanguageFlag.CAT]: {
+        titleInicioBinestar: "Espais de benestar en els que podrás:",
         footerRight: "reservat tots els drets",
         titleCardBienestar1: "Aturar",
         titleCardBienestar2: "Deixar anar",
