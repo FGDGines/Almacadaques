@@ -11,6 +11,7 @@ import { useState } from 'react';
 import { formDataToObject } from "../../helpers/Forms";
 import { tpDtmResponse } from "../../types/typesComponents";
 import { fetchDefault } from "../../helpers/Server";
+import { textos } from "../../data/textos";
 
 interface Retiro {
   index: number;
@@ -105,7 +106,7 @@ function BlogRetiro() {
         <div className="informacionderetiro" style={{ display: showDersail ? 'block' : 'none' }} >
           {showDersail && <DetailBlogRetiro retiro={selectedRetiro as Retiro} onClose={handleCloseDetail} />}
         </div>
-        <Franja text="Blog Retiros" />
+        <Franja text={textos[languageFlag].blogRetiro} />
         <div className="blog_Retiro">
 
           {retiros.map((retiro) => (

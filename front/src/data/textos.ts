@@ -8,6 +8,13 @@ type TextosType<T extends string> = {
 
 export const textos: TextosType<
     //nuevas
+    "podcastC1" |
+    "podcastC2" |
+    "podcastC3" |
+    "podcastC4" |
+    "podcastCategory" |
+    "podcastRecent" |
+    "podcastSeen" |
     "coachAyuda" |
     "coachingAcompa" |
     "titleInicioBinestar" |
@@ -319,6 +326,13 @@ export const textos: TextosType<
     
 > = {
     [enLanguageFlag.ES]: {
+        podcastRecent: "Mas reciente",
+        podcastSeen: "Mas vistos",
+        podcastC1: "Experiencias Almacadaqués",
+        podcastC2: "Meditaciones",
+        podcastC3: "Almas Inspiradoras",
+        podcastC4: "Libros con Alma",
+        podcastCategory: "categorias",
         coachAyuda: "como te puedo ayudar",
         coachingAcompa: "te acompaño",
         titleInicioBinestar: "Espacios de bienestar en los que podrás:",
@@ -624,13 +638,20 @@ export const textos: TextosType<
         textosparrafoXIItexto4: "Este documento de Política de Privacidad de un sitio web ha sido creado mediante el generador de plantilla de política de privacidad web gratis online el día 09/10/2023." ,
     },
     [enLanguageFlag.EN]: {
+        podcastRecent: "More recent",
+        podcastSeen: "Most seen",
+        podcastC1: "Almacadaqués Experiences",
+        podcastC2: "Meditations",
+        podcastC3: "Inspiring Souls",
+        podcastC4: "Books with Soul",
+        podcastCategory: "categories",
         coachAyuda: "shall we go",
         coachingAcompa: "shall we go",
         titleInicioBinestar: "Wellbeing spaces for:",
         footerRight: "all rights reserved",
         titleCardBienestar1: "Stop",
         titleCardBienestar2: "Get ride off",
-        titleCardBienestar3: "Work on your self-knowledge and leadership to attract",
+        titleCardBienestar3: "Attract to your life",
         bodyCardBienestar1_1: "•  Breathe consciously",
         bodyCardBienestar1_2: "• Relax ",
         bodyCardBienestar1_3: "• Get away from your daily life and gain perspective",
@@ -658,7 +679,7 @@ export const textos: TextosType<
         testimonios: "Testominio EN",
         blog: "Blog",
         blogPost: "Tips de Bienestar",
-        blogRetiro: "Blog Retiros",
+        blogRetiro: "Blog Retreats",
         podcast: "Podcast",
         contactar: "Contact",
         // Fin del Navbar
@@ -750,7 +771,7 @@ export const textos: TextosType<
         //Agenda Experiencias de bienestar
         textosinviertebienestar: "Invest in your well-being!",
         textostalleresyretiros: " Workshops and retreats with expert collaborators in different disciplines.",
-        textosretirosanteriores: " Previous Withdrawals ",
+        textosretirosanteriores: " Previous Retreats ",
         //Agenda experiencias a medida
         textoeresunaempersa: "Are you a conscious company that invests in the well-being of its workers? Contact us to organize the experience as it best suits your profile!.",
         textotrabajemosjuntos: "Let's work together",
@@ -932,13 +953,20 @@ export const textos: TextosType<
     
     },
     [enLanguageFlag.CAT]: {
+        podcastRecent: "Més recent",
+        podcastSeen: "Més vistos",
+        podcastC1: "Almacadaqués Experiències",
+        podcastC2: "Meditacions",
+        podcastC3: "ànimes inspiradores",
+        podcastC4: "Llibres amb ànima",
+        podcastCategory: "categories",
         coachAyuda: "com et puc ajudar",
         coachingAcompa: "t'acompanyo",
         titleInicioBinestar: "Espais de benestar en els que podrás:",
         footerRight: "reservat tots els drets",
         titleCardBienestar1: "Aturar",
         titleCardBienestar2: "Deixar anar",
-        titleCardBienestar3: "Treballar en el teu autoconeixement i lideratge per atraure",
+        titleCardBienestar3: "Atreure la teva Vida",
         bodyCardBienestar1_1: "• Respirar conscientment",
         bodyCardBienestar1_2: "• Relaxar-te ",
         bodyCardBienestar1_3: "• Allunyar-te del teu dia a dia i agafar perspectiva",
@@ -966,7 +994,7 @@ export const textos: TextosType<
         testimonios: "Testomini",
         blog: "Blog",
         blogPost: "Tips de Bienestar",
-        blogRetiro: "Blog Retiros",
+        blogRetiro: "Blog Retirs",
         podcast: "Podcast",
         contactar: "Contacte",
         // Fin del Navbar
@@ -975,7 +1003,7 @@ export const textos: TextosType<
         textfooterpolitica: "Política de privacitat",
         textfootercoockies: "Política de galetes",
         textfooteraviso2:"Avís legal",
-        textfooterInfo: "Info Contacto",
+        textfooterInfo: "Info Contacte",
         textfooteremail: "Adreça de correu electrònic",
         textfooteremail2: "La teva adreça de correu aquí",
         textfooterregistro: "Registre",

@@ -4,10 +4,12 @@ import Franja from '../Franja/Franja';
 import Footer from '../Footer/Footer';
 // import { podcastData } from "../../data/listPodcast";
 import { VideosPodcast } from '../ItemPodcast/ItemPodcast'
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { AudioPlayerProps, tpDtmResponse } from '../../types/typesComponents';
 import { fetchDefault } from '../../helpers/Server';
 import { convertUrlYoutube } from '../../helpers/PodcastHelp';
+import { textos } from '../../data/textos';
+import { GlobalContext } from '../../contexts/GlobalContext';
 
 const removeAccents = (text: string) => {
     return text.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
@@ -25,6 +27,7 @@ const Podcast = () => {
         fecha:"",
         categoria: ""
     });
+    const { languageFlag } = useContext(GlobalContext)
 
 
     const handlePodcastClick = (podcast: AudioPlayerProps) => {
@@ -127,13 +130,13 @@ const Podcast = () => {
 
                 <div className="ctCategorias">
                     <div className="ctTituloCategoria">
-                        <h3>Categorias</h3>
+                        <h3>{textos[languageFlag].podcastCategory}</h3>
                     </div>
                     <div className="ctBotones">
-                        <div className="botonCategoria" onClick={() => handleCategoryFilter('experiencias almacadaques')}>Experiencias Almacadaqués</div>
-                        <div className="botonCategoria" onClick={() => handleCategoryFilter('meditaciones')}>Meditaciones</div>
-                        <div className="botonCategoria" onClick={() => handleCategoryFilter('almas inspiradoras')}>Almas Inspiradoras</div>
-                        <div className="botonCategoria" onClick={() => handleCategoryFilter('libros con alma')}>Libros con Alma</div>
+                        <div className="botonCategoria" onClick={() => handleCategoryFilter('experiencias almacadaques')}>{textos[languageFlag].podcastC1}</div>
+                        <div className="botonCategoria" onClick={() => handleCategoryFilter('meditaciones')}>{textos[languageFlag].podcastC2}</div>
+                        <div className="botonCategoria" onClick={() => handleCategoryFilter('almas inspiradoras')}>{textos[languageFlag].podcastC3}</div>
+                        <div className="botonCategoria" onClick={() => handleCategoryFilter('libros con alma')}>{textos[languageFlag].podcastC4}</div>
                     </div>
                 </div>
 
@@ -176,7 +179,7 @@ const Podcast = () => {
 
                 <div className="ctMasrecientes">
                     <div className="titulosPodcast">
-                        <h2>Mas reciente</h2>
+                        <h2>{textos[languageFlag].podcastRecent}</h2>
                     </div>
                     <div className="arrow-left">
                         <i className="fas fa-arrow-left"></i>
@@ -203,7 +206,7 @@ const Podcast = () => {
 
                 <div className="ctMasvistos">
                     <div className="titulosPodcast">
-                        <h2>Mas vistos</h2>
+                        <h2>{textos[languageFlag].podcastSeen}</h2>
                     </div>
                     <div className="arrow-left">
                         <i className="fas fa-arrow-left"></i>
