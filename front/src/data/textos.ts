@@ -932,7 +932,7 @@ export const textos: TextosType<
     
     },
     [enLanguageFlag.CAT]: {
-        coachAyuda: "com et puc ajudar?",
+        coachAyuda: "com et puc ajudar",
         coachingAcompa: "t'acompanyo",
         titleInicioBinestar: "Espais de benestar en els que podrás:",
         footerRight: "reservat tots els drets",

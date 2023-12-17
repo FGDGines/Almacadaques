@@ -75,7 +75,7 @@ const CoachingInternacional = () => {
                     <p className='parrafo'>{textos[languageFlag].textcoachinginterna3}</p>
                     <p className='parrafo'>{textos[languageFlag].textcoachinginterna4}</p>
                     <p className='parrafo'>{textos[languageFlag].textcoachinginterna5} 
-                    <span className='TeAcompaño'>{textos[languageFlag].coachingAcompa}</span></p>
+                    <span className='TeAcompaño'>¿{textos[languageFlag].coachingAcompa}?</span></p>
 
                 </div>
 
