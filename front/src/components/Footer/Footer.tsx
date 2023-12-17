@@ -154,7 +154,7 @@ const Footer = () => {
                         {
                             redes.map((red) => {
                                 return <div key={`red-${red.index}`}>
-                                    <a href={red.url} target='_blank'><img className="img " width={17} height={17}  src={red.archivo} alt={red.cuenta} /></a>
+                                    <a href={red.url} target='_blank'><img className=" " width={25} height={25}  src={red.archivo} alt={red.cuenta} /></a>
                                 </div>
                             })
                         }

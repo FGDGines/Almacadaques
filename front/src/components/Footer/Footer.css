@@ -201,12 +201,22 @@ input:valid ~ label {
   align-items: center;
 }
 
+.icon-red {
+  width: 7vw;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .img {
   width: 1.7vw;
 }
 
 .img1 {
   width: 2.5vw;
+}
+.img2 {
+  width: 2.1vw;
 }
 
 @media (max-width: 780px) {
