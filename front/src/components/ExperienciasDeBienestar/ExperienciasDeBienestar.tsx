@@ -96,7 +96,7 @@ const ExperienciasDeBienestar = () => {
     
   
             <Navbar />
-            <Franja text='Experiencias de Bienestar' />
+            <Franja text={textos[languageFlag].expBienestar} />
             <div className='ctMain'>
                 <div className='ctTitle'>
                     <span style={{ color: "#75151E" }}> ❝ 

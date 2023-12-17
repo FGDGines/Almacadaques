@@ -28,7 +28,7 @@ function ExperienciasDeMedida() {
     return (
         <div className="ExperienciasdeMedida">
             <Navbar />
-            <Franja text='Experiencias de Medida' /> 
+            <Franja text={textos[languageFlag].expDeMedida} /> 
             <div className="ctMain">
                 <div className="ct">
                     <div className="ctPhrase">

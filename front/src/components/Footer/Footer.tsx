@@ -63,8 +63,13 @@ const Footer = () => {
                     if (url.startsWith("https://wa.me/" || element.cuenta == "whatsapp")) {
                         
                         // console.log(url, splitUrlRedesWatsap(url)[0])
-                        setWatsNumber(splitUrlRedesWatsap(url)[0])
-                        setWats(value)
+                        setWatsNumber("+34" + splitUrlRedesWatsap(url)[0])
+                        setWats({
+                            index: element.id,
+                            archivo: iconRedByName(element.cuenta),
+                            url: splitUrlRedesWatsap(url)[2], 
+                            cuenta: element.cuenta
+                        })
                         // console.log(url)
                         // for (let index = init + 1; index < url.length; index++) {
                         //     const element = url[index];

@@ -129,6 +129,7 @@ const BlogPost = () => {
         : <></>}
 
       <div className="ItemBookUser">
+        <h3>Lista de libros</h3>
           <div className="carduser">
             <ul className='UlLista'>
 

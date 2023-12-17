@@ -73,5 +73,5 @@ export const splitUrlRedesWatsap = (url: string) => {
     } else {
         return ""
     }
-    return [num, msg]
+    return [num, msg, `https://wa.me/+34${num}?text=${msg}`]
 }
