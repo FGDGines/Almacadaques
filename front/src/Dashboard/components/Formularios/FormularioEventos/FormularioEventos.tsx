@@ -59,6 +59,15 @@ function FormularioEventos() {
           });
         }
     };
+
+    const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>) => {
+        const { name, value } = event.target;
+        setFormData({
+          ...formData,
+          [name]: value,
+        });
+      };
+
     const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
       const selectedFile = event.target.files?.[0] as File;
   
@@ -143,12 +152,16 @@ function FormularioEventos() {
                     </div>
                     <div className="restInputs">
                         <label className='labelsCarrousel' form='Titulo'>Titulo</label>
-                        <input className='inputsFormCarrousel'
-                            type="text"
-                            name="Titulo"
+                        <select className="inputsFormCarrousel"
+                            name="Titulo" 
                             value={formData.Titulo}
-                            onChange={handleInputChange}
-                        />
+                            onChange={handleSelectChange}
+                            >
+                            <option value="" selected disabled >Seleccione una titulo</option>
+                            <option value="Experiencia">Experiencia</option>
+                            <option value="Evento">Evento</option>
+                            <option value="Taller">Taller</option>
+                        </select>
 
                         <div className="Dataevent">
                             <div >
