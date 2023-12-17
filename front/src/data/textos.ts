@@ -7,7 +7,9 @@ type TextosType<T extends string> = {
 };
 
 export const textos: TextosType<
-    //nav
+    //nuevas
+    "coachAyuda" |
+    "coachingAcompa" |
     "titleInicioBinestar" |
     "footerRight" |
     "titleCardBienestar1" |
@@ -27,11 +29,14 @@ export const textos: TextosType<
     "bodyCardBienestar3_2" |
     "bodyCardBienestar3_3" |
     "bodyCardBienestar3_4" |
-    "bodyCardBienestar3_5" |
+    "bodyCardBienestar3_5" | 
+    //nav
     "inicio" |
     "sobreMi" |
     "coaching" |
     "agenda" |
+    "coachBienestar" |
+    "coachDeMedida" |
     "expBienestar" |
     "expDeMedida" |
     "colabrador" |
@@ -314,6 +319,8 @@ export const textos: TextosType<
     
 > = {
     [enLanguageFlag.ES]: {
+        coachAyuda: "como te puedo ayudar",
+        coachingAcompa: "te acompaño",
         titleInicioBinestar: "Espacios de bienestar en los que podrás:",
         footerRight: "reservado todos los derechos",
         titleCardBienestar1: "PARAR",
@@ -338,6 +345,8 @@ export const textos: TextosType<
         sobreMi: "Sobre Mi",
         coaching: "Coaching",
         agenda: "Agenda",
+        coachBienestar: "Coaching para el Bienestar",
+        coachDeMedida: "Coaching & Mentoring Internacional",
         expBienestar: "Experiencias de Bienestar",
         expDeMedida: "Experiencias a Medida",
         colabrador: "Colaborad@r",
@@ -407,7 +416,7 @@ export const textos: TextosType<
         textcoaching3: "Te escucharé sin juzgar, te haré preguntas y te daré feedback, y con ello aclararás y ordenarás tus ideas e incrementarás tu autoconocimiento y liderazgo para descubrir nuevos enfoques y lograr aquello que quieres conseguir.",
         textcoaching4: "Como coach acompaño a la persona a través de un viaje de exploración interior. Empezamos desde donde empieza su conflicto o malestar hasta la resolución del mismo logrando así tu bienestar.",
         textcoaching5: "Cuando uno toma la determinación de liderar su vida, posiblemente después  de alguna crisis o desajuste, el acompañamiento de un coach lo puede ayudar a acelerar y lograr mejores resultados.",
-        textcoachingpide:"Pide más información sin compromiso",
+        textcoachingpide:"Pide más información",
         //formulario coaching para el bienestar
         textnombre:"Nombre",
         textplaceholdescribe: "Escribe tu nombre aquí",
@@ -615,6 +624,8 @@ export const textos: TextosType<
         textosparrafoXIItexto4: "Este documento de Política de Privacidad de un sitio web ha sido creado mediante el generador de plantilla de política de privacidad web gratis online el día 09/10/2023." ,
     },
     [enLanguageFlag.EN]: {
+        coachAyuda: "shall we go",
+        coachingAcompa: "shall we go",
         titleInicioBinestar: "Wellbeing spaces for:",
         footerRight: "all rights reserved",
         titleCardBienestar1: "Stop",
@@ -639,6 +650,8 @@ export const textos: TextosType<
         sobreMi: "About Me",
         coaching: "Coaching",
         agenda: "Agenda",
+        coachBienestar: "Coaching for Wellbeing",
+        coachDeMedida: "International Coaching & Mentoring ",
         expBienestar: "Well-being Experiences",
         expDeMedida: "Customizd well-being experiences",
         colabrador: "Collaborators",
@@ -699,7 +712,7 @@ export const textos: TextosType<
         textcoaching3: "I will listen to you without judging, ask you questions and give you feedback, so that you will clarify and organize your ideas as well as increase your self-knowledge and leadership capacities.",
         textcoaching4: "I help he person through a journey of inner exploration. We will start from where your conflict or discomfort begins and go through to achieve your goals.",
         textcoaching5: "When you make the determination to lead your life, possibly after some crisis or imbalance, the support of a coach can help you accelerate and achieve better results",
-        textcoachingpide:"Request more information without obligation",
+        textcoachingpide:"Request more information",
 
         TitleCarrousel1: "Feeling stressed?",
         TitleCarrousel2: "Need a change of scenery?",
@@ -919,6 +932,8 @@ export const textos: TextosType<
     
     },
     [enLanguageFlag.CAT]: {
+        coachAyuda: "com et puc ajudar?",
+        coachingAcompa: "t'acompanyo",
         titleInicioBinestar: "Espais de benestar en els que podrás:",
         footerRight: "reservat tots els drets",
         titleCardBienestar1: "Aturar",
@@ -943,6 +958,8 @@ export const textos: TextosType<
         sobreMi: "Sobre mi",
         coaching: "Coaching",
         agenda: "Agenda",
+        coachBienestar: "Coaching per al benestar",
+        coachDeMedida: "Coaching & Mentoring Internacional",
         expBienestar: "Experiències de benestar",
         expDeMedida: "Experiències a mida",
         colabrador: "Colaborad@rs",
@@ -1003,7 +1020,7 @@ export const textos: TextosType<
         textcoaching3: "T'escoltaré sense jutjar, et faré preguntes i et donaré feedback, i amb això aclariràs i ordenaràs les teves idees i incrementaràs el teu autoconeixement i lideratge per descobrir nous enfocaments i aconseguir allò que vols.",
         textcoaching4: "Com a coach acompanyo la persona mitjançant un viatge d'exploració interior. Comencem des d'on comença el seu conflicte o malestar fins a la seva resolució aconseguint així el teu benestar.",
         textcoaching5: "Quan una persona pren la determinació de liderar la seva vida, possiblement després d'alguna crisi o desajust, l'acompanyament d'un coach el pot ajudar a accelerar el canvi i aconseguir millors resultats",
-        textcoachingpide:"Demana més informació sense compromís",
+        textcoachingpide:"Demana més informació",
         //formulario coaching para el bienestar
         textnombre: "Nom",
         textplaceholdescribe: "Escriu el teu nom aquí",

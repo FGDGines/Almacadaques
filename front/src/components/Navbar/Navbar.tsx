@@ -23,11 +23,11 @@ const Navbar = () => {
             children={[
               {
                 target: 4,
-                text: `${textos[languageFlag].expBienestar}`,
+                text: `${textos[languageFlag].coachBienestar}`,
               },
               {
                 target: 10,
-                text: `${textos[languageFlag].expDeMedida}`, 
+                text: `${textos[languageFlag].coachDeMedida}`, 
               },
             ]}
           />
