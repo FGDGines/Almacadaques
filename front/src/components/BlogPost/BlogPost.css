@@ -342,6 +342,9 @@ input:checked + .page + .page + input + .page {
     left: 60%;
     top: 14%;
   }
+  .cover h3 {
+    font-size: larger;
+  }
 }
 
 @media (max-width: 1542px) {
@@ -396,7 +399,7 @@ input:checked + .page + .page + input + .page {
 }
 
 .cuenta {
-  font-size: 1vw;
+  /* font-size: 1vw; */
   text-align: center;
   font-family: "PT-Script-Monsoon";
   color: #CF1348;

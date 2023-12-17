@@ -21,8 +21,8 @@ export const Update = async ( req: Request ,res: Response)=>{
         if(!tTextLibro) return res.status(200).json({status: 400, msg: "El podcast debe ser válido" })
 
         if(title){
-            if (String(title).length > 25) {
-                return res.status(200).json({ status: 400, msg: "El titulo debe ser menos de 25 caracteres"})
+            if (String(title).length > 50) {
+                return res.status(200).json({ status: 400, msg: "El titulo debe ser menos de 50 caracteres"})
             }
             const past = tTextLibro.title
             await tTextLibro.update({title: title})
@@ -30,8 +30,8 @@ export const Update = async ( req: Request ,res: Response)=>{
         }
 
         if(subtitle){
-            if (String(subtitle).length > 25) {
-                return res.status(200).json({ status: 400, msg: "El subtitulo debe ser menos de 25 caracteres"})
+            if (String(subtitle).length > 50) {
+                return res.status(200).json({ status: 400, msg: "El subtitulo debe ser menos de 50 caracteres"})
             }
             const past = tTextLibro.subtitle
             await tTextLibro.update({subtitle: subtitle})
