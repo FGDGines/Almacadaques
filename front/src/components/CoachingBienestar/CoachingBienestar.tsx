@@ -27,7 +27,7 @@ const CoachingBienestar = () => {
 
     return <div className="CoachingBienestar">
         <Navbar />
-        <Franja text="Coaching para el Bienestar " />
+        <Franja text={textos[languageFlag].coachBienestar} />
         <div className="containerBienestar">
 
             <div className="containerInnformacion1">
