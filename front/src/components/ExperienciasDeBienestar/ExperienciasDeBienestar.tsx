@@ -26,7 +26,6 @@ const ExperienciasDeBienestar = () => {
     const [calendarEvent, setCalendarEvent] = useState<tpCalendarEvent[]>([]);
     const [cardsData, setCardsData] = useState<tpCardM1[]>([]);
     const [actividades, _setActividades] = useState<tpCalendarEvent[]>(eventos)
-    console.log(cardsData)
     const [open, setOpen] = useState(false);
 
     const handleClickOpen = () => {

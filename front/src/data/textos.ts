@@ -8,6 +8,10 @@ type TextosType<T extends string> = {
 
 export const textos: TextosType<
     //nuevas
+    "inscribirse" |
+    "actividad" |
+    "actSelect" |
+    "expBieBtn" |
     "coachInf" |
     "chachText1" |
     "chachText2" |
@@ -330,6 +334,10 @@ export const textos: TextosType<
     
 > = {
     [enLanguageFlag.ES]: {
+        inscribirse: "Inscribirse",
+        actividad: "Actividad",
+        actSelect: "Selecciona una actividad",
+        expBieBtn: "Enviar",
         "coachInf": "Como te puedo ayudar",
         "chachText1": "Como coach te escucho sin juzgar, te hago preguntas y te doy feedback, y con ello aclararás y ordenarás tus ideas e incrementarás tu autoconocimiento y liderazgo para descubrir nuevos enfoques y lograr aquello que quieres conseguir.",
         "chachText2": "Como mentora internacional te comparto mis propias experiencias y con mucha empatía y sensibilidad te acompaño a alcanzar los objetivos que quieres lograr, logrando así mayor bienestar.",
@@ -646,6 +654,10 @@ export const textos: TextosType<
         textosparrafoXIItexto4: "Este documento de Política de Privacidad de un sitio web ha sido creado mediante el generador de plantilla de política de privacidad web gratis online el día 09/10/2023." ,
     },
     [enLanguageFlag.EN]: {
+        inscribirse: "Sign up",
+        actividad: "Activity",
+        actSelect: "Select an activity",
+        expBieBtn: "Send",
         "coachInf": "How can I help you",
         "chachText1": "As a coach, I listen to you without judging, ask you questions and give you feedback, and with this you will clarify and organize your ideas and increase your self-knowledge and leadership to discover new approaches and achieve what you want to achieve.",
         "chachText2": "As an international mentor I share my own experiences with you and with a lot of empathy and sensitivity I help you achieve the objectives you want to achieve, thus achieving greater well-being.",
@@ -690,7 +702,7 @@ export const textos: TextosType<
         colabrador: "Collaborators",
         testimonios: "Testominio EN",
         blog: "Blog",
-        blogPost: "Tips de Bienestar",
+        blogPost: "Wellness Tips",
         blogRetiro: "Blog Retreats",
         podcast: "Podcast",
         contactar: "Contact",
@@ -965,6 +977,10 @@ export const textos: TextosType<
     
     },
     [enLanguageFlag.CAT]: {
+        inscribirse: "Inscriure's",
+        actividad: "Activitat",
+        actSelect: "Selecciona una activitat",
+        expBieBtn: "Enviar",
         "coachInf": "Com et puc ajudar",
         "chachText1": "Com que coach t'escolto sense jutjar, et faig preguntes i et dono feedback, i amb això aclariràs i ordenaràs les teves idees i incrementaràs el teu autoconeixement i lideratge per descobrir nous enfocaments i aconseguir allò que vols aconseguir.",
         "chachText2": "Com a mentora internacional et comparteixo les meves pròpies experiències i amb molta empatia i sensibilitat t'acompanyo a assolir els objectius que vols assolir, aconseguint així més benestar.",
@@ -1009,7 +1025,7 @@ export const textos: TextosType<
         colabrador: "Colaborad@rs",
         testimonios: "Testomini",
         blog: "Blog",
-        blogPost: "Tips de Bienestar",
+        blogPost: "Tipus de Benestar",
         blogRetiro: "Blog Retirs",
         podcast: "Podcast",
         contactar: "Contacte",

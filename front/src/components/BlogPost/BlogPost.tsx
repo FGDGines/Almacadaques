@@ -3,15 +3,18 @@
 import Navbar from "../Navbar/Navbar";
 import Franja from "../Franja/Franja";
 import Footer from "../Footer/Footer";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import './BlogPost.css';
 import { tpDtmResponse, tpTextLibro } from '../../types/typesComponents';
 import { fetchDefault } from '../../helpers/Server';
+import { textos } from "../../data/textos";
+import { GlobalContext } from "../../contexts/GlobalContext";
 
 
 // import portImg from "../../../src/assets/ImgLibro/portada.jpeg"
 
 const BlogPost = () => {
+  const { languageFlag } = useContext(GlobalContext);
   const [data, setData] = useState<tpTextLibro[]>([]);
   const [current, setCurrent] = useState<tpTextLibro | null>(null);
   const absoluteElementRef = useRef<HTMLDivElement | null>(null);
@@ -67,7 +70,7 @@ const BlogPost = () => {
   return (
     <div className="BlogPost">
       <Navbar />
-      <Franja text="Tips de Bienestar" />
+      <Franja text={textos[languageFlag].blogPost} />
       <div className="BookItem">
 
         {current && current.content.length > 0 ?
