@@ -14,8 +14,8 @@ import { fetchDefault } from '../../helpers/Server';
 const BlogPost = () => {
   const [data, setData] = useState<tpTextLibro[]>([]);
   const [current, setCurrent] = useState<tpTextLibro | null>(null);
-  const absoluteElementRef = useRef(null);
-  const footerRef = useRef(null);
+  const absoluteElementRef = useRef<HTMLDivElement | null>(null);
+  const footerRef = useRef<HTMLDivElement | null>(null);
   const changeBock = (book: tpTextLibro) => {
     setCurrent(book)
   } 

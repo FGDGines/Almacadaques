@@ -157,7 +157,7 @@ function FormularioEventos() {
                             value={formData.Titulo}
                             onChange={handleSelectChange}
                             >
-                            <option value="" selected disabled >Seleccione una titulo</option>
+                            <option value="" selected disabled >Seleccione un titulo</option>
                             <option value="Experiencia">Experiencia</option>
                             <option value="Evento">Evento</option>
                             <option value="Taller">Taller</option>

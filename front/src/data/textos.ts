@@ -389,7 +389,7 @@ export const textos: TextosType<
         textfooteremail2: "Tu direccion de correo aqui",
         textfooterregistro: "Registro",
         // home
-        textDesthome1: "El proyecto nace en Cadaqués, un pueblecito precioso del donde me lleno el alma de buena energía, me nutro de naturaleza y mar y me inspiro. Y esta vibra es la que compartimos aquí. ",
+        textDesthome1: "El proyecto nace en Cadaqués, un pueblecito precioso donde me lleno el alma de buena energía, me nutro de naturaleza y mar y me inspiro. Y esta vibra es la que compartimos aquí. ",
         textDesthome2: "Te proponemos parar para reconectar contigo, soltar lo que ya no necesitas y vibrar con la energía positiva para atraer lo que quieres.",
         textDesthome3: "En definitiva, se trata de avanzar en tu proceso de transformación y bienestar para ser tu mejor versión.",
         textDesthome4: "¿ Como y Donde ?",
@@ -705,7 +705,7 @@ export const textos: TextosType<
         textfooteremail2: "Your email address here",
         textfooterregistro: "register",
         // home
-        textDesthome1: "The project was born in Cadaqués, a beautiful little town in Alt Empordà where I fill my soul with good energy, I am nourished by nature and the sea and I am inspired. And this vibe is what we share here.",
+        textDesthome1: "The project was born in Cadaqués, a beautiful little town where I fill my soul with good energy, I am nourished by nature and the sea and I am inspired. And this vibe is what we share here",
         textDesthome2: "We suggest you stop to reconnect with yourself, let go what you no longer need and vibrate with positive energy to attract what you want.",
         textDesthome3: "In short, it is about advancing your transformation and well-being process to become the best of yourself.",
         textDesthome4: "How and where?",
@@ -1024,7 +1024,7 @@ export const textos: TextosType<
         textfooteremail2: "La teva adreça de correu aquí",
         textfooterregistro: "Registre",
         // home
-        textDesthome1: "El projecte neix a Cadaqués, un poblet preciós de l'Alt Empordà on m'omplo l'ànima de bona energia, em nodreixo de natura i mar i m'inspiro. I aquesta vibra és la que compartim aquí.",
+        textDesthome1: "El projecte neix a Cadaqués, un poblet preciós on m'omplo l'ànima de bona energia, em nodreixo de natura i mar i m'inspiro. I aquesta vibra és la que compartim aquí",
         textDesthome2: "Et proposem parar per reconnectar amb tu, deixar anar el que ja no necessites i vibrar amb l'energia positiva per atraure el que vols.",
         textDesthome3: "En definitiva, es tracta d'avançar en el teu procés de transformació i benestar per ser la teva millor versió.",
         textDesthome4: "Com i on?",
