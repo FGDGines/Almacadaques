@@ -119,7 +119,7 @@ const Footer = () => {
                             <div>
                                 <p className="subtitlefooter">
                                     <img src={telImg} alt="Telefono" className='whatsapp ' />
-                                    <a href={wats?.url} target='_blank' className='enlaceFooter mt-2'>
+                                    <a href={wats?.url} target='_blank' className='enlaceFooter'>
                                         {/* +34 660 30 54 21*/}
                                         {watsNumber}
                                     </a> 

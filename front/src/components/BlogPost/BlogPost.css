@@ -16,15 +16,15 @@
 .carduser {
 
   
-  overflow-y: auto;
+  /* overflow-y: auto; */
   max-width: 32vw;
   width: 25vw;
   height: 24vw;
   border-radius: 2vw;
-  border: 1px solid rgb(194, 194, 194);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset,
-    rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset;
-  padding: 1vw;
+  /* border: 1px solid rgb(194, 194, 194); */
+  /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 50px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 26px -18px inset; */
+  /* padding: 1vw; */
   text-decoration: none;
 }
 .carduser::-webkit-scrollbar {
@@ -38,6 +38,7 @@
 
 .ItemBookUser {
   width: 40vw;
+  height: 300px;
 }
 .EnlacesItem {
   text-decoration: none;
@@ -53,6 +54,7 @@
   display: flex;
   flex-direction: column;
   gap: 1vw;
+  padding: 0;
   line-height: normal;
 }
 .demoPage {
@@ -192,6 +194,8 @@
     flex-direction: column;
     gap: 0vw;
     padding: 5vw 0;
+  }.ItemBookUser {
+    top: 300px;
   }
 }
 
@@ -206,12 +210,12 @@
 }
 
 .book {
-  width: 600px;
+  width: 960px;
   max-width: 100%;
-  height: 400px;
+  height: 500px;
   max-height: 70vw;
   position: absolute;
-  left: 35%;
+  left: 30%;
   top: 55%;
   transform: translate(-50%, -50%);
   perspective: 1500px;
@@ -334,47 +338,65 @@ input:checked + .page + .page + input + .page {
 
 @media (min-width: 1543px) {
   .ItemBookUser {
-    width: 600px;
+    width: 300px;
     max-width: 100%;
     height: 400px;
     max-height: 70vw;
     position: absolute;
-    left: 60%;
+    left: 72%;
     top: 14%;
   }
-  .cover h3 {
-    font-size: larger;
+  .book {
+    top: 370px;
   }
+  /* .cover h3 {
+    font-size: larger;
+  } */
 }
 
 @media (max-width: 1542px) {
   .ItemBookUser {
     position: absolute;
     left: 36%;
-    top: 430px;
+    top: 30px;
     margin-top: 100px;
   }
   .book {
-    left: 45%;
-    top:69%
+    left: 50%;
+    top:90%;
+    width: 70vw;
+  }
+  .ItemBookUser {
+    top: 550px;
   }
 }
 @media (max-width: 1060px) {
   .book {
-    top:90%
+    top:100%
+  }.ItemBookUser {
+    top: 460px;
   }
 }
 @media (max-width: 819px) {
   .book {
     width: 400px; 
-    top: 240px;
+    top: 300px;
   }
   .ItemBookUser {
-    top: 350px;
+    top: 450px;
   }
 }
 
-
+@media (max-width: 500px) {
+  .book {
+    left: 50%;
+    top:200px;
+    width: 70vw;
+  }
+  .ItemBookUser {
+    top: 240px;
+  }
+}
 
 .separator {
   width: 1px;
