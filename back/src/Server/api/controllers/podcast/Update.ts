@@ -20,6 +20,15 @@ export const Update = async ( req: Request ,res: Response)=>{
 
         if(!tPodcast) return res.status(200).json({status: 400, msg: "El podcast debe ser válido" })
 
+        if(categoria){
+            if (categoria != "Libros con Alma" && categoria != "Experiencias Almacadaqués" && categoria != "Meditaciones" && categoria != "Almas Inspiradoras") {
+                return res.status(200).json({ status: 400, msg: "Categoria incorrecta" })
+            }
+            const past = tPodcast.categoria
+            await tPodcast.update({categoria:categoria})
+            updates.push({path: 'categoria', past , now:categoria})
+        }
+        
         if(url){
             const past = tPodcast.url
             await tPodcast.update({url: url})
@@ -67,11 +76,6 @@ export const Update = async ( req: Request ,res: Response)=>{
             updates.push({path: 'fecha', past , now:fecha})
         }
 
-        if(categoria){
-            const past = tPodcast.categoria
-            await tPodcast.update({categoria:categoria})
-            updates.push({path: 'categoria', past , now:categoria})
-        }
 
         if(updates.length)return res.status(200).json({status: 200, msg: 'Podcast editado', bag:{updates}})
         return res.status(200).json({status: 200, msg: 'No se han realizado ediciones'})

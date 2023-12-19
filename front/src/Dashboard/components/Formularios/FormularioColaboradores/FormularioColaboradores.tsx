@@ -29,7 +29,7 @@ interface FormData {
 
 
 function FormularioColaboradores() {
-    const { indexCollaborator, setLayoutID } = useContext(GlobalContext)
+    const { indexCollaborator, setLayoutID, dataColaborador } = useContext(GlobalContext)
 
     const [formData, setFormData] = useState<FormData>({
         Nombre_es: '',
@@ -45,7 +45,7 @@ function FormularioColaboradores() {
         archivo: null,
     });
 
-    const [imageURL, setImageURL] = useState<string | null>(null);
+    const [imageURL, setImageURL] = useState<string | null>(dataColaborador?.imagen || null);
 
   
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -156,7 +156,7 @@ function FormularioColaboradores() {
                      cargo_es: string, cargo_en: string,cargo_cat: string ,
                     descripcion_es:string, descripcion_en:string, descripcion_cat:string , 
                     imagen: string, contacto: string  } = d.bag[index];
-                    const r = "src/carousel/";
+                    const r = "src/collaborator/";
                     const value = { 
                         Nombre_es: element.nombre_es,
                         Cargo_es: element.cargo_es,
@@ -170,6 +170,7 @@ function FormularioColaboradores() {
                         Contacto: element.contacto,
                         archivo: null
                     } 
+                    console.log(element.imagen)
                     setImageURL(r + element.imagen)
                     setFormData(value);
                 }

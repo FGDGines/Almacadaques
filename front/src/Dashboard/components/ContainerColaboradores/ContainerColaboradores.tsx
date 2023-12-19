@@ -15,10 +15,10 @@ import { mostrarAlerta } from '../../../helpers/MostrarAlerta';
 
 function ContainerColaboradores() {
 
-  const { languageFlag } = useContext(GlobalContext)
+  const { languageFlag, } = useContext(GlobalContext)
   const l = languageFlag.toLowerCase()
   const [data, setData] = useState<Colaborador[]>([]);
-  const { setIndexCollaborator, setLayoutID } = useContext(GlobalContext)
+  const { setIndexCollaborator, setLayoutID, setDataColaborador } = useContext(GlobalContext)
 
   const handleDeleteItemCarrusel = (index: number) => {
     // elimina de la base de datos
@@ -38,8 +38,8 @@ function ContainerColaboradores() {
  
  
   
-  const edit = (index: number) => {
-    // setDataColaborador(data)
+  const edit = (index: number, data: Colaborador) => {
+    setDataColaborador(data)
     setIndexCollaborator(index)
     setLayoutID(31)
   }
@@ -89,7 +89,7 @@ function ContainerColaboradores() {
               <img src={delImg} alt="" className="IconEditarColaboradores"/>
               <p className="TitleBtnEditarColaborador">Eliminar</p>
             </div>
-            <div className="IconoEditarColaboradores" onClick={() => edit(colaborador.id)}>
+            <div className="IconoEditarColaboradores" onClick={() => edit(colaborador.id, colaborador)}>
               <img src={edtImg} alt="" className="IconEditarColaboradores" />
               <p className="TitleBtnEditarColaborador">Editar</p>
             </div>

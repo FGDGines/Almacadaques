@@ -7,6 +7,9 @@ import { Podcast } from "../../../db/models";
 export const Register = async (req: Request, res: Response) => {
     const { body } = req
     const { url, titulo, autor, fecha, categoria } = body
+    if (categoria != "Libros con Alma" && categoria != "Experiencias Almacadaqués" && categoria != "Meditaciones" && categoria != "Almas Inspiradoras") {
+        return res.status(200).json({ status: 400, msg: "Categoria incorrecta" })
+    }
     try { 
         // @ts-ignore
         // if (req.files.src.data) {

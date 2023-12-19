@@ -315,6 +315,7 @@ function FormularioRetiros() {
         value={formData.Estado}
         onChange={handleInputChange}
 >
+    <option value="" selected disabled >Seleccione un estado</option>
     <option value="Plazas limitadas">Plazas limitadas</option>
     <option value="Completo">Completo</option>
     <option value="Aplazado">Aplazado</option>
