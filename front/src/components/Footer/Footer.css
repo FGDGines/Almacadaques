@@ -184,6 +184,7 @@ input:valid ~ label {
 }
 
 .socialRed {
+  padding-inline: 135px;
   width: 35vw;
   display: flex;
   justify-content: space-between;
