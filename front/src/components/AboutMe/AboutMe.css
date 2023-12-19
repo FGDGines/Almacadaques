@@ -31,6 +31,7 @@
 .containerSobremi_2 {
   display: flex;
   justify-content: center;
+  border-bottom: 0.5px solid gainsboro;
 }
 
 .photo_1 {
@@ -40,6 +41,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  
 }
 .photo_1 p {
   font-weight: bold;
@@ -47,6 +49,7 @@
   color: #7e7777;
   text-align: end;
   font-size: .90rem;
+  
 }
 
 .photo_2 {
@@ -82,7 +85,8 @@
 .infoSobremi_1 {
   width: 45vw;
   background-color: white;
-  padding: 3vw;
+  padding: 2vw;
+  padding-left: 0px;
   color: black;
   font-size: 1.2vw;
   text-align: justify;
@@ -150,10 +154,12 @@
   width: 90%;
   /* height: 90%; */
   border-radius: 0.4vw;
+  border: 1px solid lightgray;
 }
 .containerSobremi_2 .photo_2 img {
   width: 100%;
   border-radius: 0.4vw;
+  border: 1px solid lightgray;
 }
 
 .photo_3 .BibliografíaSobreMi{
@@ -208,6 +214,7 @@
     width: 94vw;
     margin: 5px 0;
     flex-direction: column;
+    justify-content: end;
   }
 
   .photo_2 {

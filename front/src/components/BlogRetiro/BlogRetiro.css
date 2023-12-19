@@ -26,6 +26,7 @@
 .imgRetiro {
   position: relative;
   width: 25vw;
+  height: 365px;
   overflow: hidden;
 }
 .imgRetiro img {
@@ -100,6 +101,10 @@
   font-weight: 700;
   margin: 0;
   padding: 0;
+}
+
+.titleRetiroUser h5{
+  margin-top: 5px;
 }
 .time_aut {
   display: flex;
