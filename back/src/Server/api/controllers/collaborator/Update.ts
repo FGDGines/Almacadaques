@@ -7,7 +7,7 @@ import { Formatos, RelativePath } from "../../../config/config";
 
 export const Update = async ( req: Request ,res: Response)=>{
     const {body} = req
-    const {id:primaryKey, nombre, cargo, descripcion, contacto} = body
+    const {id:primaryKey, nombre_es, cargo_es, descripcion_es, nombre_en, cargo_en, descripcion_en, nombre_cat, cargo_cat, descripcion_cat, contacto} = body
     const updates = []
     try{
 
@@ -20,22 +20,60 @@ export const Update = async ( req: Request ,res: Response)=>{
 
         if(!tColaborador) return res.status(200).json({status: 400, msg: "El colaborador debe ser válido" })
 
-        if(nombre){
-            const past = tColaborador.nombre
-            await tColaborador.update({nombre: nombre})
-            updates.push({path: 'nombre', past , now: nombre})
+        if(nombre_es){
+            const past = tColaborador.nombre_es
+            await tColaborador.update({nombre_es: nombre_es})
+            updates.push({path: 'nombre_es', past , now: nombre_es})
         }
 
-        if(cargo){
-            const past = tColaborador.cargo
-            await tColaborador.update({cargo: cargo})
-            updates.push({path: 'cargo', past , now: cargo})
+        if(cargo_es){
+            const past = tColaborador.cargo_es
+            await tColaborador.update({cargo_es: cargo_es})
+            updates.push({path: 'cargo_es', past , now: cargo_es})
         }
 
-        if(descripcion){
-            const past = tColaborador.descripcion
-            await tColaborador.update({descripcion: descripcion})
-            updates.push({path: 'descripcion', past , now: descripcion})
+        if(descripcion_es){
+            const past = tColaborador.descripcion_es
+            await tColaborador.update({descripcion_es: descripcion_es})
+            updates.push({path: 'descripcion_es', past , now: descripcion_es})
+        }
+
+
+        if(nombre_en){
+            const past = tColaborador.nombre_en
+            await tColaborador.update({nombre_en: nombre_en})
+            updates.push({path: 'nombre_en', past , now: nombre_en})
+        }
+
+        if(cargo_en){
+            const past = tColaborador.cargo_en
+            await tColaborador.update({cargo_en: cargo_en})
+            updates.push({path: 'cargo_en', past , now: cargo_en})
+        }
+
+        if(descripcion_en){
+            const past = tColaborador.descripcion_en
+            await tColaborador.update({descripcion_en: descripcion_en})
+            updates.push({path: 'descripcion_en', past , now: descripcion_en})
+        }
+
+
+        if(nombre_cat){
+            const past = tColaborador.nombre_cat
+            await tColaborador.update({nombre_cat: nombre_cat})
+            updates.push({path: 'nombre_cat', past , now: nombre_cat})
+        }
+
+        if(cargo_cat){
+            const past = tColaborador.cargo_cat
+            await tColaborador.update({cargo_cat: cargo_cat})
+            updates.push({path: 'cargo_cat', past , now: cargo_cat})
+        }
+
+        if(descripcion_cat){
+            const past = tColaborador.descripcion_cat
+            await tColaborador.update({descripcion_cat: descripcion_cat})
+            updates.push({path: 'descripcion_cat', past , now: descripcion_cat})
         }
 
         try {

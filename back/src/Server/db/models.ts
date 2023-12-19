@@ -214,13 +214,31 @@ const Podcast = DB.define("podcast", {
 }) 
  
 const Colaborador = DB.define("colaborador", {
-    nombre: {
+    nombre_es: {
         type: DataTypes.STRING
     },
-    cargo: {
+    cargo_es: {
         type: DataTypes.STRING
     },
-    descripcion: {
+    descripcion_es: {
+        type: DataTypes.STRING
+    },
+    nombre_en: {
+        type: DataTypes.STRING
+    },
+    cargo_en: {
+        type: DataTypes.STRING
+    },
+    descripcion_en: {
+        type: DataTypes.STRING
+    },
+    nombre_cat: {
+        type: DataTypes.STRING
+    },
+    cargo_cat: {
+        type: DataTypes.STRING
+    },
+    descripcion_cat: {
         type: DataTypes.STRING
     },
     imagen: {

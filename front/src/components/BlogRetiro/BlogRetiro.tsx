@@ -77,6 +77,7 @@ function BlogRetiro() {
           for (let i = 0; i < image.length; i++) {
             image[i] = r + image[i]
           }
+          console.log(element)
           const day: number[] = JSON.parse(JSON.parse(element.day))
           const value = {
             index: element.id,
@@ -139,7 +140,7 @@ function BlogRetiro() {
                   </div>
                   {
                     retiro.estado != 'Completo' ? <div className="authorRetiro" onClick={() => setLayoutID(6)}>
-                      <a href="#">Inscribirse</a>
+                      <a href="#">{textos[languageFlag].inscribirse}</a>
                     </div> : ''
                   }
                 </div>

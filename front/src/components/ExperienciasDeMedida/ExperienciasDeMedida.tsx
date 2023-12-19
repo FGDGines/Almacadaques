@@ -40,7 +40,7 @@ function ExperienciasDeMedida() {
                     <div className="ctphoto">
                         <img className='imgEquip' src={contcImg} alt="Equipo de trabajo" />
                         <div className='ctFor'>
-                            <h3>Trabajemos Juntos</h3>
+                            <h3>{textos[languageFlag].textotrabajemosjuntos}</h3>
                             <FormDefault hSubmit={subtmitOnFormDefault}/>
                         </div>
 
