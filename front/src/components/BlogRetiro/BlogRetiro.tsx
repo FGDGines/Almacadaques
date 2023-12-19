@@ -1,11 +1,11 @@
 import Footer from "../Footer/Footer";
 import Franja from "../Franja/Franja";
 import Navbar from "../Navbar/Navbar";
-import "./BlogRetiro.css"; 
+import "./BlogRetiro.css";
 import { DetailBlogRetiro } from "../DetailBlogRetiro/DetailBlogRetiro";
 
 
-import { GlobalContext } from "../../contexts/GlobalContext"; 
+import { GlobalContext } from "../../contexts/GlobalContext";
 import { useContext, useEffect } from 'react';
 import { useState } from 'react';
 import { formDataToObject } from "../../helpers/Forms";
@@ -59,41 +59,41 @@ function BlogRetiro() {
 
 
   const { languageFlag } = useContext(GlobalContext)
-  const l = languageFlag.toLowerCase() 
+  const l = languageFlag.toLowerCase()
   const da = new FormData()
   da.set("lang", l)
-  const data = {body: JSON.stringify(formDataToObject(da))}
-    
-    
+  const data = { body: JSON.stringify(formDataToObject(da)) }
+
+
   useEffect(() => {
     const api = async () => {
       const retiro: Retiro[] = []
       fetchDefault("/blog_retiro/read", data, (d: tpDtmResponse) => {
-        if(!d.bag) return 
+        if (!d.bag) return
         for (let index = 0; index < d.bag.length; index++) {
-          const element: {id: number , day: string, month: number, year: number, author: string, image: string, title_lang: {es: string, en: string , cat: string},  description_lang: {es: string, en: string , cat: string}, estado: string } = d.bag[index];
-            const r = "src/blog_retiro/";
-            const image: string[] =  JSON.parse(element.image)
-            for (let i = 0; i < image.length; i++) {
-                image[i] = r + image[i]
-            }
-            const day: number[] = JSON.parse(JSON.parse(element.day))
-            const value = { 
-                index: element.id,
-                day: day,
-                month: element.month,
-                year: element.year,
-                author: element.author,
-                image: image,
-                title: element.title_lang.es || element.title_lang.en || element.title_lang.cat,
-                description: element.description_lang.es || element.description_lang.en || element.description_lang.cat,
-                estado: element.estado
-            }
-            console.log(value)
-            retiro.push(value)
+          const element: { id: number, day: string, month: number, year: number, author: string, image: string, title_lang: { es: string, en: string, cat: string }, description_lang: { es: string, en: string, cat: string }, estado: string } = d.bag[index];
+          const r = "src/blog_retiro/";
+          const image: string[] = JSON.parse(element.image)
+          for (let i = 0; i < image.length; i++) {
+            image[i] = r + image[i]
+          }
+          const day: number[] = JSON.parse(JSON.parse(element.day))
+          const value = {
+            index: element.id,
+            day: day,
+            month: element.month,
+            year: element.year,
+            author: element.author,
+            image: image,
+            title: element.title_lang.es || element.title_lang.en || element.title_lang.cat,
+            description: element.description_lang.es || element.description_lang.en || element.description_lang.cat,
+            estado: element.estado
+          }
+          console.log(value)
+          retiro.push(value)
         }
         setRetiros(retiro);
-      }) 
+      })
     };
     api();
     // eslint-disable-next-line
@@ -137,9 +137,11 @@ function BlogRetiro() {
                     </p>
 
                   </div>
-                  <div className="authorRetiro" onClick={() => setLayoutID(6)}>
-                    <a href="#">Inscribirse</a>
-                  </div>
+                  {
+                    retiro.estado != 'Completo' ? <div className="authorRetiro" onClick={() => setLayoutID(6)}>
+                      <a href="#">Inscribirse</a>
+                    </div> : ''
+                  }
                 </div>
               </div>
             </div>

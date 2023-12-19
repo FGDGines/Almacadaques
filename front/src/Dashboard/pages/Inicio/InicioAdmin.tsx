@@ -14,7 +14,7 @@ function InicioAdmin() {
     <div className="inicioAdmin">
       <NarbarAdmin />      
       <div className="contenidoPrincipal">
-        <BarSession tituloVista='Inicio' segundoTitulo='Dashboard' nombre='Elisabeth' img={userImg} />
+        <BarSession tituloVista='Inicio' segundoTitulo='Panel de Control' nombre='Elisabeth' img={userImg} />
         <ItemCarrusel direccion={29} />
 
         <div className="contenidoBienestar">

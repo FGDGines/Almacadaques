@@ -18,7 +18,7 @@ html, body{
     overflow-y: scroll;
     background: url("../src//assets/background/fondoInicio.jpg")no-repeat center/cover;
     /* background: url("../src//assets/background/inicio\'.jpeg")no-repeat center/cover, url("../assets/inicio\'-9908a0ae.jpeg")no-repeat center/cover; */
-    padding-top: 72px;
+    padding-top: 76px;
     transition: all 0.8s;
 }
 
