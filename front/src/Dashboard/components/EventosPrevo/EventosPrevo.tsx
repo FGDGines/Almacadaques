@@ -106,8 +106,8 @@ function EventosPrevo() {
                                 <p className="DescripcionMainEvento">{event.description}</p>
                             </div>
                             <div className="fechaInicio">
-                                <p className="titleMainEvento">Enlace:</p>
-                                <p className="DescripcionMainEvento">{event.colaborator_link}</p>
+                                {/* <p className="titleMainEvento">Enlace:</p>
+                                <p className="DescripcionMainEvento">{event.colaborator_link}</p> */}
                             </div>
                         </div>
                     </div>

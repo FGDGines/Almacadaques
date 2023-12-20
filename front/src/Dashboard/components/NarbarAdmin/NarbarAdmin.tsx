@@ -97,9 +97,9 @@ function NarbarAdmin() {
                             <a href="#" className="DireccionSubmenu" onClick={() => handleSubMenuLinkClick(25)}>
                                 Blog Bienestar
                             </a>
-                            <a href="#" className="DireccionSubmenu" onClick={() => handleSubMenuLinkClick(26)}>
+                            {/* <a href="#" className="DireccionSubmenu" onClick={() => handleSubMenuLinkClick(26)}>
                                 Blog Podcast
-                            </a>
+                            </a> */}
                         </div>
                     )}
                 </div>

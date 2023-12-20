@@ -1025,7 +1025,7 @@ export const textos: TextosType<
         colabrador: "Colaborad@rs",
         testimonios: "Testomini",
         blog: "Blog",
-        blogPost: "Tipus de Benestar",
+        blogPost: "Tips de Benestar",
         blogRetiro: "Blog Retirs",
         podcast: "Podcast",
         contactar: "Contacte",
@@ -1150,7 +1150,7 @@ export const textos: TextosType<
         textostipsparar: "5 Tips Aturar",
         tipsabundancia: "5 Tips Abundància",
         tipsemociones: "5 tips Emocions",
-        textostipslidiardiadia: "5 tipus bregar dia a dia",
+        textostipslidiardiadia: "5 tips bregar dia a dia",
         textostipsparafluir: "5 tips to flow",
         //podcast
         //blog retiros
@@ -1186,7 +1186,7 @@ export const textos: TextosType<
         textos2parrafo15: "El Lloc Web està dirigit principalment a Usuaris residents a Espanya. Coaching i experiències de benestar no assegura que el Lloc Web compleixi amb legislacions d'altres països, ja sigui totalment o parcialment. Si l'Usuari resideix o té el domiciliat en un altre lloc i decideix accedir i/o navegar al Lloc Web ho farà sota la seva pròpia responsabilitat, assegureu-vos que aquest accés i navegació compleix amb la legislació local que us és aplicable, no assumint Coaching i experiències de benestar cap responsabilitat que es pugui derivar del dit accés.",
         textos3titulo1: "III. ACCÉS I NAVEGACIÓ AL LLOC WEB: EXCLUSIÓ DE GARANTIES I RESPONSABILITAT",
         textos3parrafo1: "Coaching i experiències de benestar no garanteix la continuïtat, disponibilitat i utilitat del Lloc Web, ni dels Continguts o Serveis. Coaching i experiències de benestar farà tot el possible pel bon funcionament del Lloc Web, però, no es responsabilitza ni garanteix que l'accés a aquest Lloc Web no sigui ininterromput o que estigui lliure d'error.",
-        textos3parrafo2: "Tampoc no es responsabilitza o garanteix que el contingut o programari al qual es pugui accedir a través d'aquest Lloc Web, estigui lliure d'error o causi un dany al sistema informàtic (programari i maquinari) de l'Usuari. En cap cas Coaching i experiències de benestar serà responsable per les pèrdues, danys o perjudicis de qualsevol tipus que sorgeixin per l'accés, navegació i ús del Lloc Web, incloent-hi, però no limitant-se, els ocasionats als sistemes informàtics o els provocats per la introducció de virus.",
+        textos3parrafo2: "Tampoc no es responsabilitza o garanteix que el contingut o programari al qual es pugui accedir a través d'aquest Lloc Web, estigui lliure d'error o causi un dany al sistema informàtic (programari i maquinari) de l'Usuari. En cap cas Coaching i experiències de benestar serà responsable per les pèrdues, danys o perjudicis de qualsevol tips que sorgeixin per l'accés, navegació i ús del Lloc Web, incloent-hi, però no limitant-se, els ocasionats als sistemes informàtics o els provocats per la introducció de virus.",
         textos3parrafo3: "Coaching i experiències de benestar tampoc no es fa responsable dels danys que poguessin ocasionar-se als usuaris per un ús inadequat d'aquest Lloc Web. En particular, no es fa responsable de cap manera de les caigudes, interrupcions, falta o defecte de les telecomunicacions que poguessin ocórrer.",
         textos4titulo1: "IV. POLÍTICA D'ENLLAÇOS",
         textos4parrafo1: "S'informa que el Lloc Web de Coaching i experiències de benestar posa o pot posar a disposició dels usuaris mitjans d'enllaç (com, entre d'altres, links, banners, botons), directoris i motors de cerca que permeten als usuaris accedir a llocs web pertanyents i/o gestionats per tercers.",

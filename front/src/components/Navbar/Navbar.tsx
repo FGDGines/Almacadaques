@@ -27,7 +27,7 @@ const Navbar = () => {
               },
               {
                 target: 10,
-                text: `${textos[languageFlag].coachDeMedida}`, 
+                text: `${textos[languageFlag].coachDeMedida}`,
               },
             ]}
           />
@@ -52,10 +52,10 @@ const Navbar = () => {
                 target: 5,
                 text: `${textos[languageFlag].blogPost}`,
               },
-              {
-                target: 15,
-                text: `${textos[languageFlag].podcast}`,
-              },
+              // {
+              //   target: 15,
+              //   text: `${textos[languageFlag].podcast}`,
+              // },
               {
                 target: 14,
                 text: `${textos[languageFlag].blogRetiro}`,
@@ -78,84 +78,83 @@ const Navbar = () => {
       </div>
 
       <div className="narbarMovil">
-      <div className="ctLeft" onMouseDown={(e) => { e.stopPropagation(); setShowNavButton(!showNavButton);  }}>
+        <div className="ctLeft" onMouseDown={(e) => { e.stopPropagation(); setShowNavButton(!showNavButton); }}>
           <label className="buttons__burger" htmlFor="burger" >
             <input type="checkbox" id="burger" />
-              <span></span>
-              <span></span>
-              <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
           </label>
-          
+
         </div>
         <div className="ctRight">
           <NavButton className="logo" target={1} text="" />
         </div>
-        
+
         {showNavButton && (
-        <div className={`navButton ${upOrDown ? 'up' : 'down'}`}>
-        <div className="navigation">
-          <NavButton target={1} text={`${textos[languageFlag].inicio}`} />
-          <NavButton target={2} text={`${textos[languageFlag].sobreMi}`} />
-          <DropMenu
-            text={`Coaching`}
-            children={[
-              {
-                target: 4,
-                text: `Coaching para el Bienestar`,
-              },
-              {
-                target: 10,
-                text: `Coaching & Mentoring Internacional`,
-              },
-            ]}
-          />
-          <DropMenu
-            text={`${textos[languageFlag].agenda}`}
-            children={[
-              {
-                target: 6,
-                text: `${textos[languageFlag].expBienestar}`,
-              },
-              {
-                target: 8,
-                text: `${textos[languageFlag].expDeMedida}`,
-              },
-            ]}
-          />
-          <NavButton target={9} text={`${textos[languageFlag].colabrador}`} />
-          <DropMenu
-            text={`${textos[languageFlag].blog}`}
-            children={[
-              {
-                target: 5,
-                text: `${textos[languageFlag].blogPost}`,
-              },
-              {
-                target: 15,
-                text: `${textos[languageFlag].podcast}`,
-              },
-              {
-                target: 14,
-                text: `${textos[languageFlag].blogRetiro}`,
+          <div className={`navButton ${upOrDown ? 'up' : 'down'}`}>
+            <div className="navigation">
+              <NavButton target={1} text={`${textos[languageFlag].inicio}`} />
+              <NavButton target={2} text={`${textos[languageFlag].sobreMi}`} />
+              <DropMenu
+                text={`Coaching`}
+                children={[
+                  {
+                    target: 4,
+                    text: `${textos[languageFlag].coachBienestar}`,
+                  },
+                  {
+                    target: 10,
+                    text: `${textos[languageFlag].coachDeMedida}`,
+                  },
+                ]}
+              />
+              <DropMenu
+                text={`${textos[languageFlag].agenda}`}
+                children={[
+                  {
+                    target: 6,
+                    text: `${textos[languageFlag].expBienestar}`,
+                  },
+                  {
+                    target: 8,
+                    text: `${textos[languageFlag].expDeMedida}`,
+                  },
+                ]}
+              />
+              <NavButton target={9} text={`${textos[languageFlag].colabrador}`} />
+              <DropMenu
+                text={`${textos[languageFlag].blog}`}
+                children={[
+                  {
+                    target: 5,
+                    text: `${textos[languageFlag].blogPost}`,
+                  },
+                  // {
+                  //   target: 15,
+                  //   text: `${textos[languageFlag].podcast}`,
+                  // },
+                  {
+                    target: 14,
+                    text: `${textos[languageFlag].blogRetiro}`,
+                  }
+                ]}
+              />
+              <DtmSelect items={idiomas} active={languajeActive} />
+            </div>
+            <NavButton
+              className="rounded hoverable-primary contact"
+              target={3}
+              text={
+                <>
+                  <p>{`${textos[languageFlag].contactar}`}</p> <FaRegComment className="comment-icon" />
+                </>
               }
-            ]}
-          />
-          <DtmSelect items={idiomas} active={languajeActive} />
-        </div>
-        <NavButton
-          className="rounded hoverable-primary contact"
-          target={3}
-          text={
-            <>
-              <p>{`${textos[languageFlag].contactar}`}</p> <FaRegComment className="comment-icon" />
-            </>
-          }
-        />
-          
-        </div>
+            />
+
+          </div>
         )}
       </div>
-
 
     </>
   );
