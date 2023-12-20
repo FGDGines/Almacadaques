@@ -6,7 +6,7 @@ import { EspaciosBienestar } from '../../components/espaciosBienestar/espaciosBi
 import { RedesBienestar } from '../../components/redesBienestar/redesBienestar'
 
 
-import userImg from '../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+import userImg from '../../../../src/assets/Dashboard-almacadaques/users/user.jpg'
 
 
 function InicioAdmin() {
