@@ -273,7 +273,7 @@ function FormularioColaboradores() {
                             onChange={handleInputChange}
                         />
 
-                        <label className='labelsCarrousel' form='Contacto'>Contacto</label>
+                        <label className='labelsCarrousel' form='Contacto'>Url de contacto</label>
                         <input className='inputsFormCarrousel'
                             type="url"
                             name="Contacto"
