@@ -1,5 +1,8 @@
 import express from 'express';
 import cors from 'cors';
+import https from 'https';
+import fs from 'fs';
+import path from 'path'
 import DB from '../db/conexion';
 const fileUpload = require("express-fileupload")
 
@@ -14,6 +17,7 @@ class Server {
         this.UpDB();
         this.routes();
         this.run(this.__PORT);
+        this.runSSL(443); // Cambia el puerto si es necesario
     }
 
     middlewares() {
@@ -53,12 +57,36 @@ class Server {
         this.__app.use('/api', require('../routes/api'));
     }
 
-    run(__PORT: number) {
-        // Arranca el servidor
-        this.__app.listen(__PORT, () => {
-            console.log('Server run on port ' + __PORT);
+    run(port: number) {
+        // Arranca el servidor HTTP
+        this.__app.listen(port, () => {
+            console.log('Server run on port ' + port);
         });
     }
+
+    runSSL(port: number) {
+        // Obtén la ruta completa del directorio del archivo actual
+        const currentDir = __dirname;
+        console.log(currentDir)
+
+        // Configuración SSL
+        const privateKeyPath = path.join(currentDir,'../ssl' ,'key.pem');
+        const certificatePath = path.join(currentDir, '../ssl' ,'cert.pem');
+
+        // Lee el contenido de los archivos
+        const privateKey = fs.readFileSync(privateKeyPath, 'utf8');
+        const certificate = fs.readFileSync(certificatePath, 'utf8');
+        const credentials = { key: privateKey, cert: certificate };
+
+        // Crea un servidor HTTPS
+        const httpsServer = https.createServer(credentials, this.__app);
+
+        // Arranca el servidor HTTPS
+        httpsServer.listen(port, () => {
+            console.log('Server run on port ' + port + ' (SSL)');
+        });
+    }
+
 }
 
-module.exports =  Server;
+module.exports = Server;
