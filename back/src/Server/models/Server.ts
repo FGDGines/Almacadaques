@@ -16,9 +16,8 @@ class Server {
         this.middlewares();
         this.UpDB();
         this.routes();
-        // this.run(this.__PORT);
+        this.run(this.__PORT);
         this.runSSL(443); // Cambia el puerto si es necesario
-        this.runSSL(this.__PORT); // Cambia el puerto si es necesario
     }
 
     middlewares() {
@@ -66,12 +65,12 @@ class Server {
         this.__app.use('/api', require('../routes/api'));
     }
 
-    // run(port: number) {
-    //     // Arranca el servidor HTTP
-    //     this.__app.listen(port, () => {
-    //         console.log('Server run on port ' + port);
-    //     });
-    // }
+    run(port: number) {
+        // Arranca el servidor HTTP
+        this.__app.listen(port, () => {
+            console.log('Server run on port ' + port);
+        });
+    }
 
     runSSL(port: number) {
         // Obtén la ruta completa del directorio del archivo actual
