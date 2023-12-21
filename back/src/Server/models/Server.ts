@@ -78,8 +78,8 @@ class Server {
         console.log(currentDir)
 
         // Configuración SSL
-        const privateKeyPath = path.join(currentDir, '../ssl', 'key.pem');
-        const certificatePath = path.join(currentDir, '../ssl', 'cert.pem');
+        const privateKeyPath = path.join(currentDir, '../ssl', 'almacadaques.key');
+        const certificatePath = path.join(currentDir, '../ssl', 'almacadaques.cer');
 
         // Lee el contenido de los archivos
         const privateKey = fs.readFileSync(privateKeyPath, 'utf8');
