@@ -66,10 +66,11 @@ class Server {
     }
 
     run(port: number) {
+        port
         // Arranca el servidor HTTP
-        this.__app.listen(port, () => {
-            console.log('Server run on port ' + port);
-        });
+        // this.__app.listen(port, () => {
+        //     console.log('Server run on port ' + port);
+        // });
     }
 
     runSSL(port: number) {
