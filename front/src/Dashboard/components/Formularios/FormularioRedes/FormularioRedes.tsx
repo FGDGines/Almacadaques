@@ -8,7 +8,7 @@ import { tpDtmResponse } from '../../../../types/typesComponents';
 import { GlobalContext } from '../../../../contexts/GlobalContext';
 
 
-import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.jpg'
 import { mostrarAlerta } from '../../../../helpers/MostrarAlerta';
 import { splitUrlRedesWatsap } from '../../../../helpers/RedesHelp';
 

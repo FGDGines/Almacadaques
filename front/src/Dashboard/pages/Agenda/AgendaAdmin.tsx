@@ -7,7 +7,7 @@ import { GlobalContext } from '../../../contexts/GlobalContext';
 import { useContext } from 'react';
 
 
-import userImg from '../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+import userImg from '../../../../src/assets/Dashboard-almacadaques/users/user.jpg'
 
 function AgendaAdmin() {
   const { setLayoutID, setIndexCalendarEvent, setDataEvent } = useContext(GlobalContext);

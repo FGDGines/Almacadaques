@@ -7,7 +7,7 @@ import { useContext } from 'react';
 import { BtnMas } from '../../components/BtnMas/BtnMas';
 
 
-import userImg from '../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+import userImg from '../../../../src/assets/Dashboard-almacadaques/users/user.jpg'
 
 
 function RetirosAdmin() {

@@ -48,10 +48,10 @@ const Navbar = () => {
           <DropMenu
             text={`${textos[languageFlag].blog}`}
             children={[
-              {
-                target: 5,
-                text: `${textos[languageFlag].blogPost}`,
-              },
+              // {
+              //   target: 5,
+              //   text: `${textos[languageFlag].blogPost}`,
+              // },
               // {
               //   target: 15,
               //   text: `${textos[languageFlag].podcast}`,
@@ -126,10 +126,10 @@ const Navbar = () => {
               <DropMenu
                 text={`${textos[languageFlag].blog}`}
                 children={[
-                  {
-                    target: 5,
-                    text: `${textos[languageFlag].blogPost}`,
-                  },
+                  // {
+                  //   target: 5,
+                  //   text: `${textos[languageFlag].blogPost}`,
+                  // },
                   // {
                   //   target: 15,
                   //   text: `${textos[languageFlag].podcast}`,

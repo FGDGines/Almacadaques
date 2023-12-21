@@ -7,7 +7,7 @@ import { GlobalContext } from "../../../../contexts/GlobalContext";
 import { fetchForm } from "../../../../helpers/Server";
 import { tpDtmResponse } from "../../../../types/typesComponents";
 
-import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.jpg'
 import { mostrarAlerta } from "../../../../helpers/MostrarAlerta";
 
 

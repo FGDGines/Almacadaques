@@ -2,10 +2,6 @@
     background-color: #BB0F5B;
 }
 
-.rbc-btn-group > button{
-    display: none;
-}
-
 .rbc-toolbar .rbc-toolbar-label{
     font-size: 25px;
     color: gray;

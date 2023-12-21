@@ -13,7 +13,7 @@ import { mostrarAlerta } from '../../../../helpers/MostrarAlerta';
 
 import s from "./../../../../assets/Dashboard-almacadaques/iconBtn/Borrar.svg"
 import q from "./../../../../assets/Dashboard-almacadaques/iconBtn/mingcute_add-line.svg"
-import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.jpg'
 
 interface FormData {
     Titulo: string;

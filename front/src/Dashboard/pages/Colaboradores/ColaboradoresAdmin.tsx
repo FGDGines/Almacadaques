@@ -6,7 +6,7 @@ import { GlobalContext } from '../../../contexts/GlobalContext'
 import { useContext } from 'react';
 
 import addImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/mingcute_add-line.svg"
-import userImg from '../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+import userImg from '../../../../src/assets/Dashboard-almacadaques/users/user.jpg'
 
 function ColaboradoresAdmin() {
   const { setLayoutID, setIndexCollaborator, setDataColaborador } = useContext(GlobalContext);

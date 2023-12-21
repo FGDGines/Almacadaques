@@ -10,7 +10,7 @@ import { tpDtmResponse } from '../../../../types/typesComponents';
 import { formDataToObject } from '../../../../helpers/Forms';
 
 
-import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.jpg'
 import { mostrarAlerta } from '../../../../helpers/MostrarAlerta';
 
 
