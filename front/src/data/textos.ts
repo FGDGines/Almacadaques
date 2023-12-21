@@ -755,7 +755,7 @@ export const textos: TextosType<
         textcoachingtitle2:"How can I help you?",
         textcoaching2: "We will define a clear objective for change and with personalized sessions I will help to push and break the current blocks that do not allow you to move forward.",
         textcoaching3: "I will listen to you without judging, ask you questions and give you feedback, so that you will clarify and organize your ideas as well as increase your self-knowledge and leadership capacities.",
-        textcoaching4: "I help he person through a journey of inner exploration. We will start from where your conflict or discomfort begins and go through to achieve your goals.",
+        textcoaching4: "I help the person through a journey of inner exploration. We will start from where your conflict or discomfort begins and go through to achieve your goals.",
         textcoaching5: "When you make the determination to lead your life, possibly after some crisis or imbalance, the support of a coach can help you accelerate and achieve better results",
         textcoachingpide:"Request more information",
 
