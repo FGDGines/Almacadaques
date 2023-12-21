@@ -1,4 +1,4 @@
-import express from 'express';
+import express, { request, response } from 'express';
 import cors from 'cors';
 import https from 'https';
 import fs from 'fs';
@@ -24,14 +24,14 @@ class Server {
         // Configuraciones de middleware
         // Peticiones de origen cruzado
         this.__app.use(express.static('public'))
-        
+
         this.__app.use(cors());
         this.__app.use(express.json())
         this.__app.use(express.raw({ type: 'image/*', limit: '100mb' }))
-        this.__app.use(express.urlencoded({extended: true}))
+        this.__app.use(express.urlencoded({ extended: true }))
         // File Upload
         this.__app.use(fileUpload({
-            useTempFiles:  false ,
+            useTempFiles: false,
             tempFileDir: "/temp/"
         }))
     }
@@ -54,6 +54,14 @@ class Server {
         // const upload = multer({ storage });
 
         // Utiliza upload.any() para manejar cualquier campo de archivo en la solicitud
+        // Antes de las rutas
+        this.__app.use((req = request, res= response, next: any) => {
+            if (!req.secure) {
+                return res.redirect('https://' + req.get('host') + req.url);
+            }
+            next();
+        });
+
         this.__app.use('/api', require('../routes/api'));
     }
 
@@ -70,8 +78,8 @@ class Server {
         console.log(currentDir)
 
         // Configuración SSL
-        const privateKeyPath = path.join(currentDir,'../ssl' ,'key.pem');
-        const certificatePath = path.join(currentDir, '../ssl' ,'cert.pem');
+        const privateKeyPath = path.join(currentDir, '../ssl', 'key.pem');
+        const certificatePath = path.join(currentDir, '../ssl', 'cert.pem');
 
         // Lee el contenido de los archivos
         const privateKey = fs.readFileSync(privateKeyPath, 'utf8');
