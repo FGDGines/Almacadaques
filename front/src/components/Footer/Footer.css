@@ -180,11 +180,10 @@ input:valid ~ label {
 
 .redes {
   display: flex;
-  width: 35vw;
+  justify-content: center;
 }
 
 .socialRed {
-  padding-inline: 135px;
   width: 35vw;
   display: flex;
   justify-content: space-between;
