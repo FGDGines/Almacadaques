@@ -27,6 +27,41 @@ export const eventos: tpCalendarEvent[] = [
                     para conectar con tu yo mas primitivo`,
         start: '2023-10-14T10:00:00',
         end:   '2023-10-14T12:00:00',
+    },
+    {
+        id:4, 
+        title: 'Happy Dance',
+        description: ``,
+        start: '2023-10-14T10:00:00',
+        end:   '2023-10-14T12:00:00',
+    },
+    {
+        id:5, 
+        title: 'Happy Adventure',
+        description: ``,
+        start: '2023-10-14T10:00:00',
+        end:   '2023-10-14T12:00:00',
+    },
+    {
+        id:6, 
+        title: 'Happy Nature',
+        description: ``,
+        start: '2023-10-14T10:00:00',
+        end:   '2023-10-14T12:00:00',
+    },
+    {
+        id:7, 
+        title: 'Magic Heart',
+        description: ``,
+        start: '2023-10-14T10:00:00',
+        end:   '2023-10-14T12:00:00',
+    },
+    {
+        id:8, 
+        title: 'Magic Breath',
+        description: ``,
+        start: '2023-10-14T10:00:00',
+        end:   '2023-10-14T12:00:00',
     }
 ];
 

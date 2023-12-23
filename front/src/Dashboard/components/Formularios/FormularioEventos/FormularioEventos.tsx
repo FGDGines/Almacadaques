@@ -161,6 +161,11 @@ function FormularioEventos() {
                             <option value="Experiencia">Experiencia</option>
                             <option value="Evento">Evento</option>
                             <option value="Taller">Taller</option>
+                            <option value="Happy Dance">Happy Dance</option>
+                            <option value="Happy Adventure">Happy Adventure</option>
+                            <option value="Happy Nature">Happy Nature</option>
+                            <option value="Magic Heart">Magic Heart</option>
+                            <option value="Magic Breath">Magic Breath</option>
                         </select>
 
                         <div className="Dataevent">

@@ -18,7 +18,7 @@ export const Update = async (req: Request, res: Response) => {
         if(!tCalendarEvent) return res.status(200).json({status: 404 , msg: 'No existe calendar event con el id ' + id})
 
         if(titulo){
-            if (titulo != "Actividad" || titulo != "Taller" || titulo != "Evento") {
+            if (titulo != "Experiencia" && titulo != "Taller" && titulo != "Evento" && titulo != "Happy Dance" && titulo != "Happy Adventure" && titulo != "Happy Nature" && titulo != "Magic Heart" && titulo != "Magic Breath") {
                 return res.status(200).json({ status: 400, msg: "Titulo del calendar event incorrecto" })
             }
             
