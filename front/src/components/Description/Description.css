@@ -26,7 +26,7 @@
 }
 
 .Description .ctDefault .ctTitle {
-    font-size: 1.6vw;
+    font-size: 21px;
     width: 75vw;
     text-align: center;
     line-height: 120%;
@@ -43,7 +43,7 @@
 
 
 .Description .ctDefault .ctTitle2 {
-    font-size: 1.6vw;
+    font-size: 21px;
     width: 75vw;
     text-align: center;
     line-height: 120%;
@@ -90,5 +90,35 @@
     .Description .ctCarousel{
         margin: 0px;
         padding: 0px;
+    }
+}
+
+
+
+
+
+
+
+
+@media (max-width: 880px) {
+    .ctTitle{
+        font-size: 2px;
+    }
+    .ComoYDonde .ct2{
+        font-size: 17px;
+    }
+    .ctList{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 450px) {
+    .ctTitle{
+        font-size: 2px;
+    }.ComoYDonde .ct2{
+        font-size: 19px;
+    }
+    .ctList{
+        font-size: 19px;
     }
 }
