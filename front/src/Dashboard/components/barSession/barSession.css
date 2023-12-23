@@ -70,7 +70,10 @@
 }
 
 .containerUser .user img {
-  width: 3.5vw;
+  width: 3.5vw; 
+  height: 3.5vw;
+  padding: 5px ; 
+  border-radius: 50px ;
 }
 
 .containerUser .nombrePerfil h3 {

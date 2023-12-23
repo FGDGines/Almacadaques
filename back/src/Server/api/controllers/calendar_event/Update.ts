@@ -18,6 +18,10 @@ export const Update = async (req: Request, res: Response) => {
         if(!tCalendarEvent) return res.status(200).json({status: 404 , msg: 'No existe calendar event con el id ' + id})
 
         if(titulo){
+            if (titulo != "Actividad" || titulo != "Taller" || titulo != "Evento") {
+                return res.status(200).json({ status: 400, msg: "Titulo del calendar event incorrecto" })
+            }
+            
             const past = tCalendarEvent.titulo
             await tCalendarEvent.update({titulo: titulo})
             updates.push({path: 'titulo' , past, now:titulo})

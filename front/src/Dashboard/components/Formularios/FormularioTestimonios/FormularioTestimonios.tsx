@@ -9,7 +9,7 @@ import { formDataToObject } from '../../../../helpers/Forms';
 import { tpDtmResponse } from '../../../../types/typesComponents';
 
 
-import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.jpg'
 import { mostrarAlerta } from '../../../../helpers/MostrarAlerta';
 
 
@@ -104,7 +104,7 @@ export const FormularioTestimonios = () => {
             <NarbarAdmin></NarbarAdmin>
 
             <div className="contenidoFormTestimonios">
-            <BarSession direccion={18} tituloVista='Inicio' segundoTitulo='Testimonios' nombre='Kristine' img={userImg} ></BarSession>
+            <BarSession direccion={18} tituloVista='Inicio' segundoTitulo='Testimonios' nombre='Elisabeth' img={userImg} ></BarSession>
 
 
                 <form className='formTestimonios'>

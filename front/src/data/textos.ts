@@ -7,11 +7,51 @@ type TextosType<T extends string> = {
 };
 
 export const textos: TextosType<
+    //nuevas
+    "inscribirse" |
+    "actividad" |
+    "actSelect" |
+    "expBieBtn" |
+    "coachInf" |
+    "chachText1" |
+    "chachText2" |
+    "chachText3" |
+    "podcastC1" |
+    "podcastC2" |
+    "podcastC3" |
+    "podcastC4" |
+    "podcastCategory" |
+    "podcastRecent" |
+    "podcastSeen" |
+    "coachAyuda" |
+    "coachingAcompa" |
+    "titleInicioBinestar" |
+    "footerRight" |
+    "titleCardBienestar1" |
+    "titleCardBienestar2" |
+    "titleCardBienestar3"| 
+    "bodyCardBienestar1_1" |
+    "bodyCardBienestar1_2" |
+    "bodyCardBienestar1_3" |
+    "bodyCardBienestar1_4" |
+    "bodyCardBienestar1_5" |
+    "bodyCardBienestar2_1" |
+    "bodyCardBienestar2_2" |
+    "bodyCardBienestar2_3" |
+    "bodyCardBienestar2_4" |
+    "bodyCardBienestar2_5" |
+    "bodyCardBienestar3_1" |
+    "bodyCardBienestar3_2" |
+    "bodyCardBienestar3_3" |
+    "bodyCardBienestar3_4" |
+    "bodyCardBienestar3_5" | 
     //nav
     "inicio" |
     "sobreMi" |
     "coaching" |
     "agenda" |
+    "coachBienestar" |
+    "coachDeMedida" |
     "expBienestar" |
     "expDeMedida" |
     "colabrador" |
@@ -294,13 +334,52 @@ export const textos: TextosType<
     
 > = {
     [enLanguageFlag.ES]: {
+        inscribirse: "Inscribirse",
+        actividad: "Actividad",
+        actSelect: "Selecciona una actividad",
+        expBieBtn: "Enviar",
+        "coachInf": "Como te puedo ayudar",
+        "chachText1": "Como coach te escucho sin juzgar, te hago preguntas y te doy feedback, y con ello aclararás y ordenarás tus ideas e incrementarás tu autoconocimiento y liderazgo para descubrir nuevos enfoques y lograr aquello que quieres conseguir.",
+        "chachText2": "Como mentora internacional te comparto mis propias experiencias y con mucha empatía y sensibilidad te acompaño a alcanzar los objetivos que quieres lograr, logrando así mayor bienestar.",
+        "chachText3": "Contácta  para definir juntos como te puedo ayudar a conseguir los resultados que buscas.",
+        podcastRecent: "Mas reciente",
+        podcastSeen: "Mas vistos",
+        podcastC1: "Experiencias Almacadaqués",
+        podcastC2: "Meditaciones",
+        podcastC3: "Almas Inspiradoras",
+        podcastC4: "Libros con Alma",
+        podcastCategory: "categorias",
+        coachAyuda: "como te puedo ayudar",
+        coachingAcompa: "te acompaño",
+        titleInicioBinestar: "Espacios de bienestar en los que podrás:",
+        footerRight: "reservado todos los derechos",
+        titleCardBienestar1: "Parar",
+        titleCardBienestar2: "Soltar",
+        titleCardBienestar3: "Atraer a tu Vida",
+        bodyCardBienestar1_1: "• Respirar conscientemente",
+        bodyCardBienestar1_2: "• Relajarte",
+        bodyCardBienestar1_3: "• Alejarte de tu día a día y coger perspectiva",
+        bodyCardBienestar1_4: "",
+        bodyCardBienestar1_5: "",
+        bodyCardBienestar2_1: "• Creencias limitantes",
+        bodyCardBienestar2_2: "• Quejas ",
+        bodyCardBienestar2_3: "• Negatividad",
+        bodyCardBienestar2_4: "• Todo aquello que ya no te sirve",
+        bodyCardBienestar2_5: "",
+        bodyCardBienestar3_1: "• Abundancia",
+        bodyCardBienestar3_2: "• Paz interna ",
+        bodyCardBienestar3_3: "• Amor y autoestima",
+        bodyCardBienestar3_4: "• Alegría y empoderamiento",
+        bodyCardBienestar3_5: "",
         inicio: "Inicio",
         sobreMi: "Sobre Mi",
         coaching: "Coaching",
         agenda: "Agenda",
+        coachBienestar: "Coaching para el Bienestar",
+        coachDeMedida: "Coaching & Mentoring Internacional",
         expBienestar: "Experiencias de Bienestar",
         expDeMedida: "Experiencias a Medida",
-        colabrador: "Colaborad@r",
+        colabrador: "Colaborador@s",
         testimonios: "Testominio",
         blog: "Blog",
         blogPost: "Tips de Bienestar",
@@ -318,7 +397,7 @@ export const textos: TextosType<
         textfooteremail2: "Tu direccion de correo aqui",
         textfooterregistro: "Registro",
         // home
-        textDesthome1: "El proyecto nace en Cadaqués, un pueblecito precioso del donde me lleno el alma de buena energía, me nutro de naturaleza y mar y me inspiro. Y esta vibra es la que compartimos aquí. ",
+        textDesthome1: "El proyecto nace en Cadaqués, un pueblecito precioso donde me lleno el alma de buena energía, me nutro de naturaleza y mar y me inspiro. Y esta vibra es la que compartimos aquí. ",
         textDesthome2: "Te proponemos parar para reconectar contigo, soltar lo que ya no necesitas y vibrar con la energía positiva para atraer lo que quieres.",
         textDesthome3: "En definitiva, se trata de avanzar en tu proceso de transformación y bienestar para ser tu mejor versión.",
         textDesthome4: "¿ Como y Donde ?",
@@ -367,7 +446,7 @@ export const textos: TextosType<
         textcoaching3: "Te escucharé sin juzgar, te haré preguntas y te daré feedback, y con ello aclararás y ordenarás tus ideas e incrementarás tu autoconocimiento y liderazgo para descubrir nuevos enfoques y lograr aquello que quieres conseguir.",
         textcoaching4: "Como coach acompaño a la persona a través de un viaje de exploración interior. Empezamos desde donde empieza su conflicto o malestar hasta la resolución del mismo logrando así tu bienestar.",
         textcoaching5: "Cuando uno toma la determinación de liderar su vida, posiblemente después  de alguna crisis o desajuste, el acompañamiento de un coach lo puede ayudar a acelerar y lograr mejores resultados.",
-        textcoachingpide:"Pide más información sin compromiso",
+        textcoachingpide:"Pide más información",
         //formulario coaching para el bienestar
         textnombre:"Nombre",
         textplaceholdescribe: "Escribe tu nombre aquí",
@@ -382,7 +461,7 @@ export const textos: TextosType<
         textcoachinginterna2:"¿Quieres mejorar el rendimiento de tu equipo internacional?",
         textcoachinginterna3:"¿Eres un export manager y te planteas un cambio profesional?",
         textcoachinginterna4:"¿Eres un expat y estás experimentando un vaivén en tu adaptación?",
-        textcoachinginterna5:"Ya seas export manager o CEO de la empresa el proceso de crecimiento internacional puede ser más que retador y conllevar algún desajuste. Un proceso de coaching y mentoring te ayudará a gestionar los cambios de manera amable para llegar a los objetivos que te plantees.",
+        textcoachinginterna5:"Ya seas Expert manager o CEO de la empresa el proceso de crecimiento internacional puede ser más que retador y conllevar algún desajuste. Un proceso de coaching y mentoring te ayudará a gestionar los cambios de manera amable para llegar a los objetivos que te plantees.",
         textcoachinginternatitle2:"¿Como te puedo ayudar?",  
         textcoachinginterna6: "Como coach te escucho sin juzgar, te hago preguntas y te doy feedback, y con ello aclararás y ordenarás tus ideas e incrementarás tu autoconocimiento y liderazgo para descubrir nuevos enfoques y lograr aquello que quieres conseguir.",      
         textcoachinginterna7: "Como mentora internacional te comparto mis propias experiencias y con mucha empatía y sensibilidad te acompaño a alcanzar los objetivos que quieres lograr, logrando así mayor bienestar.",
@@ -575,22 +654,61 @@ export const textos: TextosType<
         textosparrafoXIItexto4: "Este documento de Política de Privacidad de un sitio web ha sido creado mediante el generador de plantilla de política de privacidad web gratis online el día 09/10/2023." ,
     },
     [enLanguageFlag.EN]: {
+        inscribirse: "Sign up",
+        actividad: "Activity",
+        actSelect: "Select an activity",
+        expBieBtn: "Send",
+        "coachInf": "How can I help you",
+        "chachText1": "As a coach, I listen to you without judging, ask you questions and give you feedback, and with this you will clarify and organize your ideas and increase your self-knowledge and leadership to discover new approaches and achieve what you want to achieve.",
+        "chachText2": "As an international mentor I share my own experiences with you and with a lot of empathy and sensitivity I help you achieve the objectives you want to achieve, thus achieving greater well-being.",
+        "chachText3": "Contact us to define together how I can help you achieve the results you are looking for.",
+        podcastRecent: "More recent",
+        podcastSeen: "Most seen",
+        podcastC1: "Almacadaqués Experiences",
+        podcastC2: "Meditations",
+        podcastC3: "Inspiring Souls",
+        podcastC4: "Books with Soul",
+        podcastCategory: "categories",
+        coachAyuda: "shall we go",
+        coachingAcompa: "shall we go",
+        titleInicioBinestar: "Wellbeing spaces for:",
+        footerRight: "all rights reserved",
+        titleCardBienestar1: "Stop",
+        titleCardBienestar2: "Get ride off",
+        titleCardBienestar3: "Attract to your life",
+        bodyCardBienestar1_1: "•  Breathe consciously",
+        bodyCardBienestar1_2: "• Relax ",
+        bodyCardBienestar1_3: "• Get away from your daily life and gain perspective",
+        bodyCardBienestar1_4: "",
+        bodyCardBienestar1_5: "",
+        bodyCardBienestar2_1: "• Limiting beliefs",
+        bodyCardBienestar2_2: "• Complaints ",
+        bodyCardBienestar2_3: "• Negativity",
+        bodyCardBienestar2_4: "• Everything that no longer serves you",
+        bodyCardBienestar2_5: "",
+        bodyCardBienestar3_1: "• Abundance",
+        bodyCardBienestar3_2: "• Inner peace",
+        bodyCardBienestar3_3: "• Love and self-esteem",
+        bodyCardBienestar3_4: "• Joy and empowerment",
+        bodyCardBienestar3_5: "• Another perspective to life",
         inicio: "Home",
         sobreMi: "About Me",
         coaching: "Coaching",
         agenda: "Agenda",
+        coachBienestar: "Coaching for Wellbeing",
+        coachDeMedida: "International Coaching & Mentoring ",
         expBienestar: "Well-being Experiences",
         expDeMedida: "Customizd well-being experiences",
         colabrador: "Collaborators",
         testimonios: "Testominio EN",
         blog: "Blog",
-        blogPost: "Tips de Bienestar",
-        blogRetiro: "Blog Retiros",
+        blogPost: "Wellness Tips",
+        blogRetiro: "Blog Retreats",
         podcast: "Podcast",
         contactar: "Contact",
         // Fin del Navbar
         //footer 
-        textfooteraviso: "AVISO LEGAL",
+        textfooteraviso: "Legal Clauses",
         textfooterpolitica: "Privacy Policy",
         textfootercoockies: "Cookie policy",
         textfooteraviso2:"Legal warning",
@@ -599,7 +717,7 @@ export const textos: TextosType<
         textfooteremail2: "Your email address here",
         textfooterregistro: "register",
         // home
-        textDesthome1: "The project was born in Cadaqués, a beautiful little town in Alt Empordà where I fill my soul with good energy, I am nourished by nature and the sea and I am inspired. And this vibe is what we share here.",
+        textDesthome1: "The project was born in Cadaqués, a beautiful little town where I fill my soul with good energy, I am nourished by nature and the sea and I am inspired. And this vibe is what we share here",
         textDesthome2: "We suggest you stop to reconnect with yourself, let go what you no longer need and vibrate with positive energy to attract what you want.",
         textDesthome3: "In short, it is about advancing your transformation and well-being process to become the best of yourself.",
         textDesthome4: "How and where?",
@@ -637,9 +755,9 @@ export const textos: TextosType<
         textcoachingtitle2:"How can I help you?",
         textcoaching2: "We will define a clear objective for change and with personalized sessions I will help to push and break the current blocks that do not allow you to move forward.",
         textcoaching3: "I will listen to you without judging, ask you questions and give you feedback, so that you will clarify and organize your ideas as well as increase your self-knowledge and leadership capacities.",
-        textcoaching4: "I help he person through a journey of inner exploration. We will start from where your conflict or discomfort begins and go through to achieve your goals.",
+        textcoaching4: "I help the person through a journey of inner exploration. We will start from where your conflict or discomfort begins and go through to achieve your goals.",
         textcoaching5: "When you make the determination to lead your life, possibly after some crisis or imbalance, the support of a coach can help you accelerate and achieve better results",
-        textcoachingpide:"Request more information without obligation",
+        textcoachingpide:"Request more information",
 
         TitleCarrousel1: "Feeling stressed?",
         TitleCarrousel2: "Need a change of scenery?",
@@ -658,12 +776,12 @@ export const textos: TextosType<
         textplaceholcoment: "What would you like to say?",
         textaceptar:"Send",
         //cocaching & mentoring internacional
-        textcoachingtitleInternacional: "international coaching & mentoring ",
+        textcoachingtitleInternacional: "International coaching & mentoring ",
         textcoachinginterna1:"Do you want to increase your international sales turnover?",
         textcoachinginterna2:"Do you want to improve the performance of your international team?",
         textcoachinginterna3:"Are you an export manager and are you considering a professional change",
         textcoachinginterna4:"Are you an expat and are you experiencing a swing in your adaptation?",
-        textcoachinginterna5:"Whether you are an export manager or the CEO of the company, the process of international growth can be more than challenging and sometimes you might feel imbalanced. ",
+        textcoachinginterna5:"Whether you are an Expert manager or the CEO of the company, the process of international growth can be more than challenging and sometimes you might feel imbalanced. ",
         textcoachinginternatitle2: "How can I help you",
         textcoachinginterna6: "As a coach, I listen to you without judging, ask questions and give feedback, so you will clarify and organize your ideas and increase your self-knowledge and leadership to discover new approaches and achieve your goals.",      
         textcoachinginterna7: "As an international mentor I share my own experiences with you and with a lot of empathy and sensitivity I help you achieve your goals as well as feeling greater well-being.",
@@ -677,7 +795,7 @@ export const textos: TextosType<
         //Agenda Experiencias de bienestar
         textosinviertebienestar: "Invest in your well-being!",
         textostalleresyretiros: " Workshops and retreats with expert collaborators in different disciplines.",
-        textosretirosanteriores: " Previous Withdrawals ",
+        textosretirosanteriores: " Previous Retreats ",
         //Agenda experiencias a medida
         textoeresunaempersa: "Are you a conscious company that invests in the well-being of its workers? Contact us to organize the experience as it best suits your profile!.",
         textotrabajemosjuntos: "Let's work together",
@@ -859,17 +977,56 @@ export const textos: TextosType<
     
     },
     [enLanguageFlag.CAT]: {
+        inscribirse: "Inscriure's",
+        actividad: "Activitat",
+        actSelect: "Selecciona una activitat",
+        expBieBtn: "Enviar",
+        "coachInf": "Com et puc ajudar",
+        "chachText1": "Com que coach t'escolto sense jutjar, et faig preguntes i et dono feedback, i amb això aclariràs i ordenaràs les teves idees i incrementaràs el teu autoconeixement i lideratge per descobrir nous enfocaments i aconseguir allò que vols aconseguir.",
+        "chachText2": "Com a mentora internacional et comparteixo les meves pròpies experiències i amb molta empatia i sensibilitat t'acompanyo a assolir els objectius que vols assolir, aconseguint així més benestar.",
+        "chachText3": "Contacta per definir junts com et puc ajudar a aconseguir els resultats que cerques.",
+        podcastRecent: "Més recent",
+        podcastSeen: "Més vistos",
+        podcastC1: "Almacadaqués Experiències",
+        podcastC2: "Meditacions",
+        podcastC3: "ànimes inspiradores",
+        podcastC4: "Llibres amb ànima",
+        podcastCategory: "categories",
+        coachAyuda: "com et puc ajudar",
+        coachingAcompa: "t'acompanyo",
+        titleInicioBinestar: "Espais de benestar en els que podrás:",
+        footerRight: "reservat tots els drets",
+        titleCardBienestar1: "Aturar",
+        titleCardBienestar2: "Deixar anar",
+        titleCardBienestar3: "Atreure la teva Vida",
+        bodyCardBienestar1_1: "• Respirar conscientment",
+        bodyCardBienestar1_2: "• Relaxar-te ",
+        bodyCardBienestar1_3: "• Allunyar-te del teu dia a dia i agafar perspectiva",
+        bodyCardBienestar1_4: "",
+        bodyCardBienestar1_5: "",
+        bodyCardBienestar2_1: "• Creences limitants",
+        bodyCardBienestar2_2: "• Queixes ",
+        bodyCardBienestar2_3: "• Negativitat",
+        bodyCardBienestar2_4: "• Tot allò que ja no et serveix",
+        bodyCardBienestar2_5: "",
+        bodyCardBienestar3_1: "• Abundància",
+        bodyCardBienestar3_2: "• Pau interna ",
+        bodyCardBienestar3_3: "• Amor i autoestima",
+        bodyCardBienestar3_4: "• Alegria i empoderament",
+        bodyCardBienestar3_5: "• Una altra mirada a la vida",
         inicio: "Inici",
         sobreMi: "Sobre mi",
         coaching: "Coaching",
         agenda: "Agenda",
+        coachBienestar: "Coaching per al benestar",
+        coachDeMedida: "Coaching & Mentoring Internacional",
         expBienestar: "Experiències de benestar",
         expDeMedida: "Experiències a mida",
         colabrador: "Colaborad@rs",
         testimonios: "Testomini",
         blog: "Blog",
-        blogPost: "Tips de Bienestar",
-        blogRetiro: "Blog Retiros",
+        blogPost: "Tips de Benestar",
+        blogRetiro: "Blog Retirs",
         podcast: "Podcast",
         contactar: "Contacte",
         // Fin del Navbar
@@ -878,12 +1035,12 @@ export const textos: TextosType<
         textfooterpolitica: "Política de privacitat",
         textfootercoockies: "Política de galetes",
         textfooteraviso2:"Avís legal",
-        textfooterInfo: "Info Contacto",
+        textfooterInfo: "Info Contacte",
         textfooteremail: "Adreça de correu electrònic",
         textfooteremail2: "La teva adreça de correu aquí",
         textfooterregistro: "Registre",
         // home
-        textDesthome1: "El projecte neix a Cadaqués, un poblet preciós de l'Alt Empordà on m'omplo l'ànima de bona energia, em nodreixo de natura i mar i m'inspiro. I aquesta vibra és la que compartim aquí.",
+        textDesthome1: "El projecte neix a Cadaqués, un poblet preciós on m'omplo l'ànima de bona energia, em nodreixo de natura i mar i m'inspiro. I aquesta vibra és la que compartim aquí",
         textDesthome2: "Et proposem parar per reconnectar amb tu, deixar anar el que ja no necessites i vibrar amb l'energia positiva per atraure el que vols.",
         textDesthome3: "En definitiva, es tracta d'avançar en el teu procés de transformació i benestar per ser la teva millor versió.",
         textDesthome4: "Com i on?",
@@ -895,7 +1052,7 @@ export const textos: TextosType<
         textDesthome61: "(llocs amb  encant).",
         // seccion about me
         textsobremi1: "T'ajudo a viure en plenitud, trobar el teu benestar i la teva pau interior.",
-        titleparrafo: "Algunas cosas sobre mi catalan",
+        titleparrafo: "Algunes coses sobre mi",
         parrafosobremi1:"Des de sempre he sentit la inquietud d'entendre la vida, el món que m'envolta i l'ésser humà. Tinc un interès genuí per les persones, les biografies, les relacions personals i la diversitat cultural.",
         parrafosobremi2: "La meva trajectòria com a consultora internacional viatjant per tot el món m'ha permès conèixer diferents cultures i relacionar-me amb persones amb diferents valors i interessos, i m'ha dut a aprofundir i estudiar sobre autoconeixement, creixement personal i lideratge",
         parrafosobremi3: "Les crisis m'han portat a indagar dins meu per conèixer-me. I tots els sotracs han estat oportunitats per conèixer-me millor i créixer, minimitzant el patiment i trobant més pau i harmonia.",
@@ -905,7 +1062,7 @@ export const textos: TextosType<
         parrafosobremi7: "La bellesa i l'harmonia són importants a la meva vida .",
         parrafosobremi8: "M'encanta aprendre cada dia i sempre tinc reptes.",
         parrafosobremi9: "M'agrada cuidar-me i és molt important el meu benestar. Quan jo estic bé el meu entorn també.",
-        parrafosobremi10: "ls meus hobbies preferits són: llegir, escriure, art, nedar al mar, cantar, ballar, viatjar, descobrir altres cultures, senderisme.",
+        parrafosobremi10: "Els meus hobbies preferits són: llegir, escriure, art, nedar al mar, cantar, ballar, viatjar, descobrir altres cultures, senderisme.",
         titleparrafo3: "Bibliografia personal",
         parrafosobremi11:"Llicenciada en Psicologia (Universitat Oberta de Catalunya).",
         parrafosobremi12:"Màster en Coaching Teleològic (Universitat de Barcelona).",
@@ -923,7 +1080,7 @@ export const textos: TextosType<
         textcoaching3: "T'escoltaré sense jutjar, et faré preguntes i et donaré feedback, i amb això aclariràs i ordenaràs les teves idees i incrementaràs el teu autoconeixement i lideratge per descobrir nous enfocaments i aconseguir allò que vols.",
         textcoaching4: "Com a coach acompanyo la persona mitjançant un viatge d'exploració interior. Comencem des d'on comença el seu conflicte o malestar fins a la seva resolució aconseguint així el teu benestar.",
         textcoaching5: "Quan una persona pren la determinació de liderar la seva vida, possiblement després d'alguna crisi o desajust, l'acompanyament d'un coach el pot ajudar a accelerar el canvi i aconseguir millors resultats",
-        textcoachingpide:"Demana més informació sense compromís",
+        textcoachingpide:"Demana més informació",
         //formulario coaching para el bienestar
         textnombre: "Nom",
         textplaceholdescribe: "Escriu el teu nom aquí",
@@ -938,7 +1095,7 @@ export const textos: TextosType<
         textcoachinginterna2:"¿vols millorar el rendiment del teu equip internacional?",
         textcoachinginterna3:"¿ets un export manager i et planteges un canvi professional?",
         textcoachinginterna4:"¿ets un expat i sents algún neguit en la teva adaptació?",
-        textcoachinginterna5:"Ja siguis export manager o CEO de l'empresa, el procés de creixement internacional pot ser més que desafiador i comportar algun desajust. ",
+        textcoachinginterna5:"Ja siguis Expert manager o CEO de l'empresa, el procés de creixement internacional pot ser més que desafiador i comportar algun desajust. ",
         textcoachinginternatitle2: "Com et puc ajudar?",
         textcoachinginterna6: "Com que coach t'escolto sense jutjar, et faig preguntes i et dono feedback, i amb això aclariràs i ordenaràs les teves idees i incrementaràs el teu autoconeixement i lideratge per descobrir nous enfocaments i aconseguir allò que vols aconseguir.",      
         textcoachinginterna7: "Com a mentora internacional et comparteixo les meves pròpies experiències i amb molta empatia i sensibilitat t'acompanyo a assolir els objectius que vols assolir, aconseguint així més benestar.",
@@ -966,7 +1123,7 @@ export const textos: TextosType<
         textoeresunaempersa: "Ets una empresa conscient que inverteix en el benestar dels treballadors? Contacta'ns per organitzar-te l'experiència a mesura que millor s'adapti al teu perfil!.",
         textotrabajemosjuntos: "Treballem Junts",
         //colaborador
-        textoColaboradores :"Col·laborador@s",
+        textoColaboradores :"Colaborador@s",
         textoeducadora: "Educadora de Massatge Infantil",
         textcolaborcontact: "Contacta'm",
         //blo( Tips de bienestar)
@@ -993,7 +1150,7 @@ export const textos: TextosType<
         textostipsparar: "5 Tips Aturar",
         tipsabundancia: "5 Tips Abundància",
         tipsemociones: "5 tips Emocions",
-        textostipslidiardiadia: "5 tipus bregar dia a dia",
+        textostipslidiardiadia: "5 tips bregar dia a dia",
         textostipsparafluir: "5 tips to flow",
         //podcast
         //blog retiros
@@ -1029,7 +1186,7 @@ export const textos: TextosType<
         textos2parrafo15: "El Lloc Web està dirigit principalment a Usuaris residents a Espanya. Coaching i experiències de benestar no assegura que el Lloc Web compleixi amb legislacions d'altres països, ja sigui totalment o parcialment. Si l'Usuari resideix o té el domiciliat en un altre lloc i decideix accedir i/o navegar al Lloc Web ho farà sota la seva pròpia responsabilitat, assegureu-vos que aquest accés i navegació compleix amb la legislació local que us és aplicable, no assumint Coaching i experiències de benestar cap responsabilitat que es pugui derivar del dit accés.",
         textos3titulo1: "III. ACCÉS I NAVEGACIÓ AL LLOC WEB: EXCLUSIÓ DE GARANTIES I RESPONSABILITAT",
         textos3parrafo1: "Coaching i experiències de benestar no garanteix la continuïtat, disponibilitat i utilitat del Lloc Web, ni dels Continguts o Serveis. Coaching i experiències de benestar farà tot el possible pel bon funcionament del Lloc Web, però, no es responsabilitza ni garanteix que l'accés a aquest Lloc Web no sigui ininterromput o que estigui lliure d'error.",
-        textos3parrafo2: "Tampoc no es responsabilitza o garanteix que el contingut o programari al qual es pugui accedir a través d'aquest Lloc Web, estigui lliure d'error o causi un dany al sistema informàtic (programari i maquinari) de l'Usuari. En cap cas Coaching i experiències de benestar serà responsable per les pèrdues, danys o perjudicis de qualsevol tipus que sorgeixin per l'accés, navegació i ús del Lloc Web, incloent-hi, però no limitant-se, els ocasionats als sistemes informàtics o els provocats per la introducció de virus.",
+        textos3parrafo2: "Tampoc no es responsabilitza o garanteix que el contingut o programari al qual es pugui accedir a través d'aquest Lloc Web, estigui lliure d'error o causi un dany al sistema informàtic (programari i maquinari) de l'Usuari. En cap cas Coaching i experiències de benestar serà responsable per les pèrdues, danys o perjudicis de qualsevol tips que sorgeixin per l'accés, navegació i ús del Lloc Web, incloent-hi, però no limitant-se, els ocasionats als sistemes informàtics o els provocats per la introducció de virus.",
         textos3parrafo3: "Coaching i experiències de benestar tampoc no es fa responsable dels danys que poguessin ocasionar-se als usuaris per un ús inadequat d'aquest Lloc Web. En particular, no es fa responsable de cap manera de les caigudes, interrupcions, falta o defecte de les telecomunicacions que poguessin ocórrer.",
         textos4titulo1: "IV. POLÍTICA D'ENLLAÇOS",
         textos4parrafo1: "S'informa que el Lloc Web de Coaching i experiències de benestar posa o pot posar a disposició dels usuaris mitjans d'enllaç (com, entre d'altres, links, banners, botons), directoris i motors de cerca que permeten als usuaris accedir a llocs web pertanyents i/o gestionats per tercers.",

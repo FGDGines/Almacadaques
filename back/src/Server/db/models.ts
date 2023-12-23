@@ -200,7 +200,7 @@ const Podcast = DB.define("podcast", {
         type: DataTypes.STRING
     },
     autor: {
-        type: DataTypes.TEXT
+        type: DataTypes.STRING
     },
     imagen: {
         type: DataTypes.STRING
@@ -214,14 +214,32 @@ const Podcast = DB.define("podcast", {
 }) 
  
 const Colaborador = DB.define("colaborador", {
-    nombre: {
+    nombre_es: {
         type: DataTypes.STRING
     },
-    cargo: {
+    cargo_es: {
         type: DataTypes.STRING
     },
-    descripcion: {
-        type: DataTypes.TEXT
+    descripcion_es: {
+        type: DataTypes.STRING
+    },
+    nombre_en: {
+        type: DataTypes.STRING
+    },
+    cargo_en: {
+        type: DataTypes.STRING
+    },
+    descripcion_en: {
+        type: DataTypes.STRING
+    },
+    nombre_cat: {
+        type: DataTypes.STRING
+    },
+    cargo_cat: {
+        type: DataTypes.STRING
+    },
+    descripcion_cat: {
+        type: DataTypes.STRING
     },
     imagen: {
         type: DataTypes.STRING
@@ -257,13 +275,13 @@ const TitleLang = DB.define("title_lang", {
 
 const DescriptionLang = DB.define("description_lang", {
     es: {
-        type: DataTypes.TEXT
+        type: DataTypes.STRING
     },
     en: {
-        type: DataTypes.TEXT
+        type: DataTypes.STRING
     },
     cat: {
-        type: DataTypes.TEXT
+        type: DataTypes.STRING
     }
 }) 
 

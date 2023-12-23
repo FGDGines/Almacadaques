@@ -8,6 +8,7 @@ import { tpDtmResponse, RedesProps, RedProps } from '../../types/typesComponents
 
 
 import telImg from "../../../src/assets/images/mensaje-de-telefono.png"
+import { iconRedByName, splitUrlRedesWatsap } from '../../helpers/RedesHelp';
 // import w from "../../../src/assets/images/whatsapp.png"                            
 // import facebook from "../../../src/assets/images/facebook.png"
 // import linkedin from "../../../src/assets/images/linkedin.png"
@@ -50,35 +51,40 @@ const Footer = () => {
                 if(!d.bag) return 
                 for (let index = 0; index < d.bag.length; index++) {
                     const element: {id: number , archivo: string, url: string, cuenta:string } = d.bag[index];
-                    const r = "src/red/"
+                    // const r = "src/red/"
                     const url = element.url
                     const value = { 
                         index: element.id, 
-                        archivo: r + element.archivo, 
+                        // archivo: r + element.archivo, 
+                        archivo: iconRedByName(element.cuenta),
                         url: url, 
                         cuenta: element.cuenta
                     }
-                    if (url.startsWith("https://wa.me/")) {
-                        let taken: string = "+"
-                        const init = "https://wa.me/".length
-                        if (url[init] != "+") {
-                            continue
-                        }
-
-                        console.log(url)
-                        for (let index = init + 1; index < url.length; index++) {
-                            const element = url[index];
-                            const regex = /^\d$/;
-                            if (!regex.test(element)) {
-                                break
-                            }
-                            taken += element
-                        }
-                        setWats(value)
-                        console.log(taken)
-                        if (taken.length > 6) {
-                            setWatsNumber(taken)
-                        }
+                    if (url.startsWith("https://wa.me/" || element.cuenta == "whatsapp")) {
+                        
+                        // console.log(url, splitUrlRedesWatsap(url)[0])
+                        setWatsNumber("+34" + splitUrlRedesWatsap(url)[0])
+                        setWats({
+                            index: element.id,
+                            archivo: iconRedByName(element.cuenta),
+                            url: splitUrlRedesWatsap(url)[2], 
+                            cuenta: element.cuenta
+                        })
+                        // console.log(url)
+                        // for (let index = init + 1; index < url.length; index++) {
+                        //     const element = url[index];
+                        //     const regex = /^\d$/;
+                        //     if (!regex.test(element)) {
+                        //         break
+                        //     }
+                        //     taken += element
+                        // }
+                        // setWats(value)
+                        // console.log(taken)
+                        // if (taken.length > 5) {
+                        //     console.log(taken, url)
+                        //     setWatsNumber(taken)
+                        // }
                     } else { 
                         red.push(value);
                     }
@@ -111,7 +117,7 @@ const Footer = () => {
                         <div className="span4"></div>
                          {watsNumber != "" ? (
                             <div>
-                                <p className="subtitlefoote">
+                                <p className="subtitlefooter">
                                     <img src={telImg} alt="Telefono" className='whatsapp ' />
                                     <a href={wats?.url} target='_blank' className='enlaceFooter'>
                                         {/* +34 660 30 54 21*/}
@@ -153,7 +159,7 @@ const Footer = () => {
                         {
                             redes.map((red) => {
                                 return <div key={`red-${red.index}`}>
-                                    <a href={red.url} target='_blank'><img className="img " width={17} height={17}  src={red.archivo} alt={red.cuenta} /></a>
+                                    <a href={red.url} target='_blank'><img className=" " width={32} height={32}  src={red.archivo} alt={red.cuenta} /></a>
                                 </div>
                             })
                         }
@@ -163,7 +169,7 @@ const Footer = () => {
                         <a href="mailto:hola@almacadaques.com" target='_blank'><img className=" email" width={17} height={17} src={em} alt="Email" /></a>
                         <a href="https://www.instagram.com/almacadaques" target='_blank'><img className=" " width={17} height={17} src={instagram} alt="Instagram" /></a> 
                              */}
-                            {/* <a href="https://www.facebook.com/almacadaques?locale=es_LA" target='_blank'><img className="" width={17} height={17} src="../../../src/assets/images/facebook.png" alt="Facebook" /></a> */}
+                            {/* <a href=g"https://www.facebook.com/almacadaques?locale=es_LA" target='_blank'><img className="" width={17} height={17} src="../../../src/assets/images/facebook.png" alt="Facebook" /></a> */}
                             {/* <a href="https://www.linkedin.com/in/elisabet-coll-vinent-b9765530" target='_blank'><img className="img " src="../../../src/assets/images/linkedin.png" alt="Linkedin" /></a>
                             <a href="mailto:hola@almacadaques.com" target='_blank'><img className="img email" src="../../../src/assets/images/email.png" alt="Email" /></a>
                             <a href="https://www.instagram.com/almacadaques" target='_blank'><img className="img " src="../../../src/assets/images/instagram.png" alt="Instagram" /></a> */}
@@ -180,7 +186,7 @@ const Footer = () => {
                         
                     </div>
                     
-                    <h4 className='textFooteer'>© 2023 Almacadaques reservado todos los derechos <a href="https://www.fgddesarrolloweb.es/" target='_blank'><span className='diseño'>Diseño: FGD Desarrollo Web</span></a> </h4>
+                    <h4 className='textFooteer'>© 2023 Almacadaques {textos[languageFlag].footerRight} <a href="https://www.fgddesarrolloweb.es/" target='_blank'><span className='diseño'>Diseño: FGD Desarrollo Web</span></a> </h4>
                     
                 </div>
                 

@@ -6,7 +6,7 @@ import { EspaciosBienestar } from '../../components/espaciosBienestar/espaciosBi
 import { RedesBienestar } from '../../components/redesBienestar/redesBienestar'
 
 
-import userImg from '../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+import userImg from '../../../../src/assets/Dashboard-almacadaques/users/user.jpg'
 
 
 function InicioAdmin() {
@@ -14,7 +14,7 @@ function InicioAdmin() {
     <div className="inicioAdmin">
       <NarbarAdmin />      
       <div className="contenidoPrincipal">
-        <BarSession tituloVista='Inicio' segundoTitulo='Dashboard' nombre='Kristine' img={userImg} />
+        <BarSession tituloVista='Inicio' segundoTitulo='Panel de Control' nombre='Elisabeth' img={userImg} />
         <ItemCarrusel direccion={29} />
 
         <div className="contenidoBienestar">

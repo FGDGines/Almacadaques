@@ -1,12 +1,16 @@
-import React, { FC, useState } from 'react';
+import React, { FC, useContext, useState } from 'react';
 
 
 import './FormAgenda.css'
-import { tpFormAgenda } from '../../types/typesComponents';
+import { tpDtmResponse, tpFormAgenda } from '../../types/typesComponents';
 import { fetchDefault } from '../../helpers/Server';
+import { mostrarAlerta } from '../../helpers/MostrarAlerta';
+import { textos } from '../../data/textos';
+import { GlobalContext } from '../../contexts/GlobalContext';
 
 const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
   
+  const { languageFlag } = useContext(GlobalContext)
   const [formData, setFormData] = useState({
     nombre: '',
     correo: '',
@@ -24,14 +28,24 @@ const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-
+    console.log(formData.actividad)
     const data = {body: JSON.stringify({
       nombre: formData.nombre,
       correo: formData.correo,
       msg: `telefono: ${formData.telefono}, actividad: ${formData.actividad}`,
       fragment: "experiencias de bienestar"
     })}
-    fetchDefault("/mail/create", data)
+    fetchDefault("/mail/create", data, (d: tpDtmResponse) => {
+      if (d.status == 200) {
+        setFormData({
+          nombre: '',
+          correo: '',
+          telefono: '',
+          actividad: '',
+        })
+      }
+      mostrarAlerta(d)
+  })
     
     // console.log('Datos enviados:', formData);
   };
@@ -39,10 +53,10 @@ const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
 
   return (
     <div className='FormAgenda'>
-      <h1>Inscribirse</h1>
+      <h1>{textos[languageFlag].inscribirse}</h1>
       <form onSubmit={handleSubmit}>
         <div>
-          <label htmlFor="nombre">Nombre:</label>
+          <label htmlFor="nombre">{textos[languageFlag].textnombre}:</label>
           <input
             type="text"
             id="nombre"
@@ -53,7 +67,7 @@ const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
           />
         </div>
         <div>
-          <label htmlFor="correo">Correo Electrónico:</label>
+          <label htmlFor="correo">{textos[languageFlag].textemail}:</label>
           <input
             type="email"
             id="correo"
@@ -65,7 +79,7 @@ const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
           />
         </div>
         <div>
-          <label htmlFor="telefono">Teléfono:</label>
+          <label htmlFor="telefono">{textos[languageFlag].textocontactartelf}:</label>
           <input
             type="tel"
             id="telefono"
@@ -76,7 +90,7 @@ const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
           />
         </div>
         <div>
-          <label htmlFor="actividad">Actividad:</label>
+          <label htmlFor="actividad">{textos[languageFlag].actividad}:</label>
           <select
             id="actividad"
             name="actividad"
@@ -84,16 +98,16 @@ const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
             value={formData.actividad}
             onChange={handleChange}
           >
-            <option value="">Selecciona una actividad</option>
+            <option value="">{textos[languageFlag].actSelect}</option>
             {actividades.map((item )=>{
               const { id, title } =  item 
-              return <option key={id} value={`${id}`}>{title}</option>
+              return <option key={id} value={`${title}`}>{title}</option>
             })}
           </select>
         </div>
 
         <div>
-          <button className='boton' type="submit">Enviar</button>
+          <button className='boton' type="submit">{textos[languageFlag].expBieBtn}</button>
         </div>
       </form>
     </div>

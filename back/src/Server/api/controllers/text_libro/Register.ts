@@ -8,11 +8,11 @@ import { Formatos, RelativePath } from "../../../config/config";
 export const Register = async (req: Request, res: Response) => {
     const { body } = req
     const { title, subtitle, content } = body
-    if (String(title).length > 25) {
-        return res.status(200).json({ status: 400, msg: "El titulo debe ser menos de 25 caracteres"})
+    if (String(title).length > 10) {
+        return res.status(200).json({ status: 400, msg: "El titulo debe ser menos de 10 caracteres"})
     }
-    if (String(subtitle).length > 25) {
-        return res.status(200).json({ status: 400, msg: "El subtitulo debe ser menos de 25 caracteres"})
+    if (String(subtitle).length > 10) {
+        return res.status(200).json({ status: 400, msg: "El subtitulo debe ser menos de 10 caracteres"})
     }
     try {
         JSON.parse(content);

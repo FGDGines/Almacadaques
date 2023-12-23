@@ -8,7 +8,7 @@ import { fetchDefault, fetchForm } from "../../../../helpers/Server";
 import { formDataToObject } from "../../../../helpers/Forms";
 import { tpDtmResponse } from "../../../../types/typesComponents"; 
 
-import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.jpg'
 import { mostrarAlerta } from "../../../../helpers/MostrarAlerta";
 
 
@@ -59,20 +59,20 @@ function FormularioRetiros() {
   const [imageURL, setImageURL] = useState<string | null>(dataRetiro?.image[0] || null);
 
   
-  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = event.target;
-    
+  
     if (name === "Fecha") {
-        const [year, month, day] = value.split('-').map(Number);
-        setFormData({
-            ...formData,
-            [name]: new Date(Date.UTC(year, month - 1, day)),
-        });
+      const [year, month, day] = value.split('-').map(Number);
+      setFormData({
+        ...formData,
+        [name]: new Date(Date.UTC(year, month - 1, day)),
+      });
     } else {
-        setFormData({
-            ...formData,
-            [name]: value,
-        });
+      setFormData({
+        ...formData,
+        [name]: value,
+      });
     }
   };
 
@@ -214,7 +214,7 @@ function FormularioRetiros() {
     <NarbarAdmin></NarbarAdmin>
 
     <div className="contenidoFormCarrousel">
-      <BarSession direccion={22} tituloVista='Retiro' segundoTitulo={`${indexBlogRetiro == -1 ? "Añadir": "Editar"} Retiro`} nombre='Kristine' img={userImg} />
+      <BarSession direccion={22} tituloVista='Retiro' segundoTitulo={`${indexBlogRetiro == -1 ? "Añadir": "Editar"} Retiro`} nombre='Elisabeth' img={userImg} />
 
 
   <form className='formCarrousel'>
@@ -310,12 +310,16 @@ function FormularioRetiros() {
       />
 
       <label className='labelsCarrousel' form='Estado'>Estado</label>
-      <input className='inputsFormCarrousel'
-        type="text"
+      <select className='inputsFormCarrousel'
         name="Estado"
         value={formData.Estado}
         onChange={handleInputChange}
-      />
+>
+    <option value="" selected disabled >Seleccione un estado</option>
+    <option value="Plazas limitadas">Plazas limitadas</option>
+    <option value="Completo">Completo</option>
+    <option value="Aplazado">Aplazado</option>
+</select>
 
       
       

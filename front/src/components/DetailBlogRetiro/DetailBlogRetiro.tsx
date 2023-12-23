@@ -22,6 +22,7 @@ interface DetailBlogRetiroProps {
 }
 
 const monthNames = [
+    "",
     "Ene",
     "Feb",
     "Mar",

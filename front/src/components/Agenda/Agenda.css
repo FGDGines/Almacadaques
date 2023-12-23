@@ -1,3 +1,11 @@
 .rbc-event{
     background-color: #BB0F5B;
 }
+
+.rbc-toolbar .rbc-toolbar-label{
+    font-size: 25px;
+    color: gray;
+    font-weight: 600;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin-top: 10px;
+}

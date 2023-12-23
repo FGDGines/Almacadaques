@@ -3,18 +3,22 @@
 import Navbar from "../Navbar/Navbar";
 import Franja from "../Franja/Franja";
 import Footer from "../Footer/Footer";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import './BlogPost.css';
 import { tpDtmResponse, tpTextLibro } from '../../types/typesComponents';
 import { fetchDefault } from '../../helpers/Server';
+import { textos } from "../../data/textos";
+import { GlobalContext } from "../../contexts/GlobalContext";
 
 
 // import portImg from "../../../src/assets/ImgLibro/portada.jpeg"
 
 const BlogPost = () => {
+  const { languageFlag } = useContext(GlobalContext);
   const [data, setData] = useState<tpTextLibro[]>([]);
   const [current, setCurrent] = useState<tpTextLibro | null>(null);
-
+  const absoluteElementRef = useRef<HTMLDivElement | null>(null);
+  const footerRef = useRef<HTMLDivElement | null>(null);
   const changeBock = (book: tpTextLibro) => {
     setCurrent(book)
   } 
@@ -46,11 +50,27 @@ const BlogPost = () => {
     api();
     // eslint-disable-next-line
   }, []);
-
+  
+  useEffect(() => {
+    function handleResize() {
+      if (absoluteElementRef.current && footerRef.current) {
+        const absoluteElementHeight = absoluteElementRef.current.offsetHeight;
+        footerRef.current.style.marginTop = `${absoluteElementHeight}px`;
+      }
+    }
+  
+    // Llama a la función directamente para manejar el tamaño inicial
+    handleResize();
+  
+    window.addEventListener('resize', handleResize);
+  
+    // Limpiar el event listener cuando el componente se desmonte
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   return (
     <div className="BlogPost">
       <Navbar />
-      <Franja text="Tips de Bienestar" />
+      <Franja text={textos[languageFlag].blogPost} />
       <div className="BookItem">
 
         {current && current.content.length > 0 ?
@@ -128,7 +148,8 @@ const BlogPost = () => {
 
         : <></>}
 
-      <div className="ItemBookUser">
+      <div className="ItemBookUser absolute-element" ref={absoluteElementRef}>
+        <h3>Lista de libros</h3>
           <div className="carduser">
             <ul className='UlLista'>
 
@@ -148,7 +169,10 @@ const BlogPost = () => {
       </div>
 
       <div className="separator"></div>
-      <Footer />
+      <div className="footer" ref={footerRef}>
+
+        <Footer />
+      </div>
     </div>
   );
 };

@@ -14,8 +14,8 @@ import { BtnMasAgregar } from '../BtnMasAgregar/BtnMasAgregar';
 
 import delImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/Borrar.svg"
 import edtImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/editar.svg"
-import leftImg from "../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/left.svg"
-import rightImg from "../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/right.svg"
+// import leftImg from "../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/left.svg"
+// import rightImg from "../../../../src/assets/Dashboard-almacadaques/ItemCarrusel/right.svg"
 import { mostrarAlerta } from '../../../helpers/MostrarAlerta';
 
 interface ContentItem {
@@ -143,10 +143,6 @@ export const ItemCarrusel: React.FC<BtnMasAgregarProps> = () => {
         <div className="tituloCarrusel"><p>Item de Carrousel</p></div>
         <div onClick={() => setIndexCarrousel(-1)} className="m2">
           <BtnMasAgregar direccion={29}></BtnMasAgregar>
-        </div>
-        <div className="botonesCarrusel">
-          <i className='left'><img src={leftImg} alt="Left" /></i>
-          <i className='right'><img src={rightImg} alt="Right" /></i>
         </div>
       </div>
 

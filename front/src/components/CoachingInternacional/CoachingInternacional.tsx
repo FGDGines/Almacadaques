@@ -75,7 +75,7 @@ const CoachingInternacional = () => {
                     <p className='parrafo'>{textos[languageFlag].textcoachinginterna3}</p>
                     <p className='parrafo'>{textos[languageFlag].textcoachinginterna4}</p>
                     <p className='parrafo'>{textos[languageFlag].textcoachinginterna5} 
-                    <span className='TeAcompaño'>¿Te acompaño?</span></p>
+                    <span className='TeAcompaño'>¿{textos[languageFlag].coachingAcompa}?</span></p>
 
                 </div>
 
@@ -107,10 +107,10 @@ const CoachingInternacional = () => {
 
             </div>
             <div className='ct3 containerInnformacion2'>
-                <h3>¿Como te puedo ayudar?</h3>
-                <p className='parrafo'>Como coach te escucho sin juzgar, te hago preguntas y te doy feedback, y con ello aclararás y ordenarás tus ideas e incrementarás tu autoconocimiento y liderazgo para descubrir nuevos enfoques y lograr aquello que quieres conseguir.</p>
-                <p className='parrafo'>Como mentora internacional te comparto mis propias experiencias y con mucha empatía y sensibilidad te acompaño a alcanzar los objetivos que quieres lograr, logrando así mayor bienestar.</p>
-                <p className='parrafo'>Contácta  para definir juntos como te puedo ayudar a conseguir los resultados que buscas.</p>
+                <h3>¿{textos[languageFlag].coachInf}?</h3>
+                <p className='parrafo'>{textos[languageFlag].chachText1}</p>
+                <p className='parrafo'>{textos[languageFlag].chachText2}</p>
+                <p className='parrafo'>{textos[languageFlag].chachText3}</p>
             </div>
             <div className="imgCoachingInternacional">
                 

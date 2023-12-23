@@ -7,11 +7,16 @@ import Footer from "../Footer/Footer";
 const Home = () => {
   return (
     <div className="Home">
-      <Navbar />
-      <Welcome />
-      <Description />
-      <ComoYDonde />
-      <Footer/>
+      {/* <div className="foto-inicio">
+        <div className="as-inner"> */}
+
+          <Navbar />
+          <Welcome />
+          <Description />
+          <ComoYDonde />
+          <Footer/>
+        {/* </div>
+      </div> */}
     </div>
   );
 };

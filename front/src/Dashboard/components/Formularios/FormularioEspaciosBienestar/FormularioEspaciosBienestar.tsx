@@ -10,7 +10,7 @@ import { tpDtmResponse } from '../../../../types/typesComponents';
 import { formDataToObject } from '../../../../helpers/Forms';
 
 
-import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.jpg'
 import { mostrarAlerta } from '../../../../helpers/MostrarAlerta';
 
 
@@ -100,7 +100,7 @@ export const FormularioEspaciosBienestar = () => {
 
             <div className="contenidoFormEspaciosBienestar">
 
-                <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Espacios de Bienestar' nombre='Kristine' img={userImg} />
+                <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Espacios de Bienestar' nombre='Elisabeth' img={userImg} />
 
 
 

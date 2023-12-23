@@ -7,7 +7,7 @@ import { useContext } from 'react';
 import { BtnMas } from '../../components/BtnMas/BtnMas';
 
 
-import userImg from '../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+import userImg from '../../../../src/assets/Dashboard-almacadaques/users/user.jpg'
 
 
 function RetirosAdmin() {
@@ -23,7 +23,7 @@ function RetirosAdmin() {
 
       <NarbarAdmin />
       <div className="conatinerRetiro">
-        <BarSession tituloVista='Blogs' segundoTitulo='Retiros' nombre='Kristine' img={userImg} />
+        <BarSession tituloVista='Blogs' segundoTitulo='Retiros' nombre='Elisabeth' img={userImg} />
         <div className="infocontainerRetiro">
           <ContainerRetiro/>
         </div>

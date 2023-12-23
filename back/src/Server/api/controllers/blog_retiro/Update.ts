@@ -30,6 +30,15 @@ export const Update = async (req: Request, res: Response) => {
 
         const tTitleLang = tBlogRetiro.title_lang
         const tDescriptionLang = tBlogRetiro.description_lang
+        
+        if(estado){
+            if (estado != "Plazas limitadas" && estado != "Completo" && estado != "Aplazado") {
+                return res.status(200).json({ status: 400, msg: "Estado del blog retiro incorrecto" })
+            }
+            const past = tBlogRetiro.estado
+            await tBlogRetiro.update({estado: estado})
+            updates.push({path: 'estado', past , now: estado})
+        }
         if(title_es){
             const past = tTitleLang.title_es
             await tTitleLang.update({es: title_es})
@@ -82,11 +91,7 @@ export const Update = async (req: Request, res: Response) => {
             await tBlogRetiro.update({year: year})
             updates.push({path: 'year', past , now: year})
         }
-        if(estado){
-            const past = tBlogRetiro.estado
-            await tBlogRetiro.update({estado: estado})
-            updates.push({path: 'estado', past , now: estado})
-        }
+        
 
         try {
             // @ts-ignore

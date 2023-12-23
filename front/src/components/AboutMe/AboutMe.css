@@ -31,6 +31,7 @@
 .containerSobremi_2 {
   display: flex;
   justify-content: center;
+  border-bottom: 0.5px solid gainsboro;
 }
 
 .photo_1 {
@@ -40,6 +41,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  
 }
 .photo_1 p {
   font-weight: bold;
@@ -47,6 +49,7 @@
   color: #7e7777;
   text-align: end;
   font-size: .90rem;
+  
 }
 
 .photo_2 {
@@ -82,9 +85,11 @@
 .infoSobremi_1 {
   width: 45vw;
   background-color: white;
-  padding: 3vw;
+  padding: 2vw;
+  padding-left: 0px;
   color: black;
   font-size: 1.2vw;
+  text-align: justify;
 }
 .infoSobremi_1 p{
   background-color: white;
@@ -97,6 +102,10 @@
   padding: 3vw;
   color: white;
   font-size: 3vw;
+
+  /* mio */
+  height: 400px;
+  text-align: justify;
 }
 .infoSobremi_2User p {
   margin-top: 0;
@@ -107,7 +116,7 @@
   .infoSobremi_2 {
     width: 45vw;
     font-size: 2.1vw;
-    height: 30vh;
+    /* height: 30vh; */
   }
  
 
@@ -117,7 +126,7 @@
   .infoSobremi_2User {
     width: 45vw;
     font-size: 1.4vw;
-    height: 24vw;
+    /* height: 24vw; */
   }
   .BibliografíaSobreMi{
     width: 29vw;
@@ -127,7 +136,7 @@
     background-color: #cf1348;
     padding: 1vw;
     color: white;
-    height: 18vw;
+    /* height: 18vw; */
   }
 
 }
@@ -135,7 +144,7 @@
   .infoSobremi_2User {
     width: 45vw;
     font-size: 1.2vw;
-    height: 19.5vw;
+    /* height: 19.5vw; */
   }
   
 }
@@ -145,10 +154,12 @@
   width: 90%;
   /* height: 90%; */
   border-radius: 0.4vw;
+  border: 1px solid lightgray;
 }
 .containerSobremi_2 .photo_2 img {
   width: 100%;
   border-radius: 0.4vw;
+  border: 1px solid lightgray;
 }
 
 .photo_3 .BibliografíaSobreMi{
@@ -203,6 +214,7 @@
     width: 94vw;
     margin: 5px 0;
     flex-direction: column;
+    justify-content: end;
   }
 
   .photo_2 {
@@ -235,5 +247,54 @@
   }
   .containerSobremi_2 .photo_2 img {
     width: 100%;
+  }
+}
+
+
+
+@media (max-width: 800px) {
+  .containerSobremi_2 {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .photo_2 {
+    display: flex;
+    width: 92vw;
+    margin: 5px 0;
+  }
+  .foto-to-center {
+    height: auto;
+  }
+  .infoSobremi_2User {
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+.foto-to-center {
+  height: 400px;
+}
+
+
+
+
+@media (min-width: 801px) and (max-width: 1199px) {
+  .foto-to-center {
+    height: 200px;
+  }
+  .infoSobremi_2User {
+    height: 200px;
+  }
+}
+
+@media (min-width: 1901px) {
+  .foto-to-center {
+    height: 450px;
+  }
+  .infoSobremi_2User {
+    height: 450px;
   }
 }

@@ -7,7 +7,7 @@ import { GlobalContext } from '../../../../contexts/GlobalContext';
 import { fetchForm } from '../../../../helpers/Server';
 import { tpDtmResponse } from '../../../../types/typesComponents';
 
-import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.jpg'
 import { mostrarAlerta } from '../../../../helpers/MostrarAlerta';
 
 
@@ -59,6 +59,15 @@ function FormularioEventos() {
           });
         }
     };
+
+    const handleSelectChange = (event: ChangeEvent<HTMLSelectElement>) => {
+        const { name, value } = event.target;
+        setFormData({
+          ...formData,
+          [name]: value,
+        });
+      };
+
     const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
       const selectedFile = event.target.files?.[0] as File;
   
@@ -126,7 +135,7 @@ function FormularioEventos() {
             <NarbarAdmin></NarbarAdmin>
 
             <div className="contenidoFormCarrousel">
-                <BarSession direccion={19} tituloVista='Evento' segundoTitulo={`${indexCalendarEvent == -1 ? 'Añadir' : "Editar"} nuevo eventos`} nombre='Kristine' img={userImg} />
+                <BarSession direccion={19} tituloVista='Evento' segundoTitulo={`${indexCalendarEvent == -1 ? 'Añadir' : "Editar"} nuevo eventos`} nombre='Elisabeth' img={userImg} />
 
 
                 <form className='formCarrousel' onSubmit={hSubmit}>
@@ -143,12 +152,16 @@ function FormularioEventos() {
                     </div>
                     <div className="restInputs">
                         <label className='labelsCarrousel' form='Titulo'>Titulo</label>
-                        <input className='inputsFormCarrousel'
-                            type="text"
-                            name="Titulo"
+                        <select className="inputsFormCarrousel"
+                            name="Titulo" 
                             value={formData.Titulo}
-                            onChange={handleInputChange}
-                        />
+                            onChange={handleSelectChange}
+                            >
+                            <option value="" selected disabled >Seleccione un titulo</option>
+                            <option value="Experiencia">Experiencia</option>
+                            <option value="Evento">Evento</option>
+                            <option value="Taller">Taller</option>
+                        </select>
 
                         <div className="Dataevent">
                             <div >

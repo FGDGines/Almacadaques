@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
-import { Formatos, RelativePath } from "../../../config/config";
-import path from 'path';
+// import { Formatos, RelativePath } from "../../../config/config";
+// import path from 'path';
 import { Red } from "../../../db/models";
-import { DeleteFile, UploadFile } from "../../../helpers/FileHandler";
+// import { DeleteFile, UploadFile } from "../../../helpers/FileHandler";
 
 export const Update = async ( req: Request ,res: Response)=>{
     const {body} = req
@@ -31,22 +31,22 @@ export const Update = async ( req: Request ,res: Response)=>{
             updates.push({path: 'cuenta', past , now: cuenta})
         }
 
-        try {
-            // @ts-ignore
-            const imagen = req.files.src.data
-            if(imagen){
-                const past = tRed.archivo
-                if (past) {
-                    const uploadDir = path.join(__dirname,  RelativePath.red)
-                    try {
-                        await DeleteFile(path.join(uploadDir, past))   
-                    } catch (error) {}     
-                }
-                const img = await UploadFile( imagen, path.join(__dirname,  RelativePath.red), "jpg", Formatos.image)
-                await tRed.update({archivo: img})
-                updates.push({path: 'archivo', past , now: img})
-            }
-        } catch (error) {}
+        // try {
+        //     // @ts-ignore
+        //     const imagen = req.files.src.data
+        //     if(imagen){
+        //         const past = tRed.archivo
+        //         if (past) {
+        //             const uploadDir = path.join(__dirname,  RelativePath.red)
+        //             try {
+        //                 await DeleteFile(path.join(uploadDir, past))   
+        //             } catch (error) {}     
+        //         }
+        //         const img = await UploadFile( imagen, path.join(__dirname,  RelativePath.red), "jpg", Formatos.image)
+        //         await tRed.update({archivo: img})
+        //         updates.push({path: 'archivo', past , now: img})
+        //     }
+        // } catch (error) {}
 
         if(updates.length)return res.status(200).json({status: 200, msg: 'Red editada', bag:{updates}})
         return res.status(200).json({status: 200, msg: 'No se han realizado ediciones'})

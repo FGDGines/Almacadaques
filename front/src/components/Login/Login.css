@@ -2,9 +2,9 @@
     background-color: #fcf1f4;
     width: 100vw;
     display: flex;
-    /* position: absolute; */
-    /* top: 0; */
-    margin-top: -76px;
+    position: absolute;
+    top: 0;
+    /* margin-top: -76px; */
 }
 
 .login {

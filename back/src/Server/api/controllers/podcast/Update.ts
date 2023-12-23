@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
 import { Podcast } from "../../../db/models"; 
-import { DeleteFile, UploadFile } from "../../../helpers/FileHandler";
-import path from 'path';
-import { Formatos, RelativePath } from "../../../config/config";
+// import { DeleteFile, UploadFile } from "../../../helpers/FileHandler";
+// import path from 'path';
+// import { Formatos, RelativePath } from "../../../config/config";
 
 
 export const Update = async ( req: Request ,res: Response)=>{
@@ -20,6 +20,15 @@ export const Update = async ( req: Request ,res: Response)=>{
 
         if(!tPodcast) return res.status(200).json({status: 400, msg: "El podcast debe ser válido" })
 
+        if(categoria){
+            if (categoria != "Libros con Alma" && categoria != "Experiencias Almacadaqués" && categoria != "Meditaciones" && categoria != "Almas Inspiradoras") {
+                return res.status(200).json({ status: 400, msg: "Categoria incorrecta" })
+            }
+            const past = tPodcast.categoria
+            await tPodcast.update({categoria:categoria})
+            updates.push({path: 'categoria', past , now:categoria})
+        }
+        
         if(url){
             const past = tPodcast.url
             await tPodcast.update({url: url})
@@ -39,25 +48,25 @@ export const Update = async ( req: Request ,res: Response)=>{
         }
 
         // sin el try si no mandas foto da error
-        try {
-            // @ts-ignore
-            const imagen = req.files.src.data
-            if(imagen){
-                const past = tPodcast.imagen
-                if (past) {
-                    const uploadDir = path.join(__dirname,  RelativePath.podcast)
-                    try {
+        // try {
+        //     // @ts-ignore
+        //     const imagen = req.files.src.data
+        //     if(imagen){
+        //         const past = tPodcast.imagen
+        //         if (past) {
+        //             const uploadDir = path.join(__dirname,  RelativePath.podcast)
+        //             try {
                         
-                    await DeleteFile(path.join(uploadDir, past))     
-                    } catch (error) {
+        //             await DeleteFile(path.join(uploadDir, past))     
+        //             } catch (error) {
                         
-                    }   
-                }
-                const url = await UploadFile( imagen, path.join(__dirname,  RelativePath.podcast), "jpg", Formatos.image)
-                await tPodcast.update({imagen: url})
-                updates.push({path: 'imagen', past , now: url})
-            }
-        } catch (error) {}
+        //             }   
+        //         }
+        //         const url = await UploadFile( imagen, path.join(__dirname,  RelativePath.podcast), "jpg", Formatos.image)
+        //         await tPodcast.update({imagen: url})
+        //         updates.push({path: 'imagen', past , now: url})
+        //     }
+        // } catch (error) {}
 
         
 
@@ -67,11 +76,6 @@ export const Update = async ( req: Request ,res: Response)=>{
             updates.push({path: 'fecha', past , now:fecha})
         }
 
-        if(categoria){
-            const past = tPodcast.categoria
-            await tPodcast.update({categoria:categoria})
-            updates.push({path: 'categoria', past , now:categoria})
-        }
 
         if(updates.length)return res.status(200).json({status: 200, msg: 'Podcast editado', bag:{updates}})
         return res.status(200).json({status: 200, msg: 'No se han realizado ediciones'})

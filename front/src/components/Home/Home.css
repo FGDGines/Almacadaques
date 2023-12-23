@@ -1,9 +1,38 @@
 .Home{
     display: flex;
     flex-direction: column;
-
+    /* background-image: url("./src/assets/background/istockphoto-518832390-612x612.jpeg"); */
+    /* max-height: 100vh; */
+    /* height: 100vh; */
+    overflow-y: auto;
 }
 *{
 
     font-family: sans-serif;
 }
+
+.foto-inicio {
+    /* position: absolute; */
+    z-index: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("./src/assets/background/istockphoto-518832390-612x612.jpeg"), url("../assets/istockphoto-518832390-612x612-a515e170.jpeg") no-repeat center/cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+/* .Welcome {
+    z-index: 11;
+}
+.Description {
+    z-index: 11;
+}
+.Horizonte {
+    z-index: 11;
+}
+.ComoYDonde {
+    z-index: 11;
+}
+.Footer {
+    z-index: 11;
+} */

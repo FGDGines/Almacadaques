@@ -6,7 +6,7 @@ import { GlobalContext } from '../../../contexts/GlobalContext'
 import { useContext } from 'react';
 
 import addImg from "../../../../src/assets/Dashboard-almacadaques/iconBtn/mingcute_add-line.svg"
-import userImg from '../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+import userImg from '../../../../src/assets/Dashboard-almacadaques/users/user.jpg'
 
 function ColaboradoresAdmin() {
   const { setLayoutID, setIndexCollaborator, setDataColaborador } = useContext(GlobalContext);
@@ -21,7 +21,7 @@ function ColaboradoresAdmin() {
       <NarbarAdmin />
 
       <div className="containerColaboradores">
-        <BarSession tituloVista='Colaborador@s' segundoTitulo='Colaborador@s' nombre='Kristine' img={userImg} />
+        <BarSession tituloVista='Colaborador@s' segundoTitulo='Colaborador@s' nombre='Elisabeth' img={userImg} />
         <div className="itenColaboradores">
           <ContainerColaboradores />
         </div>

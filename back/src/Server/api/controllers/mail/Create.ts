@@ -12,7 +12,7 @@ export const Create = async (req: Request, res: Response) => {
         const { nombre, correo, fragment, msg } = body
 
         const init = {
-            topic: `Almacadaquest | ${fragment} `,
+            topic: `Almacadaques | ${fragment} `,
             body: `\t\tNUEVO MENSAJE\nNombre: ${nombre}\nCorreo: ${correo}\nMensaje: ${msg}`
         }
         SendMail(init)

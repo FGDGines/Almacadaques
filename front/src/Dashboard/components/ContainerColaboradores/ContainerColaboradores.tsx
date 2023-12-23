@@ -5,7 +5,7 @@ import { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../../../contexts/GlobalContext';
 import { getToken } from '../../../helpers/JWT';
 import { formDataToObject } from '../../../helpers/Forms';
-import { fetchDefault } from '../../../helpers/Server';
+import { fetchDefault, fetchForm } from '../../../helpers/Server';
 import { tpDtmResponse } from '../../../types/typesComponents';
 
 
@@ -15,6 +15,8 @@ import { mostrarAlerta } from '../../../helpers/MostrarAlerta';
 
 function ContainerColaboradores() {
 
+  const { languageFlag, } = useContext(GlobalContext)
+  const l = languageFlag.toLowerCase()
   const [data, setData] = useState<Colaborador[]>([]);
   const { setIndexCollaborator, setLayoutID, setDataColaborador } = useContext(GlobalContext)
 
@@ -46,21 +48,28 @@ function ContainerColaboradores() {
   // carga los carrousel
   useEffect(() => {
       const api = async () => {
+        const da = new FormData()
+        da.set("lang", l)
         const colaborador: Colaborador[] = []
-        fetchDefault("/collaborator/read", {}, (d: tpDtmResponse) => {
+        fetchForm("/collaborator/read", da, (d: tpDtmResponse) => {
             if(!d.bag) return 
             for (let index = 0; index < d.bag.length; index++) {
-                const element: {id: number , nombre: string  , cargo: string, descripcion:string, imagen: string, contacto: string } = d.bag[index];
-                const r = "src/collaborator/";
-                const value = { 
+              const element: { id: number, nombre_es: string, nombre_en: string, nombre_cat: string,
+                 cargo_es: string, cargo_en: string,cargo_cat: string ,
+                descripcion_es:string, descripcion_en:string, descripcion_cat:string , 
+                imagen: string, contacto: string } = d.bag[index];
+              const r = "src/collaborator/";
+              console.log(element)
+              const value = { 
                   id: element.id,
-                  nombre: element.nombre,
-                  cargo: element.cargo,
-                  descripcion: element.descripcion,
+                  nombre: element.nombre_es || element.nombre_en || element.nombre_cat,
+                  cargo: element.cargo_es || element.cargo_es || element.cargo_cat,
+                  descripcion: element.descripcion_es || element.descripcion_en || element.descripcion_cat,
                   imagen: r + element.imagen,
-                  contacto: element.contacto
-                }
-                colaborador.push(value)
+                  contacto: element.contacto,
+              }
+              console.log(value)
+              colaborador.push(value)
             }
             setData(colaborador);
         }) 

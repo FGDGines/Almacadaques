@@ -10,6 +10,9 @@ import { Formatos, RelativePath } from "../../../config/config";
 export const Create = async (req: Request, res: Response) => {
     const { body } = req
     const { titulo, nombre, descripcion, enlace, inicio, final, fileExtension } = body
+    if (titulo != "Experiencia" && titulo != "Taller" && titulo != "Evento") {
+        return res.status(200).json({ status: 400, msg: "Titulo del calendar event incorrecto" })
+    }
     try {
         // @ts-ignore
         if (req.files.src) {

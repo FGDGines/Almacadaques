@@ -8,7 +8,7 @@ import { getToken } from '../../../../helpers/JWT';
 import { formDataToObject } from '../../../../helpers/Forms';
 import { tpDtmResponse } from '../../../../types/typesComponents'; 
 
-import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.svg'
+import userImg from '../../../../../src/assets/Dashboard-almacadaques/users/user.jpg'
 import { mostrarAlerta } from '../../../../helpers/MostrarAlerta';
 
 
@@ -142,7 +142,7 @@ export const FormularioCarrousel = () => {
             <NarbarAdmin></NarbarAdmin>
 
             <div className="contenidoFormCarrousel">
-                <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Carrousel' nombre='Kristine' img={userImg} />
+                <BarSession direccion={17} tituloVista='Inicio' segundoTitulo='Carrousel' nombre='Elisabeth' img={userImg} />
 
 
                 <form className='formCarrousel'>

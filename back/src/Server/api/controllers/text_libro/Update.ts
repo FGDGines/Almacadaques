@@ -21,12 +21,18 @@ export const Update = async ( req: Request ,res: Response)=>{
         if(!tTextLibro) return res.status(200).json({status: 400, msg: "El podcast debe ser válido" })
 
         if(title){
+            if (String(title).length > 10) {
+                return res.status(200).json({ status: 400, msg: "El titulo debe ser menos de 10 caracteres"})
+            }
             const past = tTextLibro.title
             await tTextLibro.update({title: title})
             updates.push({path: 'title', past , now: title})
         }
 
         if(subtitle){
+            if (String(subtitle).length > 10) {
+                return res.status(200).json({ status: 400, msg: "El subtitulo debe ser menos de 10 caracteres"})
+            }
             const past = tTextLibro.subtitle
             await tTextLibro.update({subtitle: subtitle})
             updates.push({path: 'subtitle', past , now: subtitle})
