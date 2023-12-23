@@ -15,7 +15,6 @@
     text-align: center;
     line-height: 120%;
     margin-bottom: 40px;
-
 }
 
 .ComoYDonde .ct2{
@@ -41,10 +40,16 @@
 }
 
 
-@media (max-width: 780px) {
+@media (max-width: 880px) {
     .ComoYDonde .ct1{
         font-size: 27px;
         margin-bottom: 60px;
+    }
+    .ComoYDonde .ct2{
+        font-size: 17px;
+    }
+    .ctList{
+        font-size: 15px;
     }
 }
 
@@ -52,6 +57,11 @@
     .ComoYDonde .ct1{
         font-size: 19px;
         margin-bottom: 60px;    
+    }.ComoYDonde .ct2{
+        font-size: 19px;
+    }
+    .ctList{
+        font-size: 19px;
     }
 }
 
