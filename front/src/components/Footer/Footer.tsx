@@ -41,7 +41,7 @@ const Footer = () => {
         // const res = fetchDefault('/mail/create', {body: JSON.stringify(formDataToObject(bag))})
         // console.log({body: JSON.stringify(formDataToObject(bag))})
         fetchDefault('/mail/create', {body: JSON.stringify(formDataToObject(bag))}, (d: tpDtmResponse) => {
-            if (d.status != 200) {
+            if (d.status == 200) {
                 setEmail("")
             }
             mostrarAlerta(d)
