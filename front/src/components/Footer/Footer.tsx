@@ -9,6 +9,7 @@ import { tpDtmResponse, RedesProps, RedProps } from '../../types/typesComponents
 
 import telImg from "../../../src/assets/images/mensaje-de-telefono.png"
 import { iconRedByName, splitUrlRedesWatsap } from '../../helpers/RedesHelp';
+import { mostrarAlerta } from '../../helpers/MostrarAlerta';
 // import w from "../../../src/assets/images/whatsapp.png"                            
 // import facebook from "../../../src/assets/images/facebook.png"
 // import linkedin from "../../../src/assets/images/linkedin.png"
@@ -33,13 +34,18 @@ const Footer = () => {
         event.preventDefault() 
         const bag  = new FormData()
         bag.set('nombre', "NewsLetterUser"); 
-        bag.set('correo', "davidbecerralezcano@gmail.com"); 
+        bag.set('correo', email); 
         bag.set('msg', 'Este usuario quere Unirse a tu newsletter')
         bag.set('fragment', 'Newsletter Footer') 
         // console.log(bag.get("email"))
         // const res = fetchDefault('/mail/create', {body: JSON.stringify(formDataToObject(bag))})
         // console.log({body: JSON.stringify(formDataToObject(bag))})
-        fetchDefault('/mail/create', {body: JSON.stringify(formDataToObject(bag))}) // override
+        fetchDefault('/mail/create', {body: JSON.stringify(formDataToObject(bag))}, (d: tpDtmResponse) => {
+            if (d.status != 200) {
+                setEmail("")
+            }
+            mostrarAlerta(d)
+        }) // override
     
     }
 
