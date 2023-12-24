@@ -41,7 +41,7 @@ function FormularioEventos() {
         Url: dataEvent?.colaborator_link || '',
         archivo: null
     }); 
-    const [imageURL, setImageURL] = useState<string | null>(dataEvent?.src || null);
+    // const [imageURL, setImageURL] = useState<string | null>(dataEvent?.src || null);
 
   
     const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -68,17 +68,17 @@ function FormularioEventos() {
         });
       };
 
-    const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
-      const selectedFile = event.target.files?.[0] as File;
+    // const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
+    //   const selectedFile = event.target.files?.[0] as File;
   
-      if (selectedFile) {
-          setFormData({
-              ...formData,
-              archivo: selectedFile,
-          });
-      }
-      setImageURL(URL.createObjectURL(selectedFile));
-    };
+    //   if (selectedFile) {
+    //       setFormData({
+    //           ...formData,
+    //           archivo: selectedFile,
+    //       });
+    //   }
+    //   setImageURL(URL.createObjectURL(selectedFile));
+    // };
 
     const clear = () => {
         setFormData({
@@ -90,7 +90,7 @@ function FormularioEventos() {
             Url: '',
             archivo: null
         })
-        setImageURL("")
+        // setImageURL("")
     }
 
     const handleSubmit = () => {
@@ -98,14 +98,14 @@ function FormularioEventos() {
         if (formData.Nombre) da.append("nombre", formData.Nombre)
         if (formData.Descripcion) da.append("descripcion", formData.Descripcion)
         if (formData.Titulo) da.append("titulo", formData.Titulo)
-        if (formData.Url) da.append("enlace", formData.Url)
+        if (formData.Url) da.append("enlace", "formData.Url")
         if (formData.Final) da.append("final", formatDate(formData.Final))
         if (formData.Inicio) da.append("inicio", formatDate(formData.Inicio))
         da.append("token", getToken()) 
-        if (formData.archivo) {
-            da.append("src", formData.archivo);
-            da.append("fileExtension", "jpg");
-        }
+        // if (formData.archivo) {
+        //     da.append("src", formData.archivo);
+        //     da.append("fileExtension", "jpg");
+        // }
         if (indexCalendarEvent != -1) {
             da.append("id", `${indexCalendarEvent}`)
             fetchForm("/calendar_event/update", da, (d: tpDtmResponse) => {
@@ -139,7 +139,7 @@ function FormularioEventos() {
 
 
                 <form className='formCarrousel' onSubmit={hSubmit}>
-                    <div className="subirArchivos">
+                    {/* <div className="subirArchivos">
                         <label htmlFor="File" className='labelArchivo'>
                         <img src={imageURL || ""} className="img" alt="Selected" />
                         <span className='arrastra'>Arrastra y suelta o <span>sube</span> </span>
@@ -149,7 +149,7 @@ function FormularioEventos() {
                         type="file"
                         onChange={handleFileChange}
                         />
-                    </div>
+                    </div> */}
                     <div className="restInputs">
                         <label className='labelsCarrousel' form='Titulo'>Titulo</label>
                         <select className="inputsFormCarrousel"
@@ -207,13 +207,13 @@ function FormularioEventos() {
                             onChange={handleInputChange}
                         />
 
-                        <label className='labelsCarrousel' form='Url'>Enlace</label>
+                        {/* <label className='labelsCarrousel' form='Url'>Enlace</label>
                         <input className='inputsFormCarrousel'
                             type="url"
                             name="Url"
                             value={formData.Url}
                             onChange={handleInputChange}
-                        />
+                        /> */}
                         
 
                     </div>
