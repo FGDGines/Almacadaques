@@ -1,4 +1,4 @@
-import express, { request, response } from 'express';
+import express from 'express';
 import cors from 'cors';
 import https from 'https';
 import fs from 'fs';
@@ -55,12 +55,12 @@ class Server {
 
         // Utiliza upload.any() para manejar cualquier campo de archivo en la solicitud
         // Antes de las rutas
-        this.__app.use((req = request, res= response, next: any) => {
-            if (!req.secure) {
-                return res.redirect('https://' + req.get('host') + req.url);
-            }
-            next();
-        });
+        // this.__app.use((req = request, res= response, next: any) => {
+        //     if (!req.secure) {
+        //         return res.redirect('https://' + req.get('host') + req.url);
+        //     }
+        //     next();
+        // });
 
         this.__app.use('/api', require('../routes/api'));
     }
