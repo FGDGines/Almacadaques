@@ -93,6 +93,12 @@ function BlogRetiro() {
           console.log(value)
           retiro.push(value)
         }
+
+        // ordenar segun el estado
+        retiros.sort((a, b) => {
+          const order = ["Completo", "Aplazado", "Plazas limitadas"];
+          return order.indexOf(a.estado) - order.indexOf(b.estado);
+        });
         setRetiros(retiro);
       })
     };
