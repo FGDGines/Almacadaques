@@ -24,15 +24,14 @@ const Login = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
             where: {
                 correo: correo
             },
-            include: [
-                {
-                    model: models_1.DataUser
-                }
-            ]
+            include: [{ all: true }]
         });
         if (tUser && bcrypt_1.default.compareSync(password, tUser.password)) {
             const token = yield (0, Jwt_1.generarJwt)({ id: tUser.id });
-            return res.status(200).json({ status: 200, msg: 'Usuario logeado', bag: { token } });
+            return res.status(200).json({ status: 200, msg: 'Usuario logeado', bag: { tUser: {
+                        nombre: tUser.data_user.nombre,
+                        src: tUser.data_user.src,
+                    }, token } });
         }
         return res.status(200).json({ status: 400, msg: "Usuario o Contraseña incorrectos" });
     }

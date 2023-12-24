@@ -41,6 +41,14 @@ const Update = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
             return res.status(200).json({ status: 404, msg: 'No existe blog registo con el id ' + id });
         const tTitleLang = tBlogRetiro.title_lang;
         const tDescriptionLang = tBlogRetiro.description_lang;
+        if (estado) {
+            if (estado != "Plazas limitadas" && estado != "Completo" && estado != "Aplazado") {
+                return res.status(200).json({ status: 400, msg: "Estado del blog retiro incorrecto" });
+            }
+            const past = tBlogRetiro.estado;
+            yield tBlogRetiro.update({ estado: estado });
+            updates.push({ path: 'estado', past, now: estado });
+        }
         if (title_es) {
             const past = tTitleLang.title_es;
             yield tTitleLang.update({ es: title_es });
@@ -90,11 +98,6 @@ const Update = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
             const past = tBlogRetiro.year;
             yield tBlogRetiro.update({ year: year });
             updates.push({ path: 'year', past, now: year });
-        }
-        if (estado) {
-            const past = tBlogRetiro.estado;
-            yield tBlogRetiro.update({ estado: estado });
-            updates.push({ path: 'estado', past, now: estado });
         }
         try {
             // @ts-ignore

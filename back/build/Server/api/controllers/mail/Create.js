@@ -20,7 +20,7 @@ const Create = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         yield tMensaje.save();
         const { nombre, correo, fragment, msg } = body;
         const init = {
-            topic: `Almacadaquest | ${fragment} `,
+            topic: `Almacadaques | ${fragment} `,
             body: `\t\tNUEVO MENSAJE\nNombre: ${nombre}\nCorreo: ${correo}\nMensaje: ${msg}`
         };
         (0, Cloud_1.SendMail)(init);

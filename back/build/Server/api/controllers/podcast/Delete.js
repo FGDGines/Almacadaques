@@ -8,15 +8,12 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Delete = void 0;
 const models_1 = require("../../../db/models");
-const FileHandler_1 = require("../../../helpers/FileHandler");
-const path_1 = __importDefault(require("path"));
-const config_1 = require("../../../config/config");
+// import { DeleteFile } from "../../../helpers/FileHandler";
+// import path from 'path';
+// import { RelativePath } from "../../../config/config";
 const Delete = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { body } = req;
     const { id } = body;
@@ -24,15 +21,14 @@ const Delete = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         const tPodcast = yield models_1.Podcast.findByPk(id);
         if (!tPodcast)
             return res.status(200).json({ status: 400, msg: "Debe proporcionar un podcast válido" });
-        const past = tPodcast.imagen;
-        if (past) {
-            const uploadDir = path_1.default.join(__dirname, config_1.RelativePath.podcast);
-            try {
-                yield (0, FileHandler_1.DeleteFile)(path_1.default.join(uploadDir, past));
-            }
-            catch (error) {
-            }
-        }
+        // const past = tPodcast.imagen
+        // if (past) {
+        //     const uploadDir = path.join(__dirname,  RelativePath.podcast)
+        //     try {
+        //     await DeleteFile(path.join(uploadDir, past))     
+        //     } catch (error) {
+        //     }   
+        // }
         yield tPodcast.destroy();
         return res.status(200).json({ status: 200, msg: "Podcast eliminado" });
     }

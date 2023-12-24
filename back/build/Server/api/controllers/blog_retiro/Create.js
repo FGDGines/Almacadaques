@@ -20,6 +20,9 @@ const config_1 = require("../../../config/config");
 const Create = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { body } = req;
     const { title_es, title_en, title_cat, description_es, description_en, description_cat, index, day, month, year, author, estado } = body;
+    if (estado != "Plazas limitadas" && estado != "Completo" && estado != "Aplazado") {
+        return res.status(200).json({ status: 400, msg: "Estado del blog retiro incorrecto" });
+    }
     try {
         // @ts-ignore
         const image = req.files.src.data;

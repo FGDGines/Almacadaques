@@ -30,6 +30,9 @@ const Update = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
         if (!tCalendarEvent)
             return res.status(200).json({ status: 404, msg: 'No existe calendar event con el id ' + id });
         if (titulo) {
+            if (titulo != "Experiencia" && titulo != "Taller" && titulo != "Evento" && titulo != "Happy Dance" && titulo != "Happy Adventure" && titulo != "Happy Nature" && titulo != "Magic Heart" && titulo != "Magic Breath") {
+                return res.status(200).json({ status: 400, msg: "Titulo del calendar event incorrecto" });
+            }
             const past = tCalendarEvent.titulo;
             yield tCalendarEvent.update({ titulo: titulo });
             updates.push({ path: 'titulo', past, now: titulo });
