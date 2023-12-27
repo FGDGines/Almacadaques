@@ -200,7 +200,7 @@ const Podcast = conexion_1.default.define("podcast", {
         type: sequelize_1.DataTypes.STRING
     },
     autor: {
-        type: sequelize_1.DataTypes.TEXT
+        type: sequelize_1.DataTypes.STRING
     },
     imagen: {
         type: sequelize_1.DataTypes.STRING
@@ -214,14 +214,32 @@ const Podcast = conexion_1.default.define("podcast", {
 });
 exports.Podcast = Podcast;
 const Colaborador = conexion_1.default.define("colaborador", {
-    nombre: {
+    nombre_es: {
         type: sequelize_1.DataTypes.STRING
     },
-    cargo: {
+    cargo_es: {
         type: sequelize_1.DataTypes.STRING
     },
-    descripcion: {
-        type: sequelize_1.DataTypes.TEXT
+    descripcion_es: {
+        type: sequelize_1.DataTypes.STRING
+    },
+    nombre_en: {
+        type: sequelize_1.DataTypes.STRING
+    },
+    cargo_en: {
+        type: sequelize_1.DataTypes.STRING
+    },
+    descripcion_en: {
+        type: sequelize_1.DataTypes.STRING
+    },
+    nombre_cat: {
+        type: sequelize_1.DataTypes.STRING
+    },
+    cargo_cat: {
+        type: sequelize_1.DataTypes.STRING
+    },
+    descripcion_cat: {
+        type: sequelize_1.DataTypes.STRING
     },
     imagen: {
         type: sequelize_1.DataTypes.STRING
@@ -257,13 +275,13 @@ const TitleLang = conexion_1.default.define("title_lang", {
 exports.TitleLang = TitleLang;
 const DescriptionLang = conexion_1.default.define("description_lang", {
     es: {
-        type: sequelize_1.DataTypes.TEXT
+        type: sequelize_1.DataTypes.STRING
     },
     en: {
-        type: sequelize_1.DataTypes.TEXT
+        type: sequelize_1.DataTypes.STRING
     },
     cat: {
-        type: sequelize_1.DataTypes.TEXT
+        type: sequelize_1.DataTypes.STRING
     }
 });
 exports.DescriptionLang = DescriptionLang;

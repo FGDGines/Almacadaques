@@ -170,7 +170,7 @@ input:valid ~ label {
   display: flex;
   /* justify-content: flex-end; */
   border-radius: 0.5vw;
-  height: 7vw;
+  height: 8vw;
   width: 100vw;
   flex-direction: column;
   align-items: center;
@@ -395,4 +395,23 @@ input:valid ~ label {
 
 .red {
 
+}
+
+
+@media (max-width: 982px) {
+  .infofooter {
+    height: 120px;
+  }
+  .textFooteer {
+    font-size: larger;
+  }
+}
+
+@media (max-width: 750px) {
+  .infofooter {
+    height: 120px;
+  }
+  .textFooteer {
+    font-size: larger;
+  }
 }

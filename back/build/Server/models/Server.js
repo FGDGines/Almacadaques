@@ -14,6 +14,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
+const https_1 = __importDefault(require("https"));
+const fs_1 = __importDefault(require("fs"));
+const path_1 = __importDefault(require("path"));
 const conexion_1 = __importDefault(require("../db/conexion"));
 const fileUpload = require("express-fileupload");
 class Server {
@@ -23,7 +26,8 @@ class Server {
         this.middlewares();
         this.UpDB();
         this.routes();
-        this.run(this.__PORT);
+        // this.run(this.__PORT);
+        this.runSSL(443); // Cambia el puerto si es necesario
     }
     middlewares() {
         // Configuraciones de middleware
@@ -58,12 +62,37 @@ class Server {
         // const storage = multer.memoryStorage();
         // const upload = multer({ storage });
         // Utiliza upload.any() para manejar cualquier campo de archivo en la solicitud
+        // Antes de las rutas
+        // this.__app.use((req = request, res= response, next: any) => {
+        //     if (!req.secure) {
+        //         return res.redirect('https://' + req.get('host') + req.url);
+        //     }
+        //     next();
+        // });
         this.__app.use('/api', require('../routes/api'));
     }
-    run(__PORT) {
-        // Arranca el servidor
-        this.__app.listen(__PORT, () => {
-            console.log('Server run on port ' + __PORT);
+    run(port) {
+        // Arranca el servidor HTTP
+        this.__app.listen(port, () => {
+            console.log('Server run on port ' + port);
+        });
+    }
+    runSSL(port) {
+        // Obtén la ruta completa del directorio del archivo actual
+        const currentDir = __dirname;
+        console.log(currentDir);
+        // Configuración SSL
+        const privateKeyPath = path_1.default.join(currentDir, '../ssl', 'almacadaques.key');
+        const certificatePath = path_1.default.join(currentDir, '../ssl', 'almacadaques.cer');
+        // Lee el contenido de los archivos
+        const privateKey = fs_1.default.readFileSync(privateKeyPath, 'utf8');
+        const certificate = fs_1.default.readFileSync(certificatePath, 'utf8');
+        const credentials = { key: privateKey, cert: certificate };
+        // Crea un servidor HTTPS
+        const httpsServer = https_1.default.createServer(credentials, this.__app);
+        // Arranca el servidor HTTPS
+        httpsServer.listen(port, () => {
+            console.log('Server run on port ' + port + ' (SSL)');
         });
     }
 }

@@ -79,7 +79,7 @@ function EventosPrevo() {
                 <div className="eventosPrevios" key={event.id}>
                     <div className="imgEventos">
                         <div className="titleEventos">
-                            <p className="titleDejarSoltar" >{event.title}</p>
+                            {/* <p className="titleDejarSoltar" >{event.title}</p> */}
                             <div className="editarContBienestar">
                                 <div className="paddinIcono" onClick={() => edit(event.id, event)}>
                                     <img src={edtImg} alt="" className="BtnEditarEvento" />
@@ -89,10 +89,14 @@ function EventosPrevo() {
                                 </div>
                             </div>
                         </div>
-                        <img src={event.src} alt="" className="ImgFondoEventos" />
+                        {/* <img src={event.src} alt="" className="ImgFondoEventos" /> */}
                     </div>
                     <div className="infoeventos">
                         <div className="informacionEvenetosMain">
+                            <div className="fechaInicio mt-5">
+                                <p className="titleMainEvento">Titulo:</p>
+                                <p className="DescripcionMainEvento"> {event.title}</p>
+                            </div>
                             <div className="fechaInicio">
                                 <p className="titleMainEvento">Inicio:</p>
                                 <p className="DescripcionMainEvento">{event.start.toString()}</p>
