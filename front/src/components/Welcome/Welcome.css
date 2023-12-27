@@ -2,7 +2,7 @@
     height: calc(100vh - 103px);
     background-color: rgb(255, 255, 255);
     /* background: url("fondoInicio-1f901e39.jpg") ; */
-    background: url("../src//assets/background/inicio\'.jpeg")no-repeat center/cover, url("../assets/inicio\'-9908a0ae.jpeg")no-repeat center/cover;
+    background: url("../src//assets/background/home.jpg")no-repeat center/cover, url("../assets/home-9908a0ae.jpg")no-repeat center/cover;
     background-size: 100% 100% ;
     display: flex;
     justify-content: center;

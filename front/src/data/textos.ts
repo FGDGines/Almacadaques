@@ -328,7 +328,8 @@ export const textos: TextosType<
     "textosparrafoXIItexto1" |
     "textosparrafoXIItexto2" |
     "textosparrafoXIItexto3" |
-    "textosparrafoXIItexto4"
+    "textosparrafoXIItexto4" |
+    "textopiefoto"
     
     
     
@@ -437,10 +438,11 @@ export const textos: TextosType<
         TitleCarrousel4: "¿Quieres hacer un cambio y no sabes por dónde empezar?",
         TitleCarrousel5: "¿Necesitas inspiración?",
         TitleCarrousel6: "¿Quieres ser tu mejor versión?",
+        textopiefoto: "Elisabet Coll-Vinent (Psicòloga – Mentora – Coach)",
 
         //Coaching para el Bienestar
         textcoaching1: "¿Sientes que existe una brecha entre la vida que llevas y la que quieres llevar?¿Quieres convertirte en tu mejor versión?",
-        textcoachingParrafo1:"Un proceso de coaching, respetuoso, amable y profesional, te ayudará a alcanzar tu objetivo. ¿Te acompaño?",
+        textcoachingParrafo1:"Un proceso de coaching, respetuoso, amable y profesional, te ayudará a conseguir tu objetivo. ¿Te acompaño?",
         textcoachingtitle2:"¿Como te puedo ayudar?",
         textcoaching2: "Definiremos un objetivo claro de cambio y con las sesiones personalizadas darás un empujón y romperás los bloqueos actuales que no te permiten avanzar.",
         textcoaching3: "Te escucharé sin juzgar, te haré preguntas y te daré feedback, y con ello aclararás y ordenarás tus ideas e incrementarás tu autoconocimiento y liderazgo para descubrir nuevos enfoques y lograr aquello que quieres conseguir.",
@@ -461,7 +463,7 @@ export const textos: TextosType<
         textcoachinginterna2:"¿Quieres mejorar el rendimiento de tu equipo internacional?",
         textcoachinginterna3:"¿Eres un export manager y te planteas un cambio profesional?",
         textcoachinginterna4:"¿Eres un expat y estás experimentando un vaivén en tu adaptación?",
-        textcoachinginterna5:"Ya seas Expert manager o CEO de la empresa el proceso de crecimiento internacional puede ser más que retador y conllevar algún desajuste. Un proceso de coaching y mentoring te ayudará a gestionar los cambios de manera amable para llegar a los objetivos que te plantees.",
+        textcoachinginterna5:"Ya seas Export manager o CEO de la empresa el proceso de crecimiento internacional puede ser más que retador y conllevar algún desajuste. Un proceso de coaching y mentoring te ayudará a gestionar los cambios de manera amable para llegar a los objetivos que te plantees.",
         textcoachinginternatitle2:"¿Como te puedo ayudar?",  
         textcoachinginterna6: "Como coach te escucho sin juzgar, te hago preguntas y te doy feedback, y con ello aclararás y ordenarás tus ideas e incrementarás tu autoconocimiento y liderazgo para descubrir nuevos enfoques y lograr aquello que quieres conseguir.",      
         textcoachinginterna7: "Como mentora internacional te comparto mis propias experiencias y con mucha empatía y sensibilidad te acompaño a alcanzar los objetivos que quieres lograr, logrando así mayor bienestar.",
@@ -565,7 +567,6 @@ export const textos: TextosType<
         textos6titulo1: "VI. ACCIONES LEGALES, LEGISLACIÓN APLICABLE Y JURISDICCIÓN",
         textos6parrafo1:"Coaching y experiencias de bienestar se reserva la facultad de presentar las acciones civiles o penales que considere necesarias por la utilización indebida del Sitio Web y Contenidos, o por el incumplimiento de las presentes Condiciones.",
         textos6parrafo2:"La relación entre el Usuario y Coaching y experiencias de bienestar se regirá por la normativa vigente y de aplicación en el territorio español. De surgir cualquier controversia en relación con la interpretación y/o a la aplicación de estas Condiciones las partes someterán sus conflictos a la jurisdicción ordinaria sometiéndose a los jueces y tribunales que correspondan conforme a derecho.",
-         // "TODO:"
         textospoliticadecookies: "POLÍTICA DE COOKIES",
         textoscookieparrafo1: "El acceso a este Sitio Web puede implicar la utilización de cookies. Las cookies son pequeñas cantidades de información que se almacenan en el navegador utilizado por cada Usuario — en los distintos dispositivos que pueda utilizar para navegar — para que el servidor recuerde cierta información que posteriormente y únicamente el servidor que la implementó leerá. Las cookies facilitan la navegación, la hacen más amigable, y no dañan el dispositivo de navegación.",
         textoscookieparrafo2: "Las cookies son procedimientos automáticos de recogida de información relativa a las preferencias determinadas por el Usuario durante su visita al Sitio Web con el fin de reconocerlo como Usuario, y personalizar su experiencia y el uso del Sitio Web, y pueden también, por ejemplo, ayudar a identificar y resolver errores.",
@@ -749,9 +750,10 @@ export const textos: TextosType<
         parrafosobremi16:"Doing Business Globally (ESADE)",
         parrafosobremi17:"Postgraduate in International Tenders (La Salle University)",
         parrafosobremi18:"Continuing training in the field of business and personal growth.",
+        textopiefoto: "Elisabet Coll-Vinent (Psychologist – Mentor – Coach)",
         //Coaching para el Bienestar
         textcoaching1: "Do you feel like there is a gap between the life you lead and the life you want to lead? Do you want to become the best of yourself?",
-        textcoachingParrafo1:"A respectful, kind and professional coaching process will help you achieve your goal. Shall I accompany you?",
+        textcoachingParrafo1:"A respectful, friendly and professional coaching process will help you achieve your goal. Shall I go with you?",
         textcoachingtitle2:"How can I help you?",
         textcoaching2: "We will define a clear objective for change and with personalized sessions I will help to push and break the current blocks that do not allow you to move forward.",
         textcoaching3: "I will listen to you without judging, ask you questions and give you feedback, so that you will clarify and organize your ideas as well as increase your self-knowledge and leadership capacities.",
@@ -781,7 +783,7 @@ export const textos: TextosType<
         textcoachinginterna2:"Do you want to improve the performance of your international team?",
         textcoachinginterna3:"Are you an export manager and are you considering a professional change ?",
         textcoachinginterna4:"Are you an expat and are you experiencing a swing in your adaptation?",
-        textcoachinginterna5:"Whether you are an Expert manager or the CEO of the company, the process of international growth can be more than challenging and sometimes you might feel imbalanced. ",
+        textcoachinginterna5:"Whether you are an Export manager or the CEO of the company, the process of international growth can be more than challenging and sometimes you might feel imbalanced. ",
         textcoachinginternatitle2: "How can I help you",
         textcoachinginterna6: "As a coach, I listen to you without judging, ask questions and give feedback, so you will clarify and organize your ideas and increase your self-knowledge and leadership to discover new approaches and achieve your goals.",      
         textcoachinginterna7: "As an international mentor I share my own experiences with you and with a lot of empathy and sensitivity I help you achieve your goals as well as feeling greater well-being.",
@@ -791,7 +793,7 @@ export const textos: TextosType<
         textcoachinginterna9: "As a coach, I listen to you without judging, ask you questions and give you feedback, and with this you will clarify and organize your ideas and increase your self-knowledge and leadership to discover new approaches and achieve what you want to achieve.",
         textcoachinginterna10: "As an international mentor I share my own experiences with you and with a lot of empathy and sensitivity I help you achieve the objectives you want to achieve, thus achieving greater well-being.",
         textcoachinginterna11: "Contact us to define together how I can help you achieve the results you are looking for.",
-        textcoachinginterPideinfo: "Request more information without obligation",
+        textcoachinginterPideinfo: "Request more information",
         //Agenda Experiencias de bienestar
         textosinviertebienestar: "Invest in your well-being!",
         textostalleresyretiros: " Workshops and retreats with expert collaborators in different disciplines.",
@@ -877,7 +879,7 @@ export const textos: TextosType<
         textos4parrafo9: "Nor is any false, inaccurate or incorrect statement permitted about the Coaching and Wellness Experiences Website, nor about its Contents and/or Services.",
         textos4parrafo10: "With the exception of the hyperlink, the website on which said hyperlink is established will not contain any element of this Website, protected as intellectual property by the Spanish legal system, unless expressly authorized by Coaching and Wellness Experiences.",
         textos4parrafo11: "The establishment of the hyperlink will not imply the existence of relations between Coaching and well-being experiences and the owner of the website from which it is made, nor the knowledge and acceptance of Coaching and well-being experiences of the contents, services and/or activities offered on said website, and vice versa.",
-        // "TODO:"
+        
         textos5titulo1: "V. INTELLECTUAL AND INDUSTRIAL PROPERTY",
         textos5parrafo1: "Coaching and wellness experiences by itself or as an assignee, is the owner of all intellectual and industrial property rights of the Website, as well as the elements contained therein (by way of example and not exhaustive, images, sound, audio, video, software or texts, brands or logos, color combinations, structure and design, selection of materials used, computer programs necessary for its operation, access and use, etc.). They will, therefore, be works protected as intellectual property by the Spanish legal system, with both Spanish and Community regulations in this field, as well as international treaties related to the matter and signed by Spain, being applicable to them.",
         textos5parrafo2: "All rights reserved. By virtue of the provisions of the Intellectual Property Law, the reproduction, distribution and public communication, including the method of making available, of all or part of the contents of this website, for commercial purposes, are expressly prohibited. in any medium and by any technical means, without the authorization of Coaching and Wellness Experiences.",
@@ -886,7 +888,7 @@ export const textos: TextosType<
         textos6titulo1: "VI.LEGAL ACTIONS, APPLICABLE LAW AND JURISDICTION",
         textos6parrafo1:"Coaching and wellness experiences reserves the right to file civil or criminal actions that it deems necessary for improper use of the Website and Content, or for non-compliance with these Conditions.",
         textos6parrafo2:"The relationship between the User and Coaching and wellness experiences will be governed by the regulations in force and applicable in Spanish territory. If any controversy arises in relation to the interpretation and/or application of these Conditions, the parties will submit their conflicts to ordinary jurisdiction, submitting to the corresponding judges and courts in accordance with law.",
-        // "TODO:"
+        
         textospoliticadecookies: "COOKIES POLICY",
         textoscookieparrafo1: "Access to this Website may involve the use of cookies. Cookies are small amounts of information that are stored in the browser used by each User - on the different devices they may use to browse - so that the server remembers certain information that will later be read only by the server that implemented it. Cookies make browsing easier, more user-friendly, and do not damage the browsing device.",
         textoscookieparrafo2: "Cookies are automatic procedures for collecting information related to the preferences determined by the User during their visit to the Website in order to recognize them as a User, and personalize their experience and use of the Website, and they can also, for example, help to identify and resolve errors.",
@@ -1054,7 +1056,7 @@ export const textos: TextosType<
         textsobremi1: "T'ajudo a viure en plenitud, trobar el teu benestar i la teva pau interior.",
         titleparrafo: "Algunes coses sobre mi",
         parrafosobremi1:"Des de sempre he sentit la inquietud d'entendre la vida, el món que m'envolta i l'ésser humà. Tinc un interès genuí per les persones, les biografies, les relacions personals i la diversitat cultural.",
-        parrafosobremi2: "La meva trajectòria com a consultora internacional viatjant per tot el món m'ha permès conèixer diferents cultures i relacionar-me amb persones amb diferents valors i interessos, i m'ha dut a aprofundir i estudiar sobre autoconeixement, creixement personal i lideratge",
+        parrafosobremi2: "La meva trajectòria com a consultora internacional viatjant per tot el món m'ha permès conèixer diferents cultures i relacionar-me amb persones amb diferents valors i interessos, i m'ha dut a aprofundir i estudiar sobre autoconeixement, creixement personal i lideratge.",
         parrafosobremi3: "Les crisis m'han portat a indagar dins meu per conèixer-me. I tots els sotracs han estat oportunitats per conèixer-me millor i créixer, minimitzant el patiment i trobant més pau i harmonia.",
         parrafosobremi4: "El que ofereixo és facilitar-te eines per ajudar-te a retrobar el teu benestar i la teva pau interior, treballant les emocions, els sentiments, els valors i com gestionar els canvis de manera amable per arribar als objectius que vols a la teva vida.",
         parrafosobremi5: "Sóc una apassionada del creixement personal i de treballar el despertar de la consciència de les persones i la societat.",
@@ -1072,9 +1074,10 @@ export const textos: TextosType<
         parrafosobremi16:"Doing Business Globally (ESADE).",
         parrafosobremi17:"Postgrau en Licitacions Internacionals (Universitat La Salle).",
         parrafosobremi18:"Formació continuada a l'àmbit d'empresa i creixement personal.",
+        textopiefoto: "Elisabet Coll-Vinent (Psicòloga – Mentora – Coach)",
         //Coaching para el Bienestar
         textcoaching1: "Sents que hi ha una escletxa entre la vida que portes i la que vols portar? Vols convertir-te en la teva millor versió?",
-        textcoachingParrafo1:"Un procés de coaching, respectuós, amable i professional, us ajudarà a assolir el vostre objectiu. T'hi acompanyo?",
+        textcoachingParrafo1:"Un procés de coaching, respectuós, amable i professional, t’ajudarà a assolir el teu objectiu. T'hi acompanyo?",
         textcoachingtitle2:"Com et puc ajudar?",
         textcoaching2: "Definirem un objectiu clar de canvi i amb les sessions personalitzades donaràs una empenta i trencaràs els bloquejos actuals que no et permeten avançar.",
         textcoaching3: "T'escoltaré sense jutjar, et faré preguntes i et donaré feedback, i amb això aclariràs i ordenaràs les teves idees i incrementaràs el teu autoconeixement i lideratge per descobrir nous enfocaments i aconseguir allò que vols.",
