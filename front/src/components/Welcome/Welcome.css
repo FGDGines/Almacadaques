@@ -1,5 +1,6 @@
 .Welcome{
     height: calc(100vh - 103px);
+    min-height: 1000px;
     background-color: rgb(255, 255, 255);
     /* background: url("fondoInicio-1f901e39.jpg") ; */
     background: url("../src//assets/background/home.jpg")no-repeat center/cover, url("../assets/home-9908a0ae.jpg")no-repeat center/cover;
