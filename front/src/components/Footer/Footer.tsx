@@ -170,10 +170,10 @@ const Footer = () => {
                             })
                         }
 
-                        {/* <a href="https://www.facebook.com/almacadaques?locale=es_LA" target='_blank'><img className=" " width={17} height={17}  src={facebook} alt="Facebook" /></a>
-                        <a href="https://www.linkedin.com/in/elisabet-coll-vinent-b9765530" target='_blank'><img className=" " width={17} height={17} src={linkedin} alt="Linkedin" /></a>
-                        <a href="mailto:hola@almacadaques.com" target='_blank'><img className=" email" width={17} height={17} src={em} alt="Email" /></a>
-                        <a href="https://www.instagram.com/almacadaques" target='_blank'><img className=" " width={17} height={17} src={instagram} alt="Instagram" /></a> 
+                        {/* <a href="https://www.facebook.com/almacadaques?locale=es_LA" target='_blank'><img className=" " width={32} height={32}  src={facebook} alt="Facebook" /></a>
+                        <a href="https://www.linkedin.com/in/elisabet-coll-vinent-b9765530" target='_blank'><img className=" " width={32} height={32} src={linkedin} alt="Linkedin" /></a>
+                        <a href="mailto:hola@almacadaques.com" target='_blank'><img className=" email" width={32} height={32} src={em} alt="Email" /></a>
+                        <a href="https://www.instagram.com/almacadaques" target='_blank'><img className=" " width={32} height={32} src={instagram} alt="Instagram" /></a> 
                              */}
                             {/* <a href=g"https://www.facebook.com/almacadaques?locale=es_LA" target='_blank'><img className="" width={17} height={17} src="../../../src/assets/images/facebook.png" alt="Facebook" /></a> */}
                             {/* <a href="https://www.linkedin.com/in/elisabet-coll-vinent-b9765530" target='_blank'><img className="img " src="../../../src/assets/images/linkedin.png" alt="Linkedin" /></a>
