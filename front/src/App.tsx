@@ -6,7 +6,7 @@ import { GlobalContext } from "./contexts/GlobalContext";
 import './Dashboard/components/NarbarAdmin/NarbarAdmin'
 import { SyntheticEvent, useContext, useState } from "react";
 
-import d from "../src/assets/background/inicio'.jpeg"
+import d from "../src/assets/background/home.jpg"
 import a from "../src/assets/background/rf.jpg"
 import q from "../src/assets/background/istockphoto-518832390-612x612.jpeg"
 
