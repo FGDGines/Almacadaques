@@ -34,14 +34,14 @@ const AboutMe = () => {
                 </div>
                 <div className="photo_1">
                     <img src={f1} alt="Foto sobre mi" />
-                    <p> Elisabet Coll-Vinent (Psicóloga – Mentora – Coach)</p>
+                    <p> {textos[languageFlag].textopiefoto}</p>
                 </div>
             </div>
 
             <div className="containerSobremi_2">
                 <div className="photo_2">
                     <img src={f2} className='foto-to-center' alt="Foto sobre mi" />
-                    <p> Elisabet Coll-Vinent (Psicóloga – Mentora – Coach)</p>
+                    <p> {textos[languageFlag].textopiefoto}</p>
                 </div>
                 <div className="infoSobremi_2User">
                     <p >{textos[languageFlag].titleparrafo}</p>  
@@ -74,7 +74,7 @@ const AboutMe = () => {
                 </div>
                 <div className="photo_3">
                     <img src={f3} alt="Bibliografía" className='BibliografíaSobreMi'/>
-                    <p> Elisabet Coll-Vinent (Psicóloga – Mentora – Coach)</p>
+                    <p> {textos[languageFlag].textopiefoto}</p>
                 </div>
             </div>
         </div>

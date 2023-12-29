@@ -438,7 +438,7 @@ export const textos: TextosType<
         TitleCarrousel4: "¿Quieres hacer un cambio y no sabes por dónde empezar?",
         TitleCarrousel5: "¿Necesitas inspiración?",
         TitleCarrousel6: "¿Quieres ser tu mejor versión?",
-        textopiefoto: "Elisabet Coll-Vinent (Psicòloga – Mentora – Coach)",
+        textopiefoto: "Elisabet Coll-Vinent (Psicóloga – Mentora – Coach)",
 
         //Coaching para el Bienestar
         textcoaching1: "¿Sientes que existe una brecha entre la vida que llevas y la que quieres llevar?¿Quieres convertirte en tu mejor versión?",
@@ -473,7 +473,7 @@ export const textos: TextosType<
         textcoachinginterna10: "Como mentora internacional te comparto mis propias experiencias y con mucha empatía y sensibilidad te acompaño a alcanzar los objetivos que quieres lograr, logrando así mayor bienestar.",
         textcoachinginterna9: "Como coach te escucho sin juzgar, te hago preguntas y te doy feedback, y con ello aclararás y ordenarás tus ideas e incrementarás tu autoconocimiento y liderazgo para descubrir nuevos enfoques y lograr aquello que quieres conseguir.",
         textcoachinginterna11: "Contácta  para definir juntos como te puedo ayudar a conseguir los resultados que buscas.",
-        textcoachinginterPideinfo: "Pide más información sin compromiso",
+        textcoachinginterPideinfo: "Pide más información",
         //Agenda Experiencias de bienestar
         textosinviertebienestar: "¡Invierte en tu bienestar!",
         textostalleresyretiros: " Talleres y retiros con colaboradores expertos en distintas disciplinas.",
@@ -1108,7 +1108,7 @@ export const textos: TextosType<
         textcoachinginterna9: "Com que coach t'escolto sense jutjar, et faig preguntes i et dono feedback, i amb això aclariràs i ordenaràs les teves idees i incrementaràs el teu autoconeixement i lideratge per descobrir nous enfocaments i aconseguir allò que vols aconseguir.",
         textcoachinginterna10: "Com a mentora internacional et comparteixo les meves pròpies experiències i amb molta empatia i sensibilitat t'acompanyo a assolir els objectius que vols assolir, aconseguint així més benestar.",
         textcoachinginterna11: "Contacta per definir junts com et puc ajudar a aconseguir els resultats que cerques.",
-        textcoachinginterPideinfo: "Demana més informació sense compromís",
+        textcoachinginterPideinfo: "Demana més informació",
 
         TitleCarrousel1: "Et sents estressat/da?",
         TitleCarrousel2: "Vols un canvi d'aires?",
