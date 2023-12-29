@@ -16,7 +16,7 @@
     z-index: 0;
     width: 100vw;
     height: 100vh;
-    background: url("./src/assets/background/istockphoto-518832390-612x612.jpeg"), url("../assets/istockphoto-518832390-612x612-a515e170.jpeg") no-repeat center/cover;
+    background: url("./src/assets/background/home.jpg"), url("../assets/home.jpg") no-repeat center/cover;
     background-repeat: no-repeat;
     background-size: cover;
   }
