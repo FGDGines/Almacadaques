@@ -9,7 +9,7 @@ import { CalendarEvent } from "../../../db/models";
 
 export const Create = async (req: Request, res: Response) => {
     const { body } = req
-    const { titulo, nombre, descripcion, enlace, inicio, final } = body
+    const { titulo, nombre, descripcion, inicio, final } = body
     if (titulo != "Experiencia" && titulo != "Taller" && titulo != "Evento" && titulo != "Happy Dance" && titulo != "Happy Adventure" && titulo != "Happy Nature" && titulo != "Magic Heart" && titulo != "Magic Breath") {
         return res.status(200).json({ status: 400, msg: "Titulo del calendar event incorrecto" })
     }
@@ -32,7 +32,7 @@ export const Create = async (req: Request, res: Response) => {
         // }
 
         const tCarousel = new CalendarEvent({ 
-            titulo: titulo, nombre: nombre, descripcion: descripcion, enlace: enlace,
+            titulo: titulo, nombre: nombre, descripcion: descripcion, enlace: "",
             inicio: inicio, final: final, src: ""
             })
         tCarousel.save()

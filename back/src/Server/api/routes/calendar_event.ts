@@ -13,8 +13,8 @@ app.post('/create', [security_post,
     check('inicio','La fecha de inicio es obligatoria').not().isEmpty(), 
     check('final','La fecha final es obligatoria').not().isEmpty(), 
     check('descripcion','La descripcion es obligatoria').not().isEmpty(),
-    check('nombre', 'El nombre es obligatorio').not().isEmpty(), 
-    check('enlace', 'El enlace es obligatorio').not().isEmpty()
+    check('nombre', 'El nombre es obligatorio').not().isEmpty()
+    // check('enlace', 'El enlace es obligatorio').not().isEmpty()
      , validarCampos], Create)
 
 app.post('/read', [

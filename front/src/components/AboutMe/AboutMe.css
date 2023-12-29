@@ -281,7 +281,16 @@
 
 
 
-@media (min-width: 801px) and (max-width: 1199px) {
+@media (min-width: 1028px) and (max-width: 1199px) {
+  .foto-to-center {
+    height: 300px;
+  }
+  .infoSobremi_2User {
+    height: 300px;
+  }
+}
+
+@media (min-width: 801px) and (max-width: 1028px) {
   .foto-to-center {
     height: 200px;
   }
@@ -292,9 +301,31 @@
 
 @media (min-width: 1901px) {
   .foto-to-center {
-    height: 450px;
+    height: 400px;
   }
   .infoSobremi_2User {
-    height: 450px;
+    height: 400px;
+  }
+}
+
+
+
+@media (max-width: 700px) {
+  .foto-to-center {
+    height: 350px;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .foto-to-center {
+    height: 300px;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .foto-to-center {
+    height: 220px;
   }
 }
