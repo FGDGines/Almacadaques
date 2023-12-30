@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className={`Navbar ${upOrDown ? 'up' : 'down'}`}>
+      <div className={`Navbar ${upOrDown ? 'up' : ' up'}`}>
         <NavButton className="logo" target={1} text="" />
         <div className="navigation">
           <NavButton target={1} text={`${textos[languageFlag].inicio}`} />
