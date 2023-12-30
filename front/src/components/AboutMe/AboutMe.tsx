@@ -4,7 +4,7 @@ import Footer from '../Footer/Footer';
 import Franja from '../Franja/Franja';
 import { textos } from '../../data/textos';
 import { GlobalContext } from '../../contexts/GlobalContext';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 
 import f1 from "../../../src/assets/background/1.foto.jpg"
 import f2 from "../../../src/assets/background/2.foto.jpg"
@@ -12,6 +12,20 @@ import f3 from "../../../src/assets/background/3.foto.jpg"
 
 const AboutMe = () => {
     const { languageFlag } = useContext(GlobalContext)
+
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+    };
+
+    useEffect(() => {
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+        window.removeEventListener('resize', handleResize);
+        };
+    }, []);
     return <div className="AboutMe">
         <Navbar />
         <Franja text={textos[languageFlag].sobreMi} />
@@ -39,11 +53,11 @@ const AboutMe = () => {
             </div>
 
             <div className="containerSobremi_2">
-                <div className="photo_2">
+                <div className="photo_2" style={{ width: windowWidth < 800 ? '100%' : 'auto' }}>
                     <img src={f2} className='foto-to-center' alt="Foto sobre mi" />
                     <p> {textos[languageFlag].textopiefoto}</p>
                 </div>
-                <div className="infoSobremi_2User">
+                <div className="infoSobremi_2User" style={{ width: windowWidth < 800 ? '100%' : 'auto' }}>
                     <p >{textos[languageFlag].titleparrafo}</p>  
                     <ul>
                         <li>{textos[languageFlag].parrafosobremi5}</li>

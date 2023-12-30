@@ -329,3 +329,50 @@
     height: 220px;
   }
 }
+
+
+
+@media (max-width: 250px) {
+  .foto-to-center {
+    height: 150px;
+  }
+}
+
+
+@media (max-width: 180px) {
+  .foto-to-center {
+    height: 120px;
+  }
+}
+
+
+@media (max-width: 180px) {
+  .foto-to-center {
+    height: 120px;
+  }
+}
+
+
+
+
+
+
+
+@media (max-width: 781px) {
+  .containerSobremi_1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .infoSobremi_1 {
+    width: 100%;
+  }
+  .photo_1 {
+    width: 100%;
+    margin-left: 0;
+  }
+  .containerSobremi_1 .photo_1 img {
+    width: 100%;
+  }
+}
