@@ -34,7 +34,7 @@ const AboutMe = () => {
             <span style={{ color: "#75151E" }}> ❞ </span>
         </div>
         <div className='Contenido'>
-            <div className="containerSobremi_1">
+            <div className="containerSobremi_1 sobremidiv1">
 
                 <div className="infoSobremi_1">
 

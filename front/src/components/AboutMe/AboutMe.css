@@ -56,7 +56,7 @@
   width: 32vw;
   display: flex;
   justify-content: end;
-  margin-right: 20px;
+  margin-right: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,7 +104,7 @@
   font-size: 3vw;
 
   /* mio */
-  height: 400px;
+  height: 260px;
   text-align: justify;
 }
 .infoSobremi_2User p {
@@ -275,7 +275,7 @@
 
 
 .foto-to-center {
-  height: 400px;
+  height: 260px;
 }
 
 
@@ -283,10 +283,10 @@
 
 @media (min-width: 1028px) and (max-width: 1199px) {
   .foto-to-center {
-    height: 300px;
+    height: 220px;
   }
   .infoSobremi_2User {
-    height: 300px;
+    height: 220px;
   }
 }
 
@@ -358,8 +358,9 @@
 
 
 
+
 @media (max-width: 781px) {
-  .containerSobremi_1 {
+  .sobremidiv1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -372,7 +373,21 @@
     width: 100%;
     margin-left: 0;
   }
-  .containerSobremi_1 .photo_1 img {
+  .sobremidiv1 .photo_1 img {
     width: 100%;
   }
 }
+
+@media (max-width: 451px) {
+  .containerSobremi_1 .photo_3 img {
+    width: 93%;
+    /* height: 300px; */
+  }
+}
+
+/* 
+@media (max-width: 400px) {
+  .containerSobremi_1 .photo_3 img {
+    height: 220px;
+  }
+} */
