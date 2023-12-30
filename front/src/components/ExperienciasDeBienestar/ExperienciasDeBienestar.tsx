@@ -87,12 +87,15 @@ const ExperienciasDeBienestar = () => {
         api();
         // eslint-disable-next-line
       }, [languageFlag]);
-      
+    
+    useEffect(() => {
+        const appElement = document.getElementsByClassName('App')[0] as HTMLElement;
+        if (appElement) {
+            appElement.style.background = 'url("./src/assets/background/rf.jpg")';
+        }
+    }, []);
 
     return <div className='ExperienciasDeBienestar'>
-        <div className="as">
-            <div className="as-inner">
-    
   
             <Navbar />
             <Franja text={textos[languageFlag].expBienestar} />
@@ -137,9 +140,7 @@ const ExperienciasDeBienestar = () => {
 
             </div>
             <Footer />
-            </div>
         </div>
-    </div>
 }
 
 export default ExperienciasDeBienestar

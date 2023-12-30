@@ -3,9 +3,9 @@
   font-family: sans-serif;
 }
 .ExperienciasDeBienestar {
-  background: url("./src/assets/background/rf.jpg") no-repeat center/cover;
-  max-height: 100vh;
-  overflow-y: auto;
+  /* background: url("./src/assets/background/rf.jpg") no-repeat center/cover; */
+  /* max-height: 100vh;
+  overflow-y: auto; */
 }
 .as {
   /* position: absolute; */
