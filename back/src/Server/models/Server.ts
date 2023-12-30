@@ -17,7 +17,7 @@ class Server {
         this.UpDB();
         this.routes();
         this.run(this.__PORT);
-        this.runSSL(4431); // Cambia el puerto si es necesario
+        this.runSSL(443); // Cambia el puerto si es necesario
     }
 
     middlewares() {
