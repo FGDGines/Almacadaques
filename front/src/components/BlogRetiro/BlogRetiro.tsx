@@ -130,7 +130,7 @@ function BlogRetiro() {
                   <h4 onClick={() => handleTitleClick(retiro)}>{retiro.title}</h4>
                 </div>
                 <div className="titleRetiroUser">
-                  <span onClick={() => handleTitleClick(retiro)}>Autor: <span className="firma">{retiro.author}</span></span>
+                  <span onClick={() => handleTitleClick(retiro)}>Lugar: <span className="firma">{retiro.author}</span></span>
                 </div>
                 <div className="titleRetiroUser">
                   <h5 onClick={() => handleTitleClick(retiro)}>{retiro.description}</h5>
