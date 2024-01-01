@@ -50,7 +50,7 @@
   font-size: 1.1vw;
   word-spacing: 5px;
 }
-/* 
+/*
 .span1 {
   width: 5.5vw;
   height: 0.3vh;
@@ -393,9 +393,9 @@ input:valid ~ label {
 
 
 
-.red {
+/* .red {
 
-}
+} */
 
 
 @media (max-width: 982px) {
