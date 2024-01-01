@@ -91,7 +91,7 @@ const ExperienciasDeBienestar = () => {
     useEffect(() => {
         const appElement = document.getElementsByClassName('App')[0] as HTMLElement;
         if (appElement) {
-            appElement.style.background = 'url("./src/assets/background/rf.jpg")';
+            appElement.style.background = 'url("./src/assets/background/rf.jpg"),url("../assets/rf-548f0541.jpg") no-repeat center/cover';
         }
     }, []);
 
