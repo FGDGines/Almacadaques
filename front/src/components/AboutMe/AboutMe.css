@@ -43,14 +43,14 @@
   flex-direction: column;
   
 }
-.photo_1 p {
+/* .photo_1 p {
   font-weight: bold;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #7e7777;
   text-align: end;
   font-size: .90rem;
   
-}
+} */
 
 .photo_2 {
   width: 32vw;
@@ -75,13 +75,13 @@
 .BibliografíaSobreMi{
   width: 20vw;
 }
-.photo_2 p {
+/* .photo_2 p {
   font-weight: bold;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: #7e7777;
   text-align: end;
   font-size: .90rem;
-}
+} */
 .infoSobremi_1 {
   width: 45vw;
   background-color: white;
@@ -252,27 +252,6 @@
 
 
 
-@media (max-width: 800px) {
-  .containerSobremi_2 {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-  }
-  .photo_2 {
-    display: flex;
-    width: 92vw;
-    margin: 5px 0;
-  }
-  .foto-to-center {
-    height: auto;
-  }
-  .infoSobremi_2User {
-    width: 100%;
-    height: auto;
-  }
-}
-
 
 .foto-to-center {
   height: 260px;
@@ -391,3 +370,26 @@
     height: 220px;
   }
 } */
+
+
+
+@media (max-width: 800px) {
+  .containerSobremi_2 {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
+  .photo_2 {
+    display: flex;
+    width: 92vw;
+    margin: 5px 0;
+  }
+  .foto-to-center {
+    height: 100%;
+  }
+  .infoSobremi_2User {
+    width: 100%;
+    height: auto;
+  }
+}
