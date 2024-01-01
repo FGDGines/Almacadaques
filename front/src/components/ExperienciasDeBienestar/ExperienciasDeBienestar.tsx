@@ -71,11 +71,11 @@ const ExperienciasDeBienestar = () => {
             setCardsData([
                 {
                     title: textos[languageFlag].titleCardBienestar1,
-                    body: [textos[languageFlag].bodyCardBienestar1_1 ,textos[languageFlag].bodyCardBienestar1_2, textos[languageFlag].bodyCardBienestar1_3]
+                    body: [textos[languageFlag].bodyCardBienestar1_1 ,textos[languageFlag].bodyCardBienestar1_2, textos[languageFlag].bodyCardBienestar1_3, textos[languageFlag].bodyCardBienestar1_4]
                 },
                 {
                     title: textos[languageFlag].titleCardBienestar2,
-                    body: [textos[languageFlag].bodyCardBienestar2_1 ,textos[languageFlag].bodyCardBienestar2_2, textos[languageFlag].bodyCardBienestar2_3]
+                    body: [textos[languageFlag].bodyCardBienestar2_1 ,textos[languageFlag].bodyCardBienestar2_2, textos[languageFlag].bodyCardBienestar2_3, textos[languageFlag].bodyCardBienestar2_4] 
                 },
                 {
                     title: textos[languageFlag].titleCardBienestar3,
