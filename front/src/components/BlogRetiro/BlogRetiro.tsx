@@ -13,6 +13,8 @@ import { tpDtmResponse } from "../../types/typesComponents";
 import { fetchDefault } from "../../helpers/Server";
 import { textos } from "../../data/textos";
 
+import pa from '../../assets/iconos/location.png'
+
 interface Retiro {
   index: number;
   day: number[];
@@ -96,9 +98,24 @@ function BlogRetiro() {
         console.log(retiro)
         // ordenar segun el estado
         retiro.sort((a, b) => {
-          const order = ["Plazas limitadas",  "Aplazado", "Completo"];
-          return order.indexOf(a.estado) - order.indexOf(b.estado);
-        });
+          const order = ["Plazas limitadas", "Aplazado", "Completo"];
+          const orderA = order.indexOf(a.estado);
+          const orderB = order.indexOf(b.estado);
+         
+          if (orderA !== orderB) {
+            return orderA - orderB;
+          } else {
+            if (a.year !== b.year) {
+              return a.year - b.year;
+            } else {
+              if (a.month !== b.month) {
+                return a.month - b.month;
+              } else {
+                return a.day[0] - b.day[0]
+              }
+            }
+          }
+         });
         setRetiros(retiro);
       })
     };
@@ -130,7 +147,7 @@ function BlogRetiro() {
                   <h4 onClick={() => handleTitleClick(retiro)}>{retiro.title}</h4>
                 </div>
                 <div className="titleRetiroUser">
-                  <span onClick={() => handleTitleClick(retiro)}>Lugar: <span className="firma">{retiro.author}</span></span>
+                  <span onClick={() => handleTitleClick(retiro)}> <img src={pa} width={18} alt="" />: <span className="firma">{retiro.author}</span></span>
                 </div>
                 <div className="titleRetiroUser">
                   <h5 onClick={() => handleTitleClick(retiro)}>{retiro.description}</h5>
