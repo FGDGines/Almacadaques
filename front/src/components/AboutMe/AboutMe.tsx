@@ -53,11 +53,11 @@ const AboutMe = () => {
             </div>
 
             <div className="containerSobremi_2">
-                <div className="photo_2" style={{ width: windowWidth < 800 ? '100%' : 'auto' }}>
+                <div className="photo_2" style={{ width: windowWidth < 800 ? '100%' : '' }}>
                     <img src={f2} className='foto-to-center' alt="Foto sobre mi" />
                     <p> {textos[languageFlag].textopiefoto}</p>
                 </div>
-                <div className="infoSobremi_2User" style={{ width: windowWidth < 800 ? '100%' : 'auto' }}>
+                <div className="infoSobremi_2User" style={{ width: windowWidth < 800 ? '100%' : '' }}>
                     <p >{textos[languageFlag].titleparrafo}</p>  
                     <ul>
                         <li>{textos[languageFlag].parrafosobremi5}</li>
