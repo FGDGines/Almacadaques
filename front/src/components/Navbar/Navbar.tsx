@@ -92,7 +92,7 @@ const Navbar = () => {
         </div>
 
         {showNavButton && (
-          <div className={`navButton ${upOrDown ? 'up' : 'down'}`}>
+          <div className={`navButton ${upOrDown ? 'up' : 'up'}`}>
             <div className="navigation">
               <NavButton target={1} text={`${textos[languageFlag].inicio}`} />
               <NavButton target={2} text={`${textos[languageFlag].sobreMi}`} />
