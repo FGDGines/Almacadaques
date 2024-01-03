@@ -56,7 +56,7 @@
   width: 32vw;
   display: flex;
   justify-content: end;
-  margin-right: 50px;
+  margin-right: 34px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,7 +132,7 @@
     width: 29vw;
   }
   .infoSobremi_2User {
-    width: 94%;
+    /* width: 94%; */
     background-color: #cf1348;
     padding: 1vw;
     color: white;
@@ -262,28 +262,28 @@
 
 @media (min-width: 1028px) and (max-width: 1199px) {
   .foto-to-center {
-    height: 220px;
+    height: 250px;
   }
   .infoSobremi_2User {
-    height: 220px;
+    height: 250px;
   }
 }
 
 @media (min-width: 801px) and (max-width: 1028px) {
   .foto-to-center {
-    height: 200px;
+    height: 260px;
   }
   .infoSobremi_2User {
-    height: 200px;
+    height: 260px;
   }
 }
 
 @media (min-width: 1901px) {
   .foto-to-center {
-    height: 400px;
+    height: 420px;
   }
   .infoSobremi_2User {
-    height: 400px;
+    height: 420px;
   }
 }
 
@@ -391,5 +391,54 @@
   .infoSobremi_2User {
     width: 100%;
     height: auto;
+  }
+}
+@media (min-width: 1300px) {
+  .foto-to-center {
+    height: 370px;
+  }
+  .infoSobremi_2User {
+    height: 370px;
+  }
+}
+
+
+@media (min-width: 1700px) {
+  .foto-to-center {
+    height: 430px;
+  }
+  .infoSobremi_2User {
+    height: 430px;
+  }
+}
+
+
+@media (min-width: 2300px) {
+  .foto-to-center {
+    height: 600px;
+  }
+  .infoSobremi_2User {
+    height: 600px;
+  }
+}
+
+@media (min-width: 3000px) {
+  .foto-to-center {
+    height: 750px;
+  }
+  .infoSobremi_2User {
+    height: 750px;
+  }
+}
+
+
+@media (min-width: 800px) {
+  .foto-to-center { 
+  }
+  .infoSobremi_2User { 
+  }
+  .containerSobremi_2 {
+
+    margin: 0px 8vw;
   }
 }
