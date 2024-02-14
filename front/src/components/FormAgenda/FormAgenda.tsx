@@ -54,7 +54,7 @@ const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
   return (
     <div className='FormAgenda'>
       <h1>{textos[languageFlag].inscribirse}</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className='mt-1'>
         <div>
           <label htmlFor="nombre">{textos[languageFlag].textnombre}:</label>
           <input
@@ -66,7 +66,7 @@ const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
             onChange={handleChange} 
           />
         </div>
-        <div>
+        <div className='mt-1'>
           <label htmlFor="correo">{textos[languageFlag].textemail}:</label>
           <input
             type="email"
@@ -78,7 +78,7 @@ const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
             placeholder='@almacadaqués.com'
           />
         </div>
-        <div>
+        <div className='mt-1'>
           <label htmlFor="telefono">{textos[languageFlag].textocontactartelf}:</label>
           <input
             type="tel"
@@ -89,7 +89,7 @@ const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
             onChange={handleChange}
           />
         </div>
-        <div>
+        <div className='mt-1'>
           <label htmlFor="actividad">{textos[languageFlag].actividad}:</label>
           <select
             id="actividad"
@@ -106,7 +106,7 @@ const FormAgenda: FC<tpFormAgenda> = ({actividades}) => {
           </select>
         </div>
 
-        <div>
+        <div className='mt-1'>
           <button className='boton' type="submit">{textos[languageFlag].expBieBtn}</button>
         </div>
       </form>

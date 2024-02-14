@@ -3,7 +3,7 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 import moment from 'moment';
 import './Agenda.css';
 import { tpAgenda, tpCalendarDates } from '../../types/typesComponents';
-// import { eventos } from '../../data/calendar';
+import { eventos } from '../../data/calendar';
 import { FC } from 'react';
 
 // Configuración de localización utilizando moment.js
